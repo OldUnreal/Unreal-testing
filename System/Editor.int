@@ -1,0 +1,256 @@
+[Public]
+Object=(Name=Editor.MasterCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.MakeCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ConformCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.BatchExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.PackageFlagCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.DataRipCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.PS2ConvertCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.UpdateUModCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ChecksumPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.StripSourceCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.DumpIntCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ExportPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.CompareIntCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.AudioPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.DumpTextureInfoCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ListObjectsCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.MusicPackagesCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ReduceTexturesCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.SaveEmbeddedCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.DumpMeshInfoCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.BatchMeshExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.RebuildImportsCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ProdigiosumInParvoCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.FullBatchExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.FontPageDiffCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.FontExporter,Class=Class,MetaClass=Core.Exporter)
+Preferences=(Caption="Editor",Parent="Advanced Options")
+Preferences=(Caption="Advanced",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Advanced)
+Preferences=(Caption="Colors",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Colors)
+Preferences=(Caption="Grid",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Grid)
+Preferences=(Caption="Rotation Grid",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=RotationGrid)
+Preferences=(Caption="AudioPackage Commandlet",Parent="Editor",Class=Editor.AudioPackageCommandlet,Immediate=True)
+Preferences=(Caption="MusicPackages Commandlet",Parent="Editor",Class=Editor.MusicPackagesCommandlet,Immediate=True)
+
+[MasterCommandlet]
+HelpCmd=master
+HelpOneLiner=Build master installer files
+HelpUsage=master [-option...] [parm=value]...
+HelpParm[0]=MasterPath
+HelpDesc[0]=Root directory to copy source files from
+HelpParm[1]=SrcPath
+HelpDesc[1]=Root directory to copy source (release) files to
+HelpParm[2]=RefPath
+HelpDesc[2]=Path for delta-compressed path reference
+
+[UpdateUModCommandlet]
+HelpCmd=updateumod
+HelpOneLiner=Add, delete, replace or extract files from an umod
+HelpUsage=updateumod UmodFile Command [Filename]
+HelpParm[0]=UmodFile
+HelpDesc[0]=The umod file to change or view
+HelpParm[1]=Command
+HelpDesc[1]=One of EXTRACT, ADD, DELETE, REPLACE or LIST
+HelpParm[2]=Filename
+HelpDesc[2]=The file to EXTRACT, ADD, DELETE or REPLACE
+
+[ConformCommandlet]
+HelpCmd=conform
+HelpOneLiner=Generate conforming binary files
+HelpUsage=conform existing_file.ext old_file.ext
+HelpParm[0]=existingfile.ext
+HelpDesc[0]=Existing binary file to load, conform, and save
+HelpParm[1]=oldfile.ext
+HelpDesc[1]=Old file to make source file binary compatible with
+
+[PackageFlagCommandlet]
+HelpCmd=packageflag
+HelpOneLiner=Set package flags in package files
+HelpUsage=packageflag src.ext [dest.ext <+|->flag [<+|->flag] ...]
+HelpParm[0]=src.ext
+HelpDesc[0]=Existing package file to load
+HelpParm[1]=dest.ext
+HelpDesc[1]=Name of new package file with the new flag settings
+HelpParm[2]=flag
+HelpDesc[2]=+ to set a flag, or - to remove a flag, followed by one of:
+HelpParm[3]=" "
+HelpDesc[3]="  AllowDownload"
+HelpParm[4]=" "
+HelpDesc[4]="  ClientOptional"
+HelpParm[5]=" "
+HelpDesc[5]="  ServerSideOnly"
+HelpParm[6]=" "
+HelpDesc[6]="  BrokenLinks"
+HelpParm[7]=" "
+HelpDesc[7]="  Unsecure"
+
+[MakeCommandlet]
+HelpCmd=make
+HelpOneLiner=Rebuild UnrealScript packages
+HelpUsage=make [-option...] [parm=value]...
+HelpParm[0]=Silent
+HelpDesc[0]=No prompts; assume "yes" to all questions
+HelpParm[1]=NoBind
+HelpDesc[1]=Don't force native functions to be bound to DLLs
+HelpParm[2]=All
+HelpDesc[2]=Clean rebuild (otherwise rebuild is incremental)
+
+[BatchExportCommandlet]
+HelpCmd=batchexport
+HelpOneLiner=Export objects in bulk
+HelpUsage=batchexport package.ext classname export_ext [path]
+HelpParm[0]=package.ext
+HelpDesc[0]=Package whose objects you wish to export
+HelpParm[1]=classname
+HelpDesc[1]=Class of object to export
+HelpParm[2]=export_ext
+HelpDesc[2]=File extension to export to
+HelpParm[3]=path
+HelpDesc[3]=Path to export files to, like c:\MyPath
+
+[DataRipCommandlet]
+HelpCmd=datarip
+HelpOneLiner=Create a package with Texture, Music and Sound data ripped out.
+HelpUsage=datarip srcpackage.ext dstpackage.ext
+HelpParm[0]=srcpackage.ext
+HelpDesc[0]=Source Package
+HelpParm[1]=dstpackage.ext
+HelpDesc[1]=Destination Package
+
+[ChecksumPackageCommandlet]
+HelpCmd=checksumpackage
+HelpOneLiner=Display checksum for package file
+HelpUsage=checksumpackage packagename
+HelpParm[0]=packagename
+HelpDesc[0]=The name of the package to checksum.
+
+[StripSourceCommandlet]
+HelpCmd=StripSource
+HelpOneLiner=Strip the script buffers from a package.
+HelpUsage=stripsource packagename
+HelpWebLink="http://www.oldunreal.com"
+HelpParm[0]=packagename
+HelpDesc[0]=The name of the package to strip sources.
+
+[DumpIntCommandlet]
+HelpCmd=DumpInt
+HelpOneLiner=Dump the language text contents out of a file.
+HelpUsage=dumpint packagename
+HelpWebLink="http://www.oldunreal.com"
+HelpParm[0]=packagename
+HelpDesc[0]=The name of the package to dump language text of.
+
+[ExportPackageCommandlet]
+HelpCmd=ExportPackage
+HelpOneLiner=Simply export a package contents to .uc files in prior directory.
+HelpUsage=exportpackage packagename
+HelpWebLink="http://www.oldunreal.com"
+HelpParm[0]=packagename
+HelpDesc[0]=The name of the package to export UC files of.
+
+[CompareIntCommandlet]
+HelpCmd=CompareInt
+HelpOneLiner=Compare 2 language files and delete/remove language entries that you compare with.
+HelpUsage=compareint packageint miscint
+HelpWebLink="http://www.oldunreal.com"
+HelpParm[0]=packageint
+HelpDesc[0]=Main language file.
+HelpParm[1]=miscint
+HelpDesc[1]=Secondary language file (to edit).
+
+[AudioPackageCommandlet]
+HelpCmd=audiopackage
+HelpOneLiner=Create an audio package out of a directory
+HelpUsage=audiopackage <input directory>
+HelpWebLink=
+
+[MusicPackagesCommandlet]
+HelpCmd=musicpackages
+HelpOneLiner=Creates music packages out of a directory
+HelpUsage=musicpackages <input directory>
+HelpWebLink=
+
+[ListObjectsCommandlet]
+HelpCmd=listobjects
+HelpOneLiner=Lists Objects in package
+HelpUsage=listobjects [-s1 -s2 ...] <pkg> [<baseclass>]
+HelpWebLink=
+HelpParm[0]=-cp
+HelpDesc[0]=Prints pathname instead of name for Class
+HelpParm[1]=-op
+HelpDesc[1]=Prints pathname instead of name for Object
+HelpParm[2]=-na
+HelpDesc[2]=Do not align output
+HelpParm[3]=-ni
+HelpDesc[3]=Do not indent object hierarchy
+HelpParm[4]=-nc
+HelpDesc[4]=Do not display class.
+HelpParm[5]=-co
+HelpDesc[5]=Just display Object Classes instead of each Object
+HelpParm[6]=pkg
+HelpDesc[6]=Package file
+HelpParm[7]=baseclass
+HelpDesc[7]=Optional base class of listed objects
+
+[ReduceTexturesCommandlet]
+HelpCmd=reducetextures
+HelpOneLiner=Purges unneeded uncompressed mipmaps.
+HelpUsage=reducetextures <inpkg> <outpkg>
+HelpWebLink=
+
+[DumpTextureInfoCommandlet]
+HelpCmd=dumptextureinfo
+HelpOneLiner=Dumps information about textures.
+HelpUsage=dumptextureinfo <pkg>
+HelpWebLink=
+
+[SaveEmbeddedCommandlet]
+HelpCmd=saveembedded
+HelpOneLiner=Saves an embedded package to a separate file
+HelpUsage=saveembedded <pkg> <embpkg> <outfile>
+HelpWebLink=
+
+[DumpMeshInfoCommandlet]
+HelpCmd=dumpmeshinfo
+HelpOneLiner=Dumps information about meshes.
+HelpUsage=dumptextureinfo <pkg>
+HelpWebLink=
+
+[BatchMeshExportCommandlet]
+HelpCmd=batchmeshexport
+HelpOneLiner=Batch exports meshes
+HelpUsage=batchmeshexport <pkg> <format> <outpath>
+HelpWebLink=
+
+[RebuildImportsCommandlet]
+HelpCmd=rebuildimports
+HelpOneLiner=Rebuilds import script for a package
+HelpUsage=rebuildimports <pkg> [-upkg]
+HelpWebLink=
+HelpParm[0]=-upkg
+HelpDesc[0]=Switches output to upkg format. Default is uc.
+
+[ProdigiosumInParvoCommandlet]
+HelpCmd=prodigiosuminparvo
+HelpOneLiner=Batch exports all mip map levels
+HelpUsage=prodigiosuminparvo <pkg> <format> <outpath>
+HelpWebLink=
+
+[FullBatchExportCommandlet]
+HelpCmd=fullbatchexport
+HelpOneLiner=Extract package with directory structure
+HelpUsage=fullbatchexport <pkg> <outpath>
+HelpWebLink=
+
+[FontPageDiffCommandlet]
+HelpCmd=fontpagediff
+HelpOneLiner=Compares font pages
+HelpUsage=fontpagediff <left font> <right font>
+HelpWebLink=
+
+[FontExporter]
+HelpCmd=FontExporter
+HelpOneLiner=Exports font pages
+HelpUsage=FontExporter <pkg> <outpath>
+HelpWebLink=

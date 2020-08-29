@@ -1,0 +1,7 @@
+[Public]
+Object=(Name=fspak1.MaleTrooperPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="EDEN Drone Trooper")
+Object=(Name=fspak1.MaleTrooperBot,Class=Class,MetaClass=UnrealShare.Bots,Description="EDEN Drone Trooper")
+Object=(Name=fspak1.skFemaleOnePlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="PSK Female 1")
+Object=(Name=fspak1.skFemaleTwoPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="PSK Female 2")
+Object=(Name=fspak1.skMaleOnePlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="PSK Male 1")
+Object=(Name=fspak1.skSkaarjPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="PSK Skaarj Trooper")

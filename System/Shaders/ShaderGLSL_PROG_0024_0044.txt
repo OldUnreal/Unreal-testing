@@ -1,0 +1,52 @@
+
+//== PROGRAM LINK STATUS = TRUE
+//== PROGRAM VALIDATE STATUS = FALSE
+
+//======================================================
+//   Vertex Shader 7 
+//======================================================
+
+//== SHADER COMPILE STATUS = TRUE
+#version 330
+layout (location = 0) in vec3 v_coord;		// == gl_Vertex
+layout (location = 3) in vec2 LightMapCoords;
+
+layout(std140) uniform GlobalMatrices
+{
+    mat4 modelviewprojMat;
+};
+out vec2 vLightMapCoords;
+
+void main(void)
+{
+	//Texture UV Lightmap to fragment
+	vLightMapCoords	= LightMapCoords;
+	
+	gl_Position = modelviewprojMat * vec4(v_coord, 1.0);
+}
+
+//======================================================
+//   Fragment Shader 8
+//======================================================
+
+//== SHADER COMPILE STATUS = TRUE
+#version 330
+uniform sampler2D Texture0;
+uniform float AlphaThreshold;
+
+uniform vec4 drawcolor;
+
+in vec2 vLightMapCoords;
+
+out vec4 FragColor; 
+
+void main (void)  
+{     
+	vec4 lightcolor = texture(Texture0, vLightMapCoords); //for Lightmap
+	if(lightcolor.a <= AlphaThreshold) 
+        discard;
+
+	vec4 TotalColor  = lightcolor*drawcolor; // Add drawcolor.
+	
+	FragColor = TotalColor;             
+}

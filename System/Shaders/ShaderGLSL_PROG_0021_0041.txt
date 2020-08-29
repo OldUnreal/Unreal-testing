@@ -1,0 +1,39 @@
+
+//== PROGRAM LINK STATUS = TRUE
+//== PROGRAM VALIDATE STATUS = FALSE
+
+//======================================================
+//   Vertex Shader 1 
+//======================================================
+
+//== SHADER COMPILE STATUS = TRUE
+#version 330
+layout (location = 0) in vec3 v_coord;		// == gl_Vertex
+
+layout(std140) uniform GlobalMatrices
+{
+    mat4 modelviewprojMat;
+};
+
+uniform vec4 drawcolor;
+out vec4 vdrawcolor;
+
+void main(void)
+{
+	vdrawcolor=drawcolor;
+	gl_Position = modelviewprojMat * vec4(v_coord, 1.0);
+}
+
+//======================================================
+//   Fragment Shader 2
+//======================================================
+
+//== SHADER COMPILE STATUS = TRUE
+#version 330
+in vec4 vdrawcolor;
+out vec4 FragColor;
+
+void main(void)
+{
+  FragColor = vdrawcolor;
+}

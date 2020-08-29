@@ -1,0 +1,33 @@
+#version 330
+layout (location = 0) in vec3 v_coord;		// == gl_Vertex
+layout (location = 2) in vec2 TexCoords;
+layout (location = 3) in vec2 LightMapCoords;
+layout (location = 5) in vec2 DetailTexCoords;
+layout (location = 6) in vec2 MacroTexCoords;
+
+layout(std140) uniform GlobalMatrices
+{
+    mat4 modelviewprojMat;
+};
+
+out vec2 vTexCoords;
+out vec2 vLightMapCoords;
+out vec2 vDetailTexCoords;
+out vec2 vMacroTexCoords;
+
+void main(void)
+{
+	//Texture UV to fragment
+	vTexCoords=TexCoords;
+	
+	//Texture UV Lightmap to fragment
+	vLightMapCoords	= LightMapCoords;
+
+	// Texture UV DetailTexture
+	vDetailTexCoords = DetailTexCoords;
+
+	// Texture UV Macrotexture
+	vMacroTexCoords = MacroTexCoords;
+	
+	gl_Position = modelviewprojMat * vec4(v_coord, 1.0);
+}

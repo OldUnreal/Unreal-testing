@@ -1,0 +1,7 @@
+[Public]
+Preferences=(Caption="Unreal Integrity",Parent="Networking",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
+
+[General]
+ScanningInfo="UnrealIntegrity is scanning your client for possible cheats..."
+MidGameScan="You have died, performing mid-game cheat scan."
+EndGameScan="Game has ended, performing end-game cheat scan."

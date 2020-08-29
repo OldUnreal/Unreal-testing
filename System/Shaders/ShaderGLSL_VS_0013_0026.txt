@@ -1,0 +1,20 @@
+
+//== SHADER COMPILE STATUS = TRUE
+#version 330
+layout (location = 0) in vec3 v_coord;		// == gl_Vertex
+layout (location = 6) in vec2 MacroTexCoords;
+
+layout(std140) uniform GlobalMatrices
+{
+    mat4 modelviewprojMat;
+};
+
+out vec2 vMacroTexCoords;
+
+void main(void)
+{
+	//Texture UV Fogmap to fragment
+	vMacroTexCoords	= MacroTexCoords;
+
+	gl_Position = modelviewprojMat * vec4(v_coord, 1.0);
+}

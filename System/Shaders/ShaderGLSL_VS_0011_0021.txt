@@ -1,0 +1,18 @@
+#version 330
+layout (location = 0) in vec3 v_coord;		// == gl_Vertex
+layout (location = 5) in vec2 DetailTexCoords;
+
+layout(std140) uniform GlobalMatrices
+{
+    mat4 modelviewprojMat;
+};
+
+out vec2 vDetailTexCoords;
+
+void main(void)
+{
+	//Texture UV Fogmap to fragment
+	vDetailTexCoords	= DetailTexCoords;
+
+	gl_Position = modelviewprojMat * vec4(v_coord, 1.0);
+}

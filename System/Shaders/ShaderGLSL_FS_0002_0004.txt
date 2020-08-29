@@ -1,0 +1,10 @@
+
+//== SHADER COMPILE STATUS = TRUE
+#version 330
+in vec4 vdrawcolor;
+out vec4 FragColor;
+
+void main(void)
+{
+  FragColor = vdrawcolor;
+}

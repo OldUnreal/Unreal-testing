@@ -1,0 +1,97 @@
+[Public]
+Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="OldMutator,Replace orginal Unreal weapon sounds with Unreal version 200 ones.")
+
+[OldDispersionPistol]
+DeathMessage="%o was killed by %k's %w.  What a loser!"
+PickupMessage="You got the Dispersion Pistol"
+ItemName="Dispersion Pistol"
+
+[OldASMD]
+DeathMessage="%k inflicted mortal damage upon %o with the %w."
+PickupMessage="You got the ASMD"
+ItemName="ASMD"
+
+[OldEightball]
+DeathMessage="%o was smacked down multiple times by %k's %w."
+PickupMessage="You got the Eightball gun"
+ItemName="Eightball"
+
+[OldRifle]
+DeathMessage="%k put a bullet through %o's head."
+PickupMessage="You got the Rifle"
+ItemName="Sniper Rifle"
+
+[OldFlakCannon]
+DeathMessage="%o was ripped to shreds by %k's %w."
+PickupMessage="You got the Flak Cannon"
+ItemName="Flak Cannon"
+
+[OldAutoMag]
+DeathMessage="%o got gatted by %k's %w."
+PickupMessage="You got the AutoMag"
+ItemName="AutoMag"
+
+[OldMinigun]
+DeathMessage="%k's %w turned %o into a leaky piece of meat."
+PickupMessage="You got the Minigun"
+ItemName="Minigun"
+
+[OldGESBioRifle]
+DeathMessage="%o drank a glass of %k's dripping green load."
+PickupMessage="You got the GES BioRifle"
+ItemName="GES Bio Rifle"
+
+[OldAmplifier]
+ExpireMessage="Old Amplifier is out of power."
+PickupMessage="You got the Energy Amplifier"
+ItemName="Amplifier"
+
+[OldStinger]
+DeathMessage="%o was perforated by %k's %w."
+PickupMessage="You picked up the Stinger"
+ItemName="Stinger"
+
+[OldShellBox]
+PickupMessage="You picked up 50 bullets"
+
+[OldRifleAmmo]
+PickupMessage="You got 8 Rifle rounds."
+
+[OldWeaponPowerUp]
+PickupMessage="You got the Dispersion Pistol Powerup"
+
+[OldFlakBox]
+PickupMessage="You picked up 10 Flak Shells"
+
+[OldRazorjack]
+DeathMessage="%k took a bloody chunk out of %o with the %w."
+PickupMessage="You got the RazorJack"
+ItemName="RazorJack"
+
+[OldDefaultAmmo]
+PickupMessage="You picked up some ammo."
+
+[OldASMDAmmo]
+PickupMessage="You picked up an ASMD core."
+
+[OldStingerAmmo]
+PickupMessage="You picked up 40 Tarydium Shards"
+
+[OldRazorAmmo]
+PickupMessage="You picked up some Razor Blades"
+
+[OldSludge]
+PickupMessage="You picked up 25 Kilos of Tarydium Sludge"
+
+[OldRocketCan]
+PickupMessage="You picked up 12 Eightballs"
+
+[OldClip]
+PickupMessage="You picked up a clip"
+
+[OldRifleRound]
+PickupMessage="You got a Rifle Round."
+
+[OldFlakShellAmmo]
+PickupMessage="You got a flak shell."
+
