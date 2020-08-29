@@ -1,0 +1,8 @@
+%frd:PageHeader%
+<form method="post" action="GameDefaults?UWebAdmin.GameConfigPage">
+%Content:UWebAdmin.GameConfigPage%
+</form><BR>
+<form method="post" action="GameDefaults?UWebAdmin.NetConfigPage">
+%Content:UWebAdmin.NetConfigPage%
+</form>
+%frd:PageEnding%

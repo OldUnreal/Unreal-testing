@@ -1,0 +1,7 @@
+%frd:PageHeader%
+<img src="borderline.png" alt="borderline" height="2px" width="100%">
+<form method="post" action="ServerConsoleLine?UWebAdmin.WebChatWindow">
+<TABLE BORDER=0><TR><TH>Console Command: <input class="textbox" type="text" name="Cmd" size="56" value="Say " maxlength="80"></TH>
+<TH><input class="button" type="submit" name="edit" value="Enter"></TH></TABLE>
+</form>
+%frd:PageEnding%

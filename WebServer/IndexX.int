@@ -1,0 +1,7 @@
+%frd:PageHeader%
+Welcome %Content:UWebAdmin.GetClientUser% to server webadmin site<BR>
+Current players in this server:<BR>
+<form method="post" action="IndexX?UWebAdmin.PlayersListDebug">
+%Content:UWebAdmin.PlayersListDebug%</form>/n
+<BR>Your IP: %Content:UWebAdmin.GetClientIP% has been logged on server.
+%frd:PageEnding%

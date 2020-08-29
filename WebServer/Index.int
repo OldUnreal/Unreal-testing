@@ -1,0 +1,10 @@
+<!-- Server WebAdministration code /WebVer written by .:..: (2008) -->
+<HTML><HEAD><TITLE>WebAdmin server administration</TITLE></HEAD>
+<frameset rows="80,*,50" cols="*" frameborder="No" framespacing="0" border="0">
+<frame src="/MainLinksPage" name="menu" noresize frameborder="0" marginheight="0" scrolling="no" framespacing="0">
+<frame src="/IndexX" name="menumain" scrolling="yes" frameborder="no" noresize framespacing="0" marginheight="0">
+<frame src="/ServerConsoleLine" name="consoleline" scrolling="no" frameborder="no" noresize framespacing="0" marginheight="0">
+<noframes>
+<body bgcolor="#FFFFFF">If you get that message your browser doesn't support frames.</body>
+</ noframes>
+</html>

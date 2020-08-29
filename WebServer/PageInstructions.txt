@@ -1,0 +1,11 @@
+Functions/Keywords:
+	/Cdate = Current date
+	/Ctime = Current time
+	/MapT = Current map title
+	/MapF = Current map filename
+	/WebVer = Current webadmin version
+	/n = New line (Note that next Web line automatly includes new line code)
+	%frd: <Redirect name>% = Forward code to some other int file
+	%Content: <Webpage content classname>% = Add HTML codes from a UScript class
+
+Entry point for the webadmin is Index.int
