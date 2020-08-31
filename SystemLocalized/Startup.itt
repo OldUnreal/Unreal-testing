@@ -1,0 +1,134 @@
+[General]
+
+Run=Via!
+
+FirstTime=Prima configurazione di Unreal
+
+SafeMode=Modalità protetta di Unreal
+
+Video=Configurazione video di Unreal
+
+RecoveryMode=Modalità recupero di Unreal
+
+WebPage=http://www.oldunreal.com
+
+Direct3DWebPage=http://www.microsoft.com/directx
+
+Detecting=Rilevamento dispositivi video 3D video in corso...
+
+SoundLow=Qualità audio bassa
+
+SoundHigh=Qualità audio alta
+
+SkinsLow=Dettaglio texture skin giocatore medio
+
+SkinsHigh=Dettaglio texture skin giocatore alto
+
+WorldLow=Dettaglio texture mondo medio
+
+WorldHigh="Dettaglio texture alto"
+
+ResLow=Bassa risoluzione video
+
+ResHigh=Risoluzione video standard
+
+
+[Descriptions]
+
+SoftDrv.SoftwareRenderDevice=enderer software di Unreal. Compatibile con tutte le schede video.
+
+GlideDrv.GlideRenderDevice=Supporto 3dfx Glide, la scelta ottimale per le schede 3dfx. È necessaria una scheda 3dfx.
+
+D3DDrv.D3DRenderDevice=Utilizza rendering hardware Direct3D. Compatibile con le più recenti schede video come Riva TNT, ATI Rage 128, Matrox G400 e S3 Savage4. Sconsigliato per l'uso con schede video meno recenti, se avete una ATI Rage Pro, una Riva 128, una Intel i740 o una Rendition V2200, usate il rendering software.
+
+D3D8Drv.D3D8RenderDevice=Usa il rendering hardware Direct3D8. Compatibile con le nuove schede video. Supporto per texture ad alta risoluzione.
+
+D3D9Drv.D3D9RenderDevice=Usa il rendering hardware Direct3D9. Compatibile con le nuove schede video. Supporto per texture ad alta risoluzione.
+
+OpenGLDrv.OpenGLRenderDevice=Usa il supporto avanzato OpenGL. Garantisce le migliori prestazioni e support per le schede video moderne.Supporto per texture ad alta risoluzione.
+
+MetalDrv.MetalRenderDevice=Per utenti con schede video S3 Savage4.
+
+
+[IDDIALOG_ConfigPageDetail]
+
+IDC_ConfigPageDetail=
+
+IDC_DetailPrompt=In base alla velocità, alla memoria e alla scheda video del tuo computer, Unreal ha selezionato le seguenti impostazioni, al fine di ottimizzare le prestazioni.
+
+IDC_DetailNote=Puoi modificare queste opzioni dalla finestra "Impostazioni" quando vuoi.
+
+
+[IDDIALOG_ConfigPageFirstTime]
+
+IDC_ConfigPageFirstTime=
+
+IDC_Prompt=Unreal è stato avviato per la prima volta. Se riscontri dei problemi, leggi le note di rilascio nella sezione "Programmi/Unreal" del menu Start/Avvio di Windows.
+
+
+[IDDIALOG_ConfigPageRenderer]
+
+IDC_ConfigPageRenderer=
+
+IDC_RenderPrompt=Il tuo computer supporta i seguenti dispositivi video 3D. Unreal ha scelto quello ottimale. Se desideri cambiarlo, evidenzia un'opzione qui sotto.
+
+IDC_RenderNote=
+
+IDC_Compatible=Mostra dispositivi certificati e compatibili
+
+IDC_All=Mostra tutti i dispositivi
+
+
+[IDDIALOG_ConfigPageSafeMode]
+
+IDC_ConfigPageSafeMode=
+
+IDC_SafeModePrompt=L'ultima volta che è stato utilizzato, Unreal Tournament non è stato chiuso adeguatamente. Qualora la chiusura sia stata legata a un problema, puoi utilizzare le opzioni sottostanti per il recupero.
+
+IDC_SafeModePrompt2=Opzioni della modalità protetta di Unreal Tournament: se riscontri dei problemi, puoi utilizzare le opzioni sottostanti per il recupero.
+
+IDC_Run=Esegui Unreal
+
+IDC_Video=Cambia dispositivo video 3D video
+
+IDC_SafeMode=Esegui Unreal in modalità protetta - per la risoluzione dei problemi
+
+IDC_Web=Visita il nostro sito web, dove troverai validi suggerimenti
+
+
+[IDDIALOG_ConfigPageSafeOptions]
+
+IDC_ConfigPageSafeOptions=
+
+IDC_SafeOptions=Opzioni modalità protetta, per problemi di diagnosi
+
+IDC_NoSound=Disabilta tutto l'audio
+
+IDC_No3DSound=Disabilita audio hardware 3D
+
+IDC_No3DVideo=Disabilita hardware video 3D
+
+IDC_Window=Esegui il gioco in finestra (anziché a tutto schermo)
+
+IDC_Res=Esegui in risoluzione standard 640x480
+
+IDC_ResetConfig=Riporta tutte le opzioni di configurazione ai valori predefiniti
+
+IDC_NoProcessor=Disabilita estensioni Pentium III/3DNow
+
+IDC_NoJoy=Disabilita supporto joystick
+
+
+[IDDIALOG_ConfigPageDriver]
+
+IDC_ConfigPageDriver=
+
+IDC_DriverText=Unreal Tournament ha rilevato la seguente scheda video compatibile Direct3D:
+
+IDC_DriverInfo=Poiché hai scelto Direct3D o OpenGL, Unreal Tournament tenterà di utilizzare il driver di questa scheda video per il supporto Direct3D.\n\nAlcuni driver della scheda 3D devono essere aggiornati per funzionare in maniera affidabile con le caratteristiche avanzate 3D di Unreal Tournament. Consigliamo di utilizzare il link sottostante per ulteriori informazioni sulla compatibilità della tua scheda video e per ottenere i driver Direct3D più recenti.\n\nSe riscontri dei problemi di natura grafica come colori non corretti, poligoni intermittenti, prestazioni rallentate o crash di sistema, utilizza il link "Modalità protetta di Unreal Tournament" in "Start/Programmi" per modificare il path di rendering.
+
+IDC_Web=Per i link con i driver più aggiornati, visita la nostra pagina web:
+
+IDC_WebButton=Informazioni su Direct3D && Pagina di driver
+
+IDC_Card= 

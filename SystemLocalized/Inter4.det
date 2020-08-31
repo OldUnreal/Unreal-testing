@@ -1,0 +1,9 @@
+[LevelInfo4]
+Title=Yousa follow me now, okiday?
+LevelEnterText=What the hell are you doing here...
+
+[TransitionGenderEvent4]
+OutDelays[1]=28.500000
+MaleText[0]="Ich bin nah dran! Ich habe den ersten Beweis des Absturzes entdeckt. Nachdem ich mich durch ein Dorf der Nali voller Skaarj geschlagen hatte, fand ich ein Teil des abgestürzten Schiffs. Die Trümmer waren beim Wiedereintritt verbrannt und überall in der Gegend verteilt worden. Hoffentlich ist sie nicht schon in der Luft auseinandergebrochen ... wenn doch, steht es nicht gerade gut um die Daten. Die Absturzstelle muß ganz in der Nähe sein. Bald hab' ich es geschafft."
+FemaleText[0]="Ich bin nah dran! Ich habe den ersten Beweis des Absturzes entdeckt. Nachdem ich mich durch ein Dorf der Nali voller Skaarj geschlagen hatte, fand ich ein Teil des abgestürzten Schiffs. Die Trümmer waren beim Wiedereintritt verbrannt und überall in der Gegend verteilt worden. Hoffentlich ist sie nicht schon in der Luft auseinandergebrochen ... wenn doch, steht es nicht gerade gut um die Daten. Die Absturzstelle muß ganz in der Nähe sein. Bald hab' ich es geschafft."
+

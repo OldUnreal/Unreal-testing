@@ -1,0 +1,167 @@
+[Public]
+
+Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="OldMutator, Rimpiazza i suoni originali delle armi con quelli della versione 200.")
+
+
+[OldDispersionPistol]
+
+DeathMessage="%o è stato ucciso dalla %w di %k. Che frana!"
+
+PickupMessage="Hai preso la Pistola Dissolvente"
+
+ItemName="Dispersion Pistol"
+
+
+[OldASMD]
+
+DeathMessage="%k ha inflitto danni mortali a %o con l'%w."
+
+PickupMessage="Hai preso l'ASMD"
+
+ItemName="ASMD"
+
+
+[OldEightball]
+
+DeathMessage="%o è stato picchiato un sacco di volte dall' %w di %k."
+
+PickupMessage="Hai preso il Lancia 8-ball"
+
+ItemName="8-ball"
+
+
+[OldRifle]
+
+DeathMessage="%k ha messo un proiettile in testa a %o."
+
+PickupMessage="Hai preso il Fucile"
+
+ItemName="Fucile da Cecchino "
+
+
+[OldFlakCannon]
+
+DeathMessage="%o è stato fatto a pezzi dal %w di %k."
+
+PickupMessage="Hai preso il cannone Flak"
+
+ItemName="Cannone Flak"
+
+
+[OldAutoMag]
+
+DeathMessage="%o è stato fatto fuori dall' %w di %k."
+
+PickupMessage="Hai preso l'AutoMag"
+
+ItemName="AutoMag"
+
+
+[OldMinigun]
+
+DeathMessage="Il %w di %k ha trasformato %o in un pezzo di carne grondante."
+
+PickupMessage="Hai preso il Minigun"
+
+ItemName="Minigun"
+
+
+[OldGESBioRifle]
+
+DeathMessage="%o ha bevuto un bicchiere di fanghiglia di %k."
+
+PickupMessage="Hai preso il Biofucile GES"
+
+ItemName="Biofucile GES"
+
+
+[OldAmplifier]
+
+ExpireMessage="L'Amplificatore è senza energia."
+
+PickupMessage="Hai raccolto l'Amplificatore di Energia"
+
+ItemName="Amplificatore"
+
+
+[OldStinger]
+
+DeathMessage="%o è stato perforato dallo %w di %k."
+
+PickupMessage="Hai preso lo Stinger"
+
+ItemName="Stinger"
+
+
+[OldShellBox]
+
+PickupMessage="Hai raccolto 50 proiettili"
+
+
+[OldRifleAmmo]
+
+PickupMessage="Hai raccolto 8 cartucce del fucile"
+
+
+[OldWeaponPowerUp]
+
+PickupMessage="Hai preso un aggiornamento per la Pistola Dissolvente"
+
+
+[OldFlakBox]
+
+PickupMessage="Hai raccolto 10 cariche per il Flak"
+
+
+[OldRazorjack]
+
+DeathMessage="%k ha smembrato %o con il %w."
+
+PickupMessage="Hai preso il RazorJack"
+
+ItemName="RazorJack"
+
+
+[OldDefaultAmmo]
+
+PickupMessage="Hai preso delle munizioni"
+
+
+[OldASMDAmmo]
+
+PickupMessage="Hai raccolto un nucleo ASMD"
+
+
+[OldStingerAmmo]
+
+PickupMessage="Hai raccolto 40 schegge di Tarydium"
+
+
+[OldRazorAmmo]
+
+PickupMessage="Hai raccolto delle Lame di Rasoio"
+
+
+[OldSludge]
+
+PickupMessage="Hai raccolto 25 chili di fanghiglia di Tarydium"
+
+
+[OldRocketCan]
+
+PickupMessage="Hai raccolto 12 8-ball"
+
+
+[OldClip]
+
+PickupMessage="Hai raccolto un Ricaricatore"
+
+
+[OldRifleRound]
+
+PickupMessage="Hai preso una cartuccia di fucile"
+
+
+[OldFlakShellAmmo]
+
+PickupMessage=""Hai preso una ricarica per il Flak" 

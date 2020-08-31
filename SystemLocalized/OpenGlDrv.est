@@ -1,0 +1,25 @@
+[Public]
+
+Object=(Name=OpenGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
+
+Preferences=(Caption="Reproducción",Parent="Opciones avanzadas")
+
+Preferences=(Caption="Soporte OpenGL",Parent="Reproducción",Class=OpenGLDrv.OpenGLRenderDevice,Immediate=True)
+
+
+[OpenGLRenderDevice]
+
+ClassCaption="Soporte OpenGL"
+
+AskInstalled=Tienes una aceleradora 3D compatible con OpenGL?
+
+AskUse=Quieres que Unreal use aceleración OpenGL?
+
+
+[Errors]
+
+NoFindGL=No se puede encontrar el controlador %s de OpenGL
+
+MissingFunc=No se encuentra la función de OpenGL %s (%i)
+
+ResFailed=No se ha podido establecer la resolución 

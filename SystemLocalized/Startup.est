@@ -1,0 +1,131 @@
+[General]
+
+Run=Ejecutar!
+
+FirstTime=Configuración por primera vez de Unreal
+
+SafeMode=Unreal en modo seguro
+
+Video=Configuración de vídeo de Unreal
+
+RecoveryMode=Modo de recuperación de Unreal
+
+WebPage=http://www.oldunreal.com
+
+Direct3DWebPage=http://www.microsoft.com/directx
+
+Detecting=Detectando dispositivos de video 3D, espere porfavor...
+
+SoundLow=Calidad de sonido baja
+
+SoundHigh=Calidad de sonido alta
+
+SkinsLow=Texturas de piel de jugador de detalle medio
+
+SkinsHigh=Texturas de piel de jugador de alto detalle
+
+WorldLow=Texturas de mundo de detalle medio
+
+WorldHigh="Texturas de alto detalle"
+
+ResLow=Resolución de vídeo baja
+
+ResHigh=Resolución de vídeo estándar
+
+
+[Descriptions]
+
+SoftDrv.SoftwareRenderDevice=Dispositivo de reproducción propio de Unreal. Compatible con todas las tarjetas de vídeo.
+
+GlideDrv.GlideRenderDevice=Soporte para 3dfx glide, la elección óptima para los poseedores de tarjetas 3dfx. Se requiere tarjeta 3dfx.
+
+D3DDrv.D3DRenderDevice=Usar reproducción por hardware Direct3D. Compatible con tarjetas gráficas más antiguas. No se recomienda usar con aceleradoras muy tempranas--usa el reproductor por software si tienes una ATI Rage Pro, Riva 128, Intel i740, o una Rendition V2200.
+
+D3D8Drv.D3D8RenderDevice=Usa reproducción por hardware Direct3D8. Compatible con tarjetas gráficas más nuevas. Soporta texturas de alta resolución
+
+OpenGLDrv.OpenGLRenderDevice=Usa soporte avanzado de OpenGL para Unreal. Provee el mejor rendimiento y soporte para muchas aceleradoras. Soporta texturas de alta resolución.
+
+MetalDrv.MetalRenderDevice=Para usuarios con tarjetas gráficas S3 Savage4.
+
+
+[IDDIALOG_ConfigPageDetail]
+
+IDC_ConfigPageDetail=
+
+IDC_DetailPrompt=Basado en la velocidad, memoria y gráficos de tu ordenador, Unreal ha seleccionado las siguientes opciones de detalle para mejorar el rendimiento.
+
+IDC_DetailNote=Puedes cambiar estas opciones desde el menú de "Preferencias", si lo deseas.
+
+
+[IDDIALOG_ConfigPageFirstTime]
+
+IDC_ConfigPageFirstTime=
+
+IDC_Prompt=Unreal empieza ahora por primera vez. Si experimentas algún problema, lee porfavor las notas del juego en la sección "Programas / Unreal" del menú inicio de Windows.
+
+
+[IDDIALOG_ConfigPageRenderer]
+
+IDC_ConfigPageRenderer=
+
+IDC_RenderPrompt=Tu ordenador soporta los dispositivos 3D siguientes. Unreal ha escogido el mejor. Si deseas cambiarlo, marca una opción abajo.
+
+IDC_RenderNote=
+
+IDC_Compatible=Mostrar dipositivos compatibles y certificados
+
+IDC_All=Mostrar todos los dispositivos
+
+
+[IDDIALOG_ConfigPageSafeMode]
+
+IDC_ConfigPageSafeMode=
+
+IDC_SafeModePrompt=La anterior vez que se ejecutó Unreal, no fue cerrado correctamente. En caso que el apagado fuera causado por un error, puedes usar las opciones de abajo para recuperación.
+
+IDC_SafeModePrompt2=Opciones del modo seguro de Unreal: Si experimentas problemas, puedes usar las opciones de abajo para recuperación.
+
+IDC_Run=Ejecutar Unreal
+
+IDC_Video=Cambiar el dispositivo de vídeo 3D
+
+IDC_SafeMode=Ejecutar Unreal en modo seguro - para detectar problemas
+
+IDC_Web=Visita nuestra página web para solucionar problemas
+
+
+[IDDIALOG_ConfigPageSafeOptions]
+
+IDC_ConfigPageSafeOptions=
+
+IDC_SafeOptions=Opciones de modo seguro, para diagnosticar problemas
+
+IDC_NoSound=Desactivar todo sonido
+
+IDC_No3DSound=Desactivar hardware de sonido 3D
+
+IDC_No3DVideo=Desactivar hardware de vídeo 3D
+
+IDC_Window=Ejecutar el juego en una ventana (en vez de en pantalla completa)
+
+IDC_Res=Ejecutar en resolución 640x480 estándar
+
+IDC_ResetConfig=Volver a las opciones por defecto
+
+IDC_NoProcessor=Desactivar las extensiones de procesador Pentium III/3DNow
+
+IDC_NoJoy=Desactivar soporte de joystick
+
+[IDDIALOG_ConfigPageDriver]
+
+IDC_ConfigPageDriver=
+
+IDC_DriverText=Unreal ha detectado la siguiente tarjeta de vídeo compatible:
+
+IDC_DriverInfo=Ya que has escogido OpenGL o Direct3D, Unreal intentará usar esta tarjeta de vídeo.\n\nAún así, algunas tarjetas necesitan actualizaciones de drivers para que las características 3D de Unreal funcionen. Te recomendamos seguir el enlace abajo para más información sobre la compatibilidad de tu tarjeta de vídeo, y para obtener los últimos drivers Direct3D.\n\nSi experimentas errores gráficos como colores incorrectos, polígonos centelleantes, bajo rendimiento, o cuelgues, usa el "Modo seguro de Unreal" en "Inicio / Programas" para cambiar tu dispositivo 3D.
+
+IDC_Web=Para obtener enlaces hacia los drivers más nuevos, visita nuestra página web:
+
+IDC_WebButton=Información y drivers Direct3D
+
+IDC_Card=Desconocida 

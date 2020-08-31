@@ -1,0 +1,167 @@
+[Public]
+
+Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="OldMutator, sustituye los sonidos de las armas por los de la versión 200 y anteriores.")
+
+
+[OldDispersionPistol]
+
+DeathMessage="%o ha sido asesinado por la %w de %k. Vaya un perdedor!"
+
+PickupMessage="Tienes la Pistola de Dispersión"
+
+ItemName="Pistola de Dispersión"
+
+
+[OldASMD]
+
+DeathMessage="%k ha inflingido heridas mortales a %o con el %w."
+
+PickupMessage="Tienes el ASMD"
+
+ItemName="ASMD"
+
+
+[OldEightball]
+
+DeathMessage="%o ha sido azotado múltiples veces con el %w de %k."
+
+PickupMessage="Tienes el Lanzacohetes Eightball"
+
+ItemName="Eightball"
+
+
+[OldRifle]
+
+DeathMessage="%k ha metido una bala por la cabeza de  %o."
+
+PickupMessage="Tienes el Rifle Francotirador"
+
+ItemName="Rifle Francotirador"
+
+
+[OldFlakCannon]
+
+DeathMessage="%o ha sido roto a pedacitos con el %w de %k."
+
+PickupMessage="Tienes el Cañón de Metralla"
+
+ItemName="Cañón de Metralla"
+
+
+[OldAutoMag]
+
+DeathMessage="%o ha sido acribillado con el %w de %k."
+
+PickupMessage="Tienes el AutoMag"
+
+ItemName="AutoMag"
+
+
+[OldMinigun]
+
+DeathMessage="La %w de %k ha convertido a %o en un pedazo de carne goteante."
+
+PickupMessage="Tienes la Ametralladora"
+
+ItemName="Ametralladora"
+
+
+[OldGESBioRifle]
+
+DeathMessage="%o ha bebido un vaso de una carga verde goteante de %k."
+
+PickupMessage="Tienes el Biorifle GES"
+
+ItemName="GES Bio Rifle"
+
+
+[OldAmplifier]
+
+ExpireMessage="Old Amplifier está sin batería."
+
+PickupMessage="Tienes el Amplificador Energético"
+
+ItemName="Amplificador"
+
+
+[OldStinger]
+
+DeathMessage="%o ha sido perforado con el %w de %k."
+
+PickupMessage="Tienes el Perforador de Taridio"
+
+ItemName="Perforador"
+
+
+[OldShellBox]
+
+PickupMessage="Has recogido 50 balas"
+
+
+[OldRifleAmmo]
+
+PickupMessage="Has recogido 8 cartuchos de rifle."
+
+
+[OldWeaponPowerUp]
+
+PickupMessage="Tienes el reforzador de la Pistola de Dispersión"
+
+
+[OldFlakBox]
+
+PickupMessage="Has recogido 10 proyectiles de metralla"
+
+
+[OldRazorjack]
+
+DeathMessage="%k arrancó un trozo sangrante de %o con el %w."
+
+PickupMessage="Tienes el Lanzacuchillas"
+
+ItemName="Lanzacuchillas"
+
+
+[OldDefaultAmmo]
+
+PickupMessage="Has recogido algo de munción."
+
+
+[OldASMDAmmo]
+
+PickupMessage="Tienes un núcleo para el ASMD."
+
+
+[OldStingerAmmo]
+
+PickupMessage="Has recogido 40 fragmentos de Taridio"
+
+
+[OldRazorAmmo]
+
+PickupMessage="Has recogido algunas cuchillas para el lanzador"
+
+
+[OldSludge]
+
+PickupMessage="Has recogido 25 quilos de residuos de taridio"
+
+
+[OldRocketCan]
+
+PickupMessage="Has recogido 12 proyectiles eightball"
+
+
+[OldClip]
+
+PickupMessage="Has recogido un cargador"
+
+
+[OldRifleRound]
+
+PickupMessage="Has recogido un cartucho de rifle."
+
+
+[OldFlakShellAmmo]
+
+PickupMessage="Has recogido un proyectil de metralla." 

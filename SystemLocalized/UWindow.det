@@ -1,0 +1,129 @@
+[public]
+Object=(Name=UWindow.UWindowWin95LookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Win 95")
+
+[AdminGUIPlayersGrid]
+PlayerID="ID#"
+PlayerName="Spielername"
+PlayerIP="IP-Addresse"
+PlayerClientID="Spieler ID"
+MaxLengthExceeded="Maximale Anzahl Spieler in Spielerliste wurde überschritten: '%i'"
+IDmismatchedStr="Unerwartete Antwort ID: %i/%j"
+ClientReceivedStr="Empfang von Client '%s'."
+GettingInfoStr="Die Spielerliste wird vom Server geladen, sollte nichts passieren fehlt eventuell Ihre Anmeldung als Administrator."
+
+[AdminGUIBanLGrid]
+LengthExceeded="Maximale Anzahl Spieler in Spielerliste wurde überschritten: '%i'"
+Responsemismatch="Unerwartete Antwort ID: %i/%j"
+ReceiveBanText="Bann entgegengenommen '%s'."
+GettingBanListText="Die Bann Liste wird vom Server geladen, sollte nichts passieren fehlt eventuell Ihre Anmeldung als Administrator (oder es existieren keine Banns auf diesem Server)."
+
+[AdminGUIClientWindow]
+PlayersListTxt="Spielerliste"
+BanListTxt="Gebannte Spieler"
+TempBanListTxt="Vorübergehend gebannte Spieler"
+
+[AdminGUIManBanClientW]
+PlayerNameTxt="Client Name (nur zum Zweck der Bann Auflistung):"
+PlayerIpTxt="Client IP Adresse (oder IP Range falls gewünscht):"
+InsertBanTxt="Bann hinzufügen"
+
+[UWindowConsoleClientWindow]
+ShowColorsText="Zeige farbige Konsolenachrichten"
+ShowChatText="Zeige nur Chatnachrichten"
+
+[MMMainWindow]
+WindowTitle="Musikmenü"
+
+[MMMusicListGrid]
+MusicNameStr="Musik Titel"
+MusicPackStr="Musikdatei"
+FailedToPlayStr="Abspielen der Musik '%s' schlug fehl - entweder nicht gefunden oder das Laden hat nicht funktioniert."
+StartedPlayStr="Musik wird abgespielt: '%s' Sektion: %i."
+NullErrorStr="Hinzufügen fehlgeschlagen: NULL ist kein gültiger Song."
+FailedLoadStr="Hinzufügen fehlgeschlagen: Musikdatei '%s' konnte nicht gefunden oder geladen werden."
+AlreadyUsedStr="Hinzufügen fehlgeschlagen: Musik '%s' ist bereits in der Abspielliste."
+AddedStr="Musik hinzugefügt '%s' (%i)."
+RemoveSongStr="Musik entfernt #%i."
+BadIndexStr="Entfernen fehlgeschlagen: Falsche Indexangabe."
+
+[UWindowNetErrorClientWindow]
+ReconnectText="Erneut zum Server verbinden"
+KickNetworkText="KICKED!|Du wurdest von einem Administrator vom Server geworfen.\"
+BanNetworkText="BANNED!|Du wurdest wegen schlechtem Benehmens von einem Administrator vom Server verbannt.\".\\Wenn du denkst das war nicht gerechtfertigt, kontaktiere den Administrator: "
+TempBanNetworkText="SESSION BANNED!|Du wurdest vorüberghehend bis zum ende des Levels vom Server verbannt.\"
+
+[MMControlsClient]
+MusicStoppedText="Musik wurde angehalten."
+AddMusicText="Hinzufügen"
+AddCurrentText="Den laufenden Song hinzufügen"
+BrowseText="Dateien durchsuchen"
+PlayText="Abspielen"
+StopText="Anhalten"
+MusicVolumeText="Musik Lautstärke"
+PlayNextText="Nächster Song"
+PlayTimeHint="Musik Abspielzeit in Minuten festlegen (0 = kein Limit)"
+SectionHint="Musik Action auswählen (0-255, abhängig vom gewählten Song)"
+
+[UWindowNetErrorWindow]
+WindowTitle="Spieler Netzwerk Fehlerstatus"
+
+[UWindowMessageBoxCW]
+YesText="Ja"
+NoText="Nein"
+OKText="OK"
+CancelText="Abbrechen"
+
+[AdminGUIMainWindow]
+WindowTitle="Admin Menü"
+
+[UWindowSmallCloseButton]
+CloseText="Schließen"
+
+[UWindowConsoleWindow]
+WindowTitle="System Konsole"
+
+[MMListPullDown]
+PlaySongStr="&Spiele Song"
+RemoveSongStr="&Song entfernen"
+
+[MMMusicFilesGrid]
+ErrorLoadPackage="Fehler: Musik Paket konnte nicht geladen werden."
+ErrorNoMusics="Fehler: In diesem Paket wurde keinerlei Musik gefunden."
+
+[AdminGUIPLPullDown]
+GetAliasesTxt="&Zeige Spielerliste"
+KickPlayerTxt="&Entferne Spieler"
+KickBanTempTxt="&Entferne und verbanne Spieler vorübergehend"
+KickBanTxt="Entferne und verbanne Spieler"
+CloseMenuTxt="&Menü schließen"
+RefreshTxt="&Aktualisiere Spielerliste"
+
+[AdminGUIManualBanWnd]
+WindowTitle="Bann per Hand einfügen"
+
+[AdminGUITBanLGrid]
+GettingBanListText="Die Liste der temporär verbannten Spieler wird vom Server geladen, sollte nichts passieren, fehlt eventuell Ihre Anmeldung als Administrator (oder es existieren keine temporären Banns auf diesem Server)."
+
+[AdminGUIBanLPullDown]
+RemoveBanTxt="&Bann entfernen"
+CloseMenuTxt="&Menü schließen"
+RefreshTxt="&Aktualisiere Bannliste"
+ManualBanTxt="Einen Bann per &Hand eintragen"
+
+[FontStyle]
+SmallFont=UWindowFonts.Tahoma10
+SmallFontBold=UWindowFonts.TahomaB10
+MedFont=UWindowFonts.Tahoma20
+MedFontBold=UWindowFonts.TahomaB20
+
+[MMMusListWindow]
+WindowTitle="Es wurden mehrere Songs gefunden:"
+
+[UWindowSmallCancelButton]
+CancelText="Abbrechen"
+
+[UWindowSmallOKButton]
+OKText="OK"
+
+[UWindowSmallRestartButton]
+RestartText="Neustart"

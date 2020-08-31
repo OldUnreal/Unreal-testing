@@ -1,0 +1,7 @@
+[LevelSummary]
+Title="Intermission 7"
+
+[TransitionGenderEvent1]
+OutDelays[1]=10.000000
+MaleText[0]="Der Trip zum anderen Shuttle wurde wirklich ein Ausdauertraining. Ich habe gerade nicht viel zu berichten ... hier am Leben zu bleiben, verlangt mir fast alles ab."
+FemaleText[0]="Der Trip zum anderen Shuttle wurde wirklich ein Ausdauertraining. Ich habe gerade nicht viel zu berichten ... hier am Leben zu bleiben, verlangt mir fast alles ab."

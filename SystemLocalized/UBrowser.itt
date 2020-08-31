@@ -1,0 +1,206 @@
+[Public]
+
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console)
+
+Preferences=(Caption="UBrowser",Parent="In rete",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
+
+
+[UBrowserConsole]
+
+ClassCaption=Unreal Browser Console
+
+
+[UBrowserServerPing]
+
+AdminEmailText="Email Amministratore"
+
+AdminNameText="Nome Amministratore"
+
+ChangeLevelsText="Cambio mappa"
+
+MultiplayerBotsText="Bots nella partita"
+
+FragLimitText="Limite Frag"
+
+TimeLimitText="Limite Tempo"
+
+GameModeText="Modo Partita"
+
+GameTypeText="Tipo Partita"
+
+GameVersionText="Versione Gioco"
+
+GameSubVersionText="Sottoversione Gioco"
+
+WorldLogText="Statistiche mondiali ngStats"
+
+TrueString="Attivo"
+
+FalseString="Non Attivo"
+
+MapFileString="Nome File della mappa"
+
+DLLString="Libreria C++"
+
+DLLVerString="%s (ver %i)"
+
+WebURLString="URL del sito web"
+
+ServerOSString="Sistema operativo del server"
+
+GameClassString="Game Class"
+
+
+[UBrowserServerListWindow]
+
+PlayerCountName="Giocatori"
+
+ServerCountName="Server"
+
+QueryServerText="Interrogo il server principale"
+
+QueryFailedText="Server principale irraggiungibile: "
+
+PingingText="Interrogando i singoli server"
+
+CompleteText="Finito"
+
+InfoName="Informazioni"
+
+
+[UBrowserOpenBar]
+
+OpenText="Apri:"
+
+OpenHelp="Inserisci un URL standard, o selezionane una dalla cronologia. Premi Invio per continuare."
+
+
+[UBrowserMainClientWindow]
+
+FavoritesName="Preferiti"
+
+NewsName="Notizie dalla Community"
+
+RecentName="Server Recenti"
+
+
+[UBrowserServerGrid]
+
+ServerName="Server"
+
+PingName="Ping"
+
+MapNameName="Nome Mappa"
+
+PlayersName="Giocatori"
+
+VersionName="Versione"
+
+
+[UBrowserInfoMenu]
+
+RefreshName="Aggiorna Informazioni"
+
+AttachName="Aggancia finestra"
+
+CloseName="Chiudi finestra"
+
+
+[UBrowserMainWindow]
+
+WindowTitleString="Lista Server"
+
+
+[UBrowserRightClickMenu]
+
+RefreshName="Aggio&rna tutti i server"
+
+FavoritesName="Aggiungi ai pre&feriti"
+
+RemoveFavoritesName="Rimuovi dai pre&feriti"
+
+RefreshServerName="Pinga questo server"
+
+PingAllName="Pinga tutti i server"
+
+InfoName="Informazioni Server e Giocatori"
+
+JoinPasswordName="Collegati con Password"
+
+JoinServerName="Collegati (Join) server"
+
+SpectateServerName="Collegati come Spettatore"
+
+ServerWebsiteName="Mostra server e Sito web"
+
+CopyAddressName="Copia indirizzo server"
+
+
+[UBrowserPlayerGrid]
+
+NameText="Nome"
+
+FragsText="Frag"
+
+PingText="Ping"
+
+TeamText="Squadra"
+
+MeshText="Modello"
+
+SkinText="Pelle"
+
+IDText="ID"
+
+
+[UBrowserGSpyLink]
+
+ResolveFailedError="Il server principale non può essere raggiunto: "
+
+TimeOutError="Connesione col server principale scaduta: "
+
+CouldNotConnectError="Tempo massimo per la connessione col server principale scaduto"
+
+
+[UBrowserHTTPLink]
+
+ResolveFailedError="Il server principale non può essere raggiunto: "
+
+TimeOutError="Connesione col server principale scaduta: "
+
+CouldNotConnectError="Tempo massimo per la connessione col server principale scaduto"
+
+
+[UBrowserSubsetFact]
+
+NotFoundError="Non riesco a trovare la finestra: "
+
+NotReadyError="Finestra non pronta: "
+
+
+[UBrowserRulesGrid]
+
+RuleText="Regola"
+
+ValueText="Valore"
+
+
+[UBrowserServerWebWin]
+
+WindowTitle="Explorer Web di Unreal"
+
+
+[UBrowserLibPageWindow]
+
+DLLTitleStr="Impossibile connetersi: Dynamic Link Libary Mancante '%s'."
+
+DLLVerTitleStr="Impossibile connetersi: Version della Dynamic Link Libary non corretta '%s'."
+
+InfoText[0]="La connessione a questo server necessita di una libreria c++ aggiuntiva '%s',"
+
+InfoText[1]="per ulteriori informazioni visualizza le informazioni esterne dal sito sottostante (hosting da %s):"
+
+
+[UBrowserServerWebCW]
+
+RefreshString="Aggiorna Pagina" 

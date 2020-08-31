@@ -1,0 +1,121 @@
+[Errors]
+
+Critical=Error grave
+
+FailedConfigLoad=%s (no se ha podido cargar)
+
+
+[General]
+
+BrowseButton=...
+
+UseButton=Usar
+
+ClearButton=Eliminar
+
+OkButton=Aceptar
+
+AddButton=Añadir
+
+EmptyButton=Vaciar
+
+InsertButton=Insertar
+
+DeleteButton=Borrar
+
+DefaultsButton=Recuperar configuración predeterminada
+
+BackButton=< A&trás
+
+NextButton=&Siguiente >
+
+FinishButton=&Finalizar
+
+CancelButton=Cancelar
+
+InstallButton=&Instalar
+
+YesButton=&Sí
+
+NoButton=&No
+
+AgreeButton=Ace&pto
+
+LanguagePrompt=Idioma:
+
+LanguageWindow=Selección de idioma
+
+LogWindow=Ventana de registro %s
+
+PropNone=Ningún elemento seleccionado
+
+PropSingle=Propiedades %s
+
+PropMulti=Propiedades %s (%i seleccionado)
+
+InsertCdText=Introduce el CD-ROM de Unreal en la unidad y pulsa ACEPTAR para continuar, o Cancelar para salir.
+
+InsertCdTitle=Se necesita el CD para arrancar
+
+AdvancedOptionsTitle=Opciones avanzadas
+
+Low=Bajo
+
+High=Alto
+
+
+[FirstRun]
+
+Caption=Configuración inicial
+
+LowMemory=Unreal ha detectado que dispones de %i MB de memoria. Para mejorar el funcionamiento del juego, se han activado las opciones "Nivel bajo de detalles de texturas" y "Baja calidad de sonido". Puedes modificar estos ajustes en el menú denominado "Performance Settings" (Opciones de rendimiento).
+
+NonMMX=Unreal ha detectado que estás utilizando un PC que no tiene MMX. Por esta razón, el sonido ha sido ajustado para utilizar la mínima potencia posible de la CPU. Puedes modificar estas opciones en el menú "Opciones avanzadas / Audio".
+
+Starting=Unreal está iniciándose por primera vez. Si tienes algún problema, consulta la sección de resolución de problemas de las notas informativas en el menú "Inicio".
+
+
+[IDDIALOG_Directory]
+
+IDC_Directory=Carpeta de instalación
+
+IDC_ChoosePrompt=Elige la carpeta de instalación.
+
+IDC_PathTitle=Ru&ta:
+
+IDC_DirectoryTitle=&Directorios:
+
+IDC_DrivesTitle=&Unidades:
+
+IDC_NetworkButton=&Red
+
+
+[IDDIALOG_Password]
+
+IDC_Password=Comprueba la contraseña.
+
+IDC_Prompt=Introduce tu nombre y contraseña.
+
+IDC_Name=&Nombre:
+
+IDC_Password=&Contraseña:
+
+
+[IDMENU_NotifyIcon]
+
+ID_NotifyIcon=Menú
+
+ID_NotifyShowLog=Consola &UnrealServer
+
+ID_NotifyAdvancedOptions=Opciones &Avanzadas
+
+ID_NotifyExit=Sali&r de UnrealServer
+
+
+[IDMENU_Log]
+
+ID_LogFile=A&rchivo
+
+ID_LogAdvancedOptions=Opciones &Avanzadas
+
+ID_LogFileExit=&Salir 

@@ -1,0 +1,13 @@
+[LevelInfo1]
+Title=Auf der Reeperbahn nachts um halb 2...
+LevelEnterText=Boah, ich brauch nen neuen Job...
+
+[LevelSummary]
+Title="Auf der Reeperbahn nachts um halb 2..."
+LevelEnterText="Boah, ich brauch nen neuen Job..."
+
+[TransitionGenderEvent0]
+OutDelays[1]=32.500000
+MaleText[0]="Die Prometheus ist in ein Tal gestürzt und verlor diverse Teile, als sie vom Himmel fiel. Überall Leichen. Ich muß davon ausgehen, daß die komplette Crew ausradiert wurde - 150 Mann ... Gott, ich hasse diesen Planeten. Dieses Schiff ist ein Alptraum ... die Hülle ist in mehrere Teile zerbrochen, einer der Energiekerne ist geschmolzen und die Korridore sind voller Söldner. Aber bald bin ich weg hier ... ich muß nur noch die Daten finden und dann das ELT auf der Brücke aktivieren."
+FemaleText[0]="Die Prometheus ist in ein Tal gestürzt und verlor diverse Teile, als sie vom Himmel fiel. Überall Leichen. Ich muß davon ausgehen, daß die komplette Crew ausradiert wurde - 150 Mann ... Gott, ich hasse diesen Planeten. Dieses Schiff ist ein Alptraum ... die Hülle ist in mehrere Teile zerbrochen, einer der Energiekerne ist geschmolzen und die Korridore sind voller Söldner. Aber bald bin ich weg hier ... ich muß nur noch die Daten finden und dann das ELT auf der Brücke aktivieren."
+

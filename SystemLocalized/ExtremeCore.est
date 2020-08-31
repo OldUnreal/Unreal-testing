@@ -1,0 +1,62 @@
+[LevelInfo0]
+
+Title="Núcleo de la Nave Nodriza"
+
+
+[TranslatorEvent13]
+
+message="Fuente de Energía de Emergencia, ACCESO DENEGADO: Fuente de Energía Primaria completamente funcional."
+
+Hint="Busca el Generador Central y destrúyelo para conseguir acceso a esta zona."
+
+
+[TranslatorEvent4]
+
+message="AVISO: Intruso armado detectado. Cerrar todos los accesos a la Fuente y a la Fuente de Energía Primaria. Es crítico prevenir la entrada de intrusos en el Generador Central."
+
+AltMessage="ALERTA ROJA: Seguridad del Generador Central Comprometida."
+
+
+[TranslatorEvent5]
+
+message="ALERTA DE SEGURIDAD: Todos los WarMasters dirigirse a las posiciones del Generador Central para asegurar su protección."
+
+AltMessage="Intruso detectado cerca del Generador Central. Debe mantenerse la seguridad del Generador Central. Se castigará la debilidad."
+
+
+[TranslatorEvent6]
+
+message="Debe mantenerse la seguridad del Generador Central. Puertas de acceso cerradas hasta que se contenga el quebrantamiento de seguridad."
+
+AltMessage="Puerta de Acceso al Núcleo Abierta."
+
+
+[TranslatorEvent10]
+
+AltMessage="Acceso al Puesto de Seguridad permitido."
+
+Hint="Vé al Puesto de Seguridad para conseguir acceso a la Fuente de Energía Primaria del Generador Central."
+
+
+[TranslatorEvent11]
+
+message="ACCESO DENEGADO: El Intruso debe ser eliminado. Todos los WarMasters están siendo conducidos a esta zona tras su llegada de la Fuente."
+
+Hint="Mata a todos los Skaarj para acceder a esta zona."
+
+
+[TranslatorEvent12]
+
+AltMessage="Estado de las Vainas Criogénicas: Temperatura constante, Potencia a niveles nominales, sistemas de seguridad activos."
+
+
+[TranslatorEvent8]
+
+message="Puesto de Seguridad, ACCESO DENEGADO"
+
+
+[TranslatorEvent9]
+
+message="Fuente de Energía Primaria, ACCESO DENEGADO"
+
+Hint="Las puertas pueden abrirse desde el panel de control en el Puesto de Seguridad." 

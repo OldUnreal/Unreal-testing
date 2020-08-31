@@ -1,0 +1,223 @@
+[public]
+
+Object=(Name=UWindow.UWindowWin95LookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Win 95")
+
+
+[UWindowConsoleWindow]
+
+WindowTitle="Console di sistema"
+
+
+[UWindowConsoleClientWindow]
+
+ShowColorsText="Mostra messaggi nella console a colori"
+
+ShowChatText="Registra solo i messaggi di chat"
+
+
+[UWindowMessageBoxCW]
+
+YesText="Sì"
+
+NoText="No"
+
+OKText="OK"
+
+CancelText="Annulla"
+
+
+[UWindowSmallCloseButton]
+
+CloseText="Chiudi"
+
+
+[UWindowSmallCancelButton]
+
+CancelText="Annulla"
+
+
+[UWindowSmallOKButton]
+
+OKText="OK"
+
+
+[AdminGUIPlayersGrid]
+
+PlayerID="ID#"
+
+PlayerName="Nome Giocatore"
+
+PlayerIP="Indirizzo IP"
+
+PlayerClientID="ID Client"
+
+MaxLengthExceeded="Superata lunghezza massima lista giocatori '%i'"
+
+IDmismatchedStr="Non combacia ID di risposta : %i/%j"
+
+ClientReceivedStr="Ricevuto client '%s'."
+
+GettingInfoStr="Prelevamento lista giocatori dal server, se non avviena nulla potresti non essere connesso come ammistratore."
+
+
+[MMMusicListGrid]
+
+MusicNameStr="Nome musica"
+
+MusicPackStr="Pacchetto musica"
+
+FailedToPlayStr="Riproduzione non riuscita: Musica '%s' non è stata trovata o impossibile aprire."
+
+StartedPlayStr="Iniziata esecuzione musica '%s' dalla sezione musicale %i."
+
+NullErrorStr="Impossibile aggiungere: NULL non è una canzone valida."
+
+FailedLoadStr="Impossibile aggiungere: File musicale '%s' impossibile da trovare o aprire."
+
+AlreadyUsedStr="Impossibile aggiungere: Musica '%s' è gia presente nella playlist."
+
+AddedStr="Aggiunta musica '%s' (%i)."
+
+RemoveSongStr="Rimosso brano #%i."
+
+BadIndexStr="Impossibile rimuovere: Indice di rimozione errato."
+
+
+[MMMainWindow]
+
+WindowTitle="Menù musica"
+
+
+[AdminGUIBanLGrid]
+
+LengthExceeded="Superata la lunghezza massima della lista giocatori '%i'"
+
+Responsemismatch="Non combacia ID di risposta: %i/%j"
+
+ReceiveBanText="Ricevuto ban '%s'."
+
+GettingBanListText="Prelevamento banlist dal server, se non avviena nulla potresti non essere connesso come ammistratore (oppure non ci sono ban sul server)."
+
+
+[AdminGUIClientWindow]
+
+PlayersListTxt="Lista Client"
+
+BanListTxt="Client bannati"
+
+TempBanListTxt="Client bannati per la sessione"
+
+
+[AdminGUIManBanClientW]
+
+PlayerNameTxt="Nome client (for banlisting purposes only):"
+
+PlayerIpTxt="Indirizzo IP del client( o intervallo IP se richiesto):"
+
+InsertBanTxt="Inserimento ban"
+
+
+[MMControlsClient]
+
+MusicStoppedText="Riproduzione musicale interrotta."
+
+AddMusicText="Aggiungi musica"
+
+AddCurrentText="Add brano attualmente in esecuzione"
+
+BrowseText="Sfoglia files musicali"
+
+PlayText="Riproduci Musica"
+
+StopText="Interrompi Musica"
+
+MusicVolumeText="Volume Musica"
+
+PlayNextText="Riproduci Seguente"
+
+PlayTimeHint="Seleziona durata della musica in minuti (0 = senza limiti di tempo)"
+
+SectionHint="Seleziona sezione di azione musicale (0-255, dependente dal brano)"
+
+
+[UWindowNetErrorClientWindow]
+
+ReconnectText="Riconnetti al server"
+
+KickNetworkText="CACCIATO!|Sei stato cacciato da questo server da un amministratore per il resto del gioco.\"
+
+BanNetworkText="BANNATO!|Sei stato bannato da questo server da un amministratore per comportamento irresponsabile.\\Se credi che questa punizione sia ingiusta, contatta l'amministratore al: "
+
+TempBanNetworkText="MOMENTANEAMENTE BANNATO!|Sei stato temporaneamente bannato da questo server per il resto della mappa.\"
+
+
+[UWindowNetErrorWindow]
+
+WindowTitle="Errore di rete"
+
+
+[AdminGUIMainWindow]
+
+WindowTitle="Menu amministrazione"
+
+
+[AdminGUIBanLPullDown]
+
+RemoveBanTxt="Rimuovi ban"
+
+CloseMenuTxt="Chiudi questo menu"
+
+RefreshTxt="Aggiorna lista bannati"
+
+ManualBanTxt="&Campo di inserimento manualmente del ban "
+
+
+[MMListPullDown]
+
+PlaySongStr="Ascolta canzone"
+
+RemoveSongStr="Rimuove canzone"
+
+
+[MMMusListWindow]
+
+WindowTitle="Trovate molteplici musiche :"
+
+
+[AdminGUIPLPullDown]
+
+GetAliasesTxt="Ottieni alias dei giocatori"
+
+KickPlayerTxt="Caccia giocatore"
+
+KickBanTempTxt="Caccia e banna temporaneamente giocatore"
+
+KickBanTxt="Caccia e banna giocatore"
+
+CloseMenuTxt="Chiudi questo &menu"
+
+RefreshTxt="Aggiorna lista giocatori"
+
+
+[MMMusicFilesGrid]
+
+ErrorLoadPackage="Errore: Impossibile apreire package musicale."
+
+ErrorNoMusics="Errore: Impossibile trovare musica in questo package."
+
+
+[AdminGUIManualBanWnd]
+
+WindowTitle="Inserimento ban manuale"
+
+
+[AdminGUITBanLGrid]
+
+GettingBanListText="Prelevamento banlist temporanea dal server, se non avviena nulla potresti non essere connesso come ammistratore (oppure non ci sono ban temporanei sul server)."
+
+
+[MMMusicListGrid]
+
+MusicNameStr="Nome Musica"
+
+MusicPackStr="Package Musicale" 

@@ -1,0 +1,205 @@
+[Public]
+
+Object=(Name=Editor.MasterCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.MakeCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.ConformCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.BatchExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.PackageFlagCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.DataRipCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.PS2ConvertCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.UpdateUModCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Object=(Name=Editor.ChecksumPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Preferences=(Caption="Editor",Parent="Opzioni avanzate")
+
+Preferences=(Caption="Avanzate",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Advanced)
+
+Preferences=(Caption="Colori",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Colors)
+
+Preferences=(Caption="Griglia",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Grid)
+
+Preferences=(Caption="Griglia di rotazione",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=RotationGrid)
+
+
+[MasterCommandlet]
+
+HelpCmd=master
+
+HelpOneLiner=Prepara i file master di installazione
+
+HelpUsage=master [-opzioni...] [parametro=valori]...
+
+HelpParm[0]=MasterPath
+
+HelpDesc[0]=Directory principale da dove copiare i files sorgente
+
+HelpParm[1]=SrcPath
+
+HelpDesc[1]=Directory principale da dove copiare i files sorgente di release
+
+HelpParm[2]=RefPath
+
+HelpDesc[2]=Percorso per il riferimento al percorso delta-compresso
+
+
+[UpdateUModCommandlet]
+
+HelpCmd=updateumod
+
+HelpOneLiner=Aggiunge, elimina, rimpiazza o estrae files da un umod
+
+HelpUsage=updateumod UmodFile Comando [Nomefile]
+
+HelpParm[0]=UmodFile
+
+HelpDesc[0]=Il file umod da modificare o visualizzare
+
+HelpParm[1]=Comando
+
+HelpDesc[1]=Uno tra EXTRACT, ADD, DELETE, REPLACE o LIST
+
+HelpParm[2]=Nomefile
+
+HelpDesc[2]=Il file da EXTRACT, ADD, DELETE o REPLACE
+
+
+[ConformCommandlet]
+
+HelpCmd=conform
+
+HelpOneLiner=Genera file binari conformi
+
+HelpUsage=conform file_esistente.ext file_vecchio.ext
+
+HelpParm[0]=file_esistente.ext
+
+HelpDesc[0]=File binario esistente da caricare, conformare e salvare
+
+HelpParm[1]=file_vecchio.ext
+
+HelpDesc[1]=File vecchio per cui bisogna conformare il file esistente e renderlo compatibile
+
+
+[PackageFlagCommandlet]
+
+HelpCmd=packageflag
+
+HelpOneLiner=Imposta i flag di pacchetto nel file pacchetto
+
+HelpUsage=packageflag src.ext [dest.ext <+|->flag [<+|->flag] ...]
+
+HelpParm[0]=src.ext
+
+HelpDesc[0]=File pacchetto esistente da caricare
+
+HelpParm[1]=dest.exe
+
+HelpDesc[1]=Nome del nuovo file pacchetto con le nuove impostazioni flag
+
+HelpParm[2]=flag
+
+HelpDesc[2]=+ per impostare un flag, o - per resettare un flag, seguito da uno fra:
+
+HelpParm[3]=" "
+
+HelpDesc[3]=" AllowDownload"
+
+HelpParm[4]=" "
+
+HelpDesc[4]=" ClientOptional"
+
+HelpParm[5]=" "
+
+HelpDesc[5]=" ServerSideOnly"
+
+HelpParm[6]=" "
+
+HelpDesc[6]=" BrokenLinks"
+
+HelpParm[7]=" "
+
+HelpDesc[7]=" Unsecure"
+
+
+[MakeCommandlet]
+
+HelpCmd=make
+
+HelpOneLiner=Ricostruisce i pacchetti UnrealScript
+
+HelpUsage=make [-opzioni...] [parametro=valore]...
+
+HelpParm[0]=Silent
+
+HelpDesc[0]=Nessuna richiesta; presuppone "sì" a tutte le domande
+
+HelpParm[1]=NoBind
+
+HelpDesc[1]=Non forzare le funzioni native ad essere collegate ai file DLL
+
+HelpParm[2]=All
+
+HelpDesc[2]=Ricostruisce da zero (altrimenti la ricostruzione è incrementale)
+
+
+[BatchExportCommandlet]
+
+HelpCmd=batchexport
+
+HelpOneLiner=Esporta oggetti in gruppo
+
+HelpUsage=batchexport package.ext nomeclasse estensione_est percorso
+
+HelpParm[0]=package.ext
+
+HelpDesc[0]=Pacchetto in cui si trovano gli oggetti che vuoi esportare
+
+HelpParm[1]=nomeclasse
+
+HelpDesc[1]=Classe dell'oggetto da esportare
+
+HelpParm[2]=estensione_est
+
+HelpDesc[2]=Estensione del file da esportare
+
+HelpParm[3]=percorso
+
+HelpDesc[3]=Percorso dove esportare i file, es. C:\MioPercorso
+
+
+[DataRipCommandlet]
+
+HelpCmd=datarip
+
+HelpOneLiner=Crea un pacchetto con i dati su Texture, Musica e Suono estrapolati.
+
+HelpUsage=datarip porig.ext pdest.ext
+
+HelpParm[0]=porig.ext
+
+HelpDesc[0]=Pacchetto origine
+
+HelpParm[1]=pdest.ext
+
+HelpDesc[1]=Pacchetto destinazione
+
+
+[ChecksumPackageCommandlet]
+
+HelpCmd=checksumpackage
+
+HelpOneLiner=Mostra il checksum di un file pacchetto
+
+HelpUsage=checksumpackage nomepacchetto
+
+HelpParm[0]=nomepacchetto
+
+HelpDesc[0]=Il nome del pacchetto di cui mostrare il checksum. 

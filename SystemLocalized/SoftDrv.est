@@ -1,0 +1,12 @@
+[Public]
+
+Object=(Name=SoftDrv.SoftwareRenderDevice,Class=Class,MetaClass=Engine.RenderDevice)
+
+Preferences=(Caption="Reproducción",Parent="Opciones avanzadas")
+
+Preferences=(Caption="Reproducción a través de software",Parent="Reproducción",Class=SoftDrv.SoftwareRenderDevice,Immediate=True)
+
+
+[SoftwareRenderDevice]
+
+ClassCaption="Reproducción a través de software" 

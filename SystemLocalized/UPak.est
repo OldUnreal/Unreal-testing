@@ -1,0 +1,195 @@
+[Public] Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Return To Napali")
+
+Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
+
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
+
+Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+
+
+[TransitionNullHUD]
+
+Statheader=Estadísticas de Muerte:
+
+CARStat=Rifle de Asalto de Combate
+
+RLStat=Lanzacohetes
+
+GLStat=Lanzagranadas
+
+ASMDStat=ASMD
+
+AutomagStat=Automag
+
+DispersionStat=Pistola de dispersión
+
+EightballStat=Eightball
+
+FlakCannonStat=Cañón de metralla
+
+GESBioRifleStat=Biorifle GES
+
+MinigunStat=Ametralladora
+
+RazorjackStat=Lanzacuchillas
+
+RifleStat=Rifle Francotirador
+
+StingerStat=Perforador
+
+TotalStat=Muertes en total
+
+LogEntryMsg=ENTRADA AL DIARIO:
+
+
+[UPakSinglePlayer]
+
+GameName=Paquete de misiones de Unreal
+
+
+[GrenadeLauncher]
+
+PickupMessage="Tienes el Lanzagranadas."
+
+ItemName=Lanzagranadas
+
+
+[Cloak]
+
+ExpireMessage=desactivado.
+
+PickupMessage=Tienes el dispositivo de camuflaje.
+
+ItemName=Dispositivo de camuflaje
+
+M_Activated=" activado"
+
+M_Deactivated=" desactivado"
+
+
+[CARifle]
+
+PickupMessage=Tienes el Rifle de Asalto de Combate
+
+ItemName=Rifle de Asalto de Combate
+
+
+[RocketLauncher]
+
+PickupMessage=Tienes el Lanzamisiles.
+
+ItemName=Lanzamisiles
+
+
+[UPakChooseGameMenu]
+
+MenuList[0]="Regreso a Na Pali"
+
+MenuList[1]=Unreal
+
+MenuList[2]=Unreal
+
+
+[UPakDebugger]
+
+ItemName=Analizador UPak
+
+
+[UPakScubaGear]
+
+PickupMessage=Tienes el equipo de buceo
+
+M_Deactivated=desactivado... Recargando.
+
+
+[UPakMaleOne]
+
+MenuName=Varón 1
+
+
+[UPakFemaleOne]
+
+MenuName=Mujer 1
+
+
+[UPakFemaleTwo]
+
+MenuName=Mujer 2
+
+
+[UPakMaleThree]
+
+MenuName=Varón 3
+
+
+[UPakMaleTwo]
+
+MenuName=Varón 2
+
+
+[CARifleClip]
+
+PickupMessage=Tienes un cargador de 50 balas para el RAC.
+
+
+[GLAmmo]
+
+PickupMessage=Tienes 10 granadas.
+
+
+[RLAmmo]
+
+PickupMessage=Tienes 10 cohetes.
+
+
+[CompTablet]
+
+PickupMessage=Tienes la CompTablet.
+
+
+[GravityMatch]
+
+GameName=GravityMatch
+
+
+[CloakMatch]
+
+GameName=CloakMatch
+
+
+[TerranWeaponMatch]
+
+GameName=TerranWeaponMatch
+
+
+[MarineMatch]
+
+GameName=MarineMatch 

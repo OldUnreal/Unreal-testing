@@ -1,0 +1,12 @@
+[Public]
+
+Object=(Name=ALAudio.ALAudioSubsystem,Class=Class,MetaClass=Engine.AudioSubsystem,Autodetect=)
+
+Preferences=(Caption="Audio"",Parent="Opciones Avanzadas")
+
+Preferences=(Caption="Sonido OpenAL",Parent="Audio",Class=ALAudio.ALAudioSubsystem,Immediate=True)
+
+
+[ALAudioSubsystem]
+
+ClassCaption="Sonido OpenAL" 

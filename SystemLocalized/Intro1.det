@@ -1,0 +1,30 @@
+[LevelSummary]
+Title="Intro1"
+
+[LevelInfo0]
+Title="Intro1"
+
+[TransitionGenderEvent0]
+OutDelays[1]=7.500000
+OutDelays[2]=3.500000
+OutDelays[3]=17.500000
+OutDelays[4]=2.500000
+OutDelays[5]=15.000000
+OutDelays[6]=15.500000
+OutDelays[7]=5.500000
+
+MaleText[0]="Interstellares Kampfschiff UMS Bodega Bay benötigt eine Überlichtverbindung höchster Priorität zur UMS Sector Control."
+MaleText[1]="Bodega Bay, hier spricht Starlight Base. Fahren Sie fort."
+MaleText[2]="Starlight Base, wir haben eine Rettungskapsel unbekannten Ursprungs geortet, als wir in den Orbit eindrangen. An Bord befand sich ein menschliches Wesen, daß steif und fest behauptet es wäre vom Planet geflohen. Der Überlebende gab selbst beim Verhör seine Identität nicht preis. Die DNA-Scans werden für eine Idenfikation übermittelt. Warten auf Befehle."
+MaleText[3]="Einen Moment, Bodega Bay..."
+MaleText[4]="Bodega Bay, ihr Überlebender ist UMS Gefangener 849, zuletzt registriert beim Gefangenentransport Vortex Rikers; Vortex Rikers verschwand erst kürzlich in unserem Sektor. Gefangener 849 wurde als vermisst gemeldet und für tot erklärt."
+MaleText[5]="Starlight Base, Sie haben Erlaubnis den Geretteten für die Mission 'Talon Hunter' einzusetzen. Der Gefangene besitzt Kenntnisse über die Planetenoberfläche und mögliche Gefahren. Gefangener 849 ist der ideale Kandidat, um das Wrack der Prometheus und die Datenspeicher von Talon zu finden."
+MaleText[6]="Bodega Bay, Sie dürfen alle nötigen Schritte für Operation 'Talon Hunter' einleiten."
+
+FemaleText[0]="Interstellares Kampfschiff UMS Bodega Bay benötigt eine Überlichtverbindung höchster Priorität zur UMS Sector Control."
+FemaleText[1]="Bodega Bay, hier spricht Starlight Base. Fahren Sie fort."
+FemaleText[2]="Starlight Base, wir haben eine Rettungskapsel unbekannten Ursprungs geortet, als wir in den Orbit eindrangen. An Bord befand sich ein menschliches Wesen, daß steif und fest behauptet es wäre vom Planet geflohen. Der Überlebende gab selbst beim Verhör seine Identität nicht preis. Die DNA-Scans werden für eine Idenfikation übermittelt. Warten auf Befehle."
+FemaleText[3]="Einen Moment, Bodega Bay..."
+FemaleText[4]="Bodega Bay, ihr Überlebender ist UMS Gefangener 849, zuletzt registriert beim Genfangenentransport Vortex Rikers; Vortex Rikers verschwand erst kürzlich in unserem Sektor. Gefangener 849 wurde als vermisst gemeldet und für tot erklärt."
+FemaleText[5]="Starlight Base, Sie haben Erlaubnis den Geretteten für die Mission 'Talon Hunter' einzusetzen. Der Gefangene besitzt Kenntnisse über die Planetenoberfläche und mögliche Gefahren. Gefangener 849 ist der ideale Kandidat, um das Wrack der Prometheus und die Datenspeicher von Talon zu finden."
+FemaleText[6]="Bodega Bay, Sie dürfen alle nötigen Schritte für Operation 'Talon Hunter' einleiten."

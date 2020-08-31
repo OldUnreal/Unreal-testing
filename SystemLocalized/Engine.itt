@@ -1,0 +1,321 @@
+[Public]
+
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
+
+Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
+
+Preferences=(Caption="Avanzate",Parent="Opzioni avanzate")
+
+Preferences=(Caption="Impostazioni motore di gioco",Parent="Avanzate",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+
+Preferences=(Caption="Alias dei tasti",Parent="Avanzate",Class=Engine.Input,Immediate=True,Category=Aliases)
+
+Preferences=(Caption="Collegamento tasti",Parent="Avanzate",Class=Engine.Input,Immediate=True,Category=RawKeys)
+
+Preferences=(Caption="Driver",Parent="Opzioni avanzate",Class=Engine.Engine,Immediate=False,Category=Drivers)
+
+Preferences=(Caption="Informazioni publiche sul server",Parent="Connessione di rete",Class=Engine.GameReplicationInfo,Immediate=True)
+
+Preferences=(Caption="Impostazioni gioco",Parent="Opzioni avanzate ",Class=Engine.GameInfo,Immediate=True)
+
+Preferences=(Caption="Dettagli",Parent="Opzioni avanzate")
+
+Preferences=(Caption="Sangue",Parent="Dettagli")
+
+Preferences=(Caption="Server",Parent="Sangue",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
+
+Preferences=(Caption="Channel Download",Parent="In rete",Class=Engine.ChannelDownload)
+
+[Fonts]
+
+BigFont=Engine.MedFont
+
+LargeFont=Engine.MedFont
+
+Papyrus=UWindowFonts.Tahoma30
+
+Chiller=UWindowFonts.Tahoma30
+
+[Errors]
+
+NetOpen=Errore di apertura file
+
+NetWrite=Errore di scrittura file
+
+NetRefused=Il server s'è rifiutato di mandare '%s'
+
+NetClose=Errore di chiusura file
+
+NetSize=La dimensione del file non corrisponde
+
+NetMove=Errore spostando il file
+
+NetInvalid=Richiesta di file non valida
+
+NoDownload=Pacchetto '%' non scaricabile
+
+DownloadFailed=Lo scaricamento del pacchetto '%s' è fallito: %s
+
+RequestDenied=Negato il file richiesto dal server per la mappa corrente
+
+ConnectionFailed=Connessione fallita
+
+Banned=Sei stato escluso
+
+TempBanned=Siete stati temporaneamente esclusi
+
+Kicked=Sei stato buttato fuori
+
+ChAllocate=Canale non trovato
+
+NetAlready=Già connesso
+
+NetListen=Ascolto fallito: nessun collegamento disponibile
+
+LoadEntry=Impossibile caricare oggetto: %s
+
+InvalidUrl=URL non valido: %s
+
+FailedBrowse=Impossibile inserire %s: %s
+
+Listen=Ascolto fallito: %s
+
+AbortToEntry=Fallito; ritorno all'oggetto
+
+ServerOpen=I server non possono caricare gli URL di rete
+
+ServerListen=Il server dedicato non può essere in ascolto: %s
+
+Pending=Connessione in attesa '%s' fallita; %s
+
+LoadPlayerClass=Caricamento classe giocatore fallito
+
+ServerOutdated=Versione del server non aggiornata
+
+
+[Progress]
+
+CancelledConnect=Annullato tentativo di connessione
+
+RunningNet=%s: %s (%i giocatori)
+
+NetReceiving=Sto ricevendo '%s': %i/%i
+
+NetReceiveOk='%s' ricevuto correttamente
+
+NetSend=Sto inviando '%s'
+
+NetSending=Sto inviando '%s': %i/%i
+
+Connecting=Connessione...
+
+Listening=Ascolto dei client...
+
+Loading=Caricamento
+
+Saving=Salvataggio
+
+Paused=In pausa da %s
+
+ReceiveFile=Ricezione '%s' (F10 per annullare)
+
+ReceiveOptionalFile=Ricezione del file opzionale '%s' (Premi F10 per saltarlo)
+
+ReceiveSize=Dimensioni %iK, Completo %3.1f%% = %iK, %i pacchetti rimanenti
+
+ConnectingText=Connessione (F10 per annullare):
+
+ConnectingURL=unreal://%s/%s
+
+
+[Console]
+
+ClassCaption="Console standard di Unreal"
+
+LoadingMessage=CARICAMENTO
+
+SavingMessage=SALVATAGGIO
+
+ConnectingMessage=CONNESSIONE
+
+PausedMessage=IN PAUSA
+
+PrecachingMessage=PRECACHING
+
+ChatChannel=(CHAT)
+
+TeamChannel=(SQUADRA)
+
+
+[General]
+
+Upgrade=Per accedere a questo server, hai bisogno di una versione piu' aggiornata di Unreal disponibile nella pagina Web di Oldunreal:
+
+UpgradeURL=http://www.oldunreal.com/oldunrealpatches.html
+
+UpgradeQuestion=Desideri lanciare il tuo browser di rete e andare alla pagina di aggiornamento adesso?
+
+
+[Menu]
+
+HelpMessage=
+
+MenuList=
+
+LeftString=Sinistra
+
+RightString=Destra
+
+CenterString=Centro
+
+EnabledString=Abilitato
+
+DisabledString=Disabilitato
+
+HelpMessage[1]="Questo menu non è stato ancora implementato."
+
+YesString=sì
+
+NoString=no
+
+
+[Inventory]
+
+PickupMessage=Liberato un oggetto
+
+M_Activated=" attivato"
+
+M_Selected=" selezionato"
+
+M_Deactivated=" disattivato"
+
+ItemArticle=un/una
+
+
+[WarpZoneInfo]
+
+OtherSideURL=
+
+
+[GameInfo]
+
+SwitchLevelMessage=Cambio di mappa
+
+DefaultPlayerName=Giocatore
+
+LeftMessage=" ha abbandonato la partita."
+
+FailedSpawnMessage=Impossibile posizionare il giocatore
+
+FailedPlaceMessage=Impossibile trovare il punto di partenza (il livello potrebbe aver bisogno di un interruttore 'PlayerStart')
+
+NameChangedMessage="Nome cambiato in "
+
+EnteredMessage=" è entrato in gioco."
+
+GameName=Partita
+
+MaxedOutMessage=Capacità massima del server raggiunta.
+
+WrongPassword=La password immessa non è corretta.
+
+NeedPassword="È necessario immettere la password per partecipare alla partita."
+
+FailedTeamMessage=Impossibile trovare una squadra per il giocatore
+
+
+[LevelInfo]
+
+Title=Senza titolo
+
+
+[Weapon]
+
+MessageNoAmmo=" non ha munizioni."
+
+PickupMessage=Hai preso un'arma
+
+DeathMessage=%o è stato ucciso da %w di %k.
+
+ItemName=Arma
+
+DeathMessage[0]=%o è stato ucciso da %w di %k.
+
+DeathMessage[1]=%o è stato ucciso da %w di %k.
+
+DeathMessage[2]=%o è stato ucciso da %w di %k.
+
+DeathMessage[3]=%o è stato ucciso da %w di %k.
+
+
+[Counter]
+
+CountMessage=Ne mancano %i...
+
+CompleteMessage=Completato!
+
+
+[Ammo]
+
+PickupMessage=Hai raccolto alcune munizioni.
+
+
+[Pickup]
+
+ExpireMessage=
+
+
+[SpecialEvent]
+
+DamageString=
+
+
+[DamageType]
+
+Name=ucciso
+
+AltName=ucciso
+
+
+[PlayerPawn]
+
+QuickSaveString=Salvataggio veloce
+
+NoPauseMessage=Partita senza pause
+
+ViewingFrom=Visualizzato ora da
+
+OwnCamera=la propria camera
+
+FailedView=Cambio visualizzazione fallito.
+
+CantChangeNameMsg=Non puoi cambiare il tuo nome mentre partecipi ad una partita su rete globale.
+
+
+[Pawn]
+
+NameArticle=" un/una "
+
+
+[Spectator]
+
+MenuName=Spettatore
+
+
+[ServerCommandlet]
+
+HelpCmd=server
+
+HelpOneLiner=Network game server
+
+HelpUsage=server map.unr[?game=tipogioco] [-opzioni...] [parametri=valori]...
+
+HelpWebLink=http://wiki.oldunreal.com
+
+HelpParm[0]=Log
+
+HelpDesc[0]=Specifica il nome del file di log da generare
+
+HelpParm[1]=AllAdmin
+
+HelpDesc[1]=Dai a tutti i giocatori i privileggi di amministratore 

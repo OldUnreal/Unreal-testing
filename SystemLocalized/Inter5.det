@@ -1,0 +1,9 @@
+[LevelInfo2]
+Title="Intermission 5"
+LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
+
+[TransitionGenderEvent5]
+OutDelays[1]=41.500000
+MaleText[0]="Ich konnte die Marines überrumpeln, aber ich habe ihr Shuttle nicht gefunden. Es muß zur Bodega Bay zurückgekehrt sein. Als ich merkte, daß das Schiff nicht hier war, wollte ich im ersten Moment aufgeben. Es ist alles so hoffnungslos. Aber beim letzten Mal hier sah es noch viel hoffnungsloser aus, und da habe ich es doch auch geschafft. Ich werde nicht aufgeben. Und das war richtig ... denn die Hoffnung hatte ich nicht verloren. Einer der Marines hatte ein Funkgerät mit aktiver Verbindung ... da ist noch ein Squad zehn Klicks westlich von hier im Wald stationiert. Ich weiß zwar nicht, wie ich dorthin kommen soll, aber da ist ein Shuttle und irgendwie werde ich das schon nehmen!"
+FemaleText[0]="Ich konnte die Marines überrumpeln, aber ich habe ihr Shuttle nicht gefunden. Es muß zur Bodega Bay zurückgekehrt sein. Als ich merkte, daß das Schiff nicht hier war, wollte ich im ersten Moment aufgeben. Es ist alles so hoffnungslos. Aber beim letzten Mal hier sah es noch viel hoffnungsloser aus, und da habe ich es doch auch geschafft. Ich werde nicht aufgeben. Und das war richtig ... denn die Hoffnung hatte ich nicht verloren. Einer der Marines hatte ein Funkgerät mit aktiver Verbindung ... da ist noch ein Squad zehn Klicks westlich von hier im Wald stationiert. Ich weiß zwar nicht, wie ich dorthin kommen soll, aber da ist ein Shuttle und irgendwie werde ich das schon nehmen!"
+

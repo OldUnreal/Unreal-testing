@@ -1,0 +1,55 @@
+[LevelInfo0]
+Title="Crashsite2"
+
+[LevelSummary]
+Title="Innerhalb UMS Prometheus"
+
+[CompTablet0]
+PickupMessage="Du hast das Waffenprotokolle gefunden!"
+
+[TranslatorEvent2]
+Message="UMS Prometheus - Navigationsnetzwerk: Fehler: Planet nicht auf Karte gefunden! Bitte warten Sie auf die Analyse-Ergebnisse ...."
+
+[TranslatorEvent1]
+Message="UMS Prometheus - Navigationsnetzwerk: Warnung: Aufschlag auf die Planetenoberfläche steht kurz bevor!"
+
+[TranslatorEvent12]
+Message="Log. von Michael T. Williams, Wissenschaftlicher Offizier: Die Untersuchungen sind vor einigen Tagen abgeschlossen worden, und wir haben immer noch eine Woche bis zu unserem Bestimmungsort. Das wäre doch wirklich eine prima Zeit sich auszuruhen -  wenn wir nicht auf diesem verdammten Schiff gefangen wären."
+
+[TranslatorEvent0]
+Message="UMS Prometheus - Navigationsnetzwerk: Status: Eintritt in die Atmosphäre entdeckt | Warnung: Sinkrate weit über dem akzeptablen Limit! | Kritisch: Hüllenbruch in Sektion B3 entdeckt! | Kritisch: Hüllenbruch in Sektion B2 entdeckt! | Warnung: Sektion A3, Hüllenintegrität auf 26% gesunken! | Kritisch: Hüllenbruch in Sektion A2 entdeckt!"
+
+[TranslatorEvent3]
+Message="UMS Prometheus - Info-Terminal: --- Informationsnetzwerk offline ---"
+
+[TranslatorEvent4]
+Message="UMS Prometheus - Info-Terminal: --- Informationsnetzwerk offline ---"
+
+[TransitionGenderEvent0]
+OutDelays[1]=11.000000
+OutDelays[2]=3.000000
+OutDelays[3]=6.000000
+OutDelays[4]=2.000000
+OutDelays[5]=11.000000
+OutDelays[6]=3.000000
+OutDelays[7]=7.000000
+OutDelays[8]=9.000000
+OutDelays[9]=28.000000
+MaleText[0]="Wie durch ein Wunder ist die Überlichtverbindung auf der Prometheus immer noch online. Als ich in der Kommunikationszentrale war, stieß ich auf diese Aufzeichnung auf einem der Computer:"
+MaleText[1]="Interstellares Kampfschiff UMS Bodega Bay..."
+MaleText[2]="...sie dürfen alle nötigen Schritte für Operation 'Talon Hunter' einleiten."
+MaleText[3]="Verstanden."
+MaleText[4]="Bodega Bay, eine Sache noch, Operation 'Talon Hunter' hat Sicherheitsstufe Deep Ultra. Sobald sie die Mission erledigt haben, müssen alle möglichen Risiken eliminiert werden."
+MaleText[5]="Definieren sie das, Starlight Base."
+MaleText[6]="Bodega Bay, sorgen sie dafür das Gefangener #849 nicht zurückkehrt; terminieren sie den Gefangenen sobald der Job erledigt wurde."
+MaleText[7]="Verstanden, Starlight Base. Wir kümmern uns um den Gefangenen #849 nach erfolgreichem Abschluss der Operation 'Talon Hunter'. Bodega Bay...Ende."
+MaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muß das jetzt durchziehen. Ich muß die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."
+FemaleText[0]="Wie durch ein Wunder ist die Überlichtverbindung auf der Prometheus immer noch online. Als ich in der Kommunikationszentrale war, stieß ich auf diese Aufzeichnung auf einem der Computer:"
+FemaleText[1]="Interstellares Kampfschiff UMS Bodega Bay..."
+FemaleText[2]="...sie dürfen alle nötigen Schritte für Operation 'Talon Hunter' einleiten."
+FemaleText[3]="Verstanden."
+FemaleText[4]="Bodega Bay, eine Sache noch, Operation 'Talon Hunter' hat Sicherheitsstufe Deep Ultra. Sobald sie die Mission erledigt haben, müssen alle möglichen Risiken eliminiert werden."
+FemaleText[5]="Definieren sie das, Starlight Base."
+FemaleText[6]="Bodega Bay, sorgen sie dafür das Gefangener #849 nicht zurückkehrt; terminieren sie den Gefangenen sobald der Job erledigt wurde."
+FemaleText[7]="Verstanden, Starlight Base. Wir kümmern uns um den Gefangenen #849 nach erfolgreichem Abschluss der Operation 'Talon Hunter'. Bodega Bay...Ende."
+FemaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muß das jetzt durchziehen. Ich muß die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."

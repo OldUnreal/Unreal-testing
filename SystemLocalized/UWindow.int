@@ -1,0 +1,130 @@
+[public]
+Object=(Name=UWindow.UWindowWin95LookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Win 95")
+
+[UWindowConsoleWindow]
+WindowTitle="System Console"
+
+[UWindowConsoleClientWindow]
+ShowColorsText="Show console messages in colors"
+ShowChatText="Log only chat messages"
+
+[UWindowMessageBoxCW]
+YesText="Yes"
+NoText="No"
+OKText="OK"
+CancelText="Cancel"
+
+[UWindowSmallCloseButton]
+CloseText="Close"
+
+[UWindowSmallCancelButton]
+CancelText="Cancel"
+
+[UWindowSmallOKButton]
+OKText="OK"
+
+[UWindowSmallRestartButton]
+RestartText="Restart"
+
+[AdminGUIPlayersGrid]
+PlayerID="ID#"
+PlayerName="Player Name"
+PlayerIP="IP-Address"
+PlayerClientID="Client ID"
+MaxLengthExceeded="Maximum player list length exceeded '%i'"
+IDMismatchedStr="Response ID mismatched: %i/%j"
+ClientReceivedStr="Received client '%s'."
+GettingInfoStr="Getting player list from server, if nothing happens you may not be logged in as admin."
+
+[AdminGUIBanLGrid]
+LengthExceeded="Maximum player list length exceeded '%i'"
+ResponseMismatch="Response ID mismatched: %i/%j"
+ReceiveBanText="Received ban '%s'."
+GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
+
+[MMMusicListGrid]
+MusicNameStr="Music name"
+MusicPackStr="Music package"
+FailedToPlayStr="Failed to play: Music '%s' was not found or failed to load."
+StartedPlayStr="Started playing music '%s' with music section %i."
+NullErrorStr="Failed to add: NULL is not a valid song."
+FailedLoadStr="Failed to add: Music '%s' file could not be found or loaded."
+AlreadyUsedStr="Failed to add: Music '%s' is already in the playlist."
+AddedStr="Added music '%s' (%i)."
+RemoveSongStr="Removed song #%i."
+BadIndexStr="Failed to remove: Bad remove index."
+
+[AdminGUIClientWindow]
+PlayersListTxt="Clients List"
+BanListTxt="Banned Clients"
+TempBanListTxt="Session Banned Clients"
+
+[AdminGUIManBanClientW]
+PlayerNameTxt="Client name (for banlisting purposes only):"
+PlayerIpTxt="Client IP address (or IP range if desired):"
+InsertBanTxt="Insert ban"
+
+[MMMainWindow]
+WindowTitle="Music menu"
+
+[UWindowNetErrorClientWindow]
+ReconnectText="Reconnect to server"
+KickNetworkText="KICKED!|You have been kicked from this server by an administrator for remainder of the game.\"
+BanNetworkText="BANNED!|You have been banned from this server by an administrator for bad behaviour.\\If you feel like you dont deserve this ban, contact the administrator at: "
+TempBanNetworkText="SESSION BANNED!|You have been temporarily banned from this server for remainder of the map.\"
+
+[MMControlsClient]
+MusicStoppedText="Music player was stopped."
+AddMusicText="Add Music"
+AddCurrentText="Add currently playing song"
+BrowseText="Browse music files"
+PlayText="Play Music"
+StopText="Stop Music"
+MusicVolumeText="Music Volume"
+PlayNextText="Play Next"
+PlayTimeHint="Select music playtime in minutes (0 = no timelimit)"
+SectionHint="Select music action section (0-255, depends on song)"
+
+[UWindowNetErrorWindow]
+WindowTitle="Player Network error status"
+
+[AdminGUIMainWindow]
+WindowTitle="Admin Menu"
+
+[AdminGUIBanLPullDown]
+RemoveBanTxt="&Remove ban"
+CloseMenuTxt="&Close this menu"
+RefreshTxt="&Refresh banlist"
+ManualBanTxt="&Manually insert ban entry"
+
+[MMMusListWindow]
+WindowTitle="Multiple musics found:"
+
+[MMListPullDown]
+PlaySongStr="&Play song"
+RemoveSongStr="&Remove song"
+
+[MMMusicFilesGrid]
+ErrorLoadPackage="Error: Failed to load music package."
+ErrorNoMusics="Error: Failed to find any musics in this package."
+
+[AdminGUIPLPullDown]
+GetAliasesTxt="&Get player aliases"
+KickPlayerTxt="&Kick player"
+KickBanTempTxt="&Temporarily kick-ban player"
+KickBanTxt="Kick-&ban player"
+CloseMenuTxt="&Close this menu"
+RefreshTxt="&Refresh players list"
+
+[AdminGUIManualBanWnd]
+WindowTitle="Insert manual ban"
+
+[AdminGUITBanLGrid]
+GettingBanListText="Getting temp-banlist from server, if nothing happens you may not be logged in as admin (or there are no temp-bans on server)."
+
+[FontStyle]
+SmallFont=UWindowFonts.Tahoma10
+SmallFontBold=UWindowFonts.TahomaB10
+MedFont=UWindowFonts.Tahoma20
+MedFontBold=UWindowFonts.TahomaB20
+

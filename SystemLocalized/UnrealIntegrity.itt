@@ -1,0 +1,3 @@
+[Public]
+Preferences=(Caption="Integrità Unreal",Parent="In rete")
+Preferences=(Caption="Integrità Server",Parent="Integrità Unreal",Class=UnrealIntegrity.IntegrityServer,Immediate=True)

@@ -1,0 +1,83 @@
+[TranslatorEvent2]
+
+message=La Aldea Harobed está al otro lado de estas montañas. Esperaré hasta que salgan los dos soles y seguiré a través de la mina Rrajigar. Es la única forma.
+
+
+[TranslatorEvent0]
+
+message=ALERTA: Resistencia de esclavo Nali detectad en el Sector 3A. Fuerza letal autorizada para suprimir actividad rebelde.
+
+
+[TranslatorEvent1]
+
+message=AVISO: Los puentes de acceso en la mitad inferior de la mina no son seguros. Proseguir con precaución.
+
+
+[TranslatorEvent11]
+
+message=AVISO: Intruso detectado en las Secciones C-6 y D-8. Todo el personal es responsable de patrullar su propia zona.
+
+Hint=Dispara al botón rojo cercano para elevar el puente estrecho a través de la lava.
+
+
+[TranslatorEvent8]
+
+message=La fuente de energía uno del Campo de Fuerza está en estado activo.
+
+Hint=Pulsa los botones rojos del muro tocándolos.
+
+
+[TranslatorEvent7]
+
+message=La fuente de energía dos del Campo de Fuerza está en estado activo.
+
+Hint=Pulsa los botones rojos del muro tocándolos.
+
+
+[TranslatorEvent9]
+
+message=AVISO: El estado de la fuente de energía uno del Campo de Fuerza es inactivo. Condición de Seguridad Dos alcanzada.
+
+
+[TranslatorEvent10]
+
+message=AVISO: El estado de la fuente de energía dos del Campo de Fuerza es inactivo. Condición de Seguridad Dos alcanzada.
+
+
+[TranslatorEvent6]
+
+message=Campo de fuerza intacto. Todos los sistemas normales.
+
+Hint=El campo de fuerza tiene que ser desativado. Busca la sala de control.
+
+
+[TranslatorEvent5]
+
+message=AVISO! Campo de Fuerza desactivado. Intruso detectado en la Sección C-6. Eliminar toda presencia desautorizada.
+
+Hint=Dispara a todos los barriles rojos.
+
+
+[LevelInfo0]
+
+Title=Mina Rrajigar
+
+
+[TranslatorEvent19]
+
+message=NOTA: El área debe estar libre para que pueda funcionar adecuadamente el elevador de transporte.
+
+
+[TranslatorEvent15]
+
+message=Estás BIEN muerto.
+
+
+[TranslatorEvent14]
+
+message=¿Qué demonios haces aquí arriba?
+
+
+[TranslatorEvent20]
+
+message=Área de Control del Campo de Fuerza 

@@ -1,0 +1,1542 @@
+[public]
+
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console)
+
+Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Oro)
+
+Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Hielo)
+
+Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Metal)
+
+Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Unreal)
+
+
+[UMenuBotSetupBase]
+
+BotText="Bot:"
+
+BotHelp="Selecciona el bot que deseas configurar."
+
+BotWord="Bot"
+
+DefaultsText="Reinicar"
+
+DefaultsHelp="Reinicia todas las configuraciones de bots a sus parámetros inciales."
+
+BotSkillText="Habilidad del bot:"
+
+BotSkillHelp="Ajustar la dificultad del bot (fácil-difícil)."
+
+BotAccurText="Precisión:"
+
+BotAccurHelp="Ajustar la habilidad de apunte del bot (mala puntería-buena puntería)."
+
+BotCombatStyleText="Estilo de combate:"
+
+BotCombatStyleHelp="Ajusta el estilo de combate del bot(atacar de lejos-acercarse al enemigo agresivamente)."
+
+BotAlertnessText="Atención:"
+
+BotAlertnessHelp="La atención del bot(despistado a sus alrededores-atento a sus alrededores)."
+
+BotCampingText="Movilidad:"
+
+BotCampingHelp="Ajusta el comportamiento móvil del bot(agresivo-pasivo)."
+
+FavoriteWeaponText="Arma preferida:"
+
+FavoriteWeaponHelp="El arma de elección del bot."
+
+NoFavoriteWeapon="Sin preferencia"
+
+NameHelp="Darlo un nombre."
+
+TeamText="Color:"
+
+TeamHelp="Selecciona un color de equipo para este bot."
+
+ClassHelp="Selecciona la clase de este bot."
+
+SkinHelp="Selecciona una piel para este bot."
+
+FaceHelp="Selecciona una cara para este bot."
+
+
+[UnrealConsole]
+
+ClassCaption="Consola del explorador UMenu"
+
+
+[UMenuBotmatchClientWindow]
+
+StartMatchTab="Juego"
+
+RulesTab="Reglas"
+
+SettingsTab="Configuración"
+
+BotConfigTab="Bots"
+
+StartText="Empezar"
+
+
+[UMenuMenuBar]
+
+GameName="&Juego"
+
+GameHelp="Empezar un juego nuevo, cargar un juego, o salir."
+
+MultiplayerName="&Multijugador"
+
+MultiplayerHelp="Hospedar o unirse a un juego multijugador."
+
+OptionsName="&Opciones"
+
+OptionsHelp="Configurar el juego."
+
+ToolName="&Herramientas"
+
+ToolHelp="Activar herramientas del sistema."
+
+HelpName="&Ayuda"
+
+HelpHelp="Activar o desactivar ayuda."
+
+VersionName="Versión"
+
+ModName="&Mod"
+
+ModHelp="Configurar modificaciones de usuario."
+
+
+[UTCreditsCW]
+
+ProgrammersText="Programación"
+
+LevelDesignText="Diseño de niveles"
+
+ArtText="Arte y modelos"
+
+MusicSoundText="Música y sonido"
+
+BizText="Empresariales"
+
+
+[UMenuPlayerMeshClient]
+
+FaceText="Cara"
+
+BodyText="Cuerpo"
+
+
+[UMenuVideoClientWindow]
+
+DriverText="Controlador de vídeo"
+
+DriverHelp="Éste es el controlador de video actual. Usa el botón Cambiar para configurar otro."
+
+DriverButtonText="Cambiar"
+
+DriverButtonHelp="Aprieta este botón para cambiar el controlador de vídeo."
+
+ResolutionText="Resolución"
+
+ResolutionHelp="Selecciona una nueva resolución de pantalla."
+
+ColorDepthText="Profundidad de Color"
+
+ColorDepthHelp="Selecciona una nueva profundidad de color."
+
+BitsText="bit"
+
+TextureDetailText="Detalle de texturas del mundo"
+
+TextureDetailHelp="Cambia el detalle de las texturas de la geometria del mundo. Usa un nivel de detalle bajo para mayor rendimiento."
+
+Details[0]="Alto"
+
+Details[1]="Medio"
+
+Details[2]="Bajo"
+
+SkinDetailText="Detalle de piel"
+
+SkinDetailHelp="Cambia el detalle de las pieles. Usa un nivell de detalle bajo para mayor rendimiento."
+
+BrightnessText="Brillo"
+
+BrightnessHelp="Ajusta el brillo de pantalla."
+
+ScaleText="Tamaño de la fuente"
+
+ScaleHelp="Ajusta el tamaño de los elementos en la interfaz de usuario."
+
+ScaleSizes[0]="Normal"
+
+ScaleSizes[1]="Doble"
+
+TranslatorScaleText="Traductor Tamaño"
+
+TranslatorScaleHelp="Ajuste el tamaño del Traductor."
+
+MouseText="Velocidad del ratón en interfaz"
+
+MouseHelp="Ajusta la velocidad del ratón en la interfaz de usuario."
+
+GuiSkinText="Apariencia de interfaz"
+
+GuiSkinHelp="Cambia la apariencia de la interfaz a otra."
+
+ConfirmSettingsTitle="Confirmar cambio de configuración de vídeo"
+
+ConfirmSettingsText="Estás seguro que quieres mantener esta nueva configuración?"
+
+ConfirmSettingsCancelTitle="Cambio de configuración de vídeo"
+
+ConfirmSettingsCancelText="Tu configuración previa ha sido restaurada."
+
+ConfirmTextureDetailTitle="Confirmar detalle de texturas"
+
+ConfirmTextureDetailText="Incrementar el detalle de texturas por encima de por defecto puede afectar el rendimiento."
+
+ConfirmDriverTitle="Cambiar controlador de vieo"
+
+ConfirmDriverText="Esta opción ahora reiniciará Unreal, y te permitirá cambiar el controlador. Lo quieres hacer?"
+
+ShowDecalsText="Mostrar marcas"
+
+ShowDecalsHelp="Si está activada, las marcas de armas y sangre se mostrarán en el juego."
+
+MinFramerateText="FPS mínimos deseados"
+
+MinFramerateHelp="Si tu nivel de fotogramas por segundo baja del número introducido, Unreal reducirá los efectos especiales para incrementarlo."
+
+DynamicLightsText="Usar iluminación dinámica"
+
+DynamicLightsHelp="Si está activada, se usará iluminación dinámica en el juego."
+
+WideScreenText="Ajustar pantalla ancha"
+
+WideScreenHelp="Usa las flechas izquierda y derecha para ajustar el campo de visión (FoV) para pantallas anchas"
+
+PawnShadowsText="Sombras de peones"
+
+PawnShadowsHelp="Los peones mostrarán una sombra redonda en el suelo (los cambios se efectuarán después de un cambio de mapa)."
+
+FullMeshRendText="Generación completa de modelos"
+
+FullMeshRendHelp="(Dependiente de controlador) si está activada, arregla problemas de reproducción con modelos grandes pero *puede* causar algunas ralentizaciones."
+
+
+[UMenuPlayerSetupClient]
+
+NameText="Nombre:"
+
+NameHelp="Introduce tu nombre de jugador."
+
+TeamText="Equipo:"
+
+Teams[0]="Rojo"
+
+Teams[1]="Azul"
+
+Teams[2]="Verde"
+
+Teams[3]="Dorado"
+
+NoTeam="Ninguno"
+
+TeamHelp="Selecciona el equipo en el que deseas jugar."
+
+ClassText="Clase:"
+
+ClassHelp="Selecciona tu clase de jugador."
+
+SkinText="Piel:"
+
+SkinHelp="Selecciona una piel para tu jugador."
+
+FaceText="Cara:"
+
+FaceHelp="Selecciona una cara para tu jugador."
+
+SpectatorText="Jugar como espectador"
+
+SpectatorHelp="Activa esta casilla para observar la acción del juego como espectador."
+
+
+[UMenuStartMatchClientWindow]
+
+GameText="Tipo de juego:"
+
+GameHelp="Selecciona el tipo de juego a jugar."
+
+MapText="Nombre de mapa:"
+
+MapHelp="Selecciona el mapa a jugar."
+
+MapListText="Lista de mapas"
+
+MapListHelp="Haz clic en este botón para ver la lista de mapas que se jugarán repetidamente."
+
+MutatorText="Mutadores"
+
+MutatorHelp="Los mutadores modifican un tipo de juego. Aprieta este botón para introducir mutadores al juego."
+
+
+[UMenuServerSetupPage]
+
+AdminEmailText="Correo del administrador"
+
+AdminEMailHelp="Introduce una dirección de correo para que los usuarios puedan contactarte."
+
+AdminNameText="Nombre del administrador"
+
+AdminNameHelp="Introduce tu nombre como administrador."
+
+MOTDLine1Text="Línea 1 MDD"
+
+MOTDLine1Help="Introduce un mensaje del día que se mostrará a todo usuario que se una a tu servidor."
+
+MOTDLine2Text="Línea 2 MDD"
+
+MOTDLine2Help="Introduce un mensaje del día que se mostrará a todo usuario que se una a tu servidor."
+
+MOTDLine3Text="Línea 3 MDD"
+
+MOTDLine3Help="Introduce un mensaje del día que se mostrará a todo usuario que se una a tu servidor."
+
+MOTDLine4Text="Línea 4 MDD"
+
+MOTDLine4Help="Introduce un mensaje del día que se mostrará a todo usuario que se una a tu servidor."
+
+ServerNameText="Nombre del servidor"
+
+ServerNameHelp="Introduce el nombre y la descripción de tu servidor que aparecerá en las listas de servidores."
+
+DoUplinkText="Promocionar servidor"
+
+DoUplinkHelp="Si está activada, tu servidor se mostrará en el servidor maestro, para que tu servidor apareza en la lista de servidores global."
+
+ngWorldStatsText="Registro en ngWorldStats"
+
+ngWorldStatsHelp="Si está activada, tu servidor subirá un registro a NetGamesUSA para recogida estadística. Visita ut.ngworldstats.com para más información."
+
+LanPlayText="Optimizar para LAN"
+
+LanPlayHelp="Si está activada, un servidor dedidcado que se inicie será opitimizado para LAN."
+
+
+[UMenuCustomizeClientWindow]
+
+LocalizedKeyName[1]="RatónIzquierdo"
+
+LocalizedKeyName[2]="RatónDerecho"
+
+LocalizedKeyName[3]="Cancelar"
+
+LocalizedKeyName[4]="RatónMedio"
+
+LocalizedKeyName[5]="Desconocido05"
+
+LocalizedKeyName[6]="Desconocido06"
+
+LocalizedKeyName[7]="Desconocido07"
+
+LocalizedKeyName[8]="Retroceso"
+
+LocalizedKeyName[9]="Tab"
+
+LocalizedKeyName[10]="Desconocido0A"
+
+LocalizedKeyName[11]="Desconocido0B"
+
+LocalizedKeyName[12]="Desconocido0C"
+
+LocalizedKeyName[13]="Entrar"
+
+LocalizedKeyName[14]="Desconocido0E"
+
+LocalizedKeyName[15]="Desconocido0F"
+
+LocalizedKeyName[16]="Shift"
+
+LocalizedKeyName[17]="Ctrl"
+
+LocalizedKeyName[18]="Alt"
+
+LocalizedKeyName[19]="Pausa"
+
+LocalizedKeyName[20]="BloqMayus"
+
+LocalizedKeyName[21]="Ratón 4"
+
+LocalizedKeyName[22]="Ratón 5"
+
+LocalizedKeyName[23]="Ratón 6"
+
+LocalizedKeyName[24]="Ratón 7"
+
+LocalizedKeyName[25]="Ratón 8"
+
+LocalizedKeyName[26]="Desconocido1A"
+
+LocalizedKeyName[27]="Escape"
+
+LocalizedKeyName[28]="Desconocido1C"
+
+LocalizedKeyName[29]="Desconocido1D"
+
+LocalizedKeyName[30]="Desconocido1E"
+
+LocalizedKeyName[31]="Desconocido1F"
+
+LocalizedKeyName[32]="Espacio"
+
+LocalizedKeyName[33]="RePag"
+
+LocalizedKeyName[34]="AvPag"
+
+LocalizedKeyName[35]="Fin"
+
+LocalizedKeyName[36]="Inicio"
+
+LocalizedKeyName[37]="Izquierda"
+
+LocalizedKeyName[38]="Arriba"
+
+LocalizedKeyName[39]="Derecha"
+
+LocalizedKeyName[40]="Abajo"
+
+LocalizedKeyName[41]="Selecc"
+
+LocalizedKeyName[42]="Imprimir"
+
+LocalizedKeyName[43]="Ejecutar"
+
+LocalizedKeyName[44]="ImprPant"
+
+LocalizedKeyName[45]="Insert"
+
+LocalizedKeyName[46]="Supr"
+
+LocalizedKeyName[47]="Ayuda"
+
+LocalizedKeyName[48]="0"
+
+LocalizedKeyName[49]="1"
+
+LocalizedKeyName[50]="2"
+
+LocalizedKeyName[51]="3"
+
+LocalizedKeyName[52]="4"
+
+LocalizedKeyName[53]="5"
+
+LocalizedKeyName[54]="6"
+
+LocalizedKeyName[55]="7"
+
+LocalizedKeyName[56]="8"
+
+LocalizedKeyName[57]="9"
+
+LocalizedKeyName[58]="Unknown3A"
+
+LocalizedKeyName[59]="Unknown3B"
+
+LocalizedKeyName[60]="Unknown3C"
+
+LocalizedKeyName[61]="Unknown3D"
+
+LocalizedKeyName[62]="Unknown3E"
+
+LocalizedKeyName[63]="Unknown3F"
+
+LocalizedKeyName[64]="Unknown40"
+
+LocalizedKeyName[65]="A"
+
+LocalizedKeyName[66]="B"
+
+LocalizedKeyName[67]="C"
+
+LocalizedKeyName[68]="D"
+
+LocalizedKeyName[69]="E"
+
+LocalizedKeyName[70]="F"
+
+LocalizedKeyName[71]="G"
+
+LocalizedKeyName[72]="H"
+
+LocalizedKeyName[73]="I"
+
+LocalizedKeyName[74]="J"
+
+LocalizedKeyName[75]="K"
+
+LocalizedKeyName[76]="L"
+
+LocalizedKeyName[77]="M"
+
+LocalizedKeyName[78]="N"
+
+LocalizedKeyName[79]="O"
+
+LocalizedKeyName[80]="P"
+
+LocalizedKeyName[81]="Q"
+
+LocalizedKeyName[82]="R"
+
+LocalizedKeyName[83]="S"
+
+LocalizedKeyName[84]="T"
+
+LocalizedKeyName[85]="U"
+
+LocalizedKeyName[86]="V"
+
+LocalizedKeyName[87]="W"
+
+LocalizedKeyName[88]="X"
+
+LocalizedKeyName[89]="Y"
+
+LocalizedKeyName[90]="Z"
+
+LocalizedKeyName[91]="Unknown5B"
+
+LocalizedKeyName[92]="Unknown5C"
+
+LocalizedKeyName[93]="Unknown5D"
+
+LocalizedKeyName[94]="Unknown5E"
+
+LocalizedKeyName[95]="Unknown5F"
+
+LocalizedKeyName[96]="NumPad0"
+
+LocalizedKeyName[97]="NumPad1"
+
+LocalizedKeyName[98]="NumPad2"
+
+LocalizedKeyName[99]="NumPad3"
+
+LocalizedKeyName[100]="NumPad4"
+
+LocalizedKeyName[101]="NumPad5"
+
+LocalizedKeyName[102]="NumPad6"
+
+LocalizedKeyName[103]="NumPad7"
+
+LocalizedKeyName[104]="NumPad8"
+
+LocalizedKeyName[105]="NumPad9"
+
+LocalizedKeyName[106]="GreyStar"
+
+LocalizedKeyName[107]="GreyPlus"
+
+LocalizedKeyName[108]="Separator"
+
+LocalizedKeyName[109]="GreyMinus"
+
+LocalizedKeyName[110]="NumPadPeriod"
+
+LocalizedKeyName[111]="GreySlash"
+
+LocalizedKeyName[112]="F1"
+
+LocalizedKeyName[113]="F2"
+
+LocalizedKeyName[114]="F3"
+
+LocalizedKeyName[115]="F4"
+
+LocalizedKeyName[116]="F5"
+
+LocalizedKeyName[117]="F6"
+
+LocalizedKeyName[118]="F7"
+
+LocalizedKeyName[119]="F8"
+
+LocalizedKeyName[120]="F9"
+
+LocalizedKeyName[121]="F10"
+
+LocalizedKeyName[122]="F11"
+
+LocalizedKeyName[123]="F12"
+
+LocalizedKeyName[124]="F13"
+
+LocalizedKeyName[125]="F14"
+
+LocalizedKeyName[126]="F15"
+
+LocalizedKeyName[127]="F16"
+
+LocalizedKeyName[128]="F17"
+
+LocalizedKeyName[129]="F18"
+
+LocalizedKeyName[130]="F19"
+
+LocalizedKeyName[131]="F20"
+
+LocalizedKeyName[132]="F21"
+
+LocalizedKeyName[133]="F22"
+
+LocalizedKeyName[134]="F23"
+
+LocalizedKeyName[135]="F24"
+
+LocalizedKeyName[136]="Unknown88"
+
+LocalizedKeyName[137]="Unknown89"
+
+LocalizedKeyName[138]="Unknown8A"
+
+LocalizedKeyName[139]="Unknown8B"
+
+LocalizedKeyName[140]="Unknown8C"
+
+LocalizedKeyName[141]="Unknown8D"
+
+LocalizedKeyName[142]="Unknown8E"
+
+LocalizedKeyName[143]="Unknown8F"
+
+LocalizedKeyName[144]="NumLock"
+
+LocalizedKeyName[145]="ScrollLock"
+
+LocalizedKeyName[146]="Unknown92"
+
+LocalizedKeyName[147]="Unknown93"
+
+LocalizedKeyName[148]="Unknown94"
+
+LocalizedKeyName[149]="Unknown95"
+
+LocalizedKeyName[150]="Unknown96"
+
+LocalizedKeyName[151]="Unknown97"
+
+LocalizedKeyName[152]="Unknown98"
+
+LocalizedKeyName[153]="Unknown99"
+
+LocalizedKeyName[154]="Unknown9A"
+
+LocalizedKeyName[155]="Unknown9B"
+
+LocalizedKeyName[156]="Unknown9C"
+
+LocalizedKeyName[157]="Unknown9D"
+
+LocalizedKeyName[158]="Unknown9E"
+
+LocalizedKeyName[159]="Unknown9F"
+
+LocalizedKeyName[160]="LShift"
+
+LocalizedKeyName[161]="RShift"
+
+LocalizedKeyName[162]="LControl"
+
+LocalizedKeyName[163]="RControl"
+
+LocalizedKeyName[164]="UnknownA4"
+
+LocalizedKeyName[165]="UnknownA5"
+
+LocalizedKeyName[166]="UnknownA6"
+
+LocalizedKeyName[167]="UnknownA7"
+
+LocalizedKeyName[168]="UnknownA8"
+
+LocalizedKeyName[169]="UnknownA9"
+
+LocalizedKeyName[170]="UnknownAA"
+
+LocalizedKeyName[171]="UnknownAB"
+
+LocalizedKeyName[172]="UnknownAC"
+
+LocalizedKeyName[173]="UnknownAD"
+
+LocalizedKeyName[174]="UnknownAE"
+
+LocalizedKeyName[175]="UnknownAF"
+
+LocalizedKeyName[176]="UnknownB0"
+
+LocalizedKeyName[177]="UnknownB1"
+
+LocalizedKeyName[178]="UnknownB2"
+
+LocalizedKeyName[179]="UnknownB3"
+
+LocalizedKeyName[180]="UnknownB4"
+
+LocalizedKeyName[181]="UnknownB5"
+
+LocalizedKeyName[182]="UnknownB6"
+
+LocalizedKeyName[183]="UnknownB7"
+
+LocalizedKeyName[184]="UnknownB8"
+
+LocalizedKeyName[185]="UnknownB9"
+
+LocalizedKeyName[186]="Semicolon"
+
+LocalizedKeyName[187]="Equals"
+
+LocalizedKeyName[188]="Comma"
+
+LocalizedKeyName[189]="Minus"
+
+LocalizedKeyName[190]="Period"
+
+LocalizedKeyName[191]="Slash"
+
+LocalizedKeyName[192]="Tilde"
+
+LocalizedKeyName[193]="UnknownC1"
+
+LocalizedKeyName[194]="UnknownC2"
+
+LocalizedKeyName[195]="UnknownC3"
+
+LocalizedKeyName[196]="UnknownC4"
+
+LocalizedKeyName[197]="UnknownC5"
+
+LocalizedKeyName[198]="UnknownC6"
+
+LocalizedKeyName[199]="UnknownC7"
+
+LocalizedKeyName[200]="Joy1"
+
+LocalizedKeyName[201]="Joy2"
+
+LocalizedKeyName[202]="Joy3"
+
+LocalizedKeyName[203]="Joy4"
+
+LocalizedKeyName[204]="Joy5"
+
+LocalizedKeyName[205]="Joy6"
+
+LocalizedKeyName[206]="Joy7"
+
+LocalizedKeyName[207]="Joy8"
+
+LocalizedKeyName[208]="Joy9"
+
+LocalizedKeyName[209]="Joy10"
+
+LocalizedKeyName[210]="Joy11"
+
+LocalizedKeyName[211]="Joy12"
+
+LocalizedKeyName[212]="Joy13"
+
+LocalizedKeyName[213]="Joy14"
+
+LocalizedKeyName[214]="Joy15"
+
+LocalizedKeyName[215]="Joy16"
+
+LocalizedKeyName[216]="UnknownD8"
+
+LocalizedKeyName[217]="UnknownD9"
+
+LocalizedKeyName[218]="UnknownDA"
+
+LocalizedKeyName[219]="LeftBracket"
+
+LocalizedKeyName[220]="Backslash"
+
+LocalizedKeyName[221]="RightBracket"
+
+LocalizedKeyName[222]="SingleQuote"
+
+LocalizedKeyName[223]="UnknownDF"
+
+LocalizedKeyName[224]="JoyX"
+
+LocalizedKeyName[225]="JoyY"
+
+LocalizedKeyName[226]="JoyZ"
+
+LocalizedKeyName[227]="JoyR"
+
+LocalizedKeyName[228]="MouseX"
+
+LocalizedKeyName[229]="MouseY"
+
+LocalizedKeyName[230]="MouseZ"
+
+LocalizedKeyName[231]="MouseW"
+
+LocalizedKeyName[232]="JoyU"
+
+LocalizedKeyName[233]="JoyV"
+
+LocalizedKeyName[234]="UnknownEA"
+
+LocalizedKeyName[235]="UnknownEB"
+
+LocalizedKeyName[236]="MouseWheelUp"
+
+LocalizedKeyName[237]="MouseWheelDown"
+
+LocalizedKeyName[238]="Unknown10E"
+
+LocalizedKeyName[239]="Unknown10F"
+
+LocalizedKeyName[240]="JoyPovUp"
+
+LocalizedKeyName[241]="JoyPovDown"
+
+LocalizedKeyName[242]="JoyPovLeft"
+
+LocalizedKeyName[243]="JoyPovRight"
+
+LocalizedKeyName[244]="UnknownF4"
+
+LocalizedKeyName[245]="UnknownF5"
+
+LocalizedKeyName[246]="Attn"
+
+LocalizedKeyName[247]="CrSel"
+
+LocalizedKeyName[248]="ExSel"
+
+LocalizedKeyName[249]="ErEof"
+
+LocalizedKeyName[250]="Play"
+
+LocalizedKeyName[251]="Zoom"
+
+LocalizedKeyName[252]="NoName"
+
+LocalizedKeyName[253]="PA1"
+
+LocalizedKeyName[254]="OEMClear"
+
+LabelList[0]="Disparo"
+
+LabelList[1]="Disparo alternativo"
+
+LabelList[2]="Avanzar
+
+LabelList[3]="Retroceder"
+
+LabelList[4]="Girar a la izquierda"
+
+LabelList[5]="Girar a la derecha"
+
+LabelList[6]="Desplazarse a la izda"
+
+LabelList[7]="Desplazarse a la dcha"
+
+LabelList[8]="Saltar"
+
+LabelList[9]="Agacharse"
+
+LabelList[10]="Vista con el ratón"
+
+LabelList[11]="Activar artículo"
+
+LabelList[12]="Artículo siguiente"
+
+LabelList[13]="Artículo anterior"
+
+LabelList[14]="Mirar hacia arriba"
+
+LabelList[15]="Mirar hacia abajo"
+
+LabelList[16]="Centrar vista"
+
+LabelList[17]="Caminar"
+
+LabelList[18]="Desplazarse -lateral"
+
+LabelList[19]="Arma siguiente"
+
+LabelList[20]="Arma anterior"
+
+LabelList[21]="Tirar arma"
+
+LabelList[22]="Fingir muerte"
+
+LabelList[23]="Menú de música"
+
+LabelList[24]="Charla"
+
+LabelList[25]="Charla en equipo"
+
+LabelList[26]="Mostrar puntuación"
+
+LabelList[27]="Agarrar decoración"
+
+LabelList[28]="Activar vista trasera"
+
+OrString=" o "
+
+CustomizeHelp="Haz clic en el rectángulo azul y pulsa la tecla que asignarás a este control."
+
+DefaultsText="Restablecer"
+
+DefaultsHelp="Restablecer los valores originales en todos los controles."
+
+JoystickText="Joystick"
+
+JoyXText="Eje X"
+
+JoyXHelp="Selecciona la respuesta del eje izquierda-derecha de tu joystick."
+
+JoyXOptions[0]="Desplazamiento izda./dcha."
+
+JoyXOptions[1]="Giro izda./dcha."
+
+JoyYText="Eje Y"
+
+JoyYHelp="Selecciona la respuesta del eje adelante-atrás de tu joystick."
+
+JoyYOptions[0]="Avanzar/Retroceder"
+
+JoyYOptions[1]="Mirar hacia arriba/abajo"
+
+
+[UMenuGameRulesBase]
+
+FragText="Bajas enemigas"
+
+FragHelp="La partida concluirá si el jugador logra este No. de bajas enemigas. Un valor 0 establece que no habrá límite."
+
+TimeText="Límite de tiempo"
+
+TimeHelp="La partida concluirá transcurridos estos minutos. Un valor 0 establece que no habrá un límite de tiempo."
+
+MaxPlayersText="Máx. conexiones"
+
+MaxPlayersHelp="Número máximo de jugadores humanos que pueden conectarse a la partida."
+
+MaxSpectatorsText="Máx. espectadores"
+
+MaxSpectatorsHelp="número máximo de espectadores que pueden conectarse a la partida."
+
+WeaponsText="Permanencia de armas"
+
+WeaponsHelp="Las armas permanecerán en su lugar de recogida, en lugar de regenerarse."
+
+
+[UMenuGameOptionsClientWindow]
+
+WeaponFlashText="Destello de arma"
+
+WeaponFlashHelp="La pantalla emitirá un destello cada vez que dispares un arma."
+
+WeaponHandText="Mano de arma"
+
+WeaponHandHelp="Selecciona dónde aparecerá tu arma."
+
+LeftName="Izquierda"
+
+CenterName="Centro"
+
+RightName="Derecha"
+
+HiddenName="Oculta"
+
+DodgingText="Esquivar"
+
+DodgingHelp="Esquivarás al pulsar dos veces las teclas de movimiento (adelante, atrás, izquierda y derecha)."
+
+ViewBobText="Movimiento de vista"
+
+ViewBobHelp="Utiliza la barra para decidir en qué grado se moverá la vista cada vez que se mueva tu jugador."
+
+SpeedText="Veloc. del juego"
+
+GoreText="Nivel de violencia"
+
+GoreHelp="Elige el nivel de violencia que deseas ver en la partida."
+
+GoreLevels[0]="Normal"
+
+GoreLevels[1]="Reducido"
+
+GoreLevels[2]="Ultrabajo"
+
+LocalText="Registro de ngStats Local"
+
+LocalHelp="Tu sistema registrará partidas locales de robots y torneos de un solo jugador para recoger estadísticas."
+
+
+[UMenuNewGameClientWindow]
+
+GameHelp="Select your game to play."
+
+GameText="Campaña:"
+
+SkillText="Nivel de habilidad:"
+
+Skills[0]="Fácil"
+
+Skills[1]="Medio"
+
+Skills[2]="Difícil"
+
+Skills[3]="Duro"
+
+Skills[4]="Unreal"
+
+Skills[5]="Divino"
+
+SkillStrings[0]="Modo turista."
+
+SkillStrings[1]="¡Listo para un poco de acción!"
+
+SkillStrings[2]="No apto para los débiles de corazón."
+
+SkillStrings[3]="Para cuando quieras repartir hostias a puntapala."
+
+SkillStrings[4]="Para los que desean la muerte."
+
+SkillStrings[5]="COJONES!"
+
+SkillHelp="Selecciona el nivel de dificultad con la que quieres jugar."
+
+
+[UMenuStatusBar]
+
+DefaultHelp="Pulsa ESC para regresar a la partida"
+
+DefaultIntroHelp="Utiliza el menú de juego para comenzar una nueva partida."
+
+
+[UMenuNetworkClientWindow]
+
+NetSpeedText="Velocidad en red:"
+
+NetSpeedHelp="Selecciona la velocidad que más se acerque a tu conexión a internet para lograr un mejor rendimiento en línea."
+
+NetSpeeds[0]="Lenta (28.8 - 56K)"
+
+NetSpeeds[1]="Rápida (ISDN)"
+
+NetSpeeds[2]="Cable, xDSL"
+
+NetSpeeds[3]="Red de área local (LAN)"
+
+
+[UMenuMultiplayerMenu]
+
+StartName="&Comenzar una nueva partida en Internet"
+
+StartHelp="Comienza tu propia partida en red para que puedan incorporarse otros jugadores."
+
+BrowserName="&Buscar partidas en Internet"
+
+BrowserHelp="Busca las partidas en curso en Internet."
+
+LANName="&Buscar partidas en LAN"
+
+LANHelp="Busca las partidas en curso en una red de área local o LAN."
+
+OpenLocationName="Abrir sitio"
+
+OpenLocationHelp="Conecta con un servidor utilizando su IP o unreal: //URL."
+
+PatchName="Descargar última &actualización"
+
+PatchHelp="Busca la última actualización de Torneo de Unreal en la red"
+
+DisconnectName="&Desconectar del servidor"
+
+DisconnectHelp="Desconectar del servidor actual."
+
+ReconnectName="&Volver a conectar al servidor"
+
+ReconnectHelp="Intenta volver a conectar con el último servidor al que te conectaste."
+
+SuggestPlayerSetupTitle="Comprobar nombre de jugador"
+
+SuggestPlayerSetupText="Tu nombre actual es Player. Sugerimos que introduzcas otro nombre antes de una partida multijugador.\n\n¿Deseas ir a Configuración de jugador?"
+
+SuggestNetspeedTitle="Comprobar velocidad de Internet"
+
+SuggestNetspeedText="No has configurado tu conexión Internet. Recomendamos que acudas a la Configuración de red para sacar el máximo partido de la modalidad de juego en línea. ¿Quieres ir al menú de configuración de red?"
+
+
+[UMenuBotConfigBase]
+
+BaseText="Habilidad básica:"
+
+BaseHelp="Este es el nivel básico de habilidad de los bots."
+
+Skills[0]="Aprendiz"
+
+Skills[1]="Iniciado"
+
+Skills[2]="Experto"
+
+Skills[3]="Maestro"
+
+SkillTaunts[0]="No te harán daño... bueno, quizá un poco."
+
+SkillTaunts[1]="No te chulees mucho"
+
+SkillTaunts[2]="Te crees duro, ¿no?"
+
+SkillTaunts[3]="Estás muerto."
+
+NumBotsText="Número de bots"
+
+NumBotsHelp="Éste es el número de bots contra los que jugarás."
+
+AutoAdjustText="Ajus. auto. habilidad"
+
+AutoAdjustHelp="Los bots adaptarán su grado de habilidad al tuyo"
+
+RandomText="Al azar"
+
+RandomHelp="Los bots serán elegidos al azar de la lista de configuraciones de robots."
+
+ConfigBotsText="Configurar"
+
+ConfigBotsHelp="Configura los nombres, el aspecto y los atributos de cada bot."
+
+AtLeastOneBotTitle="Configurar Bots"
+
+AtLeastOneBotText="Debes escoger al menos un bot para poder utilizar la pantalla de configuración de robots."
+
+
+[UMenuGameSettingsBase]
+
+StyleText="Estilo de juego:"
+
+Styles[0]="Normal"
+
+Styles[1]="Duro"
+
+Styles[2]="Turbo"
+
+StyleHelp="Elige tu estilo de juego. Duro es 10% más rápido y con daño 50% mayor. Turbo es como Duro, pero ultrarápido."
+
+SpeedText="Velocidad"
+
+SpeedHelp="Ajusta la velocidad."
+
+
+[UMenuInputOptionsClientWindow]
+
+AutoAimText="Apuntar autom."
+
+AutoAimHelp="Activa y desactiva la ayuda vertical para apuntar."
+
+JoystickText="Joystick"
+
+JoystickHelp="Activa y desactiva el joystick."
+
+DirectInputText="DirectInput"
+
+DirectInputHelp="Activar DirectInput en Windows 9x puede mejorar la sensibilidad del ratón. (Deberás reiniciar el juego)."
+
+SensitivityText="Sensibil. del ratón"
+
+SensitivityHelp="Ajusta la sensibilidad del ratón (distancia que debes mover el ratón para producir un movimiento visible)."
+
+InvertMouseText="Invertir ratón"
+
+InvertMouseHelp="Invierte el eje X del ratón. Mover el ratón hacia adelante te hará mirar hacia abajo y no hacia arriba."
+
+LookSpringText="Salto de vista"
+
+LookSpringHelp="La vista se centra automáticamente al dejar la tecla de vista de ratón. Funciona si la vista de ratón está desactivada."
+
+MouselookText="Vista con el ratón"
+
+MouselookHelp="El ratón siempre controla la dirección de visión. De lo contrario, actívala con la tecla de vistas con ratón."
+
+MouseSmoothText="Máxima sensibilidad"
+
+MouseSmoothHelp="Si está activada, el movimiento del ratón será más sensible para aumentar la suavidad de la vista."
+
+bMouseSmoothText="Facil. mov. ratón"
+
+bMouseSmoothHelp="El movimiento del ratón se suavizará para que la vista con el ratón tenga una mayor definición."
+
+AutoSlopeText="Ver auto. arr/abajo"
+
+AutoSlopeHelp="Vista automática por encima y debajo de cuestas y escaleras. Sólo funciona si Vista con el ratón no está activada."
+
+
+[UMenuAudioClientWindow]
+
+SoundQualityText="Calidad de sonido"
+
+SoundQualityHelp="En máquinas con menos de 32 Mb de memoria, una baja calidad de sonido mejorará el rendimiento del juego."
+
+Details[0]="Baja"
+
+Details[1]="Alta"
+
+MusicVolumeText="Volumen de la música"
+
+MusicVolumeHelp="Ajusta el volumen de la música."
+
+SoundVolumeText="Volumen del sonido"
+
+SoundVolumeHelp="Ajusta el volumen de los efectos de sonido."
+
+VoiceMessagesText="Mensajes de voz"
+
+VoiceMessagesHelp="Oirás mensajes y órdenes de otros jugadores."
+
+MessageBeepText="Pitido de mensaje"
+
+MessageBeepHelp="Oirás un pitido cada vez que recibas un mensaje de charla."
+
+
+[UMenuBotConfigClientWindow]
+
+BIMText="Activar bots"
+
+BIMHelp="Los bots estarán presentes en las partidas para multijugador."
+
+
+[UMenuMapListCW]
+
+DefaultText="Utilizar lista: "
+
+DefaultHelp="Elige una lista de mapas predeterminada para cargar o selecciona manualmente una lista de mapas."
+
+CustomText="Personalizado"
+
+ExcludeCaption="Mapas no rotados"
+
+ExcludeHelp="Haz clic y arrastra un mapa a la columna de la derecha para incluir ese mapa en la lista de rotación de mapas."
+
+IncludeCaption="Mapas rotados"
+
+IncludeHelp="Haz clic y arrastra un mapa fuera de la columna para eliminarlo, o arrástralo hacia arriba y abajo para incluirlo."
+
+
+[UMenuScreenshotCW]
+
+PlayersText="Jugadores"
+
+
+[UMenuWeaponPriorityListBox]
+
+WeaponPriorityHelp="Haz clic y arrastra el arma para cambiar su prioridad. Las armas que estén más arriba tendrán prioridad superior."
+
+
+[UMenuMutatorCW]
+
+ExcludeCaption="Agentes mutadores no usados"
+
+ExcludeHelp="Haz clic y arrastra un agente mutador hacia la columna de la derecha para incluirlo en la partida."
+
+IncludeCaption="Agentes mutadores usados"
+
+IncludeHelp="Haz clic y arrastra un agente fuera de la columna para eliminarlo, o arrástralo arriba y abajo para ordenarlo.."
+
+KeepText="Utilizar siempre esta configuración"
+
+KeepHelp="Estos agentes mutadores se utilizarán al comienzo de la partida."
+
+
+[UMenuOptionsClientWindow]
+
+GamePlayTab="Partida"
+
+InputTab="Entrada"
+
+ControlsTab="Controles"
+
+AudioTab="Audio"
+
+VideoTab="Vídeo"
+
+NetworkTab="Red"
+
+HUDTab="Panel de salud (HUD)"
+
+
+[UMenuHUDConfigCW]
+
+HUDConfigText="Modelo de panel"
+
+HUDConfigHelp="Usa las flechas izquierda y derecha para seleccionar un tipo de panel de jugador."
+
+CrosshairText="Estilo de mirilla"
+
+CrosshairHelp="Elige la mirilla que aparecerá en el centro de pantalla."
+
+
+[UMenuWeaponPriorityListArea]
+
+AutoSwitchText="Cambio auto. de armas"
+
+AutoSwitchHelp="Cambio de arma automático al recoger una de prioridad superior. De lo contrario, debes cambiar manualmente."
+
+
+[UMenuModMenuItem]
+
+MenuCaption="&Mi mod"
+
+MenuHelp="Este texto va en la barra de estado"
+
+
+[UMenuTeamGameRulesCWindow]
+
+FFText="Fuego aliado:"
+
+FFHelp="Utiliza la barra para ajustar el máximo daño que el fuego aliado puede causar en los compañeros de equipo."
+
+
+[UMenuToolsMenu]
+
+ConsoleName="&Consola del sistema"
+
+ConsoleHelp="Esta opción abre la consola de Unreal. Puedes utilizarla para introducir comandos avanzados y trucos."
+
+TimeDemoName="Estadísticas de demostración de T&iempo"
+
+TimeDemoHelp="Activa las estadísticas de demostración de tiempo para medir tu velocidad de visualización."
+
+LogName="Mostrar &Registro"
+
+LogHelp="Muestra la ventana de registro de comandos de Unreal."
+
+MusicMName="&Menú de Musica"
+
+MusicMHelp="Te permite reproducir música personalizada durante el juego (Cuidado: existen ciertos programas anti-trucos que no les puede gustar ésto)."
+
+AdminMName="&Menú de administrador"
+
+AdminMHelp="Te permite administrar un servidor, como echar/expulsar/levantar clientes (nota: sólo funciona en servidores 227 y cuando estás registrado como administrador)."
+
+DebugModeName="&Modo de depuración"
+
+DebugModeHelp="Activar el modo de depuración de UWindow."
+
+
+[UMenuSlotClientWindow]
+
+MonthNames[0]="Enero"
+
+MonthNames[1]="Febrero"
+
+MonthNames[2]="Marzo"
+
+MonthNames[3]="Abril"
+
+MonthNames[4]="Mayo"
+
+MonthNames[5]="Junio"
+
+MonthNames[6]="Julio"
+
+MonthNames[7]="Agosto"
+
+MonthNames[8]="Septiembre"
+
+MonthNames[9]="Octubre"
+
+MonthNames[10]="Noviembre"
+
+MonthNames[11]="Diciembre"
+
+SlotHelp="Pulsa aquí para activar la pista. (Guardar/Cargar)"
+
+
+[UMenuSaveGameClientWindow]
+
+CantSave="Imposible guardar: estás muerto."
+
+
+[UMenuHelpMenu]
+
+ContextName="&Ayuda contextual"
+
+ContextHelp="Activa y desactiva la zona de ayuda contextual en la parte inferior de la pantalla."
+
+AboutName="Ficha técnica de &UT"
+
+AboutHelp="Mostrar ficha técnica."
+
+EpicGamesURLName="Acerca de &Epic Games"
+
+EpicGamesURLHelp="¡Haz clic para abrir la página Web de Epic Games!"
+
+SupportURLName="Asistencia técnica"
+
+SupportURLHelp="Haz clic aquí para acceder a la página Web de Oldunreal para asistencia técnica."
+
+
+[UMenuOptionsMenu]
+
+PreferencesName="P&referencias"
+
+PreferencesHelp="Cambia las opciones, el audio, el vídeo, la configuración del panel de jugador (HUD) y otras opciones del juego."
+
+PrioritizeName="&Armas"
+
+PrioritizeHelp="Cambia la prioridad, la configuración y la vista de las armas."
+
+DesktopName="Mostrar &Escritorio"
+
+DesktopHelp="Puedes ver el juego detrás de los menús o del logo del escritorio."
+
+PlayerMenuName="&Configuración del jugador"
+
+PlayerMenuHelp="Configura tu jugador para la partida."
+
+AdvancedOptionsName="&Opciones avanzadas"
+
+AdvancedOptionsHelp="Abre el menú de opciones avanzadas."
+
+
+[UMenuLoadGameClientWindow]
+
+RestartText="Reiniciar"
+
+RestartHelp="Pulsa aquí para reiniciar el nivel en curso."
+
+
+[UMenuStartGameClientWindow]
+
+DedicatedText="Dedicado"
+
+DedicatedHelp="Pulsa para ejecutar un servidor dedicado."
+
+ServerText="Servidor"
+
+
+[UMenuOptionsWindow]
+
+WindowTitle="Preferencias"
+
+
+[UMenuPlayerWindow]
+
+WindowTitle="Configuración del jugador"
+
+
+[UMenuWeaponPriorityWindow]
+
+WindowTitle="Armas"
+
+
+[UMenuBotmatchWindow]
+
+WindowTitle="Partida contra robots"
+
+
+[UTCreditsWindow]
+
+WindowTitle="Ficha técnica de UT"
+
+
+[UMenuMapListWindow]
+
+WindowTitle="Lista de mapas"
+
+
+[UMenuMutatorWindow]
+
+WindowTitle="Configuración de agentes mutadores"
+
+
+[UMenuGameMenu]
+
+NewGameName="&Nueva"
+
+NewGameHelp="Selecciona esta opción para comenzar una nueva partida de un solo jugador en Unreal."
+
+LoadName="&Cargar"
+
+LoadHelp="Selecciona esta opción para cargar una partida previamente guardada."
+
+SaveName="&Guardar"
+
+SaveHelp="Selecciona esta opción para guardar la partida en curso."
+
+BotmatchName="&Partida contra robots"
+
+BotmatchHelp="Selecciona esta opción para empezar una partida contra bots: ¡Combate mortal con bots!"
+
+QuitName="&Salir"
+
+QuitHelp="Selecciona este botón si deseas guardar tus opciones y salir de Unreal."
+
+QuitTitle="Confirmar salida"
+
+QuitText="¿Seguro que quieres salir?"
+
+
+[UMenuStartGameWindow]
+
+WindowTitle="Iniciar partida en red"
+
+
+[UMenuStatsMenu]
+
+ViewLocalName="Ver ngLocal Stats"
+
+ViewLocalHelp="Consulta las estadísticas locales acumuladas durante las partidas individuales y las sesiones de práctica."
+
+ViewGlobalName="Ver las ngWorldStats"
+
+ViewGlobalHelp="Consulta las estadísticas de tus partidas a través de la red."
+
+AboutName="Ayuda sobre &ngStats"
+
+AboutHelp="Obtener información sobre el registro de las estadísticas."
+
+About2Name="Ayuda para &ngWorldStats"
+
+About2Help="Averigua cómo registrar tus puntuaciones para compararlas con las de otros jugadores de todo el mundo."
+
+
+[UMenuConfigIndivBotsWindow]
+
+WindowTitle="Configuración individual de bots"
+
+
+[UMenuHelpWindow]
+
+WindowTitle="Ayuda"
+
+
+[UMenuLoadGameWindow]
+
+WindowTitle="Cargar partida"
+
+
+[UMenuNewGameWindow]
+
+WindowTitle="Nueva partida"
+
+
+[UMenuSaveGameWindow]
+
+WindowTitle="Guardar partida" 

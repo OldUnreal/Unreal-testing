@@ -1,0 +1,197 @@
+[Public]
+
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Return To Napali")
+
+Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
+
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
+
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
+
+Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+
+
+[TransitionNullHUD]
+
+Statheader=Statistiche uccisioni:
+
+CARStat=Fucile d'Assalto
+
+RLStat=Lanciarazzi
+
+GLStat=Lanciagranate
+
+ASMDStat=ASMD
+
+AutomagStat=Automag
+
+DispersionStat=Pistola Dissolvente
+
+EightballStat=Lancia 8-ball
+
+FlakCannonStat=Cannone Flak
+
+GESBioRifleStat=BioFucile GES
+
+MinigunStat=Minigun
+
+RazorjackStat=Razorjack
+
+RifleStat=Fucile
+
+StingerStat=Stinger
+
+TotalStat=Uccisioni totali
+
+LogEntryMsg=VOCE DI REGISTRO:
+
+
+[UPakSinglePlayer]
+
+GameName=Return to Na Pali
+
+
+[GrenadeLauncher]
+
+PickupMessage="Hai preso il Lanciagranate."
+
+ItemName=Lanciagranate
+
+
+[Cloak]
+
+ExpireMessage=disattivo.
+
+PickupMessage=Hai preso il Mimetizzatore.
+
+ItemName=Mimetizzatore
+
+M_Activated=" attivo"
+
+M_Deactivated=" disattivo"
+
+
+[CARifle]
+
+PickupMessage=Hai preso il Fucile d'Assalto.
+
+ItemName=Fucile d'Assalto
+
+
+[RocketLauncher]
+
+PickupMessage=Hai preso il Lanciarazzi.
+
+ItemName=Lanciarazzi
+
+
+[UPakChooseGameMenu]
+
+MenuList[0]="Return to Na Pali"
+
+MenuList[1]=Unreal
+
+MenuList[2]=Unreal
+
+
+[UPakDebugger]
+
+ItemName=UPak Debugger
+
+
+[UPakScubaGear]
+
+PickupMessage=Hai preso la muta subacquea
+
+M_Deactivated=disattivo... in ricarica.
+
+
+[UPakMaleOne]
+
+MenuName=Uomo 1
+
+
+[UPakFemaleOne]
+
+MenuName=Donna 1
+
+
+[UPakFemaleTwo]
+
+MenuName=Donna 2
+
+
+[UPakMaleThree]
+
+MenuName=Uomo 3
+
+
+[UPakMaleTwo]
+
+MenuName=Uomo 2
+
+
+[CARifleClip]
+
+PickupMessage=Hai preso un caricatore CAR da 50 colpi.
+
+
+[GLAmmo]
+
+PickupMessage=Hai preso 10 granate.
+
+
+[RLAmmo]
+
+PickupMessage=Hai preso 10 razzi.
+
+
+[CompTablet]
+
+PickupMessage=Hai preso la CompTablet.
+
+
+[GravityMatch]
+
+GameName=Partita Gravità
+
+
+[CloakMatch]
+
+GameName=Partita Mimetizzazione
+
+
+[TerranWeaponMatch]
+
+GameName=Partita Armi Terrestri
+
+
+[MarineMatch]
+
+GameName=Partita Marine 

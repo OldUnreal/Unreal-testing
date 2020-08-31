@@ -1,0 +1,23 @@
+[Public]
+
+Object=(Name=IpDrv.TcpNetDriver,Class=Class,MetaClass=Engine.NetDriver)
+
+Object=(Name=IpDrv.UdpBeacon,Class=Class,MetaClass=Engine.Actor)
+
+Object=(Name=IpDrv.ServerUplink,Class=Class,MetaClass=Engine.Actor)
+
+Preferences=(Caption="Opciones de red",Parent="Opciones avanzadas")
+
+Preferences=(Caption="Partida en red TCP/IP",Parent="Opciones de red",Class=IpDrv.TcpNetDriver)
+
+Preferences=(Caption="Señalizador de errores del servidor",Parent="Opciones de red",Class=IpDrv.UdpBeacon,Immediate=True)
+
+
+[TcpNetDriver]
+
+ClassCaption="Partida en red TCP/IP"
+
+
+[ServerUplink]
+
+ClassCaption="Señalizador de errores en LAN del servidor" 

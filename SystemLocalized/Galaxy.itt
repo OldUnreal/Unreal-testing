@@ -1,0 +1,12 @@
+[Public]
+
+Object=(Name=Galaxy.GalaxyAudioSubsystem,Class=Class,MetaClass=Engine.AudioSubsystem)
+
+Preferences=(Caption="Audio",Parent="Opzioni avanzate")
+
+Preferences=(Caption="GalaxyAudio",Parent="Audio",Class=Galaxy.GalaxyAudioSubsystem,Immediate=True)
+
+
+[GalaxyAudioSubsystem]
+
+ClassCaption="Audio 3D Galaxy per Windows" 

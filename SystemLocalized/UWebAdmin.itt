@@ -1,0 +1,17 @@
+[public]
+
+Object=(Name=UWebAdmin.DMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="DeathMatch Game")
+
+Object=(Name=UWebAdmin.TDMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Team Game")
+
+Object=(Name=UWebAdmin.CPPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Coop Game")
+
+Preferences=(Caption="Server Web",Parent="In rete")
+
+Preferences=(Caption="Manager Web",Parent="Server Web",Class=UWebAdmin.WebAdminManager)
+
+Preferences=(Caption="Connessione Web",Parent="Server Web",Class=UWebAdmin.WebServer)
+
+Preferences=(Caption="Manager sotto-web",Parent="Server Web",Class=UWebAdmin.SubWebManager)
+
+Preferences=(Caption="Messaggistica spettatori",Parent="Server Web",Class=UWebAdmin.MessagingSpectator) 

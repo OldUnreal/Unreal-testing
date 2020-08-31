@@ -1,0 +1,12 @@
+[Public]
+
+Object=(Name=FMODAudioDrv.FMODAudioDevice,Class=Class,MetaClass=Engine.AudioSubsystem,Autodetect=)
+
+Preferences=(Caption="Audio"",Parent="Opzioni avanzate")
+
+Preferences=(Caption="Supporto FMODAudio",Parent="Audio",Class=FMODAudioDrv.FMODAudioDevice,Immediate=True)
+
+
+[FMODAudioDevice]
+
+ClassCaption="Periferica FMODAudio" 

@@ -1,0 +1,260 @@
+// Sentitevi liberi di modificare questo file, espanderlo o quello che volete.
+
+// Solo stati attenti a non combinare guai. ;)
+
+// Funzioni/Parole chiave:
+
+// /Cdate = Data corrente
+
+// /Ctime = Tempo corrente
+
+// /MapT = Titolo mappa corrente
+
+// /MapF = Nome del file della mappa corrente
+
+// /WebVer = Versione corrente del webadmin
+
+// /n = Nuova linea (Nota che la nuova linea Web include una nuova linea)
+
+// %frd: <Nome ridirezione>% = Passa il codice a qualche altro file int o ad un'altra parte di questo file
+
+// ATTENZIONE!!!! Ridirigere da parte A a parte B, e quindi da B ad A porterà ad un crash (problema di loop)!
+
+// %Content: <Nome di classe del contenuto della pagina web>% = Aggiungi codice HTML da una classe UScript
+
+// Line type: "Alive/" terrà attiva la connessione aggiornando la pagina ogni 5 secondi.
+
+
+// Contenuti del sito web
+
+[Index]
+
+WebContentLen=6
+
+Web0=<!-- Codice di amministrazione web del Server /WebVer written by .:..: (2008) -->
+
+Web1=<HTML><HEAD><TITLE>Amministrazione Web del server</TITLE></HEAD>
+
+Web2=<frameset rows="80,*,50" cols="*" frameborder="No" framespacing="0" border="0">
+
+Web3=<frame src="/MainLinksPage" name="menu" noresize frameborder="0" marginheight="0" scrolling="no" framespacing="0">
+
+Web4=<frame src="/IndexX" name="menumain" scrolling="yes" frameborder="no" noresize framespacing="0" marginheight="0">
+
+Web5=<frame src="/ServerConsoleLine" name="consoleline" scrolling="no" frameborder="no" noresize framespacing="0" marginheight="0">
+
+Web6=</frameset>/n<noframes><body bgcolor="#FFFFFF">Questo server richiede il supporto ai frames.</body></ noframes>/n</html>
+
+
+// Pagina dei link
+
+[MainLinksPage]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%/n<BR><center><A href="/MapRestartPage" target="_parent">Riavvia mappa</A>, <A href="/MapSwitch" target="menumain">Cambia mappa</A>, <A href="/IndexX" target="menumain">Corrente</A>, <A href="/BanListPage" target="menumain">Lista bannati</A>, <A href="/ServerConsole" target="menumain">Console del server</A>, <A href="/Logout" target="menumain">Esci</A><BR>
+
+Web1=Link di configurazione: <A href="/GameDefaults" target="menumain">Configurazione principale del gioco</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">Configurazione delle informazioni server</A>, <A href="/MapLinksPage" target="menumain">Lista delle mappe</A>, <A href="/ModLinksPage" target="menumain">Configurazione Mod</A></center><BR>/n
+
+Web2=%frd:PageEnding%
+
+
+[IndexX]
+
+WebContentLen=5
+
+Web0=%frd:PageHeader%
+
+Web1=Benvenuto %Content:UWebAdmin.GetClientUser% nel sito web di amministrazione del server<BR>Lista giocatori attuali sul server:<BR>
+
+Web2=<form method="post" action="Index?UWebAdmin.PlayersListDebug">
+
+Web3=%Content:UWebAdmin.PlayersListDebug%</form>/n
+
+Web4=<BR>Il tuo IP: %Content:UWebAdmin.GetClientIP% è stato registrato sul server.
+
+Web5=%frd:PageEnding%
+
+
+// Pagina del console del server
+
+[ServerConsole]
+
+WebContentLen=5
+
+Web0=%frd:PageHeader%
+
+Web1=<CENTER><TABLE BORDER=1 WIDTH="75%"><TR><TH>Finestra dei messaggi (Mappa attuale: /MapF: /MapT):</TH></TR><TR><TD>/n
+
+Web2=%Content:UWebAdmin.WebChatWindow%/n</TD></TR></table></CENTER>
+
+Web3=<script>/nvar parselimit=4;/nfunction beginrefresh(){/nif(!document.images) return/nif (parselimit==1) window.location.replace("/ServerConsole")
+
+Web4=else{/nparselimit-=1/nsetTimeout("beginrefresh()",1000)/n}/n}/nwindow.onload=beginrefresh/n</script>
+
+Web5=%frd:PageEnding%
+
+
+[ServerConsoleLine]
+
+WebContentLen=4
+
+Web0=%frd:PageHeader%
+
+Web1=<form method="post" action="ServerConsoleLine?UWebAdmin.WebChatWindow">/n
+
+Web2=<TABLE BORDER=0><TR><TH>Commando per la Console: <input class="textbox" type="text" name="Cmd" size="56" value="Parla " maxlength="80"></TH>
+
+Web3=<TH><input class="button" type="submit" name="edit" value="Invio"></TH></TABLE>/n</form>
+
+Web4=%frd:PageEnding%
+
+// <- End of server console.
+
+
+// Riavvio mappa
+
+[MapRestartPage]
+
+WebContentLen=1
+
+Web0=%frd:PageHeader%
+
+Web1=Riavvio della mappa, attendere.%Content:UWebAdmin.RestartMapCode%/n Clicca <A href="/Index" target="_parent">qua</A> una volta terminato il riavvio.</BODY></HTML>
+
+
+// Cambio mappa
+
+[MapSwitchingPage]
+
+WebContentLen=1
+
+Web0=%frd:PageHeader%
+
+Web1=Il server sta cambiano la mappa, attendere. Clicca <A href="/Index" target="_parent">qua</A> una volta terminato il cambio.</BODY></HTML>
+
+
+// Pagina della lista dei bannati
+
+[BanListPage]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%
+
+Web1=<form method="post" action="BanListPage?UWebAdmin.BanListGen">/n Lista dei bannati, qua puoi revocare i ban ai giocatori./n%Content:UWebAdmin.BanListGen%</form>/n
+
+Web2=%frd:PageEnding%
+
+
+// Uscita account
+
+[Logout]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%
+
+Web1=<BR>Sei uscito dalla pagina web di amministrazione.%Content:UWebAdmin.UserLogout%
+
+Web2=%frd:PageEnding%
+
+
+// Configurazione regole base (Pacchetti server/Attori server/Ammonistratori/Password del server).
+
+[GameDefaults]
+
+WebContentLen=3
+
+Web0=%frd:PageHeader%
+
+Web1=<form method="post" action="GameDefaults?UWebAdmin.GameConfigPage">/n%Content:UWebAdmin.GameConfigPage%</form><BR>/n
+
+Web2=<form method="post" action="GameDefaults?UWebAdmin.NetConfigPage">/n%Content:UWebAdmin.NetConfigPage%</form>/n
+
+Web3=%frd:PageEnding%
+
+
+// Pagina lista link mappe
+
+[MapLinksPage]
+
+WebContentLen=3
+
+Web0=%frd:PageHeader%
+
+Web1=<form method="post" action="MapLinksPage?UWebAdmin.MapListLinkPage">
+
+Web2=<h2>Configurazione personalizzata lista mappe:</h2>%Content:UWebAdmin.MapListLinkPage%<BR></form>
+
+Web3=%frd:PageEnding%
+
+
+// Pagina link mod
+
+[ModLinksPage]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%
+
+Web1=<h2>Configurazione personalizzata mod:</h2>%Content:UWebAdmin.ModLinkPage%<BR>
+
+Web2=%frd:PageEnding%
+
+
+// Configurazione gioco basato sui mod (funziona usando speciali hacks).
+
+[ModConfigPage]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%<BR>
+
+Web1=%MODBASED%<BR>
+
+Web2=%frd:PageEnding%
+
+
+// Configurazione gioco usando le liste mappe (anche questo funziona usando speciali hacks).
+
+[MapLConfigPage]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%<BR>
+
+Web1=%Content:UWebAdmin.MapListPage%<BR>
+
+Web2=%frd:PageEnding%
+
+
+// Pagina cambio mappa.
+
+[MapSwitch]
+
+WebContentLen=2
+
+Web0=%frd:PageHeader%
+
+Web1=<form method="post" action="MapSwitchingPage?UWebAdmin.MapSwitchPage">/n%Content:UWebAdmin.MapSwitchPage%</form><BR>/n
+
+Web2=%frd:PageEnding%
+
+
+// Roba varia
+
+[PageHeader]
+
+WebContentLen=0
+
+Web0=<HTML><HEAD></HEAD><BODY bgcolor="#33CCCC">
+
+
+// La "fine" di ogni pagina.
+
+[PageEnding]
+
+WebContentLen=0
+
+Web0=</BODY></HTML> 

@@ -1,0 +1,16 @@
+[Public]
+
+Object=(Name=D3D8Drv.D3D8RenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=d3d8.dll)
+
+Preferences=(Caption="Rendering",Parent="Opzioni avanzate")
+
+Preferences=(Caption="Supporto Direct3D8",Parent="Rendering",Class=D3D8Drv.D3D8RenderDevice,Immediate=True)
+
+
+[D3D8RenderDevice]
+
+ClassCaption="Supporto Direct3D8"
+
+AskInstalled=Vuoi utilizzare il supporto Direct3D 8?
+
+AskUse= 

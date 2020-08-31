@@ -1,0 +1,43 @@
+[LevelInfo0]
+
+Title="Arena Oscura"
+
+
+[TranslatorEvent0]
+
+message="El débil caerá bajo la mano de la bestia."
+
+
+[TranslatorEvent2]
+
+message="He escapado de mi celda pero no tengo fuerzas para seguir adelante. Dad recuerdos a mi familia..."
+
+
+[TranslatorEvent1]
+
+message="Palancas para abrir la celda de la prisión." #Translator's note: There's no TranslatorEvent1 in the map
+
+
+[TranslatorEvent3]
+
+message="Ojalá hubiera muerto cuando se estrelló el Vortex Rikers. No sé qué va a ser de mí. Tengo miedo."
+
+
+[TranslatorEvent4]
+
+message="Tengo tanta hambre. Espero que me encuentren los otros del grupo de exploradores del ISV Kran. Es la única esperanza que me mantiene vivo día a día. Sin aferrarme a ella ya estaría loco. No puedo soportar más los gritos de dolor."
+
+
+[TranslatorEvent5]
+
+message="Si tengo que morir en este lugar, por lo menos me alegra que algunos de mis apresadores estén aquí conmigo. Mañana encontraré mi paz en la muerte sabiendo que todos ellos han sufrido antes que yo."
+
+
+[TranslatorEvent6]
+
+message="Tengo que encontrar una forma de salir de aquí. Los hombres lagarto encargados de este son extrañamente bárbaros teniendo en cuenta el avance tecnológico que representan sus armas. Será más dificil engañarles de lo que pensaba, pero tengo que intentarlo."
+
+
+[TranslatorEvent7]
+
+message="Los Skaarj han traído un nuevo grupo de pieles blandas de dos brazos en otro de sus asaltos. Temo que uno de ellos sea el Mesías, descenso de los cielos, pero rezaré para que me equivoque y no abandonaré las esperanzas de la libertad de mi pueblo." 

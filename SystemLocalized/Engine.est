@@ -1,0 +1,316 @@
+[Public]
+
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
+
+Preferences=(Caption="Avanzado",Parent="Opciones avanzadas")
+
+Preferences=(Caption="Configuración del motor de juego",Parent="Avanzado",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+
+Preferences=(Caption="Funciones abreviadas de las teclas",Parent="Avanzado",Class=Engine.Input,Immediate=True,Category=Aliases)
+
+Preferences=(Caption="Funciones directas de las teclas",Parent="Avanzado",Class=Engine.Input,Immediate=True,Category=RawKeys)
+
+Preferences=(Caption="Controladores",Parent="Opciones avanzadas",Class=Engine.Engine,Immediate=False,Category=Drivers)
+
+Preferences=(Caption="Información del servidor público",Parent="Red",Class=Engine.GameReplicationInfo,Immediate=True)
+
+Preferences=(Caption="Configuración de partida",Parent="Opciones avanzadas",Class=Engine.GameInfo,Immediate=True)
+
+Preferences=(Caption="Channel Download",Parent="Opciones de red",Class=Engine.ChannelDownload)
+
+[Fonts]
+
+BigFont=Engine.MedFont
+
+LargeFont=Engine.MedFont
+
+Papyrus=UWindowFonts.Tahoma30
+
+Chiller=UWindowFonts.Tahoma30
+
+[Errors]
+
+NetOpen=Error al abrir el archivo
+
+NetWrite=Error al escribir en archivo
+
+NetRefused=El servidor rechazó el envío de '%s'
+
+NetClose=Error al cerrar el archivo
+
+NetSize=Tamaño de archivo erróneo
+
+NetMove=Error al mover el archivo
+
+NetInvalid=Se ha recibido una petición de archivo no válida.
+
+NoDownload=El paquete '%s' no es descargable.
+
+DownloadFailed=Fallo al descargar el paquete '%s': %s
+
+RequestDenied=El servidor ha solicitado un archivo del nivel pendiente: Solicitud denegada.
+
+ConnectionFailed=Conexión fallida
+
+Banned=Has sido expulsado del servidor
+
+TempBanned=Has sido expulsado del servidor temporalmente
+
+Kicked=Se te ha echado del servidor
+
+ChAllocate=No se ha podido asignar un canal
+
+NetAlready=Ya en red
+
+NetListen=Espera fallida: No hay contexto de enlazador disponible.
+
+LoadEntry=No se puede cargar Entry: %s
+
+InvalidUrl=URL no válido: %s
+
+InvalidLink=Enlace no válido: %s
+
+FailedBrowse=No se ha podido entrar en %s: %s
+
+Listen=Espera fallida: %s
+
+AbortToEntry=Fallo; regresando a Entry
+
+ServerOpen=Los servidores no pueden abrir los URL de red
+
+ServerListen=El servidor dedicado no puede esperar: %s
+
+Pending=Conexión pendiente con '%s' fallida; %s
+
+LoadPlayerClass=Fallo al cargar la clase de jugador.
+
+ServerOutdated=La versión del servidor está pasada
+
+
+[Progress]
+
+CancelledConnect=Intento de Conexión Cancelado
+
+RunningNet=%s: %s (%i jugadores)
+
+NetReceiving=Recibiendo '%s': %i/%i
+
+NetReceiveOk=Se ha recibido exitosamente '%s'
+
+NetSend=Enviando '%s'
+
+NetSending=Enviando '%s': %i/%i
+
+Connecting=Conectando...
+
+Listening=Esperando clientes...
+
+Loading=Cargando
+
+Saving=Guardando
+
+Paused=Pausado por %s
+
+ReceiveFile=Recibiendo '%s' (F10 para cancelar)
+
+ReceiveOptionalFile=Recibiendo archivo opcional '%s' (F10 para cancelar)
+
+ReceiveSize=Tamaño %iK, Completo %3.1f%% = %iK, Quedan %i Paquetes
+
+ConnectingText=Conectando (F10 para cancelar):
+
+ConnectingURL=unreal://%s/%s
+
+
+[Console]
+
+ClassCaption=Consola Unreal estándar
+
+LoadingMessage=CARGANDO
+
+SavingMessage=GUARDANDO
+
+ConnectingMessage=CONECTANDO
+
+PausedMessage=EN PAUSA
+
+PrecachingMessage=PRECACHEANDO
+
+ChatChannel=(CHAT)
+
+TeamChannel=(TEAM)
+
+
+[General]
+
+Upgrade=Para acceder a este servidor, necesitas la última actualización gratuita de Unreal, disponible en el sitio web de OldUnreal:
+
+UpgradeURL=http://www.oldunreal.com/oldunrealpatches.html
+
+UpgradeQuestion=¿Quieres abrir tu explorador de Internet e ir a la página de actualizaciones ahora?
+
+Version=Versión %i
+
+
+[Menu]
+
+HelpMessage=
+
+MenuList=
+
+LeftString=Izquierda
+
+RightString=Derecha
+
+CenterString=Centro
+
+EnabledString=Activado
+
+DisabledString=Desactivado
+
+HelpMessage[1]="Este menú aún no ha sido implementado."
+
+YesString=sí
+
+NoString=no
+
+
+[Inventory]
+
+PickupMessage=Se ha recogido un objeto
+
+M_Activated=" activado"
+
+M_Selected=" seleccionado"
+
+M_Deactivated=" desactivado"
+
+ItemArticle=un
+
+
+[WarpZoneInfo]
+
+OtherSideURL=
+
+
+[GameInfo]
+
+SwitchLevelMessage=Cambiando de nivel
+
+DefaultPlayerName=Jugador
+
+LeftMessage=" ha abandonado la partida."
+
+FailedSpawnMessage=Fallo al crear el actor del jugador
+
+FailedPlaceMessage=No se ha podido encontrar un punto de inicio (puede que el nivel necesite un actor 'PlayerStart')
+
+NameChangedMessage=Nombre cambiado a
+
+EnteredMessage=" se ha incorporado a la partida."
+
+GameName=Partida
+
+MaxedOutMessage=El servidor está al máximo de su capacidad.
+
+WrongPassword=La contraseña introducida es incorrecta.
+
+NeedPassword=Necesitas una contraseña para unirte a esta partida.
+
+FailedTeamMessage=No se ha podido encontrar equipo para el jugador.
+
+
+[LevelInfo]
+
+Title="Sin título"
+
+
+[Weapon]
+
+MessageNoAmmo=" no tiene munición."
+
+PickupMessage=Tienes un arma
+
+DeathMessage=%o fue matado por el %w de %k.
+
+ItemName=Arma
+
+DeathMessage[0]=%o fue matado por el %w de %k.
+
+DeathMessage[1]=%o fue matado por el %w de %k.
+
+DeathMessage[2]=%o fue matado por el %w de %k.
+
+DeathMessage[3]=%o fue matado por el %w de %k.
+
+
+[Counter]
+
+CountMessage=Sólo quedan %i más...
+
+CompleteMessage=¡Completado!
+
+
+[Ammo]
+
+PickupMessage=Has recogido algo de munición.
+
+
+[Pickup]
+
+ExpireMessage=
+
+
+[SpecialEvent]
+
+DamageString=
+
+
+[DamageType]
+
+Name=matado
+
+AltName=matado
+
+
+[PlayerPawn]
+
+QuickSaveString=Guardado rápido
+
+NoPauseMessage=El juego no se puede pausar
+
+ViewingFrom=Ahora viendo desde
+
+OwnCamera=cámara propia
+
+FailedView=No se ha podido cambiar la vista.
+
+CantChangeNameMsg=No puedes cambiar tu nombre durante una partida en un servidor con registro global.
+
+
+[Pawn]
+
+NameArticle=" un "
+
+
+[Spectator]
+
+MenuName=Espectador
+
+[ServerCommandlet]
+
+HelpCmd=server
+
+HelpOneLiner=Servidor en red de juego
+
+HelpUsage=server map.unr[?game=gametype] [-option...] [parm=value]...
+
+HelpWebLink=http://wiki.oldunreal.com
+
+HelpParm[0]=Log
+
+HelpDesc[0]=Especifica el archivo de registro a crear
+
+HelpParm[1]=AllAdmin
+
+HelpDesc[1]=Dar a todos los jugadores privilegios de administrador 

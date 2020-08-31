@@ -1,0 +1,8 @@
+[LevelSummary]
+Title="Intermission 3"
+
+[TransitionGenderEvent3]
+OutDelays[1]=26.500000
+MaleText[0]="Ich bin froh 'rausgefunden zu haben, wie ich das Wasser wieder in das unterirdische System kriege. Die Nali werden wenigstens nicht verdursten. Und wie gut, daß das Tauchgerät einwandfrei funktioniert ... ich hätte es ohne die neue Ausrüstung nicht geschafft. Obwohl ich es wirklich hasse, wieder hier zu sein, tat es auch irgendwie gut, die Nali wiederzusehen. Ich glaube, ich komme der Prometheus näher. Irgendwie hab ich das im Gefühl."
+FemaleText[0]="Ich bin froh 'rausgefunden zu haben, wie ich das Wasser wieder in das unterirdische System kriege. Die Nali werden wenigstens nicht verdursten. Und wie gut, daß das Tauchgerät einwandfrei funktioniert ... ich hätte es ohne die neue Ausrüstung nicht geschafft. Obwohl ich es wirklich hasse, wieder hier zu sein, tat es auch irgendwie gut, die Nali wiederzusehen. Ich glaube, ich komme der Prometheus näher. Irgendwie hab ich das im Gefühl."
+

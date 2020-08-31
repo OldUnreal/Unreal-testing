@@ -1,0 +1,40 @@
+[TranslatorEvent3]
+
+message=Unidad de activación del carro de transporte secundario de Taridio.
+
+
+[TranslatorEvent16]
+
+message=En Canadá hace mucho frío. Me gusta la cerveza Dos Equis. Mis gatos son muy peludos.
+
+
+[TranslatorEvent12]
+
+message=Estado de la Estación de Desviación de Gas: Las puertas están presurizadas y cerradas.
+
+AltMessage=Puertas despresurizadas. Acceso permitido.
+
+
+[TranslatorEvent18]
+
+message=Craig es el Gran Maestro Doofus.
+
+
+[TranslatorEvent17]
+
+message=¡Entra aquí, la Lava está bien!
+
+
+[TranslatorEvent4]
+
+message=AVISO: Tener cuidado en proximidad de barriles de Taridio.
+
+
+[TranslatorEvent2]
+
+message=Unidad de activación del carro de transporte primario de Taridio.
+
+
+[LevelInfo0]
+
+Title=Profundidades de Rrajigar 

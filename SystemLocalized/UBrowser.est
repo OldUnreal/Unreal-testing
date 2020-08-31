@@ -1,0 +1,167 @@
+[Public]
+
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console)
+
+Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
+
+
+[UBrowserConsole]
+
+ClassCaption=Consola del Explorador de Unreal
+
+
+[UBrowserServerPing]
+
+AdminEmailText="Correo del Administrador"
+
+AdminNameText="Nombre del Administrador"
+
+ChangeLevelsText="Cambiarnivel"
+
+MultiplayerBotsText="Bots en multijugador"
+
+FragLimitText="Límite de puntuación"
+
+TimeLimitText="Límite de tiempo"
+
+GameModeText="Modo de juego"
+
+GameTypeText="Tipo de juego"
+
+GameVersionText="Versión del juego"
+
+GameSubVersionText="SubVersión del juego"
+
+WorldLogText="Registro de estadísticas mundial ngStats"
+
+TrueString="Activado/a"
+
+FalseString="Desactivado/a"
+
+
+[UBrowserServerListWindow]
+
+PlayerCountName="Jugadores"
+
+ServerCountName="Servidores"
+
+QueryServerText="Pidiendo al servidor maestro"
+
+QueryFailedText="Fallo al servidor maestro: "
+
+PingingText="Comunicando con servidores"
+
+CompleteText="Completado"
+
+InfoName="Info"
+
+
+[UBrowserOpenBar]
+
+OpenText="Abrir:"
+
+OpenHelp="Escribe una URL estándar, o selecciona una del historial. Presiona Enter para activar."
+
+
+[UBrowserMainClientWindow]
+
+FavoritesName="Favoritos"
+
+NewsName="Noticias de la comunidad"
+
+
+[UBrowserServerGrid]
+
+ServerName="Servidor"
+
+PingName="Ping"
+
+MapNameName="Nombre del mapa"
+
+PlayersName="Jugadores"
+
+VersionName="Versión"
+
+
+[UBrowserInfoMenu]
+
+RefreshName="&Información del refresco"
+
+AttachName="&Ajuntar ventana"
+
+CloseName="&Cerrar ventana"
+
+
+[UBrowserMainWindow]
+
+WindowTitleString="Buscador de servidores"
+
+
+[UBrowserRightClickMenu]
+
+RefreshName="&Refrescar todos los servidores"
+
+FavoritesName="Añadir a &Favoritos"
+
+RemoveFavoritesName="Sacar de &Favoritos"
+
+RefreshServerName="&Comunicar con este servidor"
+
+PingAllName="Comunicar con &Todos los Servidores"
+
+InfoName="&Información de servidor y de jugadores"
+
+JoinPasswordName="Unirse con &Contraseña"
+
+JoinServerName="&Unirse al servidor"
+
+SpectateServerName="Unirse como &Espectador"
+
+
+[UBrowserPlayerGrid]
+
+NameText="Nombre"
+
+FragsText="Puntuación"
+
+PingText="Ping"
+
+TeamText="Equipo"
+
+MeshText="Modelo"
+
+SkinText="Piel"
+
+IDText="ID"
+
+
+[UBrowserGSpyLink]
+
+ResolveFailedError="No se pudo resolver el servidor maestro: "
+
+TimeOutError="Se terminó el tiempo de comunciación"
+
+CouldNotConnectError="El intento de conexión al servidor maestro ha caducado: "
+
+
+[UBrowserHTTPLink]
+
+ResolveFailedError="No se pudo resolver el servidor maestro: "
+
+TimeOutError="Se terminó el tiempo de comunciación"
+
+CouldNotConnectError="El intento de conexión al servidor maestro ha caducado: "
+
+
+[UBrowserSubsetFact]
+
+NotFoundError="No se ha podido encontrar la ventana: "
+
+NotReadyError="La ventana no está lista: "
+
+
+[UBrowserRulesGrid]
+
+RuleText="Regla"
+
+ValueText="Valor" 

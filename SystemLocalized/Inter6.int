@@ -1,0 +1,8 @@
+[LevelSummary]
+Title="Intermission 6"
+
+[TransitionGenderEvent0]
+OutDelays[1]=5.000000
+MaleText[0]="Life was hard. Then it got harder. I hate Titans."
+FemaleText[0]="Life was hard. Then it got harder. I hate Titans."
+
