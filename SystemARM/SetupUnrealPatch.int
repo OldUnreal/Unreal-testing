@@ -1,0 +1,30 @@
+[Setup]
+LocalProduct=Unreal Gold/Unreal Anthology
+DefaultFolder=C:\UnrealGold
+ReadMe=Help\227ReleaseNotes.pdf
+SetupWindowTitle=Unreal Setup
+AutoplayWindowTitle=Unreal Options
+ProductURL=http://www.unreal.com/
+VersionURL=http://www.oldunreal.com
+Developer=Epic Games, Inc. - 227 by Oldunreal
+DeveloperURL=http://www.oldunreal.com/
+Logo=Help\SetupLogo.bmp
+
+[UnrealRequirement]
+LocalProduct=UnrealGold & UnrealAnthology
+ProductURL=http://www.unreal.com/
+VersionURL=http://www.epicgames.com/
+Developer=Epic Games, Inc.
+DeveloperURL=http://www.epicgames.com/
+
+[LinuxGroup]
+Caption=Linux native files
+Description=Copies all files required to run and play Unreal natively in Linux. There is no advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini. UnrealED2.1 is not available in Linux. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.7z in the Help folder which should contain all the necessary files.
+
+[OldWeaponsGroup]
+Caption=OldWeapons
+Description=Copies the OldWeapons mutator files. These files allow you to play with the weapons of Unreal version 200. Details can be found in the OldWeaponsReadme.txt in the help folder. 
+
+[227fConform]
+Caption=ServerPackages conformed against 227f
+Description=This will copy a file named 227fConformed.7z into the help directory. The packages inside are for temporary use until 227g is final, it will avoid connection problems with 227f clients, but can possibly cause problems with older clients. Use for servers only. 

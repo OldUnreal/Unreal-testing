@@ -1,0 +1,29 @@
+[LevelInfo0]
+Title="Intro1"
+
+[TransitionGenderEvent0]
+OutDelays[1]=7.000000
+OutDelays[2]=3.500000
+OutDelays[3]=17.000000
+OutDelays[4]=2.000000
+OutDelays[5]=14.000000
+OutDelays[6]=15.500000
+OutDelays[7]=6.000000
+MaleText[0]="Deep space warship UMS Bodega Bay requesting a priority translight communication with UMS Sector Control."
+MaleText[1]="Bodega Bay, this is Starlight Base. Go ahead."
+MaleText[2]="Starlight Base, we picked up a lifepad of alien origin as we came into orbit. There was one human survivor aboard and claims to have escaped from the planet. Survivor will not disclose identity, even under interrogation. DNA scans are being uploaded for identification. Please advise."
+MaleText[3]="Standby, Bodega Bay..."
+MaleText[4]="Bodega Bay, your survivor is UMS prisoner 849, last assigned to prison transport vessel Vortex Rikers; Vortex Rikers recently disappeared in your sector. Prisoner 849 is classified as missing and presumed dead."
+MaleText[5]="Starlight Base, permission to use the rescued prisoner for Operation 'Talon Hunter'. The prisoner has extensive knowledge of the planetary surface and hazards. Prisoner 849 is the natural choice to search for the wreck of the Prometheus and recover the Talon data cores."
+MaleText[6]="Bodega Bay, you are clear to take whatever steps are necessary to ensure the success of Operation 'Talon Hunter'."
+FemaleText[0]="Deep space warship UMS Bodega Bay requesting a priority translight communication with UMS Sector Control."
+FemaleText[1]="Bodega Bay, this is Starlight Base. Go ahead."
+FemaleText[2]="Starlight Base, we picked up a lifepad of alien origin as we came into orbit. There was one human survivor aboard and claims to have escaped from the planet. Survivor will not disclose identity, even under interrogation. DNA scans are being uploaded for identification. Please advise."
+FemaleText[3]="Standby, Bodega Bay..."
+FemaleText[4]="Bodega Bay, your survivor is UMS prisoner 849, last assigned to prison transport vessel Vortex Rikers; Vortex Rikers recently disappeared in your sector. Prisoner 849 is classified as missing and presumed dead."
+FemaleText[5]="Starlight Base, permission to use the rescued prisoner for Operation 'Talon Hunter'. The prisoner has extensive knowledge of the planetary surface and hazards. Prisoner 849 is the natural choice to search for the wreck of the Prometheus and recover the Talon data cores."
+FemaleText[6]="Bodega Bay, you are clear to take whatever steps are necessary to ensure the success of Operation 'Talon Hunter'."
+
+[LevelSummary]
+Title="Intro1"
+

@@ -1,0 +1,6 @@
+[Public]
+Object=(Name=SwFMOD.SwFMOD,Class=Class,MetaClass=Engine.AudioSubsystem)
+Preferences=(Caption="SwFModEx Audio",Parent="Audio",Class=SwFMOD.SwFMOD,Immediate=True)
+
+[SwFMOD]
+ClassCaption="SwFModEx Audio"
