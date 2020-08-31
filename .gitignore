@@ -1,0 +1,87 @@
+# Ignore old subversion crap
+.svn/
+
+# Ignore temporary files
+*~
+*#
+*.bsc
+*.idb
+
+# Ignore auto-generated ini files
+System/Detected.ini
+System64/Detected.ini
+SystemARM/Detected.ini
+
+# Ignore personal ini files
+System/Unreal.ini
+System/User.ini
+System64/Unreal.ini
+System64/User.ini
+SystemARM/Unreal.ini
+SystemARM/User.ini
+
+# Ignore various binaries
+*.exe
+*.dll
+*.so
+*.dylib
+ucc-bin-*
+unreal-bin-*
+macos-ucc-bin-*
+macos-unreal-bin-*
+System/*.lib
+System64/*.lib
+
+# Ignore build files on various platforms
+cmake-build/
+cmake-build-emscripten/
+build/
+build64/
+build-debug/
+build-asan/
+build-debug-asan/
+
+# Ignore VS project files we don't need
+.vs/
+*.vcxproj.user
+vssver.scc
+
+# Ignore intermediate files on Windows
+*.idb
+*.ilk
+*.pdb
+*.map
+*.tmp
+*.exp
+*.bsc
+*.obj
+*.log
+*.pch
+*.backup
+Debug/
+Release/
+Lib/
+Lib64/
+*.tlog/
+System/*.lib
+
+# Ignore intermediate files on Linux
+*.lo
+*.o
+*.la
+*.pc
+
+# Ignore top-level directories we generally don't need
+Cache/
+Maps/
+#Textures/
+#Sounds/
+#Music/
+PubSrc/
+System/Screenshots/
+
+# Ignore game assets
+#*.utx
+#*.umx
+#*.uax
+#*.u
