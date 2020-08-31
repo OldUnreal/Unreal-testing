@@ -21,16 +21,17 @@ SystemARM/Unreal.ini
 SystemARM/User.ini
 
 # Ignore various binaries
-*.exe
-*.dll
-*.so
-*.dylib
-ucc-bin-*
-unreal-bin-*
-macos-ucc-bin-*
-macos-unreal-bin-*
+#*.exe
+#*.dll
+#*.so
+#*.dylib
+#ucc-bin-*
+#unreal-bin-*
+#macos-ucc-bin-*
+#macos-unreal-bin-*
 System/*.lib
 System64/*.lib
+SystemARM/*.lib
 
 # Ignore build files on various platforms
 cmake-build/
