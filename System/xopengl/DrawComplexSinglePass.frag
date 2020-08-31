@@ -264,6 +264,7 @@ void main (void)
 			#else
 			LightColor = texture(Texture1, vLightMapCoords);
 			#endif
+			LightColor *= 2.0; // Do 2x lightmap scale here instead of SetTexture
 	#ifdef GL_ES
 			TotalColor*=vec4(LightColor.bgr,1.0);
 	#else
@@ -410,6 +411,7 @@ void main (void)
         #else
 		FogColor = texture(Texture5, vFogMapCoords);
 		#endif
+		FogColor *= 2.0; // Do 2x fogmap scale here instead of SetTexture
 
 		TotalColor.rgb = TotalColor.rgb * (1.0-FogColor.a) + FogColor.rgb;
 		TotalColor.a   = FogColor.a;
