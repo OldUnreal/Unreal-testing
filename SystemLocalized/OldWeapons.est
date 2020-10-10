@@ -1,167 +1,119 @@
-[Public]
-
-Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="OldMutator, sustituye los sonidos de las armas por los de la versión 200 y anteriores.")
-
+ï»¿[Public]
+Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="Armas Antiguas,Sustituye los sonidos de las armas por los de la versiÃ³n 200 de Unreal.")
+Object=(Name=OldWeapons.OldDispersionPistol,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldASMD,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldEightball,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldFlakCannon,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldMinigun,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldRazorjack,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldGESBioRifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldStinger,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldAutomag,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldRifle,Class=Class,MetaClass=Engine.Weapon)
 
 [OldDispersionPistol]
-
-DeathMessage="%o ha sido asesinado por la %w de %k. Vaya un perdedor!"
-
-PickupMessage="Tienes la Pistola de Dispersión"
-
-ItemName="Pistola de Dispersión"
-
+DeathMessage="A %o lo ha asesinado %k con su %w. Â¡Pobre!"
+PickupMessage="Tienes la Pistola de DispersiÃ³n"
+ItemName="Pistola de DispersiÃ³n"
 
 [OldASMD]
-
-DeathMessage="%k ha inflingido heridas mortales a %o con el %w."
-
+DeathMessage="%k ha infligido heridas mortales a %o con el %w."
 PickupMessage="Tienes el ASMD"
-
 ItemName="ASMD"
 
-
 [OldEightball]
-
-DeathMessage="%o ha sido azotado múltiples veces con el %w de %k."
-
+DeathMessage="%o fue vapuleado varias veces por el %w de %k."
 PickupMessage="Tienes el Lanzacohetes Eightball"
-
-ItemName="Eightball"
-
+ItemName="Lanzacohetes Eightball"
 
 [OldRifle]
-
-DeathMessage="%k ha metido una bala por la cabeza de  %o."
-
-PickupMessage="Tienes el Rifle Francotirador"
-
-ItemName="Rifle Francotirador"
-
+DeathMessage="%k ha atravesado la cabeza de %o con una bala."
+PickupMessage="Tienes el Rifle de Francotirador"
+ItemName="Rifle de Francotirador"
 
 [OldFlakCannon]
-
-DeathMessage="%o ha sido roto a pedacitos con el %w de %k."
-
-PickupMessage="Tienes el Cañón de Metralla"
-
-ItemName="Cañón de Metralla"
-
+DeathMessage="%o ha sido despedazado por el %w de %k."
+PickupMessage="Tienes el CaÃ±Ã³n de Metralla"
+ItemName="CaÃ±Ã³n de Metralla"
 
 [OldAutoMag]
-
-DeathMessage="%o ha sido acribillado con el %w de %k."
-
-PickupMessage="Tienes el AutoMag"
-
-ItemName="AutoMag"
-
+DeathMessage="%o ha sido acribillado por el %w de %k."
+PickupMessage="Tienes la Autopistola"
+ItemName="Autopistola"
 
 [OldMinigun]
-
-DeathMessage="La %w de %k ha convertido a %o en un pedazo de carne goteante."
-
+DeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
 PickupMessage="Tienes la Ametralladora"
-
 ItemName="Ametralladora"
 
-
 [OldGESBioRifle]
-
-DeathMessage="%o ha bebido un vaso de una carga verde goteante de %k."
-
-PickupMessage="Tienes el Biorifle GES"
-
-ItemName="GES Bio Rifle"
-
+DeathMessage="%o bebiÃ³ un vaso de la sustancia verde que le goteaba a %k."
+PickupMessage="Tienes el Bio Rifle GES"
+ItemName="Bio Rifle GES"
 
 [OldAmplifier]
-
-ExpireMessage="Old Amplifier está sin batería."
-
-PickupMessage="Tienes el Amplificador Energético"
-
-ItemName="Amplificador"
-
+ExpireMessage="El Amplificador EnergÃ©tico se ha agotado."
+PickupMessage="Tienes el Amplificador EnergÃ©tico"
+ItemName="Amplificador EnergÃ©tico"
 
 [OldStinger]
-
-DeathMessage="%o ha sido perforado con el %w de %k."
-
-PickupMessage="Tienes el Perforador de Taridio"
-
-ItemName="Perforador"
-
+DeathMessage="%o ha sido perforado por el %w de %k."
+PickupMessage="Has recogido el CaÃ±Ã³n Perforador"
+ItemName="CaÃ±Ã³n Perforador"
 
 [OldShellBox]
-
-PickupMessage="Has recogido 50 balas"
-
+PickupMessage="Has recogido una caja de 50 Balas"
+ItemName="Caja de Balas"
 
 [OldRifleAmmo]
-
-PickupMessage="Has recogido 8 cartuchos de rifle."
-
+PickupMessage="Tienes 8 Cartuchos para el Rifle de Francotirador"
+ItemName="Cartuchos de Rifle de Francotirador"
 
 [OldWeaponPowerUp]
-
-PickupMessage="Tienes el reforzador de la Pistola de Dispersión"
-
+PickupMessage="Tienes un Mejorador para la Pistola de DispersiÃ³n"
+ItemName="Mejorador de DispersiÃ³n"
 
 [OldFlakBox]
-
-PickupMessage="Has recogido 10 proyectiles de metralla"
-
+PickupMessage="Tienes 10 Proyectiles de Metralla"
+ItemName="Proyectiles de Metralla"
 
 [OldRazorjack]
-
-DeathMessage="%k arrancó un trozo sangrante de %o con el %w."
-
+DeathMessage="%k le pegÃ³ un buen tajo a %o con el %w."
 PickupMessage="Tienes el Lanzacuchillas"
-
 ItemName="Lanzacuchillas"
 
-
 [OldDefaultAmmo]
-
-PickupMessage="Has recogido algo de munción."
-
+PickupMessage="Has recogido algo de munciÃ³n."
+ItemName="MuniciÃ³n"
 
 [OldASMDAmmo]
-
-PickupMessage="Tienes un núcleo para el ASMD."
-
+PickupMessage="Has recogido un NÃºcleo de ASMD"
+ItemName="NÃºcleo de ASMD"
 
 [OldStingerAmmo]
-
-PickupMessage="Has recogido 40 fragmentos de Taridio"
-
+PickupMessage="Has recogido 40 Perforadores de Taridio"
+ItemName="Perforadores de Taridio"
 
 [OldRazorAmmo]
-
-PickupMessage="Has recogido algunas cuchillas para el lanzador"
-
+PickupMessage="Has recogido un paquete de Cuchillas Filosas"
+ItemName="Cuchillas Filosas"
 
 [OldSludge]
-
-PickupMessage="Has recogido 25 quilos de residuos de taridio"
-
+PickupMessage="Has recogido 25 Kilos de Residuos de Taridio"
+ItemName="Residuos de Taridio"
 
 [OldRocketCan]
-
-PickupMessage="Has recogido 12 proyectiles eightball"
-
+PickupMessage="Has recogido 12 Cohetes Eightball"
+ItemName="Cohetes Eightball"
 
 [OldClip]
-
-PickupMessage="Has recogido un cargador"
-
+PickupMessage="Has recogido un Cartucho"
+ItemName="Cartucho"
 
 [OldRifleRound]
-
-PickupMessage="Has recogido un cartucho de rifle."
-
+PickupMessage="Tienes un Cartucho para el Rifle"
+ItemName="Cartucho de Rifle"
 
 [OldFlakShellAmmo]
-
-PickupMessage="Has recogido un proyectil de metralla." 
+PickupMessage="Tienes un Proyectil de Metralla"
+ItemName="Proyectil de Metralla"

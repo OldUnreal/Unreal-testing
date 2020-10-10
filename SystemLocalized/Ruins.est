@@ -1,27 +1,21 @@
-[LevelInfo0]
+Ôªø[LevelInfo0]
+Title="Templo de Vandora"
+LevelEntryText="Entrando al Templo de Vandora"
 
-Title=Templo de Vandora
-
-
-[TranslatorEvent1]
-
-message=El Camino est· lleno de tinieblas. La Antorcha del Trueno puede encender el sendero de los Elegidos. La progresiÛn espiritual la logran aquellos que encienden la Antorcha de los Truenos.
-
-Hint=Enciende la Antorcha de los Truenos para poder entrar.
-
-
-[TranslatorEvent3]
-
-message=Vandora, Diosa del Rel·mpago.
-
-
-[TranslatorEvent2]
-
-message=Antorcha del Trueno
-
+[LevelSummary]
+Title="Templo de Vandora"
+LevelEntryText="Entrando al Templo de Vandora"
 
 [TranslatorEvent0]
+message="Y Vandora hizo su aparici√≥n, con el fuego del Cielo sobre sus labios, y santific√≥ la fuente sagrada con un beso. As√≠, dijo, quien me siga, desprender√° los lazos de la carne y ser√° tan escurridizo como la niebla."
+Hint="Santifica la fuente sagrada con fuego y llegar√°s a ser tan escurridizo como la niebla."
 
-message=Y Vandora hizo su apariciÛn, con el fuego del Cielo sobre sus labios y santificando la fuente sagrada con un beso. AsÌ, dijo, aquel que me siga, desprender· los lazos de la carne y llegar· a ser tan escurridizo como la niebla.
+[TranslatorEvent1]
+message="El Camino est√° lleno de oscuridad. La Antorcha de la Calma deber√° iluminar el sendero de los dignos. La progresi√≥n espiritual ser√° lograda por aquellos que enciendan la Antorcha de la Calma."
+Hint="Enciende la Antorcha de la Calma para poder entrar."
 
-Hint=Sanctifica la fuente sagrada con fuego y llegar·s a ser tan escurridizo como la niebla. 
+[TranslatorEvent3]
+message="Vandora, Diosa del Rel√°mpago."
+
+[TranslatorEvent2]
+message="Antorcha de la Calma"

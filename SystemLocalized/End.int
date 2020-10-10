@@ -1,4 +1,4 @@
-[LevelInfo0]
+﻿[LevelInfo1]
 Title="End"
 
 [LevelSummary]
@@ -6,15 +6,12 @@ Title="End"
 
 [TransitionGenderEvent0]
 OutDelays[1]=3.000000
-MaleText[0]="Bodega Bay to shuttle craft. Please authenticate."
-FemaleText[0]="Bodega Bay to shuttle craft. Please authenticate."
+CommonText[0]="Bodega Bay to shuttle craft. Please authenticate."
 
 [TransitionGenderEvent2]
 OutDelays[1]=3.000000
-MaleText[0]="Authenticate immediately or we will open fire."
-FemaleText[0]="Authenticate immediately or we will open fire."
+CommonText[0]="Authenticate immediately or we will open fire."
 
 [TransitionGenderEvent1]
 OutDelays[1]=3.000000
-MaleText[0]="You were warned. We are opening fire."
-FemaleText[0]="You were warned. We are opening fire."
+CommonText[0]="You were warned. We are opening fire."

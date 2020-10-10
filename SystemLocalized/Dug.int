@@ -1,4 +1,7 @@
-[LevelInfo0]
+﻿[LevelInfo0]
+Title="Depths of Rrajigar"
+
+[LevelSummary]
 Title="Depths of Rrajigar"
 
 [TranslatorEvent4]
@@ -22,4 +25,3 @@ AltMessage="Doors depressurized. Access permitted."
 
 [TranslatorEvent2]
 Message="Primary Tarydium transport cart activation unit."
-

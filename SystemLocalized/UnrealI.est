@@ -1,1415 +1,192 @@
-[Public]
-
+ï»¿[Public]
 Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UnrealI.KingOfTheHill,Class=Class,MetaClass=Engine.GameInfo)
-
-Object=(Name=Unreali.FlakCannon,Class=Class,MetaClass=Engine.Weapon)
-
-Object=(Name=Unreali.GESBioRifle,Class=Class,MetaClass=Engine.Weapon)
-
-Object=(Name=Unreali.Razorjack,Class=Class,MetaClass=Engine.Weapon)
-
-Object=(Name=Unreali.Rifle,Class=Class,MetaClass=Engine.Weapon)
-
-Object=(Name=Unreali.Minigun,Class=Class,MetaClass=Engine.Weapon)
-
-Object=(Name=Unreali.Quadshot,Class=Class,MetaClass=Engine.Weapon)
-
-Object=(Name=Unreali.FemaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Mujer 2")
-
-Object=(Name=Unreali.MaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Varón 1")
-
-Object=(Name=Unreali.MaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Varón 2")
-
-Object=(Name=Unreali.SkaarjPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Skaarj")
-
-Object=(Name=Unreali.FemaleTwoBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Mujer 2")
-
-Object=(Name=Unreali.MaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Varón 1")
-
-Object=(Name=Unreali.MaleTwoBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Varón 2")
-
-Object=(Name=Unreali.SkaarjPlayerBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Skaarj")
-
-Preferences=(Caption="Modos de juego",Parent="Opciones avanzadas")
-
-Preferences=(Caption="Encuentro en la oscuridad",Parent="Modos de juego",Class=UnrealI.DarkMatch,Immediate=True)
-
-Preferences=(Caption="El rey de la colina",Parent="Modos de juego",Class=UnrealI.KingOfTheHill,Immediate=True)
-
-Preferences=(Caption="En red",Parent="Opciones avanzadas")
-
-Preferences=(Caption="Listas de mapas",Parent="En red")
-
-Preferences=(Caption="Mapas de encuentros en la oscuridad",Parent="Listas de mapas",Class=UnrealI.DkMapList,Immediate=True)
-
-
-[DeathmatchGame]
-
-ClassCaption=Partida a muerte
-
-GlobalNameChange= ha cambiado el nombre por
-
-NoNameChange= ya está en uso
-
-MaxedOutMessage=El servidor está siendo utilizado al máximo de su capacidad.
-
-GameName=Partida a muerte
-
-
-[DarkMatch]
-
-GameName=Partida en la oscuridad
-
-
-[KingOfTheHill]
-
-ClassCaption=El rey de la colina
-
-KingMessage= es el nuevo rey de la colina.
-
-GameName=El rey de la colina
-
-
-[TeamGame]
-
-ClassCaption=Partida en equipos
-
-NewTeamMessage= está en marcha
-
-TeamColor[0]=Rojo
-
-TeamColor[1]=Azul
-
-TeamColor[2]=Verde
-
-TeamColor[3]=Oro
-
-GameName=Partida en equipos
-
-
-[CoopGame]
-
-ClassCaption=Modo cooperativo
-
-GameName=Modo coop.
-
-
-[UnrealGameInfo]
-
-DeathVerb= fue
-
-DeathPrep= por
-
-DeathTerm=asesinado
-
-DeathArticle=un
-
-ExplodeMessage= voló en pedazos
-
-SuicideMessage= sufrió un repentino ataque al corazón.
-
-FallMessage= dejó un pequeño cráter.
-
-DrownedMessage= se le olvidó salir a respirar.
-
-BurnedMessage= ha sido incinerado.
-
-CorrodedMessage= ha sido enlodado.
-
-HackedMessage=" ha sido acuchillado.
-
-DeathMessage[0]=asesinado
-
-DeathMessage[1]=rallado
-
-DeathMessage[2]=fumado
-
-DeathMessage[3]=sacrificado
-
-DeathMessage[4]=aniquilado
-
-DeathMessage[5]=suprimido
-
-DeathMessage[6]=machacado
-
-DeathMessage[7]=perforado
-
-DeathMessage[8]=triturado
-
-DeathMessage[9]=destruido
-
-DeathMessage[10]=aporreado
-
-DeathMessage[11]=enlatado
-
-DeathMessage[12]=golpeado
-
-DeathMessage[13]=aplastado
-
-DeathMessage[14]=magullado
-
-DeathMessage[15]=excluido
-
-DeathMessage[16]=apaleado
-
-DeathMessage[17]=vapuleado
-
-DeathMessage[18]=espachurrado
-
-DeathMessage[19]=cortado en rodajas
-
-DeathMessage[20]=hecho cubitos
-
-DeathMessage[21]=desgarrado
-
-DeathMessage[22]=bombardeado
-
-DeathMessage[23]=desmembrado
-
-DeathMessage[24]=azotado
-
-DeathMessage[25]=desviscerado
-
-DeathMessage[26]=neutralizado
-
-DeathMessage[27]=fustigado
-
-DeathMessage[28]=flagelado
-
-DeathMessage[29]=destrozado
-
-DeathMessage[30]=hecho pedazos
-
-DeathMessage[31]=zurrado
-
-DeathModifier[0]=plenamente
-
-DeathModifier[1]=completamente
-
-DeathModifier[2]=absolutamente
-
-DeathModifier[3]=totalmente
-
-DeathModifier[4]=íntegramente
-
-MajorDeathMessage[0]=hecho trizas
-
-MajorDeathMessage[1]=herido de gravedad
-
-MajorDeathMessage[2]=sometido a un dolor indescriptible
-
-MajorDeathMessage[3]=
-
-MajorDeathMessage[4]=
-
-MajorDeathMessage[5]=
-
-MajorDeathMessage[6]=
-
-MajorDeathMessage[7]=
-
-HeadLossMessage[0]=decapitado
-
-HeadLossMessage[1]=descabezado
-
-
-[UnrealQuitMenu]
-
-YesSelString= [SÍ] No
-
-NoSelString= Sí [NO]
-
-MenuTitle=¿Quieres salir?
-
-HelpMessage[1]=Selecciona "Sí" y pulsa INTRO si de verdad quieres regresar a tu miserable, inútil e insignificante vida real; si de verdad no puedes soportar ni un minuto más la insoportable irrealidad de UNREAL.
-
-MenuList[0]=Un juego de Digital Extremes/Epic Megagames
-
-MenuList[1]=Colaboración
-
-MenuList[2]="Diseño del juego: James Schmalz"
-
-MenuList[3]=Cliff Bleszinski
-
-MenuList[4]=Diseño de los niveles: Cliff Bleszinski
-
-MenuList[5]=T. Elliot Cannon Pancho Eekels
-
-MenuList[6]=Jeremy War Cedric Fiorentino
-
-MenuList[7]=Shane Caudle
-
-MenuList[8]=Animación: Dave Carter
-
-MenuList[9]=Gráficos: James Schmalz
-
-MenuList[10]=Mike Leatham Artur Bialas
-
-MenuList[11]=Programación: Tim Sweeney Steven Polge
-
-MenuList[12]=Erik de Neve James Schmalz
-
-MenuList[13]=Carlo Vogelsang Nick Michon
-
-MenuList[14]=Música: Alexander Brandon
-
-MenuList[15]=Michiel van den Bos
-
-MenuList[16]=Efectos de sonido: Dave Ewing
-
-MenuList[17]=Productor de GT: Jason Schreiber
-
-MenuList[18]=Marketing: Mark Rein Nigel Kent Craig Lafferty
-
-
-[DispersionPistol]
-
-PickupMessage=Tienes la pistola de dispersión
-
-ItemName=Pistola de dispersión
-
-
-[UnrealGameOptionsMenu]
-
-AdvancedString=Opciones avanzadas
-
-AdvancedHelp=Editar las opciones avanzadas de la configuración del juego.
-
-MenuTitle=OPCIONES DEL JUEGO
-
-HelpMessage[1]=Ajustar la velocidad a la que pasa el tiempo en el juego.
-
-HelpMessage[2]=Si está activada, se reduce la sangre en el juego.
-
-MenuList[1]=Velocidad del juego
-
-MenuList[2]=Sangre reducida
-
-
-[UnrealIndivBotMenu]
-
-MenuTitle=Configuración de la inteligencia artificial
-
-HelpMessage[1]=¿De qué Bot es la configuración que se está editando? Utiliza las flechas que señalan hacia la izquierda y hacia la derecha para realizar cambios.
-
-HelpMessage[2]=Pulsa INTRO para editar el nombre de este Bot.
-
-HelpMessage[3]=Utiliza las flechas que señalan hacia la izquierda y hacia la derecha para cambiar la clase de este Bot.
-
-HelpMessage[4]=Utiliza las flechas que señalan hacia la izquierda y hacia la derecha para cambiar la piel de este Bot.
-
-HelpMessage[5]="Modifica la habilidad general de este Bot en esta cantidad (en relación a la habilidad base de los Bots)."
-
-HelpMessage[6]="Teclea el equipo en que juega este Bot (rojo, azul, verde, o amarillo)."
-
-MenuList[1]="Configuración"
-
-MenuList[2]=Nombre
-
-MenuList[3]=Clase
-
-MenuList[4]=Piel
-
-MenuList[5]=Ajuste habilidad
-
-MenuList[6]=Equipo
-
+Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.FemaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Mujer 2")
+Object=(Name=UnrealI.MaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="VarÃ³n 1")
+Object=(Name=UnrealI.MaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="VarÃ³n 2")
+Object=(Name=UnrealI.SkaarjPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Skaarj")
+Object=(Name=UnrealI.FemaleTwoBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Mujer 2")
+Object=(Name=UnrealI.MaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Description="VarÃ³n 1")
+Object=(Name=UnrealI.MaleTwoBot,Class=Class,MetaClass=UnrealShare.Bots,Description="VarÃ³n 2")
+Object=(Name=UnrealI.SkaarjPlayerBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Skaarj")
+Object=(Name=UnrealI.NaliPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Nali")
+Preferences=(Caption="Partida a Oscuras",Parent="Tipos de Juego",Class=UnrealI.DarkMatch,Immediate=True)
+Preferences=(Caption="Rey de la Colina",Parent="Tipos de Juego",Class=UnrealI.KingOfTheHill,Immediate=True)
+Preferences=(Caption="Mapas de Partida a Oscuras",Parent="Listas de Mapas",Class=UnrealI.DkMapList,Immediate=True)
 
 [IntroNullHud]
-
-ESCMessage=Pulsa ESC para empezar
-
-
-[UnrealFavoritesMenu]
-
-MenuTitle=FAVORITOS
-
-EditList[0]=Nombre del servidor:
-
-EditList[1]=Dirección:
-
-HelpMessage[1]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[2]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[3]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[4]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[5]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[6]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[7]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[8]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[9]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[10]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[11]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-HelpMessage[12]=Pulsa INTRO para acceder a este servidor. Pulsa la flecha que señala a la derecha para editar esta entrada.
-
-
-[Translator]
-
-PickupMessage=Pulsa F2 para activar el traductor
-
-NewMessage=Traductor universal
-
-
-[UnrealVideoMenu]
-
-MenuTitle=AUDIO/VÍDEO
-
-HelpMessage[1]=Ajusta el brillo de la pantalla utilizando las teclas de flechas izquierda y derecha.
-
-HelpMessage[2]=Juega a Unreal en una ventana. Importante: Escoger un modo de reproducción a través de software puede resultar en la eliminación de actores de alto nivel de detalles que aparecían visibles con el hardware de aceleración de gráficos.
-
-HelpMessage[3]=Utiliza las teclas de flechas izquierda y derecha para seleccionar una resolución, y pulsa INTRO para confirmar tu elección.
-
-HelpMessage[4]=Escoge la opción de nivel bajo de detalles de texturas para mejorar el funcionamiento del juego. Los cambios realizados surtirán efecto en el próximo nivel.
-
-HelpMessage[5]=Ajusta el volumen de la música utilizando las teclas de flechas izquierda y derecha.
-
-HelpMessage[6]=Ajusta el volumen de los efectos de sonido del juego utilizando las teclas de flechas izquierda y derecha.
-
-HelpMessage[7]=Escoge la opción de baja calidad de sonido para mejorar el funcionamiento del juego en ordenadores con 32 megabytes de memoria o menos. Los cambios realizados surtirán efecto en el próximo nivel.
-
-MenuList[1]=Brillo
-
-MenuList[2]=Cambiar modalidad de pantalla completa
-
-MenuList[3]=Elegir resolución
-
-MenuList[4]=Detalle de texturas
-
-MenuList[5]=Volumen de la música
-
-MenuList[6]=Volumen del sonido
-
-MenuList[7]=Calidad del sonido
-
-LowText=Bajo
-
-HighText=Alto
-
-HelpMessage[8]=Si es verdadero, escucharás mensajes durante los modos de juego que los utilicen.
-
-MenuList[8]=Mensajes orales
-
-
-[UnrealMeshMenu]
-
-HelpMessage[4]=Cambia la clase con las teclas de flechas izquierda y derecha.
-
-HelpMessage[5]=Introduce aquí la contraseña de administración, o del juego si es necesario.
-
-MenuList[4]=Clase:
-
-MenuList[5]=Contraseña:
-
-HelpMessage[6]=Pulsa INTRO para empezar la partida.
-
-MenuList[6]=Iniciar partida
-
-
-[UnrealPlayerMenu]
-
-MenuTitle=Seleccionar representación digital
-
-HelpMessage[1]=Pulsa INTRO para teclear tu nombre. No olvides hacerlo antes de incorporarte a una partida para múltiples jugadores.
-
-HelpMessage[2]=Utiliza las teclas de flechas para cambiar el color de tu equipo (rojo, azul, verde o amarillo).
-
-HelpMessage[3]=Cambia la piel con las teclas de flechas izquierda y derecha.
-
-MenuList[1]=Nombre:
-
-MenuList[2]=Equipo:
-
-MenuList[3]=Piel:
-
-HelpMessage[4]=Sólo puedes cambiar tu clase y modelo la primera vez que te incorpores a una partida de múltiples jugadores, o al iniciar una partida de un solo jugador.
-
-MenuList[4]=Clase:
-
-
-[UnrealJoinGameMenu]
-
-InternetOption=Internet (28.8 - 56K)
-
-FastInternetOption=Internet rápida (ISDN, módem de cable)
-
-LANOption= LAN
-
-MenuTitle=INCORPORARSE A LA PARTIDA
-
-HelpMessage[1]=Espera conexión de servidores locales.
-
-HelpMessage[2]=Escoge un servidor de la lista de favoritos.
-
-HelpMessage[3]=Pulsa INTRO para teclear la dirección de un servidor. Vuelve a pulsar INTRO para acceder a dicho servidor.
-
-HelpMessage[4]=Ajusta la velocidad de la red.
-
-HelpMessage[5]=Abre la página web con la lista de servidores de Epic Unreal.
-
-MenuList[1]=Buscar servidores locales
-
-MenuList[2]=Escoger uno de los favoritos
-
-MenuList[3]=Abrir
-
-MenuList[4]=Velocidad red
-
-MenuList[5]=Acceder a la lista de servidores de Epic Unreal
-
-
-[UnrealOptionsMenu]
-
-MenuTitle=MENÚ DE OPCIONES
-
-HelpMessage[1]=Activar o desactivar ayuda para apuntar en vertical
-
-HelpMessage[2]=Activar/Desactivar joystick
-
-HelpMessage[3]=Ajustar la sensibilidad del ratón, o la distancia que hay que moverlo para producir un determinado movimiento en el juego.
-
-HelpMessage[4]=Habilitar o deshabilitar el ratón alisar (alta resolución para desactivar ratones)
-
-HelpMessage[5]=Invertir el eje X del ratón. Cuando es verdadero, empujar el ratón hacia delante te permitirá mirar hacia abajo en vez de hacia arriba.
-
-HelpMessage[6]=Si es verdadero, cuando sueltes la tecla de la vista de ratón, la imagen se centrará automáticamente.
-
-HelpMessage[7]=Si es verdadero, el ratón se utilizará siempre para mirar arriba y abajo, sin necesidad de disponer de una tecla para la vista de ratón.
-
-HelpMessage[8]=Si es verdadero, cuando no se esté utilizando la vista de ratón, la imagen se ajustará automáticamente para que puedas mirar hacia arriba y hacia abajo en escaleras y pendientes.
-
-HelpMessage[9]=Si es verdadero, la pantalla lanzará un destello cuando dispares tu arma.
-
-HelpMessage[10]=Escoge la mira que aparece en el centro de la pantalla.
-
-HelpMessage[11]=Selecciona dónde aparecerá tu arma.
-
-HelpMessage[12]=Con esta opción activada, pulsar dos veces sobre las teclas de dirección (adelante, atrás, izquierda y derecha) te permitirá realizar un movimiento rápido de evasión.
-
-HelpMessage[13]=Pulsa INTRO para personalizar la configuración del teclado, del ratón y del joystick.
-
-HelpMessage[14]=Pulsa INTRO para personalizar el orden de cambio de armas.
-
-HelpMessage[15]=Utiliza las teclas de flechas izquierda y derecha para seleccionar la configuración del panel de control (HUD).
-
-HelpMessage[16]=Ajusta el nivel del balanceo de la cabeza al moverte.
-
-HelpMessage[17]=Establezca su velocidad óptima de redes. Esto tiene un impacto en el juego de Internet.
-
-HelpMessage[18]=Abre el menú de configuración de opciones avanzadas.
-
-MenuList[1]=Apuntar auto.
-
-MenuList[2]=Joystick activado
-
-MenuList[3]=Sensibilidad del ratón
-
-MenuList[4]=Suavizar del ratón
-
-MenuList[5]=Inversión del ratón
-
-MenuList[6]=Vista con muelle
-
-MenuList[7]=Siempre vista ratón
-
-MenuList[8]=Vista inclinación auto.
-
-MenuList[9]=Destello arma
-
-MenuList[10]=Punto de mira
-
-MenuList[11]=Mano del arma
-
-MenuList[12]=Esquivar
-
-MenuList[13]=Personalizar los controles
-
-MenuList[14]=Prioridad de las armas
-
-MenuList[15]=Configuración del HUD
-
-MenuList[16]=Oscilación de la vista
-
-MenuList[17]=Neto Velocidad
-
-MenuList[18]=Opciones avanzadas
-
+ESCMessage="Pulsa ESC para comenzar"
 
 [EndgameHud]
+Message1="La nave de fuga Skaarj ha conseguido escapar de la atracciÃ³n gravitatoria del planeta... por muy poco. Sin embargo, te has quedado sin combustible y estÃ¡s a la deriva."
+Message2="Has escapado de donde la mayorÃ­a perecen. SonrÃ­es en soledad: Â¡han pasado tantas cosas...! Sin embargo, es tan poco lo que ha cambiado..."
+Message3="Antes del aterrizaje forzoso, estabas en una celda diminuta. Ahora vuelves a encontrarte en los confines de una prisiÃ³n."
+Message4="Sin embargo confÃ­as en que, al final, alguien eventualmente encontrarÃ¡ tu pequeÃ±a nave."
+Message5="Hasta entonces, solo puedes esperar y vagar."
+Message6="Presiona Escape para reiniciar"
 
-Message1=La nave de fuga Skaarj ha escapado (por los pelos) de la atracción gravitatoria del planeta. Sin embargo, te has quedado sin combustible y vas a la deriva.
-
-Message2=Has escapado de donde la mayoría perecen. Te sonríes a ti mismo: ¡han pasado tantas cosas...! Sin embargo, es tan poco lo que ha cambiado...
-
-Message3=Antes del aterrizaje forzoso, estabas atrapado en una celda diminuta. Ahora vuelves a encontrarte encerrado en una prisión.
-
-Message4=Pero estás seguro de que, al final, alguien encontrará tu pequeña nave.
-
-Message5=Hasta entonces, lo único que puedes hacer es alimentar tus esperanzas mientras sigues desplazándote sin rumbo fijo.
-
-Message6=Continuará...
-
-
-[UnrealWeaponMenu]
-
-MenuTitle=PRIORIDADES
-
-
-[Eightball]
-
-PickupMessage=Tienes el lanzacohetes Eightball
-
-ItemName=Eightball
-
-
-[UnrealKeyboardMenu]
-
-OrString= o
-
-MenuTitle=CONTROLES
-
-HelpMessage[1]=
-
-MenuList[1]=Disparo
-
-MenuList[2]=Disparo alt.
-
-MenuList[3]=Mov. delante
-
-MenuList[4]=Mov. atrás
-
-MenuList[5]=Izquierda
-
-MenuList[6]=Derecha
-
-MenuList[7]=Ata.izquierda
-
-MenuList[8]=Ata.derecha
-
-MenuList[9]=Saltar/Arriba
-
-MenuList[10]=Agacharse
-
-MenuList[11]=Vista de ratón
-
-MenuList[12]=Activar objeto
-
-MenuList[13]=Obj. siguiente
-
-MenuList[14]=Obj. anterior
-
-MenuList[15]=Mirar arriba
-
-MenuList[16]=Mirar abajo
-
-MenuList[17]=Centrar vista
-
-MenuList[18]=Caminar
-
-MenuList[19]=Atacar
-
-MenuList[20]=Arma siguiente
-
-MenuList[21]=RECUPERAR CONFIGURACIÓN POR DEFECTO
-
-
-[TranslatorEvent]
-
-M_NewMessage=Nuevo mensaje del traductor
-
-M_TransMessage=Mensaje del traductor
-
-
-[Flashlight]
-
-ExpireMessage=Las pilas de la linterna se han agotado.
-
-PickupMessage=Has cogido la linterna
-
+[KingOfTheHill]
+ClassCaption="Rey de la Colina"
+KingMessage=" es el nuevo rey de la colina."
+GameName="Rey de la Colina"
 
 [ParentBlob]
-
-BlobKillMessage=ha sido corroído por un pegote
-
+BlobKillMessage="ha sido corroÃ­do por una gota Ã¡cida."
 
 [FlakCannon]
-
-PickupMessage=Tienes el cañón de metralla
-
-ItemName=Cañón de metralla
-
-DeathMessage=%o ha sido roto a pedacitos por %k's %w.
-
+DeathMessage="%o ha sido despedazado por el %w de %k."
+PickupMessage="Tienes el CaÃ±Ã³n de Metralla"
+ItemName="CaÃ±Ã³n de Metralla"
 
 [Rifle]
-
-PickupMessage=Tienes el rifle francotirador
-
-ItemName=Rifle francotirador
-
-DeathMessage=%k ha metido una bala por la cabeza de %o.
-
-
-[UnrealBotConfigMenu]
-
-MenuTitle=BOTS
-
-HelpMessage[1]=Si es verdadero, los Bots regulan su nivel de habilidad dependiendo de su actuación contra los jugadores.
-
-HelpMessage[2]=Nivel base de habilidad de los Bots (entre 0 y 3).
-
-HelpMessage[3]=Si es verdadero, los Bots aparecerán en el juego sin seguir un orden específico. Si es falso, aparecerán siguiendo el orden especificado en su configuración.
-
-HelpMessage[4]=Cambia la configuración de los Bots individualmente.
-
-MenuList[1]=Autoajuste habilidades
-
-MenuList[2]=Habilidad base
-
-MenuList[3]=Orden aleatorio
-
-MenuList[4]=Configurar Bots individualmente
-
-HelpMessage[5]=Número de Bots para empezar a jugar (máx. 15).
-
-HelpMessage[6]=Utiliza los Bots cuando juegues con otras personas.
-
-MenuList[5]=Número de Bots
-
-MenuList[6]=Bots en partidas multijugador.
-
-
-[UnrealLoadMenu]
-
-RestartString=Reiniciar
-
-MenuTitle=CARGAR PARTIDA
-
-
-[UnrealSlotMenu]
-
-MonthNames[0]=enero
-
-MonthNames[1]=febrero
-
-MonthNames[2]=marzo
-
-MonthNames[3]=abril
-
-MonthNames[4]=mayo
-
-MonthNames[5]=junio
-
-MonthNames[6]=julio
-
-MonthNames[7]=agosto
-
-MonthNames[8]=septiembre
-
-MonthNames[9]=octubre
-
-MonthNames[10]=noviembre
-
-MonthNames[11]=diciembre
-
-
-[ASMD]
-
-PickupMessage=Tienes el ASMD
-
-ItemName=ASMD
-
-
-[UnrealMainMenu]
-
-HelpMessage[1]=Pulsa INTRO para modificar las opciones del juego, incluyendo las de cargar y guardar partidas, el nivel de dificultad y el inicio de un encuentro de Bots.
-
-HelpMessage[2]=Pulsa INTRO para modificar las opciones de configuración para múltiples jugadores, incluyendo el inicio y la incorporación a partidas en red, y el cambio de apariencia, nombre o equipo.
-
-HelpMessage[3]=Pulsa INTRO para personalizar los controles.
-
-HelpMessage[4]=Cambia las opciones de sonido e imagen.
-
-HelpMessage[5]=Pulsa INTRO para acceder al menú de abandono del juego.
-
-HelpMessage[7]=¡Llama gratis (sólo desde EE.UU.) al 1-877-4UNREAL para pedir UNREAL!
-
-MenuList[1]=UN JUGADOR
-
-MenuList[2]=MULTIJUGADOR
-
-MenuList[3]=OPCIONES
-
-MenuList[4]=AUDIO/VÍDEO
-
-MenuList[5]=SALIR JUEGO
-
-MenuList[7]=INFO. PEDIDOS
-
-
-[UnrealServerMenu]
-
-BotTitle=PARTIDA CON BOTS
-
-MenuTitle=MULTIJUGADOR
-
-HelpMessage[1]=Escoger tipo de partida
-
-HelpMessage[2]=Escoger mapa
-
-HelpMessage[3]=Modificar opciones del juego
-
-HelpMessage[4]=Iniciar partida
-
-MenuList[1]=Elegir partida
-
-MenuList[2]=Elegir mapa
-
-MenuList[3]=Configurar partida
-
-MenuList[4]=Iniciar partida
-
-MenuList[5]=Iniciar servidor dedicado
-
-HelpMessage[5]=Iniciar un servidor dedicado en este sistema.
-
-
-[UnrealGameMenu]
-
-HelpMessage[1]=Pulsa INTRO para guardar la partida en desarrollo.
-
-HelpMessage[2]=Pulsa INTRO para cargar una partida guardada.
-
-HelpMessage[3]=Selecciona un nivel de dificultad y empieza una partida nueva.
-
-HelpMessage[4]=Pulsa INTRO para modificar las opciones del juego. Importante: No es posible en partidas de múltiples jugadores.
-
-HelpMessage[5]=Partida a muerte contra los Bots.
-
-MenuList[1]=GUARDAR PARTIDA
-
-MenuList[2]=CARGAR PARTIDA
-
-MenuList[3]=PARTIDA NUEVA
-
-MenuList[4]=OPCIONES DEL JUEGO
-
-MenuList[5]=PARTIDA CON BOTS
-
-
-[Health]
-
-PickupMessage=Has recogido un paquete de salud +
-
-
-[AutoMag]
-
-PickupMessage=Tienes el AutoMag
-
-ItemName=AutoMag
-
-
-[UnrealChooseGameMenu]
-
-MenuTitle=ESCOGER PARTIDA
-
-HelpMessage[1]=Escoge la partida que quieras jugar.
-
-HelpMessage[2]=Escoge la partida que quieras jugar.
-
-HelpMessage[3]=Escoge la partida que quieras jugar.
-
-HelpMessage[4]=Escoge la partida que quieras jugar.
-
-HelpMessage[5]=Escoge la partida que quieras jugar.
-
-HelpMessage[6]=Escoge la partida que quieras jugar.
-
-HelpMessage[7]=Escoge la partida que quieras jugar.
-
-HelpMessage[8]=Escoge la partida que quieras jugar.
-
-HelpMessage[9]=Escoge la partida que quieras jugar.
-
-HelpMessage[10]=Escoge la partida que quieras jugar.
-
-HelpMessage[11]=Escoge la partida que quieras jugar.
-
-HelpMessage[12]=Escoge la partida que quieras jugar.
-
-HelpMessage[13]=Escoge la partida que quieras jugar.
-
-HelpMessage[14]=Escoge la partida que quieras jugar.
-
-HelpMessage[15]=Escoge la partida que quieras jugar.
-
-HelpMessage[16]=Escoge la partida que quieras jugar.
-
-HelpMessage[17]=Escoge la partida que quieras jugar.
-
-HelpMessage[18]=Escoge la partida que quieras jugar.
-
-HelpMessage[19]=Escoge la partida que quieras jugar.
-
-
-[UnrealMultiPlayerMenu]
-
-HelpMessage[1]=Incorpórate a una partida en red.
-
-HelpMessage[2]=Configura e inicia una partida en red.
-
-HelpMessage[3]=Configura tu apariencia, tu nombre y el nombre del equipo.
-
-MenuList[1]=INCORPORARSE A LA PARTIDA
-
-MenuList[2]=INICIAR PARTIDA
-
-MenuList[3]=CONFIGURACIÓN DEL JUGADOR
-
-
-[UnrealHelpMenu]
-
-MenuTitle=AYUDA
-
-HelpMessage[1]=Abre el documento de resolución de problemas.
-
-MenuList[1]=Resolución de problemas
-
-
-[YesNoMenu]
-
-YesSelString=[SÍ] No
-
-NoSelString=" Sí [NO]"
-
-
-[NaliFruit]
-
-PickupMessage=Has recogido fruta curativa nali +
-
-
-[Minigun]
-
-PickupMessage=Tienes la Ametralladora
-
-ItemName=Ametralladora
-
-DeathMessage=La %w de %k ha convertido a %o en un pedazo de carne goteante.
-
-
-[UnrealListenMenu]
-
-MenuTitle=SERVIDORES LOCALES
-
-HelpMessage[1]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[2]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[3]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[4]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[5]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[6]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[7]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[8]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[9]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[10]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[11]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[12]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[13]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[14]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[15]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[16]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[17]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[18]=Pulsa INTRO para seleccionar este servidor.
-
-HelpMessage[19]=Pulsa INTRO para seleccionar este servidor.
-
-
-[GESBioRifle]
-
-PickupMessage="Tienes el Biorifle GES"
-
-ItemName=Bio-rifle GES
-
-DeathMessage=%o ha bebido un vaso de una carga verde goteante de %k.
-
-
-[UnrealDMGameOptionsMenu]
-
-HelpMessage[3]="Número de puntiación conseguida por guiar al jugador al fin de la partida. Si es 0, no habrá límite."
-
-HelpMessage[4]=Límite de tiempo (en minutos) para finalizar la partida. Si es 0, no habrá límite.
-
-HelpMessage[5]=Número máximo de participantes permitidos en el juego.
-
-HelpMessage[6]=Si el modo de armas cooperativo está activado, las armas vuelven a aparecer instantáneamente, pero cada jugador sólo puede recogerlas una vez.
-
-HelpMessage[7]=Configura partida de Bots y parámetros individuales.
-
-HelpMessage[8]=Elige modo de juego: en el incondicional la velocidad del juego es mayor y las armas causan mayores daños que en el clásico. Turbo es igual que el incondicional con movimientos súper rápidos.
-
-HelpMessage[9]=Mensajes de muerte en el modo clásico o nuevo estilo (basado en armas).
-
-MenuList[3]=Límite de puntuaci.
-
-MenuList[4]=Límite de tiempo
-
-MenuList[5]=Máx. de jugadores
-
-MenuList[6]=Suspensión armas
-
-MenuList[7]=Configurar Bots
-
-MenuList[8]=Modo incondicional
-
-MenuList[9]=Mensajes muerte
-
-GameStyle[0]=Clásico
-
-GameStyle[1]=Incondicional
-
-GameStyle[2]=Turbo
-
-
-[Amplifier]
-
-ExpireMessage=El amplificador se ha quedado sin batería.
-
-PickupMessage=Tienes el amplificador energético.
-
-
-[SearchLight]
-
-PickupMessage=Has recogido el foco.
-
-
-[SCUBAGear]
-
-PickupMessage=Has recogido el equipo de buceo.
-
-
-[UnrealNewGameMenu]
-
-HelpMessage[1]=Modalidad turista.
-
-HelpMessage[2]=¡Preparado para la acción!
-
-HelpMessage[3]=No apto para los que padecen del corazón.
-
-HelpMessage[4]=Deseo de muerte.
-
-MenuList[1]=FÁCIL
-
-MenuList[2]=MEDIO
-
-MenuList[3]=DIFÍCIL
-
-MenuList[4]=IRREAL
-
-
-[Stinger]
-
-PickupMessage=Has recogido el Perforador de Taridio
-
-ItemName=Perforador
-
-
-[RazorAmmo]
-
-PickupMessage=Has recogido cuchillas de afeitar
-
-
-[RocketCan]
-
-PickupMessage=Has recogido 12 proyectiles eightball
-
-
-[ShellBox]
-
-PickupMessage=Has recogido 50 balas
-
-
-[VoiceBox]
-
-PickupMessage=Has recogido la caja de voces
-
-
-[UnrealSaveMenu]
-
-CantSave=NO PUEDES GUARDARLA MIENTRAS ESTÉS MUERTO
-
-MenuTitle=GUARDAR PARTIDA
-
-
-[Seeds]
-
-PickupMessage=Tienes semillas de planta curativa nali
-
-
-[RifleAmmo]
-
-PickupMessage=Tienes 8 cartuchos para el rifle.
-
-
-[FlakBox]
-
-PickupMessage=Tienes 10 proyectiles de metralla
-
-
-[Flare]
-
-PickupMessage=Tienes una bengala
-
-
-[JumpBoots]
-
-ExpireMessage=Las botas de salto se han agotado
-
-PickupMessage=Has recogido las botas de salto
-
-
-[WeaponPowerUp]
-
-PickupMessage=Tienes el reforzador de la pistola de dispersión
-
-
-[Razorjack]
-
-PickupMessage=Tienes el Lanzacuchillas
-
-ItemName=Lanzacuchillas
-
-DeathMessage="%k arrancó un trozo sangrante de %o con el %w."
-
-
-[ForceField]
-
-M_NoRoom="No hay espacio para activar el campo de fuerza."
-
-PickupMessage=Has recogido el campo de fuerza.
-
-
-[ASMDAmmo]
-
-PickupMessage=has recogido un núcleo para el ASMD.
-
-
-[ShieldBelt]
-
-PickupMessage=Tienes el cinturón de blindaje
-
-
-[UnrealTeamGameOptionsMenu]
-
-HelpMessage[10]=Porcentaje de daños sufridos al ser alcanzado por fuego aliado. Importante: Siempre sufrirás un 100% de daños al ser alcanzado por tus propias armas.
-
-MenuList[10]=Escala de fuego aliado
-
-HelpMessage[9]=Porcentaje de daños sufridos al ser alcanzado por fuego aliado. Importante: Siempre sufrirás un 100% de daños al ser alcanzado por tus propias armas.
-
-MenuList[9]=Escala de fuego aliado
-
-
-[OKMenu]
-
-OKString=[ACEPTAR]
-
-
-[StingerAmmo]
-
-PickupMessage=Has recogido 40 fragmentos de Taridio
-
-
-[UpgradeMenu]
-
-MenuList[1]=Necesitas una versión más reciente de Unreal para jugar en este servidor. ¿Quieres acceder al sitio web de OldUnreal para conseguirla?
-
-
-[Sludge]
-
-PickupMessage=Has recogido 25 quilos de residuos de Taridio
-
-
-[Invisibility]
-
-ExpireMessage=Invisibilidad agotada.
-
-PickupMessage=Eres invisible
-
-
-[ToxinSuit]
-
-PickupMessage=Has recogido el traje anti-tóxico
-
-
-[Shells]
-
-PickupMessage=Has recogido 15 cartuchos de escopeta
-
-
-[RifleRound]
-
-PickupMessage=Tienes un cartucho para el rifle.
-
-
-[QuadShot]
-
-PickupMessage=Has recogido la Escopeta Cuádruple
-
-
-[PowerShield]
-
-PickupMessage=Tienes el escudo energético
-
-[Dampener]
-
-ExpireMessage=Silenciador acústico agotado.
-
-PickupMessage=Tienes el silenciador acústico
-
-
-[KevlarSuit]
-
-PickupMessage=Has recogido el traje de Kevlar
-
-
-[FlakShellAmmo]
-
-PickupMessage=Tienes un proyectil para el cañón antiaéreo.
-
-
-[Fell]
-
-Name=derribado
-
-AltName=derribado
-
-
-[Drowned]
-
-Name=ahogado
-
-AltName=ahogado
-
-
-[Decapitated]
-
-Name=decapitado
-
-AltName=descabezado
-
-
-[Corroded]
-
-Name=corroído
-
-AltName=enlodado
-
-
-[Clip]
-
-PickupMessage=Has recogido un cargador
-
-
-[Burned]
-
-Name=asado
-
-AltName=asado a la parrilla
-
-
-[SuperHealth]
-
-PickupMessage=Has recogido el paquete de supersalud
-
-
-[Bandages]
-
-PickupMessage=Tienes algunas vendas +
-
-
-[AsbestosSuit]
-
-PickupMessage=Has recogido el traje de amianto
-
-
-[Armor]
-
-PickupMessage=Tienes el chaleco de asalto
-
-
-[UnrealOrderMenu]
-
-OrderText[0]=La versión shareware de Unreal con la que acabas de jugar sólo es una muestra de lo que te espera cuando compres la versión completa de Unreal.
-
-OrderText[1]=En EE:UU. y Canadá, llama gratuitamente al número 1-877-4UNREAL (1-877-486-7325) para encargar Unreal AHORA MISMO.
-
-OrderText[2]=Con la versión completa de Unreal conseguirás:
-
-OrderText[3]=- Más de 30 niveles increíbles para partidas de un solo jugador
-
-OrderText[4]=- 11 mapas especialmente diseñados para las partidas de múltiples jugadores
-
-OrderText[5]=- ¡Diez armas para cada uno con dos modalidades de fuego y algunas también con movimientos especiales!
-
-OrderText[6]=- Conoce a más de 30 criaturas de Unreal.
-
-OrderText[7]=- Descubre un montón de nuevos artículos para tu inventario.
-
-OrderText[8]=- Varios modos de encuentros de bots para un solo jugador, y para varios jugadores en una red de área local o en Internet: Encuentro en la oscuridad, Partida a muerte, El rey de la colina, partida en equipos y partida cooperativa
-
-OrderText[9]=- Escoge entre 6 modelos de jugador y una gran variedad de pieles diferentes.
-
-OrderText[11]=También recibirás una versión beta del editor de Unreal **:
-
-OrderText[12]=- ¡Probablemente, la herramienta de diseño tridimensional más fácil de usar que se haya creado nunca!
-
-OrderText[13]=- Usa figuras geométricas sólidas para construir imágenes: levanta habitaciones recortándolas simplemente de un bloque sólido.
-
-OrderText[14]=- Permite a los usuarios importar sus propias texturas, objetos, música y efectos de sonido utilizando formatos de archivo de la industria, como WAV, DXF, BMP, etc.
-
-OrderText[15]=- Crea tus propios mapas o modifica los nuestros como más te guste.
-
-OrderText[16]=- Incluye UnrealScript, el lenguaje de programación orientado a objetos completamente integrado que hemos usado para crear la mayor parte de Unreal.
-
-OrderText[17]=- Distribuye tus mapas libremente en Internet para que puedan jugar otros con ellos.
-
-OrderText[19]=Y podrás jugar con conexión a Internet o al servidor de Unreal.
-
-OrderText[20]=- Crea tu propio servidor dedicado a Unreal.
-
-OrderText[21]=- Opta por un servidor no dedicado permitiendo que otras personas se incorporen a tu partida.
-
-OrderText[22]=- Organiza tus propios niveles de vestíbulo de Unreal con enlaces a otros servidores de Unreal y a sitios de la World Wide Web* que actúen como páginas web tridimensionales.
-
-OrderText[23]=* La conexión a la red desde niveles de Unreal necesita que los que vayan a acceder al nivel tengan un explorador compatible con Unreal.
-
-OrderText[24]=Puedes comprar Unreal en la tienda de productos de informática que tengas más cerca, o encargárselo por correo directamente a Epic MegaGames. He aquí lo que tienes que hacer:
-
-OrderText[25]=Puedes hacer pedidos con tarjetas de crédito directamente en nuesto sitio web utilizando nuestra segura página de pedidos en la dirección http://www.epicgames.com/UnrealOrders
-
-OrderText[26]=EE.UU. / Canadá
-
-OrderText[27]=Unreal cuesta 39,95 dólares americanos, lo que incluye gastos de envío
-
-OrderText[29]=También puedes hacer un pedido en nuestra segura página web de pedidos en esta dirección http://www.epicgames.com/UnrealOrders
-
-OrderText[30]=Reino Unido y Europa
-
-OrderText[32]=Otros países
-
-OrderText[34]=Nuestros socios en línea
-
-OrderText[35]=Visita los sitios web y los servidores de partidas de Unreal que ofrecen nuestros excelentes socios en línea:
-
-OrderText[37]=Son personas que proporcionarán un nuevo nivel de diversión a Unreal.
-
-OrderText[38]=WON.NET - The World Opponent Network es la forma más sencilla de entrar directamente en una partida a muerte gratuita a través de Internet. Con IE4.0 o Netscape 4.0, basta con pulsar un botón para lanzar una partida gratuita en http://www.won.net/unreal.
-
-OrderText[39]=Únete a la creciente comunidad de Unreal a través de los concursos de construcción de niveles, tablones de mensajes, enlaces, récords de tiempo, nuevas pieles y niveles y partidas en línea GRATUITAS. Es Unreal puro y duro.
-
-OrderText[41]=Los juegos por cable están funcionando ahora mismo en Europa y Australia. Para más información, visita http:// www.wireplay.com/uk/unreal
-
-OrderText[43]=http://www.heat.net - partidas gratuitas súper emocionantes
-
-OrderText[44]=AT&T WorldNet - Juega a Unreal en el servidor AT&T's GameHub -a a través de una línea T3 totalmente en la espina dorsal de AT&T WorldNet- prometiendo un juego rápido y fiable.
-
-OrderText[45]=www.gamehub.net/unreal GameHub - tu servicio completo de partidas en Internet: salas de charla, correo electrónico, revistas de juegos en línea, torneos y partidas de múltiples jugadores.
-
-OrderText[46]=GameSpy 3D es un explorador de servicios en Internet. Rastrea la red y encuentra los mejores servidores para jugar a Unreal: los que tiene la mejor conexión a tu sistema.
-
-OrderText[47]=Ponlo en marcha, elige la partida a la que te quieras incorporar, pulsa dos veces y ya está. ¡En un momento estás jugando a través de Internet! http://www.gamespy.com para más información.
-
-OrderText[48]=Pide objetos súper chulos relacionados con Unreal
-
-OrderText[49]=Visita http://www.epicgames.com/UnrealOrders para obtener información sobre los objetos relacionados con Unreal que te ofrece directamente Epic MegaGames. Pueden ser gorras, camisas, alfombrillas para el ratón, tazas, pósters y muchas otras cosas a precios razonables.
-
-OrderText[50]=Ofertas especiales
-
-OrderText[51]=De vez en cuando, Epic MegaGames puede tener ofertas especiales que pueden ser combinaciones de Unreal y otros productos de software o relacionados con Unreal. Para no perdértelas, visita http://www.unreal.com, donde encontrarás información detallada y precios.
-
-MenuTitle=INFORMACIÓN SOBRE PEDIDOS
-
-
-[UnrealHUD]
-
-IdentifyName=Nombre
-
-IdentifyHealth=Salud
-
+DeathMessage="%k ha atravesado la cabeza de %o con una bala."
+PickupMessage="Tienes el Rifle"
+ItemName="Rifle"
 
 [Queen]
-
 NameArticle=" la "
 
+[SkaarjPlayer]
+MenuName="Skaarj"
 
-[Warlord]
-
-NameArticle=" el "
-
-
-[UnrealCoopGameOptions]
-
-Difficulties[0]=Fácil
-
-Difficulties[1]=Medio
-
-Difficulties[2]=Difícil
-
-Difficulties[3]=Irreal
-
-HelpMessage[3]=Ajuste del nivel de habilidad.
-
-MenuList[3]=Dificultad
-
-
-[naliplayer]
-
+[NaliPlayer]
 MenuName="Nali"
 
+[WarLord]
+NameArticle=" el "
 
-[SkaarjPlayer]
+[Minigun]
+DeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
+PickupMessage="Tienes la Ametralladora"
+ItemName="Ametralladora"
 
-MenuName=Skaarj
+[GESBioRifle]
+DeathMessage="%o bebiÃ³ un vaso de la sustancia verde que le goteaba a %k."
+PickupMessage="Tienes el BioRifle GES"
+ItemName="BioRifle GES"
 
+[Squid]
+MenuName="Calamar"
+
+[DarkMatch]
+ClassCaption="Partida a Oscuras"
+GameName="Partida a Oscuras"
+
+[SearchLight]
+ExpireMessage="Las baterÃ­as de la Linterna de BÃºsqueda se han agotado."
+PickupMessage="Has recogido la Linterna de BÃºsqueda"
+ItemName="Linterna de BÃºsqueda"
+
+[RazorAmmo]
+PickupMessage="Has recogido un paquete de Cuchillas"
+ItemName="Cuchillas"
+
+[FlakBox]
+PickupMessage="Tienes 10 Proyectiles de Metralla"
+ItemName="Proyectiles de Metralla"
 
 [MaleOne]
+MenuName="VarÃ³n 1"
 
-MenuName=Varón 1
+[RifleAmmo]
+PickupMessage="Tienes 8 Cartuchos para el Rifle"
+ItemName="Cartuchos de Rifle"
 
+[Seeds]
+PickupMessage="Tienes las Semillas de Fruta Curativa Nali"
+ItemName="Semillas de Fruta Curativa Nali"
+
+[JumpBoots]
+ExpireMessage="Las Botas de Salto se han agotado"
+PickupMessage="Has recogido las Botas de Salto"
+ItemName="Botas de Salto"
+
+[ForceField]
+M_NoRoom="No hay espacio para activar el Campo de Fuerza."
+PickupMessage="Has recogido el Campo de Fuerza"
+ItemName="Campo de Fuerza"
+
+[RazorJack]
+DeathMessage="%k le pegÃ³ un buen tajo a %o con el %w."
+PickupMessage="Tienes el Lanzacuchillas"
+ItemName="Lanzacuchillas"
 
 [FemaleTwo]
-
 MenuName="Mujer 2"
 
-
 [MaleTwo]
+MenuName="VarÃ³n 2"
 
-MenuName=Varón 2 
+[Sludge]
+PickupMessage="Has recogido 25 Kilos de Biodesechos de Taridio"
+ItemName="Biodesechos de Taridio"
+
+[Invisibility]
+ExpireMessage="La Invisibilidad se ha agotado."
+PickupMessage="Eres invisible"
+ItemName="Invisibilidad"
+
+[AsbestosSuit]
+PickupMessage="Has recogido el Traje de Amianto"
+ItemName="Traje de Amianto"
+
+[Fell]
+Name="derribado"
+AltName="derribado"
+
+[FlakShellAmmo]
+PickupMessage="Tienes un Proyectil de Metralla"
+ItemName="Proyectil de Metralla"
+
+[Drowned]
+Name="ahogado"
+AltName="ahogado"
+
+[Decapitated]
+Name="decapitado"
+AltName="descabezado"
+
+[Dampener]
+ExpireMessage="El Silenciador AcÃºstico se ha agotado."
+PickupMessage="Tienes el Silenciador AcÃºstico"
+ItemName="Silenciador AcÃºstico"
+
+[Corroded]
+Name="corroÃ­do"
+AltName="enlodado"
+
+[ToxinSuit]
+PickupMessage="Has recogido el Traje AntitÃ³xico"
+ItemName="Traje AntitÃ³xico"
+
+[Burned]
+Name="asado"
+AltName="churruscado"
+
+[PowerShield]
+PickupMessage="Tienes el Escudo de ProtecciÃ³n"
+ItemName="Escudo de ProtecciÃ³n"
+
+[RifleRound]
+PickupMessage="Tienes un Cartucho de Rifle"
+ItemName="Cartucho de Rifle"
+
+[QuadShot]
+DeathMessage="%o ha sido reventado por la %w de %k."
+PickupMessage="Has recogido la Escopeta CuÃ¡druple"
+ItemName="Escopeta CuÃ¡druple"
+
+[PeaceMaker]
+PickupMessage="Tienes el Pacificador"
+ItemName="Pacificador"
+
+[WoodruffSeeds]
+PickupMessage="Tienes las Semillas de Minibosque"
+ItemName="Semillas de Minibosque"

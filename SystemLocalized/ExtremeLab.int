@@ -1,5 +1,10 @@
-[LevelInfo0]
+﻿[LevelInfo0]
 Title="MotherShip Lab"
+LevelEntryText="Entering the MotherShip Lab"
+
+[LevelSummary]
+Title="MotherShip Lab"
+LevelEntryText="Entering the MotherShip Lab"
 
 [TranslatorEvent0]
 AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."
@@ -17,14 +22,14 @@ Message="Research Center"
 Message="Energy Department"
 
 [TranslatorEvent24]
-AltMessage="CryoPods Status: Temperature at 269 degrees Kelvin, Pressure at 748 millibars, subjects are prepared for experiment commencement."
+AltMessage="Cryo Pods Status: Temperature at 269 degrees Kelvin, Pressure at 748 millibars, subjects are prepared for experiment commencement."
 
 [TranslatorEvent26]
 Message="Power Reserve at 100%, Shielding effect at 0.0025%. EEG/EKG readings are normal, physiological state is cryogenised."
 AltMessage="Power Reserve at 80%, Shielding effect at 5.64%, EEG/EKG readings showing massive disturbances, physiological state is active and endorphin/adrenal systems are producing hormonal overloads."
 
 [TranslatorEvent25]
-AltMessage="All the test subjects have been placed in the Detention Area. The forcefields are keeping them confined and unshielded. All subjects continue to exhibit extremely aggressive behaviour when not in carefully tuned magnetic fields."
+AltMessage="All the test subjects have been placed in the Detention Area. The force fields are keeping them confined and unshielded. All subjects continue to exhibit extremely aggressive behaviour when not in carefully tuned magnetic fields."
 
 [TranslatorEvent1]
 AltMessage="Energy supply for the Source is secured, Alternate Power Supply operational. Maintaining energy flow to the Source is highest priority. Weakness shall be punished."
@@ -43,7 +48,7 @@ Message="Report 190: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji observing. We are re
 Message="Genetic Department"
 
 [TranslatorEvent14]
-AltMessage="Security Orders: Intruder detected in MothersShip, all experiments are suspended on orders of Chakti'Nrrj 2nd Great Talon of Ssa'Nrrj until further notice. Power Reserves must be at 100% for optimal security system operation."
+AltMessage="Security Orders: Intruder detected in MotherShip, all experiments are suspended on orders of Chakti'Nrrj 2nd Great Talon of Ssa'Nrrj until further notice. Power Reserves must be at 100% for optimal security system operation."
 
 [TranslatorEvent15]
 AltMessage="Report 187: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. Despite the failure in our previous tests on the shielding effect, the test subjects' cells are showing some residual effects. Very interesting..."
@@ -64,5 +69,4 @@ Message="ACCESS DENIED"
 Message="Experimentation Facility"
 
 [TranslatorEvent4]
-AltMessage="Report 190: We're ready for the next experiment, the subject is positionned properly and the Primary Generator power will be reduced to 80%. The subject should barely be affected, the expected energy level is characterised by an orange color."
-
+AltMessage="Report 190: We're ready for the next experiment, the subject is positionned properly and the Primary Generator Power will be reduced to 80%. The subject should barely be affected, the expected energy level is characterised by an orange color."

@@ -1,46 +1,32 @@
-[LevelInfo3]
+Ôªø[LevelInfo3]
+Title="Castillo Nali"
+LevelEntryText="Entrando al Castillo Nali"
 
-Title=Castillo Nali
-
-
-[Trigger9]
-
-message=Chop Chop!
-
-
-[TranslatorEvent5]
-
-message=SÛlo el iluminado que haya leÌdo la Biblia de la SabidurÌa en la capilla tendr· la puerta abierta a la torre a travÈs de estas divinas entradas.
-
-Hint=Viaja a la capilla y lee el libro para poder entrar.
-
-
-[TranslatorEvent1]
-
-message=Estoy aquÌ sentado,esperando la muerte. La espera es todavÌa peor que la misma muerte. El temor me est· desgarrando el alma.Los lamentos de los dem·s cuando los llevan a las entraÒas de la mazmorra para ser sacrificados al Demonio del Cielo con alas.
-
-
-[TranslatorEvent4]
-
-message=Aquel que busque el saber ser· recompensado por estudiar los tomos guardados en la sala principal del festÌn.
-
-
-[TranslatorEvent3]
-
-message=SÛlo el guerrero que demuestre su valentÌa venciendo al demonio de los cinco ojos en la torre podr· entrar a la mazmorra.
-
-Hint=Ves a la torre m·s alta y mata al demonio para poder entrar en la mazmorra.
-
-
-[TranslatorEvent2]
-
-message= SÛlo el guerrero que demuestre su valentÌa venciendo al demonio de los cinco ojos en la torre podr· entrar a la mazmorra.
-
-Hint= Ves a la torre m·s alta y mata al demonio para poder entrar en la mazmorra.
-
+[LevelSummary]
+Title="Castillo Nali"
+LevelEntryText="Entrando al Castillo Nali"
 
 [TranslatorEvent0]
+message="El camino a seguir es largo y asolador, pero quien tenga voluntad y un coraz√≥n duro prevalecer√° por sobre los desaf√≠os."
+Hint="Vuestro camino ahora est√° libre."
 
-message=El camino a seguir es largo y asolador, pero el que tenga voluntad y un corazÛn duro vencer· a los desafÌos.
+[TranslatorEvent5]
+message="S√≥lo el ser iluminado que haya le√≠do la Biblia del Buen Saber en la capilla tendr√° la puerta abierta a la torre a trav√©s de estas entradas divinas."
+Hint="Ve a la capilla y lee el libro para poder entrar."
 
-Hint=El camino ahora est· libre. 
+[TranslatorEvent4]
+message="Quien busque el saber ser√° recompensado por estudiar los tomos guardados en la sala principal de fest√≠n."
+
+[TranslatorEvent1]
+message="Estoy aqu√≠ sentado, esperando la muerte. Esperando... La espera es a√∫n peor que la misma muerte. El temor me est√° desgarrando el alma. Oigo los lamentos de los dem√°s mientras los llevan a las entra√±as de la mazmorra para ser sacrificados al Demonio del Cielo con alas."
+
+[TranslatorEvent3]
+message="S√≥lo el guerrero que demuestre su valent√≠a venciendo al demonio de los cinco ojos en la torre podr√° entrar a la mazmorra."
+Hint="Ve a la torre m√°s alta y mata al demonio para poder entrar en la mazmorra."
+
+[TranslatorEvent2]
+message="S√≥lo el guerrero que demuestre su valent√≠a venciendo al demonio de los cinco ojos en la torre podr√° entrar a la mazmorra."
+Hint="Ve a la torre m√°s alta y mata al demonio para poder entrar en la mazmorra."
+
+[TranslatorEvent6]
+Message="¬øQu√© DEMONIOS est√°s haciendo aqu√≠?"

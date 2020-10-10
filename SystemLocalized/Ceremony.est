@@ -1,15 +1,17 @@
-[LevelInfo0]
+ï»¿[LevelInfo0]
+Title="Las CÃ¡maras Ceremoniales"
+LevelEnterText="Entrando en el Ala Ceremonial"
 
-Title="Las Cámaras de Ceremonias"
-
-LevelEnterText="Estás entrando en El Ala Ceremonial"
-
+[LevelSummary]
+Title="Las CÃ¡maras Ceremoniales"
+LevelEnterText="Entrando en el Ala Ceremonial"
 
 [TranslatorEvent15]
-
-message="Cámaras internas de ceremonias. Aquí residen las serpientes del dios marino para aceptar y devorar la carne de los débiles. Sólo un guerrero que nade como las serpientes podrá escapar de sus garras."
-
+Message="CÃ¡maras internas ceremoniales. AquÃ­ residen las serpientes del dios del agua para aceptar y devorar la carne de los dÃ©biles. SÃ³lo un guerrero que nade como las serpientes escaparÃ¡ de sus garras."
 
 [TranslatorEvent0]
+Message="Sgt. William Bradford: Toda mi patrulla ha sido asesinada por estas 'salamandras'. No queda municiÃ³n y por unos dÃ­as he aguantado en este altar con uno de los sacerdotes nativos. Mientras Ã©l reza trato de mantener vigilada la puerta."
 
-message="Sgt. William Bradford: Toda mi patrulla ha sido asesinada por estas 'salamandras'. No queda munición y por unos días me he quedado en este templo con uno de los sacerdotes nativos. Mientras él reza trato de mantener vigilada la puerta." 
+[Counter2]
+CountMessage="Demuestra a los Dioses tus Habilidades como Guerrero."
+CompleteMessage="Â¡Bien Hecho!"

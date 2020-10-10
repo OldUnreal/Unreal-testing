@@ -1,24 +1,18 @@
+Ôªø[LevelInfo2]
+Title="La Trinchera"
+LevelEntryText="Entrando a la Trinchera"
+
+[LevelSummary]
+Title="La Trinchera"
+LevelEntryText="Entrando a la Trinchera"
+
 [TranslatorEvent38]
-
-Message=Corporeal Pelli Onsov: Si est·s leyendo mis noticias probablemente estoy muerto y nuestro barco ha sido invadido por alienÌgenas llamados
-
+Message="Corporeal Pelli Onsov: Si est√°s leyendo esto probablemente estoy muerto y nuestra nave ha sido invadida por alien√≠genas llamados "
 
 [TranslatorEvent1]
-
-Message=Diario: M. Mottobanov: Hemos colocado a ISV-Kran para explorar actividades humanas fuera de las puertas de la nave. Cuando alguien entre, la luz roja, las puertas de la nave se abren. La plataforma estar· abajo durante poco tiempo.
-
-Hint=Entra en el barco y quÈdate en la luz roja. Las puertas de la nave se abrir·n y bajar· un ascensor. Tienes que ser muy r·pido si quieres subir al ascensor y saltar en la nave antes de que el ascensor te triture.
-
+Message="Diario: M. Mottobanov: Hemos configurado al ISV-Kran para que detecte actividad humana fuera de las puertas de la nave. Tan pronto como alguien se pare en la luz roja, las puertas de la nave se abrir√°n. La plataforma solo bajar√° por un corto per√≠odo de tiempo."
+Hint="Entra en la nave y p√°rate en la luz roja. Las puertas de la nave se abrir√°n y bajar√° un ascensor. Deber√°s apresurarte si quieres subir al ascensor y entrar en la bah√≠a antes de que el ascensor te triture."
 
 [TranslatorEvent0]
-
-Message= Diario N. Onatop: Hasta ahora lo hemos logrado.. sÛlo falta enfrentarnos cara a cara con otra bestia tit·nica. Ahora descansamos y solucionaremos maÒana el problema. Sin comunicar con ISV-Kran, la radio sÛlo recibe seÒales est·ticas.
-
-Hint=Entra en el barco y quÈdate en la luz roja. Las puertas de la nave se abrir·n y bajar· un ascensor. Tienes que ser muy r·pido si quieres subir al ascensor y saltar en la nave antes de que el ascensor te triture.
-
-
-[LevelInfo2]
-
-Title=ISV-KRAN Deck 4
-
-LevelEnterText=Entrando a Plataforma 4 ISV-KRAN 
+Message="Diario N. Onatop: Hasta ahora lo hemos logrado.. s√≥lo falta enfrentarnos cara a cara con otra bestia tit√°nica. Ahora descansamos y solucionaremos ma√±ana el problema. Sin poder comunicarnos con el ISV-Kran, ya que la radio s√≥lo recibe se√±ales est√°ticas."
+Hint="Entra en la nave y p√°rate en la luz roja. Las puertas de la nave se abrir√°n y bajar√° un ascensor. Deber√°s apresurarte si quieres subir al ascensor y entrar en la bah√≠a antes de que el ascensor te triture."

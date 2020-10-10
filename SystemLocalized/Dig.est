@@ -1,83 +1,54 @@
-[TranslatorEvent2]
+Ôªø[LevelInfo0]
+Title="Mina Rrajigar"
+LevelEntryText="Entrando a la Mina de Rrajigar"
 
-message=La Aldea Harobed est· al otro lado de estas montaÒas. EsperarÈ hasta que salgan los dos soles y seguirÈ a travÈs de la mina Rrajigar. Es la ˙nica forma.
-
-
-[TranslatorEvent0]
-
-message=ALERTA: Resistencia de esclavo Nali detectad en el Sector 3A. Fuerza letal autorizada para suprimir actividad rebelde.
-
-
-[TranslatorEvent1]
-
-message=AVISO: Los puentes de acceso en la mitad inferior de la mina no son seguros. Proseguir con precauciÛn.
-
+[LevelSummary]
+Title="Mina Rrajigar"
+LevelEntryText="Entrando a la Mina de Rrajigar"
 
 [TranslatorEvent11]
+Message="AVISO: Intruso detectado en las Secciones C-6 y D-8. Todo el personal es responsable de patrullar su zona local."
+Hint="Dispara al bot√≥n rojo cercano para elevar el puente estrecho a trav√©s de la lava."
 
-message=AVISO: Intruso detectado en las Secciones C-6 y D-8. Todo el personal es responsable de patrullar su propia zona.
+[TranslatorEvent1]
+Message="AVISO: Los puentes de acceso en la mitad inferior de la mina no son seguros. Proseguir con precauci√≥n."
 
-Hint=Dispara al botÛn rojo cercano para elevar el puente estrecho a travÈs de la lava.
+[TranslatorEvent0]
+Message="ALERTA: Resistencia de esclavo Nali detectada en el Sector 3A. Fuerza letal autorizada para suprimir actividad rebelde."
 
-
-[TranslatorEvent8]
-
-message=La fuente de energÌa uno del Campo de Fuerza est· en estado activo.
-
-Hint=Pulsa los botones rojos del muro toc·ndolos.
-
-
-[TranslatorEvent7]
-
-message=La fuente de energÌa dos del Campo de Fuerza est· en estado activo.
-
-Hint=Pulsa los botones rojos del muro toc·ndolos.
-
-
-[TranslatorEvent9]
-
-message=AVISO: El estado de la fuente de energÌa uno del Campo de Fuerza es inactivo. CondiciÛn de Seguridad Dos alcanzada.
-
+[TranslatorEvent2]
+Message="La Aldea Harobed est√° al otro lado de estas monta√±as. Esperar√© hasta que se pongan los dos soles y seguir√© a trav√©s de la mina Rrajigar. Es la √∫nica forma."
 
 [TranslatorEvent10]
-
-message=AVISO: El estado de la fuente de energÌa dos del Campo de Fuerza es inactivo. CondiciÛn de Seguridad Dos alcanzada.
-
+Message="AVISO: Estado de la fuente de energ√≠a dos del Campo de Fuerza: inactivo. Condici√≥n de Seguridad Dos alcanzada."
 
 [TranslatorEvent6]
-
-message=Campo de fuerza intacto. Todos los sistemas normales.
-
-Hint=El campo de fuerza tiene que ser desativado. Busca la sala de control.
-
+Message="Campo de fuerza intacto. Todos los sistemas normales."
+Hint="El campo de fuerza tiene que ser desactivado. Busca la sala de control."
 
 [TranslatorEvent5]
+Message="AVISO: Campo de Fuerza desactivado. Intruso detectado en la Secci√≥n C-6. Eliminar toda presencia desautorizada."
+Hint="Dispara a todos los barriles rojos."
 
-message=AVISO! Campo de Fuerza desactivado. Intruso detectado en la SecciÛn C-6. Eliminar toda presencia desautorizada.
-
-Hint=Dispara a todos los barriles rojos.
-
-
-[LevelInfo0]
-
-Title=Mina Rrajigar
-
+[TranslatorEvent9]
+Message="AVISO: Estado de la fuente de energ√≠a uno del Campo de Fuerza: inactivo. Condici√≥n de Seguridad Dos alcanzada."
 
 [TranslatorEvent19]
-
-message=NOTA: El ·rea debe estar libre para que pueda funcionar adecuadamente el elevador de transporte.
-
+Message="NOTA: El √°rea debe estar liberada para que pueda funcionar adecuadamente la plataforma de transporte."
 
 [TranslatorEvent15]
-
-message=Est·s BIEN muerto.
-
+Message="Est√°s BIEN muerto."
 
 [TranslatorEvent14]
-
-message=øQuÈ demonios haces aquÌ arriba?
-
+Message="¬øQu√© diablos haces aqu√≠ arriba?"
 
 [TranslatorEvent20]
+Message="√Årea de Control del Campo de Fuerza"
 
-message=¡rea de Control del Campo de Fuerza 
+[TranslatorEvent8]
+Message="Fuente de energ√≠a uno del Campo de Fuerza activa."
+Hint="Pulsa los botones rojos del muro toc√°ndolos."
+
+[TranslatorEvent7]
+Message="Fuente de energ√≠a dos del Campo de Fuerza activa."
+Hint="Pulsa los botones rojos del muro toc√°ndolos."

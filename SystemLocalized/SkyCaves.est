@@ -1,8 +1,10 @@
-[LevelInfo0]
+ï»¿[LevelInfo0]
+Title="Portal a Na Pali"
+LevelEntryText="Entrando al Subsuelo del Refugio Na Pali"
 
-Title="Entrada a Na Pali"
-
+[LevelSummary]
+Title="Portal a Na Pali"
+LevelEntryText="Entrando al Subsuelo del Refugio Na Pali"
 
 [TranslatorEvent0]
-
-message="Soy el único que queda. He encontrado cobijo aquí y descansaré antes de parar y resistir por última vez mañana temprano. Estoy tan cansado. Hoy ha sido un día largo y he perdido mis pertenencias. Sólo espero que no me descubran durmiendo aquí." 
+message="Soy el Ãºnico que queda. He conseguido encontrar refugio aquÃ­ y descansarÃ© antes de resistir por Ãºltima vez maÃ±ana temprano. Estoy tan cansado. Hoy ha sido un dÃ­a largo y lo he perdido todo. SÃ³lo espero que no me descubran durmiendo aquÃ­."

@@ -1,40 +1,27 @@
-[TranslatorEvent3]
+Ôªø[LevelInfo0]
+Title="Profundidades de Rrajigar"
 
-message=Unidad de activaciÛn del carro de transporte secundario de Taridio.
-
-
-[TranslatorEvent16]
-
-message=En Canad· hace mucho frÌo. Me gusta la cerveza Dos Equis. Mis gatos son muy peludos.
-
-
-[TranslatorEvent12]
-
-message=Estado de la EstaciÛn de DesviaciÛn de Gas: Las puertas est·n presurizadas y cerradas.
-
-AltMessage=Puertas despresurizadas. Acceso permitido.
-
-
-[TranslatorEvent18]
-
-message=Craig es el Gran Maestro Doofus.
-
-
-[TranslatorEvent17]
-
-message=°Entra aquÌ, la Lava est· bien!
-
+[LevelSummary]
+Title="Profundidades de Rrajigar"
 
 [TranslatorEvent4]
+Message="AVISO: Ejercer precauci√≥n cerca de los barriles de taridio."
 
-message=AVISO: Tener cuidado en proximidad de barriles de Taridio.
+[TranslatorEvent17]
+Message="¬°Ven aqu√≠, la Lava est√° tibia!"
 
+[TranslatorEvent18]
+Message="Craig es el Gran Maestro Memo."
+
+[TranslatorEvent16]
+Message="En Canad√° hace mucho fr√≠o. Me gusta la cerveza Dos Equis. Mis gatos son muy peludos."
+
+[TranslatorEvent3]
+Message="Unidad de activaci√≥n del carro de transporte secundario de taridio."
+
+[TranslatorEvent12]
+Message="Estado de la Estaci√≥n de Desviaci√≥n de Gas: Las puertas est√°n presurizadas y cerradas."
+AltMessage="Puertas despresurizadas. Acceso permitido."
 
 [TranslatorEvent2]
-
-message=Unidad de activaciÛn del carro de transporte primario de Taridio.
-
-
-[LevelInfo0]
-
-Title=Profundidades de Rrajigar 
+Message="Unidad de activaci√≥n del carro de transporte primario de taridio."

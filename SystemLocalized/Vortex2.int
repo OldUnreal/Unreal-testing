@@ -1,4 +1,7 @@
-[LevelInfo0]
+﻿[LevelInfo0]
+Title="Vortex Rikers"
+
+[LevelSummary]
 Title="Vortex Rikers"
 
 [TranslatorEvent11]
@@ -40,4 +43,3 @@ Message="Prisoner 853, James Cavanaugh ready for electrocution."
 
 [TranslatorEvent3]
 Message="Chief Medical Officer's Log: Prison vessel 254 Vortex Rikers. The constant fighting between prisoners seems to be getting worse. At this rate, I will be out of supplies long before we reach the prison moon."
-

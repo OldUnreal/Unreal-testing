@@ -1,316 +1,195 @@
-[Public]
-
+Ôªø[Public]
 Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
-
-Preferences=(Caption="Avanzado",Parent="Opciones avanzadas")
-
-Preferences=(Caption="ConfiguraciÛn del motor de juego",Parent="Avanzado",Class=Engine.GameEngine,Category=Settings,Immediate=True)
-
-Preferences=(Caption="Funciones abreviadas de las teclas",Parent="Avanzado",Class=Engine.Input,Immediate=True,Category=Aliases)
-
-Preferences=(Caption="Funciones directas de las teclas",Parent="Avanzado",Class=Engine.Input,Immediate=True,Category=RawKeys)
-
-Preferences=(Caption="Controladores",Parent="Opciones avanzadas",Class=Engine.Engine,Immediate=False,Category=Drivers)
-
-Preferences=(Caption="InformaciÛn del servidor p˙blico",Parent="Red",Class=Engine.GameReplicationInfo,Immediate=True)
-
-Preferences=(Caption="ConfiguraciÛn de partida",Parent="Opciones avanzadas",Class=Engine.GameInfo,Immediate=True)
-
-Preferences=(Caption="Channel Download",Parent="Opciones de red",Class=Engine.ChannelDownload)
-
-[Fonts]
-
-BigFont=Engine.MedFont
-
-LargeFont=Engine.MedFont
-
-Papyrus=UWindowFonts.Tahoma30
-
-Chiller=UWindowFonts.Tahoma30
-
-[Errors]
-
-NetOpen=Error al abrir el archivo
-
-NetWrite=Error al escribir en archivo
-
-NetRefused=El servidor rechazÛ el envÌo de '%s'
-
-NetClose=Error al cerrar el archivo
-
-NetSize=TamaÒo de archivo errÛneo
-
-NetMove=Error al mover el archivo
-
-NetInvalid=Se ha recibido una peticiÛn de archivo no v·lida.
-
-NoDownload=El paquete '%s' no es descargable.
-
-DownloadFailed=Fallo al descargar el paquete '%s': %s
-
-RequestDenied=El servidor ha solicitado un archivo del nivel pendiente: Solicitud denegada.
-
-ConnectionFailed=ConexiÛn fallida
-
-Banned=Has sido expulsado del servidor
-
-TempBanned=Has sido expulsado del servidor temporalmente
-
-Kicked=Se te ha echado del servidor
-
-ChAllocate=No se ha podido asignar un canal
-
-NetAlready=Ya en red
-
-NetListen=Espera fallida: No hay contexto de enlazador disponible.
-
-LoadEntry=No se puede cargar Entry: %s
-
-InvalidUrl=URL no v·lido: %s
-
-InvalidLink=Enlace no v·lido: %s
-
-FailedBrowse=No se ha podido entrar en %s: %s
-
-Listen=Espera fallida: %s
-
-AbortToEntry=Fallo; regresando a Entry
-
-ServerOpen=Los servidores no pueden abrir los URL de red
-
-ServerListen=El servidor dedicado no puede esperar: %s
-
-Pending=ConexiÛn pendiente con '%s' fallida; %s
-
-LoadPlayerClass=Fallo al cargar la clase de jugador.
-
-ServerOutdated=La versiÛn del servidor est· pasada
-
-
-[Progress]
-
-CancelledConnect=Intento de ConexiÛn Cancelado
-
-RunningNet=%s: %s (%i jugadores)
-
-NetReceiving=Recibiendo '%s': %i/%i
-
-NetReceiveOk=Se ha recibido exitosamente '%s'
-
-NetSend=Enviando '%s'
-
-NetSending=Enviando '%s': %i/%i
-
-Connecting=Conectando...
-
-Listening=Esperando clientes...
-
-Loading=Cargando
-
-Saving=Guardando
-
-Paused=Pausado por %s
-
-ReceiveFile=Recibiendo '%s' (F10 para cancelar)
-
-ReceiveOptionalFile=Recibiendo archivo opcional '%s' (F10 para cancelar)
-
-ReceiveSize=TamaÒo %iK, Completo %3.1f%% = %iK, Quedan %i Paquetes
-
-ConnectingText=Conectando (F10 para cancelar):
-
-ConnectingURL=unreal://%s/%s
-
-
-[Console]
-
-ClassCaption=Consola Unreal est·ndar
-
-LoadingMessage=CARGANDO
-
-SavingMessage=GUARDANDO
-
-ConnectingMessage=CONECTANDO
-
-PausedMessage=EN PAUSA
-
-PrecachingMessage=PRECACHEANDO
-
-ChatChannel=(CHAT)
-
-TeamChannel=(TEAM)
-
-
-[General]
-
-Upgrade=Para acceder a este servidor, necesitas la ˙ltima actualizaciÛn gratuita de Unreal, disponible en el sitio web de OldUnreal:
-
-UpgradeURL=http://www.oldunreal.com/oldunrealpatches.html
-
-UpgradeQuestion=øQuieres abrir tu explorador de Internet e ir a la p·gina de actualizaciones ahora?
-
-Version=VersiÛn %i
-
-
-[Menu]
-
-HelpMessage=
-
-MenuList=
-
-LeftString=Izquierda
-
-RightString=Derecha
-
-CenterString=Centro
-
-EnabledString=Activado
-
-DisabledString=Desactivado
-
-HelpMessage[1]="Este men˙ a˙n no ha sido implementado."
-
-YesString=sÌ
-
-NoString=no
-
-
-[Inventory]
-
-PickupMessage=Se ha recogido un objeto
-
-M_Activated=" activado"
-
-M_Selected=" seleccionado"
-
-M_Deactivated=" desactivado"
-
-ItemArticle=un
-
-
-[WarpZoneInfo]
-
-OtherSideURL=
-
-
-[GameInfo]
-
-SwitchLevelMessage=Cambiando de nivel
-
-DefaultPlayerName=Jugador
-
-LeftMessage=" ha abandonado la partida."
-
-FailedSpawnMessage=Fallo al crear el actor del jugador
-
-FailedPlaceMessage=No se ha podido encontrar un punto de inicio (puede que el nivel necesite un actor 'PlayerStart')
-
-NameChangedMessage=Nombre cambiado a
-
-EnteredMessage=" se ha incorporado a la partida."
-
-GameName=Partida
-
-MaxedOutMessage=El servidor est· al m·ximo de su capacidad.
-
-WrongPassword=La contraseÒa introducida es incorrecta.
-
-NeedPassword=Necesitas una contraseÒa para unirte a esta partida.
-
-FailedTeamMessage=No se ha podido encontrar equipo para el jugador.
-
-
-[LevelInfo]
-
-Title="Sin tÌtulo"
-
-
-[Weapon]
-
-MessageNoAmmo=" no tiene municiÛn."
-
-PickupMessage=Tienes un arma
-
-DeathMessage=%o fue matado por el %w de %k.
-
-ItemName=Arma
-
-DeathMessage[0]=%o fue matado por el %w de %k.
-
-DeathMessage[1]=%o fue matado por el %w de %k.
-
-DeathMessage[2]=%o fue matado por el %w de %k.
-
-DeathMessage[3]=%o fue matado por el %w de %k.
-
-
-[Counter]
-
-CountMessage=SÛlo quedan %i m·s...
-
-CompleteMessage=°Completado!
-
-
-[Ammo]
-
-PickupMessage=Has recogido algo de municiÛn.
-
-
-[Pickup]
-
-ExpireMessage=
-
-
-[SpecialEvent]
-
-DamageString=
-
-
-[DamageType]
-
-Name=matado
-
-AltName=matado
-
+Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Preferences=(Caption="Avanzado",Parent="Opciones Avanzadas")
+Preferences=(Caption="Configuraci√≥n del Motor de Juego",Parent="Avanzado",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+Preferences=(Caption="Comandos para Asignaciones",Parent="Avanzado",Class=Engine.Input,Immediate=True,Category=Aliases)
+Preferences=(Caption="Asignaciones de Botones",Parent="Avanzado",Class=Engine.Input,Immediate=True,Category=RawKeys)
+Preferences=(Caption="Controladores",Parent="Opciones Avanzadas",Class=Engine.Engine,Immediate=False,Category=Drivers)
+Preferences=(Caption="Informaci√≥n P√∫blica de Servidor",Parent="Juego en Red",Class=Engine.GameReplicationInfo,Immediate=True)
+Preferences=(Caption="Configuraci√≥n de Juego",Parent="Opciones Avanzadas",Class=Engine.GameInfo,Immediate=True)
+Preferences=(Caption="Marcas",Parent="Opciones Avanzadas")
+Preferences=(Caption="Sangre",Parent="Marcas")
+Preferences=(Caption="Servidor",Parent="Sangre",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
+Preferences=(Caption="Sombra de Pe√≥n",Parent="Marcas",Class=Engine.PawnShadow,Immediate=True)
+Preferences=(Caption="Sombra de Decoraci√≥n",Parent="Marcas",Class=Engine.DecoShadow,Immediate=True)
+Preferences=(Caption="Sombra de Proyectil",Parent="Marcas",Class=Engine.ProjectileShadow,Immediate=True)
+Preferences=(Caption="Canal de Descarga",Parent="Juego en Red",Class=Engine.ChannelDownload)
+Preferences=(Caption="Notificaciones de Conexi√≥n",Parent="Juego en Red",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
+Preferences=(Caption="Sonido",Parent="Advanced Options")
+Preferences=(Caption="Reproducci√≥n",Parent="Advanced Options")
+Preferences=(Caption="Juego en Red",Parent="Advanced Options")
+Preferences=(Caption="Tipos de Juego",Parent="Advanced Options")
+Preferences=(Caption="Listas de Mapas",Parent="Networking")
 
 [PlayerPawn]
-
-QuickSaveString=Guardado r·pido
-
-NoPauseMessage=El juego no se puede pausar
-
-ViewingFrom=Ahora viendo desde
-
-OwnCamera=c·mara propia
-
-FailedView=No se ha podido cambiar la vista.
-
-CantChangeNameMsg=No puedes cambiar tu nombre durante una partida en un servidor con registro global.
-
+QuickSaveString="Guardado R√°pido"
+NoPauseMessage="Imposible interrumpir la partida"
+ViewingFrom="Ahora viendo desde "
+OwnCamera="c√°mara propia"
+FailedView="No se ha podido cambiar la vista."
+CantChangeNameMsg="No puedes cambiar tu nombre durante una partida con registro global."
 
 [Pawn]
-
 NameArticle=" un "
 
+[Inventory]
+PickupMessage="Objeto recogido."
+ItemArticle="un"
+M_Activated=" activado."
+M_Selected=" seleccionado."
+M_Deactivated=" desactivado."
+
+[LevelInfo]
+Title="Sin T√≠tulo"
+
+[Weapon]
+MessageNoAmmo=" no tiene munici√≥n."
+DeathMessage="%o ha sido asesinado por el %w de %k."
+PickupMessage="Tienes un arma"
+ItemName="Arma"
+DeathMessage[0]="%o ha sido asesinado por el %w de %k."
+DeathMessage[1]="%o ha sido asesinado por el %w de %k."
+DeathMessage[2]="%o ha sido asesinado por el %w de %k."
+DeathMessage[3]="%o ha sido asesinado por el %w de %k."
+
+[Ammo]
+PickupMessage="Has recogido algo de munici√≥n."
+
+[Counter]
+CountMessage="S√≥lo quedan %i m√°s..."
+CompleteMessage="¬°Completado!"
 
 [Spectator]
+MenuName="Espectador"
 
-MenuName=Espectador
+[DamageType]
+Name="asesinado"
+AltName="asesinado"
+NameFem="asesinada"
+AltNameFem="asesinada"
+
+[Progress]
+CancelledConnect="Intento de Conexi√≥n Cancelado"
+RunningNet="%ls: %ls (%i jugadores)"
+NetReceiving="Recibiendo "%ls": %i/%i"
+NetReceiveOk="Se ha recibido exitosamente "%ls""
+NetSend="Enviando "%ls""
+NetSending="Enviando "%ls": %i/%i"
+Connecting="Conectando..."
+Listening="Esperando clientes..."
+Loading="Cargando"
+Saving="Guardando"
+Paused="Pausado por %ls"
+ReceiveFile="Recibiendo "%ls" (F10 para pasar por alto)"
+ReceiveOptionalFile="Recibiendo archivo opcional "%ls" (F10 para cancelar)"
+ReceiveSize="Tama√±o %iK, Completo %3.1f%% = %iK, Quedan %i paquetes"
+ConnectingText="Conectando (F10 para cancelar):"
+ConnectingURL="unreal://%ls/%ls"
+
+[WarpZoneInfo]
+OtherSideURL=""
+
+[Pickup]
+ExpireMessage=""
+
+[SpecialEvent]
+DamageString=""
 
 [ServerCommandlet]
-
 HelpCmd=server
+HelpWebLink="http://www.oldunreal.com/wiki"
+HelpOneLiner="Servidor en red de juego."
+HelpUsage="server map.unr[?game=tipoDeJuego] [-opci√≥n...] [par√°metro=valor]..."
+HelpParm[0]="Log"
+HelpDesc[0]="Especifica el archivo de registro que debe ser generado."
+HelpParm[1]="AllAdmin"
+HelpDesc[1]="Da privilegios de administrador a todos los jugadores."
 
-HelpOneLiner=Servidor en red de juego
+[Console]
+LoadingMessage="CARGANDO"
+SavingMessage="GUARDANDO"
+ConnectingMessage="CONECTANDO"
+PausedMessage="EN PAUSA"
+PrecachingMessage="PRECACHEANDO"
+ClassCaption="Consola Unreal est√°ndar"
+ChatChannel="(CHAT) "
+TeamChannel="(EQUI) "
 
-HelpUsage=server map.unr[?game=gametype] [-option...] [parm=value]...
+[Menu]
+MenuList=" "
+HelpMessage=" "
+HelpMessage[1]="Este men√∫ a√∫n no ha sido implementado."
+LeftString="Izquierda"
+RightString="Derecha"
+CenterString="Centro"
+EnabledString="Activado"
+DisabledString="Desactivado"
+YesString="S√≠"
+NoString="No"
+OnString="Act"
+OffString="Des"
 
-HelpWebLink=http://wiki.oldunreal.com
+[GameInfo]
+SwitchLevelMessage="Cambiando Nivel"
+DefaultPlayerName="Jugador"
+LeftMessage=" ha abandonado la partida."
+FailedSpawnMessage="Error al crear actor de jugador"
+FailedPlaceMessage="No se pudo encontrar punto de partida (quiz√°s el nivel necesite un actor "PlayerStart")"
+FailedTeamMessage="No se ha podido encontrar equipo para el jugador"
+NameChangedMessage="Nombre cambiado a "
+EnteredMessage=" se ha incorporado a la partida."
+GameName="Partida"
+MaxedOutMessage="El servidor est√° funcionando al m√°ximo de su capacidad."
+WrongPassword="La contrase√±a introducida es incorrecta."
+NeedPassword="Necesitas introducir una contrase√±a para unirte a esta partida."
+MaleGender="su"
+FemaleGender="su"
 
-HelpParm[0]=Log
+[Errors]
+NetOpen="Error al abrir el archivo"
+NetWrite="Error al escribir en archivo"
+NetRefused="El servidor rechaz√≥ el env√≠o de "%ls""
+NetClose="Error al cerrar el archivo"
+NetSize="Tama√±o de archivo err√≥neo"
+NetMove="Error al mover el archivo"
+NetInvalid="Se ha recibido una petici√≥n de archivo no v√°lida"
+NoDownload="El paquete "%ls" no es descargable"
+DownloadFailed="No se ha podido descargar el paquete "%ls": %ls"
+RequestDenied="El servidor ha solicitado un archivo del nivel pendiente: Solicitud denegada"
+ConnectionFailed="Conexi√≥n fallida"
+ChAllocate="No se ha podido asignar un canal"
+NetAlready="Conexi√≥n de red ya realizada"
+NetListen="Comunicaci√≥n fallida: No hay enlazador disponible."
+LoadEntry="No se puede cargar Entry: %ls"
+InvalidUrl="Direcci√≥n URL no v√°lida: %ls"
+InvalidLink="Enlace no v√°lido: %ls"
+FailedBrowse="No se ha podido entrar en %ls: %ls"
+Listen="Comunicaci√≥n fallida: %ls"
+AbortToEntry="Error; regresando a Entry"
+ServerOpen="Los servidores no pueden abrir los URL de red"
+ServerListen="El servidor dedicado no puede esperar: %ls"
+Pending="Conexi√≥n pendiente con "%ls" ha fallado; %ls"
+LoadPlayerClass="Fallo al cargar la clase de jugador"
+ServerOutdated="Versi√≥n del servidor obsoleta"
+Banned="Tu entrada al servidor ha sido vetada"
+TempBanned="Tu entrada al servidor ha sido vetada temporalmente"
+Kicked="Has sido expulsado del servidor"
 
-HelpDesc[0]=Especifica el archivo de registro a crear
+[AdminAccessManager]
+AdminLoginText="El administrador %ls ha ingresado"
+AdminLogoutText="El administrador %ls ha salido"
+CheatUsedStr="%ls utiliz√≥ el comando trampa/administrativo %c"
 
-HelpParm[1]=AllAdmin
+[Fonts]
+WhiteFont=UnrealShare.WhiteFont
+MedFont=Engine.MedFont
+LargeFont=Engine.LargeFont
+BigFont=Engine.BigFont
+SmallFont=Engine.SmallFont
 
-HelpDesc[1]=Dar a todos los jugadores privilegios de administrador 
+[General]
+Upgrade="Para acceder a este servidor, necesitas la √∫ltima actualizaci√≥n gratuita de Unreal, disponible en el sitio web de OldUnreal:"
+UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
+UpgradeQuestion="¬øQuieres abrir tu explorador de Internet e ir a la p√°gina de actualizaciones ahora?"
+Version="Versi√≥n %i"

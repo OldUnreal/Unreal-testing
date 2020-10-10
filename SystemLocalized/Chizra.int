@@ -1,9 +1,13 @@
-[LevelInfo0]
-Title="Chizra-Nali Water God"
-LevelEnterText="Entering Chizra-The Nali Water God Temple"
+﻿[LevelInfo0]
+Title="Chizra - Nali Water God"
+LevelEnterText="Entering Chizra - The Nali Water God Temple"
+
+[LevelSummary]
+Title="Chizra - Nali Water God"
+LevelEnterText="Entering Chizra - The Nali Water God Temple"
 
 [TranslatorEvent7]
-Message="The Nali water god Chizra and his holy temple has been overrun by the water serpents and the demons who came from the stars. Only the messiah can purify the temple now."
+Message="The Nali Water God Chizra and his holy temple has been overrun by the water serpents and the demons who came from the stars. Only the messiah can purify the temple now."
 
 [TranslatorEvent11]
 Message="Take the stick of 6 fires and go forth to the inner ceremonial chamber. There you shall find you way back to the place from whence you came and the metal chariot that fell from the stars."
@@ -22,7 +26,7 @@ CountMessage="Snap!"
 CompleteMessage="The raft is loose"
 
 [TranslatorEvent6]
-Message=" Beyond this stone seal lies the inner ceremonial chambers of the Nali water god."
+Message="Beyond this stone seal lies the inner ceremonial chambers of the Nali water god."
 
 [TranslatorEvent18]
 Message="Beyond this golden door lies the holy altar of the stick of 6 fires. Only by touching the outset stones of the lightning fire pillars may one enter."
@@ -31,13 +35,13 @@ Message="Beyond this golden door lies the holy altar of the stick of 6 fires. On
 Message="The demons came down from the stars in a metal chariot as punishment for the sins of The Nali."
 
 [TranslatorEvent5]
-Message="Only a warrior who wields the stick of 6 fires may enter the inner ceremonial chambers.  Once the stick of 6 fires is in your grasp the stone seal will rise."
+Message="Only a warrior who wields the stick of 6 fires may enter the inner ceremonial chambers. Once the stick of 6 fires is in your grasp the stone seal will rise."
 
 [TranslatorEvent10]
-Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY.  TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
+Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY. TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
 
 [TranslatorEvent13]
-Message="The pyramid's center is the focal point of Chizra the Nali water god's power"
+Message="The pyramid's center is the focal point of Chizra the Nali water god's power."
 
 [TranslatorEvent19]
 Message="Climb the loose stones to reach the lagoon of lightning fire. Beware the demon who came from the stars lurks in the shadows. A fool shall surely perish."
@@ -62,4 +66,3 @@ Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder
 
 [TranslatorEvent0]
 Message="Beware those of impure motives who enter the pool of thunder shall face the demon from the stars"
-

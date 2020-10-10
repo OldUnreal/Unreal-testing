@@ -1,38 +1,21 @@
-[Public]
-
+Ôªø[Public]
 Class=(Class=WinDrv.WindowsClient,SuperClass=Engine.Client)
-
-Preferences=(Caption="Imagen",Parent="Opciones avanzadas",Class=WinDrv.WindowsClient,Immediate=True,Category=Display)
-
-Preferences=(Caption="Joystick",Parent="Opciones avanzadas",Class=WinDrv.WindowsClient,Immediate=True,Category=Joystick)
-
+Preferences=(Caption="Imagen",Parent="Opciones Avanzadas",Class=WinDrv.WindowsClient,Immediate=True,Category=Display)
+Preferences=(Caption="Mando",Parent="Opciones Avanzadas",Class=WinDrv.WindowsClient,Immediate=True,Category=Joystick)
 
 [Errors]
-
-Failed3D=No se ha podido inicializar el hardware 3d
-
-DDrawMode=DirectDraw no ha podido conseguir la modalidad de vÌdeo solicitada.
-
+Failed3D="Inicializaci√≥n de hardware 3D fallida"
+DDrawMode="DirectDraw no ha podido configurar la modalidad de v√≠deo solicitada."
 
 [General]
-
-ViewPersp=Mapa de perspectivas
-
-ViewXY=Mapa de vista aÈrea
-
-ViewXZ=Mapa XZ
-
-ViewYZ=Mapa YZ
-
-ViewOther=Ventana
-
-Color16=&colores de 16 bits
-
-Color32=&colores de 32 bits
-
-AdvancedOptions=Opciones avanzadas
-
+ViewPersp="Mapa de Perspectiva"
+ViewXY="Mapa de Vista A√©rea"
+ViewXZ="Mapa XZ"
+ViewYZ="Mapa YZ"
+ViewOther="Ventana"
+Color16="Color en &16 bits"
+Color32="Color en &32 bits"
+AdvancedOptions="Opciones Avanzadas"
 
 [WindowsClient]
-
-ClassCaption="Administrador de Windows est·ndar" 
+ClassCaption="Administrador de Windows Est√°ndar"

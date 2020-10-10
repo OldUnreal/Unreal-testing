@@ -1,156 +1,94 @@
+Ôªø[Public]
+Preferences=(Caption="Sistema de Archivos",Parent="Avanzado",Class=Core.System,Immediate=True)
+
 [Language]
-
-Language=EspaÒol
-
+Language="Espa√±ol"
 LangId=10
-
 SubLangId=0
 
-
-[Public]
-
-Preferences=(Caption="Avanzado",Parent="Opciones avanzadas")
-
-Preferences=(Caption="Sistema de archivos",Parent="Avanzado",Class=Core.System,Immediate=True)
-
-
-[Errors]
-
-Unknown=Error desconocido
-
-Aborted=Cancelado
-
-ExportOpen=Error al exportar %s: no se ha podido abrir el archivo '%s'
-
-ExportWrite=Error al exportar %s: no se ha podido escribir en el archivo '%s'
-
-FileNotFound=No se ha podido encontrar el archivo '%s'
-
-NoTXTFile=No se puede ejecutar el archivo que no es de texto (.txt) '%s'
-
-ObjectNotFound=No se ha podido encontrar el objeto '%s %s.%s'
-
-PackageNotFound=No se ha podido encontrar el archivo para el paquete '%s'
-
-PackageResolveFailed=No se ha podido resolver el nombre del paquete
-
-FilenameToPackage=No se ha podido convertir el nombre del archivo '%s' al nombre del paquete
-
-Sandbox=El paquete '%s' no est· disponible en esta secciÛn
-
-PackageVersion=VersiÛn del paquete '%s' errÛnea
-
-FailedLoad=No se ha podido cargar '%s': %s
-
-ConfigNotFound=No se ha podido encontrar '%s' en el archivo de configuraciÛn
-
-LoadClassMismatch=%s no es una subclase de %s.%s
-
-NotDll='%s' no es un paquete DLL; no se ha podido encontrar la exportaciÛn '%s'
-
-NotInDll=No se ha podido encontrar '%s' en '%s.dll'
-
-FailedLoadPackage=No se ha podido cargar el paquete: %s
-
-FailedLoadObject=No se ha podido cargar '%s %s.%s': %s
-
-TransientImport=Objeto no residente importado: %s
-
-FailedSavePrivate=No se puede guardar %s: La gr·fica est· enlazada a un objeto privado externo %s
-
-FailedImportPrivate=No se puede importar el objeto privado %s %s.
-
-FailedCreate=No se ha encontrado %s %s para su creaciÛn
-
-FailedImport=No se ha podido encontrar %s %s en el archivo '%s'
-
-FailedSaveFile=Error al guardar el archivo '%s': %s
-
-SaveWarning=Error al guardar '%s'
-
-NotPackaged=El objeto no est· en el paquete: %s %s
-
-NotWithin=Objeto %s %s creado en %s en lugar de %s
-
-Abstract=No se puede crear el objeto %s: la clase %s es abstracta
-
-NoReplace=No se puede sustituir %s por %s
-
-NoFindImport=No se ha podido encontrar el archivo '%s' para su importaciÛn
-
-ReadFileFailed=No se ha podido leer el archivo '%s' para su importaciÛn
-
-SeekFailed=Error al buscar el archivo
-
-OpenFailed=Error al abrir el archivo
-
-WriteFailed=Error al escribir en el archivo
-
-ReadEof=Lectura m·s all· del final de archivo
-
-IniReadOnly=El archivo %s est· protegido contra escritura; no se puede guardar la configuraciÛn
-
-UrlFailed=No se ha podido iniciar el URL
-
-Warning=Advertencia
-
-Question=Pregunta
-
-OutOfMemory=Memoria virtual agotada. Para evitar que esto suceda, debes liberar m·s espacio en el disco duro principal.
-
-History=Historial
-
-Assert=AserciÛn fallida: %s [Archivo:%s] [LÌnea: %i]
-
-Debug=AserciÛn de depuraciÛn fallida: %s [Archivo:%s] [LÌnea: %i]
-
-LinkerExists=El enlazador para '%s' ya existe
-
-BinaryFormat=El archivo '%s' contiene datos irreconocibles
-
-SerialSize=%s: TamaÒo de serie errÛneo: Obtenido %i, Esperado %i
-
-ExportIndex=Õndice de exportaciÛn incorrecto %i/%i
-
-ImportIndex=Õndice de importaciÛn incorrecto %i/%i
-
-Password=ContraseÒa desconocida
-
-Exec=Comando desconocido
-
-BadProperty='%s': Propiedad '%s' incorrecta o no disponible
-
-MisingIni=Archivo .ini no disponible : %s
-
 [Query]
-
-OldVersion=El archivo %s se guardÛ con una versiÛn anterior que no es compatible con Èsta. La lectura puede fallar, y puede causar un bloqueo. øQuieres intentarlo de todos modos?
-
-Name=Nombre:
-
-Password=ContraseÒa:
-
-PassPrompt=Introduce tu nombre y contraseÒa:
-
-PassDlg=ComprobaciÛn de identidad
-
-Overwrite=El archivo '%s' tiene que ser actualizado. øQuieres sobreescribir la versiÛn existente?
-
+OldVersion="El archivo "%ls" ha sido guardado con una versi√≥n anterior que no es compatible con √©sta. Es posible que no pueda leerse o que el ordenador se bloquee. ¬øQuieres intentarlo de todos modos?"
+Name="Nombre:"
+Password="Contrase√±a:"
+PassPrompt="Introducir nombre de usuario y contrase√±a:"
+PassDlg="Comprobaci√≥n de identidad"
+Overwrite="El archivo "%ls" tiene que ser actualizado. ¬øActualizar la versi√≥n existente?"
 
 [Progress]
+Saving="Guardando el archivo "%ls"..."
+Loading="Cargando el archivo "%ls"..."
+Closing="Cerrando"
 
-Saving=Guardando el archivo %s...
+[HelloWorldCommandlet]
+HelpCmd=HelloWorld
+HelpOneLiner="Ejemplo"
+HelpUsage="HelloWorld (sin par√°metros)"
+HelpParm[0]="ParamEnt"
+HelpParm[1]="ParamCad"
+HelpDesc[0]="Un par√°metro de n√∫mero entero."
+HelpDesc[1]="Un par√°metro de cadena de texto."
 
-Loading=Cargando el archivo %s...
-
-Closing=Cerrando
+[Errors]
+Unknown="Error Desconocido"
+Aborted="Cancelado"
+ExportOpen="Error al exportar %ls: no se ha podido leer el archivo "%ls"."
+ExportWrite="Error al exportar %ls: no se ha podido escribir en el archivo "%ls"."
+FileNotFound="No se ha podido hallar el archivo "%ls"."
+ObjectNotFound="No se ha podido hallar el objeto "%ls %ls.%ls"."
+PackageNotFound="No se ha podido hallar el archivo para el paquete "%ls"."
+PackageResolveFailed="No se ha podido resolver el nombre del paquete."
+FilenameToPackage="No se ha podido convertir el nombre del archivo "%ls" al nombre del paquete."
+Sandbox="El paquete "%ls" no est√° disponible en este entorno protegido."
+PackageVersion="Versi√≥n err√≥nea del paquete "%ls"."
+FailedLoad="No se ha podido cargar "%ls": %ls."
+ConfigNotFound="No se ha podido encontrar "%ls" en el archivo de configuraci√≥n."
+LoadClassMismatch="%ls no es una subclase de %ls.%ls."
+NotDll=""%ls" no es un paquete DLL; no se ha podido encontrar la exportaci√≥n "%ls"."
+NotInDll="No se ha podido encontrar "%ls" en "%ls.dll"."
+FailedLoadPackage="No se ha podido cargar el paquete: %ls."
+FailedLoadObject="No se ha podido cargar "%ls %ls.%ls": %ls."
+TransientImport="Objeto transitorio importado: %ls."
+FailedSavePrivate="No se puede guardar %ls: El grafo est√° enlazado a un objeto privado externo %ls."
+FailedImportPrivate="No se puede importar el objeto privado %ls %ls."
+FailedCreate="No se ha encontrado %ls %ls para su creaci√≥n."
+FailedImport="No se ha podido encontrar %ls en el archivo "%ls"."
+FailedSaveFile="Error al guardar el archivo "%ls": %ls."
+SaveWarning="Error al guardar "%ls"."
+NotPackaged="El objeto no est√° en el paquete: %ls %ls."
+NotWithin="Objeto %ls %ls creado en %ls en lugar de %ls."
+Abstract="No se puede crear el objeto %ls: la clase %ls es abstracta."
+NoReplace="No se puede sustituir %ls por %ls."
+NoFindImport="No se ha podido encontrar el archivo "%ls" para su importaci√≥n."
+ReadFileFailed="No se ha podido leer el archivo "%ls" para su importaci√≥n."
+SeekFailed="Error al buscar el archivo."
+OpenFailed="Error al abrir el archivo."
+WriteFailed="Error al escribir en el archivo."
+ReadEof="Lectura m√°s all√° del final de archivo."
+IniReadOnly="El archivo %ls est√° protegido contra escritura; no se puede guardar la configuraci√≥n."
+UrlFailed="No se ha podido iniciar el URL."
+Warning="Advertencia"
+Question="Pregunta"
+OutOfMemory="Memoria virtual agotada. Para evitar que esto suceda, se debe liberar m√°s espacio en el disco duro principal."
+History="Historial"
+Assert="Aserci√≥n fallida: %ls [Archivo: %ls] [L√≠nea: %i]."
+Debug="Aserci√≥n de depuraci√≥n fallida: %ls [Archivo: %ls] [L√≠nea: %i]."
+LinkerExists="El enlazador para "%ls" ya existe."
+BinaryFormat="El archivo "%ls" contiene datos irreconocibles."
+SerialSize="%ls: Tama√±o de serie err√≥neo: Obtenido %i, Esperado %i."
+ExportIndex="√çndice de exportaci√≥n incorrecto %i/%i."
+ImportIndex="√çndice de importaci√≥n incorrecto %i/%i."
+Password="Contrase√±a desconocida"
+Exec="Comando desconocido"
+BadProperty=""%ls": Propiedad "%ls" incorrecta o no disponible."
+MissingIni="Archivo .ini no disponible: %ls."
+NoTXTFile="No se ha podido ejecutar el archivo que no es de texto (.txt) "%ls"."
 
 [General]
-Product=Unreal
-Engine=Unreal Engine
-Copyright=Copyright 1999 Epic Games, Inc.
-True=True
-False=False
-None=None
-Yes=Yes
-No=No
+Product="Unreal"
+Engine="Motor de Unreal"
+Copyright="Copyright 1999 Epic Games, Inc. Todos los derechos reservados."
+True="Verdadero"
+False="Falso"
+None="Ninguno"
+Yes="S√≠"
+No="No"

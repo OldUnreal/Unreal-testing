@@ -1,107 +1,68 @@
-[LevelInfo0]
+Ôªø[LevelInfo0]
+Title="Templo de Chizra - Dios Nali del Agua"
+LevelEnterText="Entrando en el Templo de Chizra - Dios Nali del Agua"
 
-Title=Templo de Chizra-Dios Marino Nali
-
-LevelEnterText=Est·s entrando en el Templo de Chizra-Dios Marino Nali
-
-
-[TranslatorEvent0]
-
-Message=Cuidado a aquellos que entren en la piscina del trueno con motivos impuros pues se enfrentar·n al demonio de las estrellas
-
+[LevelSummary]
+Title="Templo de Chizra - Dios Nali del Agua"
+LevelEnterText="Entrando en el Templo de Chizra - Dios Nali del Agua"
 
 [TranslatorEvent7]
-
-Message=El dios marino Nali Chizra y su templo sagrado han sido tomados por las serpientes del agua y los demonios que vinieron de las estrellas. SÛlo el mesÌas puede liberar al templo ahora.
-
-
-[TranslatorEvent2]
-
-Message=Este es el obelisco de las nubes. A partir de aquÌ se encuentra la piscina del trueno.
-
-
-[TranslatorEvent15]
-
-Message=1400 h. Comandante Mac Harrison: Informe de situaciÛn: Esos nativos poseen un lanzacohetes de 6 caÒones en un altar bien protegido por esas 'salamandras'. 'La vara de 6 fuegos' es cÛmo los Nali lo llaman. IntentarÈ introducirme a hurtadillas esta noche.
-
-
-[TranslatorEvent12]
-
-Message=Esta es la piscina del trueno. Las almas impuras que se baÒen en el agua se enfrentar·n al demonio que vino de las estrellas.
-
-
-[TranslatorEvent1]
-
-Message=Una poderosa fuerza viene de aquellos que dejen caer sobre ellos el agua de la cascada en la piscina del trueno.
-
-
-[TranslatorEvent19]
-
-Message=Escala las piedras sueltas para alcanzar la laguna del fuego relampaguenate. Cuidado pues el demonio que vino de las estrellas se esconde en las sombras. Un ignorante seguro perecer·.
-
-
-[TranslatorEvent13]
-
-Message=El centro de la pir·mide es el punto focal del poder del dios marino Nali Chizra.
-
-
-[TranslatorEvent10]
-
-Message=LA VARA DE 6 FUEGOS VINO DEL DIOS MARINO NALI CUANDO LA ESTRELLA CAY” DEL CIELO. PARA ENCONTRAR LA ESTRELLA UNO DEBE ATRAVESAR EL ALA CEREMONIAL.
-
-
-[Counter3]
-
-CountMessage=°Clac!
-
-CompleteMessage=La balsa est· suelta.
-
-
-[TranslatorEvent5]
-
-Message=SÛlo un guerrero que esgrima la vara de 6 fuegos podr· entrar en las c·maras de ceremonias internas. En cuanto la vara de 6 fuegos estÈ en tu poder, se elevar· el sello de piedra.
-
-
-[TranslatorEvent3]
-
-Message=Para llegar a la piscina del trueno uno tiene que escalar las piedras sueltas.
-
-
-[TranslatorEvent4]
-
-Message=SÛlo un guerrero que haya tocado la cara del Ìdolo del dios marino podr· entrar en este templo.
-
-
-[TranslatorEvent14]
-
-Message=Los demonios descendieron de las estrellas en una carroza met·lica como castigo por los pecados de los Nali.
-
-
-[TranslatorEvent18]
-
-Message=Detr·s de esta puerta de oro reside el altar de la vara de 6 fuegos. SÛlo tocando las piedras salientes de los pilares de fuego relampagueante podr· uno entrar.
-
-
-[TranslatorEvent6]
-
-Message=M·s all· de este precinto de piedra est·n las c·maras de ceremonias internas del dios marino Nali.
-
-
-[TranslatorEvent9]
-
-Message=La pir·mide es la llave a la c·mara de la muerte. AquÌ encontrar·s m·s poder para la vara de 6 fuegos.
-
-
-[TranslatorEvent8]
-
-Message=La vara de 6 fuegos sÛlo puede ser alcanzada por un guerrero que se haya baÒado en la piscina del trueno, pasado el obelisco de las nubes.
-
+Message="El dios Nali del agua Chizra y su templo sagrado han sido invadidos por las serpientes del agua y los demonios que han venido de las estrellas. S√≥lo el mes√≠as puede purificar el templo ahora."
 
 [TranslatorEvent11]
-
-Message=Toma la vara de 6 fuegos y vÈ a la c·mara de ceremonias interna. AllÌ encontrar·s tu camino de vuelta al lugar de donde has venido y la carroza met·lica que cayÛ de las estrellas.
-
+Message="Toma el palo de 6 fuegos y v√© a la c√°mara interna de ceremonias. All√≠ encontrar√°s tu camino de vuelta al lugar de donde has venido y la carroza met√°lica que ha ca√≠do desde las estrellas."
 
 [TranslatorEvent20]
+Message="M√≠rate a tus propios ojos. Y cuando tu coraje sea el m√°s fuerte tu √∫ltimo paso hacia el premio ser√° respaldado por tu fe."
 
-Message=MÌrate a tus propios ojos. Y cuando tu valor sea el m·s fuerte tu ˙ltimo paso hacia el premio ser· respaldado por tu fe. 
+[TranslatorEvent8]
+Message="El palo de 6 fuegos s√≥lo puede ser alcanzado por un guerrero que se haya ba√±ado en la piscina del trueno, m√°s all√° del obelisco de las nubes."
+
+[TranslatorEvent9]
+Message="La pir√°mide es la llave a la c√°mara de la muerte. Aqu√≠ encontrar√°s m√°s poder para el palo de 6 fuegos."
+
+[Counter3]
+CountMessage="¬°Clac!"
+CompleteMessage="La balsa est√° suelta"
+
+[TranslatorEvent6]
+Message="Detr√°s de este sello de piedra est√°n las c√°maras ceremoniales internas del dios del agua Nali."
+
+[TranslatorEvent18]
+Message="Detr√°s de esta puerta dorada reside el altar del palo de 6 fuegos. S√≥lo tocando las piedras salientes de los pilares de fuego atronador podr√° uno entrar."
+
+[TranslatorEvent14]
+Message="Los demonios descendieron de las estrellas en una carroza met√°lica como castigo por los pecados de los Nali."
+
+[TranslatorEvent5]
+Message="S√≥lo un guerrero que porte el palo de 6 fuegos podr√° entrar en las c√°maras ceremoniales internas. Una vez que el palo de 6 fuegos est√© en su poder se elevar√° el sello de piedra."
+
+[TranslatorEvent10]
+Message="EL PALO DE 6 FUEGOS VINO DEL DIOS DEL AGUA NALI CUANDO LA ESTRELLA CAY√ì DEL CIELO. PARA ENCONTRAR LA ESTRELLA UNO DEBE ATRAVESAR EL ALA CEREMONIAL."
+
+[TranslatorEvent13]
+Message="El centro de la pir√°mide es el punto focal del poder del dios del agua Nali Chizra."
+
+[TranslatorEvent19]
+Message="Escala las piedras sueltas para alcanzar la laguna del fuego atronador. Ten cuidado del demonio que vino de las estrellas, que merodea en las sombras. Un necio seguro perecer√°."
+
+[TranslatorEvent1]
+Message="Una poderosa fuerza viene de aquellos que dejen caer sobre ellos el agua de la cascada en la piscina del trueno."
+
+[TranslatorEvent12]
+Message="Esta es la piscina del trueno. Las almas impuras que se ba√±en en el agua se enfrentar√°n al demonio que vino de las estrellas."
+
+[TranslatorEvent4]
+Message="S√≥lo un guerrero que haya tocado la cara del √≠dolo del dios del agua podr√° entrar en este templo."
+
+[TranslatorEvent3]
+Message="Para llegar a la piscina del trueno uno tiene que escalar las piedras sueltas."
+
+[TranslatorEvent15]
+Message="1400 h. Comandante Mac Harrison: INF. SIT.: Estos nativos locales poseen un lanzacohetes de 6 barriles en un altar pero est√° bien vigilado por esas criaturas con forma de salamandra. Los Nali lo llaman "El palo de 6 fuegos". Intentar√© entrar sigilosamente esta noche."
+
+[TranslatorEvent2]
+Message="Este es el obelisco de las nubes. M√°s all√° de aqu√≠ se encuentra la piscina del trueno."
+
+[TranslatorEvent0]
+Message="Cuidado a aquellos con motivos impuros que entren en la piscina del trueno pues se enfrentar√°n al demonio de las estrellas"

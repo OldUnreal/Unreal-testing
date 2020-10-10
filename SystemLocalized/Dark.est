@@ -1,43 +1,28 @@
-[LevelInfo0]
+Ôªø[LevelInfo0]
+Title="Estadio Siniestro"
+LevelEntryText="Entrando al Estadio Siniestro"
 
-Title="Arena Oscura"
-
+[LevelSummary]
+Title="Estadio Siniestro"
+LevelEntryText="Entrando al Estadio Siniestro"
 
 [TranslatorEvent0]
-
-message="El dÈbil caer· bajo la mano de la bestia."
-
+Message="Los d√©biles ser√°n aplastados por la mano de la bestia."
 
 [TranslatorEvent2]
-
-message="He escapado de mi celda pero no tengo fuerzas para seguir adelante. Dad recuerdos a mi familia..."
-
-
-[TranslatorEvent1]
-
-message="Palancas para abrir la celda de la prisiÛn." #Translator's note: There's no TranslatorEvent1 in the map
-
+Message="He escapado de mi celda pero no tengo fuerzas para seguir adelante. Hagan que mi familia me recuerde..."
 
 [TranslatorEvent3]
-
-message="Ojal· hubiera muerto cuando se estrellÛ el Vortex Rikers. No sÈ quÈ va a ser de mÌ. Tengo miedo."
-
+Message="Ojal√° hubiera muerto cuando se estrell√≥ el Vortex Rikers. No s√© qu√© va a ser de m√≠. Tengo miedo."
 
 [TranslatorEvent4]
-
-message="Tengo tanta hambre. Espero que me encuentren los otros del grupo de exploradores del ISV Kran. Es la ˙nica esperanza que me mantiene vivo dÌa a dÌa. Sin aferrarme a ella ya estarÌa loco. No puedo soportar m·s los gritos de dolor."
-
+Message="Tengo mucha hambre. Espero que me encuentre el resto del grupo de exploraci√≥n del ISV-Kran. Es la √∫nica esperanza que me mantiene vivo d√≠a a d√≠a. Sin aferrarme a ella ya estar√≠a loco. No puedo soportar los gritos de dolor por m√°s tiempo."
 
 [TranslatorEvent5]
-
-message="Si tengo que morir en este lugar, por lo menos me alegra que algunos de mis apresadores estÈn aquÌ conmigo. MaÒana encontrarÈ mi paz en la muerte sabiendo que todos ellos han sufrido antes que yo."
-
+Message="Si tengo que morir en este lugar, por lo menos me alegra saber que algunos de mis apresadores est√°n aqu√≠ conmigo. Ma√±ana encontrar√© mi paz en la muerte sabiendo que todos ellos han sufrido antes que yo."
 
 [TranslatorEvent6]
-
-message="Tengo que encontrar una forma de salir de aquÌ. Los hombres lagarto encargados de este son extraÒamente b·rbaros teniendo en cuenta el avance tecnolÛgico que representan sus armas. Ser· m·s dificil engaÒarles de lo que pensaba, pero tengo que intentarlo."
-
+Message="Tengo que encontrar una forma de salir de aqu√≠. Los hombres lagarto encargados de este lugar son extra√±amente b√°rbaros teniendo en cuenta el avance tecnol√≥gico que implican sus armas. Puede que enga√±arlos sea m√°s dif√≠cil de lo que pensaba, pero tengo que intentarlo."
 
 [TranslatorEvent7]
-
-message="Los Skaarj han traÌdo un nuevo grupo de pieles blandas de dos brazos en otro de sus asaltos. Temo que uno de ellos sea el MesÌas, descenso de los cielos, pero rezarÈ para que me equivoque y no abandonarÈ las esperanzas de la libertad de mi pueblo." 
+Message="Los Skaarj han tra√≠do un nuevo grupo de pieles blandas de dos brazos en otro de sus asaltos. Temo que uno de ellos sea el Mes√≠as, descendido de los cielos, pero debo rezar para que me equivoque y no abandonar las esperanzas de la libertad de mi pueblo."

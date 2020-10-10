@@ -1,4 +1,7 @@
-[LevelInfo2]
+﻿[LevelInfo2]
+Title="Bounds of Foundry"
+
+[LevelSummary]
 Title="Bounds of Foundry"
 
 [Counter0]
@@ -17,4 +20,3 @@ Message="WARNING: Toxic fume buildup exceeds regulation limits. Exercise caution
 [TranslatorEvent5]
 Message="WARNING: Remain clear of Tarydium Byproducts unless properly outfitted with Toxin Suit."
 AltMessage="Test!"
-

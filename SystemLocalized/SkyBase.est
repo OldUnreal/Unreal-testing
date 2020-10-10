@@ -1,58 +1,40 @@
-[LevelInfo0]
+Ôªø[LevelInfo2]
+Title="Puesto Avanzado 3J"
+LevelEntryText="Entrando al Puesto Avanzado 3J"
 
-Title="Fortaleza de la MontaÒa"
-
-
-[TranslatorEvent2]
-
-message="Registro de Mensaje 7: El Buque Escolta acepta la peticiÛn de volver a suministrar el Fuerte Fronterizo 3J. Scout Skimmer 3J-1A autorizado a volver al buque escolta para recoger el cargamento."
-
-
-[TranslatorEvent4]
-
-message="Controles de Campos de Fuerza"
-
+[LevelSummary]
+Title="Puesto Avanzado 3J"
+LevelEntryText="Entrando al Puesto Avanzado 3J"
 
 [TranslatorEvent0]
-
-message="Registro de Seguridad: Fuerte Fronterizo 3J Comandante Base Ssja'Rath 10∫ TalÛn de Ssa'Rath. Para mantener el orden y la seguridad hemos vigilado continuamente a Nali en la ciudad. La Vigilancia es el Guardi·n del Honor."
-
-
-[TranslatorEvent3]
-
-message="Controles Izquierdos de la Puerta de la BahÌa Hangar"
-
-
-[TranslatorEvent1]
-
-message="Controles Principales de la Puerta de la BahÌa"
-
-
-[TranslatorEvent5]
-
-message="Controles Derechos de la Puerta de la BahÌa Hangar "
-
-
-[TranslatorEvent6]
-
-message="Controles Posteriores del Campo de Fuerza de Entrada"
-
+message="Registro de Seguridad: Puesto Avanzado 3J Comandante Base Ssja'Rath 10¬∫ Tal√≥n de Ssa'Rath. Para mantener el orden y la seguridad hemos vigilado continuamente a los Nali en la ciudad. La Vigilancia es la Guardia del Honor."
 
 [TranslatorEvent7]
+message="Controles del Teletransporte"
 
-message=" Controles del Teleguardi·n"
+[TranslatorEvent6]
+message="Controles del Campo de Fuerza de Entrada Posterior"
 
+[TranslatorEvent5]
+message="Controles de la Puerta de la Bah√≠a del Hangar Derecho"
 
-[TranslatorEvent8]
+[TranslatorEvent4]
+message="Controles del Campo de Fuerza"
 
-message="El objetivo del Teleguardi·n es la coordinaciÛn para la plataforma de transporte 13. Personal de centinela ya enviado para asegurar el ·rea contra resistencia. ¡rea libre para transmisiÛn de cargamento."
+[TranslatorEvent3]
+message="Controles de la Puerta de la Bah√≠a del Hangar Izquierdo"
 
+[TranslatorEvent2]
+message="Registro de Mensaje 7: La Nave Nodriza acepta la petici√≥n de resuministrar el Puesto Avanzado 3J. Explorador Flotante 3J-1A autorizado a volver a la nave nodriza para recoger cargamento."
 
-[TranslatorEvent9]
-
-message="Acceso no autorizado para abatir las catacumbas de la iglesia. Antes de dejar entrar, los de seguridad deben comprobar a todo el personal."
-
+[TranslatorEvent1]
+message="Controles Principales de la Puerta de la Bah√≠a"
 
 [TranslatorEvent10]
+message="Panel de Acceso de Seguridad Inferior"
 
-message="Bajar el Panel de Acceso de Seguridad " 
+[TranslatorEvent9]
+message="Evitar accessos no autorizados a las catacumbas de la iglesia. Todo el personal debe ser comprobado por seguridad antes de autorizar el acceso."
+
+[TranslatorEvent8]
+message="Coordenadas de destino del teletransporte situados en la plataforma de transporte de superficie 13. Personal centinela ya enviado para asegurar el √°rea contra resistencia. √Årea libre para transmisi√≥n de cargamento."

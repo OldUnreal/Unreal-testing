@@ -1,12 +1,6 @@
-[Public]
-
+ï»¿[Public]
 Object=(Name=SoftDrv.SoftwareRenderDevice,Class=Class,MetaClass=Engine.RenderDevice)
-
-Preferences=(Caption="Reproducción",Parent="Opciones avanzadas")
-
-Preferences=(Caption="Reproducción a través de software",Parent="Reproducción",Class=SoftDrv.SoftwareRenderDevice,Immediate=True)
-
+Preferences=(Caption="ReproducciÃ³n por Software",Parent="ReproducciÃ³n",Class=SoftDrv.SoftwareRenderDevice,Immediate=True)
 
 [SoftwareRenderDevice]
-
-ClassCaption="Reproducción a través de software" 
+ClassCaption="ReproducciÃ³n por Software"

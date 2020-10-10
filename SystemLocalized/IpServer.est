@@ -1,15 +1,9 @@
-[Public]
-
+ï»¿[Public]
 Object=(Name=IpServer.UdpServerUplink,Class=Class,MetaClass=Engine.Actor)
-
-Preferences=(Caption="Conexión con el servidor maestro",Parent="Opciones de red",Class=IpServer.UdpServerUplink,Immediate=True)
-
+Preferences=(Caption="ComunicaciÃ³n con Servidor Maestro",Parent="Juego en Red",Class=IpServer.UdpServerUplink,Immediate=True)
 
 [ServerUplink]
-
-ClassCaption="Conexión con el servidor maestro"
-
+ClassCaption="ComunicaciÃ³n con Servidor Maestro"
 
 [ServerQuery]
-
-ClassCaption="Petición de servidor del juego" 
+ClassCaption="Consulta al Servidor del Juego"

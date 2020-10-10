@@ -1,5 +1,10 @@
-[LevelInfo1]
+﻿[LevelInfo1]
 Title="Foundry Tarydium Plant"
+LevelEntryText="Entering the Foundry Tarydium Plant"
+
+[LevelSummary]
+Title="Foundry Tarydium Plant"
+LevelEntryText="Entering the Foundry Tarydium Plant"
 
 [TranslatorEvent1]
 Message="Barrier to higher lift controls intact. All systems normal."
@@ -18,4 +23,3 @@ Message="Barrier to higher lift controls inactive."
 
 [TranslatorEvent4]
 Message="Barrier to higher lift controls inactive."
-

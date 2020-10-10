@@ -1,195 +1,119 @@
-[Public] Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Return To Napali")
-
+锘縖Public]
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Regreso a Na Pali")
 Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
-
 Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
-
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
 
-
 [TransitionNullHUD]
-
-Statheader=Estad韘ticas de Muerte:
-
-CARStat=Rifle de Asalto de Combate
-
-RLStat=Lanzacohetes
-
-GLStat=Lanzagranadas
-
-ASMDStat=ASMD
-
-AutomagStat=Automag
-
-DispersionStat=Pistola de dispersi髇
-
-EightballStat=Eightball
-
-FlakCannonStat=Ca耋n de metralla
-
-GESBioRifleStat=Biorifle GES
-
-MinigunStat=Ametralladora
-
-RazorjackStat=Lanzacuchillas
-
-RifleStat=Rifle Francotirador
-
-StingerStat=Perforador
-
-TotalStat=Muertes en total
-
-LogEntryMsg=ENTRADA AL DIARIO:
-
-
-[UPakSinglePlayer]
-
-GameName=Paquete de misiones de Unreal
-
+Statheader="Estad铆sticas de Muertes: "
+CARStat="Rifle de Asalto de Combate"
+RLStat="Lanzacohetes UMS"
+GLStat="Lanzagranadas UMS"
+ASMDStat="ASMD"
+AutomagStat="Autopistola"
+DispersionStat="Pistola de Dispersi贸n"
+EightballStat="Lanzacohetes Eightball"
+FlakCannonStat="Ca帽贸n de Metralla"
+GESBioRifleStat="Bio Rifle GES"
+MinigunStat="Ametralladora"
+RazorjackStat="Lanzacuchillas"
+RifleStat="Rifle de Francotirador"
+StingerStat="Ca帽贸n Perforador"
+TotalStat="Muertes en Total"
+LogEntryMsg="ENTRADA DE DIARIO:"
 
 [GrenadeLauncher]
-
-PickupMessage="Tienes el Lanzagranadas."
-
-ItemName=Lanzagranadas
-
+PickupMessage="Tienes el Lanzagranadas UMS."
+ItemName="Lanzagranadas UMS"
 
 [Cloak]
-
-ExpireMessage=desactivado.
-
-PickupMessage=Tienes el dispositivo de camuflaje.
-
-ItemName=Dispositivo de camuflaje
-
+ExpireMessage="desactivado."
+PickupMessage="Tienes el Dispositivo de Camuflaje."
+ItemName="Dispositivo de Camuflaje"
 M_Activated=" activado"
-
 M_Deactivated=" desactivado"
 
+[UPakHUD]
+MultWeapSlotMsg="Presiona el bot贸n de seleccionar armas para cambiar armas."
 
-[CARifle]
-
-PickupMessage=Tienes el Rifle de Asalto de Combate
-
-ItemName=Rifle de Asalto de Combate
-
+[UPakSinglePlayer]
+GameName="Paquete de Misiones de Unreal"
 
 [RocketLauncher]
-
-PickupMessage=Tienes el Lanzamisiles.
-
-ItemName=Lanzamisiles
-
+PickupMessage="Tienes el Lanzacohetes UMS."
+ItemName="Lanzacohetes UMS"
 
 [UPakChooseGameMenu]
-
 MenuList[0]="Regreso a Na Pali"
-
-MenuList[1]=Unreal
-
-MenuList[2]=Unreal
-
-
-[UPakDebugger]
-
-ItemName=Analizador UPak
-
-
-[UPakScubaGear]
-
-PickupMessage=Tienes el equipo de buceo
-
-M_Deactivated=desactivado... Recargando.
-
-
-[UPakMaleOne]
-
-MenuName=Var髇 1
-
-
-[UPakFemaleOne]
-
-MenuName=Mujer 1
-
-
-[UPakFemaleTwo]
-
-MenuName=Mujer 2
-
-
-[UPakMaleThree]
-
-MenuName=Var髇 3
-
-
-[UPakMaleTwo]
-
-MenuName=Var髇 2
-
-
-[CARifleClip]
-
-PickupMessage=Tienes un cargador de 50 balas para el RAC.
-
-
-[GLAmmo]
-
-PickupMessage=Tienes 10 granadas.
-
-
-[RLAmmo]
-
-PickupMessage=Tienes 10 cohetes.
-
-
-[CompTablet]
-
-PickupMessage=Tienes la CompTablet.
-
-
-[GravityMatch]
-
-GameName=GravityMatch
-
+MenuList[1]="Unreal"
 
 [CloakMatch]
+GameName="Partida de Camuflaje"
 
-GameName=CloakMatch
+[CARifle]
+PickupMessage="Tienes el Rifle de Asalto de Combate"
+ItemName="Rifle de Asalto de Combate"
 
-
-[TerranWeaponMatch]
-
-GameName=TerranWeaponMatch
-
+[UPakScubaGear]
+RechargedMessage="Equipo de Buceo de Marines totalmente recargado."
+LowOxygenMessage="Bajo nivel de reserva de ox铆geno"
+PickupMessage="Tienes el Equipo de Buceo para Marines"
+ItemName="Equipo de Buceo para Marines"
+M_Deactivated="desactivado... Recargando."
 
 [MarineMatch]
+GameName="Partida de Marines"
 
-GameName=MarineMatch 
+[GravityMatch]
+GameName="Partida de Gravedad"
+
+[UPakDebugger]
+ItemName="Analizador UPak"
+
+[UPakMaleOne]
+MenuName="Var贸n 1"
+
+[UPakFemaleOne]
+MenuName="Mujer 1"
+
+[GLAmmo]
+PickupMessage="Tienes 10 granadas UMS."
+ItemName="Granadas UMS"
+
+[RLAmmo]
+PickupMessage="Tienes 10 cohetes UMS."
+ItemName="Cohetes UMS"
+
+[CARifleClip]
+PickupMessage="Tienes un Cargador de 50 Balas para el RAC."
+ItemName="Cargador RAC"
+
+[UPakFemaleTwo]
+MenuName="Mujer 2"
+
+[UPakMaleThree]
+MenuName="Var贸n 3"
+
+[UPakMaleTwo]
+MenuName="Var贸n 2"
+
+[TerranWeaponMatch]
+GameName="Partida de Armas Terr铆colas"
+
+[CompTablet]
+PickupMessage="Tienes la Tableta Computarizada."
+ItemName="Tableta Computarizada"

@@ -1,52 +1,43 @@
-[TranslatorEvent9]
+Ôªø[LevelInfo0]
+Title="Cubierta 1 del ISV-Kran"
+LevelEntryText="Entrando a la Cubierta 1 del ISV-Kran"
 
-Message=DENEGADO ACCESO AL PUENTE: CAMPO DE FUERZA DE SEGURIDAD ACTIVO: LOCALIZADA ANULACI”N PRINCIPAL EN SALA DE OBSERVACI”N
-
-AltMessage=PERMITIDO EL ACCESO AL PUENTE: DESACTIVADO CAMPO DE FUERZA DE SEGURIDAD
-
-
-[TranslatorEvent6]
-
-Message= ISV-KRAN, CUBIERTA 1: Registro: Capit·n Mikail Leatham. NO hay forma de matarlos a TODOS - Hay demasiados Skaarj y no tenemos suficientes municiones.
-
-
-[TranslatorEvent4]
-
-Message=ALERTA:TODOS LOS MIEMBROS DE LA TRIPULACI”N DIRIGIRSE A CUBIERTA 4:SE HA INFILTRADO EN LA NAVE UN DESTACAMENTO SKAARJ.
-
-
-[TranslatorEvent3]
-
-Message=ISV-KRAN CUBIERTA 1: AVISO: BARRERA DE CAMPO EL…CTRICO DE 85.000 VOLTIOS COLOCADA EN LABORATORIO DE INVESTIGACI”N. ACTIVADA DISTRIBUCI”N DE POTENCIA DE TRES SALAS DE CONTROL DE TRANSFORMADOR.
-
-AltMessage=ISV-KRAN CUBIERTA 1: BARRERA DE CAMPO EL…CTRICO DESACTIVADA.
-
-
-[TranslatorEvent2]
-
-Message=ISV-KRAN, CUBIERTA 1: Registro: Capit·n Mikail Leatham. Los ataques de los Skaarj nos han obligado a retroceder al Laboratorio de InvestigaciÛn CientÌfica. Hemos colocado una Barrera ElÈctrica provisional que se ha cargado a 40 pero a˙n quedan 20.
-
-
-[TranslatorEvent0]
-
-Message=ISV-KRAN:MONITOR DE ESPECÕMEN EN LABORATORIO DE INVESTIGACI”N CIENTÕFICA: He descubierto que estos amebas amorfos son muy ·cidos. Es increÌble la arquitectura de su estructura b·sica genÈtica. Tatiana Zimna -Oficial Jefe MÈdico.
-
-
-[TranslatorEvent7]
-
-Message=ISV-KRAN, CUBIERTA 1: ALERTA DESBORDAMIENTO DE REFRIGERANTE DE MOTORES: ROTURA DE MOTOR PRINCIPAL: EVACUAR LA NAVE INMEDIATAMENTE.
-
+[LevelSummary]
+Title="Cubierta 1 del ISV-Kran"
+LevelEntryText="Entrando a la Cubierta 1 del ISV-Kran"
 
 [TranslatorEvent12]
+Message="INSTRUCCIONES PARA TRANSPORTADOR DE EMERGENCIA: ENTRE AL TRANSPORTADOR OCTAGONAL. EL SISTEMA DE PROTECCI√ìN SE ACTIVAR√Å AUTOM√ÅTICAMENTE."
 
-Message=INSTRUCCIONES PARA TRANSPORTADOR DE EMERGENCIA: PASE AL TRANSPORTADOR OCTAGONAL. EL SISTEMA DE PROTECCI”N SE ACTIVAR¡ AUTOM¡TICAMENTE.
+[TranslatorEvent2]
+Message="ISV-KRAN, CUBIERTA 1: Registro: Capit√°n Mikail Leatham. Los ataques de los Skaarj nos han obligado a retroceder al Laboratorio de Investigaci√≥n y Desarrollo. Hemos colocado una Barrera El√©ctrica provisional que ha eliminado a 40 pero a√∫n quedan 20."
 
+[TranslatorEvent0]
+Message="ISV-KRAN: MONITOR DE ESPEC√çMEN EN LABORATORIO DE INVESTIGACI√ìN CIENT√çFICA: He descubierto que estas amebas amorfas son muy √°cidas. Es incre√≠ble la arquitectura de su estructura b√°sica gen√©tica. Tatiana Zimna - Jefa Oficial M√©dica."
 
 [TranslatorEvent1]
+Message="AVISO: PUERTAS DE LABORATORIO Y CAMPOS CON ESPEC√çMENES EN MAL ESTADO DE FUNCIONAMIENTO. TRAS LA ACTIVACI√ìN SE ACCIONAR√Å UN RETRASO DE DESCONEXI√ìN DE 30 SEGUNDOS."
 
-Message=AVISO: PUERTAS DE LABORATORIO Y CAMPOS CON ESPECÕMENES EST¡N EN MAL FUNCIONAMIENTO. DESPU…S DE LA ACTIVACI”N SE ACCIONAR¡ RETRASO DE DESCONEXI”N DE 30 SEGUNDOS.
+[TranslatorEvent7]
+Message="ISV-KRAN, CUBIERTA 1: ALERTA: DESBORDAMIENTO DE REFRIGERANTE DE MOTORES: ROTURA DE MOTOR PRINCIPAL: EVACUAR LA NAVE INMEDIATAMENTE."
 
+[TranslatorEvent6]
+Message="ISV-KRAN, CUBIERTA 1: Registro: Capit√°n Mikail Leatham. NO hay forma de matarlos a TODOS. Hay demasiados Skaarj y no tenemos suficientes municiones."
 
-[LevelInfo0]
+[TranslatorEvent9]
+Message="ACCESO AL PUENTE DENEGADO: CAMPO DE FUERZA DE SEGURIDAD ACTIVO: ANULACI√ìN PRINCIPAL LOCALIZADA EN SALA DE OBSERVACI√ìN"
+AltMessage="ACCESO AL PUENTE PERMITIDO: DESACTIVADO CAMPO DE FUERZA DE SEGURIDAD"
 
-Title=ISVDECK1 
+[TranslatorEvent11]
+Message="SISTEMA DE TRANSPORTADOR DE EMERGENCIA ACTIVADO: COORDENADAS SITUADAS EN ALDEA NALI A 5 KIL√ìMETROS DE MONTA√ëA EN FORMA DE AGUJA"
+
+[TranslatorEvent8]
+Message="ANULACI√ìN DEL CAMPO DE FUERZA DEL PUENTE DE SEGURIDAD: ESTADO ACTIVO"
+AltMessage="ANULACI√ìN DEL CAMPO DE FUERZA DEL PUENTE DE SEGURIDAD: ESTADO DESACTIVADO"
+
+[TranslatorEvent3]
+Message="ISV-KRAN CUBIERTA 1: AVISO - BARRERA DE CAMPO EL√âCTRICO DE 85.000 VOLTIOS COLOCADA EN LABORATORIO DE INVESTIGACI√ìN: ACTIVADA DISTRIBUCI√ìN DE ENERG√çA DESDE TRES SALAS DE CONTROL DE TRANSFORMADOR"
+AltMessage="ISV-KRAN CUBIERTA 1: BARRERA DE CAMPO EL√âCTRICO DESACTIVADA."
+
+[TranslatorEvent4]
+Message="ALERTA: TODOS LOS MIEMBROS DE LA TRIPULACI√ìN PRESENTARSE A CUBIERTA 4: SE HA INFILTRADO EN LA NAVE UN GRUPO DE GUERRA SKAARJ."

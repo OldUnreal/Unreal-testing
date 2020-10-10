@@ -1,43 +1,31 @@
-[LevelInfo2]
-
+Ôªø[LevelInfo2]
 Title="Refugio Na Pali"
+LevelEntryText="Entrando al Refugio Na Pali"
 
-
-[TranslatorEvent7]
-
-message="Controles de la Puerta de Entrada en la MontaÒa en la Base Subacu·tica"
-
-
-[TranslatorEvent6]
-
-message="Todas las fuerzas de seguridad deben mantener bajo control a los habitantes de Nali. Mata a todos los que quieran resistirse. SÛlo tenemos que mantener suficientes trabajadores dÛciles para la mina de Tarydium."
-
-
-[TranslatorEvent5]
-
-message="Centro de ObservaciÛn: El Ojo Ve y la Mente Sabe. Recuerda no molestar a los habitantes de Nali innecesariamente ya que mientras crean que est·n libres no se rebelar·n. Esta falsa esperanza es nuestro principal mecanismo de control."
-
-
-[TranslatorEvent4]
-
-message="Palanca para abrir las Puertas Externas "
-
-
-[TranslatorEvent3]
-
-message="No entiendo por quÈ juegan con nosotros. Mi hogar solÌa ser un lugar de risas y alegrÌa para mis conciudadanos. Ahora tan sÛlo sirvo los caprichos de los Demonios del Cielo a cambio de la vida de mi familia. Aguardo al Mesias."
-
-
-[TranslatorEvent2]
-
-message="He visto raras bestias voladoras desaparecer en las profundidades de la montaÒa de noche. Es ensordecedor el rugir que hacen cuando vuelan sobre mi cabeza. Nunca habÌa oÌdo nada semejante. Creo que en la montaÒa debe morar una gran maldad."
-
-
-[TranslatorEvent1]
-
-message="AquÌ nos dejan que nos ocupemos de nuestros asuntos, pero en realidad es una farsa. SÈ que nos est·n vigilando y control·ndonos. Creo que este refugio que alguna vez fue seguro est· tan muerto como debajo de la superficie de la tierra."
-
+[LevelSummary]
+Title="Refugio Na Pali"
+LevelEntryText="Entrando al Refugio Na Pali"
 
 [TranslatorEvent0]
+message="He reunido todos estos raros artefactos con la esperanza de que el Mes√≠as los utilice cuando venga a librarnos de los Demonios del Cielo. No conozco su uso pero las se√±ales eran claras, las estrellas presagiaban la necesidad."
 
-message="He reunido todos esos raros artefactos con la esperanza de que el Mesias los utilice cuando venga a liberarnos de los Demonios del Cielo. No conozco sus costumbres pero los signos est·n bien claros, las estrellas presagiaban la necesidad." 
+[TranslatorEvent7]
+message="Controles de la Puerta Subacu√°tica de Entrada a la Base en la Monta√±a"
+
+[TranslatorEvent6]
+message="Todas las fuerzas de seguridad deben mantener bajo control a los habitantes Nali. Todos aquellos que muestren se√±ales de resistencia deben ser eliminados. S√≥lo tenemos que mantener suficientes trabajadores d√≥ciles para minar el taridio."
+
+[TranslatorEvent5]
+message="Centro de Observaci√≥n: El Ojo Ve y la Mente Sabe. Recuerden no molestar a los habitantes Nali innecesariamente ya que mientras crean que est√°n libres no se rebelar√°n. Esta falsa esperanza es nuestro principal mecanismo de control."
+
+[TranslatorEvent4]
+message="Palanca de Apertura de Puertas Externas"
+
+[TranslatorEvent3]
+message="No entiendo por qu√© juegan con nosotros. Mi establecimiento sol√≠a ser un lugar de risas y alegr√≠a para mis conciudadanos. Ahora tan s√≥lo sirvo los caprichos de los Demonios del Cielo a cambio de la vida de mi familia. Aguardo al Mesias."
+
+[TranslatorEvent2]
+message="He visto raras bestias voladoras desaparecer en las profundidades de la monta√±a de noche. Es ensordecedor el rugir que hacen cuando vuelan sobre mi cabeza. Nunca hab√≠a o√≠do nada semejante. Creo que en la monta√±a debe morar una gran maldad."
+
+[TranslatorEvent1]
+message="Aqu√≠ nos dejan que nos ocupemos de nuestros asuntos, pero en realidad es una farsa. S√© que nos est√°n vigilando y controlando. Creo que este refugio que alguna vez fuera seguro est√° tan muerto como la superficie del planeta all√≠ abajo."

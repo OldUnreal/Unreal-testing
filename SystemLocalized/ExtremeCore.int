@@ -1,5 +1,10 @@
-[LevelInfo0]
+﻿[LevelInfo0]
 Title="MotherShip Core"
+LevelEntryText="Entering the MotherShip Core"
+
+[LevelSummary]
+Title="MotherShip Core"
+LevelEntryText="Entering the MotherShip Core"
 
 [TranslatorEvent10]
 AltMessage="Access to the Security Post granted."
@@ -10,28 +15,27 @@ Message="WARNING: Armed intruder detected. Close all access to the Source and to
 AltMessage="RED ALERT: Core Generator Security Compromised."
 
 [TranslatorEvent5]
-Message="SECURITY ALERT: All WarMasters report to Core Generator positions to insure its protection."
+Message="SECURITY ALERT: All War Masters report to Core Generator positions to ensure its protection."
 AltMessage="Intruder detected near the Core Generator. Core Generator security must be maintained. Weakness shall be punished."
 
 [TranslatorEvent8]
-Message="Securit Post, ACCESS DENIED"
+Message="Security Post, ACCESS DENIED."
 
 [TranslatorEvent9]
-Message="Primary Power Supply, ACCESS DENIED"
+Message="Primary Power Supply, ACCESS DENIED."
 Hint="Door can be unlocked from the control panel in the Security Post."
 
 [TranslatorEvent11]
-Message="ACCESS DENIED: The Intruder must be eliminated. All WarMasters are being routed to this area upon arrival from the Source."
+Message="ACCESS DENIED: The Intruder must be eliminated. All War Masters are being routed to this area upon arrival from the Source."
 Hint="Kill all the Skaarj to proceed to this area."
 
 [TranslatorEvent12]
-AltMessage="CryoPods status: Temperature constant, Power at nominal levels, security systems active."
+AltMessage="Cryo Pods status: Temperature constant, Power at nominal levels, security systems active."
 
 [TranslatorEvent6]
 Message="Core Generator security must be maintained. Access doors locked until security breach is contained."
-AltMessage="Core Access Door Open "
+AltMessage="Core Access Door Open."
 
 [TranslatorEvent13]
 Message="Emergency Power Supply, ACCESS DENIED: Primary Power Supply fully functional."
 Hint="Find the Core Generator and destroy it to gain access to this area."
-

@@ -1,8 +1,13 @@
-[LevelInfo0]
-Title="SpireVillage"
+﻿[LevelInfo0]
+Title="Spire Village"
+LevelEntryText="Entering the Spire Village"
+
+[LevelSummary]
+Title="Spire Village"
+LevelEntryText="Entering the Spire Village"
 
 [TranslatorEvent19]
-Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors.The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"
+Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"
 Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
 
 [TranslatorEvent2]
@@ -18,4 +23,3 @@ Hint="Search the houses thoroughly and follow the valley to the gate. Watch out 
 
 [TranslatorEvent21]
 Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
-

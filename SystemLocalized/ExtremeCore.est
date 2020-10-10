@@ -1,62 +1,41 @@
-[LevelInfo0]
+ï»¿[LevelInfo0]
+Title="NÃºcleo de la Nave Nodriza"
+LevelEntryText="Entrando al NÃºcleo de la Nave Nodriza"
 
-Title="Núcleo de la Nave Nodriza"
-
-
-[TranslatorEvent13]
-
-message="Fuente de Energía de Emergencia, ACCESO DENEGADO: Fuente de Energía Primaria completamente funcional."
-
-Hint="Busca el Generador Central y destrúyelo para conseguir acceso a esta zona."
-
-
-[TranslatorEvent4]
-
-message="AVISO: Intruso armado detectado. Cerrar todos los accesos a la Fuente y a la Fuente de Energía Primaria. Es crítico prevenir la entrada de intrusos en el Generador Central."
-
-AltMessage="ALERTA ROJA: Seguridad del Generador Central Comprometida."
-
-
-[TranslatorEvent5]
-
-message="ALERTA DE SEGURIDAD: Todos los WarMasters dirigirse a las posiciones del Generador Central para asegurar su protección."
-
-AltMessage="Intruso detectado cerca del Generador Central. Debe mantenerse la seguridad del Generador Central. Se castigará la debilidad."
-
-
-[TranslatorEvent6]
-
-message="Debe mantenerse la seguridad del Generador Central. Puertas de acceso cerradas hasta que se contenga el quebrantamiento de seguridad."
-
-AltMessage="Puerta de Acceso al Núcleo Abierta."
-
+[LevelSummary]
+Title="NÃºcleo de la Nave Nodriza"
+LevelEntryText="Entrando al NÃºcleo de la Nave Nodriza"
 
 [TranslatorEvent10]
-
 AltMessage="Acceso al Puesto de Seguridad permitido."
+Hint="Ve al Puesto de Seguridad para conseguir acceso a la Fuente de EnergÃ­a Primaria del Generador Central."
 
-Hint="Vé al Puesto de Seguridad para conseguir acceso a la Fuente de Energía Primaria del Generador Central."
+[TranslatorEvent4]
+Message="AVISO: Intruso armado detectado. Cerrar todos los accesos a la Fuente y a la Fuente de EnergÃ­a Primaria. Es imperativo evitar el ingreso de intrusos en el Generador Central."
+AltMessage="ALERTA ROJA: Seguridad del Generador Central Comprometida."
 
-
-[TranslatorEvent11]
-
-message="ACCESO DENEGADO: El Intruso debe ser eliminado. Todos los WarMasters están siendo conducidos a esta zona tras su llegada de la Fuente."
-
-Hint="Mata a todos los Skaarj para acceder a esta zona."
-
-
-[TranslatorEvent12]
-
-AltMessage="Estado de las Vainas Criogénicas: Temperatura constante, Potencia a niveles nominales, sistemas de seguridad activos."
-
+[TranslatorEvent5]
+Message="ALERTA DE SEGURIDAD: Todos los Maestros de Guerra presentarse a las posiciones del Generador Central para asegurar su protecciÃ³n."
+AltMessage="Intruso detectado cerca del Generador Central. Debe mantenerse la seguridad del Generador Central. La debilidad serÃ¡ castigada."
 
 [TranslatorEvent8]
-
-message="Puesto de Seguridad, ACCESO DENEGADO"
-
+Message="Puesto de Seguridad, ACCESO DENEGADO"
 
 [TranslatorEvent9]
+Message="Fuente de EnergÃ­a Primaria, ACCESO DENEGADO"
+Hint="Las puertas pueden abrirse desde el panel de control en el Puesto de Seguridad."
 
-message="Fuente de Energía Primaria, ACCESO DENEGADO"
+[TranslatorEvent11]
+Message="ACCESO DENEGADO: El Intruso debe ser eliminado. Todos los Maestros de Guerra estÃ¡n siendo conducidos a esta zona tras su llegada de la Fuente."
+Hint="Mata a todos los Skaarj para acceder a esta zona."
 
-Hint="Las puertas pueden abrirse desde el panel de control en el Puesto de Seguridad." 
+[TranslatorEvent12]
+AltMessage="Estado de las Vainas CriogÃ©nicas: Temperatura constante, Potencia a niveles nominales, sistemas de seguridad activos."
+
+[TranslatorEvent6]
+Message="Debe mantenerse la seguridad del Generador Central. Puertas de acceso cerradas hasta que se contenga el quebrantamiento de seguridad."
+AltMessage="Puerta de Acceso al NÃºcleo Abierta."
+
+[TranslatorEvent13]
+Message="Fuente de EnergÃ­a de Emergencia, ACCESO DENEGADO: Fuente de EnergÃ­a Primaria completamente funcional."
+Hint="Busca el Generador Central y destrÃºyelo para conseguir acceso a esta zona."

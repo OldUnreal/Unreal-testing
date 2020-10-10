@@ -1,58 +1,29 @@
-[LevelInfo0]
+﻿[LevelInfo0]
+Title="Pasaje Sagrado"
+LevelEntryText="Entrando al Paso Sagrado"
 
-Title="Las C�maras Ceremoniales"
-
-LevelEnterText="Entrar la Ceremoniales"
-
-
-[TranslatorEvent15]
-
-message="The inner c�maras ceremoniales . Aqui el serpirnte del aqua quiere tomar el peil del los que son deb�l . Solo un guerrero que puede nadar como un serpiente lo puede escapar"
-
-
-[TranslatorEvent0]
-
-message="Sgt. William Bradford: "Uno de esos slamenandro costias han matado a m� peloton entero . No tengo municion y estoy metido con un cura en un santuario para dias. Quando el rezars mira al puerto".
-
-
-[TranslatorEvent2]
-
-Message=Solo el puro de coraz(nes pueden pagar homenaje al dios del Chizra
-
-Hint=Activar la palanca para dejar el aqua pasar.
-
-
-[TranslatorEvent12]
-
-Message=' ...Por eso sera la clave
-
-Hint= Activar la palanca para dejar el aqua pasar
-
-
-[TranslatorEvent13]
-
-Message=Tienes ser muy alerta . Para lavar to en los aquas sagrados.
-
-Hint=Mirar a todos los posibidades.
-
-
-[TranslatorEvent11]
-
-Message=' Seguro que puedes romper un trozo de madera'
-
-Hint= Activar la palanca para dejar el aqua pasar
-
-
-[TranslatorEvent0]
-
-Hint=Ba(arse para buscar un pasaje secreto .
-
+[LevelSummary]
+Title="Pasaje Sagrado"
+LevelEntryText="Entrando al Paso Sagrado"
 
 [TranslatorEvent1]
+Hint="Nada y busca un paso secreto."
 
-Hint= Ba(arse para buscar un pasaje secreto .
+[TranslatorEvent12]
+Message=""...ya que esa será la clave""
+Hint="Activa la palanca para dejar correr el agua."
 
+[TranslatorEvent13]
+Message="Deberás tener un ojo atento, así podrás bañarte en las aguas sagradas."
+Hint="Observa cada rostro."
 
-[LevelInfo0]
+[TranslatorEvent11]
+Message=""La madera deberá ser liberada...""
+Hint="Activa la palanca para dejar correr el agua."
 
-Titulo Pasaje sagrado 
+[TranslatorEvent0]
+Hint="Nada y busca un paso secreto."
+
+[TranslatorEvent2]
+Message="Solo quienes sean puros de corazón podrán rendir homenaje al Dios del Buen Saber Chizra"
+Hint="Activa la palanca para dejar correr el agua."

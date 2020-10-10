@@ -1,34 +1,25 @@
-[TranslatorEvent2]
+﻿[LevelInfo0]
+Title="Aldea de la Punta"
+LevelEntryText="Entrando a la Aldea de la Punta"
 
-Message=Refugio seguro para aquellos que anhelan la paz, bienvenidos.
-
-Hint=Examina minuciosamente las casas y sigue por el valle hasta la puerta. Ten cuidado con los Titanes!
-
+[LevelSummary]
+Title="Aldea de la Punta"
+LevelEntryText="Entrando a la Aldea de la Punta"
 
 [TranslatorEvent19]
+Message="Nuestro Refugio, la gran Punta del Sol, otorgado a nosotros por el Dios del Buen Saber, ha sido corrompida por los Demonios del Cielo. Aquello que en otro tiempo fuera nuestra esperanza es ahora el mayor de nuestros terrores. Los Demonios del Cielo son más fuertes que nunca."
+Hint="Examina minuciosamente las casas y sigue por el valle hasta la puerta. ¡Ten cuidado con los Titanes!"
 
-Message=Nuestro Refugio, el gran Sunspire. Los Dioses de la Biblia de la Sabiduria nos ha dado, ha sido corrompido por los Demonios del Cielo. En otro tiempo fue nuestra esperanza es ahora el terror m�s inmunde. Los Demonios del Cielo son m�s fuertes que nunca.
-
-Hint= Examina minuciosamente las casa y sigue por el valle hasta la puerta. Ten cuidado con los Titanes!
-
-
-[TranslatorEvent21]
-
-Hint= Examina minuciosamente las casas y sigue por el valle hasta la puerta. Ten cuidado con los Titanes!
-
-
-[TranslatorEvent22]
-
-Hint= Examina minuciosamente las casas y sigue por el valle hasta la puerta. Ten cuidado con los Titanes!
-
+[TranslatorEvent2]
+Message="Refugio seguro para quienes anhelan la paz. Sean bienvenidos."
+Hint="Examina minuciosamente las casas y sigue por el valle hasta la puerta. ¡Ten cuidado con los Titanes!"
 
 [TranslatorEvent18]
+Message="Los esbirros de nuestros Dioses son arrojados al campo de batalla para luchar. Somos puestos a prueba. Nuestro mundo se debilita y vomita terribles criaturas. Volveremos a rezar esta noche. ¡Oh, escucha nuestras plegarias! ¡Envíanos al mesias!"
+Hint="Examina minuciosamente las casas y sigue por el valle hasta la puerta. ¡Ten cuidado con los Titanes!"
 
-Message=Arrojan los esbirros de nuestros Dioses al campo de batalla a luchar. Nos ponen a prueba. Nuestro mundo se debilita y vomita terribles criaturas. Volveremos a rezar esta noche. Oh, escucha nuestras plegarias! �Env�anos al mesias!
+[TranslatorEvent22]
+Hint="Examina minuciosamente las casas y sigue por el valle hasta la puerta. ¡Ten cuidado con los Titanes!"
 
-Hint= Examina minuciosamente las casa y sigue por el valle hasta la puerta. Ten cuidado con los Titanes!
-
-
-[LevelInfo0]
-
-Title=SpireVillage 
+[TranslatorEvent21]
+Hint="Examina minuciosamente las casas y sigue por el valle hasta la puerta. ¡Ten cuidado con los Titanes!"

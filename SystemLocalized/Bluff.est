@@ -1,168 +1,104 @@
-[TranslatorEvent30]
+Ôªø[LevelInfo0]
+Title="Acantilado Eversmoking"
+LevelEnterText="Entrando en el Acantilado Eversmoking"
 
-Message=TORRE DE GUARDIA DE LA PUERTA PRINCIPAL
-
-
-[TranslatorEvent29]
-
-Message=Diario personal de Kruun: He de vigilar las veces que entro a hurtadillas al monasterio por los t˙neles. He marcado con una cruz el t˙nel que va al monasterio interior, los otros conducen a la prisiÛn donde a˙n est· mi hermano.
-
-
-[TranslatorEvent19]
-
-Message=Me encuentro mal. Me ha empeorado la tos y esta celda oscura no es de gran ayuda. SÛlo espero que mi hermano Kruun pueda escapar a nuestro escondite de la infancia en las alcantarillas. Desde ahÌ podr· acceder a los muros internos del monasterio.
-
-
-[TranslatorEvent28]
-
-Message=Carcelero Hrang, Tribu Mano Roja: °°°No me lo puedo creer!!! °La chica terrÌcola ha escapado! Uno de esos despreciables monjes Nali debe haberla sacado por el t˙nel. °Estoy en un BUEN LÕO! °Si viene el Capit·n DUK'CHOROTH y se entera de que la he dejado escapar seguro que serÈ de-hrangueado!
-
-
-[TranslatorEvent27]
-
-Message=Carcelero Hrang, Tribu Mano Roja: °Dorro me debe 25,000 Paaras de oro cuando lleguemos a casa! Me chupa hasta la ˙ltima gota. Apresurarle es como quitarle un caramelo a un bebÈ terrÌcola. Hablando del tema, °creo que ya es hora de apalear a esa fea prisionera terrÌcola un poco m·s!
-
-
-[TranslatorEvent25]
-
-Message=Carcelero Hrang de la Tribu Mano Roja: hemos capturado a una chica terrÌcola. Algunos de mis soldados intentan tomarse libertades con ella. °Supongo que est· bien siempre y cuando tengan cuidado con los botazos! La ˙ltima vez diÛ en los Hrangos.
-
-
-[TranslatorEvent15]
-
-Message=C·mara de los muertos-AquÌ se encuentra el ˙ltimo lugar de descanso del Sumo Sacerdote de Bluff Eversmoking y los artefactos utilizados por el MesÌas.
-
-Hint=Busca una palanca secreta en el cementerio
-
-
-[TranslatorEvent24]
-
-Message=Diario de EnvÌos: Grorq de la Tribu Mano Roja. Cuando salga la prÛxima luna llena, esperamos un gran cargamento de suministros rescatados de la nave espacial humana. Debo hacer algunas reparaciones a los raÌles elÈctricos alrededor de Bluff pero para entonces estaremos preparados.
-
-
-[TranslatorEvent26]
-
-Message=Diario de EnvÌos: Grorq de la Tribu Mano Roja. Me estoy hartando de cÛmo nos tratan los Skaarj. Siempre d·ndonos Ûrdenes y mand·ndonos vigilar a sus patÈticos esclavos Nali. Mis tropas ya est·n hartas de esta situaciÛn.
-
-
-[TranslatorEvent9]
-
-Message=NODOS DE DESCARGA EST¡TICA: LOS DISYUNTORES ESTE Y OESTE DEBEN SER DESPRENDIDOS PARA SOLTAR DESCARGA EST¡TICA.
-
-AltMessage=DESCARGA EST¡TICA SUELTA-VAG”N DE ENVÕOS HIDROEL…CTRICO AHORA EN TOTAL FUNCIONAMIENTO.
-
-
-[TranslatorEvent3]
-
-Message=Mi hermano Kriin est· en la celda debajo de mÌ. Mi otro hermano Kruun se escapÛ por el t˙nel del agua bajo las escaleras. Han sacrificado a mi mejor amigo Jaara por la huida de Kruun.
-
-
-[TranslatorEvent0]
-
-Message=Diario de la Oficial Jefe MÈdica del ISV-KRAN:-Tatiana Zimna: Buscando a los secuestradores de Kira hemos llegado a este bonito monasterio en el lago del caÒÛn. Esta noche acamparemos cerca de este crucifijo y partiremos maÒana temprano.
-
-
-[TranslatorEvent5]
-
-Message=ESTACI”N DE CONTROL DE POTENCIA PARA VAG”N DE ENVÕOS SKAARJ: ESTADO DE VAG”N DE ENVÕOS HIDROEL…CTRICO - DESACTIVADO/REACTIVACI”N REQUIERE ABRIR NODOS DE DESCARGA EL…CTRICA EN LO ALTO DEL CAMPANARIO.
-
-
-[TranslatorEvent8]
-
-Message=CIERRES MAGN…TICOS ACTIVADOS: AUTORIZADO POR EL CAPIT¡N DUK'CHOROTH-DE LA CASA XII DE dUBREVI
-
-AltMessage=CIERRES MAGN…TICOS DESACTIVADOS.
-
-
-[TranslatorEvent10]
-
-Message=TEN FE Y NUNCA TE APARTES DE TUS CREENCIAS. S”LO UN ALMA QUE CONSERVA LA FE A PESAR DE TODA OPRESI”N TRIUNFAR¡ CUANDO LA PRINCESA SALVADORA VENGA DE LAS ESTRELLAS.
-
-
-[TranslatorEvent2]
-
-Message=Oficial CientÌfica Kira Argmanov: Separada de mis compaÒeros de tripulaciÛn del ISV-KRAN, me he mantenido viva escondiÈndome en este campanario. Un Nali nativo me ayudÛ a escapar de la celda donde me encerraron los Skaarj. Con suerte, no podr·n encontrarme aquÌ.
-
-
-[TranslatorEvent20]
-
-Message=Sumo Sacerdote De'Nasha Breeche 255-480
-
-
-[TranslatorEvent21]
-
-Message=Monaguillo Ne'Lin Garas 353-487
-
-
-[TranslatorEvent4]
-
-Message=ESTACI”N DE CONTROL HIDROL¡SER: L¡SERS ACTIVADOS Y OPERATIVOS
-
-AltMessage=ESTACI”N DE CONTROL HIDROL¡SER: L¡SERS DESACTIVADOS - ENTRADA AL GENERADOR HIDROEL…CTRICO BAJO EL CAMPANARIO PERMITIDA
-
-
-[TranslatorEvent1]
-
-Message=Oficial de Seguridad Sergai Dubrov: ISV-KRAN: Entrada de diario: Estamos pisando los talones al destacamento de Caza Skaarj que capturÛ a Kira cerca del Sunspire. Se dirigen al norte hacia las tormentas elÈctricas azules en el horizonte.
-
+[LevelSummary]
+Title="Acantilado Eversmoking"
+LevelEnterText="Entrando en el Acantilado Eversmoking"
 
 [TranslatorEvent7]
+Message="VAG√ìN DE TRANSPORTE HIDROEL√âCTRICO A POTENCIA M√ÅXIMA Y LISTO PARA SALIDA. LOS NODOS DE DESCARGA ELECTROEST√ÅTICA EN LO ALTO DEL CAMPANARIO DEBEN SER ACTIVADOS ANTES DEL ARRANQUE."
 
-Message=VAG”N DE ENVÕOS HIDROEL…CTRICO A POTENCIA M¡XIMA Y LISTO PARA SALIDA. LOS NODOS DE DESCARGA ELECTROEST¡TICA DEBEN SER ACTIVADOS EN LO ALTO DEL CAMPANARIO ANTES DEL ARRANQUE.
-
-
-[TranslatorEvent6]
-
-AltMessage=CIERRES MAGN…TICOS DEL CAMPANARIO DESACTIVADOS: ACCESO AL CAMPANARIO PERMITIDO.
-
-
-[TranslatorEvent12]
-
-Message=°He descubierto un secreto! La noche anterior salÌ a hurtadillas de mi escondite y nadÈ por las tuberÌas a la prisiÛn. Han capturado una Chica! El sargento Krall recibiÛ dos patadas en la boca cuando se acercÛ a ella. °Jajaja! SÛlo puedo reirme de su estupidez.
-
-
-[TranslatorEvent14]
-
-Message=La mujer que capturaron va a ser ejecutada. °No lo puedo permitir! Aunque parezca una locura intentarÈ sacarla de la celda de la prisiÛn a escondidas a travÈs de nuestras cuevas secretas. Desde allÌ ella podr· escapar al campanario hasta que oscurezca.
-
+[TranslatorEvent20]
+Message="Sumo Sacerdote De'Nasha Breeche 255-480"
 
 [TranslatorEvent11]
+Message="Llevo escondido aqu√≠ desde hace varios meses, o al menos eso creo. Las fuerzas Skaarj que han tomado nuestro monasterio contin√∫an transportando taridio robado y otros extra√±os dispositivos mec√°nicos mediante su trineo de rayo. Temo que puedan encontrarme."
 
-Message=Llevo aquÌ escondido desde hace aparentemente meses. Las fuerzas Skaarj que han conquistado nuestro monasterio contin˙an transportando taridio robado y otros extraÒos dispositivos mec·nicos mediante su trineo de rayo. Temo que me encuentren.
+[TranslatorEvent8]
+Message="CIERRES MAGN√âTICOS ACTIVADOS: AUTORIZADO POR EL CAPIT√ÅN DUK'CHOROTH - DE LA CASA XII DE dUBREVI"
+AltMessage="CIERRES MAGN√âTICOS DESACTIVADOS."
 
+[TranslatorEvent9]
+Message="NODOS DE DESCARGA EST√ÅTICA: LOS DISYUNTORES ESTE Y OESTE DEBEN ACCIONARSE PARA SOLTAR DESCARGA EST√ÅTICA."
+AltMessage="DESCARGA EST√ÅTICA EXITOSA - VAG√ìN DE TRANSPORTE HIDROEL√âCTRICO AHORA EN TOTAL FUNCIONAMIENTO."
 
-[TranslatorEvent13]
-
-Message=Myscha 28 de Noviembre de 1994- Junio de 1997
-
-
-[TranslatorEvent16]
-
-Message=AVISO-NODOS DE DESCARGA EST¡TICA-NO ACERCARSE DURANTE EL FUNCIONAMIENTO.
-
-
-[TranslatorEvent17]
-
-Message=SÛlo en direcciÛn al sol naciente puede uno encontrar un nuevo dÌa.
-
+[TranslatorEvent6]
+AltMessage="CIERRES MAGN√âTICOS DEL CAMPANARIO DESACTIVADOS: ACCESO AL CAMPANARIO PERMITIDO."
 
 [TranslatorEvent18]
+Message="Ac√≥lito Ne'Pher Dunis 350-488"
 
-Message=Monaguillo Ne'Pher Dunis 350-488
+[TranslatorEvent14]
+Message="Pronto ejecutar√°n a la mujer que capturaron. ¬°No puedo permitirlo! Aunque parezca una locura intentar√© sacarla de la celda de la prisi√≥n a escondidas a trav√©s de nuestras cuevas secretas. Desde all√≠ podr√° escapar al campanario hasta que oscurezca."
 
+[TranslatorEvent5]
+Message="ESTACI√ìN DE CONTROL DE POTENCIA PARA INSTALACI√ìN DE TRANSPORTE SKAARJ: ESTADO DE VAG√ìN HIDROEL√âCTRICO DE TRANSPORTE - DESACTIVADO/REACTIVACI√ìN REQUIERE ABRIR NODOS DE DESCARGA EL√âCTRICA EN LO ALTO DEL CAMPANARIO."
 
-[TranslatorEvent23]
+[TranslatorEvent10]
+Message="TEN FE Y NUNCA TE APARTES DE TUS CREENCIAS. S√ìLO UN ALMA QUE CONSERVA LA FE A PESAR DE TODA OPRESI√ìN TRIUNFAR√Å CUANDO LA PRINCESA SALVADORA VENGA DE LAS ESTRELLAS."
 
-Message=Pelit, 20 de Enero de 1997-17 de Julio de 1997
+[TranslatorEvent13]
+Message="Myscha 28 Nov. 1994-Junio de 1997"
 
+[TranslatorEvent19]
+Message="Estoy enfermo. Ha empeorado mi tos y esta celda oscura no es de gran ayuda. S√≥lo espero que mi hermano Kruun pueda escapar a nuestro escondite de la infancia en las alcantarillas. Desde ah√≠ podr√° acceder a los muros internos del monasterio."
+
+[TranslatorEvent1]
+Message="Oficial de Seguridad Sergai Dubrov: ISV-KRAN: ENTRADA DE DIARIO: Estamos pisando los talones al destacamento de Caza Skaarj que captur√≥ a Kira cerca de la Punta del Sol. Se dirigen al norte hacia las tormentas el√©ctricas azules en el horizonte."
+
+[TranslatorEvent12]
+Message="¬°He descubierto un secreto! La noche anterior me escap√© de mi escondite y nad√© por las tuber√≠as hasta la prisi√≥n. ¬°Han capturado una Chica! El sargento Krall recibi√≥ dos botazos en la boca cuando se acerc√≥ a ella. ¬°Jajaja! S√≥lo puedo reirme de su estupidez."
 
 [TranslatorEvent22]
+Message="Hijo de Ne'Lin Garas 380-390"
 
-Message=Hijo de Ne'Lin Garas 380-390
+[TranslatorEvent23]
+Message="Pelit, 20 Ene. 1997-17 Jul. 1997"
 
+[TranslatorEvent17]
+Message="S√≥lo enfrentando la direcci√≥n del sol naciente puede uno encontrar un nuevo d√≠a."
 
-[LevelInfo0]
+[TranslatorEvent16]
+Message="AVISO - NODOS DE DESCARGA EST√ÅTICA - PERMANECER LEJOS DURANTE SU FUNCIONAMIENTO."
 
-Title=Bluff Eversmoking
+[TranslatorEvent21]
+Message="Ac√≥lito Ne'Lin Garas 353-487"
 
-LevelEnterText=Est·s entrando en Bluff Eversmoking 
+[TranslatorEvent4]
+Message="ESTACI√ìN DE CONTROL HIDROL√ÅSER: L√ÅSERES ACTIVADOS Y OPERATIVOS"
+AltMessage="ESTACI√ìN DE CONTROL HIDROL√ÅSER: L√ÅSERES DESACTIVADOS - ACCESO AL GENERADOR HIDROEL√âCTRICO BAJO EL CAMPANARIO PERMITIDO"
+
+[TranslatorEvent3]
+Message="Mi hermano Kriin est√° en la celda por debajo de la m√≠a. Mi otro hermano Kruun se escap√≥ por el t√∫nel del agua bajo las escaleras. Han sacrificado a mi mejor amigo Jaara por la huida de Kruun."
+
+[TranslatorEvent15]
+Message="C√°mara de los muertos - Aqu√≠ se encuentra el √∫ltimo lugar de descanso del Sumo Sacerdote del Acantilado Eversmoking y los artefactos utilizados por el Mes√≠as."
+Hint="Busca una palanca secreta en el cementerio."
+
+[TranslatorEvent2]
+Message="Oficial Cient√≠fica Kira Argmanov: Separada de mis compa√±eros de tripulaci√≥n del ISV-Kran, s√≥lo me he mantenido viva aguantando en este campanario. Un Nali nativo me ayud√≥ a escapar de la celda donde me encerraron los Skaarj. Con suerte, no podr√°n encontrarme aqu√≠."
+
+[TranslatorEvent0]
+Message="Diario de la Oficial Jefe M√©dica del ISV-KRAN: Tatiana Zimna: Buscando a los secuestradores de Kira hemos llegado a este bonito monasterio en el lago del ca√±√≥n. Esta noche acamparemos cerca de este crucifijo y partiremos ma√±ana temprano."
+
+[TranslatorEvent26]
+Message="Diario de Env√≠os: Grorq, Tribu de la Mano Roja. Realmente estoy harto de c√≥mo nos tratan los Skaarj. Siempre d√°ndonos √≥rdenes y mand√°ndonos a vigilar a sus pat√©ticos esclavos Nali. Mis tropas est√°n hartas de esta situaci√≥n."
+
+[TranslatorEvent24]
+Message="Diario de Env√≠os: Grorq, Tribu de la Mano Roja. Cuando salga la pr√≥xima luna llena, esperamos un gran cargamento de suministros rescatados de la nave espacial humana. Debo hacer algunas reparaciones a los ra√≠les el√©ctricos alrededor del acantilado pero para entonces estaremos preparados."
+
+[TranslatorEvent25]
+Message="Carcelero Hrang, Tribu de la Mano Roja: hemos capturado a una chica Terr√≠cola. Algunos de mis soldados quieren tomarse libertades con ella. ¬°Supongo que est√° bien siempre y cuando tengan cuidado con esas botazas! La √∫ltima vez me di√≥ en los Hrangos."
+
+[TranslatorEvent27]
+Message="Carcelero Hrang, Tribu de la Mano Roja: ¬°Dorro me debe 25.000 Paaras de oro cuando lleguemos a casa! Realmente apesta jugando a los huesos mortales. Apurarlo es como quitarle un caramelo a un beb√© terr√≠cola. Y hablando de eso, ¬°creo que ya es hora de apalear a esa fea prisionera Terr√≠cola un poco m√°s!"
+
+[TranslatorEvent28]
+Message="Carcelero Hrang, Tribu de la Mano Roja: ¬°¬°¬°No me lo puedo creer!!! ¬°La chica terr√≠cola ha escapado! Uno de esos despreciables monjes Nali debe haberla sacado por alg√∫n t√∫nel. ¬°Estoy JODIDO! ¬°Si viene el Capit√°n DUK'CHOROTH y se entera de que la he dejado escapar seguro que ser√© de-hrangueado!"
+
+[TranslatorEvent29]
+Message="Diario personal de Kruun: He de vigilar las veces que entro sigilosamente al monasterio por los t√∫neles. He marcado con una cruz el t√∫nel que va al monasterio interior, los otros conducen a la prisi√≥n donde a√∫n retienen a mi hermano."
+
+[TranslatorEvent30]
+Message="TORRE DE GUARDIA DE LA PUERTA PRINCIPAL"

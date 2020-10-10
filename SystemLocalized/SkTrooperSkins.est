@@ -1,7 +1,4 @@
-[public]
-
-Object=(Name=SkTrooperSkins.T_Skaarj1,Class=Texture)
-
-Object=(Name=SkTrooperSkins.T_Skaarj2,Class=Texture)
-
-Object=(Name=SkTrooperSkins.T_Skaarj3,Class=Texture) 
+﻿[public]
+Object=(Name=SkTrooperSkins.T_Skaarj1,Class=Texture,Description="Piel 1")
+Object=(Name=SkTrooperSkins.T_Skaarj2,Class=Texture,Description="Piel 2")
+Object=(Name=SkTrooperSkins.T_Skaarj3,Class=Texture,Description="Piel 3")

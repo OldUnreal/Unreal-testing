@@ -1,7 +1,5 @@
-General]
-
-Start=Unreal (Empezando)
-
-Exit=Unreal (Saliendo)
-
-Run=Unreal (Ejecutando) 
+﻿[General]
+Start="Unreal (Iniciando)"
+Exit="Unreal (Saliendo)"
+Run="Unreal (Ejecutando)"
+Product="Unreal"

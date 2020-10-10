@@ -1,12 +1,13 @@
-[Public]
+﻿[Public]
 Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.KingOfTheHill,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.Razorjack,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.Quadshot,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.FemaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 2")
 Object=(Name=UnrealI.MaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 1")
 Object=(Name=UnrealI.MaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 2")
@@ -16,31 +17,27 @@ Object=(Name=UnrealI.MaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Descripti
 Object=(Name=UnrealI.MaleTwoBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Male 2")
 Object=(Name=UnrealI.SkaarjPlayerBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Skaarj")
 Object=(Name=UnrealI.NaliPlayer,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Nali")
-Preferences=(Caption="Game Types",Parent="Advanced Options")
-Preferences=(Caption="Dark Match",Parent="Game Types",Class=UnrealI.DarkMatch,Immediate=True)
+Preferences=(Caption="Darkmatch",Parent="Game Types",Class=UnrealI.DarkMatch,Immediate=True)
 Preferences=(Caption="King Of The Hill",Parent="Game Types",Class=UnrealI.KingOfTheHill,Immediate=True)
-Preferences=(Caption="Networking",Parent="Advanced Options")
-Preferences=(Caption="Map Lists",Parent="Networking")
-Preferences=(Caption="DarkMatch Maps",Parent="Map Lists",Class=UnrealI.DkMapList,Immediate=True)
+Preferences=(Caption="Darkmatch Maps",Parent="Map Lists",Class=UnrealI.DkMapList,Immediate=True)
 
 [IntroNullHud]
 ESCMessage="Press ESC to begin"
 
 [EndgameHud]
-Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely. Yet it's fuel has depleted and you drift aimlessly."
-Message2="From where many have died, you have escaped. You laugh to yourself; so much has happened, but little has changed."
-Message3="Before the crash landing, you were trapped in a cramped cell. Now, once again you are confined in a prison."
+Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely.  Yet it's fuel has depleted and you drift aimlessly."
+Message2="From where many have died, you have escaped.  You laugh to yourself; so much has happened, but little has changed."
+Message3="Before the crash landing, you were trapped in a cramped cell.  Now, once again you are confined in a prison."
 Message4="But, you feel confident that someone will come upon your small vessel... eventually."
 Message5="Until then, you drift and hope."
-Message6="To Be Continued..."
-Message7="Press Fire to restart."
+Message6="Press fire to restart"
 
 [KingOfTheHill]
 ClassCaption="King Of The Hill"
 KingMessage=" is the new king of the hill!"
 GameName="King of the Hill"
 
-[parentBlob]
+[ParentBlob]
 BlobKillMessage="was corroded by a Blob"
 
 [FlakCannon]
@@ -79,40 +76,47 @@ ItemName="GES Bio Rifle"
 MenuName="Squid"
 
 [DarkMatch]
-ClassCaption="Dark match"
-GameName="DarkMatch"
+ClassCaption="Darkmatch"
+GameName="Darkmatch"
 
 [SearchLight]
-ExpireMessage="SearchLight batteries have died."
-PickupMessage="You picked up the Searchlight."
+ExpireMessage="The Search Light batteries have died."
+PickupMessage="You picked up the Search Light"
+ItemName="Search Light"
 
 [RazorAmmo]
 PickupMessage="You picked up Razor Blades"
+ItemName="Razor Blades"
 
 [FlakBox]
 PickupMessage="You picked up 10 Flak Shells"
+ItemName="Flak Shells"
 
 [MaleOne]
 MenuName="Male 1"
 
 [RifleAmmo]
 PickupMessage="You got 8 Rifle rounds."
+ItemName="Rifle Rounds"
 
 [Seeds]
-PickupMessage="You got the Nali fruit seeds"
+PickupMessage="You got the Nali Fruit Seeds"
+ItemName="Nali Fruit Seeds"
 
 [JumpBoots]
 ExpireMessage="The Jump Boots have drained"
-PickupMessage="You picked up the jump boots"
+PickupMessage="You picked up the Jump Boots"
+ItemName="Jump Boots"
 
 [ForceField]
-M_NoRoom="No room to activate force field."
+M_NoRoom="No room to activate Force Field."
 PickupMessage="You picked up the Force Field"
+ItemName="Force Field"
 
-[Razorjack]
+[RazorJack]
 DeathMessage="%k took a bloody chunk out of %o with the %w."
 PickupMessage="You got the RazorJack"
-ItemName="Razorjack"
+ItemName="RazorJack"
 
 [FemaleTwo]
 MenuName="Female 2"
@@ -121,50 +125,68 @@ MenuName="Female 2"
 MenuName="Male 2"
 
 [Sludge]
-PickupMessage="You picked up 25 Kilos of Tarydium Sludge"
+PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
+ItemName="Tarydium Biosludge"
 
 [Invisibility]
 ExpireMessage="Invisibility has worn off."
 PickupMessage="You have Invisibility"
+ItemName="Invisibility"
 
 [AsbestosSuit]
 PickupMessage="You picked up the Asbestos Suit"
+ItemName="Asbestos Suit"
 
-[fell]
+[Fell]
+Name="fell"
 AltName="fell"
 
 [FlakShellAmmo]
-PickupMessage="You got a flak shell."
+PickupMessage="You got a Flak Shell."
+ItemName="Flak Shell"
 
-[drowned]
+[Drowned]
+Name="drowned"
 AltName="drowned"
 
 [Decapitated]
-AltName="beheaded"
+Name="beheaded"
+AltName="decapitated"
 
 [Dampener]
 ExpireMessage="Acoustic dampener has run out."
 PickupMessage="You got the Acoustic Dampener"
+ItemName="Acoustic Dampener"
 
 [Corroded]
+Name="corroded"
 AltName="slimed"
 
 [ToxinSuit]
 PickupMessage="You picked up the Toxin Suit"
+ItemName="Toxin Suit"
 
 [Burned]
+Name="burned"
 AltName="flame-broiled"
 
 [PowerShield]
-PickupMessage="You got the PowerShield"
+PickupMessage="You got the Power Shield"
+ItemName="Power Shield"
 
 [RifleRound]
-PickupMessage="You got a Rifle Round."
+PickupMessage="You got a Rifle Round"
+ItemName="Rifle Round"
 
 [QuadShot]
 DeathMessage="%o was blasted to bits by %k's %w."
-PickupMessage="You got the Quad-Barreled ShotGun"
-ItemName="QuadShot"
+PickupMessage="You got the Quad-Barreled Shotgun"
+ItemName="Quad-Barreled Shotgun"
 
 [PeaceMaker]
 PickupMessage="You got the Peacemaker"
+ItemName="Peacemaker"
+
+[WoodruffSeeds]
+PickupMessage="You got the Woodruff Seeds"
+ItemName="Woodruff Seeds"

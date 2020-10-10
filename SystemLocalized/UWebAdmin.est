@@ -1,17 +1,9 @@
-[public]
-
+﻿[public]
 Object=(Name=UWebAdmin.DMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Partida a muerte")
-
 Object=(Name=UWebAdmin.TDMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Partida en Equipos")
-
 Object=(Name=UWebAdmin.CPPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Juego Cooperativo")
-
-Preferences=(Caption="Servidor Web",Parent="En Red")
-
+Preferences=(Caption="Servidor Web",Parent="Red")
 Preferences=(Caption="Configurador Web",Parent="Servidor Web",Class=UWebAdmin.WebAdminManager)
-
-Preferences=(Caption="Conexi�n Web",Parent="Servidor Web",Class=UWebAdmin.WebServer)
-
+Preferences=(Caption="Conexión Web",Parent="Servidor Web",Class=UWebAdmin.WebServer)
 Preferences=(Caption="Subconfigurador Web",Parent="Servidor Web",Class=UWebAdmin.SubWebManager)
-
-Preferences=(Caption="Espectador Mensajeante",Parent="Servidor Web",Class=UWebAdmin.MessagingSpectator) 
+Preferences=(Caption="Espectador Mensajeante",Parent="Servidor Web",Class=UWebAdmin.MessagingSpectator)

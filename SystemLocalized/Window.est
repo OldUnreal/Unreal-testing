@@ -1,121 +1,64 @@
-[Errors]
-
-Critical=Error grave
-
-FailedConfigLoad=%s (no se ha podido cargar)
-
-
-[General]
-
-BrowseButton=...
-
-UseButton=Usar
-
-ClearButton=Eliminar
-
-OkButton=Aceptar
-
-AddButton=Añadir
-
-EmptyButton=Vaciar
-
-InsertButton=Insertar
-
-DeleteButton=Borrar
-
-DefaultsButton=Recuperar configuración predeterminada
-
-BackButton=< A&trás
-
-NextButton=&Siguiente >
-
-FinishButton=&Finalizar
-
-CancelButton=Cancelar
-
-InstallButton=&Instalar
-
-YesButton=&Sí
-
-NoButton=&No
-
-AgreeButton=Ace&pto
-
-LanguagePrompt=Idioma:
-
-LanguageWindow=Selección de idioma
-
-LogWindow=Ventana de registro %s
-
-PropNone=Ningún elemento seleccionado
-
-PropSingle=Propiedades %s
-
-PropMulti=Propiedades %s (%i seleccionado)
-
-InsertCdText=Introduce el CD-ROM de Unreal en la unidad y pulsa ACEPTAR para continuar, o Cancelar para salir.
-
-InsertCdTitle=Se necesita el CD para arrancar
-
-AdvancedOptionsTitle=Opciones avanzadas
-
-Low=Bajo
-
-High=Alto
-
-
-[FirstRun]
-
-Caption=Configuración inicial
-
-LowMemory=Unreal ha detectado que dispones de %i MB de memoria. Para mejorar el funcionamiento del juego, se han activado las opciones "Nivel bajo de detalles de texturas" y "Baja calidad de sonido". Puedes modificar estos ajustes en el menú denominado "Performance Settings" (Opciones de rendimiento).
-
-NonMMX=Unreal ha detectado que estás utilizando un PC que no tiene MMX. Por esta razón, el sonido ha sido ajustado para utilizar la mínima potencia posible de la CPU. Puedes modificar estas opciones en el menú "Opciones avanzadas / Audio".
-
-Starting=Unreal está iniciándose por primera vez. Si tienes algún problema, consulta la sección de resolución de problemas de las notas informativas en el menú "Inicio".
-
+ï»¿[Errors]
+Critical="Error Grave"
+FailedConfigLoad="%ls (no se pudo cargar)"
 
 [IDDIALOG_Directory]
-
-IDC_Directory=Carpeta de instalación
-
-IDC_ChoosePrompt=Elige la carpeta de instalación.
-
-IDC_PathTitle=Ru&ta:
-
-IDC_DirectoryTitle=&Directorios:
-
-IDC_DrivesTitle=&Unidades:
-
-IDC_NetworkButton=&Red
-
+IDC_Directory="Directorio de InstalaciÃ³n"
+IDC_ChoosePrompt="Elige el directorio de instalaciÃ³n."
+IDC_PathTitle="Ruta (&P):"
+IDC_DirectoryTitle="&Directorios:"
+IDC_DrivesTitle="Unidades (&V):"
+IDC_NetworkButton="Red (&N)"
 
 [IDDIALOG_Password]
-
-IDC_Password=Comprueba la contraseña.
-
-IDC_Prompt=Introduce tu nombre y contraseña.
-
-IDC_Name=&Nombre:
-
-IDC_Password=&Contraseña:
-
+IDC_Password="Comprueba la ContraseÃ±a"
+IDC_Prompt="Introduce tu nombre y contraseÃ±a."
+IDC_Name="&Nombre:"
+IDC_Password="ContraseÃ±a (&P):"
 
 [IDMENU_NotifyIcon]
-
-ID_NotifyIcon=Menú
-
-ID_NotifyShowLog=Consola &UnrealServer
-
-ID_NotifyAdvancedOptions=Opciones &Avanzadas
-
-ID_NotifyExit=Sali&r de UnrealServer
-
+ID_NotifyIcon="MenÃº"
+ID_NotifyShowLog="Consola &UnrealServer"
+ID_NotifyAdvancedOptions="Opciones &Avanzadas"
+ID_NotifyExit="Salir de UnrealServer (&X)"
 
 [IDMENU_Log]
+ID_LogFile="Archivo (&F)"
+ID_LogAdvancedOptions="Opciones &Avanzadas"
+ID_LogFileExit="Salir (&X)"
 
-ID_LogFile=A&rchivo
+[General]
+BrowseButton="..."
+UseButton="Usar"
+ClearButton="Eliminar"
+OkButton="Aceptar"
+AddButton="AÃ±adir"
+EmptyButton="Vaciar"
+InsertButton="Insertar"
+DeleteButton="Borrar"
+DefaultsButton="Restaurar Valor P/Defecto"
+BackButton="< AtrÃ¡s (&B)"
+NextButton="Siguie&nte >"
+FinishButton="&Finalizar"
+CancelButton="Cancelar"
+InstallButton="&Instalar"
+YesButton="SÃ­ (&Y)"
+NoButton="&No"
+AgreeButton="&Acepto"
+LanguagePrompt="Idioma:"
+LanguageWindow="SelecciÃ³n de Idioma"
+LogWindow="Ventana de Registro de %ls"
+PropNone="SelecciÃ³n VacÃ­a"
+PropSingle="Propiedades de %ls"
+PropMulti="Propiedades de %ls (%i seleccionados)"
+InsertCdText="Introduce el CD-ROM de Unreal en la unidad y pulsa ACEPTAR para continuar, o Cancelar para salir."
+InsertCdTitle="Se necesita el CD para arrancar"
+AdvancedOptionsTitle="Opciones Avanzadas"
+Low="Bajo"
+High="Alto"
 
-ID_LogAdvancedOptions=Opciones &Avanzadas
-
-ID_LogFileExit=&Salir 
+[FirstRun]
+Caption="ConfiguraciÃ³n Inicial"
+LowMemory="Unreal ha detectado que dispones de %i MB de memoria. Para mejorar el funcionamiento del juego, se han activado las opciones "Nivel bajo de detalles de texturas" y "Baja calidad de sonido". Puedes modificar estos ajustes en el menÃº de "Opciones de Rendimiento"."
+NonMMX="Unreal ha detectado que estÃ¡s utilizando un PC que no tiene MMX. Por esta razÃ³n, el sonido ha sido ajustado para utilizar la mÃ­nima potencia posible de la CPU. Puedes modificar estas opciones en el menÃº "Opciones Avanzadas / Sonido"."
+Starting="Unreal estÃ¡ iniciÃ¡ndose por primera vez. Si tienes algÃºn problema, consulta la secciÃ³n de resoluciÃ³n de problemas en las notas de lanzamiento en la carpeta "Help"."

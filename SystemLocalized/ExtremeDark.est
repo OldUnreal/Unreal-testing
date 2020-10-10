@@ -1,13 +1,11 @@
-[LevelInfo3]
-
+Ôªø[LevelInfo3]
 Title="El Oscurecimiento"
 
-
-[TranslatorEvent0]
-
-AltMessage="AutorizaciÛn concedida. Activa la Fuente de EnergÌa de emergencia."
-
+[LevelSummary]
+Title="El Oscurecimiento"
 
 [TranslatorEvent10]
+message="Antec√°mara de la Fuente, ACCESO DENEGADO."
 
-message="La Antec·mara de la Fuente, ACCESO DENEGADO" 
+[TranslatorEvent0]
+AltMessage="Autorizaci√≥n concedida. Activar la Fuente de Energ√≠a de Emergencia."

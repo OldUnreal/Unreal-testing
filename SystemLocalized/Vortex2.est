@@ -1,71 +1,45 @@
-[LevelInfo0]
+Ôªø[LevelInfo0]
+Title="Vortex Rikers"
 
-Title=Vortex Rikers
-
-
-[TranslatorEvent2]
-
-message=Registro del Capit·n S.Kroon:VortexRikers. Quiz· ha sido perjudicial alterar el curso de nuestra misiÛn. Estamos en el campo gravitacional de un planeta desconocido.He ordenado al encargado de m·quinas desviar la potencia a los mecanismos de transmisiÛn.
-
-
-[TranslatorEvent0]
-
-message=Diario del Navegante: Vortex Rikers. Estamos de camino a la prisiÛn de la luna. Los sensores de largo alcance detectan masas magnÈticas en el Sector Gamma 83H. El capit·n ha ordenado cambiar el curso.
-
-Hint=GolpÈate la cabeza contra el interruptor que hay en el Armamento para desactivar el campo de fuerza.
-
-
-[TranslatorEvent1]
-
-message= Diario del Primer Oficial: Vortex Rikers. Los prisioneros est·n m·s inquietos en cuanto nos acercamos a la prisiÛn de la luna. Los de Seguridad dicen que tienen a los prisioneros bajo control pero ya han tenido que tratar a varios en el Laboratorio.
-
+[LevelSummary]
+Title="Vortex Rikers"
 
 [TranslatorEvent11]
+message="ATENCI√ìN A TODOS LOS PRISIONEROS: Sean amables con sus compa√±eros. La violencia no ser√° tolerada."
+Hint="Esc√°pate por el conducto de aire."
 
-message=ATENCI”N A TODOS LOS PRISIONEROS: No olvidÈis ser amables con vuestros compaÒeros. No se tolerar· la violencia.
+[TranslatorEvent1]
+message="Diario del Primer Oficial: Vortex Rikers. A medida que nos acercamos a la prisi√≥n lunar, los prisioneros est√°n cada vez m√°s y m√°s inquietos. El personal de Seguridad dice que tienen a los prisioneros bajo control pero ya han tenido que tratar a varios en el Laboratorio."
 
-Hint=Ves por el conducto de aire para escapar.
+[TranslatorEvent0]
+message="Diario del Navegante: Vortex Rikers. Vamos rumbo a la prisi√≥n lunar. Los sensores de largo alcance est√°n detectando masas magn√©ticas en el Sector Gamma 83H. El capit√°n ha ordenado cambiar el curso."
+Hint="Dale un cabezazo al interruptor de la Armer√≠a para desactivar el campo de fuerza."
 
-
-[TranslatorEvent5]
-
-message=Registro del Encargado de M·quinas: Buque de la prisiÛn 254 Vortex Rikers. Estoy vigorizando toda la potencia que puedo para escapar de la fuerza de tracciÛn gravitatoria de este misterioso planeta. Pero parece que no funciona.
-
-
-[TranslatorEvent6]
-
-message=Registro del Guarda del Jefe de Seguridad: Buque de la prisiÛn 254 Vortex Rikers. Han arrastrado toda la potencia a los mecanismos de transmisiÛn pero sin ning˙n efecto. Estamos siendo arrastrados en espiral hacia el planeta. No sÈ quÈ va a ser nosotros.
-
-Hint=Dispara el vidrio para abrir la compuerta.
-
+[TranslatorEvent2]
+message="Registro del Capit√°n S. Kroon: Vortex Rikers. Alterar el rumbo quiz√°s haya perjudicado nuestra misi√≥n. Estamos atrapados en el campo gravitacional de un planeta desconocido. He ordenado al encargado de m√°quinas desviar la potencia a los mecanismos de transmisi√≥n."
 
 [TranslatorEvent10]
+message="ATENCI√ìN A TODOS LOS PRISIONEROS: Hoy se apagan las luces a las 20:00. Sin excepciones."
+Hint="Esc√°pate por el conducto de aire."
 
-message= ATENCI”N A TODOS LOS PRISIONEROS: Hoy se apagan las luces a las 20:00. Sin excepciones.
+[TranslatorEvent6]
+message="Registro del Jefe de Guardia de Seguridad: Buque de prisi√≥n 254 Vortex Rikers. Han desviado toda la potencia a los mecanismos de transmisi√≥n pero no ha resultado. Estamos cayendo de forma espiralada hacia el planeta. No s√© qu√© va a ser nosotros."
+Hint="Dispara el vidrio para abrir la compuerta."
 
-Hint=Ves por el conducto de aire para escapar.
-
-
-[TranslatorEvent9]
-
-message=Diario de Benjamin Nathaniel, dÌa 93: Hoy es mi cumpleaÒos. Lo celebrarÈ empezando otro disturbio en la prisiÛn.
-
-
-[TranslatorEvent7]
-
-message= Diario de Jonas Gershwin, dÌa 204: En mi comida de hoy habÌa otra cucaracha. Me pregunto cÛmo se introducen a bordo de estos buques. Si esa zorra de la celda 4A me sigue mirando de forma tan rara juro que le voy a arrancar de una tajada el cuello!
-
+[TranslatorEvent5]
+message="Registro del Encargado de M√°quinas: Buque de prisi√≥n 254 Vortex Rikers. Estoy concentrando toda la potencia que puedo para escapar de la fuerza de tracci√≥n gravitatoria de este misterioso planeta. Pero parece que no funciona."
 
 [TranslatorEvent8]
+message="Diario de Boris Clague, d√≠a 3: Hace tan s√≥lo tres d√≠as que estoy aqu√≠ y ya tengo dos costillas rotas, un muslo fracturado y 14 suturas. No s√© si podr√© llegar a la prisi√≥n lunar y mucho menos al final de la pr√≥xima semana."
 
-message= Diario de Boris Clague, dÌa 3: Hace tan sÛlo tres dÌas que estoy aquÌ y ya tengo dos costillas rotas, un muslo fracturado y 14 suturas. No sÈ si podrÈ llegar a la prisiÛn de la luna y mucho menos a final de la prÛxima semana.
+[TranslatorEvent7]
+message="Diario de Jonas Gershwin, d√≠a 204: En mi comida de hoy hab√≠a otra cucaracha. Me pregunto c√≥mo se meten a bordo de estos buques. ¬°Si esa zorra de la celda 4A me sigue mirando con esa cara juro que le voy a arrancar la garganta!"
 
+[TranslatorEvent9]
+message="Diario de Benjamin Nathaniel, d√≠a 93: Hoy es mi cumplea√±os. Lo celebrar√© empezando otro disturbio en la prisi√≥n."
 
 [TranslatorEvent12]
-
-message=Prisionero 853, James Cavanaugh listo para electrocutar.
-
+message="Prisionero 853, James Cavanaugh listo para la ejecuci√≥n."
 
 [TranslatorEvent3]
-
-message=Registro del Oficial Jefe MÈdico: Buque de la prisiÛn 254 Vortex Rikers. Las continuas peleas entre prisioneros est·n empeorando. A este paso nos quedaremos sin suministros mucho antes de llegar a la prisiÛn de la luna. 
+message="Registro del Oficial Jefe M√©dico: Buque de prisi√≥n 254 Vortex Rikers. Las continuas peleas entre los prisioneros est√°n empeorando. A este paso nos quedaremos sin suministros mucho antes de llegar a la prisi√≥n lunar."

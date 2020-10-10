@@ -1,5 +1,10 @@
-[LevelInfo0]
-Title="Rrajigar Mine "
+﻿[LevelInfo0]
+Title="Rrajigar Mine"
+LevelEntryText="Entering the Rrajigar Mine"
+
+[LevelSummary]
+Title="Rrajigar Mine"
+LevelEntryText="Entering the Rrajigar Mine"
 
 [TranslatorEvent11]
 Message="WARNING: Intruder detected in Sections C-6 and D-8. All personnel are responsible for patrolling their local area."
@@ -22,7 +27,7 @@ Message="Force field intact. All systems normal."
 Hint="The force field must be deactivated. Find the control room."
 
 [TranslatorEvent5]
-Message="WARNING! Force Field de-activated. Intruder detected in Section C-6. Eliminate any unauthorized presence."
+Message="WARNING! Force field de-activated. Intruder detected in Section C-6. Eliminate any unauthorized presence."
 Hint="Shoot all red barrels."
 
 [TranslatorEvent9]
@@ -47,4 +52,3 @@ Hint="Press the red buttons on the wall by bumping into them."
 [TranslatorEvent7]
 Message="Force Field power source two status is active."
 Hint="Press the red buttons on the wall by bumping into them."
-

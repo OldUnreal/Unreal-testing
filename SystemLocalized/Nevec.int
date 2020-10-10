@@ -1,5 +1,10 @@
-[LevelInfo1]
+﻿[LevelInfo1]
 Title="Neve's Crossing"
+LevelEntryText="Entering Neve's Crossing"
+
+[LevelSummary]
+Title="Neve's Crossing"
+LevelEntryText="Entering Neve's Crossing"
 
 [TranslatorEvent15]
 Message="Terra-Neo Mining Station (North)"
@@ -15,5 +20,3 @@ Message="Terra-Neo Mining Station (North)"
 
 [TranslatorEvent0]
 Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."
-M_TransMessage=""
-

@@ -1,16 +1,8 @@
-[Public]
-
+﻿[Public]
 Object=(Name=D3D8Drv.D3D8RenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=d3d8.dll)
-
-Preferences=(Caption="Renderizado",Parent="Opciones avanzadas")
-
-Preferences=(Caption="Suporte de Direct3D8",Parent="Renderizado",Class=D3D8Drv.D3D8RenderDevice,Immediate=True)
-
+Preferences=(Caption="Soporte de Direct3D 8",Parent="Reproducción",Class=D3D8Drv.D3D8RenderDevice,Immediate=True)
 
 [D3D8RenderDevice]
-
-ClassCaption="Soporte de Direct3D8"
-
-AskInstalled=�Quieres utilizar Direct3D8?
-
-AskUse= 
+ClassCaption="Soporte de Direct3D 8"
+AskInstalled="¿Quieres utilizar Direct3D 8?"
+AskUse=""

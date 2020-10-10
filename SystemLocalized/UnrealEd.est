@@ -1,3 +1,2 @@
-[General]
-
-FrameWindow=Unreal Editor 
+﻿[General]
+FrameWindow="Editor de Unreal"

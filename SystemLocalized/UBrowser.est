@@ -1,167 +1,112 @@
-[Public]
-
+Ôªø[Public]
 Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console)
-
-Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
-
-
-[UBrowserConsole]
-
-ClassCaption=Consola del Explorador de Unreal
-
-
-[UBrowserServerPing]
-
-AdminEmailText="Correo del Administrador"
-
-AdminNameText="Nombre del Administrador"
-
-ChangeLevelsText="Cambiarnivel"
-
-MultiplayerBotsText="Bots en multijugador"
-
-FragLimitText="LÌmite de puntuaciÛn"
-
-TimeLimitText="LÌmite de tiempo"
-
-GameModeText="Modo de juego"
-
-GameTypeText="Tipo de juego"
-
-GameVersionText="VersiÛn del juego"
-
-GameSubVersionText="SubVersiÛn del juego"
-
-WorldLogText="Registro de estadÌsticas mundial ngStats"
-
-TrueString="Activado/a"
-
-FalseString="Desactivado/a"
-
+Preferences=(Caption="Navegador Web UBrowser",Parent="Juego en Red",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserServerListWindow]
-
+InfoName="Informaci√≥n"
 PlayerCountName="Jugadores"
-
 ServerCountName="Servidores"
-
-QueryServerText="Pidiendo al servidor maestro"
-
-QueryFailedText="Fallo al servidor maestro: "
-
-PingingText="Comunicando con servidores"
-
-CompleteText="Completado"
-
-InfoName="Info"
-
-
-[UBrowserOpenBar]
-
-OpenText="Abrir:"
-
-OpenHelp="Escribe una URL est·ndar, o selecciona una del historial. Presiona Enter para activar."
-
-
-[UBrowserMainClientWindow]
-
-FavoritesName="Favoritos"
-
-NewsName="Noticias de la comunidad"
-
-
-[UBrowserServerGrid]
-
-ServerName="Servidor"
-
-PingName="Ping"
-
-MapNameName="Nombre del mapa"
-
-PlayersName="Jugadores"
-
-VersionName="VersiÛn"
-
-
-[UBrowserInfoMenu]
-
-RefreshName="&InformaciÛn del refresco"
-
-AttachName="&Ajuntar ventana"
-
-CloseName="&Cerrar ventana"
-
+QueryServerText="Consultando Servidor Maestro (pulsa F5 si no pasa nada)"
+QueryFailedText="Falla del Servidor Maestro: "
+PingingText="Consultando Servidores"
+CompleteText="Finalizado"
 
 [UBrowserMainWindow]
-
-WindowTitleString="Buscador de servidores"
-
-
-[UBrowserRightClickMenu]
-
-RefreshName="&Refrescar todos los servidores"
-
-FavoritesName="AÒadir a &Favoritos"
-
-RemoveFavoritesName="Sacar de &Favoritos"
-
-RefreshServerName="&Comunicar con este servidor"
-
-PingAllName="Comunicar con &Todos los Servidores"
-
-InfoName="&InformaciÛn de servidor y de jugadores"
-
-JoinPasswordName="Unirse con &ContraseÒa"
-
-JoinServerName="&Unirse al servidor"
-
-SpectateServerName="Unirse como &Espectador"
-
-
-[UBrowserPlayerGrid]
-
-NameText="Nombre"
-
-FragsText="PuntuaciÛn"
-
-PingText="Ping"
-
-TeamText="Equipo"
-
-MeshText="Modelo"
-
-SkinText="Piel"
-
-IDText="ID"
-
+WindowTitleString="Buscador de Servidores"
 
 [UBrowserGSpyLink]
-
 ResolveFailedError="No se pudo resolver el servidor maestro: "
-
-TimeOutError="Se terminÛ el tiempo de comunciaciÛn"
-
-CouldNotConnectError="El intento de conexiÛn al servidor maestro ha caducado: "
-
+TimeOutError="Tiempo de comunicaci√≥n con el servidor maestro excedido"
+CouldNotConnectError="Tiempo de comunicaci√≥n con el servidor maestro excedido: "
 
 [UBrowserHTTPLink]
-
 ResolveFailedError="No se pudo resolver el servidor maestro: "
-
-TimeOutError="Se terminÛ el tiempo de comunciaciÛn"
-
-CouldNotConnectError="El intento de conexiÛn al servidor maestro ha caducado: "
-
+TimeOutError="Tiempo de comunicaci√≥n con el servidor maestro excedido"
+CouldNotConnectError="Tiempo de comunicaci√≥n con el servidor maestro excedido: "
 
 [UBrowserSubsetFact]
-
 NotFoundError="No se ha podido encontrar la ventana: "
-
-NotReadyError="La ventana no est· lista: "
-
+NotReadyError="La ventana no est√° lista: "
 
 [UBrowserRulesGrid]
-
 RuleText="Regla"
+ValueText="Valor"
 
-ValueText="Valor" 
+[UBrowserServerPing]
+AdminEmailText="E-Mail de Admin."
+AdminNameText="Nombre de Admin."
+ChangeLevelsText="Cambiar niveles"
+MultiplayerBotsText="Bots en Multijugador"
+FragLimitText="L√≠mite de Bajas"
+TimeLimitText="L√≠mite de Tiempo"
+GameModeText="Modalidad de Juego"
+GameTypeText="Tipo de Juego"
+GameVersionText="Versi√≥n del juego"
+WorldLogText="Reg. Estad. Mundiales ngStats"
+TrueString="Activado"
+FalseString="Desactivado"
+GameSubVersionText="Sub-versi√≥n del juego"
+MapFileString="Nom. Arch. Mapa"
+DLLString="Librer√≠a C++"
+DLLVerString="%ls (ver. %i)"
+WebURLString="URL de Sitio Web"
+ServerOSString="SO de Servidor"
+GameClassString="Clase de Juego"
+
+[UBrowserMainClientWindow]
+FavoritesName="Favoritos"
+NewsName="Noticias de la Comunidad"
+RecentName="Servidores Recientes"
+
+[UBrowserServerGrid]
+ServerName="Servidor"
+PingName="Ping"
+MapNameName="Nombre de Mapa"
+PlayersName="Jugadores"
+VersionName="Versi√≥n"
+
+[UBrowserInfoMenu]
+RefreshName="Actualiza&r Info."
+AttachName="&Adjuntar"
+CloseName="&Cerrar"
+
+[UBrowserRightClickMenu]
+RefreshName="&Actualizar Todos Los Servidores"
+FavoritesName="Agregar a &Favoritos"
+RemoveFavoritesName="Eliminar de &Favoritos"
+RefreshServerName="Consultar Este Servidor (&P)"
+PingAllName="Consult&ar Todos Los Servidores"
+InfoName="Info. de &Servidores y Jugadores"
+JoinPasswordName="Unirse con Contrase√±a (&P)"
+JoinServerName="Unirse al Servidor (&J)"
+SpectateServerName="Unirse como E&spectador"
+ServerWebsiteName="Mostrar Sitio &Web de Servidor"
+CopyAddressName="&Copiar Direcci√≥n de Servidor"
+
+[UBrowserPlayerGrid]
+NameText="Nombre"
+FragsText="Bajas"
+PingText="Ping"
+TeamText="Equipo"
+MeshText="Modelo"
+SkinText="Piel"
+IDText="ID"
+
+[UBrowserConsole]
+ClassCaption="Consola de Buscador de Unreal"
+
+[UBrowserOpenBar]
+OpenText="Abrir:"
+OpenHelp="Introduce una URL est√°ndar, o selecciona una del historial de URL. Pulsa Intro para activarla."
+
+[UBrowserServerWebWin]
+WindowTitle="Explorador Web"
+
+[UBrowserLibPageWindow]
+DLLTitleStr="No se puede conectar: Librer√≠a de V√≠nculo Din√°mico "%ls" No Encontrada."
+DLLVerTitleStr="No se puede conectar: Versi√≥n Err√≥nea de Librer√≠a de V√≠nculo Din√°mico "%ls"."
+InfoText[0]="Para conectarse a este servidor se necesita la librer√≠a de C++ adicional "%ls"."
+InfoText[1]="Para mayor informaci√≥n ver la informaci√≥n externa a continuaci√≥n (alojada por %ls):"
+
+[UBrowserServerWebCW]
+RefreshString="Actualizar P√°gina"
