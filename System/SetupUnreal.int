@@ -1,48 +1,48 @@
-[Setup]
-LocalProduct=Unreal
-DefaultFolder=C:\Unreal
-ReadMe=Help\ReadMe.htm
-SetupWindowTitle=Unreal Setup
-AutoplayWindowTitle=Unreal Options
-ProductURL=http://www.unreal.com/
-VersionURL=http://unreal.epicgames.com/versions.htm
-Developer=Epic Games, Inc.
-DeveloperURL=http://www.epicgames.com/
-Logo=Help\SetupLogo.bmp
+﻿[Setup]
+LocalProduct="Unreal"
+DefaultFolder="C:\Unreal"
+ReadMe="Help\ReadMe.htm"
+SetupWindowTitle="Unreal Setup"
+AutoplayWindowTitle="Unreal Options"
+ProductURL="http://www.unreal.com/"
+VersionURL="http://www.oldunreal.com"
+Developer="Epic Games, Inc. - 227 by Oldunreal"
+DeveloperURL="http://www.oldunreal.com/"
+Logo="Help\SetupLogo.bmp"
 
 [General]
-PlayLevelCommand=&Play this Unreal level
-OpenLinkCommand=&Open this Unreal link
-InstallModuleCommand=&Install this Unreal module
-EditLevelCommand=&Edit this Unreal level
+PlayLevelCommand="&Play this Unreal level"
+OpenLinkCommand="&Open this Unreal link"
+InstallModuleCommand="&Install this Unreal module"
+EditLevelCommand="&Edit this Unreal level"
 
 [ContentGroup]
-Caption=Game Content
-Description=Unreal game content. Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space.
+Caption="Game Content"
+Description="Unreal game content. Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space."
 
 [GameGroup]
-Caption=Unreal Game
-Description=Unreal game. Installation is required.
+Caption="Unreal Game"
+Description="Unreal game. Installation is required."
 
 [DirectXGroup]
-Caption=DirectX
-Description=Optional Microsoft DirectX 8 drivers for enhanced graphics, sound, and joystick support.
+Caption="DirectX"
+Description="Optional Microsoft DirectX 8 drivers for enhanced graphics, sound, and joystick support."
 
 [EditorGroup]
-Caption=Unreal Editor
-Description=Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional.
+Caption="Unreal Editor"
+Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
 
 [PlayShortcut]
-Caption=Play Unreal
+Caption="Play Unreal"
 
 [SafeModeShortcut]
-Caption=Unreal Safe Mode
+Caption="Unreal Safe Mode"
 
 [EditorShortcut]
-Caption=Unreal Editor
+Caption="Unreal Editor"
 
 [DocumentationShortcut]
-Caption=Documentation
+Caption="Documentation"
 
 [WebShortcut]
-Caption=Unreal Web Page
+Caption="Unreal Web Page"

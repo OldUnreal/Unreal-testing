@@ -21,6 +21,8 @@ Preferences=(Caption="Rendering",Parent="Advanced Options")
 Preferences=(Caption="Networking",Parent="Advanced Options")
 Preferences=(Caption="Game Types",Parent="Advanced Options")
 Preferences=(Caption="Map Lists",Parent="Networking")
+Preferences=(Caption="Display",Parent="Advanced Options")
+Preferences=(Caption="Joystick",Parent="Advanced Options")
 
 [PlayerPawn]
 QuickSaveString="Quick Saving"

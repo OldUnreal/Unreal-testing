@@ -25,10 +25,11 @@ Web6=</frameset>/n<noframes><body bgcolor="#FFFFFF">Este Servidor Requiere Marco
 
 // Página de enlaces
 [MainLinksPage]
-WebContentLen=2
-Web0=%frd:PageHeader%/n<BR><center><A href="/MapRestartPage" target="_parent">Reiniciar mapa</A>, <A href="/MapSwitch" target="menumain">Cambiar mapa</A>, <A href="/IndexX" target="menumain">Actual</A>, <A href="/BanListPage" target="menumain">Lista de vetos</A>, <A href="/ServerConsole" target="menumain">Consola de servidor</A>, <A href="/Logout" target="menumain">Cerrar sesión</A><BR>
-Web1=Vínculos de configuración: <A href="/GameDefaults" target="menumain">Config. Principal de Juego</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">Config. de Info. de Servidor</A>, <A href="/MapLinksPage" target="menumain">Lista de Mapas</A>, <A href="/ModLinksPage" target="menumain">Config. de Modificación</A></center><BR>/n
-Web2=%frd:PageEnding%
+WebContentLen=3
+Web0=%frd:PageHeader%
+Web1=<center><A href="/MapRestartPage" target="_parent">Reiniciar mapa</A>, <A href="/MapSwitch" target="menumain">Cambiar mapa</A>, <A href="/IndexX" target="menumain">Actual</A>, <A href="/BanListPage" target="menumain">Lista de vetos</A>, <A href="/ServerConsole" target="menumain">Consola de servidor</A>, <A href="/Logout" target="menumain">Cerrar sesión</A><BR>
+Web2=Vínculos de configuración: <A href="/GameDefaults" target="menumain">Config. Principal de Juego</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">Config. de Info. de Servidor</A>, <A href="/MapLinksPage" target="menumain">Lista de Mapas</A>, <A href="/ModLinksPage" target="menumain">Config. de Modificación</A></center><BR>/n
+Web3=%frd:PageEnding%
 
 [IndexX]
 WebContentLen=5

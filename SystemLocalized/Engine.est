@@ -16,11 +16,13 @@ Preferences=(Caption="Sombra de Decoración",Parent="Marcas",Class=Engine.DecoSh
 Preferences=(Caption="Sombra de Proyectil",Parent="Marcas",Class=Engine.ProjectileShadow,Immediate=True)
 Preferences=(Caption="Canal de Descarga",Parent="Juego en Red",Class=Engine.ChannelDownload)
 Preferences=(Caption="Notificaciones de Conexión",Parent="Juego en Red",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
-Preferences=(Caption="Sonido",Parent="Advanced Options")
-Preferences=(Caption="Reproducción",Parent="Advanced Options")
-Preferences=(Caption="Juego en Red",Parent="Advanced Options")
-Preferences=(Caption="Tipos de Juego",Parent="Advanced Options")
-Preferences=(Caption="Listas de Mapas",Parent="Networking")
+Preferences=(Caption="Sonido",Parent="Opciones Avanzadas")
+Preferences=(Caption="Reproducción",Parent="Opciones Avanzadas")
+Preferences=(Caption="Juego en Red",Parent="Opciones Avanzadas")
+Preferences=(Caption="Tipos de Juego",Parent="Opciones Avanzadas")
+Preferences=(Caption="Listas de Mapas",Parent="Juego en Red")
+Preferences=(Caption="Imagen",Parent="Opciones Avanzadas")
+Preferences=(Caption="Mando",Parent="Opciones Avanzadas")
 
 [PlayerPawn]
 QuickSaveString="Guardado Rápido"

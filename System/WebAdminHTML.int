@@ -1,5 +1,5 @@
-// Feel free to edit this file, expand it or w/e.
-// Just make sure you dont mess up ur own administration interface.
+﻿// Feel free to edit this file, expand it or w/e.
+// Just make sure you don't mess up your own administration interface.
 // Functions/Keywords:
 // /Cdate = Current date
 // /Ctime = Current time
@@ -25,10 +25,11 @@ Web6=</frameset>/n<noframes><body bgcolor="#FFFFFF">If you get that message your
 
 // The links page
 [MainLinksPage]
-WebContentLen=2
-Web0=%frd:PageHeader%/n<BR><center><A href="/MapRestartPage" target="_parent">Restart map</A>, <A href="/MapSwitch" target="menumain">Switch map</A>, <A href="/IndexX" target="menumain">Current</A>, <A href="/BanListPage" target="menumain">Banlist</A>, <A href="/ServerConsole" target="menumain">Server console</A>, <A href="/Logout" target="menumain">Logout user</A><BR>
-Web1=Config links: <A href="/GameDefaults" target="menumain">Main GameConfig</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">ServerInfo Config</A>, <A href="/MapLinksPage" target="menumain">Maplists</A>, <A href="/ModLinksPage" target="menumain">Mod Configures</A></center><BR>/n
-Web2=%frd:PageEnding%
+WebContentLen=3
+Web0=%frd:PageHeader%
+Web1=<center><A href="/MapRestartPage" target="_parent">Restart map</A>, <A href="/MapSwitch" target="menumain">Switch map</A>, <A href="/IndexX" target="menumain">Current</A>, <A href="/BanListPage" target="menumain">Banlist</A>, <A href="/ServerConsole" target="menumain">Server console</A>, <A href="/Logout" target="menumain">Logout user</A><BR>
+Web2=Config links: <A href="/GameDefaults" target="menumain">Main GameConfig</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">ServerInfo Config</A>, <A href="/MapLinksPage" target="menumain">Maplists</A>, <A href="/ModLinksPage" target="menumain">Mod Configures</A></center><BR>/n
+Web3=%frd:PageEnding%
 
 [IndexX]
 WebContentLen=5

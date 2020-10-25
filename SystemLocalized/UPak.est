@@ -37,6 +37,7 @@ TotalStat="Muertes en Total"
 LogEntryMsg="ENTRADA DE DIARIO:"
 
 [GrenadeLauncher]
+DeathMessage="La granada del %w de %k ha desmembrado a %o."
 PickupMessage="Tienes el Lanzagranadas UMS."
 ItemName="Lanzagranadas UMS"
 
@@ -54,6 +55,7 @@ MultWeapSlotMsg="Presiona el botón de seleccionar armas para cambiar armas."
 GameName="Paquete de Misiones de Unreal"
 
 [RocketLauncher]
+DeathMessage="%k ha convertido en añicos el cuerpo de %o con su %w."
 PickupMessage="Tienes el Lanzacohetes UMS."
 ItemName="Lanzacohetes UMS"
 
@@ -65,6 +67,7 @@ MenuList[1]="Unreal"
 GameName="Partida de Camuflaje"
 
 [CARifle]
+DeathMessage="%k ha acribillado a %o con su %w."
 PickupMessage="Tienes el Rifle de Asalto de Combate"
 ItemName="Rifle de Asalto de Combate"
 
