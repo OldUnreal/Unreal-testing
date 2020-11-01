@@ -1,7 +1,19 @@
 %frd:PageHeader%
-<img src="borderline.png" alt="borderline" height="2px" width="100%">
+<!-- ServerConsoleLine -->
+<div class="MessageFrame">
+<img src="images/serverconsole.png" width="256" height="32" alt="Server Console">
+<iframe id="MessageWindow" src="ServerConsole"></iframe>
 <form method="post" action="ServerConsoleLine?UWebAdmin.WebChatWindow">
-<TABLE BORDER=0><TR><TH>Console Command: <input class="textbox" type="text" name="Cmd" size="56" value="Say " maxlength="80"></TH>
-<TH><input class="button" type="submit" name="edit" value="Enter"></TH></TABLE>
+<table><tr><th>Console Command: <input class="textbox" type="text" name="Cmd" size="80" value="Say " maxlength="80"></th>
+<th><input class="button" type="submit" name="edit" value="Enter"></th></table>
 </form>
+</div>
+
+<iframe id="PlayersListFrame" src="Mod_UWebAdmin.PlayersListDebug"></iframe>
+<div class='PlayersListDebugInt'>
+<form method="post" action="index?UWebAdmin.PlayersListDebug">
+%Content:UWebAdmin.PlayersListDebug%</form>
+</div>
+
 %frd:PageEnding%
+

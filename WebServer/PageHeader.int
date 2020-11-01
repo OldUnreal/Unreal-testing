@@ -1,1 +1,69 @@
-<HTML><HEAD><link rel="stylesheet" type="text/css" href="UnrealSS.css"></HEAD><BODY>
+<!DOCTYPE html>
+
+<head>
+	<link id="theme" rel="stylesheet" type="text/css" href="UAncient.css" title="Ancient">
+	<link rel="alternate stylesheet" type="text/css" href="UStarship.css" title="Starship">
+		<title>Unreal Web Admin</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script>
+        function toggleTheme() {
+            var theme = document.getElementsByTagName('link')[0];
+
+            if (theme.getAttribute('href') == 'UAncient.css') {
+                theme.setAttribute('href', 'UStarship.css');
+            } else {
+                theme.setAttribute('href', 'UAncient.css');
+            }
+        }
+        window.setInterval(function()
+        {
+            reloadIFrame();
+        }, 3000);
+
+        function reloadIFrame()
+        {
+            console.log('reloading..');
+            var MessageFrame = document.getElementById('MessageWindow');
+            MessageFrame.contentWindow.location.reload(true);
+            MessageFrame.onload = function ()
+            {
+                MessageFrame.contentWindow.scrollTo(0,999999);
+            }
+        }
+   </script>
+</head>
+
+<body text="#00ff00">
+<!-- PageHeader -->
+<table cellpadding="0" cellspacing="0">
+	<tr valign="top">
+    	<td class="bgimage" width="256" height="256"></td>
+    	<td class="bgimage2" width="100%" height="256"></td>
+      	<th class="webadmin"><p><img src="images/unrealwebadmin.png" width="768" height="96"></p>
+         </th>
+	</tr>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+<tr valign="top">
+    <td class="bgimage3" width="256" height="100%" bgcolor="#000000">
+        <p><a href="index.html" target="_self" title="Click here to go back to the main page"><img src="images/current.png" alt="Current" width="256" height="32" align="top"></a></p>
+        <p><a href="Mod_UWebAdmin.BanListGen" target="_self" title="Click here to access banlist" ><img src="images/banlist.png" alt="Banlist" width="256" height="32" align="top"></a></p>
+        <p><a href="Mod_UWebAdmin.FileUploadPage" target="_self" title="Click here to upload files"><img src="images/fileupload.png" width="256" height="32" alt="File Upload"></a></p>
+        <p><a href="Mod_UWebAdmin.MapSwitchPage" target="_self" title="Click here to change the current map" ><img src="images/switchmap.png" width="256" height="32" alt="Switch Map"></a></p>
+        <p><a href="Mod_UWebAdmin.PreferencesPageMain" target="_self" title="Click here to access advanced options"><img src="images/advoption.png" width="256" height="32" alt="Advanced Options"></a></p>
+        <p><a href="GameDefaults" target="_self" title="Click here to configure main game options"><img src="images/mainconfig.png" width="256" height="32" alt="Cinfigure Game"></a></p>
+        <p><a href="Mod_UWebAdmin.MapListLinkPage" target="_self" title="Click here to configure the map list"><img src="images/maplist.png" width="256" height="32" alt="Maplist"></a></p>
+        <p><a href="Mod_UWebAdmin.ModLinkPage" target="_self" title="Click here to configure mods"><img src="images/modconfig.png" width="256" height="32" alt="Configure Mods"></a></p>
+        <p><a href="Mod_UWebAdmin.RepPageConfig" target="_self"title="Click here for server information"><img src="images/serverinfoconfig.png" width="256" height="32" alt="Configure Server Information"></a></p>
+        <p><a href="Mod_UWebAdmin.WebAdminConfigPage" target="_self" title="Click here for web admin users"><img src="images/webadminusers.png" width="256" height="32" alt="Web Admin Users"></a></p>
+        <p><a href="Mod_UWebAdmin.RestartMapCode" target="_self" title="Click here to restart current map"><img src="images/restartmap.png" width="256" height="32" alt="Restart Map"></a></p>
+    </td>
+	<div class="copyright">
+		<p><button class="togglebutton" onclick="toggleTheme()">Switch theme</button></p>
+		<h5>Copyright &copy; 2000  <a href="https://www.oldunreal.com" title="Click here to visit OldUnreal" target="_blank">OldUnreal.com</a></h5>
+	</div>
+
+</tr>
+</table>

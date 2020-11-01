@@ -1,10 +1,19 @@
-<!-- Server WebAdministration code /WebVer written by .:..: (2008) -->
-<HTML><HEAD><TITLE>WebAdmin server administration</TITLE></HEAD>
-<frameset rows="80,*,50" cols="*" frameborder="No" framespacing="0" border="0">
-<frame src="/MainLinksPage" name="menu" noresize frameborder="0" marginheight="0" scrolling="no" framespacing="0">
-<frame src="/IndexX" name="menumain" scrolling="yes" frameborder="no" noresize framespacing="0" marginheight="0">
-<frame src="/ServerConsoleLine" name="consoleline" scrolling="no" frameborder="no" noresize framespacing="0" marginheight="0">
-<noframes>
-<body bgcolor="#FFFFFF">If you get that message your browser doesn't support frames.</body>
-</ noframes>
-</html>
+%frd:PageHeader%
+
+<div class="MessageFrame">
+<img src="images/serverconsole.png" width="256" height="32" alt="Server Console">
+<iframe id="MessageWindow" src="ServerConsole"></iframe>
+<form method="post" action="ServerConsoleLine?UWebAdmin.WebChatWindow">
+<table><tr><th>Console Command: <input class="textbox" type="text" name="Cmd" size="80" value="Say " maxlength="80"></th>
+<th><input class="button" type="submit" name="edit" value="Enter"></th></table>
+</form>
+</div>
+
+<iframe id="PlayersListFrame" src="Mod_UWebAdmin.PlayersListDebug"></iframe>
+<div class='PlayersListDebugInt'>
+<form method="post" action="index?UWebAdmin.PlayersListDebug">
+%Content:UWebAdmin.PlayersListDebug%</form>
+</div>
+
+%frd:PageEnding%
+

@@ -1,21 +1,26 @@
-%frd:PageHeader%
-<CENTER>
-<TABLE BORDER=1 WIDTH="75%"><TR><TH>Message window (Playing on /MapF: /MapT):</TH></TR><TR><TD>
-%Content:UWebAdmin.WebChatWindow%
-</TD></TR></table>
-</CENTER>
-<script>
-var parselimit=4;
-function beginrefresh()
-{
-	if(!document.images) return
-	if (parselimit==1) window.location.replace("/ServerConsole")
-	else
-	{
-		parselimit-=1
-		setTimeout("beginrefresh()",1000)
-	}
+<!DOCTYPE html>
+<head>
+<title>Unreal WebChatWindow</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body {
 }
-window.onload=beginrefresh
-</script>
-%frd:PageEnding%
+.MessageBlock {
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+td {
+    word-wrap: break-word;
+}
+</style>
+</head>
+
+<body>
+<!-- ServerConsole -->
+<table><tr><th>Message window (Playing on /MapF: /MapT):
+</th></tr><tr><td>
+%Content:UWebAdmin.WebChatWindow%
+</td></tr></table>
+</body>

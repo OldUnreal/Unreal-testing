@@ -1,8 +1,11 @@
 %frd:PageHeader%
+<!-- GameDefaults -->
+<div class='GameConfigPageInt'>
 <form method="post" action="GameDefaults?UWebAdmin.GameConfigPage">
 %Content:UWebAdmin.GameConfigPage%
-</form><BR>
+</form><br />
 <form method="post" action="GameDefaults?UWebAdmin.NetConfigPage">
 %Content:UWebAdmin.NetConfigPage%
 </form>
+</div>
 %frd:PageEnding%

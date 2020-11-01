@@ -1,3 +1,4 @@
-%frd:PageHeader%<BR>
-%Content:UWebAdmin.MapListPage%<BR>
+%frd:PageHeader%<br />
+<!-- MapLConfigPage -->
+%Content:UWebAdmin.MapListPage%<br />
 %frd:PageEnding%

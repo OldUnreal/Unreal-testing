@@ -1,3 +1,4 @@
-%frd:PageHeader%<BR>
-%MODBASED%<BR>
+%frd:PageHeader%
+<!-- ModConfigPage -->
+%MODBASED%<br />
 %frd:PageEnding%
