@@ -1,5 +1,5 @@
 [Public]
-Object=(Name=D3D8Drv.D3D8RenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=d3d8.dll)
+Object=(Name=D3D8Drv.D3D8RenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=d3d8.dll,Compat="Win32,Win64")
 Preferences=(Caption="Rendering",Parent="Advanced Options")
 Preferences=(Caption="Direct3D8 support",Parent="Rendering",Class=D3D8Drv.D3D8RenderDevice,Immediate=True)
 
@@ -7,3 +7,4 @@ Preferences=(Caption="Direct3D8 support",Parent="Rendering",Class=D3D8Drv.D3D8Re
 ClassCaption="Direct3D8 Support"
 AskInstalled=Do you want to use Direct3D?
 AskUse=
+NoEditor=True

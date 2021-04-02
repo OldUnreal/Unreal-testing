@@ -1,6 +1,7 @@
-﻿[Public]
-Object=(Name=Galaxy.GalaxyAudioSubsystem,Class=Class,MetaClass=Engine.AudioSubsystem)
-Preferences=(Caption="Galaxy 3D Audio Support",Parent="Audio",Class=Galaxy.GalaxyAudioSubsystem,Immediate=True)
+[Public]
+bject=(Name=Galaxy.GalaxyAudioSubsystem,Class=Class,MetaClass=Engine.AudioSubsystem,Compat="Win32")
+Preferences=(Caption="Audio",Parent="Advanced Options")
+Preferences=(Caption="GalaxyAudio",Parent="Audio",Class=Galaxy.GalaxyAudioSubsystem,Immediate=True)
 
 [GalaxyAudioSubsystem]
-ClassCaption="Galaxy 3D Audio Support"
+ClassCaption="Galaxy 3D Audio for Windows"

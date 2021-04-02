@@ -12,3 +12,4 @@ AskUse=Do you want Unreal to use your OpenGL accelerator?
 NoFindGL=Can't find OpenGL driver %s
 MissingFunc=Missing OpenGL function %s (%i)
 ResFailed=Failed to set resolution
+

@@ -1,5 +1,5 @@
 [Public]
-Class=(Class=SDL2Drv.SDL2Client,SuperClass=Engine.Client)
+Class=(Class=SDL2Drv.SDL2Client,SuperClass=Engine.Client,Compat="Lin32,Lin64,LinARM")
 Preferences=(Caption="Display",Parent="Advanced Options")
 Preferences=(Caption="SDL2Drv",Parent="Display",Class=SDL2Drv.SDL2Client,Immediate=True,Category=Display)
 Preferences=(Caption="Joystick",Parent="Advanced Options")
