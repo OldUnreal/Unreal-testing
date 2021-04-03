@@ -67,23 +67,21 @@ HelpDesc[1]=Old file to make source file binary compatible with
 [PackageFlagCommandlet]
 HelpCmd=packageflag
 HelpOneLiner=Set package flags in package files
-HelpUsage=packageflag src.ext [dest.ext <+|->flag [<+|->flag] ...]
+HelpUsage=packageflag src.ext [<+|->flag [<+|->flag] ...]
 HelpParm[0]=src.ext
-HelpDesc[0]=Existing package file to load
-HelpParm[1]=dest.ext
-HelpDesc[1]=Name of new package file with the new flag settings
-HelpParm[2]=flag
-HelpDesc[2]=+ to set a flag, or - to remove a flag, followed by one of:
+HelpDesc[0]=Package file to load
+HelpParm[1]=flag
+HelpDesc[1]=+ to set a flag, or - to remove a flag, followed by one of:
+HelpParm[2]=" "
+HelpDesc[2]="  AllowDownload - Clients are allowed to download package from server"
 HelpParm[3]=" "
-HelpDesc[3]="  AllowDownload"
+HelpDesc[3]="  ClientOptional - Clients can chose to skip this package download from server"
 HelpParm[4]=" "
-HelpDesc[4]="  ClientOptional"
+HelpDesc[4]="  ServerSideOnly - Package has no network relevancy on a server"
 HelpParm[5]=" "
-HelpDesc[5]="  ServerSideOnly"
+HelpDesc[5]="  BrokenLinks - Package was loaded with missing links"
 HelpParm[6]=" "
-HelpDesc[6]="  BrokenLinks"
-HelpParm[7]=" "
-HelpDesc[7]="  Unsecure"
+HelpDesc[6]="  Unsecure - Unused"
 
 [MakeCommandlet]
 HelpCmd=make
@@ -240,8 +238,13 @@ HelpWebLink=
 [FullBatchExportCommandlet]
 HelpCmd=fullbatchexport
 HelpOneLiner=Extract package with directory structure
-HelpUsage=fullbatchexport <pkg> <outpath>
+HelpUsage=fullbatchexport <pkg> <outpath> 
 HelpWebLink=
+HelpDesc[0]= Optional, to define export format
+HelpParm[0]=-DefaultFontExtension
+HelpParm[1]=-DefaultMusicExtension
+HelpParm[2]=-DefaultSoundExtension
+HelpParm[3]=-DefaultTextureExtension
 
 [FontPageDiffCommandlet]
 HelpCmd=fontpagediff
@@ -254,3 +257,4 @@ HelpCmd=FontExporter
 HelpOneLiner=Exports font pages
 HelpUsage=FontExporter <pkg> <outpath>
 HelpWebLink=
+
