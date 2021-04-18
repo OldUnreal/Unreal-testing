@@ -5,16 +5,19 @@
 		* Created by Smirftsch
 =============================================================================*/
 
+// DrawGouraud DrawData Indices
+const uint IDX_DIFFUSE_INFO       = 0u;
+const uint IDX_DETAIL_MACRO_INFO  = 1u;
+const uint IDX_MISC_INFO          = 2u;
+const uint IDX_EDITOR_DRAWCOLOR   = 3u;
+const uint IDX_DISTANCE_FOG_COLOR = 4u;
+const uint IDX_DISTANCE_FOG_INFO  = 5u;
+
 layout (location = 0) in vec3 Coords;		// == gl_Vertex
-layout (location = 1) in vec4 Normals;		// Normals
+layout (location = 1) in vec3 Normals;		// Normals
 layout (location = 2) in vec2 TexCoords;	// TexCoords
-layout (location = 3) in vec2 LightMapCoords;
+layout (location = 3) in vec4 LightColor;
 layout (location = 4) in vec4 FogColor;
-layout (location = 5) in vec4 TextureInfo; //.z == TextureAlpha , .w ==MacroTexNum
-layout (location = 7) in vec4 LightColor;
-layout (location = 8) in vec3 TexNum;
-layout (location = 9) in vec4 TexUV; // + MacroTexUV
-layout (location = 10) in vec4 DetailTexUV; // + Format, DrawFlags
 
 #ifdef GL_ES
 //No geometry shader in GL_ES.
@@ -22,75 +25,125 @@ layout (location = 10) in vec4 DetailTexUV; // + Format, DrawFlags
 flat out uint gTexNum;
 flat out uint gDetailTexNum;
 flat out uint gBumpTexNum;
+flat out uint gMacroTexNum;
 flat out uint gDrawFlags;
 flat out uint gTextureFormat;
+flat out uint gPolyFlags;
+flat out float gGamma;
 
-out vec4 gTexUV;
-out vec2 gTexCoords;
+flat out vec3 gTextureInfo; // diffuse, alpha, bumpmap specular
+flat out vec4 gDistanceFogColor;
+flat out vec4 gDistanceFogInfo;
+
 out vec3 gCoords;
 out vec4 gNormals;
+out vec2 gTexCoords;
+out vec2 gDetailTexCoords;
+out vec2 gMacroTexCoords;
 out vec4 gEyeSpacePos;
 out vec4 gLightColor;
 out vec4 gFogColor;
-out vec2 gDetailTexUV;
-out vec4 gTextureInfo;
 out mat3 TBNMat;
-out mat4 gviewMat;
-//out float gl_ClipDistance[MAX_CLIPPINGPLANES];
 
-#else
+# if EDITOR
+flat out vec4 gDrawColor;
+flat out uint gRendMap;
+flat out uint gHitTesting;
+# endif
+
+uniform vec4 DrawData[6];
+uniform uint TexNum[4];
+uniform uint DrawFlags[4];
+
+#else // GL_ES
+
+# if SHADERDRAWPARAMETERS
+struct DrawGouraudShaderDrawParams
+{
+	vec4 DiffuseInfo;	    // 0
+	vec4 DetailMacroInfo;   // 1
+	vec4 MiscInfo;		    // 2
+	vec4 DrawColor;		    // 3
+	vec4 DistanceFogColor;  // 4
+	vec4 DistanceFogInfo;   // 5
+	uvec4 TexNum;
+	uvec4 DrawFlags;
+};
+
+layout(std430, binding = 7) buffer AllDrawGouraudShaderDrawParams
+{
+	DrawGouraudShaderDrawParams DrawGouraudParams[];
+};
+# else 
+uniform vec4 DrawData[6];
+uniform uint TexNum[4];
+uniform uint DrawFlags[4];
+# endif
+
 flat out uint vTexNum;
 flat out uint vDetailTexNum;
 flat out uint vBumpTexNum;
+flat out uint vMacroTexNum;
 flat out uint vDrawFlags;
 flat out uint vTextureFormat;
+flat out uint vPolyFlags;
+flat out float vGamma;
 
-out vec2 vTexCoords;
+flat out vec3 vTextureInfo; // diffuse, alpha, bumpmap specular
+flat out vec4 vDistanceFogColor;
+flat out vec4 vDistanceFogInfo;
+
 out vec3 vCoords;
 out vec4 vNormals;
+out vec2 vTexCoords;
+out vec2 vDetailTexCoords;
+out vec2 vMacroTexCoords;
 out vec4 vEyeSpacePos;
 out vec4 vLightColor;
 out vec4 vFogColor;
-out vec4 vTexUV;
-out vec2 vDetailTexUV;
-out vec4 vLightSpacePos;
-out vec4 vTextureInfo;
-out	mat4 vprojMat;
-out mat4 vmodelMat;
-out mat4 vviewMat;
+
+# if EDITOR
+flat out vec4 vDrawColor;
+flat out uint vRendMap;
+flat out uint vHitTesting;
+# endif
+
 #endif
 
 void main(void)
 {
-	mat4 modelviewMat = modelMat * viewMat;
-	mat4 modelviewprojMat = projMat * viewMat * modelMat;
-
 #ifdef GL_ES
 
-	gEyeSpacePos = modelviewMat*vec4(Coords, 1.0);
+	gEyeSpacePos      = modelviewMat*vec4(Coords, 1.0);
 
-	// Point Coords
-	gCoords = Coords;
+	gCoords           = Coords;
+	gNormals          = vec4(Normals.xyz, 0);
+	gTexCoords        = TexCoords * DrawData[IDX_DIFFUSE_INFO].xy;
+	gDetailTexCoords  = TexCoords * DrawData[IDX_DETAIL_MACRO_INFO].xy;
+	gMacroTexCoords   = TexCoords * DrawData[IDX_DETAIL_MACRO_INFO].zw;
+	gLightColor	      = LightColor;
+	gFogColor	      = FogColor;
 
-	//Texture UV to fragment
-	gTexCoords=TexCoords;
+	gTexNum           = TexNum[0];
+	gDetailTexNum     = TexNum[1];
+	gBumpTexNum       = TexNum[2];
+	gMacroTexNum      = TexNum[3];
 
-	gLightColor	= LightColor;
-	gFogColor	= FogColor;
-	gTexUV = TexUV;
-	gDetailTexUV = DetailTexUV.xy;
-	gNormals = Normals;
+	gDrawFlags        = DrawFlags[0];
+	gTextureFormat    = uint(DrawData[IDX_MISC_INFO].w);
+	gPolyFlags        = DrawFlags[2];
+	gGamma            = DrawData[IDX_MISC_INFO].z;
 
-	gTexNum = uint(TexNum.x);
-	gDetailTexNum = uint(TexNum.y);
-	gBumpTexNum = uint(TexNum.z);
-	gTextureFormat = uint(DetailTexUV.z);
-	gDrawFlags = uint(DetailTexUV.w);
+	gTextureInfo      = vec3(DrawData[IDX_DIFFUSE_INFO].zw, DrawData[IDX_MISC_INFO].x);
+	gDistanceFogColor = DrawData[IDX_DISTANCE_FOG_COLOR];
+	gDistanceFogInfo  = DrawData[IDX_DISTANCE_FOG_INFO];
 
-	gTextureInfo = TextureInfo;
-
-	gviewMat = viewMat;
-
+# if EDITOR
+    gHitTesting       = DrawFlags[1];
+	gRendMap          = DrawFlags[3];
+	gDrawColor        = DrawData[IDX_EDITOR_DRAWCOLOR];
+# endif
+	
 	vec3 T = vec3(1.0,1.0,1.0); //Arbitrary.
 	vec3 B = vec3(1.0,1.0,1.0); //Replace with actual values extracted from mesh generation some day.
 	vec3 N = normalize(Normals.xyz); //Normals.
@@ -101,37 +154,69 @@ void main(void)
 
 	TBNMat = transpose(mat3(T, B, N));
 
-	uint ClipIndex = uint(ClipParams.x);
-
 	gl_Position = modelviewprojMat * vec4(Coords, 1.0);
-    //gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,gEyeSpacePos.xyz);
 
 #else
-	vec4 pos=modelviewprojMat * vec4(Coords, 1.0);
+	vEyeSpacePos      = modelviewMat*vec4(Coords, 1.0);
 
-	vLightSpacePos = lightSpaceMat*modelMat*vec4(Coords, 1.0);
+	vCoords           = Coords;
+	vNormals          = vec4(Normals.xyz, 0);
+	vLightColor	      = LightColor;
+	vFogColor	      = FogColor;
 
-	vEyeSpacePos = modelviewMat*vec4(Coords, 1.0);
+# if SHADERDRAWPARAMETERS
+	vTexCoords        = TexCoords * DrawGouraudParams[gl_DrawID].DiffuseInfo.xy;
+	vDetailTexCoords  = TexCoords * DrawGouraudParams[gl_DrawID].DetailMacroInfo.xy;
+	vMacroTexCoords   = TexCoords * DrawGouraudParams[gl_DrawID].DetailMacroInfo.zw;
 
-	// Point Coords
-	vCoords = Coords;
+	vTexNum           = DrawGouraudParams[gl_DrawID].TexNum[0];
+	vDetailTexNum     = DrawGouraudParams[gl_DrawID].TexNum[1];
+	vBumpTexNum       = DrawGouraudParams[gl_DrawID].TexNum[2];
+	vMacroTexNum      = DrawGouraudParams[gl_DrawID].TexNum[3];
 
-	//Texture UV to fragment
-	vTexCoords=TexCoords;
+	vDrawFlags        = DrawGouraudParams[gl_DrawID].DrawFlags[0];
+	vTextureFormat    = uint(DrawGouraudParams[gl_DrawID].MiscInfo.w);
+	vPolyFlags        = DrawGouraudParams[gl_DrawID].DrawFlags[2];
+	vGamma            = DrawGouraudParams[gl_DrawID].MiscInfo.y;
 
-	vLightColor	= LightColor;
-	vFogColor	= FogColor;
-	vTexUV = TexUV;
-	vDetailTexUV = DetailTexUV.xy;
-	vNormals = Normals;
+	vTextureInfo      = vec3(
+	  DrawGouraudParams[gl_DrawID].DiffuseInfo.zw,
+	  DrawGouraudParams[gl_DrawID].MiscInfo.x);
+	vDistanceFogColor = DrawGouraudParams[gl_DrawID].DistanceFogColor;
+	vDistanceFogInfo  = DrawGouraudParams[gl_DrawID].DistanceFogInfo;
 
-	vTexNum = uint(TexNum.x);
-	vDetailTexNum = uint(TexNum.y);
-	vBumpTexNum = uint(TexNum.z);
-	vTextureFormat = uint(DetailTexUV.z);
-	vDrawFlags = uint(DetailTexUV.w);
+#  if EDITOR
+    vHitTesting       = DrawGouraudParams[gl_DrawID].DrawFlags[1];
+	vRendMap          = DrawGouraudParams[gl_DrawID].DrawFlags[3];
+	vDrawColor        = DrawGouraudParams[gl_DrawID].DrawColor;
+#  endif
 
-	vTextureInfo = TextureInfo;
+# else // SHADERDRAWPARAMETERS
+
+	vTexCoords        = TexCoords * DrawData[IDX_DIFFUSE_INFO].xy;
+	vDetailTexCoords  = TexCoords * DrawData[IDX_DETAIL_MACRO_INFO].xy;
+	vMacroTexCoords   = TexCoords * DrawData[IDX_DETAIL_MACRO_INFO].zw;
+
+	vTexNum           = TexNum[0];
+	vDetailTexNum     = TexNum[1];
+	vBumpTexNum       = TexNum[2];
+	vMacroTexNum      = TexNum[3];
+
+	vDrawFlags        = DrawFlags[0];
+	vTextureFormat    = uint(DrawData[IDX_MISC_INFO].w);
+	vPolyFlags        = DrawFlags[2];
+	vGamma            = DrawData[IDX_MISC_INFO].y;
+
+	vTextureInfo      = vec3(DrawData[IDX_DIFFUSE_INFO].zw, DrawData[IDX_MISC_INFO].x);
+	vDistanceFogColor = DrawData[IDX_DISTANCE_FOG_COLOR];
+	vDistanceFogInfo  = DrawData[IDX_DISTANCE_FOG_INFO];
+
+#  if EDITOR
+    vHitTesting       = DrawFlags[1];
+	vRendMap          = DrawFlags[3];
+	vDrawColor        = DrawData[IDX_EDITOR_DRAWCOLOR];
+#  endif
+# endif
 
 	gl_Position = vec4(Coords, 1.0);
 

@@ -5,14 +5,13 @@
 		* Created by Smirftsch
 =============================================================================*/
 
-
 uniform uint PolyFlags;
 uniform bool bHitTesting;
 uniform float Gamma;
 uniform vec4 HitDrawColor;
 
 in vec2 gTexCoords;
-in vec4 gDrawColor;
+flat in vec4 gDrawColor;
 flat in uint gTexNum;
 out vec4 FragColor;
 
@@ -23,7 +22,7 @@ void main(void)
 	vec4 TotalColor;
 	vec4 Color;
 
-    #ifdef BINDLESSTEXTURES
+    #if BINDLESSTEXTURES
     if (gTexNum > 0u)
         Color = texture(Textures[gTexNum], gTexCoords);
     else Color = texture(Texture0, gTexCoords);
@@ -59,7 +58,7 @@ void main(void)
 #endif
 	}
 
-#ifdef EDITOR
+#if EDITOR
 	// Editor support.
 	if ( (PolyFlags&PF_Selected) == PF_Selected )
 	{

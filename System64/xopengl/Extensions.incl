@@ -5,10 +5,11 @@
 	Revision history:
 		* Created by Smirftsch
 =============================================================================*/
-#ifdef BINDLESSTEXTURES
+#if BINDLESSTEXTURES
 #extension GL_ARB_bindless_texture : require
 #extension GL_ARB_gpu_shader_int64 : enable
 #extension GL_ARB_shading_language_420pack : enable
+#extension GL_ARB_shader_draw_parameters : require
 #endif
 
 #ifdef GL_ES

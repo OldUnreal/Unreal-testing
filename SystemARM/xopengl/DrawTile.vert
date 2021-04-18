@@ -16,7 +16,6 @@ layout (location = 2) in vec2 TexCoords;
 out vec2 gTexCoords;
 out vec4 gDrawColor;
 flat out uint gTexNum;
-//out float gl_ClipDistance[MAX_CLIPPINGPLANES];
 
 #else
 layout (location = 2) in vec4 TexCoords0;
@@ -27,27 +26,48 @@ out vec3 vCoords;
 out vec4 vTexCoords0;
 out vec4 vTexCoords1;
 out vec4 vTexCoords2;
-out vec4 vDrawColor;
+flat out vec4 vDrawColor;
 flat out uint vTexNum;
 out vec4 vEyeSpacePos;
 
 #endif
 
+/*
+#if SHADERDRAWPARAMETERS
+struct DrawTileShaderDrawParams
+{
+	vec4 FrameCoords;  // (RFX2, RFY2, FX2, FY2)
+	vec4 TextureInfo;  // (UMult, VMult, TexNum, Gamma)
+	vec4 DrawColor;    // Color for the tile
+	vec4 HitDrawColor; // Selection color for UEd
+	uvec4 DrawParams;  // (PolyFlags, bHitTesting, unused, unused)
+};
+
+layout(std430, binding = 6) buffer AllDrawTileShaderDrawParams
+{
+	DrawTileShaderDrawParams DrawTileParams[];
+};
+
+flat out uint vTexNum;
+flat out uint vPolyFlags;
+flat out float vGamma;
+# if EDITOR
+flat out bool vHitTesting;
+flat out vec4 vHitDrawColor;
+# endif
+#endif
+*/
+
 void main(void)
 {
-    mat4 modelviewMat = modelMat * viewMat;
 #ifdef GL_ES
-	mat4 modelviewprojMat = projMat * viewMat * modelMat;
 	vec4 gEyeSpacePos = modelviewMat*vec4(Coords, 1.0);
 
     gTexNum     = uint(TexNum);
 	gTexCoords  = TexCoords;
 	gDrawColor  = DrawColor;
 
-	uint ClipIndex = uint(ClipParams.x);
-
 	gl_Position = modelviewprojMat * vec4(Coords, 1.0);
-    //gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,Coords.xyz);
 #else
     vEyeSpacePos = modelviewMat*vec4(Coords, 1.0);
     vCoords = Coords;

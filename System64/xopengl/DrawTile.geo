@@ -12,20 +12,18 @@ flat in uint vTexNum[];
 in vec4 vTexCoords0[];
 in vec4 vTexCoords1[];
 in vec4 vTexCoords2[];
-in vec4 vDrawColor[];
+flat in vec4 vDrawColor[];
 in vec4 vEyeSpacePos[];
 in vec3 vCoords[];
 
 out vec2 gTexCoords;
-out vec4 gDrawColor;
+flat out vec4 gDrawColor;
 flat out uint gTexNum;
 out float gl_ClipDistance[MAX_CLIPPINGPLANES];
 
 
 void main()
 {
-	mat4 modelviewprojMat = projMat * viewMat * modelMat;
-
 	uint ClipIndex = uint(ClipParams.x);
 
 	gTexNum = vTexNum[0];

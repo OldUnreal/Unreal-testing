@@ -72,7 +72,7 @@ const uint PF_RenderFog			= 0x40000000u;	// Render with fog mapping.
 const uint PF_Occlude			= 0x80000000u;	// Occludes even if PF_NoOcclude.
 const uint PF_RenderHint		= 0x01000000u;   // Rendering optimization hint.
 
-#ifdef EDITOR
+#if EDITOR
 // enum ERenderType
 const uint	REN_None			= 0u;	// Hide completely.
 const uint	REN_Wire			= 1u;	// Wireframe of EdPolys.
@@ -257,19 +257,19 @@ const uint	TEXF_MAX			    =   0xffu;
 
 // DrawFlags
 const uint	DF_DiffuseTexture	= 0x00000001u;
-const uint	DF_DetailTexture	= 0x00000002u;
-const uint	DF_MacroTexture	 	= 0x00000004u;
-const uint	DF_BumpMap			= 0x00000008u;
-const uint	DF_LightMap         = 0x00000010u;
-const uint	DF_FogMap          	= 0x00000020u;
+const uint	DF_LightMap         = 0x00000002u;
+const uint	DF_FogMap          	= 0x00000004u;
+const uint	DF_DetailTexture	= 0x00000008u;
+const uint	DF_MacroTexture	 	= 0x00000010u;
+const uint	DF_BumpMap			= 0x00000020u;
 const uint	DF_EnvironmentMap  	= 0x00000040u;
-
 
 layout(std140) uniform GlobalMatrices
 {
 	mat4 modelMat;
 	mat4 viewMat;
-	mat4 projMat;
+	mat4 modelviewMat;
+	mat4 modelviewprojMat;
 	mat4 lightSpaceMat;
 };
 
@@ -302,7 +302,7 @@ layout(std140) uniform GlobalCoords
 	mat4 FrameUncoords;
 };
 
-#ifdef BINDLESSTEXTURES
+#if BINDLESSTEXTURES
 layout(std140) uniform TextureHandles
 {
 	sampler2D Textures[NUMTEXTURES];
@@ -346,6 +346,7 @@ float PlaneDot( vec4 Plane, vec3 Point )
 {
     return dot(Plane.xyz,Point)-Plane.w;
 }
+
 
 // The following directive resets the line number to 1 to have the correct output logging for a possible error within the shader files.
 #line 1
