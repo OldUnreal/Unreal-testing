@@ -1,0 +1,9 @@
+﻿[LevelInfo0]
+; EN: LevelEnterText="Stomp"
+LevelEnterText="Pisotón"
+IdealPlayerCount="2-5"
+
+[LevelSummary]
+; EN: LevelEnterText="Stomp"
+LevelEnterText="Pisotón"
+IdealPlayerCount="2-5"

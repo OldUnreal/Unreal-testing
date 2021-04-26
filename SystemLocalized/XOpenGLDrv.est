@@ -1,0 +1,22 @@
+﻿[Public]
+Object=(Name=XOpenGLDrv.XOpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
+; EN: Preferences=(Caption="XOpenGL Support",Parent="Rendering",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="Options")
+Preferences=(Caption="Soporte para XOpenGL",Parent="Reproducción",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="Options")
+; EN: Preferences=(Caption="Debug Options",Parent="XOpenGL Support",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="DebugOptions")
+Preferences=(Caption="Opciones de Desarrollo",Parent="Soporte para XOpenGL",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="DebugOptions")
+
+[Errors]
+; EN: NoFindGL="Can't find XOpenGL driver %ls"
+NoFindGL="No se ha podido encontrar el controlador XOpenGL %ls."
+; EN: MissingFunc="Missing XOpenGL function %ls (%i)"
+MissingFunc="Falta la función XOpenGL %ls (%i)."
+; EN: ResFailed="Failed to set resolution"
+ResFailed="No se ha podido ajustar la resolución."
+
+[XOpenGLRenderDevice]
+; EN: ClassCaption="XOpenGL Support"
+ClassCaption="Soporte para XOpenGL"
+; EN: AskInstalled="Do you have a XOpenGL compatible 3D accelerator installed?"
+AskInstalled="¿Tienes instalada una tarjeta compatible XOpenGL aceleradora de gráficos en 3D?"
+; EN: AskUse="Do you want Unreal to use your XOpenGL accelerator?"
+AskUse="¿Quieres que Unreal utilice tu tarjeta aceleradora XOpenGL?"

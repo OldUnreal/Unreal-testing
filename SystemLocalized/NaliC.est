@@ -1,32 +1,47 @@
 ﻿[LevelInfo3]
+; EN: Title="Nali Castle"
 Title="Castillo Nali"
+; EN: LevelEntryText="Entering the Nali Castle"
 LevelEntryText="Entrando al Castillo Nali"
 
 [LevelSummary]
+; EN: Title="Nali Castle"
 Title="Castillo Nali"
+; EN: LevelEntryText="Entering the Nali Castle"
 LevelEntryText="Entrando al Castillo Nali"
 
 [TranslatorEvent0]
-message="El camino a seguir es largo y asolador, pero quien tenga voluntad y un corazón duro prevalecerá por sobre los desafíos."
-Hint="Vuestro camino ahora está libre."
+; EN: Message="The path to be followed is long and harrowing, but the strong of heart and purpose will prevail against the challenges."
+Message="El camino a seguir es largo y angustioso, pero los fuertes de corazón y determinación prevalecerán frente a los desafíos."
+; EN: Hint="Thy path is now clear."
+Hint="Vuestro camino ahora está claro."
 
 [TranslatorEvent5]
-message="Sólo el ser iluminado que haya leído la Biblia del Buen Saber en la capilla tendrá la puerta abierta a la torre a través de estas entradas divinas."
-Hint="Ve a la capilla y lee el libro para poder entrar."
+; EN: Message="Only the enlightened one who has read the Book of the Good Lore in the chapel shall be granted passage to the tower through these divine gates."
+Message="Solo al ser iluminado que haya leído el Libro del Buen Saber en la capilla se le concederá el paso a la torre a través de estas entradas divinas."
+; EN: Hint="Travel to the chapel and read the book to gain access."
+Hint="Viaja a la capilla y lee el Libro para tener acceso."
 
 [TranslatorEvent4]
-message="Quien busque el saber será recompensado por estudiar los tomos guardados en la sala principal de festín."
+; EN: Message="He who seeks knowledge would be well rewarded for perusing the tomes stored in the main feast hall."
+Message="Quien busque conocimiento será bien recompensado por leer los tomos almacenados en el salón de festín principal."
 
 [TranslatorEvent1]
-message="Estoy aquí sentado, esperando la muerte. Esperando... La espera es aún peor que la misma muerte. El temor me está desgarrando el alma. Oigo los lamentos de los demás mientras los llevan a las entrañas de la mazmorra para ser sacrificados al Demonio del Cielo con alas."
+; EN: Message="I sit here, waiting to die. Waiting... The wait is worse than death itself. My fears tear at my soul. I hear the wails of the others as they are taken to the bowels of the dungeon to be sacrificed to the winged Sky Daemon."
+Message="Estoy sentado aquí, esperando morir. Esperando... La espera es peor que la muerte misma. El temor desgarra mi alma. Escucho los lamentos de los demás mientras son llevados a las entrañas de la mazmorra para ser sacrificados al demonio alado del cielo."
 
 [TranslatorEvent3]
-message="Sólo el guerrero que demuestre su valentía venciendo al demonio de los cinco ojos en la torre podrá entrar a la mazmorra."
-Hint="Ve a la torre más alta y mata al demonio para poder entrar en la mazmorra."
+; EN: Message="Only the warrior who demonstrates his bravery by defeating the five eyed daemon in the tower shall be granted passage to the dungeon."
+Message="Solo el guerrero que demuestre su valentía al derrotar al demonio de cinco ojos en la torre podrá acceder a la mazmorra."
+; EN: Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon."
+Hint="Ve a la torre más alta y mata al demonio para acceder a la mazmorra."
 
 [TranslatorEvent2]
-message="Sólo el guerrero que demuestre su valentía venciendo al demonio de los cinco ojos en la torre podrá entrar a la mazmorra."
-Hint="Ve a la torre más alta y mata al demonio para poder entrar en la mazmorra."
+; EN: Message="Only the warrior who demonstrates his bravery by defeating the five eyed daemon in the tower shall be granted passage to the dungeon."
+Message="Solo el guerrero que demuestre su valentía al derrotar al demonio de cinco ojos en la torre podrá acceder a la mazmorra."
+; EN: Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon."
+Hint="Ve a la torre más alta y mata al demonio para acceder a la mazmorra."
 
 [TranslatorEvent6]
+; EN: Message="What the HELL are you doing up here?"
 Message="¿Qué DEMONIOS estás haciendo aquí?"

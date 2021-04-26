@@ -1,140 +1,228 @@
-﻿// Siéntanse libres de editar este archivo, expandirlo, o lo que sea.
+﻿; EN: // Feel free to edit this file, expand it or w/e.
+// Siéntanse libres de editar este archivo, expandirlo, o lo que sea.
+; EN: // Just make sure you don't mess up your own administration interface.
 // Solo asegúrense de no estropear nuestra interfaz de administración.
+; EN: // Functions/Keywords:
 // Funciones/Palabras clave:
+; EN: // /Cdate = Current date
 // /Cdate = Fecha actual
+; EN: // /Ctime = Current time
 // /Ctime = Tiempo actual
-// /MapT = Título de mapa actual
+; EN: // /MapT = Current map title
+// /MapT = Título del mapa actual
+; EN: // /MapF = Current map filename
 // /MapF = Nombre de archivo de mapa actual
-// /WebVer = Versión de admin. web actual
-// /n = Nueva línea (Nota: la próxima línea web automáticamente incluye nuevo código de línea)
+; EN: // /WebVer = Current webadmin version
+// /WebVer = Versión actual de admin. web
+; EN: // /n = New line (Note that next Web line automatly includes new line code)
+// /n = Nueva línea (tenga en cuenta que la siguiente línea web incluye automáticamente un nuevo código de línea)
+; EN: // %frd: <Redirect name>% = Forward code to some other int file or keep in this file but different part
 // %frd: <Nomb. Redirección>% = Envía código a otro archivo de internacionalización o lo guarda en este archivo pero en una parte diferente
+; EN: // WARNING!!!! Redirecting from part A to part B, then in part B to part A will always crash (runaway loop)!
 // ¡¡¡ADVERTENCIA!!!! Redireccionar de una parte A a una parte B, y luego de la parte B a la parte A siempre fallará (da vueltas sin parar)!
+; EN: // %Content: <Webpage content classname>% = Add HTML codes from a UScript class
 // %Content: <Nombre de clase de contenido de página web>% = Agrega códigos HTML desde una clase UScript
+; EN: // Line type: "Alive/" will keep the connection refreshing page every 5 seconds.
 // Típo de línea: "Alive/" hará que la conexión actualice la página cada 5 segundos.
 
+; EN: // Web site content
 // Contenido de sitio web
 [Index]
 WebContentLen=6
+; EN: Web0=<!-- Server WebAdministration code /WebVer written by .:..: (2008) -->
 Web0=<!-- Código de Administración Web /WebVer escrito por .:..: (2008) -->
+; EN: Web1=<HTML><HEAD><TITLE>WebAdmin server administration</TITLE></HEAD>
 Web1=<HTML><HEAD><TITLE>Admin. de Servidor Web</TITLE></HEAD>
+; EN: Web2=<frameset rows="80,*,50" cols="*" frameborder="No" framespacing="0" border="0">
 Web2=<frameset rows="80,*,50" cols="*" frameborder="No" framespacing="0" border="0">
+; EN: Web3=<frame src="/MainLinksPage" name="menu" noresize frameborder="0" marginheight="0" scrolling="no" framespacing="0">
 Web3=<frame src="/MainLinksPage" name="menu" noresize frameborder="0" marginheight="0" scrolling="no" framespacing="0">
+; EN: Web4=<frame src="/IndexX" name="menumain" scrolling="yes" frameborder="no" noresize framespacing="0" marginheight="0">
 Web4=<frame src="/IndexX" name="menumain" scrolling="yes" frameborder="no" noresize framespacing="0" marginheight="0">
+; EN: Web5=<frame src="/ServerConsoleLine" name="consoleline" scrolling="no" frameborder="no" noresize framespacing="0" marginheight="0">
 Web5=<frame src="/ServerConsoleLine" name="consoleline" scrolling="no" frameborder="no" noresize framespacing="0" marginheight="0">
-Web6=</frameset>/n<noframes><body bgcolor="#FFFFFF">Este Servidor Requiere Marcos.</body></ noframes>/n</html>
+; EN: Web6=</frameset>/n<noframes><body bgcolor="#FFFFFF">If you get that message your browser doesn't support frames.</body></ noframes>/n</html>
+Web6=</frameset>/n<noframes><body bgcolor="#FFFFFF">Si ves este mensaje, tu navegador no soporta marcos.</body></ noframes>/n</html>
 
+; EN: // The links page
 // Página de enlaces
 [MainLinksPage]
 WebContentLen=3
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<center><A href="/MapRestartPage" target="_parent">Restart map</A>, <A href="/MapSwitch" target="menumain">Switch map</A>, <A href="/IndexX" target="menumain">Current</A>, <A href="/BanListPage" target="menumain">Banlist</A>, <A href="/ServerConsole" target="menumain">Server console</A>, <A href="/Logout" target="menumain">Logout user</A><BR>
 Web1=<center><A href="/MapRestartPage" target="_parent">Reiniciar mapa</A>, <A href="/MapSwitch" target="menumain">Cambiar mapa</A>, <A href="/IndexX" target="menumain">Actual</A>, <A href="/BanListPage" target="menumain">Lista de vetos</A>, <A href="/ServerConsole" target="menumain">Consola de servidor</A>, <A href="/Logout" target="menumain">Cerrar sesión</A><BR>
+; EN: Web2=Config links: <A href="/GameDefaults" target="menumain">Main GameConfig</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">ServerInfo Config</A>, <A href="/MapLinksPage" target="menumain">Maplists</A>, <A href="/ModLinksPage" target="menumain">Mod Configures</A></center><BR>/n
 Web2=Vínculos de configuración: <A href="/GameDefaults" target="menumain">Config. Principal de Juego</A>, <A href="/Mod_UWebAdmin.RepPageConfig" target="menumain">Config. de Info. de Servidor</A>, <A href="/MapLinksPage" target="menumain">Lista de Mapas</A>, <A href="/ModLinksPage" target="menumain">Config. de Modificación</A></center><BR>/n
+; EN: Web3=%frd:PageEnding%
 Web3=%frd:PageEnding%
 
 [IndexX]
 WebContentLen=5
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=Welcome %Content:UWebAdmin.GetClientUser% to server webadmin site<BR>Current players in this server:<BR>
 Web1=Bienvenido/a %Content:UWebAdmin.GetClientUser% al sitio de administración web de servidor<BR>Jugadores actuales en el servidor:<BR>
+; EN: Web2=<form method="post" action="Index?UWebAdmin.PlayersListDebug">
 Web2=<form method="post" action="Index?UWebAdmin.PlayersListDebug">
+; EN: Web3=%Content:UWebAdmin.PlayersListDebug%</form>/n
 Web3=%Content:UWebAdmin.PlayersListDebug%</form>/n
+; EN: Web4=<BR>Your IP: %Content:UWebAdmin.GetClientIP% has been logged on server.
 Web4=<BR>Tu IP: %Content:UWebAdmin.GetClientIP% se ha grabado en el servidor.
+; EN: Web5=%frd:PageEnding%
 Web5=%frd:PageEnding%
 
+; EN: // Server console page
 // Página de consola del servidor
 [ServerConsole]
 WebContentLen=5
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<CENTER><TABLE BORDER=1 WIDTH="75%"><TR><TH>Message window (Playing on /MapF: /MapT):</TH></TR><TR><TD>/n
 Web1=<CENTER><TABLE BORDER=1 WIDTH="75%"><TR><TH>Ventana de Mensaje (Partida en /MapF: /MapT):</TH></TR><TR><TD>/n
+; EN: Web2=%Content:UWebAdmin.WebChatWindow%/n</TD></TR></table></CENTER>
 Web2=%Content:UWebAdmin.WebChatWindow%/n</TD></TR></table></CENTER>
+; EN: Web3=<script>/nvar parselimit=4;/nfunction beginrefresh(){/nif(!document.images) return/nif (parselimit==1) window.location.replace("/ServerConsole")
 Web3=<script>/nvar parselimit=4;/nfunction beginrefresh(){/nif(!document.images) return/nif (parselimit==1) window.location.replace("/ServerConsole")
+; EN: Web4=else{/nparselimit-=1/nsetTimeout("beginrefresh()",1000)/n}/n}/nwindow.onload=beginrefresh/n</script>
 Web4=else{/nparselimit-=1/nsetTimeout("beginrefresh()",1000)/n}/n}/nwindow.onload=beginrefresh/n</script>
+; EN: Web5=%frd:PageEnding%
 Web5=%frd:PageEnding%
 
 [ServerConsoleLine]
 WebContentLen=4
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<form method="post" action="ServerConsoleLine?UWebAdmin.WebChatWindow">/n
 Web1=<form method="post" action="ServerConsoleLine?UWebAdmin.WebChatWindow">/n
+; EN: Web2=<TABLE BORDER=0><TR><TH>Console Command: <input class="textbox" type="text" name="Cmd" size="56" value="Say " maxlength="80"></TH>
 Web2=<TABLE BORDER=0><TR><TH>Comando de Consola: <input class="textbox" type="text" name="Cmd" size="56" value="Say " maxlength="80"></TH>
+; EN: Web3=<TH><input class="button" type="submit" name="edit" value="Enter"></TH></TABLE>/n</form>>
 Web3=<TH><input class="button" type="submit" name="edit" value="Enter"></TH></TABLE>/n</form>
+; EN: Web4=%frd:PageEnding%
 Web4=%frd:PageEnding%
+; EN: // <- End of server console.
 // <- Fin de consola de servidor
 
-// Reiniciar mapa
+// Restart map
 [MapRestartPage]
 WebContentLen=1
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=Restarting map, please wait.%Content:UWebAdmin.RestartMapCode%/n Please click <A href="/Index" target="_parent">here</A> once its done.</BODY></HTML>
 Web1=Reiniciando mapa, favor de esperar.%Content:UWebAdmin.RestartMapCode%/n Presionar <A href="/Index" target="_parent">aquí</A> una vez finalizado el reinicio.</BODY></HTML>
 
+; EN: // Switch map
 // Cambio de mapa
 [MapSwitchingPage]
 WebContentLen=1
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=Server is now switching map, please wait. Please click <A href="/Index" target="_parent">here</A> once its done.</BODY></HTML>
 Web1=El servidor está cambiando el mapa, favor de esperar. Presionar <A href="/Index" target="_parent">aquí</A> una vez finalizado el cambio.</BODY></HTML>
 
+; EN: // Banlist page
 // Página de lista de vetos
 [BanListPage]
 WebContentLen=2
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<form method="post" action="BanListPage?UWebAdmin.BanListGen">/n   Banlist page, here you can unban banned players./n%Content:UWebAdmin.BanListGen%</form>/n
 Web1=<form method="post" action="BanListPage?UWebAdmin.BanListGen">/n Página de lista de vetos, aquí podrás sacarle el veto a los jugadores vetados./n%Content:UWebAdmin.BanListGen%</form>/n
+; EN: Web2=%frd:PageEnding%
 Web2=%frd:PageEnding%
 
+; EN: // User logging out
 // Salida del usuario
 [Logout]
 WebContentLen=2
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<BR>You have successfully logged out from webadministration page.%Content:UWebAdmin.UserLogout%
 Web1=<BR>Has cerrado tu sesión de administración web con éxito.%Content:UWebAdmin.UserLogout%
+; EN: Web2=%frd:PageEnding%
 Web2=%frd:PageEnding%
 
+; EN: // Basic game configures (server packages/server actors/admin/game passwords).
 // Configuración básica de juego (paquetes de servidor/actores de servidor/admin/contraseñas de juego).
 [GameDefaults]
 WebContentLen=3
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<form method="post" action="GameDefaults?UWebAdmin.GameConfigPage">/n%Content:UWebAdmin.GameConfigPage%</form><BR>/n
 Web1=<form method="post" action="GameDefaults?UWebAdmin.GameConfigPage">/n%Content:UWebAdmin.GameConfigPage%</form><BR>/n
+; EN: Web2=<form method="post" action="GameDefaults?UWebAdmin.NetConfigPage">/n%Content:UWebAdmin.NetConfigPage%</form>/n
 Web2=<form method="post" action="GameDefaults?UWebAdmin.NetConfigPage">/n%Content:UWebAdmin.NetConfigPage%</form>/n
+; EN: Web3=%frd:PageEnding%
 Web3=%frd:PageEnding%
 
+; EN: // Maplist Links page
 // Página de vínculos de lista de mapas
 [MapLinksPage]
 WebContentLen=3
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<form method="post" action="MapLinksPage?UWebAdmin.MapListLinkPage">
 Web1=<form method="post" action="MapLinksPage?UWebAdmin.MapListLinkPage">
+; EN: Web2=<h2>Custom maplist configures:</h2>%Content:UWebAdmin.MapListLinkPage%<BR></form>
 Web2=<h2>Configuración personalizada de lista de mapas:</h2>%Content:UWebAdmin.MapListLinkPage%<BR></form>
+; EN: Web3=%frd:PageEnding%
 Web3=%frd:PageEnding%
 
+; EN: // Mod Link page
 // Página de vínculos de modificación
 [ModLinksPage]
 WebContentLen=2
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<h2>Custom mod configures:</h2>%Content:UWebAdmin.ModLinkPage%<BR>
 Web1=<h2>Configuración personalizada de modificación:</h2>%Content:UWebAdmin.ModLinkPage%<BR>
+; EN: Web2=%frd:PageEnding%
 Web2=%frd:PageEnding%
 
+; EN: // Mod based game configures (works using special hacks).
 // Configuración de juego específica de modificación (funciona utilizando trampas especiales).
 [ModConfigPage]
 WebContentLen=2
+; EN: Web0=%frd:PageHeader%<BR>
 Web0=%frd:PageHeader%<BR>
+; EN: Web1=%MODBASED%<BR>
 Web1=%MODBASED%<BR>
+; EN: Web2=%frd:PageEnding%
 Web2=%frd:PageEnding%
 
+; EN: // Maplist game configures (also works using special hacks).
 // Configuración de juego de lista de mapas (también funciona utilizando trampas especiales).
 [MapLConfigPage]
 WebContentLen=2
+; EN: Web0=%frd:PageHeader%<BR>
 Web0=%frd:PageHeader%<BR>
+; EN: Web1=%Content:UWebAdmin.MapListPage%<BR>
 Web1=%Content:UWebAdmin.MapListPage%<BR>
+; EN: Web2=%frd:PageEnding%
 Web2=%frd:PageEnding%
 
+; EN: // Map switch page.
 // Página de cambio de mapa.
 [MapSwitch]
 WebContentLen=2
+; EN: Web0=%frd:PageHeader%
 Web0=%frd:PageHeader%
+; EN: Web1=<form method="post" action="MapSwitchingPage?UWebAdmin.MapSwitchPage">/n%Content:UWebAdmin.MapSwitchPage%</form><BR>/n
 Web1=<form method="post" action="MapSwitchingPage?UWebAdmin.MapSwitchPage">/n%Content:UWebAdmin.MapSwitchPage%</form><BR>/n
+; EN: Web2=%frd:PageEnding%
 Web2=%frd:PageEnding%
 
+; EN: // Global stuff
 // Configuración global
 [PageHeader]
 WebContentLen=0
+; EN: Web0=<HTML><HEAD></HEAD><BODY bgcolor="#33CCCC">
 Web0=<HTML><HEAD></HEAD><BODY bgcolor="#33CCCC">
 
+; EN: // The "ending" part of this page.
 // Parte "final" de esta página.
 [PageEnding]
 WebContentLen=0
+; EN: Web0=</BODY></HTML>
 Web0=</BODY></HTML>

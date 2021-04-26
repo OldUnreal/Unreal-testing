@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="The Villa Docks"
+Title="Muelles del Poblado"
+IdealPlayerCount="3-9"
+; EN: LevelEnterText="The Villa Docks"
+LevelEnterText="Muelles del Poblado"
+
+[LevelSummary]
+; EN: Title="The Villa Docks"
+Title="Muelles del Poblado"
+IdealPlayerCount="3-9"
+; EN: LevelEnterText="The Villa Docks"
+LevelEnterText="Muelles del Poblado"

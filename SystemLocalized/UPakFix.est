@@ -1,0 +1,4 @@
+﻿[Public]
+; EN: Object=(Name=UPakFix.UPakFix,Class=Class,MetaClass=Engine.Mutator,Description="RTNP Multiplayer Fix,Make Return to Na Pali work properly in multiplayer co-op.")
+Object=(Name=UPakFix.UPakFix,Class=Class,MetaClass=Engine.Mutator,Description="Coop. Mejorado para RTNP,Hace que Return to Na Pali funcione correctamente en modo multijugador cooperativo.")
+Object=(Name=UPakFix.NoWeapons,Class=Class,MetaClass=Engine.Weapon)

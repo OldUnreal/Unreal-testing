@@ -1,9 +1,15 @@
 ﻿[Public]
+; EN: Preferences=(Caption="Unreal Integrity",Parent="Networking",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
 Preferences=(Caption="Integridad de Unreal",Parent="Red")
+; EN: Preferences=(Caption="Integrity Server",Parent="Unreal Integrity",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
 Preferences=(Caption="Servidor de Integridad",Parent="Integridad de Unreal",Class=UnrealIntegrity227.IntegrityServer,Immediate=True)
+; EN: Preferences=(Caption="Whitelist",Parent="Unreal Integrity",Class=UnrealIntegrity.ExternalWhiteList,Immediate=True)
 Preferences=(Caption="Lista Blanca",Parent="Integridad de Unreal",Class=UnrealIntegrity227.ExternalWhiteList,Immediate=True)
 
 [General]
-ScanningInfo="Integridad de Unreal está revisando tu cliente para encontrar trampas..."
+; EN: ScanningInfo="Unreal Integrity is scanning your client for possible cheats..."
+ScanningInfo="Integridad de Unreal está revisando tu cliente en busca de trampas..."
+; EN: MidGameScan="You have died, performing mid-game cheat scan."
 MidGameScan="Has muerto, ejecutando búsqueda de trampas de mitad de juego."
+; EN: EndGameScan="Game has ended, performing end-game cheat scan."
 EndGameScan="El juego ha finalizado, ejecutando búsqueda de trampas de final del juego."

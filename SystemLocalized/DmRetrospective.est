@@ -1,0 +1,29 @@
+﻿[MegaHealth]
+; EN: PickupMessage="You picked up the Mega Health Pack"
+PickupMessage="¡Has recogido el Megapaquete de Salud!"
+
+[LevelInfo0]
+; EN: Title="Retrospective"
+Title="Retrospectiva"
+IdealPlayerCount="6-10"
+; EN: LevelEnterText="Map for the Unreal 227 Patch!"
+LevelEnterText="¡Mapa para el Parche 227 de Unreal!"
+
+[MegaHealth3]
+; EN: PickupMessage="You picked up the Mega Health :)"
+PickupMessage="¡Has recogido la Megasalud! :)"
+
+[LevelSummary]
+; EN: Title="Retrospective"
+Title="Retrospectiva"
+IdealPlayerCount="6-10"
+; EN: LevelEnterText="Map for the Unreal 227 Patch!"
+LevelEnterText="¡Mapa para el Parche 227 de Unreal!"
+
+[TranslatorEvent0]
+; EN: Message="Special thanks to the Unreal retexturing project team! The S3TC textures look so awesome!\nVISIT WWW.UNREALTEXTURE.COM"
+Message="¡Agradecimientos especiales al equipo del proyecto de retexturizado de Unreal! Las texturas S3TC se ven TAN geniales!\nVISITAD WWW.UNREALTEXTURE.COM"
+
+[TranslatorEvent1]
+; EN: Message="Special thanks to: Smirftsch, Wolf, .:..:, Shambler, Smpdev, Kerilk, Raven, Asgard12000, Bozo, DieHard, Zombie, HyperNL, Pitbull, Kasima and the Oldunreal community for developing the Unreal 227 Patch!\nVISIT WWW.OLDUNREAL.COM"
+Message="¡Agradecimientos especiales a: Smirftsch, Wolf, .:..:, Shambler, Smpdev, Kerilk, Raven, Asgard12000, Bozo, DieHard, Zombie, HyperNL, Pitbull, Kasima y la comunidad OldUnreal por desarrollar el Parche 227 para Unreal!\nVISITAD WWW.OLDUNREAL.COM"

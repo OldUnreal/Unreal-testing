@@ -1,0 +1,31 @@
+﻿[LevelInfo1]
+; EN: Title="Neve's Crossing"
+Title="Cruce de Neve"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Entrando al Cruce de Neve"
+
+[LevelSummary]
+; EN: Title="Neve's Crossing"
+Title="Cruce de Neve"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Entrando al Cruce de Neve"
+
+[TranslatorEvent15]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Estación de minería Terra-Neo (Norte)"
+
+[TranslatorEvent6]
+; EN: Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
+Message="REGISTRO: B. Bates: Hemos encontrado a Mock boca abajo en un lago cercano. Parece que se ahogó. Pobre desgraciado. Me pregunto si vio caer las cajas de la UMS. Espero que el equipo de Dalton lo haya logrado. Parece que, después de todo, podríamos ser rescatados."
+
+[TranslatorEvent5]
+; EN: Message="LOG: P. Mock: Last saw Dalton and the rest two days ago. I'm lost. There are crates dropping down from the sky with UMS markings. Maybe whoever made it off this rock brought back help. I'm going to attempt to slip by the Skaarj through the lake."
+Message="LOG: P. Mock: Vi por última vez a Dalton y al resto hace dos días. Estoy perdido. Hay cajas que caen del cielo con la marca UMS. Quizás quienquiera que haya salido de esta roca trajo ayuda. Voy a intentar eludir a los Skaarj atravesando el lago."
+
+[TranslatorEvent14]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Estación de minería Terra-Neo (Norte)"
+
+[TranslatorEvent0]
+; EN: Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."
+Message="Temo que nuestra batalla aún no ha concluido. Los demonios del cielo han descubierto el pozo de Eldora y lo están utilizando contra nosotros. He tenido la suerte de escapar con vida. Aguardaré aquí con la esperanza de que pronto nos dejen..."

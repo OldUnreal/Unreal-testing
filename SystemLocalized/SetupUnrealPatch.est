@@ -1,0 +1,39 @@
+﻿[Setup]
+LocalProduct="Unreal Gold/Unreal Anthology"
+DefaultFolder="C:\Unreal"
+ReadMe="Help\227ReleaseNotes.pdf"
+; EN: SetupWindowTitle="Unreal Setup"
+SetupWindowTitle="Instalación de Unreal"
+; EN: AutoplayWindowTitle="Unreal Options"
+AutoplayWindowTitle="Opciones de Unreal"
+ProductURL="http://www.unreal.com/"
+VersionURL="http://www.oldunreal.com"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - ver. 227 por Oldunreal"
+DeveloperURL="http://www.oldunreal.com/"
+Logo="Help\Logo.bmp"
+
+[UnrealRequirement]
+LocalProduct="Unreal Gold/Unreal Anthology"
+ProductURL="http://www.unreal.com/"
+VersionURL="http://www.epicgames.com/"
+Developer="Epic Games, Inc."
+DeveloperURL="http://www.epicgames.com/"
+
+[LinuxGroup]
+; EN: Caption="Linux native files"
+Caption="Archivos nativos de Linux"
+; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.7z in the Help folder which should contain all the necessary files."
+Description="Copia todos los archivos requeridos para ejecutar y jugar a Unreal nativamente en Linux. Aún no hay menú de Opciones Avanzadas, sin embargo todas las configuraciones pueden hallarse y editarse en el archivo UnrealLinux.ini en el directorio System. El editor de niveles UnrealED 2.1 no está disponible para Linux aún. Si tienes problemas al iniciar el juego, hay más información y un FAQ dentro de las notas de lanzamiento (ReleaseNotes) en el directorio Help. Si tu sistema no posee todas las librerías, hay un paquete llamado lin_convenience_libs.7z en el directorio Help, el cual debería contener todos los archivos necesarios."
+
+[OldWeaponsGroup]
+; EN: Caption="Old Weapons"
+Caption="Armas Antiguas"
+; EN: Description="Copies the Old Weapons mutator files. These files allow you to play with the weapons of Unreal version 200. Details can be found in the OldWeaponsReadme.txt in the help folder."
+Description="Copia los archivos del mutador de Armas Antiguas. Estos archivos te permitirán jugar con las armas de la versión 200 de Unreal. Se pueden encontrar detalles en el archivo OldWeaponsReadme.txt en la carpeta Help."
+
+[UPakFixGroup]
+; EN: Caption="Return to Na Pali Coop Fix"
+Caption="Mutador de Coop. Mejorado para RTNP"
+; EN: Description="Copies the UPakFix mutator files. These files allow you to play Unreal: Return to Na Pali in cooperative multiplayer mode without the usual errors."
+Description="Copia los archivos del mutador de modo cooperativo mejorado para Unreal: Return to Na Pali. Estos archivos permiten que puedas jugar a Unreal: Return to Na Pali en modo cooperativo multijugador sin los errores usuales."

@@ -1,0 +1,358 @@
+﻿[SVariableBase]
+MenuName="Variables"
+
+[VAR_OBJECT_BASE]
+MenuName="Objeto de referencia"
+
+[VAR_OBJECTARRAY_BASE]
+MenuName="Arreglo de objetos"
+
+[VAR_Vector]
+MenuName="Vector"
+Description="Vector variable"
+
+[VAR_STRUCT_BASE]
+MenuName="Miembros de estructura"
+
+[LOGICBASE]
+MenuName="Lógica"
+
+[ACTIONSBASE]
+MenuName="Acciones"
+
+[ACTORBASE]
+MenuName="Actor"
+
+[ACTOR_Overlay]
+MenuName="Superposición de Mallas"
+Description="Agrega una superposición de malla a un actor"
+
+[HUD_DrawIcon]
+MenuName="Dibujar Icono"
+Description="Dibuja un icono en el monitor frontal (HUD)."
+
+[HUDElementBase]
+MenuName="Mon. Frontal (HUD)"
+
+[HUD_DrawText]
+MenuName="Dibujar Texto"
+Description="Dibuja un mensaje en el monitor frontal (HUD)."
+
+[TEXT_ShowMessage]
+MenuName="Mostrar Mensaje"
+Description="Muestra un mensaje a un cliente en pantalla.|Si no se especifica el receptor, todos recibirán el mensaje."
+
+[TEXTBASE]
+MenuName="Operación de Texto"
+
+[VAR_ActorList]
+MenuName="Lista de Actores"
+Description="Variable de referencia dinámica de lista de actores"
+
+[VARIABLEBASE]
+MenuName="Variables"
+
+[VAR_ObjectList]
+MenuName="Lista de Objetos"
+Description="Variable de referencia de lista de objetos|¡ADVERTENCIA! ¡No utilizar para referenciar actores dinámicos destruíbles o el juego podría fallar!"
+
+[LEVELSBASE]
+MenuName="Nivel"
+
+[VAR_Actor]
+MenuName="Actor"
+Description="Variable de referencia dinámica de actor"
+
+[VAR_Float]
+MenuName="Flotante"
+Description="Variable de punto flotante"
+
+[VAR_Int]
+MenuName="Entero"
+Description="Variable entera de 32 bits"
+
+[LEVEL_Network]
+MenuName="Datos de Red"
+Description="Transmite datos de un servidor al cliente.|Todas las entradas que configures serán mostradas al cliente y activarán las salidas de eventos del cliente cada vez que dispares las entradas del lado del servidor.|Si no se especifica el receptor, el evento de red será transmitido a todos los clientes."
+
+[LEVEL_RadialActors]
+MenuName="Actores Radiales"
+Description="Toma a todos los actores dentro de un área radial en el nivel.|La posición de entrada puede ser un actor o vector."
+
+[MATH_Int]
+MenuName="Operación Entera"
+Description="Hace una operación matemática con enteros"
+
+[MATHBASE]
+MenuName="Matemática"
+
+[EVENTBASE]
+MenuName="Eventos"
+
+[VAR_String]
+MenuName="Cadena"
+Description="Variable de línea de texto"
+
+[MOVER_MoveToKey]
+MenuName="Mover a clave"
+Description="Mueve un objeto móvil a un momento clave."
+
+[MOVERBASE]
+MenuName="Objeto Móvil"
+
+[PAWN_SetHealth]
+MenuName="Dar Salud"
+Description="Da o quita salud de un peón."
+
+[PAWNBASE]
+MenuName="Peón"
+
+[EVENT_Triggered]
+MenuName="Activado"
+Description="Activado por un regular en un evento de nivel.|La etiqueta puede ser cambiada con el evento Especificar Etiqueta y al vincular un valor de etiqueta nueva."
+
+[ACTOR_ChangeScale]
+MenuName="Cambiar Escala"
+Description="Cambia el tamaño de un actor. El tiempo de mezcla es opcional."
+
+[VAR_Name]
+MenuName="Nombre"
+Description="Nombre de la variable."
+
+[ACTOR_Destroy]
+MenuName="Destruir Actor"
+Description="Destruye instantáneamente un actor."
+
+[MATH_Float]
+MenuName="Operación Flotante"
+Description="Hace una operación matemática en punto flotante."
+
+[VAR_Bool]
+MenuName="Booleano"
+Description="Variable booleana (Verdadero/Falso)."
+
+[LATENT_MoveToActor]
+MenuName="IA: Mover Hacia Actor"
+Description="Hace que un Peón Guionado (ScriptedPawn) se mueva hacia un actor objetivo.|La salida se activa cuando un peón haya llegado o no a su objetivo, con la salida de "Alcanzado" configurada una vez que el peón llegue."
+
+[LATENTBASE]
+MenuName="Latente"
+
+[ACTOR_PlaySound]
+MenuName="Reproducir Sonido"
+Description="Reproduce un efecto de sonido.|La fuente de sonido puede ser un actor o un vector. Si es un arreglo de actores, reproducirá el sonido en todos los actores de ese arreglo."
+
+[VAR_Rotator]
+MenuName="Rotador"
+Description="Variable de rotación"
+
+[LEVEL_SpawnActor]
+MenuName="Engendrar Actor"
+Description="Engendra un nuevo actor.|Si a la variable de actor se le da la entrada de Posición, utilizará esa rotación de actor. De otro modo, se podrá especificar vector y rotación."
+
+[LEVEL_AllPawns]
+MenuName="Todos los Peones"
+Description="Toma a todos los peones del nivel."
+
+[PAWN_GiveItem]
+MenuName="Dar Item"
+Description="Le da un objeto de inventario a un jugador."
+
+[LOGIC_ArrayAdd]
+MenuName="Agregar a Arreglo"
+Description="Agrega un item singular a un arreglo.|Activa el evento Encontrado o No Encontrado dependiendo del resultado."
+
+[VAR_RandInt]
+MenuName="Entero Aleatorio"
+Description="Variable entera aleatoria"
+
+[TEXT_AddText]
+MenuName="Agregar Texto"
+Description="Agrega texto al final de la línea de texto actual."
+
+[VAR_Object]
+MenuName="Objeto"
+Description="Variable de referencia de objeto.|¡ADVERTENCIA! ¡No utilizar para referenciar actores dinámicos destruíbles o el juego podría fallar!"
+
+[LEVEL_PlayMusic]
+MenuName="Reproducir Música"
+Description="Cambia la música en reproducción.|Si no se especifica el jugador, la música será cambiada para todos."
+
+[VAR_RandFloat]
+MenuName="Flotante Aleatorio"
+Description="Variable de punto flotante aleatoria."
+
+[LATENT_Timer]
+MenuName="Temporizador"
+Description="Espera a un tiempo específico."
+
+[ACTOR_SetHidden]
+MenuName="Especificar Oculto"
+Description="Especifica si un actor debe permanecer oculto."
+
+[VAR_LocalPlayer]
+MenuName="Jugador Local"
+Description="Función de variable de jugador local"
+
+[EVENT_PawnDied]
+MenuName="Peón Muerto"
+Description="Se activa cuando un peón muere."
+
+[EVENT_PawnHurt]
+MenuName="Peón Herido"
+Description="Se activa cuando un peón recibe daño."
+
+[EVENT_PawnPrevDeath]
+MenuName="Evitar Muerte"
+Description="Evita que un peón muera.|NOTA: El vínculo de salida es activado LUEGO de verificar si la bandera de Entrada es verdadera, en cuyo caso se evita la muerte del peón."
+
+[OBJECTBASE]
+MenuName="Objeto"
+
+[EVENT_PlayerSpawn]
+MenuName="Jugador Engendrado"
+Description="Activado cuando se engendra un jugador."
+
+[PAWN_Kill]
+MenuName="Matar Peón"
+Description="Mata instantáneamente a un peón."
+
+[LOGIC_ListIterator]
+MenuName="Iterador de lista de objetos"
+Description="Itera a través de una lista de objetos."
+
+[LEVEL_SendEvent]
+MenuName="Evento de Activación"
+Description="Envía un evento regular a todos los actores del nivel."
+
+[LOGIC_ArrayRemove]
+MenuName="Eliminar de Arreglo"
+Description="Elimina un item de un arreglo y devuelve su tamaño.|Se activa un evento vacío luego de la remoción del elemento final del arreglo."
+
+[TEXT_Replace]
+MenuName="Reemplazar Texto"
+Description="Reemplaza una parte del texto con otro texto."
+
+[LOGIC_Dispatch]
+MenuName="Repartidor"
+Description="Divide una llamada en múltiples ramas."
+
+[ACTOR_TakeDamage]
+MenuName="Recibir Daño"
+Description="Hace que un actor reciba daño."
+
+[ACTOR_SetPhysics]
+MenuName="Especificar Física"
+Description="Cambia la física de movimiento de un actor."
+
+[ACTOR_SetCollision]
+MenuName="Especificar Colisión"
+Description="Cambia el estado de colisión de un actor."
+
+[ACTOR_PlayAnim]
+MenuName="Reproducir Animación"
+Description="Reproduce una animación en los actores.|NOTA: ¡El código de peón puede sobreponerse a la animación!"
+
+[LOGIC_CompareFloat]
+MenuName="Comparar Flotante"
+Description="Compara dos números de punto flotante."
+
+[PAWN_DeleteItem]
+MenuName="Eliminar Item"
+Description="Busca y elimina un item de inventorio de un jugador."
+
+[LOGIC_CompareInt]
+MenuName="Comparar Entero"
+Description="Compara dos números enteros."
+
+[VARIABLE_ToVector]
+MenuName="A Vector"
+Description="Construye un vector a partir de componentes individuales."
+
+[VARIABLE_ToRotator]
+MenuName="A Rotador"
+Description="Construye un rotador a partir de componentes individuales."
+
+[LOGIC_Gate]
+MenuName="Puerta Lógica"
+Description="Una puerta lógica."
+
+[VARIABLE_FromVector]
+MenuName="Desde Vector"
+Description="Toma cada componente de un vector."
+
+[PAWN_FindItem]
+MenuName="Buscar Item"
+Description="Busca un item de inventorio de un jugador."
+
+[VARIABLE_FromRotator]
+MenuName="Desde Rotador"
+Description="Toma cada componente de un rotador."
+
+[LOGIC_CompareObject]
+MenuName="Comparar Objeto"
+Description="Compara dos objetos"
+
+[LOGIC_CompareText]
+MenuName="Comparar Texto"
+Description="Compara dos líneas de cadena de texto."
+
+[ACTOR_GetName]
+MenuName="Obtener Nombre"
+Description="Toma el nombre del actor."
+
+[LOGIC_GetArraySize]
+MenuName="Obtener Tamaño del Arreglo"
+Description="Verifica el tamaño de un objeto de arreglo."
+
+[OBJECT_SetProperty]
+MenuName="Especificar Propiedad"
+Description="Cambia el valor de una propiedad de un actor."
+
+[OBJECT_ChangeState]
+MenuName="Cambiar Estado"
+Description="Cambia el estado de guión de un actor."
+
+[LEVEL_AllActors]
+MenuName="Todos los Actores"
+Description="Toma a todos los actores del nivel."
+
+[OBJECT_GetProperty]
+MenuName="Obtener Propiedad"
+Description="Toma el valor de una propiedad de un actor."
+
+[VARIABLE_SetBool]
+MenuName="Especificar Booleano"
+Description="Especifica el valor de una variable booleana."
+
+[LEVEL_ResetLevel]
+MenuName="Reiniciar Nivel."
+Description="Reinicia el nivel de forma "suave"."
+
+[VARIABLE_SetFloat]
+MenuName="Especificar Flotante"
+Description="Especifica un valor de punto flotante."
+
+[LOGIC_ArrayEmpty]
+MenuName="Vaciar Arreglo"
+Description="Vacía un arreglo."
+
+[VARIABLE_SetInt]
+MenuName="Especificar Entero"
+Description="Especifica un valor entero."
+
+[VARIABLE_SetString]
+MenuName="Especificar Texto"
+Description="Especifica un valor de texto."
+
+[EVENT_BeginPlay]
+MenuName="Begin Play"
+Description="Activa un evento al iniciar el mapa.|Si el nuvel fue reiniciado de forma "suave", se activa el evento de reiniciado en su lugar."
+
+[LOGIC_CompareBool]
+MenuName="Comparar Booleano"
+Description="Compara un booleano."
+
+[LOGIC_ServerType]
+MenuName="Tipo de Servidor"
+Description="Verifica el ambiente en el cual se va a ejecutar esta acción."
