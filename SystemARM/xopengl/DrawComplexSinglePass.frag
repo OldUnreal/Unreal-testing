@@ -537,7 +537,7 @@ void main (void)
 	TotalColor=clamp(TotalColor,0.0,1.0); //saturate.
 
 	// Add DistanceFog
-#if ENGINE_VERSION==227
+#if ENGINE_VERSION==227 && 0
 	// stijn: Very slow! Went from 135 to 155FPS on CTF-BT-CallousV3 by just disabling this branch even tho 469 doesn't do distance fog
 	if (vDistanceFogInfo.w >= 0.0)
 	{
