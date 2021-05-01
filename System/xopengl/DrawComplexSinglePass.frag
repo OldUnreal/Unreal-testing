@@ -252,22 +252,6 @@ void main (void)
 
 	vec2 texCoords = vTexCoords;
 
-#if ENGINE_VERSION==227
-	bool UseHeightMap = ((vPolyFlags&PF_HeightMap) == PF_HeightMap);
-
-	// ParallaxMap
-	if (((vDrawFlags & DF_MacroTexture) == DF_MacroTexture) && UseHeightMap == true)
-	{
-		float parallaxHeight=0.0;
-
-		vec3 EyeDirection_tangentspace = normalize(vTBNMat * vEyeSpacePos.xyz);
-		texCoords = ParallaxMapping(texCoords,EyeDirection_tangentspace,parallaxHeight);
-
-		// get self-shadowing factor for elements of parallax
-		//float shadowMultiplier = parallaxSoftShadowMultiplier(L, texCoords, parallaxHeight - 0.05);
-	}
-#endif
-
     vec4 Color;
 #if BINDLESSTEXTURES
 	if (vTexNum > 0u)
@@ -281,7 +265,7 @@ void main (void)
         Color *= vBaseDiffuse; // Diffuse factor.
 
 	if (vBaseAlpha > 0.0)
-		Color.a *= vBaseAlpha; // Alpha.
+		Color.a = vBaseAlpha; // Alpha.
 
     if (vTextureFormat == TEXF_BC5) //BC5 (GL_COMPRESSED_RG_RGTC2) compression
         Color.b = sqrt(1.0 - Color.r*Color.r + Color.g*Color.g);
@@ -351,7 +335,7 @@ void main (void)
 # else
 			TotalColor*=vec4(LightColor.rgb,1.0);
 # endif
-			TotalColor=clamp(TotalColor*2.0,0.0,1.0); //saturate.
+			TotalColor.rgb=clamp(TotalColor.rgb*2.0,0.0,1.0); //saturate.
 		}
 
 #endif
@@ -375,20 +359,35 @@ void main (void)
 		hsvDetailTex = hsv2rgb(hsvDetailTex);
 		DetailTexColor=vec4(hsvDetailTex,0.0);
 		DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
-		TotalColor*=DetailTexColor;
+
+		TotalColor.rgb*=DetailTexColor.rgb;
 	}
 #endif
 
 	// MacroTextures
 #if MACROTEXTURES
-# if ENGINE_VERSION==227
-	if (((vDrawFlags & DF_MacroTexture) == DF_MacroTexture) && UseHeightMap == false)
-# else
-	if ((vDrawFlags & DF_MacroTexture) == DF_MacroTexture)
+if ((vDrawFlags & DF_MacroTexture) == DF_MacroTexture)
+{
+#if ENGINE_VERSION==227
+
+	bool UseHeightMap = ((vPolyFlags&PF_HeightMap) == PF_HeightMap);
+
+	// ParallaxMap
+    if (UseHeightMap == true)
+    {
+        float parallaxHeight=0.0;
+
+        vec3 EyeDirection_tangentspace = normalize(vTBNMat * vEyeSpacePos.xyz);
+        texCoords = ParallaxMapping(texCoords,EyeDirection_tangentspace,parallaxHeight);
+
+        // get self-shadowing factor for elements of parallax
+        //float shadowMultiplier = parallaxSoftShadowMultiplier(L, texCoords, parallaxHeight - 0.05);
+    }
+    else
+    {
 # endif
-	{
-		vec4 MacrotexColor;
-# if BINDLESSTEXTURES
+	vec4 MacrotexColor;
+#if BINDLESSTEXTURES
 		if (vMacroTexNum > 0u)
  		  MacrotexColor = texture(Textures[vMacroTexNum], vMacroTexCoords);
 		else MacrotexColor = texture(Texture4, vMacroTexCoords);
@@ -410,9 +409,11 @@ void main (void)
 		hsvMacroTex = hsv2rgb(hsvMacroTex);
 		MacrotexColor=vec4(hsvMacroTex,1.0);
 		TotalColor*=MacrotexColor;
-	}
+#if ENGINE_VERSION==227
+    }
 #endif
-
+}
+#endif
 
 	// BumpMap (Normal Map)
 #if BUMPMAPS
@@ -500,7 +501,7 @@ void main (void)
             FogColor = texture(Textures[vFogMapTexNum], vFogMapCoords);
 		else
 		    FogColor = texture(Texture2, vFogMapCoords);
-		
+
 #else
 		FogColor = texture(Texture2, vFogMapCoords);
 #endif

@@ -132,7 +132,7 @@ void main(void)
 	vRendMap          = DrawComplexParams[gl_DrawID].DrawFlags[3];
 	vHitTesting       = DrawComplexParams[gl_DrawID].TexNum[1].w;
 	vDrawColor        = DrawComplexParams[gl_DrawID].DrawColor;
-# endif	
+# endif
 	vTexNum			  = DrawComplexParams[gl_DrawID].TexNum[0].x;
 	vLightMapTexNum   = DrawComplexParams[gl_DrawID].TexNum[0].y;
 	vFogMapTexNum     = DrawComplexParams[gl_DrawID].TexNum[0].z;
@@ -146,7 +146,7 @@ void main(void)
 	vParallaxScale    = DrawComplexParams[gl_DrawID].MacroInfo.w;
 	vGamma            = ZAxis.w;
 	vDistanceFogColor = DrawComplexParams[gl_DrawID].DistanceFogColor;
-	vDistanceFogInfo  = DrawComplexParams[gl_DrawID].DistanceFogInfo;	
+	vDistanceFogInfo  = DrawComplexParams[gl_DrawID].DistanceFogInfo;
 #else
 	vec4 XAxis       = TexCoords[IDX_X_AXIS];
 	vec4 YAxis       = TexCoords[IDX_Y_AXIS];
@@ -280,9 +280,6 @@ void main (void)
 #if BINDLESSTEXTURES
 //	BaseTexNum = uint(TexNums0.x);
 #endif
-
-	uint ClipIndex = uint(ClipParams.x);
 	gl_Position = modelviewprojMat * vec4(Coords.xyz, 1.0);
-    gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,Coords.xyz);
-}
+ }
 #endif

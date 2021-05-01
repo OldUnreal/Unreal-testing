@@ -79,7 +79,7 @@ void main(void)
         Color *= gTextureInfo.x; // Diffuse factor.
 
     if (gTextureInfo.y > 0.0)
-		Color.a *= gTextureInfo.y; // Alpha.
+		Color.a = gTextureInfo.y; // Alpha.
 
 	if (gTextureFormat == TEXF_BC5) //BC5 (GL_COMPRESSED_RG_RGTC2) compression
         Color.b = sqrt(1.0 - Color.r*Color.r + Color.g*Color.g);
@@ -183,7 +183,8 @@ void main(void)
 		hsvDetailTex = hsv2rgb(hsvDetailTex);
 		DetailTexColor=vec4(hsvDetailTex,0.0);
 		DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
-		TotalColor*=DetailTexColor;
+
+		TotalColor.rgb*=DetailTexColor.rgb;
 	}
 #endif
 

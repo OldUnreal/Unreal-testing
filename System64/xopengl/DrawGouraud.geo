@@ -94,9 +94,9 @@ void main(void)
 
 	for(int i=0; i<3; ++i)
 	{
-		vec3 T = normalize(vec3(modelMat[i] * vec4(Tangent,0.0)));
-		vec3 B = normalize(vec3(modelMat[i] * vec4(Bitangent,0.0)));
-		vec3 N = normalize(vec3(modelMat[i] * vNormals[i]));
+		vec3 T = normalize(vec3(modelMat * vec4(Tangent,0.0)));
+		vec3 B = normalize(vec3(modelMat * vec4(Bitangent,0.0)));
+		vec3 N = normalize(vec3(modelMat * vNormals[i]));
 		// TBN must have right handed coord system.
 		if (dot(cross(N, T), B) < 0.0)
 				T = T * -1.0;

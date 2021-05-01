@@ -74,7 +74,7 @@ layout(std430, binding = 7) buffer AllDrawGouraudShaderDrawParams
 {
 	DrawGouraudShaderDrawParams DrawGouraudParams[];
 };
-# else 
+# else
 uniform vec4 DrawData[6];
 uniform uint TexNum[4];
 uniform uint DrawFlags[4];
@@ -143,7 +143,7 @@ void main(void)
 	gRendMap          = DrawFlags[3];
 	gDrawColor        = DrawData[IDX_EDITOR_DRAWCOLOR];
 # endif
-	
+
 	vec3 T = vec3(1.0,1.0,1.0); //Arbitrary.
 	vec3 B = vec3(1.0,1.0,1.0); //Replace with actual values extracted from mesh generation some day.
 	vec3 N = normalize(Normals.xyz); //Normals.
@@ -154,7 +154,9 @@ void main(void)
 
 	TBNMat = transpose(mat3(T, B, N));
 
+
 	gl_Position = modelviewprojMat * vec4(Coords, 1.0);
+    gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,gEyeSpacePos.xyz);
 
 #else
 	vEyeSpacePos      = modelviewMat*vec4(Coords, 1.0);
@@ -219,7 +221,6 @@ void main(void)
 # endif
 
 	gl_Position = vec4(Coords, 1.0);
-
 #endif
 
 }
