@@ -59,8 +59,10 @@ in vec2 vEnvironmentTexCoords;
 #ifdef GL_ES
 layout ( location = 0 ) out vec4 FragColor;
 #else
+# if SIMULATEMULTIPASS
+layout ( location = 0, index = 1) out vec4 FragColor1;
+#endif
 layout ( location = 0, index = 0) out vec4 FragColor;
-//layout ( location = 0, index = 1) out vec4 FragColor1;
 #endif
 
 #if SHADERDRAWPARAMETERS
@@ -616,6 +618,10 @@ void main (void)
 	if (bHitTesting)
 		TotalColor = vDrawColor; // Use ONLY DrawColor.
 
+#endif
+
+# if SIMULATEMULTIPASS
+	FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor)*LightColor;
 #endif
 
 	//FragColor1	= mix(TotalColor,LightColor,1.0);// way to fix skybox etc??
