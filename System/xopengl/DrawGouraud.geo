@@ -57,7 +57,9 @@ out vec4 gEyeSpacePos;
 out vec4 gLightColor;
 out vec4 gFogColor;
 
-out mat3 TBNMat;
+out mat3 gTBNMat;
+out vec3 gTangentViewPos;
+out vec3 gTangentFragPos;
 
 flat out vec3 gTextureInfo;
 flat out vec4 gDistanceFogColor;
@@ -88,6 +90,9 @@ vec3 GetBitangent(vec3 A, vec3 B, vec3 C,  vec2 Auv, vec2 Buv, vec2 Cuv)
 
 void main(void)
 {
+    mat3 InFrameCoords = mat3(FrameCoords[1].xyz, FrameCoords[2].xyz, FrameCoords[3].xyz); // TransformPointBy...
+    mat3 InFrameUncoords = mat3(FrameUncoords[1].xyz, FrameUncoords[2].xyz, FrameUncoords[3].xyz);
+
 	vec3 Tangent = GetTangent(vCoords[0], vCoords[1], vCoords[2], vTexCoords[0], vTexCoords[1], vTexCoords[2]);
 	vec3 Bitangent = GetBitangent(vCoords[0], vCoords[1], vCoords[2], vTexCoords[0], vTexCoords[1], vTexCoords[2]);
     uint ClipIndex = uint(ClipParams.x);
@@ -97,10 +102,12 @@ void main(void)
 		vec3 T = normalize(vec3(modelMat * vec4(Tangent,0.0)));
 		vec3 B = normalize(vec3(modelMat * vec4(Bitangent,0.0)));
 		vec3 N = normalize(vec3(modelMat * vNormals[i]));
+
 		// TBN must have right handed coord system.
-		if (dot(cross(N, T), B) < 0.0)
-				T = T * -1.0;
-		TBNMat = mat3(T, B, N);
+		//if (dot(cross(N, T), B) < 0.0)
+		//		T = T * -1.0;
+
+		gTBNMat = mat3(T, B, N);
 
 		gEyeSpacePos = vEyeSpacePos[i];
 		gLightColor = vLightColor[i];
@@ -121,6 +128,9 @@ void main(void)
 		gTextureFormat = vTextureFormat[i];
 		gDistanceFogColor = vDistanceFogColor[i];
 		gDistanceFogInfo = vDistanceFogInfo[i];
+
+        gTangentViewPos  = gTBNMat * normalize(FrameCoords[0].xyz);
+        gTangentFragPos  = gTBNMat * gCoords.xyz;
 
 #if EDITOR
 		gDrawColor = vDrawColor[i];

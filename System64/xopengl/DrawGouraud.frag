@@ -29,7 +29,9 @@ flat in uint gPolyFlags;
 flat in float gGamma;
 flat in vec4 gDistanceFogColor;
 flat in vec4 gDistanceFogInfo;
-in mat3 TBNMat;
+in vec3 gTangentViewPos;
+in vec3 gTangentFragPos;
+in mat3 gTBNMat;
 
 #if EDITOR
 flat in vec4 gDrawColor;
@@ -60,12 +62,13 @@ vec3 hsv2rgb(vec3 c)
 
 void main(void)
 {
+    mat3 InFrameCoords = mat3(FrameCoords[1].xyz, FrameCoords[2].xyz, FrameCoords[3].xyz); // TransformPointBy...
+    mat3 InFrameUncoords = mat3(FrameUncoords[1].xyz, FrameUncoords[2].xyz, FrameUncoords[3].xyz);
+
 	vec4 TotalColor = vec4(0.0,0.0,0.0,0.0);
 	vec4 Color;
 
 	int NumLights = int(LightData4[0].y);
-	mat3 InFrameCoords = mat3(FrameCoords[1].xyz, FrameCoords[2].xyz, FrameCoords[3].xyz); // TransformPointBy...
-	mat3 InFrameUncoords =  mat3(FrameUncoords[1].xyz, FrameUncoords[2].xyz, FrameUncoords[3].xyz);
 
 #if BINDLESSTEXTURES
 	if (uint(gTexNum) > 0u)
@@ -190,7 +193,7 @@ void main(void)
 
 
 #if MACROTEXTURES
-	if ((gDrawFlags & DF_MacroTexture) == DF_MacroTexture)
+	if ((gDrawFlags & DF_MacroTexture) == DF_MacroTexture && (gDrawFlags & DF_BumpMap) != DF_BumpMap)
 	{
 		vec4 MacroTexColor;
 		#if BINDLESSTEXTURES
@@ -213,34 +216,33 @@ void main(void)
 #if BUMPMAPS
 	if ((gDrawFlags & DF_BumpMap) == DF_BumpMap)
 	{
+	    vec3 TangentViewDir  = normalize( gTangentViewPos - gTangentFragPos );
+
 		//normal from normal map
-        vec3 TextureNormal;
-		vec3 TextureNormal_tangentspace;
-
-        #if BINDLESSTEXTURES
-             if (gBumpTexNum > uint(0))
-                TextureNormal = texture(Textures[gBumpTexNum], gTexCoords).rgb * 2.0 - 1.0;
-            else
-                TextureNormal = texture(Texture2, gTexCoords).rgb * 2.0 - 1.0;
-        #else
+		vec3 TextureNormal;
+#if BINDLESSTEXTURES
+        if (gBumpTexNum > uint(0))
+            TextureNormal = texture(Textures[gBumpTexNum], gTexCoords).rgb * 2.0 - 1.0;
+        else
             TextureNormal = texture(Texture2, gTexCoords).rgb * 2.0 - 1.0;
-		#endif
-
-        TextureNormal.b = sqrt(1.0 - TextureNormal.r*TextureNormal.r + TextureNormal.g*TextureNormal.g);
-
-        TextureNormal_tangentspace = TextureNormal;
+#else
+            TextureNormal = texture(Texture2, gTexCoords).rgb * 2.0 - 1.0;
+#endif
 
 		vec3 BumpColor;
 		vec3 TotalBumpColor=vec3(0.0,0.0,0.0);
-		vec3 EyeDirection_tangentspace = TBNMat * gEyeSpacePos.xyz;
 
 		for(int i=0; i<NumLights; ++i)
 		{
 			float NormalLightRadius = LightData5[i].x;
             bool bZoneNormalLight = bool(LightData5[i].y);
-			float LightRadius = LightData2[i].w;
+
+            if (NormalLightRadius == 0.0)
+                NormalLightRadius = LightData2[i].w * 64.0;
+
 			bool bSunlight = (uint(LightData2[i].x) == LE_Sunlight);
 			vec3 InLightPos = ((LightPos[i].xyz - FrameCoords[0].xyz)*InFrameCoords); // Frame->Coords.
+
 			float dist = distance(gCoords, InLightPos);
 
             float MinLight = 0.05;
@@ -253,38 +255,24 @@ void main(void)
 			if ( (NormalLightRadius == 0.0 || (dist > NormalLightRadius) || ( bZoneNormalLight && (LightData4[i].z != LightData4[i].w))) && !bSunlight)// Do not consider if not in range or in a different zone.
 				continue;
 
-			vec3 LightPosition_cameraspace = ( viewMat * vec4(InLightPos,1)).xyz;
-			vec3 LightDirection_cameraspace = gEyeSpacePos.xyz - LightPosition_cameraspace;
-			vec3 LightDirection_tangentspace = TBNMat * LightDirection_cameraspace;
+			vec3 TangentLightPos = gTBNMat * InLightPos;
+            vec3 TangentlightDir = normalize( TangentLightPos - gTangentFragPos );
 
-			vec3 LightDir = normalize(LightDirection_tangentspace);
-			// Cosine of the angle between the normal and the light direction,
-			// clamped above 0
-			//  - light is at the vertical of the triangle -> 1
-			//  - light is perpendicular to the triangle -> 0
-			//  - light is behind the triangle -> 0
-			float cosTheta = clamp( dot( TextureNormal_tangentspace, LightDir ), 0.0,1.0 );
+            // ambient
+            vec3 ambient = 0.1 * TotalColor.xyz;
 
-			vec3 E = normalize(EyeDirection_tangentspace);
-			// Direction in which the triangle reflects the light
-			vec3 R = reflect(-LightDir,TextureNormal_tangentspace);
-			// Cosine of the angle between the Eye vector and the Reflect vector,
-			// clamped to 0
-			//  - Looking into the reflection -> 1
-			//  - Looking elsewhere -> < 1
-			float cosAlpha = clamp( dot( E,R ), 0.0,1.0 );
+            // diffuse
+            float diff = max(dot(TangentlightDir, TextureNormal), 0.0);
+            vec3 diffuse = diff * TotalColor.xyz;
 
-			vec3 BumpLightColor = vec3(LightData1[i].x,LightData1[i].y,LightData1[i].z);
-			vec3 MaterialAmbientColor = vec3(0.1,0.1,0.1) * Color.xyz;
-
-			if (gTextureInfo.z > 0.0) // Specular
-				TotalBumpColor +=  (MaterialAmbientColor + Color.xyz * BumpLightColor * cosTheta * pow(cosAlpha,gTextureInfo.z)) * attenuation;
-			else
-				TotalBumpColor +=  (MaterialAmbientColor + Color.xyz * BumpLightColor * cosTheta) * attenuation;
+            // specular
+            vec3 halfwayDir = normalize(TangentlightDir + TangentViewDir);
+            float spec = pow(max(dot(TextureNormal, halfwayDir), 0.0), 8.0);
+            vec3 specular = vec3(0.01) * spec;
+            TotalBumpColor = ambient + diffuse + specular;
 
 		}
-		if (TotalBumpColor.x != 0.0 || TotalBumpColor.y != 0.0 || TotalBumpColor.z != 0.0) //no light close enough.
-			TotalColor*=vec4(clamp(TotalBumpColor,0.0,1.0),1.0);
+		TotalColor+=vec4(clamp(TotalBumpColor,0.0,1.0),1.0);
 	}
 #endif
 

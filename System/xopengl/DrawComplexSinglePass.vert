@@ -31,6 +31,8 @@ out vec4 vEyeSpacePos;
 out vec2 vTexCoords;
 out vec2 vLightMapCoords;
 out vec2 vFogMapCoords;
+out vec3 vTangentViewPos;
+out vec3 vTangentFragPos;
 #if DETAILTEXTURES
 out vec2 vDetailTexCoords;
 #endif
@@ -143,7 +145,7 @@ void main(void)
 	vBaseDiffuse      = DrawComplexParams[gl_DrawID].DiffuseInfo.x;
 	vBaseAlpha        = DrawComplexParams[gl_DrawID].DiffuseInfo.z;
 	vBumpMapSpecular  = DrawComplexParams[gl_DrawID].BumpMapInfo.y;
-	vParallaxScale    = DrawComplexParams[gl_DrawID].MacroInfo.w;
+	vParallaxScale    = DrawComplexParams[gl_DrawID].MacroInfo.w * 0.025;
 	vGamma            = ZAxis.w;
 	vDistanceFogColor = DrawComplexParams[gl_DrawID].DistanceFogColor;
 	vDistanceFogInfo  = DrawComplexParams[gl_DrawID].DistanceFogInfo;
@@ -241,18 +243,23 @@ void main(void)
 #endif
 
 #if ENGINE_VERSION==227 || BUMPMAPS
-	vEyeSpacePos = modelviewMat*vec4(Coords.xyz, 1.0);
+    vEyeSpacePos = modelviewMat*vec4(Coords.xyz, 1.0);
+    vec3 EyeSpacePos = normalize(FrameCoords[0].xyz);// despite pretty perfect results (so far) this still seems somewhat wrong to me.
+
 	if ((vDrawFlags & (DF_MacroTexture|DF_BumpMap)) != 0u)
 	{
-		vec3 T = normalize(vec3(-MapCoordsXAxis.x,MapCoordsXAxis.y,MapCoordsXAxis.z));
-		vec3 B = normalize(vec3(MapCoordsYAxis.x,-MapCoordsYAxis.y,-MapCoordsYAxis.z));
-		vec3 N = normalize(vec3(-MapCoordsZAxis.x,MapCoordsZAxis.y,MapCoordsZAxis.z)); //SurfNormals.
+		vec3 T = normalize(vec3(MapCoordsXAxis.x,MapCoordsXAxis.y,MapCoordsXAxis.z));
+		vec3 B = normalize(vec3(MapCoordsYAxis.x,MapCoordsYAxis.y,MapCoordsYAxis.z));
+		vec3 N = normalize(vec3(MapCoordsZAxis.x,MapCoordsZAxis.y,MapCoordsZAxis.z)); //SurfNormals.
 
 		// TBN must have right handed coord system.
-		if (dot(cross(N, T), B) < 0.0)
-		   T = T * -1.0;
+		//if (dot(cross(N, T), B) < 0.0)
+		//   T = T * -1.0;
 
 		vTBNMat = transpose(mat3(T, B, N));
+
+        vTangentViewPos  = vTBNMat * EyeSpacePos.xyz;
+        vTangentFragPos  = vTBNMat * Coords.xyz;
 	}
 #endif
 

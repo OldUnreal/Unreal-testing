@@ -14,7 +14,7 @@ layout (location = 8) in float TexNum;
 layout (location = 2) in vec2 TexCoords;
 
 out vec2 gTexCoords;
-out vec4 gDrawColor;
+flat out vec4 gDrawColor;
 flat out uint gTexNum;
 
 #else

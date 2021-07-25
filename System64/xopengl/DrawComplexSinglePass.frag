@@ -43,6 +43,9 @@ flat in mat3 vTBNMat;
 in vec2 vTexCoords;
 in vec2 vLightMapCoords;
 in vec2 vFogMapCoords;
+in vec3 vTangentViewPos;
+in vec3 vTangentFragPos;
+
 #if DETAILTEXTURES
 in vec2 vDetailTexCoords;
 #endif
@@ -58,6 +61,9 @@ in vec2 vEnvironmentTexCoords;
 
 #ifdef GL_ES
 layout ( location = 0 ) out vec4 FragColor;
+# if SIMULATEMULTIPASS
+layout ( location = 1 ) out vec4 FragColor1;
+#endif
 #else
 # if SIMULATEMULTIPASS
 layout ( location = 0, index = 1) out vec4 FragColor1;
@@ -116,53 +122,145 @@ vec3 hsv2rgb(vec3 c)
 }
 
 #if ENGINE_VERSION==227
-vec2 ParallaxMapping(in vec2 PTexCoords, in vec3 ViewDir, out float parallaxHeight) //http://sunandblackcat.com/tipFullView.php?topicid=28
+vec2 ParallaxMapping(vec2 ptexCoords, vec3 viewDir, uint TexNum, out float parallaxHeight)
 {
-#if !SHADERDRAWPARAMETERS
-   float vParallaxScale = TexCoords[IDX_MACRO_INFO].w;
-#endif
 
-   // determine required number of layers
+#if BASIC_PARALLAX
+
+// very basic implementation
+    float height = 0.f;
+    # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            height = texture(Textures[TexNum], ptexCoords).r;
+        else height = texture(Texture4, ptexCoords).r;
+    # else
+        height = texture(Texture4, ptexCoords).r;
+    # endif
+
+    return ptexCoords - viewDir.xy * (height * 0.1);
+
+#endif // BASIC_PARALLAX
+
+#if OCCLUSION_PARALLAX
+
+// parallax occlusion mapping
+    #if !SHADERDRAWPARAMETERS
+        float vParallaxScale = TexCoords[IDX_MACRO_INFO].w * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
+    #endif
+
+    // number of depth layers
+    const float minLayers = 8;
+    const float maxLayers = 32;
+    float numLayers = mix(maxLayers, minLayers, abs(dot(vec3(0.0, 0.0, 1.0), viewDir)));
+    // calculate the size of each layer
+    float layerDepth = 1.0 / numLayers;
+    // depth of current layer
+    float currentLayerDepth = 0.0;
+    // the amount to shift the texture coordinates per layer (from vector P)
+    vec2 P = viewDir.xy / viewDir.z * vParallaxScale;
+    vec2 deltaTexCoords = P / numLayers;
+
+    // get initial values
+    vec2  currentTexCoords     = ptexCoords;
+    float currentDepthMapValue = 0.0;
+
+    # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            currentDepthMapValue = texture(Textures[TexNum], currentTexCoords).r;
+        else currentDepthMapValue = texture(Texture4, currentTexCoords).r;
+    # else
+        currentDepthMapValue = texture(Texture4, currentTexCoords).r;
+    # endif
+
+    while(currentLayerDepth < currentDepthMapValue)
+    {
+        // shift texture coordinates along direction of P
+        currentTexCoords -= deltaTexCoords;
+        // get depthmap value at current texture coordinates
+        # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            currentDepthMapValue = texture(Textures[TexNum], currentTexCoords).r;
+        else currentDepthMapValue = texture(Texture4, currentTexCoords).r;
+        # else
+        currentDepthMapValue = texture(Texture4, currentTexCoords).r;
+        # endif
+
+        // get depth of next layer
+        currentLayerDepth += layerDepth;
+    }
+
+    // get texture coordinates before collision (reverse operations)
+    vec2 prevTexCoords = currentTexCoords + deltaTexCoords;
+
+    // get depth after and before collision for linear interpolation
+    float afterDepth  = currentDepthMapValue - currentLayerDepth;
+
+    float beforeDepth = 0.0;
+    # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            beforeDepth = texture(Textures[TexNum], currentTexCoords).r - currentLayerDepth + layerDepth;
+        else beforeDepth = texture(Texture4, currentTexCoords).r - currentLayerDepth + layerDepth;
+    # else
+        beforeDepth = texture(Texture4, currentTexCoords).r - currentLayerDepth + layerDepth;
+    # endif
+
+    // interpolation of texture coordinates
+    float weight = afterDepth / (afterDepth - beforeDepth);
+    vec2 finalTexCoords = prevTexCoords * weight + currentTexCoords * (1.0 - weight);
+
+    return finalTexCoords;
+#endif // OCCLUSION_PARALLAX
+
+#if RELIEF_PARALLAX
+
+// Relief Parallax Mapping
+
+    // determine required number of layers
    const float minLayers = 10.0;
-   const float maxLayers = 45.0;
-   float numLayers = mix(maxLayers, minLayers, abs(dot(vec3(0, 0, 1), ViewDir)));
+   const float maxLayers = 15.0;
+   float numLayers = mix(maxLayers, minLayers, abs(dot(vec3(0, 0, 1), viewDir)));
+
+   #if !SHADERDRAWPARAMETERS
+        float vParallaxScale = TexCoords[IDX_MACRO_INFO].w * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
+   #endif
 
    // height of each layer
    float layerHeight = 1.0 / numLayers;
    // depth of current layer
    float currentLayerHeight = 0.0;
    // shift of texture coordinates for each iteration
-   vec2 dtex = vParallaxScale * ViewDir.xy / ViewDir.z / numLayers;
+   vec2 dtex = vParallaxScale * viewDir.xy / viewDir.z / numLayers;
 
    // current texture coordinates
-   vec2 currentTextureCoords = PTexCoords;
+   vec2 currentTexCoords = ptexCoords;
 
    // depth from heightmap
-   float heightFromTexture = 0.f;
-
-# if BINDLESSTEXTURES
-   if (vBumpMapTexNum > 0u)
-     heightFromTexture = -texture(Textures[vBumpMapTexNum], currentTextureCoords).r;
-   else heightFromTexture = -texture(Texture5, currentTextureCoords).r;
-# else
-	heightFromTexture = -texture(Texture5, currentTextureCoords).r;
-# endif
+   float heightFromTexture = 0.0;
+   # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            heightFromTexture = texture(Textures[TexNum], currentTexCoords).r;
+        else heightFromTexture = texture(Texture4, currentTexCoords).r;
+    # else
+        heightFromTexture = texture(Texture4, currentTexCoords).r;
+    # endif
 
    // while point is above surface
    while(heightFromTexture > currentLayerHeight)
    {
       // go to the next layer
       currentLayerHeight += layerHeight;
+
       // shift texture coordinates along V
-      currentTextureCoords -= dtex;
+      currentTexCoords -= dtex;
+
       // new depth from heightmap
-# if BINDLESSTEXTURES
-   if (vBumpMapTexNum > 0u)
-     heightFromTexture = -texture(Textures[vBumpMapTexNum], currentTextureCoords).r;
-   else heightFromTexture = -texture(Texture5, currentTextureCoords).r;
-# else
-	  heightFromTexture = -texture(Texture5, currentTextureCoords).r;
-# endif
+    # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            heightFromTexture = texture(Textures[TexNum], currentTexCoords).r;
+        else heightFromTexture = texture(Texture4, currentTexCoords).r;
+    # else
+        heightFromTexture = texture(Texture4, currentTexCoords).r;
+    # endif
    }
 
    ///////////////////////////////////////////////////////////
@@ -173,7 +271,7 @@ vec2 ParallaxMapping(in vec2 PTexCoords, in vec3 ViewDir, out float parallaxHeig
    float deltaHeight = layerHeight / 2.0;
 
    // return to the mid point of previous layer
-   currentTextureCoords += deltaTexCoord;
+   currentTexCoords += deltaTexCoord;
    currentLayerHeight -= deltaHeight;
 
    // binary search to increase precision of Steep Paralax Mapping
@@ -185,37 +283,122 @@ vec2 ParallaxMapping(in vec2 PTexCoords, in vec3 ViewDir, out float parallaxHeig
       deltaHeight /= 2.0;
 
       // new depth from heightmap
-# if BINDLESSTEXTURES
-   if (vBumpMapTexNum > 0u)
-     heightFromTexture = -texture(Textures[vBumpMapTexNum], currentTextureCoords).r;
-   else heightFromTexture = -texture(Texture5, currentTextureCoords).r;
-# else
-	  heightFromTexture = -texture(Texture5, currentTextureCoords).r;
-# endif
+    # if BINDLESSTEXTURES
+        if (TexNum > 0u)
+            heightFromTexture = texture(Textures[TexNum], currentTexCoords).r;
+        else heightFromTexture = texture(Texture4, currentTexCoords).r;
+    # else
+        heightFromTexture = texture(Texture4, currentTexCoords).r;
+    # endif
 
       // shift along or agains vector V
       if(heightFromTexture > currentLayerHeight) // below the surface
       {
-         currentTextureCoords -= deltaTexCoord;
+         currentTexCoords -= deltaTexCoord;
          currentLayerHeight += deltaHeight;
       }
       else // above the surface
       {
-         currentTextureCoords += deltaTexCoord;
+         currentTexCoords += deltaTexCoord;
          currentLayerHeight -= deltaHeight;
       }
    }
 
    // return results
    parallaxHeight = currentLayerHeight;
-   return currentTextureCoords;
+   return currentTexCoords;
+
+#endif // RELIEF_PARALLAX
+    return ptexCoords;
 }
+
+
+// unused. Maybe later.
+/*
+float parallaxSoftShadowMultiplier(in vec3 L, in vec2 initialTexCoord, in float initialHeight)
+{
+   float shadowMultiplier = 1;
+
+   const float minLayers = 15;
+   const float maxLayers = 30;
+
+   #if !SHADERDRAWPARAMETERS
+        float vParallaxScale = TexCoords[IDX_MACRO_INFO].w * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
+   #endif
+
+   // calculate lighting only for surface oriented to the light source
+   if(dot(vec3(0, 0, 1), L) > 0)
+   {
+      // calculate initial parameters
+      float numSamplesUnderSurface = 0;
+      shadowMultiplier = 0;
+      float numLayers = mix(maxLayers, minLayers, abs(dot(vec3(0, 0, 1), L)));
+      float layerHeight = initialHeight / numLayers;
+      vec2 texStep = vParallaxScale * L.xy / L.z / numLayers;
+
+      // current parameters
+      float currentLayerHeight = initialHeight - layerHeight;
+      vec2 currentTexCoords = initialTexCoord + texStep;
+      float heightFromTexture = 0.0;
+      # if BINDLESSTEXTURES
+        if (vMacroTexNum > 0u)
+            heightFromTexture = texture(Textures[vMacroTexNum], currentTexCoords).r;
+        else heightFromTexture = texture(Texture4, currentTexCoords).r;
+      # else
+        heightFromTexture = texture(Texture4, currentTexCoords).r;
+      # endif
+
+      int stepIndex = 1;
+
+      // while point is below depth 0.0 )
+      while(currentLayerHeight > 0)
+      {
+         // if point is under the surface
+         if(heightFromTexture < currentLayerHeight)
+         {
+            // calculate partial shadowing factor
+            numSamplesUnderSurface += 1;
+            float newShadowMultiplier = (currentLayerHeight - heightFromTexture) *
+                                             (1.0 - stepIndex / numLayers);
+            shadowMultiplier = max(shadowMultiplier, newShadowMultiplier);
+         }
+
+         // offset to the next layer
+         stepIndex += 1;
+         currentLayerHeight -= layerHeight;
+         currentTexCoords += texStep;
+      # if BINDLESSTEXTURES
+        if (vMacroTexNum > 0u)
+            heightFromTexture = texture(Textures[vMacroTexNum], currentTexCoords).r;
+        else heightFromTexture = texture(Texture4, currentTexCoords).r;
+      # else
+        heightFromTexture = texture(Texture4, currentTexCoords).r;
+      # endif
+      }
+
+      // Shadowing factor should be 1 if there were no points under the surface
+      if(numSamplesUnderSurface < 1)
+      {
+         shadowMultiplier = 1;
+      }
+      else
+      {
+         shadowMultiplier = 1.0 - shadowMultiplier;
+      }
+   }
+   return shadowMultiplier;
+}
+*/
 #endif
 
 #if 1
 void main (void)
 {
+    mat3 InFrameCoords = mat3(FrameCoords[1].xyz, FrameCoords[2].xyz, FrameCoords[3].xyz); // TransformPointBy...
+    mat3 InFrameUncoords = mat3(FrameUncoords[1].xyz, FrameUncoords[2].xyz, FrameUncoords[3].xyz);
+
 	vec4 TotalColor = vec4(0.0,0.0,0.0,0.0);
+    vec2 texCoords = vTexCoords;
 
 #if !SHADERDRAWPARAMETERS
 	uint vDrawFlags        = DrawFlags[0];
@@ -238,6 +421,8 @@ void main (void)
 	uint vMacroTexNum      = TexNum[4];
 	vBumpMapTexNum         = TexNum[5];
 	uint vEnviroMapTexNum  = TexNum[6];
+#else
+    uint vMacroTexNum      = 0u; //otherwise undefined if !BINDLESSTEXTURES
 # endif
 #else
 # if EDITOR
@@ -245,31 +430,27 @@ void main (void)
 # endif
 #endif
 
+    bool UseHeightMap = false;
+
 #if HARDWARELIGHTS || BUMPMAPS
+    UseHeightMap = ((vPolyFlags&PF_HeightMap) == PF_HeightMap);
+    vec3 TangentViewDir  = normalize( vTangentViewPos - vTangentFragPos );
     int NumLights = int(LightData4[0].y);
-	mat3 InFrameCoords = mat3(FrameCoords[1].xyz, FrameCoords[2].xyz, FrameCoords[3].xyz); // TransformPointBy...
+    float parallaxHeight = 1.0;
+
+#if BASIC_PARALLAX || OCCLUSION_PARALLAX || RELIEF_PARALLAX
+    // ParallaxMap
+    if (((vDrawFlags & DF_MacroTexture) == DF_MacroTexture) && UseHeightMap == true)
+    {
+        // get new texture coordinates from Parallax Mapping
+        texCoords = ParallaxMapping(vTexCoords, TangentViewDir, vMacroTexNum, parallaxHeight);
+
+        //if(texCoords.x > 1.0 || texCoords.y > 1.0 || texCoords.x < 0.0 || texCoords.y < 0.0)
+         //  discard;// texCoords = vTexCoords;
+    }
 #endif
 
-//	mat3 InFrameUncoords =  mat3(FrameUncoords[1].xyz, FrameUncoords[2].xyz, FrameUncoords[3].xyz);
-
-	vec2 texCoords = vTexCoords;
-
-#if ENGINE_VERSION==227
-	bool UseHeightMap = ((vPolyFlags&PF_HeightMap) == PF_HeightMap);
-
-	// ParallaxMap
-	if (((vDrawFlags & DF_MacroTexture) == DF_MacroTexture) && UseHeightMap == true)
-	{
-		float parallaxHeight=0.0;
-
-		vec3 EyeDirection_tangentspace = normalize(vTBNMat * vEyeSpacePos.xyz);
-		texCoords = ParallaxMapping(texCoords,EyeDirection_tangentspace,parallaxHeight);
-
-		// get self-shadowing factor for elements of parallax
-		//float shadowMultiplier = parallaxSoftShadowMultiplier(L, texCoords, parallaxHeight - 0.05);
-	}
 #endif
-
     vec4 Color;
 #if BINDLESSTEXTURES
 	if (vTexNum > 0u)
@@ -306,10 +487,10 @@ void main (void)
 
 	TotalColor=Color;
 
-
+    vec4 LightColor = vec4(1.0,1.0,1.0,1.0);
 #if HARDWARELIGHTS
 		float LightAdd = 0.0f;
-		vec4 TotalAdd = vec4(0.0,0.0,0.0,0.0);
+		LightColor = vec4(0.0,0.0,0.0,0.0);
 
 		for (int i=0; i < NumLights; i++)
 		{
@@ -323,7 +504,7 @@ void main (void)
 			if (dist < RWorldLightRadius)
 			{
 				// Light color
-				vec3 LightColor = vec3(LightData1[i].x,LightData1[i].y,LightData1[i].z);
+				vec4 CurrentLightColor = vec4(LightData1[i].x,LightData1[i].y,LightData1[i].z, 1.0);
 
 				float MinLight = 0.05;
 				float b = WorldLightRadius / (RWorldLightRadius * MinLight);
@@ -331,15 +512,14 @@ void main (void)
 
 				//float attenuation = 0.82*(1.0-smoothstep(LightRadius,24.0*LightRadius+0.50,dist));
 
-				TotalAdd += (vec4(LightColor,1.0) * attenuation);
+				LightColor += CurrentLightColor * attenuation;
 			}
 		}
-		TotalColor *= TotalAdd;
+		TotalColor *= LightColor;
 #else
 		// LightMap
 		if ((vDrawFlags & DF_LightMap) == DF_LightMap)
 		{
-			vec4 LightColor;
 # if BINDLESSTEXTURES
 			if (vLightMapTexNum > 0u)
                 LightColor = texture(Textures[vLightMapTexNum], vLightMapCoords);
@@ -353,7 +533,7 @@ void main (void)
 # else
 			TotalColor*=vec4(LightColor.rgb,1.0);
 # endif
-			TotalColor.rgb=clamp(TotalColor.rgb*2.0,0.0,1.0); //saturate.
+			//TotalColor.rgb=clamp(TotalColor.rgb*2.0,0.0,1.0); //saturate.
 		}
 
 #endif
@@ -422,30 +602,28 @@ void main (void)
 	{
 		//normal from normal map
 		vec3 TextureNormal;
-		vec3 TextureNormal_tangentspace;
 # if BINDLESSTEXTURES
         if (vBumpMapTexNum > 0u)
-          TextureNormal = texture(Textures[vBumpMapTexNum], vBumpTexCoords).rgb * 2.0 - 1.0;
-		else TextureNormal = texture(Texture5, vBumpTexCoords).rgb * 2.0 - 1.0;
+          TextureNormal = normalize(texture(Textures[vBumpMapTexNum], texCoords).rgb * 2.0 - 1.0); // has to be texCoords instead of vBumpTexCoords, otherwise alignment won't work on bumps.
+		else TextureNormal = normalize(texture(Texture5, texCoords).rgb * 2.0 - 1.0);
 # else
-        TextureNormal = texture(Texture5, vBumpTexCoords).rgb * 2.0 - 1.0;
+        TextureNormal = normalize(texture(Texture5, texCoords).rgb * 2.0 - 1.0);
 # endif
-
-        TextureNormal.b = sqrt(1.0 - TextureNormal.r*TextureNormal.r + TextureNormal.g*TextureNormal.g);
-
-        TextureNormal_tangentspace = TextureNormal;
 
 		vec3 BumpColor;
 		vec3 TotalBumpColor=vec3(0.0,0.0,0.0);
-		vec3 EyeDirection_tangentspace = vTBNMat * vEyeSpacePos.xyz;
 
 		for(int i=0; i<NumLights; ++i)
 		{
 			float NormalLightRadius = LightData5[i].x;
             bool bZoneNormalLight = bool(LightData5[i].y);
-			float LightRadius = LightData2[i].w;
+
+            if (NormalLightRadius == 0.0)
+                NormalLightRadius = LightData2[i].w * 64.0;
+
 			bool bSunlight = (uint(LightData2[i].x) == LE_Sunlight);
 			vec3 InLightPos = ((LightPos[i].xyz - FrameCoords[0].xyz)*InFrameCoords); // Frame->Coords.
+
 			float dist = distance(vCoords, InLightPos);
 
             float MinLight = 0.05;
@@ -458,38 +636,23 @@ void main (void)
 			if ( (NormalLightRadius == 0.0 || (dist > NormalLightRadius) || ( bZoneNormalLight && (LightData4[i].z != LightData4[i].w))) && !bSunlight)// Do not consider if not in range or in a different zone.
 				continue;
 
-			vec3 LightPosition_cameraspace = ( viewMat * vec4(InLightPos,1)).xyz;
-			vec3 LightDirection_cameraspace = vEyeSpacePos.xyz - LightPosition_cameraspace;
-			vec3 LightDirection_tangentspace = vTBNMat * LightDirection_cameraspace;
+			vec3 TangentLightPos = vTBNMat * InLightPos;
+            vec3 TangentlightDir = normalize( TangentLightPos - vTangentFragPos );
 
-			vec3 LightDir = normalize(LightDirection_tangentspace);
-			// Cosine of the angle between the normal and the light direction,
-			// clamped above 0
-			//  - light is at the vertical of the triangle -> 1
-			//  - light is perpendicular to the triangle -> 0
-			//  - light is behind the triangle -> 0
-			float cosTheta = clamp( dot( TextureNormal_tangentspace, LightDir ), 0.0,1.0 );
+            // ambient
+            vec3 ambient = 0.1 * TotalColor.xyz;
 
-			vec3 E = normalize(EyeDirection_tangentspace);
-			// Direction in which the triangle reflects the light
-			vec3 R = reflect(-LightDir,TextureNormal_tangentspace);
-			// Cosine of the angle between the Eye vector and the Reflect vector,
-			// clamped to 0
-			//  - Looking into the reflection -> 1
-			//  - Looking elsewhere -> < 1
-			float cosAlpha = clamp( dot( E,R ), 0.0,1.0 );
+            // diffuse
+            float diff = max(dot(TangentlightDir, TextureNormal), 0.0);
+            vec3 diffuse = diff * TotalColor.xyz;
 
-			vec3 LightColor = vec3(LightData1[i].x,LightData1[i].y,LightData1[i].z);
-			vec3 MaterialAmbientColor = vec3(0.1,0.1,0.1) * Color.xyz;
-
-			if (vBumpMapSpecular > 0.0) // Specular
-				TotalBumpColor +=  (MaterialAmbientColor + Color.xyz * LightColor * cosTheta * pow(cosAlpha,vBumpMapSpecular)) * attenuation;
-			else
-				TotalBumpColor +=  (MaterialAmbientColor + Color.xyz * LightColor * cosTheta) * attenuation;
-
+            // specular
+            vec3 halfwayDir = normalize(TangentlightDir + TangentViewDir);
+            float spec = pow(max(dot(TextureNormal, halfwayDir), 0.0), 8.0);
+            vec3 specular = vec3(max(vBumpMapSpecular,0.1)) * spec;
+            TotalBumpColor = ambient + diffuse + specular;
 		}
-		if (TotalBumpColor.x != 0.0 || TotalBumpColor.y != 0.0 || TotalBumpColor.z != 0.0) //no light close enough.
-			TotalColor*=vec4(clamp(TotalBumpColor,0.0,1.0),1.0);
+		TotalColor+=vec4(clamp(TotalBumpColor,0.0,1.0),1.0);
 	}
 #endif
 
@@ -624,7 +787,6 @@ void main (void)
 	FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor)*LightColor;
 #endif
 
-	//FragColor1	= mix(TotalColor,LightColor,1.0);// way to fix skybox etc??
 	FragColor	= TotalColor;
 }
 #else
