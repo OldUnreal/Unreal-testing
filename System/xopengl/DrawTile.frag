@@ -13,9 +13,20 @@ uniform vec4 HitDrawColor;
 in vec2 gTexCoords;
 flat in vec4 gDrawColor;
 flat in uint gTexNum;
-out vec4 FragColor;
 
 uniform sampler2D Texture0;
+
+#ifdef GL_ES
+layout ( location = 0 ) out vec4 FragColor;
+# if SIMULATEMULTIPASS
+layout ( location = 1 ) out vec4 FragColor1;
+#endif
+#else
+# if SIMULATEMULTIPASS
+layout ( location = 0, index = 1) out vec4 FragColor1;
+#endif
+layout ( location = 0, index = 0) out vec4 FragColor;
+#endif
 
 void main(void)
 {
@@ -69,6 +80,10 @@ void main(void)
 	// HitSelection, Zoneview etc.
 	if (bHitTesting)
 		TotalColor = HitDrawColor; // Use HitDrawColor.
+#endif
+
+# if SIMULATEMULTIPASS
+    FragColor1	= vec4(1.0,1.0,1.0,1.0)-TotalColor;
 #endif
 
 	FragColor = TotalColor;

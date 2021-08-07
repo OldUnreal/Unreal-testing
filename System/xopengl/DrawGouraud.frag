@@ -39,7 +39,17 @@ flat in uint gRendMap;
 flat in uint gHitTesting;
 #endif
 
-out vec4 FragColor;
+#ifdef GL_ES
+layout ( location = 0 ) out vec4 FragColor;
+# if SIMULATEMULTIPASS
+layout ( location = 1 ) out vec4 FragColor1;
+#endif
+#else
+# if SIMULATEMULTIPASS
+layout ( location = 0, index = 1) out vec4 FragColor1;
+#endif
+layout ( location = 0, index = 0) out vec4 FragColor;
+#endif
 
 vec3 rgb2hsv(vec3 c)
 {
@@ -356,6 +366,9 @@ void main(void)
 		TotalColor.a *= gDrawColor.a;
 #endif
 
+# if SIMULATEMULTIPASS
+    FragColor1	= vec4(1.0,1.0,1.0,1.0)-TotalColor;
+#endif
 	FragColor = TotalColor;
 }
 

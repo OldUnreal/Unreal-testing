@@ -397,7 +397,7 @@ void main (void)
     mat3 InFrameCoords = mat3(FrameCoords[1].xyz, FrameCoords[2].xyz, FrameCoords[3].xyz); // TransformPointBy...
     mat3 InFrameUncoords = mat3(FrameUncoords[1].xyz, FrameUncoords[2].xyz, FrameUncoords[3].xyz);
 
-	vec4 TotalColor = vec4(0.0,0.0,0.0,0.0);
+	vec4 TotalColor = vec4(1.0);
     vec2 texCoords = vTexCoords;
 
 #if !SHADERDRAWPARAMETERS
@@ -451,7 +451,7 @@ void main (void)
 #endif
 
 #endif
-    vec4 Color;
+    vec4 Color = vec4(1.0);
 #if BINDLESSTEXTURES
 	if (vTexNum > 0u)
       Color = texture(Textures[vTexNum], texCoords);
@@ -487,7 +487,7 @@ void main (void)
 
 	TotalColor=Color;
 
-    vec4 LightColor = vec4(1.0,1.0,1.0,1.0);
+    vec4 LightColor = vec4(1.0);
 #if HARDWARELIGHTS
 		float LightAdd = 0.0f;
 		LightColor = vec4(0.0,0.0,0.0,0.0);
@@ -657,9 +657,9 @@ void main (void)
 #endif
 
 	// FogMap
+	vec4 FogColor = vec4(1.0);
 	if ((vDrawFlags & DF_FogMap) == DF_FogMap)
 	{
-	    vec4 FogColor;
 #if BINDLESSTEXTURES
 	    if (vFogMapTexNum > 0u)
             FogColor = texture(Textures[vFogMapTexNum], vFogMapCoords);
@@ -669,9 +669,8 @@ void main (void)
 #else
 		FogColor = texture(Texture2, vFogMapCoords);
 #endif
-
-		TotalColor.rgb = TotalColor.rgb * (1.0-FogColor.a) + FogColor.rgb;
-		TotalColor.a   = FogColor.a;
+        TotalColor.rgb = TotalColor.rgb * (1.0-FogColor.a) + FogColor.rgb;
+        TotalColor.a   = FogColor.a;
 	}
 
 	// EnvironmentMap
@@ -699,7 +698,7 @@ void main (void)
 	}
 #endif
 
-	TotalColor=clamp(TotalColor,0.0,1.0); //saturate.
+	//TotalColor=clamp(TotalColor,0.0,1.0); //saturate.
 
 	// Add DistanceFog
 #if ENGINE_VERSION==227
@@ -736,6 +735,14 @@ void main (void)
 		TotalColor.r=pow(TotalColor.r,2.7-vGamma*1.7);
 		TotalColor.g=pow(TotalColor.g,2.7-vGamma*1.7);
 		TotalColor.b=pow(TotalColor.b,2.7-vGamma*1.7);
+
+        LightColor.r=pow(LightColor.r,2.7-vGamma*1.7);
+		LightColor.g=pow(LightColor.g,2.7-vGamma*1.7);
+		LightColor.b=pow(LightColor.b,2.7-vGamma*1.7);
+
+		FogColor.r=pow(FogColor.r,2.7-vGamma*1.7);
+		FogColor.g=pow(FogColor.g,2.7-vGamma*1.7);
+		FogColor.b=pow(FogColor.b,2.7-vGamma*1.7);
 #endif
 	}
 
@@ -784,10 +791,13 @@ void main (void)
 #endif
 
 # if SIMULATEMULTIPASS
+	FragColor	= 2.0 * TotalColor;
 	FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor)*LightColor;
+#else
+    FragColor	= TotalColor;
 #endif
 
-	FragColor	= TotalColor;
+
 }
 #else
 void main(void)

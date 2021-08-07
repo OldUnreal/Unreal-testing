@@ -138,7 +138,7 @@ void main(void)
 		gHitTesting = vHitTesting[i];
 #endif
 		gl_Position = modelviewprojMat * gl_in[i].gl_Position;
-        gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[i]);//
+        gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[i]);
 		EmitVertex();
 	}
 }

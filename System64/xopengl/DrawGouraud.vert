@@ -115,7 +115,6 @@ flat out uint vHitTesting;
 void main(void)
 {
 #ifdef GL_ES
-
 	gEyeSpacePos      = modelviewMat*vec4(Coords, 1.0);
 
 	gCoords           = Coords;
@@ -150,8 +149,6 @@ void main(void)
 	vec3 B = vec3(1.0,1.0,1.0); //Replace with actual values extracted from mesh generation some day.
 	vec3 N = normalize(Normals.xyz); //Normals.
 
-	uint ClipIndex = uint(ClipParams.x);
-
 	// TBN must have right handed coord system.
 	//if (dot(cross(N, T), B) < 0.0)
 	//	T = T * -1.0;
@@ -161,7 +158,11 @@ void main(void)
     gTangentFragPos  = gTBNMat * gCoords.xyz;
 
 	gl_Position = modelviewprojMat * vec4(Coords, 1.0);
+
+#if SUPPORTSCLIPDISTANCE
+	uint ClipIndex = uint(ClipParams.x);
     gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,gEyeSpacePos.xyz);
+#endif // SUPPORTSCLIPDISTANCE
 
 #else
 	vEyeSpacePos      = modelviewMat*vec4(Coords, 1.0);
@@ -226,6 +227,7 @@ void main(void)
 # endif
 
 	gl_Position = vec4(Coords, 1.0);
+
 #endif
 
 }
