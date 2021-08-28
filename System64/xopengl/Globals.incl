@@ -263,6 +263,7 @@ const uint	DF_DetailTexture	= 0x00000008u;
 const uint	DF_MacroTexture	 	= 0x00000010u;
 const uint	DF_BumpMap			= 0x00000020u;
 const uint	DF_EnvironmentMap  	= 0x00000040u;
+const uint	DF_HeightMap      	= 0x00000080u;
 
 layout(std140) uniform GlobalMatrices
 {

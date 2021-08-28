@@ -11,11 +11,11 @@ const uint  IDX_LIGHTMAP_COORDS    = 1u;
 const uint  IDX_FOGMAP_COORDS      = 2u;
 const uint  IDX_DETAIL_COORDS      = 3u;
 const uint  IDX_MACRO_COORDS       = 4u;
-const uint  IDX_BUMPMAP_COORDS     = 5u;
-const uint  IDX_ENVIROMAP_COORDS   = 6u;
-const uint  IDX_DIFFUSE_INFO       = 7u;
-const uint  IDX_MACRO_INFO         = 8u;
-const uint  IDX_BUMPMAP_INFO       = 9u;
+const uint  IDX_ENVIROMAP_COORDS   = 5u;
+const uint  IDX_DIFFUSE_INFO       = 6u;
+const uint  IDX_MACRO_INFO         = 7u;
+const uint  IDX_BUMPMAP_INFO       = 8u;
+const uint  IDX_HEIGHTMAP_INFO     = 9u;
 const uint  IDX_X_AXIS             = 10u;
 const uint  IDX_Y_AXIS             = 11u;
 const uint  IDX_Z_AXIS             = 12u;
@@ -60,18 +60,18 @@ struct DrawComplexShaderDrawParams
 	vec4 FogMapUV;		    // 2
 	vec4 DetailUV;		    // 3
 	vec4 MacroUV;		    // 4
-	vec4 BumpMapUV;		    // 5
-	vec4 EnviroMapUV;	    // 6
-	vec4 DiffuseInfo;	    // 7
-	vec4 MacroInfo;		    // 8
-	vec4 BumpMapInfo;	    // 9
+	vec4 EnviroMapUV;	    // 5
+	vec4 DiffuseInfo;	    // 6
+	vec4 MacroInfo;		    // 7
+	vec4 BumpMapInfo;	    // 8
+    vec4 HeightMapInfo;     // 9
 	vec4 XAxis;			    // 10
 	vec4 YAxis;			    // 11
 	vec4 ZAxis;			    // 12
 	vec4 DrawColor;		    // 13
 	vec4 DistanceFogColor;  // 14
 	vec4 DistanceFogInfo;   // 15
-	uvec4 TexNum[2];
+	uvec4 TexNum[4];
 	uvec4 DrawFlags;
 };
 
@@ -87,6 +87,8 @@ flat out uint vDetailTexNum;
 flat out uint vMacroTexNum;
 flat out uint vBumpMapTexNum;
 flat out uint vEnviroMapTexNum;
+flat out uint vHeightMapTexNum;
+flat out uint vHeightMapNum;
 flat out uint vDrawFlags;
 flat out uint vTextureFormat;
 flat out uint vPolyFlags;
@@ -104,7 +106,7 @@ flat out vec4 vDistanceFogColor;
 flat out vec4 vDistanceFogInfo;
 #else
 uniform vec4 TexCoords[16];
-uniform uint TexNum[8];
+uniform uint TexNum[16];
 uniform uint DrawFlags[4];
 #endif
 
@@ -124,7 +126,6 @@ void main(void)
 	vec4 FogMapUV    = DrawComplexParams[gl_DrawID].FogMapUV;
 	vec4 DetailUV    = DrawComplexParams[gl_DrawID].DetailUV;
 	vec4 MacroUV     = DrawComplexParams[gl_DrawID].MacroUV;
-	vec4 BumpMapUV   = DrawComplexParams[gl_DrawID].BumpMapUV;
 	vec4 EnviroMapUV = DrawComplexParams[gl_DrawID].EnviroMapUV;
 
 	vDrawFlags        = DrawComplexParams[gl_DrawID].DrawFlags[0];
@@ -132,7 +133,7 @@ void main(void)
 	vPolyFlags        = DrawComplexParams[gl_DrawID].DrawFlags[2];
 # if EDITOR
 	vRendMap          = DrawComplexParams[gl_DrawID].DrawFlags[3];
-	vHitTesting       = DrawComplexParams[gl_DrawID].TexNum[1].w;
+	vHitTesting       = DrawComplexParams[gl_DrawID].TexNum[3].x
 	vDrawColor        = DrawComplexParams[gl_DrawID].DrawColor;
 # endif
 	vTexNum			  = DrawComplexParams[gl_DrawID].TexNum[0].x;
@@ -142,6 +143,7 @@ void main(void)
 	vMacroTexNum      = DrawComplexParams[gl_DrawID].TexNum[1].x;
 	vBumpMapTexNum    = DrawComplexParams[gl_DrawID].TexNum[1].y;
 	vEnviroMapTexNum  = DrawComplexParams[gl_DrawID].TexNum[1].z;
+	vHeightMapTexNum  = DrawComplexParams[gl_DrawID].TexNum[1].w;
 	vBaseDiffuse      = DrawComplexParams[gl_DrawID].DiffuseInfo.x;
 	vBaseAlpha        = DrawComplexParams[gl_DrawID].DiffuseInfo.z;
 	vBumpMapSpecular  = DrawComplexParams[gl_DrawID].BumpMapInfo.y;
@@ -158,7 +160,6 @@ void main(void)
 	vec4 FogMapUV    = TexCoords[IDX_FOGMAP_COORDS];
 	vec4 DetailUV    = TexCoords[IDX_DETAIL_COORDS];
 	vec4 MacroUV     = TexCoords[IDX_MACRO_COORDS];
-	vec4 BumpMapUV   = TexCoords[IDX_BUMPMAP_COORDS];
 	vec4 EnviroMapUV = TexCoords[IDX_ENVIROMAP_COORDS];
 
 	uint vDrawFlags  = DrawFlags[0];
@@ -219,16 +220,6 @@ void main(void)
 		vec2 MacroMult  = MacroUV.xy;
 		vec2 MacroPan   = MacroUV.zw;
 		vMacroTexCoords = (MapDot - MacroPan) * MacroMult;
-	}
-#endif
-
-	// Texture UV BumpMap
-#if BUMPMAPS
-	if ((vDrawFlags & DF_BumpMap) == DF_BumpMap)
-	{
-		vec2 BumpMapMult = BumpMapUV.xy;
-		vec2 BumpMapPan  = BumpMapUV.zw;
-		vBumpTexCoords   = (MapDot - BumpMapPan) * BumpMapMult;
 	}
 #endif
 
