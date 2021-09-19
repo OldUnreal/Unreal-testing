@@ -146,8 +146,11 @@ vec2 ParallaxMapping(vec2 ptexCoords, vec3 viewDir, uint TexNum, out float paral
 
 // parallax occlusion mapping
     #if !SHADERDRAWPARAMETERS
-        float vParallaxScale = TexCoords[IDX_HEIGHTMAP_INFO].w * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
+        float vParallaxScale = TexCoords[IDX_HEIGHTMAP_INFO].z * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
+        float vTimeSeconds = TexCoords[IDX_HEIGHTMAP_INFO].w; // Surface.Level->TimeSeconds
     #endif
+
+    //vParallaxScale += 8.0f * sin(vTimeSeconds) + 4.0 * cos(2.3f * vTimeSeconds);
 
     // number of depth layers
     const float minLayers = 8;
@@ -221,9 +224,10 @@ vec2 ParallaxMapping(vec2 ptexCoords, vec3 viewDir, uint TexNum, out float paral
    const float maxLayers = 15.0;
    float numLayers = mix(maxLayers, minLayers, abs(dot(vec3(0, 0, 1), viewDir)));
 
-   #if !SHADERDRAWPARAMETERS
-        float vParallaxScale = TexCoords[IDX_HEIGHTMAP_INFO].w * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
-   #endif
+    #if !SHADERDRAWPARAMETERS
+        float vParallaxScale = TexCoords[IDX_HEIGHTMAP_INFO].z * 0.025; // arbitrary to get DrawScale into (for this purpose) sane regions.
+        float vTimeSeconds = TexCoords[IDX_HEIGHTMAP_INFO].w; // Surface.Level->TimeSeconds
+    #endif
 
    // height of each layer
    float layerHeight = 1.0 / numLayers;
@@ -465,6 +469,12 @@ void main (void)
     Color = texture(Texture0, texCoords);
 #endif
 
+    #if SRGB
+		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
+		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
+        Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
+    #endif
+
     if (vBaseDiffuse > 0.0)
         Color *= vBaseDiffuse; // Diffuse factor.
 
@@ -538,7 +548,7 @@ void main (void)
 # else
 			TotalColor*=vec4(LightColor.rgb,1.0);
 # endif
-			//TotalColor.rgb=clamp(TotalColor.rgb*2.0,0.0,1.0); //saturate.
+			TotalColor.rgb=clamp(TotalColor.rgb*2.0,0.0,1.0); //saturate.
 		}
 
 #endif
@@ -616,6 +626,8 @@ void main (void)
 
 		for(int i=0; i<NumLights; ++i)
 		{
+		    vec3 CurrentLightColor = vec3(LightData1[i].x,LightData1[i].y,LightData1[i].z);
+
 			float NormalLightRadius = LightData5[i].x;
             bool bZoneNormalLight = bool(LightData5[i].y);
 
@@ -650,8 +662,9 @@ void main (void)
             // specular
             vec3 halfwayDir = normalize(TangentlightDir + TangentViewDir);
             float spec = pow(max(dot(TextureNormal, halfwayDir), 0.0), 8.0);
-            vec3 specular = vec3(max(vBumpMapSpecular,0.1)) * spec;
-            TotalBumpColor = ambient + diffuse + specular;
+            vec3 specular = vec3(max(vBumpMapSpecular,0.1)) * spec * CurrentLightColor;
+
+            TotalBumpColor += (ambient + diffuse + specular) * attenuation;
 		}
 		TotalColor+=vec4(clamp(TotalBumpColor,0.0,1.0),1.0);
 	}
@@ -726,25 +739,10 @@ void main (void)
 	if((vPolyFlags & PF_Modulated)!=PF_Modulated)
 	{
 		// Gamma
-#ifdef GL_ES
-		// 1.055*pow(x,(1.0 / 2.4) ) - 0.055
-		// FixMe: ugly rough srgb to linear conversion.
-		TotalColor.r=(1.055*pow(TotalColor.r,(1.0-vGamma / 2.4))-0.055);
-		TotalColor.g=(1.055*pow(TotalColor.g,(1.0-vGamma / 2.4))-0.055);
-		TotalColor.b=(1.055*pow(TotalColor.b,(1.0-vGamma / 2.4))-0.055);
-#else
-		TotalColor.r=pow(TotalColor.r,2.7-vGamma*1.7);
-		TotalColor.g=pow(TotalColor.g,2.7-vGamma*1.7);
-		TotalColor.b=pow(TotalColor.b,2.7-vGamma*1.7);
-
-        LightColor.r=pow(LightColor.r,2.7-vGamma*1.7);
-		LightColor.g=pow(LightColor.g,2.7-vGamma*1.7);
-		LightColor.b=pow(LightColor.b,2.7-vGamma*1.7);
-
-		FogColor.r=pow(FogColor.r,2.7-vGamma*1.7);
-		FogColor.g=pow(FogColor.g,2.7-vGamma*1.7);
-		FogColor.b=pow(FogColor.b,2.7-vGamma*1.7);
-#endif
+		float InGamma = vGamma*2.0; // vGamma is a value from 0.1 to 1.0
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
 	}
 
 #if EDITOR

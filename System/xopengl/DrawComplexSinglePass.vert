@@ -97,6 +97,7 @@ flat out float vBaseAlpha;
 flat out float vParallaxScale;
 flat out float vGamma;
 flat out float vBumpMapSpecular;
+flat out float vTimeSeconds;
 # if EDITOR
 flat out uint vHitTesting;
 flat out uint vRendMap;
@@ -147,7 +148,8 @@ void main(void)
 	vBaseDiffuse      = DrawComplexParams[gl_DrawID].DiffuseInfo.x;
 	vBaseAlpha        = DrawComplexParams[gl_DrawID].DiffuseInfo.z;
 	vBumpMapSpecular  = DrawComplexParams[gl_DrawID].BumpMapInfo.y;
-	vParallaxScale    = DrawComplexParams[gl_DrawID].MacroInfo.w * 0.025;
+	vParallaxScale    = DrawComplexParams[gl_DrawID].HeightMapInfo.z * 0.025;
+	vTimeSeconds      = DrawComplexParams[gl_DrawID].HeightMapInfo.w;
 	vGamma            = ZAxis.w;
 	vDistanceFogColor = DrawComplexParams[gl_DrawID].DistanceFogColor;
 	vDistanceFogInfo  = DrawComplexParams[gl_DrawID].DistanceFogInfo;

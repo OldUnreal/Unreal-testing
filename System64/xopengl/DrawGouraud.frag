@@ -88,6 +88,12 @@ void main(void)
     Color = texture(Texture0, gTexCoords);
 #endif
 
+    #if SRGB
+		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
+		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
+        Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
+    #endif
+
     if (gTextureInfo.x > 0.0)
         Color *= gTextureInfo.x; // Diffuse factor.
 
@@ -244,6 +250,8 @@ void main(void)
 
 		for(int i=0; i<NumLights; ++i)
 		{
+		    vec3 CurrentLightColor = vec3(LightData1[i].x,LightData1[i].y,LightData1[i].z);
+
 			float NormalLightRadius = LightData5[i].x;
             bool bZoneNormalLight = bool(LightData5[i].y);
 
@@ -278,8 +286,9 @@ void main(void)
             // specular
             vec3 halfwayDir = normalize(TangentlightDir + TangentViewDir);
             float spec = pow(max(dot(TextureNormal, halfwayDir), 0.0), 8.0);
-            vec3 specular = vec3(0.01) * spec;
-            TotalBumpColor = ambient + diffuse + specular;
+            vec3 specular = vec3(0.01) * spec * CurrentLightColor;
+
+            TotalBumpColor += (ambient + diffuse + specular) * attenuation;
 
 		}
 		TotalColor+=vec4(clamp(TotalBumpColor,0.0,1.0),1.0);
@@ -311,17 +320,10 @@ void main(void)
 	if((gPolyFlags & PF_Modulated)!=PF_Modulated)
 	{
 		// Gamma
-#ifdef GL_ES
-		// 1.055*pow(x,(1.0 / 2.4) ) - 0.055
-		// FixMe: ugly rough srgb to linear conversion.
-		TotalColor.r=(1.055*pow(TotalColor.r,(1.0-gGamma / 2.4))-0.055);
-		TotalColor.g=(1.055*pow(TotalColor.g,(1.0-gGamma / 2.4))-0.055);
-		TotalColor.b=(1.055*pow(TotalColor.b,(1.0-gGamma / 2.4))-0.055);
-#else
-		TotalColor.r=pow(TotalColor.r,2.7-gGamma*1.7);
-		TotalColor.g=pow(TotalColor.g,2.7-gGamma*1.7);
-		TotalColor.b=pow(TotalColor.b,2.7-gGamma*1.7);
-#endif
+		float InGamma = gGamma*2.0;
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
 	}
 
 #if EDITOR
