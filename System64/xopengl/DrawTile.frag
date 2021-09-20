@@ -42,9 +42,12 @@ void main(void)
     #endif
 
     #if SRGB
+    if((PolyFlags & PF_Modulated)!=PF_Modulated)
+	{
 		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
 		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
         Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
+    }
     #endif
 
 	// Handle PF_Masked.

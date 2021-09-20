@@ -470,9 +470,12 @@ void main (void)
 #endif
 
     #if SRGB
+	if((vPolyFlags & PF_Modulated)!=PF_Modulated)
+	{
 		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
 		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
         Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
+    }
     #endif
 
     if (vBaseDiffuse > 0.0)
@@ -555,7 +558,7 @@ void main (void)
 
 	// DetailTextures
 #if DETAILTEXTURES
-	float bNear = clamp(1.0-(vCoords.z/380.0),0.0,1.0);
+    float bNear = clamp(0.65-(vCoords.z/512.0),0.0,1.0);
 	if (((vDrawFlags & DF_DetailTexture) == DF_DetailTexture) && bNear > 0.0)
 	{
 	    vec4 DetailTexColor;

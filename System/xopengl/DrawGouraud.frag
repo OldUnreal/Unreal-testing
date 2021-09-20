@@ -89,9 +89,12 @@ void main(void)
 #endif
 
     #if SRGB
+	if((gPolyFlags & PF_Modulated)!=PF_Modulated)
+	{
 		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
 		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
         Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
+    }
     #endif
 
     if (gTextureInfo.x > 0.0)
@@ -185,7 +188,7 @@ void main(void)
 
 
 #if DETAILTEXTURES
-	float bNear = clamp(1.0-(gCoords.z/380.0),0.0,1.0);
+	float bNear = clamp(0.65-(gCoords.z/512.0),0.0,1.0);
 	if( ((gDrawFlags & DF_DetailTexture) == DF_DetailTexture) && bNear > 0.0)
 	{
 	    vec4 DetailTexColor;
