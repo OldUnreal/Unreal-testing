@@ -257,6 +257,7 @@ void main(void)
 
 			float NormalLightRadius = LightData5[i].x;
             bool bZoneNormalLight = bool(LightData5[i].y);
+            float LightBrightness = LightData5[i].z/255.0;
 
             if (NormalLightRadius == 0.0)
                 NormalLightRadius = LightData2[i].w * 64.0;
@@ -289,7 +290,7 @@ void main(void)
             // specular
             vec3 halfwayDir = normalize(TangentlightDir + TangentViewDir);
             float spec = pow(max(dot(TextureNormal, halfwayDir), 0.0), 8.0);
-            vec3 specular = vec3(0.01) * spec * CurrentLightColor;
+            vec3 specular = vec3(0.01) * spec * CurrentLightColor * LightBrightness;
 
             TotalBumpColor += (ambient + diffuse + specular) * attenuation;
 
@@ -372,9 +373,20 @@ void main(void)
 #endif
 
 # if SIMULATEMULTIPASS
-    FragColor1	= vec4(1.0,1.0,1.0,1.0)-TotalColor;
+    if((gPolyFlags & PF_Modulated) == PF_Modulated)
+    {
+        FragColor	= TotalColor;
+        FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor);
+	}
+	else
+    {
+        FragColor	= TotalColor;
+        FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor)*LightColor;
+	}
+#else
+    FragColor	= TotalColor;
 #endif
-	FragColor = TotalColor;
+
 }
 
 // Blending translation table

@@ -85,8 +85,9 @@ void main(void)
 #endif
 
 # if SIMULATEMULTIPASS
-    FragColor1	= vec4(1.0,1.0,1.0,1.0)-TotalColor;
+	FragColor	= TotalColor;
+	FragColor1	= vec4(1.0,1.0,1.0,1.0)-TotalColor;
+#else
+    FragColor	= TotalColor;
 #endif
-
-	FragColor = TotalColor;
 }
