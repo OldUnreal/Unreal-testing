@@ -208,7 +208,7 @@ void main(void)
             if (bNear > 0.0)
             {
             # if BINDLESSTEXTURES
-                if (vDetailTexNum > 0u)
+                if (gDetailTexNum > 0u)
                   DetailTexColor = texture(Textures[gDetailTexNum], gDetailTexCoords * DetailScale);
                 else DetailTexColor = texture(Texture3, gDetailTexCoords * DetailScale);
             # else
