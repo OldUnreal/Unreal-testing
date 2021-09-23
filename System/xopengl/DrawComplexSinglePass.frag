@@ -558,25 +558,42 @@ void main (void)
 
 	// DetailTextures
 #if DETAILTEXTURES
-    float bNear = clamp(0.65-(vCoords.z/512.0),0.0,1.0);
-	if (((vDrawFlags & DF_DetailTexture) == DF_DetailTexture) && bNear > 0.0)
+	if (((vDrawFlags & DF_DetailTexture) == DF_DetailTexture))
 	{
+        float NearZ = vCoords.z/512.0;
+        float DetailScale = 1.0;
+        float bNear;
 	    vec4 DetailTexColor;
-# if BINDLESSTEXTURES
-        if (vDetailTexNum > 0u)
-          DetailTexColor = texture(Textures[vDetailTexNum], vDetailTexCoords);
-		else DetailTexColor = texture(Texture3, vDetailTexCoords);
-# else
-		DetailTexColor = texture(Texture3, vDetailTexCoords);
-# endif
+	    vec3 hsvDetailTex;
 
-		vec3 hsvDetailTex = rgb2hsv(DetailTexColor.rgb); // cool idea Han :)
-		hsvDetailTex.b += (DetailTexColor.r - 0.1);
-		hsvDetailTex = hsv2rgb(hsvDetailTex);
-		DetailTexColor=vec4(hsvDetailTex,0.0);
-		DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
+	    for(int i=0; i < DetailMax; ++i)
+        {
+            if (i > 0)
+            {
+                NearZ *= 4.223f;
+                DetailScale *= 4.223f;
+            }
+            bNear = clamp(0.65-NearZ,0.0,1.0);
 
-		TotalColor.rgb*=DetailTexColor.rgb;
+            if (bNear > 0.0)
+            {
+            # if BINDLESSTEXTURES
+                if (vDetailTexNum > 0u)
+                  DetailTexColor = texture(Textures[vDetailTexNum], vDetailTexCoords * DetailScale);
+                else DetailTexColor = texture(Texture3, vDetailTexCoords * DetailScale);
+            # else
+                DetailTexColor = texture(Texture3, vDetailTexCoords * DetailScale);
+            # endif
+
+                vec3 hsvDetailTex = rgb2hsv(DetailTexColor.rgb); // cool idea Han :)
+                hsvDetailTex.b += (DetailTexColor.r - 0.1);
+                hsvDetailTex = hsv2rgb(hsvDetailTex);
+                DetailTexColor=vec4(hsvDetailTex,0.0);
+                DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
+
+                TotalColor.rgb*=DetailTexColor.rgb;
+            }
+        }
 	}
 #endif
 
@@ -633,7 +650,7 @@ void main (void)
 
 			float NormalLightRadius = LightData5[i].x;
             bool bZoneNormalLight = bool(LightData5[i].y);
-            float LightBrightness = LightData5[i].z/255.0;
+            float LightBrightness = LightData5[i].z/255.0; // use LightBrightness to adjust specular reflection.
 
             if (NormalLightRadius == 0.0)
                 NormalLightRadius = LightData2[i].w * 64.0;
@@ -742,11 +759,19 @@ void main (void)
 
 	if((vPolyFlags & PF_Modulated)!=PF_Modulated)
 	{
-		// Gamma
-		float InGamma = vGamma*2.0; // vGamma is a value from 0.1 to 1.0
+#if EDITOR
+        // Gamma
+        float InGamma = vGamma*GammaMultiplierUED;
         TotalColor.r=pow(TotalColor.r,1.0/InGamma);
         TotalColor.g=pow(TotalColor.g,1.0/InGamma);
         TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#else
+		// Gamma
+		float InGamma = vGamma*GammaMultiplier; // vGamma is a value from 0.1 to 1.0
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#endif
 	}
 
 #if EDITOR

@@ -39,13 +39,21 @@ void main(void)
 	if ( (LineFlags&LINE_Transparent)==LINE_Transparent )
 	{
 	}
-#ifndef EDITOR
+#if EDITOR
+        TotalColor.rgb=clamp(TotalColor.rgb*1.2,0.0,0.8);
+        // Gamma
+        float InGamma = Gamma*GammaMultiplierUED;
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#else
 		// Gamma
-		float InGamma = Gamma*2.0;
+		float InGamma = Gamma*GammaMultiplier;
         TotalColor.r=pow(TotalColor.r,1.0/InGamma);
         TotalColor.g=pow(TotalColor.g,1.0/InGamma);
         TotalColor.b=pow(TotalColor.b,1.0/InGamma);
 #endif
+
 # if SIMULATEMULTIPASS
     FragColor1	= vec4(1.0,1.0,1.0,1.0)-TotalColor;
 #endif

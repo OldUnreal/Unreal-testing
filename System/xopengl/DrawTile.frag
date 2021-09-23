@@ -64,11 +64,19 @@ void main(void)
 
 	if((PolyFlags & PF_Modulated)!=PF_Modulated)
 	{
-		// Gamma
-		float InGamma = Gamma*2.0;
+#if EDITOR
+        // Gamma
+        float InGamma = Gamma*GammaMultiplierUED;
         TotalColor.r=pow(TotalColor.r,1.0/InGamma);
         TotalColor.g=pow(TotalColor.g,1.0/InGamma);
         TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#else
+		// Gamma
+		float InGamma = Gamma*GammaMultiplier; // Gamma is a value from 0.1 to 1.0
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#endif
 	}
 
 #if EDITOR

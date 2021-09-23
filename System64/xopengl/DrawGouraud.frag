@@ -188,25 +188,42 @@ void main(void)
 
 
 #if DETAILTEXTURES
-	float bNear = clamp(0.65-(gCoords.z/512.0),0.0,1.0);
-	if( ((gDrawFlags & DF_DetailTexture) == DF_DetailTexture) && bNear > 0.0)
+	if (((gDrawFlags & DF_DetailTexture) == DF_DetailTexture))
 	{
+        float NearZ = gCoords.z/512.0;
+        float DetailScale = 1.0;
+        float bNear;
 	    vec4 DetailTexColor;
-	    #if BINDLESSTEXTURES
-	    if (gDetailTexNum > 0u)
-            DetailTexColor = texture(Textures[gDetailTexNum], gDetailTexCoords);
-        else
-            DetailTexColor = texture(Texture1, gDetailTexCoords); // DetailTexture
-        #else
-        DetailTexColor = texture(Texture1, gDetailTexCoords); // DetailTexture
-        #endif
-		vec3 hsvDetailTex = rgb2hsv(DetailTexColor.rgb);
-		hsvDetailTex.b += (DetailTexColor.r - 0.1);
-		hsvDetailTex = hsv2rgb(hsvDetailTex);
-		DetailTexColor=vec4(hsvDetailTex,0.0);
-		DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
+	    vec3 hsvDetailTex;
 
-		TotalColor.rgb*=DetailTexColor.rgb;
+	    for(int i=0; i < DetailMax; ++i)
+        {
+            if (i > 0)
+            {
+                NearZ *= 4.223f;
+                DetailScale *= 4.223f;
+            }
+            bNear = clamp(0.65-NearZ,0.0,1.0);
+
+            if (bNear > 0.0)
+            {
+            # if BINDLESSTEXTURES
+                if (vDetailTexNum > 0u)
+                  DetailTexColor = texture(Textures[gDetailTexNum], gDetailTexCoords * DetailScale);
+                else DetailTexColor = texture(Texture3, gDetailTexCoords * DetailScale);
+            # else
+                DetailTexColor = texture(Texture3, gDetailTexCoords * DetailScale);
+            # endif
+
+                vec3 hsvDetailTex = rgb2hsv(DetailTexColor.rgb); // cool idea Han :)
+                hsvDetailTex.b += (DetailTexColor.r - 0.1);
+                hsvDetailTex = hsv2rgb(hsvDetailTex);
+                DetailTexColor=vec4(hsvDetailTex,0.0);
+                DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
+
+                TotalColor.rgb*=DetailTexColor.rgb;
+            }
+        }
 	}
 #endif
 
@@ -323,11 +340,19 @@ void main(void)
 
 	if((gPolyFlags & PF_Modulated)!=PF_Modulated)
 	{
-		// Gamma
-		float InGamma = gGamma*2.0;
+#if EDITOR
+        // Gamma
+        float InGamma = gGamma*GammaMultiplierUED;
         TotalColor.r=pow(TotalColor.r,1.0/InGamma);
         TotalColor.g=pow(TotalColor.g,1.0/InGamma);
         TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#else
+		// Gamma
+		float InGamma = gGamma*GammaMultiplier; // gGamma is a value from 0.1 to 1.0
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#endif
 	}
 
 #if EDITOR
