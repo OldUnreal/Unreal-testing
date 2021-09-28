@@ -33,19 +33,19 @@ void main(void)
 {
     vec4 TotalColor = DrawColor;
 
-    if (bHitTesting)
-        TotalColor = DrawColor; // Use (still) DrawColor. Maybe needed later. Nonsense now.
-
 	if ( (LineFlags&LINE_Transparent)==LINE_Transparent )
 	{
 	}
 #if EDITOR
-        TotalColor.rgb=clamp(TotalColor.rgb*1.2,0.0,0.8);
-        // Gamma
-        float InGamma = Gamma*GammaMultiplierUED;
-        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
-        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
-        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+
+        if (!bHitTesting)
+        {
+            // Gamma
+            float InGamma = Gamma*GammaMultiplierUED;
+            TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+            TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+            TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+        }
 #else
 		// Gamma
 		float InGamma = Gamma*GammaMultiplier;
