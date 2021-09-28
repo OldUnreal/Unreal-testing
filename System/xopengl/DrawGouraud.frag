@@ -5,6 +5,13 @@
 		* Created by Smirftsch
 =============================================================================*/
 
+#if BINDLESSTEXTURES
+layout(std140) uniform TextureHandles
+{
+	sampler2D Textures[NUMTEXTURES];
+};
+#endif
+
 uniform sampler2D Texture0;	// Base Texture
 uniform sampler2D Texture1;	// DetailTexture
 uniform sampler2D Texture2;	// BumpMap
@@ -210,15 +217,15 @@ void main(void)
             # if BINDLESSTEXTURES
                 if (gDetailTexNum > 0u)
                   DetailTexColor = texture(Textures[gDetailTexNum], gDetailTexCoords * DetailScale);
-                else DetailTexColor = texture(Texture3, gDetailTexCoords * DetailScale);
+                else DetailTexColor = texture(Texture1, gDetailTexCoords * DetailScale);
             # else
-                DetailTexColor = texture(Texture3, gDetailTexCoords * DetailScale);
+                DetailTexColor = texture(Texture1, gDetailTexCoords * DetailScale);
             # endif
 
                 vec3 hsvDetailTex = rgb2hsv(DetailTexColor.rgb); // cool idea Han :)
                 hsvDetailTex.b += (DetailTexColor.r - 0.1);
                 hsvDetailTex = hsv2rgb(hsvDetailTex);
-                DetailTexColor=vec4(hsvDetailTex,0.0);
+                DetailTexColor = vec4(hsvDetailTex,0.0);
                 DetailTexColor = mix(vec4(1.0,1.0,1.0,1.0), DetailTexColor, bNear); //fading out.
 
                 TotalColor.rgb*=DetailTexColor.rgb;
