@@ -23,6 +23,13 @@ const uint  IDX_DRAWCOLOR          = 13u;
 const uint  IDX_DISTANCE_FOG_COLOR = 14u;
 const uint  IDX_DISTANCE_FOG_INFO  = 15u;
 
+#if BINDLESSTEXTURES
+layout(std140) uniform TextureHandles
+{
+	sampler2D Textures[NUMTEXTURES];
+};
+#endif
+
 uniform sampler2D Texture0;	//Base Texture
 uniform sampler2D Texture1;	//Lightmap
 uniform sampler2D Texture2;	//Fogmap
@@ -738,13 +745,14 @@ void main (void)
 	// Add DistanceFog
 #if ENGINE_VERSION==227
 	// stijn: Very slow! Went from 135 to 155FPS on CTF-BT-CallousV3 by just disabling this branch even tho 469 doesn't do distance fog
-	if (vDistanceFogInfo.w >= 0.0)
+	int FogMode = int(vDistanceFogInfo.w);
+	if (FogMode > 0)
 	{
 	    FogParameters DistanceFogParams;
         DistanceFogParams.FogStart = vDistanceFogInfo.x;
         DistanceFogParams.FogEnd = vDistanceFogInfo.y;
         DistanceFogParams.FogDensity = vDistanceFogInfo.z;
-        DistanceFogParams.FogMode = int(vDistanceFogInfo.w);
+        DistanceFogParams.FogMode = FogMode;
 
 		if ( (vPolyFlags&PF_Modulated) == PF_Modulated )
 			DistanceFogParams.FogColor = vec4(0.5,0.5,0.5,0.0);

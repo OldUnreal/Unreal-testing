@@ -304,13 +304,6 @@ layout(std140) uniform GlobalCoords
 	mat4 FrameUncoords;
 };
 
-#if BINDLESSTEXTURES
-layout(std140) uniform TextureHandles
-{
-	sampler2D Textures[NUMTEXTURES];
-};
-#endif
-
 //DistanceFog
 struct FogParameters
 {
