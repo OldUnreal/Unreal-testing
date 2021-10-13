@@ -26,7 +26,7 @@ const uint  IDX_DISTANCE_FOG_INFO  = 15u;
 #if BINDLESSTEXTURES
 layout(std140) uniform TextureHandles
 {
-	sampler2D Textures[NUMTEXTURES];
+	layout(bindless_sampler) sampler2D Textures[NUMTEXTURES];
 };
 #endif
 

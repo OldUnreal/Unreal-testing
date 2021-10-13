@@ -37,7 +37,6 @@ void main(void)
 	{
 	}
 #if EDITOR
-
         if (!bHitTesting)
         {
             // Gamma

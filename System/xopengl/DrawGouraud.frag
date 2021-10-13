@@ -8,7 +8,7 @@
 #if BINDLESSTEXTURES
 layout(std140) uniform TextureHandles
 {
-	sampler2D Textures[NUMTEXTURES];
+	layout(bindless_sampler) sampler2D Textures[NUMTEXTURES];
 };
 #endif
 
