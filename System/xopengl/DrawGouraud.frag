@@ -8,7 +8,7 @@
 #if BINDLESSTEXTURES
 layout(std140) uniform TextureHandles
 {
-	layout(bindless_sampler) sampler2D Textures[NUMTEXTURES];
+	sampler2D Textures[NUMTEXTURES];
 };
 #endif
 
@@ -326,14 +326,13 @@ void main(void)
 
 	// Add DistanceFog
 #if ENGINE_VERSION==227
-	int FogMode = int(gDistanceFogInfo.w);
-	if (FogMode > 0)
+	if (gDistanceFogInfo.w >= 0.0)
 	{
 	    FogParameters DistanceFogParams;
         DistanceFogParams.FogStart = gDistanceFogInfo.x;
         DistanceFogParams.FogEnd = gDistanceFogInfo.y;
         DistanceFogParams.FogDensity = gDistanceFogInfo.z;
-        DistanceFogParams.FogMode = FogMode;
+        DistanceFogParams.FogMode = int(gDistanceFogInfo.w);
 
 		if ( (gPolyFlags&PF_Modulated) == PF_Modulated )
 			DistanceFogParams.FogColor = vec4(0.5,0.5,0.5,0.0);

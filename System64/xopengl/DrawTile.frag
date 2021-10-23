@@ -17,7 +17,7 @@ flat in uint gTexNum;
 #if BINDLESSTEXTURES
 layout(std140) uniform TextureHandles
 {
-	layout(bindless_sampler) sampler2D Textures[NUMTEXTURES];
+	sampler2D Textures[NUMTEXTURES];
 };
 #endif
 
