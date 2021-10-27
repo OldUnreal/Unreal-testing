@@ -746,7 +746,7 @@ void main (void)
 #if ENGINE_VERSION==227
 	// stijn: Very slow! Went from 135 to 155FPS on CTF-BT-CallousV3 by just disabling this branch even tho 469 doesn't do distance fog
 	int FogMode = int(vDistanceFogInfo.w);
-	if (FogMode > 0)
+	if (FogMode >= 0)
 	{
 	    FogParameters DistanceFogParams;
         DistanceFogParams.FogStart = vDistanceFogInfo.x;
