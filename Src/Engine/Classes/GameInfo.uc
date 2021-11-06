@@ -146,13 +146,14 @@ var() globalconfig bool			bUseRealtimeShadow;				// Use blob shadow or realistic
 var() globalconfig bool			bNoWalkInAir;					// Do not allow Pawn physics "walk in air" glitch
 var() globalconfig bool			bProjectorDecals;				// Use projectors for weapon decals. Very CPU intensive.
 var transient const bool		bIsSavedGame;					// Set to true on saved games.
-var() globalconfig bool			bAlwaysEnhancedSightCheck;		// Override for SightCheck. Faster than normal SightCheck. Usually set in Pawn with bEnhancedSightCheck. 
-																// Increases difficulty but may cause problems with custom maps, since AI can look through transparent surfaces when set.
-var() globalconfig bool			bRestrictMoversRetriggering;	// 227j. Specifies how movers in states TriggerControl and TriggerPound should behave:
-																// if True, calling Trigger or UnTrigger on such movers will not cause visible effects
-																// unless otherwise KeyNum would be changed.
-																// By default, only objects of types Engine.Mover and UnrealShare.AttachMover (but not
-																// subclasses thereof) are affected by this setting.
+var() globalconfig bool			bAlwaysEnhancedSightCheck;		/* Override for SightCheck. Faster than normal SightCheck. Usually set in Pawn with bEnhancedSightCheck. 
+																Increases difficulty but may cause problems with custom maps, since AI can look through transparent surfaces when set. */
+var() globalconfig bool			bRestrictMoversRetriggering;	/* 227j. Specifies how movers in states TriggerControl and TriggerPound should behave:
+																if True, calling Trigger or UnTrigger on such movers will not cause visible effects
+																unless otherwise KeyNum would be changed.
+																By default, only objects of types Engine.Mover and UnrealShare.AttachMover (but not
+																subclasses thereof) are affected by this setting. */
+var() globalconfig bool			bUseClassicBalance;				// Classic balance mode.
 //------------------------------------------------------------------------------
 // 227j: Used for storing saved game info.
 struct SavedGameInfo
@@ -582,6 +583,14 @@ event InitGame( string Options, out string Error )
 	{
 		log("GameSpeed"@InOpt);
 		SetGameSpeed(float(InOpt));
+	}
+	
+	InOpt = ParseOption( Options, "ClassicMode");
+	if ( InOpt != "" )
+	{
+		bUseClassicBalance = bool(InOpt);
+		if( bUseClassicBalance!=Default.bUseClassicBalance )
+			SaveConfig();
 	}
 
 	BaseMutator = spawn(MutatorClass);

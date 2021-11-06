@@ -288,9 +288,9 @@ function PlayMeleeAttack()
 // 227j: Allow pupaes lunge uphill.
 function bool IsInMeleeRange( Pawn Other )
 {
-	if ( VSize(Location - Other.Location) > MeleeRange + CollisionRadius + Other.CollisionRadius )
-		return false;
-	return true;
+	if( Level.Game.bUseClassicBalance )
+		return Super.IsInMeleeRange(Other);
+	return VSizeSq(Location - Other.Location) < Square(MeleeRange + CollisionRadius + Other.CollisionRadius);
 }
 
 // 227j: Let pupae deal melee damage from underneath.
@@ -298,6 +298,8 @@ function bool MeleeDamageTarget(int hitdamage, vector pushdir)
 {
 	local vector HitLocation;
 
+	if( Level.Game.bUseClassicBalance )
+		return Super.MeleeDamageTarget(hitdamage, pushdir);
 	if ( Target==self )
 		Target = none;
 	if ( !Target && HasAliveEnemy() )   // allow non pawn targets

@@ -31,6 +31,10 @@ var UWindowCheckbox UseMutatorsCheck;
 var localized string UseMutText;
 var localized string UseMutHelp;
 
+var UWindowCheckbox UseClassicCheck;
+var localized string UseClassicText;
+var localized string UseClassicHelp;
+
 var UWindowSmallButton OKButton;
 var UWindowSmallButton MutatorButton;
 var UWindowSmallButton AdvancedButton;
@@ -39,10 +43,11 @@ var float ButtonWidth;
 
 var localized string AdvancedText;
 
-var config bool bMutatorsSelected;
+var config bool bMutatorsSelected, bClassicChecked;
 
 function WindowShown()
 {
+	UseClassicCheck.bChecked = bClassicChecked;
 	UseMutatorsCheck.bChecked = bMutatorsSelected;
 	Super.WindowShown();
 }
@@ -114,6 +119,14 @@ function Created()
 	UseMutatorsCheck.SetFont(F_Normal);
 	UseMutatorsCheck.bChecked = bMutatorsSelected;
 	UseMutatorsCheck.Align = TA_Left;
+	
+	// Use classic
+	UseClassicCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', CenterPos, 62, 190, 1));
+	UseClassicCheck.SetText(UseClassicText);
+	UseClassicCheck.SetHelpText(UseClassicHelp);
+	UseClassicCheck.SetFont(F_Normal);
+	UseClassicCheck.bChecked = bClassicChecked;
+	UseClassicCheck.Align = TA_Left;
 
 	// Mutators
 	MutatorButton = UWindowSmallButton(CreateControl(class'UWindowSmallButton', CenterPos, 98, 64, 32));
@@ -168,6 +181,9 @@ function BeforePaint(Canvas C, float X, float Y)
 
 	UseMutatorsCheck.AutoWidth(C);
 	UseMutatorsCheck.WinLeft = ControlRight - UseMutatorsCheck.WinWidth + 3;
+	
+	UseClassicCheck.AutoWidth(C);
+	UseClassicCheck.WinLeft = ControlRight - UseClassicCheck.WinWidth + 3;
 
 	MutatorButton.AutoWidthBy(C, ButtonWidth);
 	MutatorButton.WinLeft = ControlRight - MutatorButton.WinWidth;
@@ -193,6 +209,10 @@ function Notify(UWindowDialogControl C, byte E)
 			break;
 		case UseMutatorsCheck:
 			bMutatorsSelected = UseMutatorsCheck.bChecked;
+			SaveConfig();
+			break;
+		case UseClassicCheck:
+			bClassicChecked = UseClassicCheck.bChecked;
 			SaveConfig();
 			break;
 		case GameCombo:
@@ -229,8 +249,10 @@ function OKClicked()
 	
 	if (bMutatorsSelected)
 		S $= "?Mutator="$class'UMenuMutatorCW'.default.MutatorList;
+	
+	S $= "?ClassicMode="$string(bClassicChecked);
 
-	if( MessageBox(HighSkillTitle, HighSkillWarning, MB_YesNo, MR_No, MR_Yes) )
+	if( LastSelectedSkill>3 && MessageBox(HighSkillTitle, HighSkillWarning, MB_YesNo, MR_No, MR_Yes) )
 		PendingURL = S;
 	else
 	{
@@ -329,6 +351,8 @@ defaultproperties
 	SkillHelp="Select the difficulty you wish to play at."
 	UseMutText="Use Mutators"
 	UseMutHelp="If should use mutators in this game."
+	UseClassicText="Use Classic Balance"
+	UseClassicHelp="Some gameplay mechanics should behave as old Unreal versions."
 	AdvancedText="Advanced..."
 	HighSkillTitle="WARNING!"
 	HighSkillWarning="This skill level is outside of standard difficulty settings, it will brutalize you in singleplayer. Are you sure you want to proceed?"

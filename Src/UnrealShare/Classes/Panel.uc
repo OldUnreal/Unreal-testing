@@ -51,4 +51,5 @@ defaultproperties
 	Texture=Texture'Engine.S_Corpse'
 	Mesh=Mesh'UnrealShare.IPanel'
 	bUnlit=True
+	bNoDynamicShadowCast=true
 }

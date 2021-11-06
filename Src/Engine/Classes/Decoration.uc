@@ -39,7 +39,7 @@ simulated function ShadowModeChange()
 {
 	if( !bNoDynamicShadowCast )
 	{
-		if( !Class'GameInfo'.Default.bCastShadow || !Class'GameInfo'.Default.bDecoShadows )
+		if( !Class'GameInfo'.Default.bCastShadow || !Class'GameInfo'.Default.bDecoShadows || Style==STY_Translucent || Style==STY_Modulated )
 		{
 			if( Shadow )
 			{

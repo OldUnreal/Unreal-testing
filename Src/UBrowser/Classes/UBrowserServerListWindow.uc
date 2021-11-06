@@ -57,15 +57,19 @@ function WindowShown()
 	local UBrowserSupersetList l;
 
 	Super.WindowShown();
-	if ( Class'UBrowserInfoClientWindow'.Default.bClassicWindow!=bNowOnClassic )
+	if( Class'UBrowserInfoClientWindow'.Default.bClassicWindow!=bNowOnClassic )
 		ToggleInfoWinType();
-	if (UWindowVSplitter(InfoClient.ParentWindow) != None)
-		VSplitter.SplitPos = UWindowVSplitter(InfoClient.ParentWindow).SplitPos;
-	InfoClient.Server = InfoItem;
+	
+	if( InfoClient )
+	{
+		if( UWindowVSplitter(InfoClient.ParentWindow) )
+			VSplitter.SplitPos = UWindowVSplitter(InfoClient.ParentWindow).SplitPos;
+		InfoClient.Server = InfoItem;
+	}
 
 	ResumePinging();
 
-	for (l = UBrowserSupersetList(SupersetList.Next); l != None; l = UBrowserSupersetList(l.Next))
+	for (l = UBrowserSupersetList(SupersetList.Next); l; l = UBrowserSupersetList(l.Next))
 		l.SuperSetWindow.ResumePinging();
 }
 
@@ -76,7 +80,7 @@ function WindowHidden()
 	Super.WindowHidden();
 	SuspendPinging();
 
-	for (l = UBrowserSupersetList(SupersetList.Next); l != None; l = UBrowserSupersetList(l.Next))
+	for (l = UBrowserSupersetList(SupersetList.Next); l; l = UBrowserSupersetList(l.Next))
 		l.SuperSetWindow.SuspendPinging();
 }
 

@@ -128,11 +128,18 @@ state AltFiring
 		{
 			if (AmmoType.UseAmmo(1))
 			{
-				AltRotation = rotator(X+Y*(FRand()*0.26-0.13)+Z*(FRand()*0.26-0.13));
-				S = Spawn(AltProjectileClass,,, Start - 2 * VRand(), AltRotation);
+				if( Level.Game.bUseClassicBalance )
+				{
+					AltRotation = StartRot;
+					AltRotation.Pitch += RandIntRange(-1500,1500);
+					AltRotation.Yaw += RandIntRange(-1500,1500);
+					AltRotation.Roll += RandIntRange(-4500,4500);	
+				}
+				else AltRotation = rotator(X+Y*RandRange(-0.13,0.13)+Z*RandRange(-0.13,0.13));
+				S = Spawn(AltProjectileClass,,, Start - 2.f * VRand(), AltRotation);
 			}
 		}
-		if ( StingerProjectile(S)!=None )
+		if ( StingerProjectile(S) )
 			StingerProjectile(S).bLighting = True;
 		Return S;
 	}

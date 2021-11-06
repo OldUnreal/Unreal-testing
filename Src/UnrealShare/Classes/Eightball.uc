@@ -362,13 +362,22 @@ state FireRockets
 			{
 				if ( Angle > 0 && !bTightWad )
 				{
-					if ( Angle < 3 )
+					if( Level.Game.bUseClassicBalance )
+					{
+						if ( Angle < 3 && !bTightWad)
+							FireRot.Yaw = AdjustedAim.Yaw - Angle * 600;
+						else if ( Angle > 3.5 && !bTightWad)
+							FireRot.Yaw = AdjustedAim.Yaw + (Angle - 3)  * 600;
+						else
+							FireRot.Yaw = AdjustedAim.Yaw;
+					}
+					else if ( Angle < 3 )
 						FireRot = rotator(X-Y*(Angle/16.f));
 					else if ( Angle > 3.5 )
 						FireRot = rotator(X+Y*((Angle-3.f)/16.f));
 					else FireRot = AdjustedAim;
 				}
-				if ( LockedTarget!=None )
+				if ( LockedTarget )
 				{
 					r = Spawn( class 'SeekingRocket',, '', FireLocation,FireRot);
 					r.Seeking = LockedTarget;

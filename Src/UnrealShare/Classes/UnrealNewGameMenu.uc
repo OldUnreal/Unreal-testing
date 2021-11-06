@@ -3,8 +3,10 @@
 //=============================================================================
 class UnrealNewGameMenu extends UnrealGameMenu;
 
-const BonusDifficulty=4;
+const BonusDifficulty=5;
 var string StartMap;
+var localized string ModeString[2];
+var bool bClassicMode;
 
 function Destroyed()
 {
@@ -14,25 +16,43 @@ function Destroyed()
 function PostBeginPlay()
 {
 	Super.PostBeginPlay();
+	bClassicMode = Class'GameInfo'.Default.bUseClassicBalance;
 	if (Level.Game != none)
-		Selection = Clamp(Level.Game.Difficulty + 1, 1, 7);
+		Selection = Clamp(Level.Game.Difficulty + 1, 1, MenuLength-1);
 	else
 		Selection = 1;
+}
+
+function bool ProcessLeft()
+{
+	if( Selection==MenuLength )
+	{
+		bClassicMode = !bClassicMode;
+		return true;
+	}
+	return false;
+}
+function bool ProcessRight()
+{
+	return ProcessLeft();
 }
 
 function bool ProcessSelection()
 {
 	local Menu ChildMenu;
 
-	ChildMenu = spawn(class'UnrealMeshMenu', owner);
-	HUD(Owner).MainMenu = ChildMenu;
-	ChildMenu.ParentMenu = self;
-	ChildMenu.PlayerOwner = PlayerOwner;
-	StartMap = StartMap$"?Difficulty="$(Selection - 1);
-	if ( Level.Game != None )
-		StartMap = StartMap$"?GameSpeed="$Level.Game.GameSpeed;
-	UnrealMeshMenu(ChildMenu).StartMap = StartMap;
-	UnrealMeshMenu(ChildMenu).SinglePlayerOnly = true;
+	if( Selection==MenuLength )
+		bClassicMode = !bClassicMode;
+	else
+	{
+		ChildMenu = spawn(class'UnrealMeshMenu', owner);
+		HUD(Owner).MainMenu = ChildMenu;
+		ChildMenu.ParentMenu = self;
+		ChildMenu.PlayerOwner = PlayerOwner;
+		StartMap = StartMap$"?Difficulty="$(Selection-1)$"?ClassicMode="$bClassicMode;
+		UnrealMeshMenu(ChildMenu).StartMap = StartMap;
+		UnrealMeshMenu(ChildMenu).SinglePlayerOnly = true;
+	}
 	return true;
 }
 
@@ -58,37 +78,47 @@ function DrawList(canvas Canvas, bool bLargeFont, int Spacing, int StartX, int S
 	local int i;
 	local float F;
 	local byte j;
+	local Font OrgFont;
 
 	if ( bLargeFont )
 	{
 		if ( Spacing < 30 )
 		{
 			StartX += 0.5 * ( 0.5 * Canvas.ClipX - StartX);
-			Canvas.Font = Canvas.BigFont;
+			OrgFont = Canvas.BigFont;
 		}
 		else
-			Canvas.Font = Canvas.LargeFont;
+			OrgFont = Canvas.LargeFont;
 	}
-	else
-		Canvas.Font = Canvas.MedFont;
+	else OrgFont = Canvas.MedFont;
 
+	Canvas.Font = Canvas.MedFont;
 	F = 0.5 + Sin(Level.RealTimeSeconds*3.f)*0.5f;
 	for (i=0; i<MenuLength; i++ )
 	{
-		if( i<BonusDifficulty )
-			SetFontBrightness(Canvas, (i == Selection - 1) );
-		else if( i==(Selection - 1) )
+		Canvas.SetPos(StartX, StartY + Spacing * i);
+		if( i==0 )
 		{
-			j = 32 + int(F*223.f);
-			Canvas.DrawColor = MakeColor(255,j,j);
+			SetFontBrightness(Canvas, (MenuLength == Selection) );
+			Canvas.DrawText("< "$MenuList[MenuLength]$ModeString[bClassicMode ? 1 : 0]$" >", false);
+			Canvas.Font = OrgFont;
 		}
 		else
 		{
-			j = int(F*127.f);
-			Canvas.DrawColor = MakeColor(127,j,j);
+			if( i<BonusDifficulty )
+				SetFontBrightness(Canvas, (i == Selection) );
+			else if( i==Selection )
+			{
+				j = 32 + int(F*223.f);
+				Canvas.DrawColor = MakeColor(255,j,j);
+			}
+			else
+			{
+				j = int(F*127.f);
+				Canvas.DrawColor = MakeColor(127,j,j);
+			}
+			Canvas.DrawText(MenuList[i], false);
 		}
-		Canvas.SetPos(StartX, StartY + Spacing * i);
-		Canvas.DrawText(MenuList[i + 1], false);
 	}
 	Canvas.DrawColor = Canvas.Default.DrawColor;
 }
@@ -108,7 +138,7 @@ function DrawHelpPanel(canvas Canvas, int MinStartY, int XClip)
 	OldYClip = Canvas.ClipY;
 
 	Canvas.bCenter = false;
-	if( Selection>BonusDifficulty )
+	if( Selection>=BonusDifficulty && Selection<MenuLength )
 	{
 		Canvas.Font = Font'WhiteFont';
 		Canvas.DrawColor = MakeColor(255,8,8);
@@ -140,7 +170,7 @@ function DrawHelpPanel(canvas Canvas, int MinStartY, int XClip)
 
 defaultproperties
 {
-	MenuLength=7
+	MenuLength=8
 	HelpMessage(1)="Tourist mode."
 	HelpMessage(2)="Ready for some action!"
 	HelpMessage(3)="Not for the faint of heart."
@@ -148,6 +178,7 @@ defaultproperties
 	HelpMessage(5)="For players who want an extra difficulty."
 	HelpMessage(6)="For the hardcore gamers."
 	HelpMessage(7)="HOLY SHIT!"
+	HelpMessage(8)="Should gameplay contain some minor bugfixes or remain classic?"
 	MenuList(1)="EASY"
 	MenuList(2)="MEDIUM"
 	MenuList(3)="HARD"
@@ -155,4 +186,7 @@ defaultproperties
 	MenuList(5)="EXTREME"
 	MenuList(6)="NIGHTMARE"
 	MenuList(7)="ULTRA-UNREAL"
+	MenuList(8)="Balance Mode: "
+	ModeString(0)="Enhanced"
+	ModeString(1)="Classic"
 }

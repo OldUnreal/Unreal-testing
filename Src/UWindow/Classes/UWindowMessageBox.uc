@@ -64,4 +64,5 @@ function Close(optional bool bByParent)
 defaultproperties
 {
 	ClientClass=Class'UWindow.UWindowMessageBoxCW'
+	bLeaveOnscreen=True
 }
