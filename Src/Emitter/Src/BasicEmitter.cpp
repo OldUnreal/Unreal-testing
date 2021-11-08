@@ -445,6 +445,8 @@ BYTE AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVect
 	A->Region = Region;
 	A->ScaleGlow = (FadeInTime > 0.f) ? 0.f : Clamp(FadeInMaxAmount, 0.f, 2.f);
 	A->Texture = Tex;
+	if (A->LightDataPtr)
+		A->LightDataPtr->UpdateFrame = GFrameNumber - 500; // Force to recompute lighting rather then fade from previous particle.
 
 	Data.Pos = StartPos;
 	A->DrawScale = StartingScale.GetValue();

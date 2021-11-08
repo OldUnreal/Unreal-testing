@@ -14,6 +14,7 @@ enum EParticleSpawnFlags
 
 class UEmitterRendering;
 struct PartsType;
+struct FRainAreaTree;
 
 #include "EmitterClasses.h"
 

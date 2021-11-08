@@ -30,10 +30,11 @@ enum EFallingType
 var transient float NextParticleTime,SpawnInterval;
 var transient vector LastCamPosition,VecArea[2];
 var transient Coords CachedCoords,TransfrmCoords;
-var array<XRainRestrictionVolume> NoRainBounds;
+var const array<XRainRestrictionVolume> NoRainBounds;
 var const Mesh SheetModel;
 var array<XEmitter> WallHitEmitters,WaterHitEmitters;
-var Volume RainVolume;
+var const Volume RainVolume;
+var pointer<FRainAreaTree*> RainTree;
 
 var() EHitEventType WallHitEvent; // Action on particle wall hit
 var() name WallHitEmitter;
@@ -58,6 +59,11 @@ var() FloatRange FadeOutDistance;
 var transient bool bUseAreaSpawns,bParticleColorEnabled;
 
 var bool bIsEnabled; // Should be making those particles?
+var transient bool bBoundsDirty; // Should update all internal bounds next tick.
+
+native final function AddNoRainBounds( XRainRestrictionVolume NewVolume );
+native final function RemoveNoRainBounds( XRainRestrictionVolume OldVolume );
+native final function SetRainVolume( Volume NewVolume );
 
 defaultproperties
 {
@@ -76,4 +82,5 @@ defaultproperties
 	FadeOutDistance=(Min=50,Max=250)
 	bDirectional=True
 	WallHitMinZ=0.9
+	bNotifyPositionUpdate=true
 }

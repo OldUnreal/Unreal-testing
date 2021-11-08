@@ -7,6 +7,9 @@ Class XRainRestrictionVolume extends Volume
 #EXEC TEXTURE IMPORT FILE="Textures\rainvolume.pcx" NAME="S_RainVolume" GROUP="Icons" MIPS=off FLAGS=2 TEXFLAGS=0
 
 var() vector BoundsMin,BoundsMax;
+var transient const BoundingBox RainBounds;
+var transient const array<XWeatherEmitter> Emitters; // Weather emitters associated to this.
+var transient bool bBoundsDirty; // Will update RainBounds next tick (typically should set to True if you change shape of this but don't move it).
 
 simulated function BeginPlay()
 {
@@ -22,4 +25,5 @@ defaultproperties
 	CollisionHeight=22
 	DrawType=DT_Sprite
 	Texture=Texture'S_RainVolume'
+	bNotifyPositionUpdate=true
 }

@@ -12,6 +12,9 @@
 	FBox GetVisibilityBox();
 	void Modify();
 	void PostEditMove();
+	void PostScriptDestroyed();
+	void PostLoad();
+	void Destroy();
 /*-----------------------------------------------------------------------------
 	The End.
 -----------------------------------------------------------------------------*/

@@ -624,7 +624,7 @@ function LoadPawnShadowSettings()
 	else if (class'PawnShadow'.default.ShadowDetailRes >= 1024)
 		OldShadowCmb = 5;
 
-	if (OldShadowCmb < 5)
+	if (OldShadowCmb <= 5)
 		PawnShadowCombo.SetSelectedIndex(OldShadowCmb);
 	else
 	{
@@ -1408,12 +1408,12 @@ function ShadowsChanged(byte Idx)
 		if (i >= 0 && i != OldShadowCmb)
 		{
 			OldShadowCmb = i;
-			if (i == 0 || i > 4)
+			if (i == 0 || i > 5)
 				P.ConsoleCommand("Set Engine.GameInfo bCastShadow false");
 			else
 			{
 				P.ConsoleCommand("set Engine.GameInfo bCastShadow true");
-				P.ConsoleCommand("set Engine.GameInfo bUseRealtimeShadow" @ (i >= 2));
+				P.ConsoleCommand("set Engine.GameInfo bUseRealtimeShadow " $ (i >= 2));
 				if (i >= 2)
 				{
 					// Note: this property can't be changed by console command Set in an online game

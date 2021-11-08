@@ -1,7 +1,193 @@
 
 #include "EmitterPrivate.h"
+#include "UnOctreeHash.h"
 
 IMPLEMENT_CLASS(AXWeatherEmitter);
+
+inline UBOOL AABBOverlaps(const FVector& Min1, const FVector& Max1, const FVector& Min2, const FVector& Max2)
+{
+#define CHECK_AXIS(axis) ((Min1.axis > Min2.axis) && (Min1.axis < Max2.axis) || (Min2.axis > Min1.axis) && (Min2.axis < Max1.axis))
+	return CHECK_AXIS(X) && CHECK_AXIS(Y) && CHECK_AXIS(Z);
+#undef CHECK_AXIS
+}
+
+struct FRainNode
+{
+	TArray<AXRainRestrictionVolume*> Volume;
+	FVector Point, Extent;
+	FRainNode* Children;
+	INT Depth;
+	UBOOL bHasContents;
+
+	FRainNode()
+		: Children(NULL), bHasContents(FALSE)
+	{
+	}
+	FRainNode(const FVector& P, const FVector& E, INT NewDepth)
+		: Point(P), Extent(E), Children(NULL), Depth(NewDepth), bHasContents(FALSE)
+	{
+	}
+	~FRainNode()
+	{
+		if (Children)
+			delete[] Children;
+	}
+	void AddVolume(AXRainRestrictionVolume* V)
+	{
+		bHasContents = TRUE;
+		if (!Children)
+			AddInternal(V);
+		else
+		{
+			INT Item = INDEX_NONE;
+			for (INT i = 0; i < 8; ++i)
+				if (Children[i].Overlaps(V))
+				{
+					if (Item == INDEX_NONE)
+						Item = i;
+					else
+					{
+						Item = INDEX_NONE;
+						Volume.AddItem(V);
+						break;
+					}
+				}
+
+			if (Item != INDEX_NONE)
+				Children[Item].AddVolume(V);
+		}
+	}
+	UBOOL IsBlocked(const FVector& P) const
+	{
+		INT i;
+
+		for (i = (Volume.Num() - 1); i >= 0; --i)
+		{
+			if (Volume(i)->PointIsInside(P))
+				return TRUE;
+		}
+		if (Children)
+		{
+			i = INT(P.Z > Point.Z) | (INT(P.Y > Point.Y) << 1) | (INT(P.X > Point.X) << 2);
+			return (Children[i].bHasContents && Children[i].IsBlocked(P));
+		}
+		return FALSE;
+	}
+	void DrawDebug()
+	{
+		INT i;
+
+		for (i = (Volume.Num() - 1); i >= 0; --i)
+		{
+			new FDebugLineData(Point, Volume(i)->Location, FPlane(1, 0, 0, 1), TRUE);
+			FDebugLineData::DrawBox(Volume(i)->RainBounds.Min, Volume(i)->RainBounds.Max, FPlane(0, 0, 1, 1), TRUE);
+		}
+		if (Children)
+		{
+			for (i = 0; i < 8; ++i)
+			{
+				new FDebugLineData(Point, Children[i].Point, FPlane(1, 1, 1, 1), TRUE);
+				Children[i].DrawDebug();
+			}
+		}
+	}
+
+private:
+	inline UBOOL Overlaps(AXRainRestrictionVolume* V)
+	{
+		const FVector MinV(Point - Extent);
+		const FVector MaxV(Point + Extent);
+		return AABBOverlaps(MinV, MaxV, V->RainBounds.Min, V->RainBounds.Max);
+	}
+	void InitChildren()
+	{
+		Children = new FRainNode[8];
+
+		// Setup children.
+		FVector HalfExtent = (Extent * 0.5f);
+		for (INT i = 0; i < 8; ++i)
+		{
+			Children[i].Point = FVector(Point.X + (((i & EBA_XMax) >> 1) - 1) * HalfExtent.X,
+				Point.Y + (((i & EBA_YMax)) - 1) * HalfExtent.Y,
+				Point.Z + (((i & EBA_ZMax) << 1) - 1) * HalfExtent.Z);
+			Children[i].Extent = HalfExtent;
+			Children[i].Depth = Depth - 1;
+		}
+	}
+
+	void AddInternal(AXRainRestrictionVolume* V)
+	{
+		if (!Children && Volume.Num() >= 4 && Depth > 0)
+		{
+			InitChildren();
+
+			TArray<AXRainRestrictionVolume*> TempArray(0);
+			ExchangeArray(TempArray, Volume);
+
+			for (INT i = 0; i < TempArray.Num(); ++i)
+				AddVolume(TempArray(i));
+			AddVolume(V);
+		}
+		else Volume.AddItem(V);
+	}
+};
+struct FRainAreaTree
+{
+	AXWeatherEmitter* Emitter;
+	FRainNode* MainNode;
+	FVector RainAreaMin, RainAreaMax;
+
+	FRainAreaTree(AXWeatherEmitter* W)
+		: Emitter(W), MainNode(NULL)
+	{
+		FLOAT fMin = Min(Min(W->Position.X.Min, W->Position.Y.Min), W->Position.Z.Min);
+		FLOAT fMax = Max(Max(W->Position.X.Max, W->Position.Y.Max), W->Position.Z.Max);
+		RainAreaMin = FVector(fMin, fMin, fMin);
+		RainAreaMax = FVector(fMax, fMax, fMax);
+
+		W->NoRainBounds.RemoveItem(NULL);
+		if (!W->NoRainBounds.Num())
+			return;
+
+		// Start splitting from middle of our bounds.
+		const FVector& MinP = W->VecArea[0];
+		const FVector& MaxP = W->VecArea[1];
+		FVector Ext((MaxP - MinP) * 0.5f);
+		FVector Pos(Ext + MinP);
+
+		for (INT i = 0; i < W->NoRainBounds.Num(); ++i)
+		{
+			AXRainRestrictionVolume* R = W->NoRainBounds(i);
+			if (R->bDeleteMe)
+				continue;
+			if (R->bBoundsDirty)
+				R->UpdateBounds();
+
+			// Verify it fits within our bounding box.
+			if (!AABBOverlaps(MinP, MaxP, R->RainBounds.Min, R->RainBounds.Max))
+				continue;
+
+			if (!MainNode)
+				MainNode = new FRainNode(Pos, Ext, appFloor(Ext.Size() / 128.f));
+			MainNode->AddVolume(R);
+		}
+		//if (MainNode)
+		//	MainNode->DrawDebug();
+	}
+	~FRainAreaTree()
+	{
+		if (MainNode)
+			delete MainNode;
+	}
+	inline UBOOL IsBlocked(const FVector& Point) const
+	{
+		return MainNode ? MainNode->IsBlocked(Point) : FALSE;
+	}
+	inline UBOOL RainVisible( const FVector& CamPos ) const
+	{
+		return AABBOverlaps(Emitter->VecArea[0], Emitter->VecArea[1], CamPos + RainAreaMin, CamPos + RainAreaMax);
+	}
+};
 
 void AXWeatherEmitter::InitView()
 {
@@ -15,6 +201,26 @@ bool AXWeatherEmitter::ShouldUpdateEmitter( UEmitterRendering* Sender )
 {
 	return (bIsEnabled && (GIsEditor || bUseAreaSpawns
 		|| (XLevel->TimeSeconds - XLevel->Model->Zones[Region.ZoneNumber].LastRenderTime).GetFloat()<1) );
+}
+
+static void RecurseBSP(UModel* M, INT iNode, INT iZone, FBox& Result)
+{
+	while (iNode != INDEX_NONE)
+	{
+		const FBspNode& Node = M->Nodes(iNode);
+
+		if (Node.NumVertices && (Node.iZone[0] == iZone || Node.iZone[1] == iZone))
+		{
+			FVert* GW = &M->Verts(Node.iVertPool);
+			for (INT j = 0; j < Node.NumVertices; ++j)
+				Result += M->Points(GW[j].pVertex);
+		}
+		if (Node.iFront != INDEX_NONE)
+			RecurseBSP(M, Node.iFront, iZone, Result);
+		if (Node.iBack != INDEX_NONE)
+			RecurseBSP(M, Node.iBack, iZone, Result);
+		iNode = Node.iPlane;
+	}
 }
 inline void InitSpawnArea(AXWeatherEmitter* W)
 {
@@ -53,7 +259,29 @@ inline void InitSpawnArea(AXWeatherEmitter* W)
 			W->VecArea[1] = B.Max;
 		}
 	}
+	else if (W->AppearAreaType == EWA_Zone)
+	{
+		UModel* M = W->XLevel->Model;
+		INT iZone = W->Region.ZoneNumber;
+		if (iZone != 0)
+		{
+			if (M->RootOutside && (iZone == 1)) // Additive map
+			{
+				// All world space.
+				W->VecArea[0] = GMath.WorldMin;
+				W->VecArea[1] = GMath.WorldMax;
+			}
+			else
+			{
+				FBox Result(0);
+				RecurseBSP(M, 0, iZone, Result);
+				W->VecArea[0] = Result.Min;
+				W->VecArea[1] = Result.Max;
+			}
+		}
+	}
 
+	W->bBoundsDirty = TRUE;
 	W->SpawnInterval = W->Lifetime.Max / W->ParticleCount;
 	W->bParticleColorEnabled = (W->ParticlesColor.X.Min || W->ParticlesColor.X.Max
 		|| W->ParticlesColor.Y.Min || W->ParticlesColor.Y.Max
@@ -95,9 +323,33 @@ void AXWeatherEmitter::InitializeEmitter(UEmitterRendering* Render, AXParticleEm
 	}
 	unguard;
 }
+void AXWeatherEmitter::PostLoad()
+{
+	guard(AXWeatherEmitter::PostLoad);
+	Super::PostLoad();
+	for (INT i = 0; i < NoRainBounds.Num(); ++i)
+		NoRainBounds(i)->Emitters.AddUniqueItem(this);
+	unguard;
+}
+void AXWeatherEmitter::PostScriptDestroyed()
+{
+	guard(AXWeatherEmitter::PostScriptDestroyed);
+	Super::PostScriptDestroyed();
+	for (INT i = 0; i < NoRainBounds.Num(); ++i)
+		NoRainBounds(i)->Emitters.RemoveItem(this);
+	unguard;
+}
 void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* Sender )
 {
 	guardSlow (AXWeatherEmitter::UpdateEmitter);
+	if (!RainTree || bBoundsDirty)
+	{
+		if (RainTree)
+			delete RainTree;
+		RainTree = new FRainAreaTree(this);
+		bBoundsDirty = FALSE;
+	}
+
 	const FVector& CamPos = UEmitterRendering::CamPos.Origin;
 	FVector CamDelta = (CamPos-LastCamPosition)*10.f+CamPos;
 	NextParticleTime-=DeltaTime;
@@ -108,7 +360,7 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 		PCount++;
 		NextParticleTime+=SpawnInterval;
 	}
-	if( PCount )
+	if (PCount && RainTree->RainVisible(CamDelta))
 	{
 		FRotator Rt = FCoords(FVector(0,0,0),Sender->Frame->Coords.ZAxis,Sender->Frame->Coords.XAxis,-Sender->Frame->Coords.YAxis).OrthoRotation();
 		Rt.Pitch = 0;
@@ -278,6 +530,14 @@ BYTE AXWeatherEmitter::SpawnParticle( UEmitterRendering* Render, const FVector &
 {
 	guard(AXWeatherEmitter::SpawnParticle);
 
+	if (!RainTree || bBoundsDirty)
+	{
+		if (RainTree)
+			delete RainTree;
+		RainTree = new FRainAreaTree(this);
+		bBoundsDirty = FALSE;
+	}
+
 	int Act=-1;
 	AActor* A=NULL;
 	// Check if free particles
@@ -323,15 +583,16 @@ BYTE AXWeatherEmitter::SpawnParticle( UEmitterRendering* Render, const FVector &
 	}
 
 	// Check with the volumes
-	for( INT j=0; j<NoRainBounds.Num(); ++j )
-		if( NoRainBounds(j) && NoRainBounds(j)->PointIsInside(SpP) )
-			return 0;
+	if (RainTree->IsBlocked(SpP))
+		return FALSE;
 
 	PartsType& D = Render->PartPtr->Get(Act);
 	A->bHidden = 0;
 	A->Location = SpP;
 	A->bMovable = 1;
 	A->Region = Render->Frame->Viewport->Actor->CameraRegion;
+	if (A->LightDataPtr)
+		A->LightDataPtr->UpdateFrame = GFrameNumber - 500; // Force to recompute lighting rather then fade from previous particle.
 	D.Pos = SpP;
 	A->Velocity = Rotation.Vector() * speed.GetValue();
 	if( bUSModifyParticles )
@@ -450,6 +711,18 @@ void AXWeatherEmitter::PostEditMove()
 	unguard;
 }
 
+void AXWeatherEmitter::Destroy()
+{
+	guard(AXWeatherEmitter::Destroy);
+	if (RainTree)
+	{
+		delete RainTree;
+		RainTree = NULL;
+	}
+	Super::Destroy();
+	unguard;
+}
+
 // Rain restriction volumes
 IMPLEMENT_CLASS(AXRainRestrictionVolume);
 
@@ -466,6 +739,12 @@ inline bool AXRainRestrictionVolume::PointIsInside( FVector Point )
 void AXRainRestrictionVolume::RenderSelectInfo( FSceneNode* Frame )
 {
 	Super::RenderSelectInfo(Frame);
+	if (bBoundsDirty)
+		UpdateBounds();
+
+	if (Brush || bDirectional)
+		Frame->Level->Engine->Render->DrawBox(Frame, FPlane(0.85f, 0.f, 0.f, 1.f), 0, RainBounds.Min, RainBounds.Max);
+
 	if (Brush)
 		return;
 	const FPlane LineColors(0.25,0.8,0.25,1);
@@ -500,7 +779,9 @@ void AXRainRestrictionVolume::RenderSelectInfo( FSceneNode* Frame )
 }
 void AXRainRestrictionVolume::Modify()
 {
+	guardSlow(AXRainRestrictionVolume::Modify);
 	Super::Modify();
+	bBoundsDirty = TRUE;
 	if( !GIsEditor )
 		return;
 	TTransArray<AActor*>& AR = XLevel->Actors;
@@ -509,21 +790,119 @@ void AXRainRestrictionVolume::Modify()
 		AXWeatherEmitter* W = Cast<AXWeatherEmitter>(AR(i));
 		if( !W || W->bDeleteMe )
 			continue;
-		if( Tag==NAME_None || W->Tag==Tag )
+		if (Tag == NAME_None || W->Tag == Tag)
+		{
+			Emitters.AddUniqueItem(W);
 			W->NoRainBounds.AddItem(this);
-		else W->NoRainBounds.RemoveItem(this);
+		}
+		else
+		{
+			Emitters.RemoveItem(W);
+			W->NoRainBounds.RemoveItem(this);
+		}
 	}
+	unguardSlow;
 }
 void AXRainRestrictionVolume::PostScriptDestroyed()
 {
 	guard(AXRainRestrictionVolume::PostScriptDestroyed);
-	TTransArray<AActor*>& AR = XLevel->Actors;
-	for( INT i=0; i<AR.Num(); ++i )
+	for (INT i = 0; i < Emitters.Num(); ++i)
 	{
-		AXWeatherEmitter* W = Cast<AXWeatherEmitter>(AR(i));
-		if( W && !W->bDeleteMe )
-			W->NoRainBounds.RemoveItem(this);
+		Emitters(i)->NoRainBounds.RemoveItem(this);
+		Emitters(i)->bBoundsDirty = TRUE;
 	}
 	Super::PostScriptDestroyed();
 	unguard;
+}
+void AXRainRestrictionVolume::NotifyActorMoved()
+{
+	guardSlow(AXRainRestrictionVolume::NotifyActorMoved);
+	bBoundsDirty = TRUE;
+	unguardSlow;
+}
+void AXRainRestrictionVolume::PostEditMove()
+{
+	guardSlow(AXRainRestrictionVolume::PostEditMove);
+	Super::PostEditMove();
+	bBoundsDirty = TRUE;
+	unguardSlow;
+}
+void AXRainRestrictionVolume::UpdateBounds()
+{
+	guard(AXRainRestrictionVolume::UpdateBounds);
+	if (Brush)
+		RainBounds = Brush->GetCollisionBoundingBox(this);
+	else
+	{
+		RainBounds = FBox(BoundsMin, BoundsMax);
+		if (bDirectional)
+			RainBounds.TransformBy(GMath.UnitCoords * Rotation);
+		RainBounds.Min += Location;
+		RainBounds.Max += Location;
+	}
+	for (INT i = 0; i < Emitters.Num(); ++i)
+		Emitters(i)->bBoundsDirty = TRUE;
+	bBoundsDirty = FALSE;
+	unguard;
+}
+UBOOL AXRainRestrictionVolume::Tick(FLOAT DeltaTime, ELevelTick TickType)
+{
+	guardSlow(AXRainRestrictionVolume::Tick);
+	if (bBoundsDirty)
+		UpdateBounds();
+	return Super::Tick(DeltaTime, TickType);
+	unguardSlow;
+}
+void AXRainRestrictionVolume::PostLoad()
+{
+	guardSlow(AXRainRestrictionVolume::PostLoad);
+	Super::PostLoad();
+	bBoundsDirty = TRUE;
+	unguardSlow;
+}
+
+void AXWeatherEmitter::execAddNoRainBounds(FFrame& Stack, RESULT_DECL)
+{
+	guard(AXWeatherEmitter::execAddNoRainBounds);
+	P_GET_OBJECT(AXRainRestrictionVolume, NewVolume);
+	P_FINISH;
+
+	if (!NewVolume || NewVolume->bDeleteMe)
+		return;
+	if (NoRainBounds.FindItemIndex(NewVolume) == INDEX_NONE)
+	{
+		NoRainBounds.AddItem(NewVolume);
+		NewVolume->Emitters.AddUniqueItem(this);
+		bBoundsDirty = TRUE;
+	}
+	unguardexec;
+}
+void AXWeatherEmitter::execRemoveNoRainBounds(FFrame& Stack, RESULT_DECL)
+{
+	guard(AXWeatherEmitter::execRemoveNoRainBounds);
+	P_GET_OBJECT(AXRainRestrictionVolume, OldVolume);
+	P_FINISH;
+
+	if (!OldVolume)
+		return;
+	if (NoRainBounds.RemoveItem(OldVolume))
+	{
+		OldVolume->Emitters.RemoveItem(this);
+		bBoundsDirty = TRUE;
+	}
+	unguardexec;
+}
+void AXWeatherEmitter::execSetRainVolume(FFrame& Stack, RESULT_DECL)
+{
+	guard(AXWeatherEmitter::execSetRainVolume);
+	P_GET_OBJECT(AVolume, NewVolume);
+	P_FINISH;
+
+	if (RainVolume == NewVolume)
+		return;
+
+	RainVolume = NewVolume;
+	if (GIsClient)
+		InitSpawnArea(this);
+	unguardexec;
 }
