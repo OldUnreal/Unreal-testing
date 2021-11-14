@@ -8,6 +8,7 @@ class ObjectShadow extends Decal
 var() config int ShadowDetailRes; // Must be a value in power of 2
 var() config bool bOptimizeTracing;
 var() float ShadowScaling;
+var bool bUseDefaultCollisionSize;
 var transient vector OldOwnerLocation;
 var transient bool bOptionalUpdate;
 var transient ShadowBitMap PLShadow;
@@ -71,7 +72,7 @@ simulated function UpdateShadow()
 
 	if( PLShadow )
 	{
-		DrawScale = FMax(Owner.CollisionRadius, 16.f) * (12.f / ShadowDetailRes);
+		DrawScale = FMax(bUseDefaultCollisionSize ? Owner.Default.CollisionRadius : Owner.CollisionRadius, 16.f) * (12.f / ShadowDetailRes);
 		PLShadow.ShadowScale = 1.f / DrawScale;
 		PLShadow.Gradience = Min((Distance*155.f) + 100, 255);
 		if (PLShadow.Gradience == 255)
@@ -79,7 +80,7 @@ simulated function UpdateShadow()
 	}
 	else
 	{
-		DrawScale = Owner.CollisionRadius/35.f * ShadowScaling * (1.f - Distance);
+		DrawScale = (bUseDefaultCollisionSize ? Owner.Default.CollisionRadius : Owner.CollisionRadius)/35.f * ShadowScaling * (1.f - Distance);
 		if (DrawScale <= 0)
 			bInvisible = true;
 	}

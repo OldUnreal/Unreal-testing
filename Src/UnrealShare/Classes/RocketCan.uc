@@ -40,7 +40,7 @@ auto state Pickup
 			Super.Touch(Other);
 		else
 		{
-			SetCollisionSize(27.0, CollisionHeight);
+			SetCollisionSize(Default.CollisionRadius, CollisionHeight);
 			SetLocation(Location); //to force untouch
 			bOpened = true;
 			PlayAnim('Open', 0.1);

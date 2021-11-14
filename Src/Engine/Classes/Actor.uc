@@ -122,6 +122,7 @@ var(Collision) bool		  bPathCollision;	// This actor blocks paths during editor 
 var(Collision) bool		  bBlockZeroExtentTraces; // block zero extent actors/traces
 var(Collision) bool		  bBlockNonZeroExtentTraces;	// block non-zero extent actors/traces
 var(Collision) bool		  bBlockAISight;	// While non-blocking, should block AI sight?
+var(Collision) bool		  bBlockTextureTrace; // If true, this actor only collides for texture tracing (can be used for easy walk texture meshes on ground).
 var(Collision) const bool bBlockRigidBodyPhys; // Blocks rigidbody physics objects, requires bBlockActors as-well.
 
 // Lighting.
@@ -159,6 +160,7 @@ var transient const bool bNetBeginPlay;		// 227j: This actor just received initi
 var transient const bool bRunningPhysics;	// 227j: This actor is currently simulating a physics step (thus can't change velocity).
 var transient bool		bEdSelectionLock;	// 227j: This actor can't be selected in editor.
 var transient bool		bForceNetUpdate;	// 227j: When set to TRUE will force this actor to immediately be considered for replication, instead of waiting for NetUpdateTime
+var transient const bool bPendingNetUpdate; // 227j: This actor is pending net update because client was unable to receive it due to net saturation.
 var bool				bTraceHitBoxes;		// 227j: This actor should trace skeletal mesh hitboxes.
 var bool				bTextureAnimOnce;	// 227j: DT_SpriteAnimOnce but for mesh skins.
 var private bool		bSerializeMeshInst; // Internal: Should serialize mesh instance data.
@@ -927,6 +929,9 @@ static native(1742) final function DrawDebugSphere( vector Point, float Radius, 
 // Remove any staying debug lines.
 static native(1773) final function ClearDebugLines();
 
+// In most cases returns Actor.Location/Rotation, but may return network interpolate position if it's in use.
+native final function GetRenderPosition( optional out vector Pos, optional out rotator Dir );
+
 //=========================================================================
 // Physics.
 
@@ -1014,13 +1019,14 @@ const noexport TRACE_IgnoreHidden	= 0x100; // Ignores bHidden actors.
 const noexport TRACE_LightBlocking	= 0x800; // Only trace with bShadowCast actors!
 const noexport TRACE_AISightBlock	= 0x1000; // Hit bBlockAISight actors.
 const noexport TRACE_Volumes		= 0x2000; // Should hit volume actors.
+const noexport TRACE_WalkTextures	= 0x4000; // Tracing for walk texture (collide with bBlockTextureTrace actors).
 
 // Combinations.
 const noexport TRACE_VisBlocking	= {TRACE_Level | TRACE_Movers | TRACE_Volumes};
 const noexport TRACE_AllColliding	= {TRACE_VisBlocking | TRACE_Pawns | TRACE_Others};
 const noexport TRACE_ProjTargets	= {TRACE_AllColliding | TRACE_OnlyProjActor};
 const noexport TRACE_AIVisibility	= {TRACE_VisBlocking | TRACE_AISightBlock};
-const noexport TRACE_Footsteps		= {(TRACE_AllColliding | TRACE_Blocking) & ~TRACE_Volumes};
+const noexport TRACE_Footsteps		= {(TRACE_AllColliding | TRACE_Blocking | TRACE_WalkTextures) & ~TRACE_Volumes};
 
 native(277) final function Actor Trace
 (
@@ -1497,8 +1503,8 @@ simulated function String GetHumanName()
 static function String WriteDeathMessage(PlayerReplicationInfo Killer, PlayerReplicationInfo Other, optional name damagetype)
 {
 	if ( Killer == None )
-		return Other@"died";
-	return Killer.PlayerName@"killed"@Other.PlayerName;
+		return Other.PlayerName$" died";
+	return Killer.PlayerName$" killed "$Other.PlayerName;
 }
 
 // Set the display properties of an actor.  By setting them through this function, it allows

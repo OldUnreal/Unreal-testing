@@ -299,7 +299,7 @@ function BecomeItem()
 	bOnlyOwnerSee = true;
 	bHidden       = true;
 	bCarriedItem  = true;
-	NetPriority   = 2;
+	NetPriority   = 4;
 	SetCollision( false, false, false );
 	SetPhysics(PHYS_None);
 	SetTimer(0.0,False);

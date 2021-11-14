@@ -41,5 +41,5 @@ defaultproperties
 	bProjTarget=False
 	bForceStasis=True
 	bIsAmbientCreature=True
-	bNetInterpolatePos=true
+	NetPriority=1
 }

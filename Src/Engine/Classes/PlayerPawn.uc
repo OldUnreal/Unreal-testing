@@ -3372,13 +3372,12 @@ event PlayerCalcView(out actor ViewActor, out vector CameraLocation, out rotator
 {
 	local Pawn PTarget;
 
-	if ( ViewTarget != None )
+	if ( ViewTarget )
 	{
 		ViewActor = ViewTarget;
-		CameraLocation = ViewTarget.Location;
-		CameraRotation = ViewTarget.Rotation;
+		ViewTarget.GetRenderPosition(CameraLocation, CameraRotation);
 		PTarget = Pawn(ViewTarget);
-		if ( PTarget != None )
+		if( PTarget )
 		{
 			if ( Level.NetMode == NM_Client )
 			{

@@ -20,12 +20,18 @@ auto state Flying
 		SetPhysics(PHYS_None);
 		MakeNoise(0.6);
 		bOnGround = True;
-		PlaySound(ImpactSound);
+		if( RemoteRole==ROLE_DumbProxy )
+			PlayServerHitSound();
+		else PlaySound(ImpactSound);
 		SetWall(HitNormal, Wall);
 		DrawScale=DrawScale*1.4;
 		if ( Level.NetMode != NM_DedicatedServer )
 			spawn(class'BigBioMark',,,Location, rotator(SurfaceNormal));
 		GoToState('OnSurface');
+	}
+	function PlayServerHitSound()
+	{
+		PlaySound(ImpactSound);
 	}
 
 	function BeginState()

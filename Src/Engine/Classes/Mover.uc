@@ -1,6 +1,7 @@
 //=============================================================================
 // The moving brush class.
 // This is a built-in Unreal class and it shouldn't be modified.
+// 227j notes: SetPhysics and InterpolateEnd will change bForceNetUpdate to true.
 //=============================================================================
 class Mover extends Brush
 	native
@@ -366,7 +367,6 @@ final function InterpolateTo( byte NewKeyNum, float Seconds )
 	SimInterpolate.X = 100 * PhysAlpha;
 	SimInterpolate.Y = 100 * FMax(0.01, PhysRate);
 	SimInterpolate.Z = 256 * PrevKeyNum + KeyNum;
-	bForceNetUpdate = true;
 }
 
 final function StopMovement()
@@ -380,7 +380,6 @@ final function StopMovement()
 	
 	SetPhysics(PHYS_None);
 	bInterpolating = false;
-	bForceNetUpdate = true;
 }
 
 // Set the specified keyframe.
@@ -416,7 +415,6 @@ function InterpolateEnd( actor Other )
 		// Finished interpolating.
 		AmbientSound = None;
 	}
-	bForceNetUpdate = true;
 }
 
 //-----------------------------------------------------------------------------
@@ -1048,10 +1046,7 @@ Ignores UnTrigger,Trigger,Reset;
 	function InterpolateEnd(actor Other)
 	{
 		if( StayOpenTime>0.f )
-		{
 			AmbientSound = None;
-			bForceNetUpdate = true;
-		}
 	}
 	function BeginState()
 	{
