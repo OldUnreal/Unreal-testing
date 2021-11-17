@@ -75,7 +75,7 @@ var() bool			bSpecularLight;		/* Enables specular lighting effect, which causes 
 										 Unfortunately old maps rely on this often, so need to keep it for these.
 										 For proper lighting disable it in new maps. */
 var config bool		bDisableSpeclarLight; // Override and disable specular lighting mode.
-var bool			bNetworkTimeSeconds; // Should network
+var bool			bNetworkTimeSeconds; // Should network NetTimeSeconds (you should use function EnableNetTimeSeconds to enable this).
 
 //-----------------------------------------------------------------------------
 // Audio properties.
@@ -409,6 +409,13 @@ function Reset()
 {
 	Song = backup_Song;
 	SongSection = backup_SongSection;
+}
+
+final function EnableNetTimeSeconds()
+{
+	bNetworkTimeSeconds = true;
+	bOnlyDirtyReplication = false;
+	NetUpdateFrequency = 10.f;
 }
 
 simulated final function string TitleOrName()

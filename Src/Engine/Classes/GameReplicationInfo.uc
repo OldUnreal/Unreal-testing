@@ -2,7 +2,9 @@
 // GameReplicationInfo.
 //=============================================================================
 class GameReplicationInfo extends ReplicationInfo
-	NoUserCreate;
+	NoUserCreate
+	NativeReplication
+	Native;
 
 var string GameName;				// Assigned by GameInfo.
 var bool bTeamGame;						// Assigned by GameInfo.
@@ -61,6 +63,8 @@ simulated function Timer()
 
 defaultproperties
 {
+	ServerName="Unreal Server"
 	ShortName="Unreal Server"
 	RemoteRole=ROLE_SimulatedProxy
+	bOnlyDirtyReplication=true
 }

@@ -845,29 +845,23 @@ singular event BaseChange()
 {
 	if ( bDeleteMe )
 		return;
-	if ( (base == None) && (Physics == PHYS_None) )
+	if ( !Base && (Physics == PHYS_None) )
 		SetPhysics(PHYS_Falling);
-	else if( Base!=None && !Base.bDeleteMe )
+	else if( Base && !Base.bDeleteMe )
 	{
 		if ( Base.bIsPawn )
 		{
 			if ( Pawn(Base).Health>0 )
 				Base.TakeDamage( (1-Velocity.Z/400)* Mass/Base.Mass, Self,Location,0.5 * Velocity , 'stomped');
-			if( Base!=None && !Base.bDeleteMe && IsBlockedBy(Base) ) // See if Pawn was gibbed!
+			if( Base && !Base.bDeleteMe && IsBlockedBy(Base) ) // See if Pawn was gibbed!
 				JumpOffPawn();
 			else SetPhysics(PHYS_Falling);
 		}
-		else if ( Decoration(Base) != None && !Base.bStatic)
+		else if ( Decoration(Base) && !Base.bStatic && (Velocity.Z < -400 || (mass> 200 && Physics != PHYS_None && Decoration(Base).bPushable)) )
 		{
-			if ( Velocity.Z < -400 || (mass> 200 && Physics != PHYS_None && Decoration(Base).bPushable) )
-			{
-				if ( !Base.bDeleteMe)
-				{
-					Base.TakeDamage((-2* Mass/FMax(Base.Mass, 1) * Velocity.Z/400), Self, Location, 0.5 * Velocity, 'stomped');
-					if( Base==None || Base.bDeleteMe || !IsBlockedBy(Base) )
-						SetPhysics(PHYS_Falling);
-				}
-			}
+			Base.TakeDamage((-2* Mass/FMax(Base.Mass, 1) * Velocity.Z/400), Self, Location, 0.5 * Velocity, 'stomped');
+			if( !Base || Base.bDeleteMe || !IsBlockedBy(Base) )
+				SetPhysics(PHYS_Falling);
 		}
 	}
 }

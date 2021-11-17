@@ -404,6 +404,8 @@ defaultproperties
 	FogDensity=0.0
 	FogMode=0.0
 	MinWalkableZ=0.7
-	NetUpdateFrequency=4
+	NetUpdateFrequency=0.25
+	bForceDirtyReplication=true
+	bOnlyDirtyReplication=true
 	LightSharpnessFactor=1
 }

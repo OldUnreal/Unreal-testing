@@ -338,6 +338,7 @@ defaultproperties
 	bUnlit=True
 	bOnlyOwnerSee=True
 	bFixedRotationDir=True
-	RotationRate=(Pitch=0,Yaw=8000,Roll=0),
-	DesiredRotation=(Pitch=0,Yaw=30000,Roll=0),
+	RotationRate=(Pitch=0,Yaw=8000,Roll=0)
+	DesiredRotation=(Pitch=0,Yaw=30000,Roll=0)
+	ClassString="UnrealI.FemaleOne"
 }

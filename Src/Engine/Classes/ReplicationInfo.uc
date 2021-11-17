@@ -14,6 +14,7 @@ defaultproperties
 	bCrossLevelNetwork=true
 	bStatic=False
 	bNoDelete=False
-	NetUpdateFrequency=10
+	NetUpdateFrequency=4
 	NetPriority=6
+	bForceDirtyReplication=true
 }

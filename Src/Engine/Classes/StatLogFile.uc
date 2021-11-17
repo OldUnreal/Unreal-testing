@@ -7,10 +7,26 @@ class StatLogFile extends StatLog
 	native
 	NoUserCreate;
 
+// OldUnreal File Encoding support
+enum EFileEncoding
+{
+	// Plain ANSI single-byte encoding
+	FILE_ENCODING_ANSI,
+	// Windows UTF-16LE encoding without a BOM
+	FILE_ENCODING_UTF16LE,
+	// Windows UTF-16 encoding with a BOM
+	FILE_ENCODING_UTF16LE_BOM,
+	// UTF-8 encoding without a BOM
+	FILE_ENCODING_UTF8,
+	// UTF-8 encoding with a BOM
+	FILE_ENCODING_UTF8_BOM
+};
+
+var EFileEncoding Encoding; // must be set before calling OpenLog
 var bool bWatermark;
 
 // Internal
-var pointer<FArchive*> LogAr;
+var pointer<class FArchiveUnicodeWriterHelper*> LogAr;
 
 // Configs
 var string StatLogFile;
@@ -102,5 +118,6 @@ function LogGameEnd( string Reason )
 
 defaultproperties
 {
+	Encoding=FILE_ENCODING_UTF16LE
 	StatLogFile="..\\Logs\\unreal.ngStats.Unknown.log"
 }

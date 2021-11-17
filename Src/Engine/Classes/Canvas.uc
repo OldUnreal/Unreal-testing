@@ -254,6 +254,12 @@ final function vector GetCameraLocation()
 	return C.Origin;
 }
 
+// Clear Z-buffer.
+final function ClearZ()
+{
+	DrawActor(None,,true);
+}
+
 defaultproperties
 {
 	Z=1.000000

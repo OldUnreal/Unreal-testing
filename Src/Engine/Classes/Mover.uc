@@ -525,7 +525,7 @@ function PostBeginPlay()
 	//brushes can't be deleted, so if not relevant, make it invisible and non-colliding
 	if ( !Level.Game.IsRelevant(self) )
 	{
-		If( Brush==None )
+		If( !Brush )
 			bHidden = true;
 		else
 		{
@@ -539,7 +539,7 @@ function PostBeginPlay()
 	{
 		FindTriggerActor();
 		// Initialize all slaves.
-		if ( !bSlave )
+		if( !bSlave )
 		{
 			foreach AllActors( class 'Mover', M, Tag )
 			{
@@ -550,7 +550,7 @@ function PostBeginPlay()
 				}
 			}
 		}
-		if ( Leader == None )
+		if( !Leader )
 		{
 			Leader = self;
 			if( ReturnGroup!='' )
@@ -564,6 +564,11 @@ function PostBeginPlay()
 					}
 			}
 		}
+		
+		// Setup for pre 227j clients.
+		ServerUpdate++;
+		RealPosition = Location;
+		RealRotation = Rotation;
 		
 		if( RemoteRole==Role_DumbProxy )
 			NetUpdateFrequency = 100.f;

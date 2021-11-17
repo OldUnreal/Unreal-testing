@@ -6549,5 +6549,6 @@ defaultproperties
 	FogDensity=0
 	FogMode=0
 	bIsPlayerPawn=True
+	bAlwaysNetDirty=true
 	CollisionFlag=COLLISIONFLAG_PlayerPawn
 }

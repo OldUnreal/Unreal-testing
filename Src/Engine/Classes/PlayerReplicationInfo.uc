@@ -40,18 +40,25 @@ function PostBeginPlay()
 
 simulated function PostNetBeginPlay()
 {
-	if( Level.bIsDemoPlayback && Owner!=None && Owner.bIsPawn )
+	if( Level.bIsDemoPlayback && Owner && Owner.bIsPawn )
 		Pawn(Owner).PlayerReplicationInfo = Self;
 }
 
 function Timer()
 {
-	if (PlayerPawn(Owner) != None)
-		Ping = int(PlayerPawn(Owner).ConsoleCommand("GETPING"));
+	local int i;
+	
+	if( PlayerPawn(Owner) )
+	{
+		i = int(Owner.ConsoleCommand("GETPING"));
+		if( i!=Ping )
+			Ping = i; // Note: Only assign ping when changed so it doesn't enable bNetDirty every timer.
+	}
 }
 
 defaultproperties
 {
 	bAlwaysRelevant=True
 	team=255
+	bOnlyDirtyReplication=true
 }

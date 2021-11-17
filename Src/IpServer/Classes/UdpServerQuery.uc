@@ -266,7 +266,7 @@ function string GetInfo()
 {
 	local string ResultSet;
 
-	// The server name, i.e.: Bob’s Server
+	// The server name, i.e.: Bob's Server
 	ResultSet = "\\hostname\\"$Level.Game.GameReplicationInfo.ServerName;
 
 	// The short server name

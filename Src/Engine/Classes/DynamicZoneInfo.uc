@@ -53,4 +53,6 @@ defaultproperties
 	CylinderSize=250
 	bNotifyPositionUpdate=true
 	bSpecialBrushActor=true
+	NetUpdateFrequency=8
+	bOnlyDirtyReplication=false
 }

@@ -156,11 +156,19 @@ var const bool			bNotifyPositionUpdate; // Call C++ callback when this Actor was
 // 227 Variables
 //=============================================================================
 
+// 227 networking variables:
 var transient const bool bNetBeginPlay;		// 227j: This actor just received initial replication (set to true AFTER PostBeginPlay but to false BEFORE PostNetBeginPlay)
-var transient const bool bRunningPhysics;	// 227j: This actor is currently simulating a physics step (thus can't change velocity).
-var transient bool		bEdSelectionLock;	// 227j: This actor can't be selected in editor.
 var transient bool		bForceNetUpdate;	// 227j: When set to TRUE will force this actor to immediately be considered for replication, instead of waiting for NetUpdateTime
 var transient const bool bPendingNetUpdate; // 227j: This actor is pending net update because client was unable to receive it due to net saturation.
+var transient bool		bNetDirty;			// 227j: This actor has had one of its network variable changed and needs to be replicated.
+var(Networking) bool	bCrossLevelNetwork;	// if bAlwaysRelevant, this actor should replicate to across level clients.
+var(Networking) bool	bOnlyOwnerRelevant;	// This actor can only be network relevant to owner actor.
+var(Networking) bool	bOnlyDirtyReplication; // 227j: This actor should only be networked when its bNetDirty.
+var(Networking) bool	bForceDirtyReplication; // 227j: This actor should instantly network update when its bNetDirty (even if NetUpdateTime isn't yet).
+var bool				bAlwaysNetDirty;	// 227j: This actor should always be net dirty every tick (mainly for PlayerPawn).
+
+var transient const bool bRunningPhysics;	// 227j: This actor is currently simulating a physics step (thus can't change velocity).
+var transient bool		bEdSelectionLock;	// 227j: This actor can't be selected in editor.
 var bool				bTraceHitBoxes;		// 227j: This actor should trace skeletal mesh hitboxes.
 var bool				bTextureAnimOnce;	// 227j: DT_SpriteAnimOnce but for mesh skins.
 var private bool		bSerializeMeshInst; // Internal: Should serialize mesh instance data.
@@ -168,8 +176,6 @@ var(Advanced) bool		bSpecialBrushActor;	// 227j Editor only: This actor can be d
 var(Advanced) bool		bNetInterpolatePos;	// 227j: This actor should interpolate between position on net updates.
 var(Movement) bool		bHardAttach;		// Extra sticky attachment to base (for Skeletal meshes this makes them update even when not drawn).
 var(Frob) bool			bIsFrobable;		//To manipulate or adjust, to tweak this actor over Frob() interface.
-var(Networking) bool	bCrossLevelNetwork;	// if bAlwaysRelevant, this actor should replicate to across level clients.
-var(Networking) bool	bOnlyOwnerRelevant;	// This actor can only be network relevant to owner actor.
 var(Advanced) float		RandomDelayTime;	// Changes the delay in which a new random value is applied. Currently in use for lighting effect RandomSubtlePulse and RandomPulse.
 var transient float		RandomValue,LastRandomTime;	// Random value (f.e. in internal use in relation with RandomDelayTime, set with appFrand()).
 var transient name		BlendAnimationSequence; // When bleding to new animation, this is the old anim sequence.
@@ -744,7 +750,7 @@ replication
 		bSpecialLit;
 
 	// Messages
-	reliable if ( Role<ROLE_Authority )
+	reliable if( false ) // if ( Role<ROLE_Authority ) <- Never replicate.
 		BroadcastMessage;
 }
 
@@ -1400,10 +1406,16 @@ event BroadcastMessage( coerce string Msg, optional bool bBeep, optional name Ty
 	if (Type == '')
 		Type = 'Event';
 
-	if ( Level.Game.GameRules!=None )
-		for ( GR=Level.Game.GameRules; GR!=None; GR=GR.NextRules )
+	if( Level.NetMode==NM_Client )
+	{
+		GetLocalPlayerPawn().ClientMessage( Msg, Type, bBeep );
+		return;
+	}
+
+	if ( Level.Game.GameRules )
+		for ( GR=Level.Game.GameRules; GR; GR=GR.NextRules )
 			if ( GR.bNotifyMessages && !GR.AllowBroadcast(Self,Msg) )
-				Return;
+				return;
 	if ( Level.Game.AllowsBroadcast(self, Len(Msg)) )
 		foreach AllActors(Class'Pawn',P,'Player')
 			P.ClientMessage( Msg, Type, bBeep );
