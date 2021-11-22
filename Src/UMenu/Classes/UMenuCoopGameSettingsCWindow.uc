@@ -1,0 +1,1 @@
+class UMenuCoopGameSettingsCWindow expands UMenuSinglePlayerSettingsCWindow;

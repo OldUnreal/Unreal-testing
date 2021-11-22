@@ -1,5 +1,5 @@
-[Public]
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Return to Napali")
+﻿[Public]
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
 Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
@@ -21,13 +21,13 @@ Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
 [TransitionNullHUD]
 Statheader="Kill Statistics: "
 CARStat="Combat Assault Rifle"
-RLStat="RocketLauncher"
-GLStat="GrenadeLauncher"
+RLStat="UMS Rocket Launcher"
+GLStat="UMS Grenade Launcher"
 ASMDStat="ASMD"
 AutomagStat="Automag"
 DispersionStat="Dispersion Pistol"
 EightballStat="Eightball"
-FlakCannonStat="FlakCannon"
+FlakCannonStat="Flak Cannon"
 GESBioRifleStat="GES BioRifle"
 MinigunStat="Minigun"
 RazorjackStat="Razorjack"
@@ -37,8 +37,8 @@ TotalStat="Total Kills"
 LogEntryMsg="LOG ENTRY:"
 
 [GrenadeLauncher]
-PickupMessage="You got the GrenadeLauncher."
-ItemName="GrenadeLauncher"
+PickupMessage="You got the UMS Grenade Launcher."
+ItemName="UMS Grenade Launcher"
 
 [Cloak]
 ExpireMessage="disengaged."
@@ -54,15 +54,15 @@ MultWeapSlotMsg="Press the weapon select button to toggle weapons."
 GameName="Unreal Mission Pack"
 
 [RocketLauncher]
-PickupMessage="You got the RocketLauncher."
-ItemName="RocketLauncher"
+PickupMessage="You got the UMS Rocket Launcher."
+ItemName="UMS Rocket Launcher"
 
 [UPakChooseGameMenu]
 MenuList[0]="Return to Na Pali"
 MenuList[1]="Unreal"
 
 [CloakMatch]
-GameName="CloakMatch"
+GameName="Cloak Match"
 
 [CARifle]
 PickupMessage="You got the Combat Assault Rifle"
@@ -71,15 +71,15 @@ ItemName="Combat Assault Rifle"
 [UPakScubaGear]
 RechargedMessage="ScubaGear fully recharged."
 LowOxygenMessage="Oxygen supply critically low"
-PickupMessage="You picked up the SCUBA gear"
-ItemName="Marine SCUBAGear"
+PickupMessage="You picked up the Marine SCUBA Gear"
+ItemName="Marine SCUBA Gear"
 M_Deactivated="deactivated... Recharging."
 
 [MarineMatch]
-GameName="MarineMatch"
+GameName="Marine Match"
 
 [GravityMatch]
-GameName="GravityMatch"
+GameName="Gravity Match"
 
 [UPakDebugger]
 ItemName="UPak Debugger"
@@ -91,13 +91,16 @@ MenuName="Male 1"
 MenuName="Female 1"
 
 [GLAmmo]
-PickupMessage="You picked up 10 grenades."
+PickupMessage="You picked up 10 UMS Grenades."
+ItemName="UMS Grenades"
 
 [RLAmmo]
-PickupMessage="You got 10 rockets."
+PickupMessage="You got 10 UMS Rockets."
+ItemName="UMS Rockets"
 
 [CARifleClip]
 PickupMessage="You got a 50 bullet CAR clip."
+ItemName="CAR Clip"
 
 [UPakFemaleTwo]
 MenuName="Female 2"
@@ -109,14 +112,8 @@ MenuName="Male 3"
 MenuName="Male 2"
 
 [TerranWeaponMatch]
-GameName="TerranWeaponMatch"
-
-[MarineInterestPoint]
-PickupMessage=""
-M_Activated=""
-M_Selected=""
-M_Deactivated=""
+GameName="Terran Weapon Match"
 
 [CompTablet]
-PickupMessage="You got the CompTablet."
-
+PickupMessage="You got the Computer Tablet."
+ItemName="Computer Tablet"
