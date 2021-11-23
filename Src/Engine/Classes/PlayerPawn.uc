@@ -120,9 +120,9 @@ var GameReplicationInfo GameReplicationInfo;
 var() globalconfig string ngWorldSecret;
 
 // Remote Pawn ViewTargets
-var transient rotator TargetViewRotation;
-var transient float TargetEyeHeight;
-var transient vector TargetWeaponViewOffset;
+var transient norepnotify rotator TargetViewRotation;
+var transient norepnotify float TargetEyeHeight;
+var transient norepnotify vector TargetWeaponViewOffset;
 
 // CameraLocation
 var transient const vector CalcCameraLocation;

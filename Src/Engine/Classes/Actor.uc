@@ -16,7 +16,7 @@ var(Advanced) bool			bHidden;		// Is hidden during gameplay.
 var(Advanced) const bool	bNoDelete;		// Cannot be deleted during play (note that this makes actor more optimized for network play).
 var bool					bAnimFinished;	// Unlooped animation sequence has finished.
 var(Display) bool			bAnimLoop;		// Whether animation is looping.
-var bool					bAnimNotify;	// Whether a notify is applied to the current sequence.
+var norepnotify bool		bAnimNotify;	// Whether a notify is applied to the current sequence.
 var(Advanced) bool			bAnimByOwner;	// Animation dictated by owner.
 var const bool				bDeleteMe;		// About to be deleted.
 var transient const bool	bAssimilated;	// Actor dynamics are assimilated in world geometry.
@@ -286,7 +286,7 @@ var(Networking) ENetRole RemoteRole; /* Networking role:
 										ROLE_Authority - Not to be used by mappers. */
 
 // Owner.
-var noedsave const Actor Owner;		// Owner actor.
+var noedsave norepnotify const Actor Owner;		// Owner actor.
 var(Object) name		InitialState;
 var(Object) name		Group;		// Editor group name.
 
@@ -343,7 +343,7 @@ var(Events) name          Event;         // The event this actor causes.
 var Actor                 Target;        // Actor we're aiming at (other uses as well).
 var Pawn                  Instigator;    // Pawn responsible for damage.
 var Inventory             Inventory;     // Inventory chain.
-var const Actor           Base;          // Moving brush actor we're standing on.
+var const norepnotify Actor Base;          // Moving brush actor we're standing on.
 var const PointRegion	  Region;        // Region this actor is in.
 var const name            AttachedBone;  // Skeletal mesh bone were attached to.
 var(Movement)	name	  AttachTag;	 // Tag of actor this actor should be initially based on.
@@ -362,12 +362,12 @@ var const actor           Deleted;       // Next actor in just-deleted chain.
 var const transient int CollisionTag, LightingTag, NetTag, OtherTag, ExtraTag, SpecialTag;
 
 // The actor's position and rotation.
-var(Movement) const vector	Location;     // Actors initial location.
-var(Movement) const rotator	Rotation;    // Actors initial rotation.
-var noedsave const vector	OldLocation;   // Actors old location one tick ago.
-var noedsave const vector	ColLocation;   // Actors old location one move ago.
-var(Movement) vector		Velocity;      // Velocity.
-var(Movement) vector		Acceleration;  // Acceleration.
+var(Movement) const norepnotify vector	Location;		// Actors initial location.
+var(Movement) const norepnotify rotator	Rotation;		// Actors initial rotation.
+var noedsave const vector				OldLocation;	// Actors old location one tick ago.
+var noedsave const vector				ColLocation;	// Actors old location one move ago.
+var(Movement) norepnotify vector		Velocity;		// Velocity.
+var(Movement) norepnotify vector		Acceleration;	// Acceleration.
 
 var(Filter) float		  OddsOfAppearing; // 0-1 - chance actor will appear in relevant game modes.
 
@@ -408,13 +408,13 @@ var(Display) texture    Skin;            // Mesh skin #1.
 var(Display) mesh       Mesh;            // Mesh if DrawType=DT_Mesh.
 var(Display) mesh       ShadowMesh;      // If Mesh, DrawType=DT_Mesh and bShadowCast, use this mesh for casting the shadow.
 var const export model  Brush;           // Brush if DrawType=DT_Brush.
-var(Display) float      DrawScale;		 // Scaling factor, 1.0=normal size.
-var(Display) vector		PrePivot;		 // Offset from box center for drawing.
-var(Display) float      ScaleGlow;		 // Multiplies lighting scale.
-var(Display)  float     VisibilityRadius; // Actor is drawn if viewer is within its visibility radius. Zero=infinite visibility. Negative=hidden if within radius.
+var(Display) norepnotify float DrawScale;// Scaling factor, 1.0=normal size.
+var(Display) norepnotify vector PrePivot;// Offset from box center for drawing.
+var(Display) norepnotify float ScaleGlow;// Multiplies lighting scale.
+var(Display)  float     VisibilityRadius;// Actor is drawn if viewer is within its visibility radius. Zero=infinite visibility. Negative=hidden if within radius.
 var float VisibilityHeight;				 // unused since 227j.
-var(Display) byte       AmbientGlow;     // Ambient brightness, or 255=pulsing.
-var(Display) byte       Fatness;         // Fatness in UU (mesh distortion), 128 = default.
+var(Display) norepnotify byte AmbientGlow;// Ambient brightness, or 255=pulsing.
+var(Display) norepnotify byte Fatness;   // Fatness in UU (mesh distortion), 128 = default.
 var(Display) float		SpriteProjForward;// Distance forward to draw sprite from actual location.
 var(Display) float		AmbientGlowPulseSpeed; //pulse speed for AmbientGlow.
 
@@ -425,9 +425,9 @@ var(Display) texture	MultiSkins[8]; // Mesh skins #0-7.
 // Sound.
 
 // Ambient sound.
-var(Sound) byte         SoundRadius;	 // Radius of ambient sound.
-var(Sound) byte         SoundVolume;	 // Volume of amient sound.
-var(Sound) byte         SoundPitch;	     // Sound pitch shift, 64.0=none.
+var(Sound) norepnotify byte SoundRadius;	 // Radius of ambient sound.
+var(Sound) norepnotify byte SoundVolume;	 // Volume of amient sound.
+var(Sound) norepnotify byte SoundPitch;	     // Sound pitch shift, 64.0=none.
 var(Sound) sound        AmbientSound;    // Ambient sound effect.
 
 // Regular sounds.
@@ -461,8 +461,8 @@ enum EMusicTransition
 // Collision.
 
 // Collision size.
-var(Collision) const float CollisionRadius; // Radius of collision cyllinder.
-var(Collision) const float CollisionHeight; // Half-height cyllinder.
+var(Collision) norepnotify const float CollisionRadius; // Radius of collision cyllinder.
+var(Collision) norepnotify const float CollisionHeight; // Half-height cyllinder.
 
 //-----------------------------------------------------------------------------
 // Lighting.
@@ -510,13 +510,13 @@ var(Lighting) enum ELightEffect
 } LightEffect;
 
 // Lighting info.
-var(LightColor) byte
+var(LightColor) norepnotify byte
 	LightBrightness,
 	LightHue,
 	LightSaturation;
 
 // Light properties.
-var(Lighting) byte
+var(Lighting) norepnotify byte
 	LightRadius, // Lighting radius = 25 X (LightRadius+1).
 	LightPeriod, // Lighting 'speed' of LT_Pulse, LT_Blink, LT_SubtlePulse, LT_TexturePaletteLoop and LE_Searchlight.
 	LightPhase, // Lighting time offset in LT_Pulse, LT_Blink, LT_SubtlePulse, LT_TexturePaletteLoop and LE_Searchlight.
@@ -549,8 +549,8 @@ var enum EDodgeDir
 // Physics properties.
 var(Movement) float       Mass;            // Mass of this actor.
 var(Movement) float       Buoyancy;        // Water buoyancy (if higher than Mass, actor will float).
-var(Movement) rotator	  RotationRate;    // Change in rotation per second.
-var(Movement) rotator     DesiredRotation; // Physics will rotate pawn to this if bRotateToDesired.
+var(Movement) norepnotify rotator RotationRate;    // Change in rotation per second.
+var(Movement) norepnotify rotator DesiredRotation; // Physics will rotate pawn to this if bRotateToDesired.
 var           float       PhysAlpha;       // Interpolating position, 0.0-1.0.
 var           float       PhysRate;        // Interpolation rate per second.
 var	transient const Actor PendingTouch;    // Actor touched during move which wants to add an effect after the movement completes, 227j: Use SetPendingTouch.
@@ -560,9 +560,9 @@ var	transient const Actor PendingTouch;    // Actor touched during move which wa
 
 // Animation control.
 var          float        AnimLast;        // Last frame.
-var          float        AnimMinRate;     // Minimum rate for velocity-scaled animation.
+var norepnotify float     AnimMinRate;     // Minimum rate for velocity-scaled animation.
 var			 float		  OldAnimRate;	   // Animation rate of previous animation (= AnimRate until animation completes).
-var			 plane		  SimAnim;		   // replicated to simulated proxies.
+var	norepnotify plane	  SimAnim;		   // replicated to simulated proxies.
 
 //-----------------------------------------------------------------------------
 // Networking.
@@ -1440,6 +1440,11 @@ event ReplicationEnded();
 // Called on network clients when a variable has been replicated (only called while bNetNotify is True).
 //
 event PostNetReceive();
+
+//
+// A variable with 'repnotify' keyword was replicated.
+//
+event OnRepNotify( name Property );
 
 //
 // Called after PostBeginPlay.

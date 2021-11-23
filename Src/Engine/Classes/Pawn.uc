@@ -91,14 +91,14 @@ var transient vector LastReachTest;	// Most recent PointReach/ActorReachable las
 									// Note: If test spot is too far out (over 1200uu) or out of sight that it wont even try, this will be set to own location.
 
 // Player and enemy movement.
-var(Movement) float	GroundSpeed;	// The maximum ground speed.
-var(Movement) float	WaterSpeed;		// The maximum swimming speed.
-var(Movement) float	AirSpeed;		// The maximum flying speed.
-var(Movement) float	AccelRate;		// max acceleration rate
-var(Movement) float	JumpZ;			// vertical acceleration w/ jump
-var(Movement) float	MaxStepHeight;	// Maximum size of upward/downward step.
-var(Movement) float	AirControl;		// amount of AirControl available to the pawn
-var(Movement) float	WalkingPct;		// Movement speed multiplier while walking/crouching.
+var(Movement) norepnotify float	GroundSpeed;	// The maximum ground speed.
+var(Movement) norepnotify float	WaterSpeed;		// The maximum swimming speed.
+var(Movement) norepnotify float	AirSpeed;		// The maximum flying speed.
+var(Movement) norepnotify float	AccelRate;		// max acceleration rate
+var(Movement) norepnotify float	JumpZ;			// vertical acceleration w/ jump
+var(Movement) norepnotify float	MaxStepHeight;	// Maximum size of upward/downward step.
+var(Movement) norepnotify float	AirControl;		// amount of AirControl available to the pawn
+var(Movement) float				WalkingPct;		// Movement speed multiplier while walking/crouching.
 var float			ShoveCollisionRadius; // Percent of collision radius this Pawn will hard block if bShovePawn.
 var(Display) editinline PhysicsAnimation PhysicsAnim; // Physics based animation notify.
 
@@ -134,10 +134,10 @@ var transient float LastDamageTime;			// Pawn damage time
 var transient bool bLastDamageSpawnedBlood;	// Damage spawned blood.
 
 // Movement.
-var rotator	 	ViewRotation;  	// View rotation.
+var norepnotify rotator ViewRotation;  	// View rotation.
 var vector			WalkBob;
 var() float	  	BaseEyeHeight; 	// Base eye height above collision center.
-var float			EyeHeight;	 	// Current eye height, adjusted for bobbing and stairs.
+var norepnotify float EyeHeight;	 	// Current eye height, adjusted for bobbing and stairs.
 var	const	vector	Floor;			// Normal of floor pawn is standing on (only used by PHYS_Spider)
 var float			SplashTime;		// time of last splash
 

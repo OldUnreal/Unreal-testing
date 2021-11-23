@@ -52,7 +52,7 @@ var name 		PlayerLastTouched;    // Player who last touched this item.
 // Rendering information.
 
 // Player view rendering info.
-var() vector      PlayerViewOffset;   // Offset from view center.
+var() norepnotify vector PlayerViewOffset;// Offset from view center.
 var() mesh        PlayerViewMesh;     // Mesh to render.
 var() float       PlayerViewScale;    // Mesh scale.
 var() float		  BobDamping;		  // how much to damp view bob
