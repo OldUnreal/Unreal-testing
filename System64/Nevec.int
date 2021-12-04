@@ -1,0 +1,22 @@
+﻿[LevelInfo1]
+Title="Neve's Crossing"
+LevelEntryText="Entering Neve's Crossing"
+
+[LevelSummary]
+Title="Neve's Crossing"
+LevelEntryText="Entering Neve's Crossing"
+
+[TranslatorEvent15]
+Message="Terra-Neo Mining Station (North)"
+
+[TranslatorEvent6]
+Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
+
+[TranslatorEvent5]
+Message="LOG: P. Mock: Last saw Dalton and the rest two days ago. I'm lost. There are crates dropping down from the sky with UMS markings. Maybe whoever made it off this rock brought back help. I'm going to attempt to slip by the Skaarj through the lake."
+
+[TranslatorEvent14]
+Message="Terra-Neo Mining Station (North)"
+
+[TranslatorEvent0]
+Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."

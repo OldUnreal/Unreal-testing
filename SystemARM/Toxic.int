@@ -1,0 +1,22 @@
+﻿[LevelInfo2]
+Title="Bounds of Foundry"
+
+[LevelSummary]
+Title="Bounds of Foundry"
+
+[Counter0]
+CountMessage="%i more to go..."
+CompleteMessage="Pumps destroyed! Emergency doors open."
+
+[TranslatorEvent2]
+Message="Crane controls must be activated in lower control room."
+
+[TranslatorEvent6]
+Message="Warning: Simultaneous activation of both pumps might result in explosion due to pressure level!"
+
+[TranslatorEvent3]
+Message="WARNING: Toxic fume buildup exceeds regulation limits. Exercise caution with weaponry near Tarydium byproducts."
+
+[TranslatorEvent5]
+Message="WARNING: Remain clear of Tarydium Byproducts unless properly outfitted with Toxin Suit."
+AltMessage="Test!"

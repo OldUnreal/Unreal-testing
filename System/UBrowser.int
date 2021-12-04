@@ -1,5 +1,5 @@
-﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console)
+[Public]
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
 Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserServerListWindow]
@@ -42,6 +42,7 @@ TimeLimitText="Time Limit"
 GameModeText="Game Mode"
 GameTypeText="Game Type"
 GameVersionText="Game Version"
+GameSubVersionText="Game SubVersion"
 WorldLogText="ngStats World Stat-Logging"
 TrueString="Enabled"
 FalseString="Disabled"
@@ -103,9 +104,9 @@ OpenHelp="Enter a standard URL, or select one from the URL history. Press Enter 
 WindowTitle="Web Explorer"
 
 [UBrowserLibPageWindow]
-DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-InfoText[0]="To connect this server you will need additional C++ library "%ls"."
+DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+InfoText[0]="To connect this server you will need additional C++ library %ls."
 InfoText[1]="For more info view the external info from below (hosted by %ls):"
 
 [UBrowserServerWebCW]

@@ -2,8 +2,35 @@
 Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
 Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
-[UBrowserConsole]
-ClassCaption=Unreal Browser Console
+[UBrowserServerListWindow]
+InfoName="Info"
+PlayerCountName="Players"
+ServerCountName="Servers"
+QueryServerText="Querying Master Server (hit F5 if nothing happens)"
+QueryFailedText="Master Server Failed: "
+PingingText="Pinging Servers"
+CompleteText="Complete"
+
+[UBrowserMainWindow]
+WindowTitleString="Server Browser"
+
+[UBrowserGSpyLink]
+ResolveFailedError="The master server could not be resolved: "
+TimeOutError="Timeout talking to the master server"
+CouldNotConnectError="Connecting to the master server timed out: "
+
+[UBrowserHTTPLink]
+ResolveFailedError="The master server could not be resolved: "
+TimeOutError="Timeout talking to the master server"
+CouldNotConnectError="Connecting to the master server timed out: "
+
+[UBrowserSubsetFact]
+NotFoundError="Could not find the window: "
+NotReadyError="Window is not ready: "
+
+[UBrowserRulesGrid]
+RuleText="Rule"
+ValueText="Value"
 
 [UBrowserServerPing]
 AdminEmailText="Admin Email"
@@ -19,25 +46,13 @@ GameSubVersionText="Game SubVersion"
 WorldLogText="ngStats World Stat-Logging"
 TrueString="Enabled"
 FalseString="Disabled"
+GameSubVersionText="Game SubVersion"
 MapFileString="Map Filename"
 DLLString="C++ Library"
-DLLVerString="%s (ver %i)"
+DLLVerString="%ls (ver %i)"
 WebURLString="Website URL"
 ServerOSString="Server OS"
 GameClassString="Game Class"
-
-[UBrowserServerListWindow]
-PlayerCountName="Players"
-ServerCountName="Servers"
-QueryServerText="Querying Master Server"
-QueryFailedText="Master Server Failed: "
-PingingText="Pinging Servers"
-CompleteText="Complete"
-InfoName="Info"
-
-[UBrowserOpenBar]
-OpenText="Open:"
-OpenHelp="Enter a standard URL, or select one from the URL history.  Press Enter to activate."
 
 [UBrowserMainClientWindow]
 FavoritesName="Favorites"
@@ -53,11 +68,8 @@ VersionName="Version"
 
 [UBrowserInfoMenu]
 RefreshName="&Refresh Info"
-AttachName="&Attach window"
-CloseName="&Close window"
-
-[UBrowserMainWindow]
-WindowTitleString="Server Browser"
+AttachName="&Attach"
+CloseName="&Close"
 
 [UBrowserRightClickMenu]
 RefreshName="&Refresh All Servers"
@@ -81,33 +93,21 @@ MeshText="Mesh"
 SkinText="Skin"
 IDText="ID"
 
-[UBrowserGSpyLink]
-ResolveFailedError="The master server could not be resolved: "
-TimeOutError="Timeout talking to the master server"
-CouldNotConnectError="Connecting to the master server timed out: "
+[UBrowserConsole]
+ClassCaption="Unreal Browser Console"
 
-[UBrowserHTTPLink]
-ResolveFailedError="The master server could not be resolved: "
-TimeOutError="Timeout talking to the master server"
-CouldNotConnectError="Connecting to the master server timed out: "
-
-[UBrowserSubsetFact]
-NotFoundError="Could not find the window: "
-NotReadyError="Window is not ready: "
-
-[UBrowserRulesGrid]
-RuleText="Rule"
-ValueText="Value"
+[UBrowserOpenBar]
+OpenText="Open:"
+OpenHelp="Enter a standard URL, or select one from the URL history. Press Enter to activate."
 
 [UBrowserServerWebWin]
-WindowTitle="Unreal Web Explorer"
+WindowTitle="Web Explorer"
 
 [UBrowserLibPageWindow]
-DLLTitleStr="Can't connect: Missing Dynamic Link Library '%s'."
-DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched '%s'."
-InfoText[0]="To connect this server you will need additional C++ Library '%s',"
-InfoText[1]="for more info view the external info from below (hosted by %s):"
+DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[1]="For more info view the external info from below (hosted by %ls):"
 
 [UBrowserServerWebCW]
 RefreshString="Refresh page"
-

@@ -1,13 +1,13 @@
 ﻿[Setup]
 LocalProduct="Unreal"
-DefaultFolder="C:\Unreal"
+DefaultFolder="C:\Program Files\Unreal"
 ReadMe="Help\ReadMe.htm"
 SetupWindowTitle="Unreal Setup"
 AutoplayWindowTitle="Unreal Options"
-ProductURL="http://www.unreal.com/"
-VersionURL="http://www.oldunreal.com"
+ProductURL="https://www.unrealengine.com/"
+VersionURL="https://www.oldunreal.com"
 Developer="Epic Games, Inc. - 227 by Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 Logo="Help\SetupLogo.bmp"
 
 [General]

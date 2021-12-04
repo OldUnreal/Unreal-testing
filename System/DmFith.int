@@ -1,0 +1,10 @@
+﻿[LevelInfo0]
+Title="Fire In The Hole"
+IdealPlayerCount="2-5"
+
+[LevelSummary]
+Title="Fire In The Hole"
+IdealPlayerCount="2-5"
+
+[Counter0]
+CompleteMessage="Core Unstable!"

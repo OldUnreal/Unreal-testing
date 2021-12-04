@@ -1,5 +1,5 @@
 ﻿[Public]
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Return to Na Pali")
 Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
@@ -17,6 +17,10 @@ Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
+Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
+Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
+Preferences=(Caption="Terran Weapon Match",Parent="Game Types",Class=UPak.TerranWeaponMatch,Immediate=True)
 
 [TransitionNullHUD]
 Statheader="Kill Statistics: "
@@ -31,18 +35,19 @@ FlakCannonStat="Flak Cannon"
 GESBioRifleStat="GES BioRifle"
 MinigunStat="Minigun"
 RazorjackStat="Razorjack"
-RifleStat="Rifle"
+RifleStat="Sniper Rifle"
 StingerStat="Stinger"
 TotalStat="Total Kills"
 LogEntryMsg="LOG ENTRY:"
 
 [GrenadeLauncher]
-PickupMessage="You got the UMS Grenade Launcher."
+DeathMessage="%k's grenade made %o blew up."
+PickupMessage="You got the UMS Grenade Launcher"
 ItemName="UMS Grenade Launcher"
 
 [Cloak]
 ExpireMessage="disengaged."
-PickupMessage="You got the Cloaking Device."
+PickupMessage="You got the Cloaking Device"
 ItemName="Cloaking Device"
 M_Activated=" engaged"
 M_Deactivated=" disengaged"
@@ -54,7 +59,8 @@ MultWeapSlotMsg="Press the weapon select button to toggle weapons."
 GameName="Unreal Mission Pack"
 
 [RocketLauncher]
-PickupMessage="You got the UMS Rocket Launcher."
+DeathMessage="%k's rocket turned %o's body into chunks."
+PickupMessage="You got the UMS Rocket Launcher"
 ItemName="UMS Rocket Launcher"
 
 [UPakChooseGameMenu]
@@ -65,6 +71,7 @@ MenuList[1]="Unreal"
 GameName="Cloak Match"
 
 [CARifle]
+DeathMessage="%k's %w turned %o into swiss cheese."
 PickupMessage="You got the Combat Assault Rifle"
 ItemName="Combat Assault Rifle"
 
@@ -91,15 +98,15 @@ MenuName="Male 1"
 MenuName="Female 1"
 
 [GLAmmo]
-PickupMessage="You picked up 10 UMS Grenades."
+PickupMessage="You picked up 10 UMS Grenades"
 ItemName="UMS Grenades"
 
 [RLAmmo]
-PickupMessage="You got 10 UMS Rockets."
+PickupMessage="You got 10 UMS Rockets"
 ItemName="UMS Rockets"
 
 [CARifleClip]
-PickupMessage="You got a 50 bullet CAR clip."
+PickupMessage="You got a 50-bullet CAR clip"
 ItemName="CAR Clip"
 
 [UPakFemaleTwo]
@@ -115,5 +122,5 @@ MenuName="Male 2"
 GameName="Terran Weapon Match"
 
 [CompTablet]
-PickupMessage="You got the Computer Tablet."
+PickupMessage="You got the Computer Tablet"
 ItemName="Computer Tablet"

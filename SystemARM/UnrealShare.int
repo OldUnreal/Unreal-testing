@@ -1,4 +1,4 @@
-[Public]
+﻿[Public]
 Object=(Name=UnrealShare.DeathMatchGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.UnrealGameInfo,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.TeamGame,Class=Class,MetaClass=Engine.GameInfo)
@@ -76,12 +76,9 @@ Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network
 Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
 Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
 Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
-Preferences=(Caption="Game Types",Parent="Advanced Options")
 Preferences=(Caption="Coop Play",Parent="Game Types",Class=UnrealShare.CoopGame,Immediate=True)
 Preferences=(Caption="Deathmatch",Parent="Game Types",Class=UnrealShare.DeathmatchGame,Immediate=True)
 Preferences=(Caption="Team Play",Parent="Game Types",Class=UnrealShare.TeamGame,Immediate=True)
-Preferences=(Caption="Networking",Parent="Advanced Options")
-Preferences=(Caption="Map Lists",Parent="Networking")
 Preferences=(Caption="Config",Parent="Decals",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
 Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
 Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
@@ -158,6 +155,7 @@ DrownedMessage=" forgot to come up for air."
 BurnedMessage=" was incinerated"
 CorrodedMessage=" was slimed"
 HackedMessage=" was hacked"
+BleededMessage=" bled to death."
 
 [UnrealHUD]
 IdentifyName="Name"
@@ -173,14 +171,14 @@ TeamName[3]="Gold Team: "
 AdvancedString="Advanced Options"
 AdvancedHelp="Edit advanced game configuration options."
 HelpMessage[1]="Adjust the speed at which time passes in the game."
-HelpMessage[2]="If enabled, reduces the gore in the game."
+HelpMessage[2]="If true, reduces the gore in the game."
 MenuList[1]="Game Speed"
 MenuList[2]="Reduced Gore"
 MenuTitle="GAME OPTIONS"
 
 [UnrealQuitMenu]
-YesSelString=" [YES]  No"
-NoSelString="  Yes  [NO]"
+YesSelString="[YES]  No "
+NoSelString=" Yes  [NO]"
 HelpMessage[1]="Select yes and hit enter to return to your puny, miserable, useless real life, if you can't handle UNREALity."
 MenuList[0]="A Digital Extremes/Epic Megagames"
 MenuList[1]="Collaboration"
@@ -200,7 +198,7 @@ MenuList[14]="Music: Alexander Brandon"
 MenuList[15]="    Michiel van den Bos"
 MenuList[16]="Sound Effects: Dave Ewing"
 MenuList[17]="Producer for GT: Jason Schreiber"
-MenuList[18]="Biz: Mark Rein  Nigel Kent"
+MenuList[18]="Biz: Mark Rein Nigel Kent"
 MenuList[19]="    Craig Lafferty"
 MenuList[20]="Oldunreal patch: Jochen Goernitz"
 MenuList[21]="    and the Oldunreal community"
@@ -230,10 +228,10 @@ ItemName="Dispersion Pistol"
 LowText="Low"
 HighText="High"
 ShadowDetail[0]="Blob"
-ShadowDetail[1]="LowRes"
-ShadowDetail[2]="MedRes"
-ShadowDetail[3]="HighRes"
-ShadowDetail[4]="UltraRes"
+ShadowDetail[1]="Low Res"
+ShadowDetail[2]="Mid Res"
+ShadowDetail[3]="High Res"
+ShadowDetail[4]="Ultra Res"
 HelpMessage[1]="Adjust display brightness using the left and right arrow keys."
 HelpMessage[2]="Display Unreal in a window. Note that going to a software display mode may remove high detail actors that were visible with hardware acceleration."
 HelpMessage[3]="Use the left and right arrows to select a resolution, and press enter to select this resolution."
@@ -251,7 +249,7 @@ HelpMessage[14]="If enabled, pawns cast shadows. Changes to this setting will ta
 HelpMessage[15]="If enabled, decoration cast shadows. Changes to this setting will take effect on the next level change."
 HelpMessage[16]="If blob, use blob shadows, else use realistic shadows with different resolutions."
 HelpMessage[17]="Use this option to precaching map content like sounds and textures."
-HelpMessage[18]="Use this option to active/deactivate trilinear texture filtering."
+HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
 MenuList[1]="Brightness"
 MenuList[2]="Toggle Fullscreen Mode"
 MenuList[3]="Select Resolution"
@@ -291,7 +289,9 @@ MenuTitle="FAVORITES"
 
 [Translator]
 NewMessage="Universal Translator"
+HintString="Hint:"
 PickupMessage="Press F2 to activate the Translator"
+ItemName="Universal Translator"
 
 [UnrealTeamScoreBoard]
 TeamName[0]="Red Team: "
@@ -300,7 +300,7 @@ TeamName[2]="Green Team: "
 TeamName[3]="Gold Team: "
 
 [UnrealScoreBoard]
-DeadStr="You are dead.  Hit [Fire] to respawn!"
+DeadStr="You are dead. Hit [Fire] to respawn!"
 SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
 
 [UnrealServerMenu]
@@ -351,7 +351,7 @@ HelpMessage[1]="Listen for local servers"
 HelpMessage[2]="Choose a server from a list of favorites"
 HelpMessage[3]="Hit enter to type in a server address.  Hit enter again to go to this server."
 HelpMessage[4]="Set networking speed."
-HelpMessage[5]="Open GameSpy Lite"
+HelpMessage[5]="Open Unreal Server List"
 MenuList[1]="Find Local Servers"
 MenuList[2]="Choose From Favorites"
 MenuList[3]="Open"
@@ -370,7 +370,7 @@ HelpMessage[1]="Enable or disable vertical aiming help."
 HelpMessage[2]="Toggle enabling of joystick."
 HelpMessage[3]="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
 HelpMessage[4]="Enable or disable mouse smoothing (disable for high resolution mice)"
-HelpMessage[5]="Invert the mouse X axis.  When enabled, pushing the mouse forward causes you to look down rather than up."
+HelpMessage[5]="Invert the mouse X axis.  When true, pushing the mouse forward causes you to look down rather than up."
 HelpMessage[6]="If enabled, when you let go of the mouselook key the view will automatically center itself."
 HelpMessage[7]="If enabled, the mouse is always used for looking up and down, with no need for a mouselook key."
 HelpMessage[8]="If enabled, when not mouse-looking your view will automatically be adjusted to look up and down slopes and stairs."
@@ -383,9 +383,8 @@ HelpMessage[14]="Hit enter to prioritize weapon switching order. (If never auto-
 HelpMessage[15]="Never auto-switch to better weapon on pickup."
 HelpMessage[16]="Use the left and right arrow keys to select a Heads Up Display configuration."
 HelpMessage[17]="Adjust the amount of bobbing when moving."
-HelpMessage[18]="Set your optimal networking speed.  This has an impact on internet gameplay."
-HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
-HelpMessage[20]="Open advanced preferences configuration menu."
+HelpMessage[18]="Set your optimal networking speed. This has an impact on internet gameplay."
+HelpMessage[19]="Open advanced preferences configuration menu."
 MenuList[1]="Auto Aim"
 MenuList[2]="Joystick Enabled"
 MenuList[3]="Mouse Sensitivity"
@@ -404,8 +403,7 @@ MenuList[15]="No Auto Weapon Switch"
 MenuList[16]="HUD Configuration"
 MenuList[17]="View Bob"
 MenuList[18]="Net Speed"
-MenuList[19]="Console"
-MenuList[20]="Advanced Options"
+MenuList[19]="Advanced Options"
 MenuTitle="OPTIONS MENU"
 
 [TeamGame]
@@ -469,7 +467,7 @@ MenuList[18]="Walk"
 MenuList[19]="Strafe"
 MenuList[20]="Next Weapon"
 MenuList[21]="Prev Weapon"
-MenuList[22]="Grab"
+MenuList[22]="Grab Decoration"
 MenuList[23]="Show Admin Menu"
 MenuList[24]="Show Music Menu"
 MenuList[25]="RESET TO DEFAULTS"
@@ -486,11 +484,13 @@ GameName="Coop Game"
 MenuName="Cow"
 
 [ShieldBelt]
-PickupMessage="You got the Shield Belt."
+PickupMessage="You got the Shield Belt"
+ItemName="Shield Belt"
 
 [Flashlight]
 ExpireMessage="Flashlight batteries have died."
-PickupMessage="You picked up the flashlight"
+PickupMessage="You picked up the Flashlight"
+ItemName="Flashlight"
 
 [DevilFish]
 MenuName="DevilFish"
@@ -535,9 +535,11 @@ M_HintMessage="New hint message (press F3 to read)."
 
 [NaliFruit]
 PickupMessage="You picked the Nali Healing Fruit +"
+ItemName="Nali Healing Fruit "
 
 [Health]
 PickupMessage="You picked up a Health Pack +"
+ItemName="Health Pack"
 
 [BabyCow]
 MenuName="Baby Cow"
@@ -586,7 +588,7 @@ MenuTitle="CHOOSE GAME"
 
 [AutoMag]
 DeathMessage="%o got gatted by %k's %w."
-PickupMessage="You got the AutoMag"
+PickupMessage="You got the Automag"
 ItemName="Automag"
 
 [UnrealHelpMenu]
@@ -613,7 +615,7 @@ MenuList[5]="Max Players"
 MenuList[6]="Weapons Stay"
 MenuList[7]="Configure Bots"
 MenuList[8]="Game Style"
-MenuList[9]="DeathMessages"
+MenuList[9]="Death Messages"
 
 [YesNoMenu]
 YesSelString="[YES]  No"
@@ -642,11 +644,13 @@ HelpMessage[19]="Hit Enter to select this server."
 MenuTitle="LOCAL SERVERS"
 
 [SCUBAGear]
-PickupMessage="You picked up the SCUBA gear"
+PickupMessage="You picked up the SCUBA Gear"
+ItemName="SCUBA Gear"
 
 [Amplifier]
-ExpireMessage="Amplifier is out of power."
+ExpireMessage="Energy Amplifier is out of power."
 PickupMessage="You got the Energy Amplifier"
+ItemName="Energy Amplifier"
 
 [UnrealNewGameMenu]
 HelpMessage[1]="Tourist mode."
@@ -681,21 +685,27 @@ ItemName="Stinger"
 
 [RocketCan]
 PickupMessage="You picked up 12 Eightballs"
+ItemName="Eightballs"
 
 [VoiceBox]
 PickupMessage="You picked up the Voice Box"
+ItemName="Voice Box"
 
 [WeaponPowerUp]
 PickupMessage="You got the Dispersion Pistol Powerup"
+ItemName="Dispersion Pistol Powerup"
 
 [Flare]
-PickupMessage="You got a flare"
+PickupMessage="You got a Flare"
+ItemName="Flare"
 
 [ShellBox]
 PickupMessage="You picked up 50 bullets"
+ItemName="Bullet Box"
 
 [ASMDAmmo]
-PickupMessage="You picked up an ASMD core."
+PickupMessage="You picked up an ASMD Core"
+ItemName="ASMD Core"
 
 [MaleThree]
 MenuName="Male 3"
@@ -719,32 +729,39 @@ HelpMessage[7]="If enabled, items will be respawned instantly."
 MenuList[3]="Difficulty"
 MenuList[4]="No Friendly Fire"
 MenuList[5]="Weapons Stay"
-MenuList[6]="Inst. Weapon Respawn"
+MenuList[6]="Instant Weapon Respawn"
 MenuList[7]="Instant Item Respawn"
 
 [SuperHealth]
 PickupMessage="You picked up the Super Health Pack"
+ItemName="Super Health Pack"
 
 [UpgradeMenu]
 MenuList[1]="You need a newer version of Unreal to play on this server. Would you like to go to the Unreal web site for a newer version?"
 
 [StingerAmmo]
 PickupMessage="You picked up 40 Tarydium Shards"
+ItemName="Tarydium Shards"
 
 [Shells]
 PickupMessage="You picked up 12 shells"
+ItemName="Shells"
 
 [KevlarSuit]
 PickupMessage="You picked up the Kevlar Suit"
+ItemName="Kevlar Suit"
 
 [Clip]
-PickupMessage="You picked up a clip"
+PickupMessage="You picked up a Clip"
+ItemName="Clip"
 
 [Bandages]
-PickupMessage="You got some bandages +"
+PickupMessage="You got some Bandages +"
+ItemName="Bandages"
 
 [Armor]
 PickupMessage="You got the Assault Vest"
+ItemName="Assault Vest"
 
 [Hawk]
 MenuName="Hawk"
@@ -755,7 +772,8 @@ ItemName="Minigun Sentry"
 M_Activated=" deployed."
 
 [Woodruff]
-PickupMessage="You got some Master of the woods +"
+PickupMessage="You got some Master of the Woods +"
+ItemName="Master of the Woods"
 
 [UIKeyTrigger]
 SuccessMessage="Access granted."
@@ -766,3 +784,6 @@ DeathMessage="%o was telefragged by %k."
 PickupMessage="You got the Translocator Source Module"
 ItemName="Translocator"
 ItemArticle="the"
+
+[WoodruffSchool]
+PickupMessage="You got a bunch of Master of the Woods +"

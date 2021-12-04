@@ -1,0 +1,5 @@
+[Public]
+Object=(Name=PhysXPhysics.PhysXPhysics,Class=Class,MetaClass=Engine.PhysicsEngine)
+
+[PhysXPhysics]
+ClassCaption="PhysX Physics Engine"

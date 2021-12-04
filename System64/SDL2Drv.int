@@ -1,22 +1,22 @@
-[Public]
+﻿[Public]
 Class=(Class=SDL2Drv.SDL2Client,SuperClass=Engine.Client,Compat="Lin32,Lin64,LinARM")
 Preferences=(Caption="Display",Parent="Advanced Options")
-Preferences=(Caption="SDL2Drv",Parent="Display",Class=SDL2Drv.SDL2Client,Immediate=True,Category=Display)
+Preferences=(Caption="SDL2",Parent="Display",Class=SDL2Drv.SDL2Client,Immediate=True,Category=Display)
 Preferences=(Caption="Joystick",Parent="Advanced Options")
-Preferences=(Caption="SDL2Drv",Parent="Joystick",Class=SDL2Drv.SDL2Client,Immediate=True,Category=Joystick)
+Preferences=(Caption="SDL2",Parent="Joystick",Class=SDL2Drv.SDL2Client,Immediate=True,Category=Joystick)
 
 [Errors]
-Failed3D=3D hardware initialization failed
+Failed3D="3D hardware initialization failed"
 
 [General]
-ViewPersp=Perspective map
-ViewXY=Overhead map
-ViewXZ=XZ map
-ViewYZ=YZ map
-ViewOther=Viewport
-Color16=&16-bit color
-Color32=&32-bit color
-AdvancedOptions=Advanced Options
+ViewPersp="Perspective map"
+ViewXY="Overhead map"
+ViewXZ="XZ map"
+ViewYZ="YZ map"
+ViewOther="Viewport"
+Color16="&16-bit color"
+Color32="&32-bit color"
+AdvancedOptions="Advanced Options"
 
-[WindowsClient]
+[SDL2Client]
 ClassCaption="Standard SDL2 Manager"

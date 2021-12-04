@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+Title="Tundra"
+IdealPlayerCount="3-8"
+
+[LevelSummary]
+Title="Tundra"
+IdealPlayerCount="3-8"
+
+[Sludge0]
+PickupMessage="You Got a GEL Cartridge"
+
+[Sludge1]
+PickupMessage="You Got a GEL Cartridge"
