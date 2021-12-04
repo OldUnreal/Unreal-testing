@@ -348,17 +348,14 @@ BYTE AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVect
 			{
 				FBox BX=FBox(VertexLimitBBox.Min+Ad,VertexLimitBBox.Max+Ad);
 				size_t sz = sizeof(INT) * c;
-				INT* AvP = (INT*)appAlloca(sz);
+				INT* AvP = appAllocaType(INT, sz);
 				int num=0;
 				for( int i=0; i<c; i++ )
 				{
 					if( BX.Min.X<=TransPose[i].X && BX.Max.X>=TransPose[i].X
 						&& BX.Min.Y<=TransPose[i].Y && BX.Max.Y>=TransPose[i].Y
 						&& BX.Min.Z<=TransPose[i].Z && BX.Max.Z>=TransPose[i].Z )
-					{
-						AvP[num] = i;
-						num++;
-					}
+						AvP[num++] = i;
 				}
 				if( !num )
 					r = 0;
@@ -384,7 +381,7 @@ BYTE AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVect
 				{
 					FBox BX=FBox(VertexLimitBBox.Min,VertexLimitBBox.Max);
 					size_t sz = sizeof(INT) * c;
-					INT* AvP = (INT*)appAlloca(sz);
+					INT* AvP = appAllocaType(INT, sz);
 					int num=0;
 					FCoords TmCr=(GMath.UnitCoords / UseActorCoords->Mesh->RotOrigin);
 					BX.Min/=UseActorCoords->Mesh->Scale;
@@ -398,10 +395,7 @@ BYTE AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVect
 						if( BX.Min.X<=V.X && BX.Max.X>=V.X
 						 && BX.Min.Y<=V.Y && BX.Max.Y>=V.Y
 						 && BX.Min.Z<=V.Z && BX.Max.Z>=V.Z )
-						{
-							AvP[num] = i;
-							num++;
-						}
+							AvP[num++] = i;
 					}
 					if( !num )
 						r = 0;

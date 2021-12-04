@@ -19,6 +19,7 @@ class BigRock extends Projectile;
 #exec AUDIO IMPORT FILE="Sounds\Titan\Rockhit1.wav" NAME="Rockhit" GROUP="Titan"
 
 var transient float SpawnTime,NoiseTime;
+var nowarn transient const Actor Shadow; // Obsolete!
 
 simulated function BeginPlay()
 {

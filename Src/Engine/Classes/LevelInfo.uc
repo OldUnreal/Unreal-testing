@@ -439,6 +439,39 @@ static native final function LevelInfo GetLevelInfo();
 // Find a level by matching sub-level name.
 native final function LevelInfo FindLevel( name LevelID );
 
+// Called client-side when player is connecting but haven't received a playerpawn actor yet.
+simulated event PlayerPawn SpawnClientCamera()
+{
+	local NavigationPoint N,Best;
+	local float Score,BestScore;
+	
+	// Pick a spawnpoint, give priority to enabled playerstarts!
+	foreach AllActors(class'NavigationPoint',N)
+	{
+		Score = FRand();
+		if( PlayerStart(N) )
+		{
+			Score+=2.f;
+			if( PlayerStart(N).bEnabled )
+				Score+=5.f;
+			if( PlayerStart(N).bCoopStart )
+				Score+=1.f;
+		}
+		if( !N.Region.Zone.bWaterZone )
+			Score+=0.5f;
+		
+		if( !Best || Score>BestScore )
+		{
+			Best = N;
+			BestScore = Score;
+		}
+	}
+	if( !Best )
+		return None;
+	
+	return Best.Spawn(class'ClientSpectator',,,,,,,true);
+}
+
 defaultproperties
 {
 	TimeDilation=1.000000

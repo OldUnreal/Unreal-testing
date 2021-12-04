@@ -1485,7 +1485,7 @@ event RenderTexture(ScriptedTexture Tex);
 //
 // Called by PlayerPawn when this actor becomes its ViewTarget.
 //
-function BecomeViewTarget();
+event BecomeViewTarget();
 
 //
 // Returns the string representation of the name of an object without the package
