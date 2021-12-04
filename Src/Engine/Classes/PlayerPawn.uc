@@ -134,6 +134,7 @@ var PlayerAffectorInfo FirstPlayerAffector;
 var CustomPlayerStateInfo CustomPlayerStateInfo;
 var RealCrouchInfo RealCrouchInfo;
 var LadderTrigger ActiveLadder;
+var bool bNetworkIncompability; // ClientReplicationInfo is unable to be networked to client!
 
 // Player control flags
 var bool		bAdmin;
@@ -255,6 +256,9 @@ native function string ConsoleCommand( string Command );
 /* Clipboard functions, no Linux support yet, sorry. */
 static final native function CopyToClipboard( string Text );
 static final native function string PasteFromClipboard();
+
+// Check if remote client or server is capable of networking a reference to a specific object by checking package sandbox.
+native final function bool CanNetworkObject( Object Other );
 
 // Called from native command 'UGetFullClientList <validation code>'/'UGetBanList <validation code>'/'UGetTBanList <validation code>'
 // Used by Unreal 227 Admin GUI interface.
@@ -634,7 +638,7 @@ final function ClientAdjustPositionFrom(float ClientTimeStamp)
 
 final function bool ObtainClientReplicationInfo()
 {
-	if (!CanUseClientReplicationInfo() || NetConnection(Player) == none)
+	if (bNetworkIncompability || !CanUseClientReplicationInfo() || NetConnection(Player) == none)
 		return false;
 	if (ClientReplicationInfo != none)
 	{
@@ -643,6 +647,14 @@ final function bool ObtainClientReplicationInfo()
 		ClientReplicationInfo.Destroy();
 	}
 	ClientReplicationInfo = ClientReplicationInfoBase().static.MakeInstance(self);
+	
+	if( ClientReplicationInfo && !CanNetworkObject(ClientReplicationInfo.Class) )
+	{
+		ClientReplicationInfo.Destroy();
+		ClientReplicationInfo = None;
+		bNetworkIncompability = true;
+		return false;
+	}
 	return ClientReplicationInfo != none;
 }
 
@@ -1495,21 +1507,15 @@ function PlayChatting();
 function Typing( bool bTyping )
 {
 	bIsTyping = bTyping;
+	if( Level.Game )
+	{
+		if( Level.Game.WorldLog )
+			Level.Game.WorldLog.LogTypingEvent(bTyping, Self);
+		if( Level.Game.LocalLog )
+			Level.Game.LocalLog.LogTypingEvent(bTyping, Self);
+	}
 	if (bTyping)
-	{
-		if (Level.Game.WorldLog != None)
-			Level.Game.WorldLog.LogTypingEvent(True, Self);
-		if (Level.Game.LocalLog != None)
-			Level.Game.LocalLog.LogTypingEvent(True, Self);
 		PlayChatting();
-	}
-	else
-	{
-		if (Level.Game.WorldLog != None)
-			Level.Game.WorldLog.LogTypingEvent(False, Self);
-		if (Level.Game.LocalLog != None)
-			Level.Game.LocalLog.LogTypingEvent(False, Self);
-	}
 }
 
 // Send a message to all players.
@@ -1906,17 +1912,6 @@ exec function ChangeCrosshair()
 
 event PreRender( canvas Canvas )
 {
-	if( RendMap==1 )
-	{
-		Canvas.SetPos(0,0);
-		Canvas.DrawColor.R = 0;
-		Canvas.DrawColor.G = 0;
-		Canvas.DrawColor.B = 0;
-		Canvas.Style = 1;
-		Canvas.Z = 1;
-		Canvas.DrawTile(Texture'DefaultTexture',Canvas.ClipX,Canvas.ClipY,0,0,1,1);
-		Canvas.DrawActor(None,False,True); // Clear Z
-	}
 	if ( myHud != None )
 		myHUD.PreRender(Canvas);
 	else if ( (Viewport(Player) != None) && (HUDType != None) )

@@ -27,32 +27,37 @@ class Cannon extends Decoration;
 #exec AUDIO IMPORT FILE="Sounds\Cannon\turdrop1.wav" NAME="CannonActivate" GROUP="Cannon"
 #exec AUDIO IMPORT FILE="Sounds\Cannon\turExpl.wav" NAME="CannonExplode" GROUP="Cannon"
 
-var() float DeactivateDistance;	// How far away Instigator must be to deactivate Cannon
+var() float DeactivateDistance;		// How far away Instigator must be to deactivate Cannon
 var() float SampleTime; 			// How often we sample Instigator's location
 var() int   TrackingRate;			// How fast Cannon tracks Instigator
 var() float Drop;					// How far down to drop spawning of projectile
-var() float Health;
+var() float Health;					// -1 health = undestructable
 var() sound FireSound;
 var() sound ActivateSound;
 var() sound ExplodeSound;
-var() bool bShootTriggerInstigator;
-var() bool bIsArmed;
+var() class<Projectile> ProjectileClass; // 227j: Type of projectile to fire.
+var() int MaxShots;					// 227j: Number of shots this can fire on one trigger event (0 = no limit).
+var() float AimError;				// 227j: Aim error of the turret.
+var() bool bShootTriggerInstigator;	// If true, trigger instigator will be the target of the turret, if false, the actor that triggered will be the target.
+var() bool bIsArmed;				// Turret will animate to be active but wont fire.
+var() bool bReTargetOnTrigger;		// 227j: Allow to retarget to new target while already active when retriggering.
+var() bool bDeActivateOnUntrigger;	// 227j: Deactivate when untriggered.
 var actor cTarget;
 var bool bShoot;
 var int ShotsFired;
+var float InitialHealth;
 var actor a;
 
+function PostBeginPlay()
+{
+	Super.PostBeginPlay();
+	InitialHealth = Health;
+}
 function Shoot() {}   // To resolve error 'virtual function 'shoot' not found'
 
-function TakeDamage( int NDamage, Pawn instigatedBy, Vector hitlocation,
-					 Vector momentum, name damageType)
+function TakeDamage( int NDamage, Pawn instigatedBy, Vector hitlocation, Vector momentum, name damageType)
 {
-	Instigator = InstigatedBy;
-	if (Health<0) Return;
-	if ( Instigator != None )
-		MakeNoise(1.0);
-	Health -= NDamage;
-	if (Health <0)
+	if( Health>=0.f && (Health-=NDamage)<0.f )
 	{
 		PlaySound(ExplodeSound, SLOT_None,5.0);
 		skinnedFrag(class'Fragment1',texture'JCannon1', Momentum,1.0,17);
@@ -60,6 +65,17 @@ function TakeDamage( int NDamage, Pawn instigatedBy, Vector hitlocation,
 	}
 }
 
+function DrawEditorSelection( Canvas C )
+{
+	C.DrawCircle(MakeColor(255,255,0), 0, Location, DeactivateDistance);
+}
+
+function Reset()
+{
+	Health = InitialHealth;
+	TweenAnim('Activate',0.1);
+	Instigator = None;
+}
 
 function Trigger( actor Other, pawn EventInstigator )
 {
@@ -73,40 +89,76 @@ function Trigger( actor Other, pawn EventInstigator )
 		cTarget    = Other;
 		Instigator = EventInstigator;
 	}
+	ShotsFired = 0;
 	GotoState( 'ActivateCannon');
 }
 
 state ActivateCannon
 {
+	function EndState()
+	{
+		SetTimer(0, false);
+	}
+	
 	function Reset()
 	{
-		TweenAnim('Activate',0.1);
-		Instigator = None;
+		Global.Reset();
 		GoToState('');
 	}
 
-	function Trigger( actor Other, pawn EventInstigator ) {}
-
+	function Trigger( actor Other, pawn EventInstigator )
+	{
+		if( bReTargetOnTrigger )
+		{
+			if( bShootTriggerInstigator )
+				cTarget = EventInstigator;
+			else
+			{
+				cTarget    = Other;
+				Instigator = EventInstigator;
+			}
+			ShotsFired = 0;
+		}
+	}
+	function UnTrigger( Actor Other, Pawn EventInstigator )
+	{
+		if( bDeActivateOnUntrigger && (bShootTriggerInstigator ? (cTarget==EventInstigator) : (cTarget==Other)) )
+			GoToState('Deactivate');
+	}
+	
 	function Timer()
 	{
+		local int a;
 
-		if (VSize(cTarget.Location - Location) > DeactivateDistance) GoToState('Deactivate');
-		if (Pawn(cTarget)!=None && Pawn(cTarget).Health<=0 || cTarget==None) GoToState('Deactivate');
-		DesiredRotation = rotator(cTarget.Location - Location + Vect(0,0,1)*Drop);
-		DesiredRotation.Yaw = DesiredRotation.Yaw & 65535;
-		if (Abs(DesiredRotation.Yaw - (Rotation.Yaw & 65535)) < 1000
-				&& DesiredRotation.Pitch < 1000 && bShoot)	Shoot();
-		else if (Abs(DesiredRotation.Yaw - (Rotation.Yaw & 65535)) > 64535
-				 && DesiredRotation.Pitch < 1000 && bShoot)	Shoot();
-		else
+		if( !cTarget || cTarget.bDeleteMe
+			|| (MaxShots>0 && ShotsFired>=MaxShots)
+			|| VSizeSq(cTarget.Location - Location) > Square(DeactivateDistance)
+			|| (cTarget.bIsPawn && Pawn(cTarget).Health<=0) )
 		{
-			if (DesiredRotation.Pitch < -6000 ) TweenAnim('Angle4', 0.25);
-			else if (DesiredRotation.Pitch < -4000 ) TweenAnim('Angle3', 0.25);
-			else if (DesiredRotation.Pitch < -2000 ) TweenAnim('Angle2', 0.25);
-			else if (DesiredRotation.Pitch < -500 ) TweenAnim('Angle1', 0.25);
-			else TweenAnim('Angle0', 0.25);
-			bShoot=True;
+			GoToState('Deactivate');
+			return;
 		}
+		
+		DesiredRotation = rotator(cTarget.Location - Location + Vect(0,0,1)*Drop);
+		if( bShoot && bIsArmed && DesiredRotation.Pitch<1000 && DesiredRotation.Pitch >= -10000 )
+		{
+			a = (DesiredRotation.Yaw - Rotation.Yaw) & 65535;
+			if( a>32768 )
+				a = -(a-65536);
+			if( a<1000 )
+			{
+				Shoot();
+				return;
+			}
+		}
+
+		if (DesiredRotation.Pitch < -6000 ) TweenAnim('Angle4', 0.25);
+		else if (DesiredRotation.Pitch < -4000 ) TweenAnim('Angle3', 0.25);
+		else if (DesiredRotation.Pitch < -2000 ) TweenAnim('Angle2', 0.25);
+		else if (DesiredRotation.Pitch < -500 ) TweenAnim('Angle1', 0.25);
+		else TweenAnim('Angle0', 0.25);
+		bShoot=True;
+		
 		bRotateToDesired = True;
 		SetTimer(SampleTime,True);
 	}
@@ -120,9 +172,10 @@ state ActivateCannon
 		else if (DesiredRotation.Pitch < -2000 ) PlayAnim('FAngle2',5.0);
 		else if (DesiredRotation.Pitch < -500 ) PlayAnim('FAngle1',5.0);
 		else PlayAnim('FAngle0',5.0);
-		Spawn (class'CannonBolt',,,Location+Vector(DesiredRotation)*100 - Vect(0,0,1)*Drop,DesiredRotation);
+		Spawn(ProjectileClass,,,Location+Vector(DesiredRotation)*100 - Vect(0,0,1)*Drop,(AimError<=0.f) ? DesiredRotation : rotator(vector(DesiredRotation) + VRand()*(AimError*FRand())));
 		bShoot=False;
-		SetTimer(0.05,True);
+		++ShotsFired;
+		SetTimer(SampleTime, True);
 	}
 
 Begin:
@@ -139,8 +192,7 @@ state DeActivate
 {
 	function Reset()
 	{
-		TweenAnim('Activate',0.1);
-		Instigator = None;
+		Global.Reset();
 		GoToState('');
 	}
 
@@ -151,6 +203,7 @@ Begin:
 
 defaultproperties
 {
+	bEditorSelectRender=true
 	DeactivateDistance=+02000.000000
 	SampleTime=+00000.300000
 	TrackingRate=10000
@@ -170,4 +223,5 @@ defaultproperties
 	bProjTarget=True
 	bIsArmed=False
 	RotationRate=(Yaw=50000)
+	ProjectileClass=class'CannonBolt'
 }
