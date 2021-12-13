@@ -27,10 +27,16 @@ var(Settings) config bool UseSound;
 
 var(Settings) float CurrentTickRate;
 
-static native final function Engine GetEngine();
+static invariant native final function Engine GetEngine();
 
 // Send a consolecommand to engine (functions the same as Actor.ConsoleCommand).
 static native final function string ConsoleCommand(string Command, optional bool bPrintToLog /*=true*/ );
+
+// Game has currently RigidBodies enabled.
+static invariant final function bool IsPhysicsEnabled()
+{
+	return bool(GetEngine().Physics);
+}
 
 defaultproperties
 {

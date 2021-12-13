@@ -328,7 +328,12 @@ void AXWeatherEmitter::PostLoad()
 	guard(AXWeatherEmitter::PostLoad);
 	Super::PostLoad();
 	for (INT i = 0; i < NoRainBounds.Num(); ++i)
-		NoRainBounds(i)->Emitters.AddUniqueItem(this);
+	{
+		AXRainRestrictionVolume* V = NoRainBounds(i);
+		if (!V || V->bDeleteMe)
+			NoRainBounds.Remove(i--);
+		else V->Emitters.AddUniqueItem(this);
+	}
 	unguard;
 }
 void AXWeatherEmitter::PostScriptDestroyed()

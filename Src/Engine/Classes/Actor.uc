@@ -924,7 +924,7 @@ event EdBrushDeployed();
 
 // Debug functions, not very fast but useful for debugging stuff.
 // Renders a single line on next frame.
-static native(1740) final function DrawDebugLine( vector Start, vector End, vector Color, optional bool bShouldStay );
+static native(1740) final function DrawDebugLine( vector Start, vector End, vector Color, optional bool bShouldStay, optional vector Extent );
 
 // Render a box.
 static native(1741) final function DrawDebugBox( vector Start, vector End, vector Color, optional bool bShouldStay );
