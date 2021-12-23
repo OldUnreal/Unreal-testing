@@ -36,7 +36,7 @@ function PostBeginPlay()
 			if ( !bForceFullAccurancy )
 			{
 				ZHgh = CalcRequiredZHeight(En.Location.Z,Location.Z,Region.Zone.ZoneGravity.Z)+JumpZHeightModifier;
-				JumpVelocity = SuggestFallVelocity(Location,En.Location,6000,ZHgh);
+				JumpVelocity = SuggestFallVelocity(Location,En.Location,ZHgh,6000.f);
 			}
 			else JumpVelocity = MyDest.Location;
 			Break;
@@ -75,9 +75,9 @@ simulated function PostTouch( Actor Other )
 		else
 		{
 			ZH = CalcRequiredZHeight(JumpVelocity.Z,Other.Location.Z,Region.Zone.ZoneGravity.Z)+JumpZHeightModifier;
-			Other.Velocity = SuggestFallVelocity(Other.Location,JumpVelocity,6000,ZH)+JumpVelocityModifier;
+			Other.Velocity = SuggestFallVelocity(Other.Location,JumpVelocity,ZH,6000.f)+JumpVelocityModifier;
 		}
-		if ( JumpSound!=None && Level.NetMode!=NM_Client )
+		if ( JumpSound && Level.NetMode!=NM_Client )
 			MakeJumpNoise();
 	}
 }
@@ -85,7 +85,7 @@ function MakeJumpNoise()
 {
 	PlaySound(JumpSound);
 }
-simulated function float CalcRequiredZHeight( float DestZ, float StartZ, float GravZ )
+simulated final function float CalcRequiredZHeight( float DestZ, float StartZ, float GravZ )
 {
 	local int LCount;
 
@@ -100,42 +100,6 @@ simulated function float CalcRequiredZHeight( float DestZ, float StartZ, float G
 		LCount++;
 	}
 	Return Abs(StartZ);
-}
-
-// Modified from Epic's SuggestJumpVelocity:
-simulated final function vector SuggestFallVelocity( vector Start, vector Dest, float MaxXYSpeed, float ZSpeed )
-{
-	local float gravZ,currentZ,ticks,Floor,velsize;
-	local vector Vel;
-	local int LCount;
-
-	gravZ = Region.Zone.ZoneGravity.Z;
-	if ( gravZ >= 0 ) // negative gravity - pretend its low gravity
-		gravZ = -100.f;
-	Floor = Dest.Z - Location.Z;
-
-	Vel.Z = ZSpeed;
-	while ( (currentZ>floor || Vel.Z>0) && LCount<8000 )
-	{
-		Vel.Z = Vel.Z + gravZ * 0.05f;
-		ticks += 0.05f;
-		currentZ = currentZ + Vel.Z * 0.05f;
-		LCount++;
-	}
-	if (Abs(Vel.Z) > 1.f)
-		ticks-=(currentZ - floor)/vel.Z; //correct overshoot
-	vel = Dest - Start;
-	vel.Z = 0.f;
-	if (ticks > 0.f)
-	{
-		velsize = VSize(Vel);
-		if ( velsize > 0.f )
-			Vel = Vel/velsize;
-		Vel*=FMin(MaxXYSpeed, velsize/ticks);
-	}
-	else Vel = Normal(Vel)*MaxXYSpeed;
-	Vel.Z = ZSpeed;
-	Return Vel;
 }
 
 // Use original behaviour.
@@ -159,9 +123,7 @@ function DrawEditorSelection( Canvas C )
 		return;
 
 	Color = MakeColor(255,255,0);
-	V = SuggestFallVelocity(Location,Dest.Location,6000
-		,CalcRequiredZHeight(Dest.Location.Z,Location.Z,Region.Zone.ZoneGravity.Z)
-		+JumpZHeightModifier)+JumpVelocityModifier;
+	V = SuggestFallVelocity(Location,Dest.Location,CalcRequiredZHeight(Dest.Location.Z,Location.Z,Region.Zone.ZoneGravity.Z),6000.f) + JumpVelocityModifier;
 
 	G = Region.Zone.ZoneGravity*Square(0.05f);
 	V*=0.05f;

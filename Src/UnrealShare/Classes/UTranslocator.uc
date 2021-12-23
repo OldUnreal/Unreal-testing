@@ -84,7 +84,6 @@ function TargetDestroyed()
 function Projectile ProjectileFire(class<projectile> ProjClass, float ProjSpeed, bool bWarn)
 {
 	local UTranslocatorTarget T;
-	local float Z;
 
 	T = UTranslocatorTarget(Super.ProjectileFire(ProjClass,ProjSpeed,bWarn));
 	if( T==None )
@@ -95,9 +94,8 @@ function Projectile ProjectileFire(class<projectile> ProjClass, float ProjSpeed,
 	T.MyTranslocator = Self;
 	if( PlayerPawn(Owner)==None )
 	{
-		Z = CalcRequiredZHeight(BotTransTarget.Z,T.Location.Z,T.Region.Zone.ZoneGravity.Z);
-		T.Velocity = SuggestFallVelocity(T.Location,BotTransTarget,T.Region.Zone.ZoneGravity.Z,1500,Z,BotPausingTime);
-		BotPausingTime+=Level.TimeSeconds;
+		T.Velocity = T.SuggestFallVelocity(T.Location,BotTransTarget,1500.f,1500.f,100.f);
+		BotPausingTime = Level.TimeSeconds + FMax(0.5f, (VSize2D(BotTransTarget-T.Location) / FMax(1.f,VSize2D(T.Velocity))));
 	}
 }
 
@@ -516,40 +514,6 @@ final function float CalcRequiredZHeight( float DestZ, float StartZ, float GravZ
 		LCount++;
 	}
 	return Abs(StartZ);
-}
-final function vector SuggestFallVelocity( vector Start, vector Dest, float gravZ, float MaxXYSpeed, float ZSpeed, out float JumpTime )
-{
-	local float currentZ,Floor,velsize;
-	local vector Vel;
-	local int LCount;
-
-	if ( gravZ >= 0 ) // negative gravity - pretend its low gravity
-	     gravZ = -100.f;
-	Floor = Dest.Z - Location.Z;
-
-	Vel.Z = ZSpeed;
-	JumpTime = 0.f;
-	while ( (currentZ>floor || Vel.Z>0) && LCount<8000 )
-	{
-		Vel.Z = Vel.Z + gravZ * 0.05f;
-		JumpTime += 0.05f;
-		currentZ = currentZ + Vel.Z * 0.05f;
-		LCount++;
-	}
-	if (Abs(Vel.Z) > 1.f)
-	     JumpTime-=(currentZ - floor)/vel.Z; //correct overshoot
-	vel = Dest - Start;
-	vel.Z = 0.f;
-	if(JumpTime > 0.f)
-	{
-		velsize = VSize(Vel);
-		if ( velsize > 0.f )
-			Vel = Vel/velsize;
-		Vel*=FMin(MaxXYSpeed, velsize/JumpTime);
-	}
-	else Vel = Normal(Vel)*MaxXYSpeed;
-	Vel.Z = ZSpeed;
-	return Vel;
 }
 
 defaultproperties

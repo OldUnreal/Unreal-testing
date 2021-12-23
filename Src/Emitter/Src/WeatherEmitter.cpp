@@ -341,7 +341,8 @@ void AXWeatherEmitter::PostScriptDestroyed()
 	guard(AXWeatherEmitter::PostScriptDestroyed);
 	Super::PostScriptDestroyed();
 	for (INT i = 0; i < NoRainBounds.Num(); ++i)
-		NoRainBounds(i)->Emitters.RemoveItem(this);
+		if (NoRainBounds(i))
+			NoRainBounds(i)->Emitters.RemoveItem(this);
 	unguard;
 }
 void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* Sender )
@@ -379,6 +380,7 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 		}
 	}
 	LastCamPosition = CamPos;
+	FPointRegion Reg;
 
 	BEGIN_PARTICLE_ITERATOR
 		// Particle died
@@ -471,13 +473,13 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 			if( WeatherType==EWF_Rain )
 				A->Rotation = GetFaceRotation(A->Location,LastCamPosition,A->Velocity.SafeNormal());
 
-			FPointRegion Reg = XLevel->Model->PointRegion(Level,D.Pos);
-			if( Reg.iLeaf==-1 || !Reg.Zone ) // Fell out of world, kill it.
+			XLevel->Model->GetPointRegion(Level, D.Pos, Reg);
+			if (!Reg.ZoneNumber) // Fell out of world, kill it.
 			{
 				D.DestroyParticle();
 				continue;
 			}
-			if( WaterHitEvent && Reg.Zone!=Region.Zone && Reg.Zone!=A->Region.Zone )
+			if (WaterHitEvent && Reg.Zone != Region.Zone && Reg.Zone != A->Region.Zone)
 			{
 				if( WaterHitEmitters.Num() && Reg.Zone->bWaterZone )
 					SpawnChildPart(A->Location-A->Velocity*DeltaTime,WaterHitEmitters);
@@ -582,8 +584,9 @@ BYTE AXWeatherEmitter::SpawnParticle( UEmitterRendering* Render, const FVector &
 	{
 		if( !XLevel || !XLevel->Model )
 			return 0;
-		FPointRegion RG=XLevel->Model->PointRegion(Level,SpP);
-		if( RG.Zone!=Region.Zone || RG.iLeaf==-1 || RG.ZoneNumber!=Region.ZoneNumber )
+		FPointRegion RG;
+		XLevel->Model->GetPointRegion(Level, SpP, RG);
+		if (RG.ZoneNumber != Region.ZoneNumber)
 			return 0;
 	}
 
@@ -673,15 +676,27 @@ void AXWeatherEmitter::Modify()
 
 		if( WallHitEmitter!=NAME_None || WaterHitEmitter!=NAME_None )
 		{
-			for( TObjectIterator<AXEmitter> It; It; ++It )
+			for (TActorIterator<AXEmitter> It(XLevel); It; ++It)
 			{
 				AXEmitter* X = *It;
-				if( X->bDeleteMe )
-					continue;
 				if( WallHitEmitter!=NAME_None && WallHitEmitter==X->Tag )
 					WallHitEmitters.AddItem(X);
 				if( WaterHitEmitter!=NAME_None && WaterHitEmitter==X->Tag )
 					WaterHitEmitters.AddItem(X);
+			}
+		}
+		for (TActorIterator<AXRainRestrictionVolume> It(XLevel); It; ++It)
+		{
+			AXRainRestrictionVolume* R = *It;
+			if (R->Tag == NAME_None || R->Tag == Tag)
+			{
+				R->Emitters.AddUniqueItem(this);
+				NoRainBounds.AddUniqueItem(R);
+			}
+			else
+			{
+				R->Emitters.RemoveItem(this);
+				NoRainBounds.RemoveItem(R);
 			}
 		}
 	}
@@ -787,23 +802,21 @@ void AXRainRestrictionVolume::Modify()
 	guardSlow(AXRainRestrictionVolume::Modify);
 	Super::Modify();
 	bBoundsDirty = TRUE;
-	if( !GIsEditor )
-		return;
-	TTransArray<AActor*>& AR = XLevel->Actors;
-	for( INT i=0; i<AR.Num(); ++i )
+	if (GIsEditor)
 	{
-		AXWeatherEmitter* W = Cast<AXWeatherEmitter>(AR(i));
-		if( !W || W->bDeleteMe )
-			continue;
-		if (Tag == NAME_None || W->Tag == Tag)
+		for (TActorIterator<AXWeatherEmitter> It(XLevel); It; ++It)
 		{
-			Emitters.AddUniqueItem(W);
-			W->NoRainBounds.AddItem(this);
-		}
-		else
-		{
-			Emitters.RemoveItem(W);
-			W->NoRainBounds.RemoveItem(this);
+			AXWeatherEmitter* W = *It;
+			if (Tag == NAME_None || W->Tag == Tag)
+			{
+				Emitters.AddUniqueItem(W);
+				W->NoRainBounds.AddUniqueItem(this);
+			}
+			else
+			{
+				Emitters.RemoveItem(W);
+				W->NoRainBounds.RemoveItem(this);
+			}
 		}
 	}
 	unguardSlow;

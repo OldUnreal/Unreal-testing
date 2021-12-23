@@ -1,8 +1,7 @@
 //=============================================================================
 // LiftCenter.
 //=============================================================================
-class LiftCenter extends NavigationPoint
-			native;
+class LiftCenter extends NavigationPoint;
 
 var() name LiftTag; // Matching Tag with LiftExit.LiftTag and Mover.Tag.
 var	 mover MyLift;
@@ -15,15 +14,15 @@ function PostBeginPlay()
 {
 	if ( LiftTag != '' )
 		ForEach AllActors(class'Mover', MyLift, LiftTag )
-	{
-		MyLift.myMarker = self;
-		SetBase(MyLift);
-		break;
-	}
+		{
+			MyLift.myMarker = self;
+			SetBase(MyLift);
+			break;
+		}
 	//log(self$" attached to "$MyLift);
 	if ( LiftTrigger != '' )
 		ForEach AllActors(class'Trigger', RecommendedTrigger, LiftTrigger )
-		break;
+			break;
 	Super.PostBeginPlay();
 }
 
@@ -34,43 +33,54 @@ It gives that path an opportunity to modify the result based on any special cons
 function Actor SpecialHandling(Pawn Other)
 {
 	local float dist2d;
+	local LiftExit Src;
 
 	if ( MyLift == None )
 		return self;
-	if ( Other.base == MyLift )
+	if ( Other.Base == MyLift )
 	{
-		if ( (RecommendedTrigger != None)
-				&& (myLift.SavedTrigger == None)
-				&& (Level.TimeSeconds - LastTriggerTime > 5) )
+		if ( RecommendedTrigger && !myLift.SavedTrigger && (Level.TimeSeconds - LastTriggerTime > 5) )
 		{
 			Other.SpecialGoal = RecommendedTrigger;
 			LastTriggerTime = Level.TimeSeconds;
 			return RecommendedTrigger;
 		}
-
-		return self;
+		return Self;
 	}
 
-	if ( (LiftExit(Other.MoveTarget) != None)
-			&& (LiftExit(Other.MoveTarget).RecommendedTrigger != None)
-			&& (LiftExit(Other.MoveTarget).LiftTag == LiftTag)
-			&& (Level.TimeSeconds - LiftExit(Other.MoveTarget).LastTriggerTime > 5)
-			&& (MyLift.SavedTrigger == None)
-			&& (Abs(Other.Location.X - Other.MoveTarget.Location.X) < Other.CollisionRadius)
-			&& (Abs(Other.Location.Y - Other.MoveTarget.Location.Y) < Other.CollisionRadius)
-			&& (Abs(Other.Location.Z - Other.MoveTarget.Location.Z) < Other.CollisionHeight) )
+	Src = LiftExit(Other.LastAnchor);
+	if( !Src )
+		Src = LiftExit(Other.MoveTarget);
+	
+	if( Src )
 	{
-		LiftExit(Other.MoveTarget).LastTriggerTime = Level.TimeSeconds;
-		Other.SpecialGoal = LiftExit(Other.MoveTarget).RecommendedTrigger;
-		return LiftExit(Other.MoveTarget).RecommendedTrigger;
+		if( Src.bCanJumpToCenter )
+			return Self;
+		
+		if( Src.DesiredKeyFrame!=255 )
+		{
+			if( MyLift && MyLift.AtKeyFrame(Src.DesiredKeyFrame) )
+				return Self;
+		}
+		else if ( Src.RecommendedTrigger && (Src.LiftTag == LiftTag) && (Level.TimeSeconds - Src.LastTriggerTime > 5)
+				&& !MyLift.SavedTrigger
+				&& (Abs(Other.Location.X - Src.Location.X) < Other.CollisionRadius)
+				&& (Abs(Other.Location.Y - Src.Location.Y) < Other.CollisionRadius)
+				&& (Abs(Other.Location.Z - Src.Location.Z) < Other.CollisionHeight) )
+		{
+			Src.LastTriggerTime = Level.TimeSeconds;
+			Other.SpecialGoal = Src.RecommendedTrigger;
+			return Src.RecommendedTrigger;
+		}
 	}
 
-	dist2d = square(Location.X - Other.Location.X) + square(Location.Y - Other.Location.Y);
-	if ( (Location.Z - CollisionHeight - MaxZDiffAdd < Other.Location.Z - Other.CollisionHeight + Other.MaxStepHeight)
-			&& (Location.Z - CollisionHeight > Other.Location.Z - Other.CollisionHeight - 1200)
-			&& ( dist2D < 160000) )
+	if( !Src || Src.DesiredKeyFrame==255 )
 	{
-		return self;
+		dist2d = VSize2DSq(Location - Other.Location);
+		if ( (Location.Z - CollisionHeight - MaxZDiffAdd < Other.Location.Z - Other.CollisionHeight + Other.MaxStepHeight)
+				&& (Location.Z - CollisionHeight > Other.Location.Z - Other.CollisionHeight - 1200)
+				&& (dist2D < 160000) )
+			return self;
 	}
 
 	if ( MyLift.BumpType == BT_PlayerBump && !Other.bIsPlayer )
@@ -110,4 +120,5 @@ defaultproperties
 	ExtraCost=400
 	ForcedPathSize=60
 	bNoStrafeTo=true
+	bIsSpecialNode=true
 }

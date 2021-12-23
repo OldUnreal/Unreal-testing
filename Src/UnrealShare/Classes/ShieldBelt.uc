@@ -30,13 +30,13 @@ var int TeamNum;
 
 function ArmorImpactEffect(vector HitLocation)
 {
-	if (PlayerPawn(Owner) != none)
+	if (PlayerPawn(Owner))
 		PlayerPawn(Owner).ClientFlash(-0.05,vect(400,400,400));
 
-	if (Pawn(Owner) != none)
+	if (Pawn(Owner))
 		Owner.PlaySound(DeActivateSound, SLOT_None, 2.7 * Pawn(Owner).SoundDampening);
 
-	if ( MyEffect != None )
+	if ( MyEffect )
 	{
 		//MyEffect.Texture = MyEffect.LowDetailTexture;
 		MyEffect.ScaleGlow = 4.0;
@@ -47,7 +47,7 @@ function ArmorImpactEffect(vector HitLocation)
 
 function Timer()
 {
-	if ( MyEffect != None )
+	if( MyEffect )
 	{
 		MyEffect.Fatness = MyEffect.Default.Fatness;
 		SetEffectTexture();
@@ -56,26 +56,22 @@ function Timer()
 
 function Destroyed()
 {
-	if ( Owner != None )
+	if ( Owner )
 		Owner.SetDefaultDisplayProperties();
-	if ( MyEffect != None )
+	if ( MyEffect )
 		MyEffect.Destroy();
 	Super.Destroyed();
 }
 
 function PickupFunction(Pawn Other)
-
 {
-
 	MyEffect = Spawn(class'ShieldBeltEffect', Owner,,Owner.Location, Owner.Rotation);
 	MyEffect.Mesh = Owner.Mesh;
 	MyEffect.DrawScale = Owner.Drawscale;
 
-	if ( Level.Game.bTeamGame && (Other.PlayerReplicationInfo != None) && Other.PlayerReplicationInfo.Team >= 0 && Other.PlayerReplicationInfo.Team <=4)
-		TeamNum = Other.PlayerReplicationInfo.Team;
-
-	else
-		TeamNum = 3;
+	if( Level.Game.bTeamGame )
+		TeamNum = Min(Other.GetTeamNum(), 3);
+	else TeamNum = 3;
 
 	SetEffectTexture();
 }
@@ -88,6 +84,30 @@ function SetEffectTexture()
 		MyEffect.ScaleGlow = 1.0;
 	MyEffect.Texture = TeamFireTextures[TeamNum];
 	MyEffect.LowDetailTexture = TeamTextures[TeamNum];
+}
+
+// 227j: Support dropped shieldbelt inventory.
+function DropFrom(vector StartLocation)
+{
+	local Pawn PawnOwner;
+	
+	PawnOwner = Pawn(Owner);
+	Super.DropFrom(StartLocation);
+	if( !Owner && PawnOwner )
+	{
+		if ( PawnOwner )
+			PawnOwner.SetDefaultDisplayProperties();
+		if( MyEffect )
+			MyEffect.Destroy();
+	}
+}
+
+// 227j: Support switching sub-levels.
+function OnSubLevelChange( LevelInfo PrevLevel )
+{
+	Super.OnSubLevelChange(PrevLevel);
+	if( MyEffect )
+		MyEffect.SendToLevel(Level, Location);
 }
 
 defaultproperties

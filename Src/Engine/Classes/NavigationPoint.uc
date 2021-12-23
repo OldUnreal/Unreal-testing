@@ -50,6 +50,7 @@ var bool bSpecialCost;	// if true, navigation code will call SpecialCost functio
 var() bool bOneWayPath;	// ReachSpecs from this path only in the direction the path is facing (180 degrees).
 var bool bAutoBuilt;	// placed during execution of "PATHS BUILD"
 var() bool bNoStrafeTo; // Pawn should never use serpentine movement upon entering this path.
+var bool bIsSpecialNode; // 227j: This node is special goal and shouldn't consider for visible-no-reach checks or shortcut path checks.
 
 native(519) final function describeSpec(int iSpec, out Actor Start, out Actor End, out int ReachFlags, out int Distance);
 event int SpecialCost(Pawn Seeker);

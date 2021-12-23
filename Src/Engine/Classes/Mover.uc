@@ -330,6 +330,14 @@ function Actor SpecialHandling(Pawn Other)
 	return self;
 }
 
+// 227j: AI hint if mover is at a keyframe.
+function bool AtKeyFrame( byte Num )
+{
+	if( !bInterpolating )
+		return (KeyNum==Num);
+	return (KeyNum==Num && PhysAlpha>0.98f);
+}
+
 //-----------------------------------------------------------------------------
 // Movement functions.
 

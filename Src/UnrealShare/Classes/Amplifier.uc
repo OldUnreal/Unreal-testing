@@ -86,15 +86,15 @@ function bool UseSpecialEffectsActor()
 
 function EnableInventoryEffects()
 {
-	if (Owner == none)
+	if( !Owner )
 		return;
 
 	if (!UseSpecialEffectsActor())
 		EffectsActor = Owner;
-	else if (EffectsActor == none || EffectsActor.bDeleteMe)
+	else if (!EffectsActor || EffectsActor.bDeleteMe)
 	{
 		EffectsActor = Spawn(class'Triggers', Owner, 'Amplifier_EffectsActor', Owner.Location);
-		if (EffectsActor != none)
+		if (EffectsActor)
 		{
 			EffectsActor.SetCollision(false);
 			EffectsActor.SetPhysics(PHYS_Trailer);
@@ -108,11 +108,11 @@ function EnableInventoryEffects()
 			EffectsActor = Owner;
 	}
 
-	if (Owner == none)
+	if( !Owner )
 		return;
 	Owner.PlaySound(ActivateSound);
 	EffectsActor.AmbientSound = AmpSound;
-	if (PlayerPawn(Owner) != none)
+	if (PlayerPawn(Owner))
 		PlayerPawn(Owner).ClientAdjustGlow(-0.1, vect(100, 20, 0));
 	EffectsActor.LightType = LT_Steady;
 	EffectsActor.LightRadius = 6;
@@ -136,7 +136,7 @@ function DisableInventoryEffects()
 			Owner.AmbientGlow = 0;
 		}
 	}
-	if (EffectsActor != none && EffectsActor != Owner)
+	if (EffectsActor && EffectsActor != Owner)
 		EffectsActor.Destroy();
 	EffectsActor = none;
 }
@@ -193,7 +193,14 @@ Begin:
 state DeActivated
 {
 Begin:
+}
 
+// 227j: Support switching sub-levels.
+function OnSubLevelChange( LevelInfo PrevLevel )
+{
+	Super.OnSubLevelChange(PrevLevel);
+	if (EffectsActor && EffectsActor != Owner)
+		EffectsActor.SendToLevel(Level, Location);
 }
 
 defaultproperties

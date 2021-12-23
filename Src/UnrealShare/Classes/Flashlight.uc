@@ -25,8 +25,9 @@ state Activated
 {
 	function endstate()
 	{
-		if( s!=None && !s.bDeleteMe )
+		if( s && !s.bDeleteMe )
 			s.Destroy();
+		s = None;
 		bActive = false;
 	}
 
@@ -44,9 +45,9 @@ state Activated
 			TimeChange = TimeChange - int(TimeChange);
 		}
 
-		if (s == None) Return;
+		if (!s) Return;
 
-		if ( Pawn(Owner) == None )
+		if ( !Pawn(Owner) )
 		{
 			s.Destroy();
 			UsedUp();
@@ -82,7 +83,7 @@ state Activated
 		s.LightHue = LightHue;
 		s.LightRadius = LightRadius;
 		if (Charge<400) s.LightBrightness=byte(Charge*0.6+10);
-		if (s==None) GoToState('DeActivated');
+		if (!s) GoToState('DeActivated');
 	}
 
 Begin:
@@ -90,9 +91,20 @@ Begin:
 state DeActivated
 {
 Begin:
-	if (s != none)
+	if (s)
+	{
 		s.Destroy();
+		s = None;
+	}
 	Owner.PlaySound(DeActivateSound);
+}
+
+// 227j: Support switching sub-levels.
+function OnSubLevelChange( LevelInfo PrevLevel )
+{
+	Super.OnSubLevelChange(PrevLevel);
+	if( s && !s.bDeleteMe )
+		s.SendToLevel(Level, Location);
 }
 
 defaultproperties

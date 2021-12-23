@@ -168,6 +168,7 @@ var(Networking) bool	bForceDirtyReplication; // 227j: This actor should instantl
 var bool				bAlwaysNetDirty;	// 227j: This actor should always be net dirty every tick (mainly for PlayerPawn).
 
 var transient const bool bRunningPhysics;	// 227j: This actor is currently simulating a physics step (thus can't change velocity).
+var transient const bool bRegionZoneDirty;	// 227j: This actor has moved since last time it did update its zone.
 var transient bool		bEdSelectionLock;	// 227j: This actor can't be selected in editor.
 var bool				bTraceHitBoxes;		// 227j: This actor should trace skeletal mesh hitboxes.
 var bool				bTextureAnimOnce;	// 227j: DT_SpriteAnimOnce but for mesh skins.
@@ -944,6 +945,12 @@ native final function GetRenderPosition( optional out vector Pos, optional out r
 // Physics control.
 native(301) final latent function FinishInterpolation();
 native(3970) final function SetPhysics( EPhysics newPhysics );
+
+// Return suggested velocity to fall from Start to End with desired speed.
+// @ ZSpeed - Optional 'JumpZ' speed which may be adjusted.
+// @ MaxXYSpeed - Maximum X/Y movement speed.
+// @ BaseZSpeed - Minimum base Z speed which is constant.
+native final function vector SuggestFallVelocity( vector Start, vector End, float ZSpeed, float MaxXYSpeed, optional float BaseZSpeed, optional vector Gravity /* =Region.Zone.ZoneGravity */ );
 
 //=============================================================================
 // Engine notification functions.

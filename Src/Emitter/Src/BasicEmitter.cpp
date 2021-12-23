@@ -487,23 +487,23 @@ BYTE AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVect
 
 	if( WaterImpactAction!=HIT_DoNothing )
 	{
-		A->Region.Zone = XLevel->Model->PointRegion(Level,DesPos).Zone;
+		XLevel->Model->GetPointRegion(Level, DesPos, A->Region);
 		if( A->Region.Zone )
 		{
-			switch( WaterImpactAction )
+			switch (WaterImpactAction)
 			{
 			case HIT_Destroy:
-				if( A->Region.Zone->bWaterZone )
+				if (A->Region.Zone->bWaterZone)
 				{
 					Data.DestroyParticle();
-					if( TDestructC.Num() )
-						SpawnChildPart(A->Location,TDestructC);
+					if (TDestructC.Num())
+						SpawnChildPart(A->Location, TDestructC);
 					if (DestroySound.SndCount)
 						DestroySound.PlaySoundEffect(A->Location, XLevel);
 				}
 				break;
 			case HIT_StopMovement:
-				if( A->Region.Zone->bWaterZone )
+				if (A->Region.Zone->bWaterZone)
 					A->bMovable = 0;
 				break;
 			}
@@ -636,7 +636,8 @@ void AXEmitter::UpdateParticles( float Delta, UEmitterRendering* Sender )
 				A->Location = DesPos;
 				if (WaterImpactAction)
 				{
-					FPointRegion Reg = XLevel->Model->PointRegion(Level, A->Location);
+					FPointRegion Reg;
+					XLevel->Model->GetPointRegion(Level, A->Location, Reg);
 					if (Reg.Zone && Reg.Zone != A->Region.Zone)
 					{
 						switch (WaterImpactAction)
