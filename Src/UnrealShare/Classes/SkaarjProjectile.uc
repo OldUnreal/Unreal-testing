@@ -9,7 +9,7 @@ class SkaarjProjectile extends Projectile;
 #exec AUDIO IMPORT FILE="Sounds\Skaarj\skasht2.wav" NAME="Skrjshot" GROUP="Skaarj"
 #exec AUDIO IMPORT FILE="Sounds\Skaarj\skaimp3.wav" NAME="SkrjImp" GROUP="Skaarj"
 
-auto state Flying
+auto simulated state Flying
 {
 	simulated function Timer()
 	{

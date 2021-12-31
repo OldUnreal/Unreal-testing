@@ -13,7 +13,7 @@ class TentacleProjectile extends Projectile;
 #exec AUDIO IMPORT FILE="Sounds\Tentacle\tensht1.wav" NAME="TentSpawn" GROUP="Tentacle"
 #exec AUDIO IMPORT FILE="Sounds\Tentacle\tenimp2.wav" NAME="TentImpact" GROUP="Tentacle"
 
-auto state Flying
+auto simulated state Flying
 {
 	simulated function ProcessTouch (Actor Other, Vector HitLocation)
 	{

@@ -22,7 +22,7 @@ class BruteProjectile extends Projectile;
 
 var float TimerDelay;
 
-auto state Flying
+auto simulated state Flying
 {
 	simulated function Timer()
 	{

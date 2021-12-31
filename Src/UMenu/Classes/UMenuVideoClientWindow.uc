@@ -178,6 +178,11 @@ var UWindowComboControl SkyFogCombo;
 var localized string SkyFogText;
 var localized string SkyFogHelp;
 
+// Lightmap LOD
+var UWindowHSliderControl LightLODSlider;
+var localized string LightLODText;
+var localized string LightLODHelp;
+
 var localized string NotAvailableText;
 
 function Created()
@@ -397,6 +402,15 @@ function Created()
 	SkyFogCombo.AddItem(Class'UnrealVideoMenu'.Default.SkyFogDetail[0], "FOGDETAIL_High");
 	SkyFogCombo.AddItem(Class'UnrealVideoMenu'.Default.SkyFogDetail[1], "FOGDETAIL_Low");
 	SkyFogCombo.AddItem(Class'UnrealVideoMenu'.Default.SkyFogDetail[2], "FOGDETAIL_None");
+	
+	// GUI Mouse speed
+	LightLODSlider = UWindowHSliderControl(CreateControl(class'UWindowHSliderControl', ControlLeft, ControlOffset, ControlWidth, 1));
+	LightLODSlider.bNoSlidingNotify = True;
+	LightLODSlider.SetRange(0, 8, 1);
+	LightLODSlider.SetText(LightLODText);
+	LightLODSlider.SetHelpText(LightLODHelp);
+	LightLODSlider.SetFont(F_Normal);
+	ControlOffset += 25;
 
 	// Use Precache
 	UsePrecacheCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
@@ -524,6 +538,7 @@ function LoadAvailableSettings()
 	DecoShadowsCheck.bChecked = class'GameInfo'.default.bDecoShadows;
 	FlatShadingCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager FlatShading"));
 	CurvyMeshCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager CurvedSurfaces"));
+	LightLODSlider.SetValue(int(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager LightMapLOD")));
 	LoadConditionallySupportedSettings();
 
 	bInitialized = True;
@@ -913,6 +928,7 @@ function BeforePaint(Canvas C, float X, float Y)
 	DecoShadowsCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	FlatShadingCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	CurvyMeshCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	LightLODSlider.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	SkyFogCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	UsePrecacheCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	TrilinearFilteringCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
@@ -1008,6 +1024,10 @@ function BeforePaint(Canvas C, float X, float Y)
 	SkyFogCombo.SetSize(ControlWidth, 1);
 	SkyFogCombo.WinLeft = ControlLeft;
 	SkyFogCombo.EditBoxWidth = EditAreaWidth;
+	
+	LightLODSlider.SetSize(ControlWidth, 1);
+	LightLODSlider.SliderWidth = EditAreaWidth;
+	LightLODSlider.WinLeft = ControlLeft;
 
 	UsePrecacheCheck.SetSize(CheckboxWidth, 1);
 	UsePrecacheCheck.WinLeft = ControlLeft;
@@ -1093,6 +1113,9 @@ function Notify(UWindowDialogControl C, byte E)
 			break;
 		case SkyFogCombo:
 			SkyFogDetailChanged();
+			break;
+		case LightLODSlider:
+			LightLODChange();
 			break;
 		case UsePrecacheCheck:
 			UsePrecacheChanged();
@@ -1254,6 +1277,12 @@ function MouseChanged()
 function DecalsChanged()
 {
 	GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.ViewportManager Decals" @ ShowDecalsCheck.bChecked);
+}
+
+function LightLODChange()
+{
+	if (bInitialized)
+		GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.ViewportManager LightMapLOD" @ int(LightLODSlider.Value));
 }
 
 function SpecularChanged()
@@ -1536,4 +1565,6 @@ defaultproperties
 	ControlOffset=20.000000
 	SkyFogText="Sky fog mode"
 	SkyFogHelp="Change how volumetric fog is being rendered on skybox."
+	LightLODText="Lightmap LOD"
+	LightLODHelp="Change the lighting LOD aggressiveness on world (lower meaning it will cut down light framerate on complex scenes)."
 }

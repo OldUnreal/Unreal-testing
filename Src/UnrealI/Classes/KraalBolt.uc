@@ -44,7 +44,7 @@ simulated function Explode(vector HitLocation, vector HitNormal)
 }
 
 
-auto state Flying
+auto simulated state Flying
 {
 	simulated function ProcessTouch (Actor Other, Vector HitLocation)
 	{

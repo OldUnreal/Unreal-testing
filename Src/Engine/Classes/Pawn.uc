@@ -2150,5 +2150,4 @@ defaultproperties
 	WalkingPct=0.3
 	CollisionFlag=COLLISIONFLAG_Pawn
 	bNoDynamicShadowCast=true
-	bCollideWhenPlacing=true
 }
