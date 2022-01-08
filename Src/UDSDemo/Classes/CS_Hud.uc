@@ -39,11 +39,11 @@ simulated function PostBeginPlay()
 	bPause = true;
 	bFadingIn = true;
 
-	if( Level.Title == "Intro1" )
+	if( class'CSPlayer'.Static.LevelIsIntro1(Level) )
 	{
 		SetTimer( 6.0, false );
 	}
-	else if( Level.Title != "Intro2" )
+	else if( class'CSPlayer'.Static.LevelIsIntro2(Level) )
 	{
 		SetTimer( 107.0, false );
 	}
@@ -81,11 +81,11 @@ simulated function PostRender( canvas Canvas )
 {
 	HUDSetup(canvas);
 
-	if( MOTDFadeOutTime != 0.0 && Level.Title == "Intro1"  )
+	if( MOTDFadeOutTime != 0.0 && class'CSPlayer'.Static.LevelIsIntro1(Level) )
 	{
 		DrawMessage( Canvas, MessageNumber );
 	}
-	else if( MOTDFadeOutTime != 0.0 && Level.Title != "Intro2" )
+	else if( MOTDFadeOutTime != 0.0 && !class'CSPlayer'.Static.LevelIsIntro2(Level) )
 	{
 		DrawCredits( Canvas, MessageNumber );
 	}

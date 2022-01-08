@@ -301,6 +301,7 @@ function PlayLanded(float impactVel)
 
 function PlayInAir()
 {
+	if( !Mesh ) return;
 	BaseEyeHeight =  0.7 * Default.BaseEyeHeight;
 	if ( (Weapon == None) || (Weapon.Mass < 20) )
 		TweenAnim('JumpSMFR', 0.8);

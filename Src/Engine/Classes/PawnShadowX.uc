@@ -156,6 +156,7 @@ simulated function ShadowModeChange()
 		PLShadow = none;
 		ProjectTexture = default.ProjectTexture;
 	}
+	VisibilityRadius = Default.VisibilityRadius * Class'ObjectShadow'.Default.OcclusionDistance;
 	
 	OldOwnerLocation = vect(1,2,3);
 	bOptionalUpdate = false;

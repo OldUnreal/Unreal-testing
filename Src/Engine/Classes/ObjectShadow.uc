@@ -5,6 +5,7 @@ class ObjectShadow extends Decal
 
 #exec TEXTURE IMPORT NAME=BlobShadow FILE=Textures\BlobShadow.pcx LODSET=2 FLAGS=64
 
+var() globalconfig float OcclusionDistance; // 0 = no limit, 0.5 = half the distance, 2 = double distance etc...
 var() config int ShadowDetailRes; // Must be a value in power of 2
 var() config bool bOptimizeTracing;
 var() float ShadowScaling;
@@ -155,6 +156,7 @@ simulated function ShadowModeChange()
 		PLShadow = none;
 		Texture = default.Texture;
 	}
+	VisibilityRadius = Default.VisibilityRadius * Class'ObjectShadow'.Default.OcclusionDistance;
 	
 	bOptionalUpdate = false;
 	UpdateShadow();
@@ -173,4 +175,5 @@ defaultproperties
 	bNoDecalProjector=true
 	VisibilityRadius=1500
 	Style=STY_None
+	OcclusionDistance=1
 }

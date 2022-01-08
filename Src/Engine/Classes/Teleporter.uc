@@ -7,6 +7,12 @@ class Teleporter extends NavigationPoint
 
 #exec Texture Import File=Textures\Teleport.pcx Name=S_Teleport Mips=Off Flags=2
 
+cpptext
+{
+	ATeleporter() {}
+	void Serialize( FArchive& Ar );
+}
+
 //-----------------------------------------------------------------------------
 // Teleporter URL can be one of the following forms:
 //
@@ -29,13 +35,14 @@ var() name ProductRequired;
 //-----------------------------------------------------------------------------
 // Teleporter destination flags.
 var() bool    bChangesVelocity; // Set velocity to TargetVelocity.
-var() bool    bChangesYaw;      // Sets yaw to teleporter's Rotation.Yaw
+var() bool    bChangesYaw;      // Sets yaw to teleporter's Rotation.Yaw (defaults to True in UT maps)
 var() bool    bReversesX;       // Reverses X-component of velocity.
 var() bool    bReversesY;       // Reverses Y-component of velocity.
 var() bool    bReversesZ;       // Reverses Z-component of velocity.
 
 // Teleporter flags
 var() bool	  bEnabled;			// Teleporter is turned on;
+var() bool    bUTRotationMode;	// 227j: bChangesYaw functions like in UT (defaults to True in UT maps).
 
 //-----------------------------------------------------------------------------
 // Teleporter destination directions.
@@ -115,6 +122,8 @@ function bool Accept( actor Incoming )
 	{
 		OldRot = Incoming.Rotation;
 		NewRot.Yaw = Rotation.Yaw;
+		if ( bUTRotationMode && Target )
+			NewRot.Yaw += (32768 + Incoming.Rotation.Yaw - Target.Rotation.Yaw);
 	}
 
 	if ( Incoming.bIsPawn )
@@ -277,6 +286,7 @@ function PostTouch( actor Other )
 	{
 		// Teleport the actor into the other teleporter.
 		PlayTeleportEffect(Other, false);
+		Dest.Target = Self;
 		if ( Dest.Accept(Other) && Other.bIsPawn )
 		{
 			TriggerEvent(Event,Other,Other.Instigator);

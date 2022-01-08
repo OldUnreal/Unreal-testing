@@ -112,6 +112,10 @@ var() localized String M_Deactivated;
 // 227j shadows:
 var transient Actor Shadow;
 
+var const NavigationPoint DroppedMarker; // 227: Pointer nearby navpoint.
+var const Inventory DroppedNext; // 227: Pointer to next dropped item to this navpoint.
+var const float DroppedDistance; // 227: Distance to the nearby navpoint.
+
 replication
 {
 	// Things the server should send to the client.
@@ -120,6 +124,10 @@ replication
 	unreliable if ( Role==ROLE_Authority )
 		FlashCount, bSteadyFlash3rd, ThirdPersonMesh, ThirdPersonScale;
 }
+
+// 227j: Mark this item as dropped item to give AI hint.
+native final function AddToNavigation();
+native final function RemoveFromNavigation();
 
 function PostBeginPlay()
 {
@@ -656,6 +664,8 @@ auto state Pickup
 		X = Normal(Y Cross HitNormal);
 		SetRotation(OrthoRotation(X,Y,HitNormal));
 		SetTimer(2.0, false);
+		if( bHeldItem )
+			AddToNavigation();
 	}
 
 	// Make sure no pawn already touching (while touch was disabled in sleep).
@@ -698,9 +708,11 @@ auto state Pickup
 
 	function EndState()
 	{
+		bSimulatedPawnRep = Default.bSimulatedPawnRep;
 		if (Physics != PHYS_Falling)
 			bCollideWorld = false;
 		bSleepTouch = false;
+		RemoveFromNavigation();
 	}
 
 	function Reset()
@@ -837,6 +849,8 @@ simulated function OwnerChanged()
 {
 	if( Level.NetMode!=NM_DedicatedServer )
 		ShadowModeChange();
+	if( Owner ) // Incase custom mod overrides Pickup.EndState
+		RemoveFromNavigation();
 }
 simulated function PostNetBeginPlay()
 {

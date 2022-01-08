@@ -2,15 +2,15 @@
 // NavigationPoint.
 //=============================================================================
 class NavigationPoint extends Actor
-			native;
+	native;
 
 #exec Texture Import File=Textures\S_Pickup.pcx Name=S_Pickup Mips=Off Flags=2
 
 //------------------------------------------------------------------------------
 // NavigationPoint variables
 var() name ownerTeam;	// Creature clan owning this area (area visible from this point)
-var() name ProscribedPaths[4]; // list of names or tags of NavigationPoints which should never be connected from this path
-var() name ForcedPaths[4];	// list of names or tags of NavigationPoints which should always be connected from this path
+var() name ProscribedPaths[4]; // 227: list of names or tags of NavigationPoints which should never be connected from this path
+var() name ForcedPaths[4];	// 227: list of names or tags of NavigationPoints which should always be connected from this path
 var int upstreamPaths[16];
 var int Paths[16]; // index of reachspecs (used by C++ Navigation code)
 var int PrunedPaths[16];
@@ -30,8 +30,10 @@ var transient private int PathSearchTag;
 var() byte PathDescription; // pointer to path description in zoneinfo LocationStrings array
 var pointer<FComputedReachability*> EditorData;
 
-var() int ForcedPathSize; // When path is forced, use this as path size.
-var() float MaxPathDistance; // Maximum path distance (used in editor while binding paths).
+var() int ForcedPathSize; // 227: When path is forced, use this as path size.
+var() float MaxPathDistance; // 227: Maximum path distance (used in editor while binding paths).
+
+var const Inventory DroppedInvList; // 227: Pointer to dropped inventory near this node.
 
 enum PathBuildingType
 {

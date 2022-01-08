@@ -376,7 +376,8 @@ function bool RedirectorSearch()
 			if( TR.bFirstTransition )
 			{
 				ForceMap = TR.MapToForce;
-				UPakConsole( PlayerPawn( Owner ).Player.Console ).NextMap = ForceMap;
+				if( UPakConsole( PlayerPawn( Owner ).Player.Console ) )
+					UPakConsole( PlayerPawn( Owner ).Player.Console ).NextMap = ForceMap;
 			}
 			AppendURL = TR.URL;
 			return true;

@@ -21,24 +21,27 @@ event playerpawn Login
 	class<playerpawn> SpawnClass
 )
 {
-//log( "SpawnClass.Name="$SpawnClass.Name$" SpawnClass = "$ SpawnClass ); //UG
-	if (SpawnClass.Name == 'MaleOne' )
+	switch( SpawnClass.Name )
 	{
-	  SpawnClass = class 'CSMaleOne';
-	}
-	else if (SpawnClass.Name == 'MaleTwo')   SpawnClass = class 'CSMaleTwo';
-	else if (SpawnClass.Name == 'MaleThree') SpawnClass = class 'CSMaleThree';
-	else if (SpawnClass.Name == 'FemaleOne' || SpawnClass == class'UnrealSpectator' || SpawnClass == class'DemoRecSpectator' || SpawnClass == class'SkaarjPlayer' )
-	{
+	case 'MaleOne':
+	case 'UPakMaleOne':
+		SpawnClass = class 'CSMaleOne';
+		break;
+	case 'MaleTwo':
+	case 'UPakMaleTwo':
+		SpawnClass = class 'CSMaleTwo';
+		break;
+	case 'MaleThree':
+	case 'UPakMaleThree':
+		SpawnClass = class 'CSMaleThree';
+		break;
+	case 'FemaleTwo':
+	case 'UPakFemaleTwo':
+		SpawnClass = class 'CSFemaleTwo';
+		break;
+	default:
 		SpawnClass = class 'CSFemaleOne';
 	}
-	else if (SpawnClass.Name == 'FemaleTwo') SpawnClass = class 'CSFemaleTwo';
-	else if (SpawnClass.Name == 'UPakMaleOne')   SpawnClass = class 'CSMaleOne';
-	else if (SpawnClass.Name == 'UPakMaleTwo')   SpawnClass = class 'CSMaleTwo';
-	else if (SpawnClass.Name == 'UPakMaleThree') SpawnClass = class 'CSMaleThree';
-	else if (SpawnClass.Name == 'UPakFemaleOne') SpawnClass = class 'CSFemaleOne';
-	else if (SpawnClass.Name == 'UPakFemaleTwo') SpawnClass = class 'CSFemaleTwo';
-//log( "SpawnClass.Name="$SpawnClass.Name$" SpawnClass = "$SpawnClass ); //UG
 
     NewPlayer = Super.Login(Portal, Options, Error, SpawnClass);
     NewPlayer.ClientAdjustGlow( -1.0, vect( 0, 0, 0 ) );
@@ -51,9 +54,11 @@ event playerpawn Login
 function Timer()
 {
     local CS_Action a;
-    foreach AllActors(class'CS_Action', a) {
-	a.Trigger(NewPlayer, NewPlayer.Instigator);
-	break;
+	
+    foreach AllActors(class'CS_Action', a)
+	{
+		a.Trigger(NewPlayer, NewPlayer.Instigator);
+		break;
     }
 }
 
@@ -62,18 +67,10 @@ function Timer()
 //
 function SendPlayer( PlayerPawn aPlayer, string URL )
 {
-	log( "URL: "$URL );
-	if( Level.Title != "Intro1" )
-	{
-		aPlayer.ClientTravel( URL, TRAVEL_Relative, true );
-	}
-	else
-	{
-		aPlayer.ClientTravel( URL, TRAVEL_Relative, true );
-	}
+	aPlayer.ClientTravel( URL, TRAVEL_Relative, true );
 }
 
 defaultproperties
 {
-     DefaultPlayerClass=Class'UDSDemo.CSPlayer'
+	DefaultPlayerClass=Class'UDSDemo.CSPlayer'
 }

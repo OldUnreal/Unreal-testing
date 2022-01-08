@@ -114,6 +114,7 @@ simulated function ShadowModeChange()
 		PLShadow = none;
 		ProjectTexture = default.ProjectTexture;
 	}
+	VisibilityRadius = Default.VisibilityRadius * Class'ObjectShadow'.Default.OcclusionDistance;
 	
 	bOptionalUpdate = false;
 	UpdateShadow();

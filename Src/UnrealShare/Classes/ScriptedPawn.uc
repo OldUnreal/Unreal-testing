@@ -1922,7 +1922,8 @@ state Waiting
 
 	function Landed(vector HitNormal)
 	{
-		SetPhysics(PHYS_None);
+		//SetPhysics(PHYS_None);
+		Acceleration = vect(0,0,0);
 	}
 
 	function BeginState()
@@ -1956,8 +1957,9 @@ Begin:
 	DesiredRotation = rot(0,0,0);
 	DesiredRotation.Yaw = Rotation.Yaw;
 	SetRotation(DesiredRotation);
-	if (Physics != PHYS_Falling)
-		SetPhysics(PHYS_None);
+	//if (Physics != PHYS_Falling)
+	//	SetPhysics(PHYS_None);
+	Acceleration = vect(0,0,0);
 
 KeepWaiting:
 	NextAnim = '';
@@ -2761,8 +2763,9 @@ Turn:
 	DesiredRotation = rot(0,0,0);
 	DesiredRotation.Yaw = Rotation.Yaw;
 	setRotation(DesiredRotation);
-	if (Physics != PHYS_Falling)
-		SetPhysics(PHYS_None);
+	//if (Physics != PHYS_Falling)
+	//	SetPhysics(PHYS_None);
+	Acceleration = vect(0,0,0);
 }
 
 state Ambushing
@@ -2787,7 +2790,8 @@ state Ambushing
 
 	function Landed(vector HitNormal)
 	{
-		SetPhysics(PHYS_None);
+		//SetPhysics(PHYS_None);
+		Acceleration = vect(0,0,0);
 	}
 
 	function SetFall()
@@ -2932,8 +2936,9 @@ Begin:
 	NextAnim = '';
 	PlayWaitingAmbush();
 	setRotation(DesiredRotation);
-	if (Physics != PHYS_Falling)
-		SetPhysics(PHYS_None);
+	//if (Physics != PHYS_Falling)
+	//	SetPhysics(PHYS_None);
+	Acceleration = vect(0,0,0);
 }
 
 /* Acquisition -
@@ -6380,9 +6385,9 @@ state Greeting
 
 	function Landed(vector HitNormal)
 	{
-		SetPhysics(PHYS_None);
+		//SetPhysics(PHYS_None);
+		Acceleration = vect(0,0,0);
 	}
-
 
 Begin:
 	MakeNoise(1.0);

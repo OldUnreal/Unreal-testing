@@ -89,6 +89,12 @@ var localized string PawnShadowHelp;
 var localized string PawnShadowList[6];
 var int OldShadowCmb;
 
+// Pawn Shadow view distance
+var UWindowComboControl ShadowDistanceCombo;
+var localized string ShadowDistanceText;
+var localized string ShadowDistanceHelp;
+var localized string ShadowDistanceOpts[6];
+
 // Show Decals
 var UWindowCheckbox ShowDecalsCheck;
 var localized string ShowDecalsText;
@@ -358,7 +364,7 @@ function Created()
 	WeaponFlashCheck.Align = TA_Left;
 	ControlOffset += 25;
 
-	// Texture Detail
+	// Pawn shadows
 	PawnShadowCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
 	PawnShadowCombo.SetText(PawnShadowText);
 	PawnShadowCombo.SetHelpText(PawnShadowHelp);
@@ -368,13 +374,23 @@ function Created()
 	for (i = 0; i < ArrayCount(PawnShadowList); ++i)
 		PawnShadowCombo.AddItem(PawnShadowList[i], string(i));
 
-	// Show shadows
+	// Decoration shadows
 	DecoShadowsCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
 	DecoShadowsCheck.SetText(DecoShadowsText);
 	DecoShadowsCheck.SetHelpText(DecoShadowsHelp);
 	DecoShadowsCheck.SetFont(F_Normal);
 	DecoShadowsCheck.Align = TA_Left;
 	ControlOffset += 25;
+	
+	// Pawn shadow view distance
+	ShadowDistanceCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
+	ShadowDistanceCombo.SetText(ShadowDistanceText);
+	ShadowDistanceCombo.SetHelpText(ShadowDistanceHelp);
+	ShadowDistanceCombo.SetFont(F_Normal);
+	ShadowDistanceCombo.SetEditable(False);
+	ControlOffset += 25;
+	for (i = 0; i < ArrayCount(ShadowDistanceOpts); ++i)
+		ShadowDistanceCombo.AddItem(ShadowDistanceOpts[i], string(i));
 
 	// Flat shading
 	FlatShadingCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
@@ -535,7 +551,6 @@ function LoadAvailableSettings()
 	DynamicLightsCheck.bChecked = !bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager NoDynamicLights"));
 	WeaponFlashCheck.bChecked = !P.bNoFlash;
 	LoadPawnShadowSettings();
-	DecoShadowsCheck.bChecked = class'GameInfo'.default.bDecoShadows;
 	FlatShadingCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager FlatShading"));
 	CurvyMeshCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager CurvedSurfaces"));
 	LightLODSlider.SetValue(int(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager LightMapLOD")));
@@ -646,6 +661,21 @@ function LoadPawnShadowSettings()
 		PawnShadowCombo.EditBox.Value = PawnShadowList[5];
 		PawnShadowCombo.EditBox.Value2 = "5";
 	}
+	
+	DecoShadowsCheck.bChecked = class'GameInfo'.default.bDecoShadows;
+	
+	ShadowDistanceCombo.SetDisabled(!class'GameInfo'.default.bCastShadow && !class'GameInfo'.default.bDecoShadows);
+	if( Class'ObjectShadow'.Default.OcclusionDistance<=0.01f )
+		ShadowDistanceCombo.SetSelectedIndex(5);
+	else if( Class'ObjectShadow'.Default.OcclusionDistance<=0.75f )
+		ShadowDistanceCombo.SetSelectedIndex(0);
+	else if( Class'ObjectShadow'.Default.OcclusionDistance<=1.5f )
+		ShadowDistanceCombo.SetSelectedIndex(1);
+	else if( Class'ObjectShadow'.Default.OcclusionDistance<=2.5f )
+		ShadowDistanceCombo.SetSelectedIndex(2);
+	else if( Class'ObjectShadow'.Default.OcclusionDistance<=4.5f )
+		ShadowDistanceCombo.SetSelectedIndex(3);
+	else ShadowDistanceCombo.SetSelectedIndex(4);
 }
 
 function LoadConditionallySupportedSettings()
@@ -921,6 +951,7 @@ function BeforePaint(Canvas C, float X, float Y)
 	GuiSkinCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	PawnShadowCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	ShowDecalsCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	ShadowDistanceCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	ShowSpecularCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	DynamicLightsCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	WeaponFlashCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
@@ -998,6 +1029,10 @@ function BeforePaint(Canvas C, float X, float Y)
 
 	ShowDecalsCheck.SetSize(CheckboxWidth, 1);
 	ShowDecalsCheck.WinLeft = ControlLeft;
+	
+	ShadowDistanceCombo.SetSize(ControlWidth, 1);
+	ShadowDistanceCombo.WinLeft = ControlLeft;
+	ShadowDistanceCombo.EditBoxWidth = EditAreaWidth;
 	
 	ShowSpecularCheck.SetSize(CheckboxWidth, 1);
 	ShowSpecularCheck.WinLeft = ControlLeft;
@@ -1104,6 +1139,9 @@ function Notify(UWindowDialogControl C, byte E)
 			break;
 		case DecoShadowsCheck:
 			ShadowsChanged(1);
+			break;
+		case ShadowDistanceCombo:
+			ShadowsChanged(2);
 			break;
 		case FlatShadingCheck:
 			FlatShadingChanged();
@@ -1457,7 +1495,34 @@ function ShadowsChanged(byte Idx)
 		P.ConsoleCommand("set Engine.GameInfo bDecoShadows" @ DecoShadowsCheck.bChecked);
 		class'ObjectShadow'.static.UpdateAllShadows(GetLevel(), true);
 		break;
+	case 2:
+		switch( ShadowDistanceCombo.GetSelectedIndex() )
+		{
+		case 0:
+			Class'ObjectShadow'.Default.OcclusionDistance = 0.5f;
+			break;
+		case 1:
+			Class'ObjectShadow'.Default.OcclusionDistance = 1.f;
+			break;
+		case 2:
+			Class'ObjectShadow'.Default.OcclusionDistance = 2.f;
+			break;
+		case 3:
+			Class'ObjectShadow'.Default.OcclusionDistance = 4.f;
+			break;
+		case 4:
+			Class'ObjectShadow'.Default.OcclusionDistance = 8.f;
+			break;
+		default:
+			Class'ObjectShadow'.Default.OcclusionDistance = 0.f;
+			break;
+		}
+		Class'ObjectShadow'.static.StaticSaveConfig();
+		class'ObjectShadow'.static.UpdateAllShadows(GetLevel(), true);
+		break;
 	}
+	
+	ShadowDistanceCombo.SetDisabled(!class'GameInfo'.default.bCastShadow && !class'GameInfo'.default.bDecoShadows);
 }
 
 function SetVideoDriverProperties(string AssignmentList)
@@ -1481,34 +1546,46 @@ function SaveConfigs()
 defaultproperties
 {
 	EditAreaWidth=110
+	
 	DriverText="Video Driver"
 	DriverHelp="This is the current video driver. Press the Restart button to apply changes."
+	
 	ShowWindowedText="Show Fullscreen"
 	ShowWindowedHelp="Whether Unreal should use fullscreen mode."
+	
 	ResolutionText="Resolution"
 	ResolutionHelp="Select a new screen resolution."
+	
 	ColorDepthText="Color Depth"
 	ColorDepthHelp="Select a new color depth."
 	BitsText="bit"
+	
 	TextureDetailText="World Texture Detail"
 	TextureDetailHelp="Change the texture detail of world geometry.  Use a lower texture detail to improve game performance."
 	Details(0)="High"
 	Details(1)="Medium"
 	Details(2)="Low"
+	
 	SkinDetailText="Skin Detail"
 	SkinDetailHelp="Change the detail of player skins.  Use a lower skin detail to improve game performance."
+	
 	BrightnessText="Brightness"
 	BrightnessHelp="Adjust display brightness."
+	
 	ScaleText="Font Size"
 	ScaleHelp="Adjust the size of elements in the User Interface."
 	ScaleSizes(0)="Normal"
 	ScaleSizes(1)="Double"
+	
 	HUDScaleText="HUD Scaling"
 	HUDScaleHelp="Adjust the size of the in-game Heads-up-Display."
+	
 	MouseText="GUI Mouse Speed"
 	MouseHelp="Adjust the speed of the mouse in the User Interface."
+	
 	GuiSkinText="GUI Skin"
 	GuiSkinHelp="Change the look of the User Interface windows to a custom skin."
+	
 	ConfirmSettingsTitle="Confirm Video Settings Change"
 	ConfirmSettingsText="Are you sure you wish to keep these new video settings?"
 	ConfirmSettingsCancelTitle="Video Settings Change"
@@ -1517,6 +1594,7 @@ defaultproperties
 	ConfirmTextureDetailText="Increasing texture detail above its default value may degrade performance on some machines."
 	ConfirmDriverTitle="Change Video Driver"
 	ConfirmDriverText="Do you want to restart Unreal with the selected video driver?"
+	
 	PawnShadowText="Pawn shadows"
 	PawnShadowHelp="Detail of shadows that pawns should cast on ground (changes will take effect after mapchange)."
 	PawnShadowList(0)="None"
@@ -1525,46 +1603,72 @@ defaultproperties
 	PawnShadowList(3)="Realtime Med Res"
 	PawnShadowList(4)="Realtime High Res"
 	PawnShadowList(5)="Realtime Ultra Res"
+	
 	ShowDecalsText="Show Decals"
 	ShowDecalsHelp="If checked, impact and gore decals will be used in game."
+	
 	ShowSpecularText="Enable Specular Lights"
 	ShowSpecularHelp="If checked, allow game render meshes old style lighting."
+	
+	ShadowDistanceText="Shadow draw distance"
+	ShadowDistanceHelp="Draw distance of pawn/decoration realtime shadows."
+	ShadowDistanceOpts(0)="Low (-50 %)"
+	ShadowDistanceOpts(1)="Medium"
+	ShadowDistanceOpts(2)="Long (2x)"
+	ShadowDistanceOpts(3)="High (4x)"
+	ShadowDistanceOpts(4)="Ultra (8x)"
+	ShadowDistanceOpts(5)="Unlimited"
+	
 	MinFramerateText="Min Desired Framerate"
 	MinFramerateHelp="If your framerate falls below this value, Unreal will reduce special effects to increase the framerate."
+	
 	DynamicLightsText="Use Dynamic Lighting"
 	DynamicLightsHelp="If checked, dynamic lighting will be used in game."
+	
 	WeaponFlashText="Weapon Flash"
 	WeaponFlashHelp="If checked, your screen will flash when you fire your weapon."
+	
 	FovAngleText="FOV Angle"
 	FovAngleHelp="Horizontal FOV (field of view) angle in degrees"
+	
 	DecoShadowsText="Decoration shadows"
 	DecoShadowsHelp="Whether decorations should cast shadows to the ground."
+	
 	FlatShadingText="Mesh flat shading"
 	FlatShadingHelp="Allow specific meshes render with flat shading lighting."
+	
 	CurvyMeshText="Curvy meshes"
 	CurvyMeshHelp="Allow specific meshes render with some curved surfaces."
+	
 	UsePrecacheText="Precache Content"
 	UsePrecacheHelp="Use this option for precaching map content (such as sounds and textures)."
+	
 	TrilinearFilteringText="Trilinear Filtering"
 	TrilinearFilteringHelp="Trilinear texture filtering."
+	
 	AnisotropicFilteringText="Anisotropic Filtering"
 	AnisotropicFilteringHelp="Anisotropic texture filtering."
 	AnisotropicFilteringModes(0)="Off"
 	AnisotropicFilteringModes(1)="%Nx"
+	
 	AntialiasingText="Antialiasing"
 	AntialiasingHelp="Antialiasing mode."
 	AntialiasingModes(0)="Off"
 	AntialiasingModes(1)="On"
 	AntialiasingModes(2)="%Nx"
+	
 	VSyncText="Vertical Synchronization"
 	VSyncHelp="Vertical synchronization"
 	VSyncModes(0)="Off"
 	VSyncModes(1)="On"
 	VSyncModes(2)="Adaptive"
+	
 	NotAvailableText="Not available"
 	ControlOffset=20.000000
+	
 	SkyFogText="Sky fog mode"
 	SkyFogHelp="Change how volumetric fog is being rendered on skybox."
+	
 	LightLODText="Lightmap LOD"
 	LightLODHelp="Change the lighting LOD aggressiveness on world (lower meaning it will cut down light framerate on complex scenes)."
 }

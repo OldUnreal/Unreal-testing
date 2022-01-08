@@ -192,32 +192,17 @@ function POVFirstPerson()
 
 exec function ShowMenu()
 {
-	log( "ESC PRESSED: READ BY "$self );
-	if( Level.Title == "Intro1" )
-	{
-		Level.Game.SendPlayer( Self, "Intro2" );
-	}
-	else if( Level.Title == "Intro2" )
-	{
-		Level.Game.SendPlayer( Self, "InterIntro?game=upak.upaktransitioninfo?class=UPak."$AdjustPlayer() );
-	}
-	else
-	{
-		Level.Game.SendPlayer( Self, "UPack?game=upak.upakintro" );
-	}
-	ViewTarget = none;
-	bCSCameraMode = false;
-	bBehindView = false;
-	WalkBob = vect(0,0,0);
-
-	bShowMenu = true; // menu is responsible for turning this off
-	Player.Console.GotoState('Menuing');
-
-
-//	if( Level.Netmode == NM_Standalone )
-//		SetPause(true);
+	Fire();
 }
 
+static final function bool LevelIsIntro1( LevelInfo L )
+{
+	return (L.Title ~= "Intro1" || string(L.Outer.Name) ~= "Intro1");
+}
+static final function bool LevelIsIntro2( LevelInfo L )
+{
+	return (L.Title ~= "Intro2" || string(L.Outer.Name) ~= "Intro2");
+}
 
 function Freeze(bool value)
 {
@@ -448,18 +433,14 @@ ignores SeePlayer, HearNoise, Bump;
 // The player wants to fire.
 exec function Fire( optional float F )
 {
-	if( Level.Title=="Intro1" )
-	{
-		Level.Game.SendPlayer( Self, "Intro2" );
-	}
-	else if( Level.Title != "Intro2" )
-	{
-		Level.Game.SendPlayer( Self, "UPack?game=upak.upakintro" );
-	}
-	else
-	{
-		Level.Game.SendPlayer( Self, "InterIntro?game=upak.upaktransitioninfo?class=UPak."$AdjustPlayer() );
-	}
+	local string URL;
+	
+	if( LevelIsIntro1(Level) )
+		URL = "Intro2";
+	else if( LevelIsIntro2(Level) )
+		URL = "InterIntro?Game=UPak.UPakTransitionInfo?Class=UPak."$AdjustPlayer();
+	else URL = "UPack?Game=UPak.UPakIntro";
+	Level.Game.SendPlayer(Self, URL);
 }
 
 // The player wants to alternate-fire.
@@ -749,31 +730,19 @@ state PlayerWalking
 
 function string AdjustPlayer()
 {
-	if( Self.IsA( 'CSMaleOne' ) )
+	switch( Class.Name )
 	{
+	case 'CSMaleOne':
 		return "UPakMaleOne";
-	}
-	else
-	if( Self.IsA( 'CSMaleTwo' ) )
-	{
+	case 'CSMaleTwo':
 		return "UPakMaleTwo";
-	}
-	else
-	if( Self.IsA( 'CSMaleThree' ) )
-	{
+	case 'CSMaleThree':
 		return "UPakMaleThree";
-	}
-	else
-	if( Self.IsA( 'CSFemaleOne' ) )
-	{
+	case 'CSFemaleTwo':
+		return "UPakFemaleTwo";
+	default:
 		return "UPakFemaleOne";
 	}
-	else
-	if( Self.IsA( 'CSFemaleTwo' ) )
-	{
-		return "UPakFemaleTwo";
-	}
-
 }
 
 simulated function ClientPlaySound(sound ASound, optional ESoundSlot SlotType)
