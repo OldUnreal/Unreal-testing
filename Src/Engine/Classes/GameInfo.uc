@@ -1748,6 +1748,13 @@ exec final function UGetConnections( PlayerPawn Caller ) //this should never be 
 		GetAccessManager().GetConnections(Caller);
 }
 
+// Dedicated server host entered "say" command on console.
+event ConsoleMessage( string Msg )
+{
+	SentText = 0; // Always make room for admin message.
+	BroadcastMessage("Console: "$Msg, true, 'Event');
+}
+
 defaultproperties
 {
 	Difficulty=1
