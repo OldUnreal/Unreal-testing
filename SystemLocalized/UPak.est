@@ -50,7 +50,7 @@ GESBioRifleStat="Rifle Biológico GES"
 MinigunStat="Ametralladora"
 ; EN: RazorjackStat="Razorjack"
 RazorjackStat="Lanzacuchillas"
-; EN: RifleStat="Rifle"
+; EN: RifleStat="Sniper Rifle"
 RifleStat="Rifle de Francotirador"
 ; EN: StingerStat="Stinger"
 StingerStat="Cañón Perforador"
@@ -60,10 +60,10 @@ TotalStat="Muertes en Total"
 LogEntryMsg="ENTRADA DE REGISTRO:"
 
 [GrenadeLauncher]
-; EN: DeathMessage="%k's %w blew up %o."
-DeathMessage="La granada del %w de %k ha desmembrado a %o."
+; EN: DeathMessage="%k's grenade made %o blew up."
+DeathMessage="La granada de %k ha hecho explotar a %o."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
-PickupMessage="Tienes el Lanzagranadas UMS"
+PickupMessage="Has recogido el Lanzagranadas UMS"
 ; EN: ItemName="UMS Grenade Launcher"
 ItemName="Lanzagranadas UMS"
 
@@ -88,10 +88,10 @@ MultWeapSlotMsg="Pulsa el botón de selección de arma para cambiar armas."
 GameName="Paquete de Misiones para Unreal"
 
 [RocketLauncher]
-; EN: DeathMessage="%k's %w turned %o's body into chunks."
-DeathMessage="%k ha convertido en añicos el cuerpo de %o con su %w."
+; EN: DeathMessage="%k's rocket turned %o's body into chunks."
+DeathMessage="El cohete de %k ha convertido en añicos el cuerpo de %o."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
-PickupMessage="Tienes el lanzacohetes UMS"
+PickupMessage="Has recogido el Lanzacohetes UMS"
 ; EN: ItemName="UMS Rocket Launcher"
 ItemName="Lanzador de cohetes UMS"
 
@@ -105,9 +105,9 @@ GameName="Partida de Camuflaje"
 
 [CARifle]
 ; EN: DeathMessage="%k's %w turned %o into swiss cheese."
-DeathMessage="%k convirtió a %o en queso gruyére."
+DeathMessage="%k convirtió a %o en queso gruyére con su %w."
 ; EN: PickupMessage="You got the Combat Assault Rifle"
-PickupMessage="Tienes el rifle de asalto de combate"
+PickupMessage="Has recogido el Rifle de asalto de combate"
 ; EN: ItemName="Combat Assault Rifle"
 ItemName="Rifle de asalto de combate"
 

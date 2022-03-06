@@ -1,1619 +1,1672 @@
-public]
-
-
-Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console)
-
-Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Gold)
-
-Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Ice)
-
-Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Metal)
-
-Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description=Unreal)
-
-[UnrealConsole]
-
-ClassCaption="UMenu Browser Console"
-
+Ôªø[public]
+Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu")
+; EN: Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Gold")
+Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Oro")
+; EN: Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Ice")
+Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Ghiaccio")
+; EN: Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metal")
+Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metallo")
 
 [UMenuBotmatchClientWindow]
-
+; EN: StartMatchTab="Match"
 StartMatchTab="Incontro"
-
+; EN: RulesTab="Rules"
 RulesTab="Regole"
-
+; EN: SettingsTab="Settings"
 SettingsTab="Impostazioni"
-
+; EN: BotConfigTab="Bots"
 BotConfigTab="Bot"
-
+; EN: StartText="Start"
 StartText="Gioca"
 
-
-[UMenuMenuBar]
-
-GameName="Partita"
-
-GameHelp="Inizia nuova partita, carica partita o esci."
-
-MultiplayerName="Multigiocatore"
-
-MultiplayerHelp="Ospita o unisciti a partita multigiocatore."
-
-OptionsName="Opzioni"
-
-OptionsHelp="Configura impostazioni."
-
-ToolName="Strumenti"
-
-ToolHelp="Attiva diversi strumenti di sistema."
-
-HelpName="Aiuto"
-
-HelpHelp="Attiva o disattiva aiuto."
-
-VersionName="Versione"
-
-ModName="Mod"
-
-ModHelp="Configura i mod creati dall'utente che hai installato."
-
-DemoName="&Registrazione"
-
-DemoHelp="Registrazione Demo, registra un gioco che puoi visualizzare in seguito."
-
-
-[UTCreditsCW]
-
-ProgrammersText="Programmazione"
-
-LevelDesignText="Progettazione livelli"
-
-ArtText="Grafica e modelli"
-
-MusicSoundText="Musica e sonoro"
-
-BizText="Biz"
-
-
 [UMenuModMenuItem]
-
-MenuCaption="Il mio Mod"
-
+; EN: MenuCaption="&My Mod"
+MenuCaption="&Il mio Mod"
+; EN: MenuHelp="This text goes on the status bar"
 MenuHelp="Questo testo va sulla barra di stato"
 
-
-[UMenuVideoClientWindow]
-
-DriverText="Driver Video"
-
-DriverHelp="Questo Ë il driver video attuale. Usa il pulsante Cambia per modificare i driver video."
-
-DriverButtonText="Cambia"
-
-DriverButtonHelp="Premi questo pulsante per cambiare il driver video."
-
-ResolutionText="Risoluzione"
-
-ResolutionHelp="Seleziona una nuova risoluzione dello schermo."
-
-ColorDepthText="Profondit‡ colore"
-
-ColorDepthHelp="Seleziona una nuova profondit‡ colore."
-
-BitsText="bit"
-
-TextureDetailText="Dettaglio texture mondo"
-
-TextureDetailHelp="Cambia il dettaglio delle texture della geometria del mondo. Usa un dettaglio inferiore per migliorare le prestazioni di gioco."
-
-Details[0]="Alto"
-
-Details[1]="Medio"
-
-Details[2]="Basso"
-
-SkinDetailText="Dettaglio skin"
-
-SkinDetailHelp="Cambia il dettaglio della skin del giocatore. Usa un dettaglio inferiore per migliorare le prestazioni di gioco."
-
-BrightnessText="Luminosit‡"
-
-BrightnessHelp="Regola luminosit‡ schermo."
-
-ScaleText="Dimensioni font"
-
-ScaleHelp="Regola le dimensioni degli elementi dell'interfaccia utente."
-
-ScaleSizes[0]="Normale"
-
-ScaleSizes[1]="Doppie"
-
-TranslatorScaleText="Traduttore Dimensione"
-
-TranslatorScaleHelp="Regolare la dimensione del traduttore."
-
-MouseText="Velocit‡ mouse IU"
-
-MouseHelp="Regola la velocit‡ del mouse nell'interfaccia utente."
-
-GuiSkinText="Skin IU"
-
-GuiSkinHelp="Modifica l'aspetto delle finestre dell'interfaccia utente con una skin personalizzata."
-
-ConfirmSettingsTitle="Conferma cambiamento impostazioni video"
-
-ConfirmSettingsText="Sei sicuro di voler mantenere queste nuove impostazioni video?"
-
-ConfirmSettingsCancelTitle="Cambio delle impostazioni video"
-
-ConfirmSettingsCancelText="Sono state ripristinate le impostazioni video precedenti."
-
-ConfirmTextureDetailTitle="Conferma dettagli texture"
-
-ConfirmTextureDetailText="L'aumento dei dettagli delle texture al di sopra del valore predefinito potrebbe influire negativamente sulle prestazioni di alcuni sistemi.\\n\\nApportare comunque la modifica?"
-
-ConfirmDriverTitle="Cambia Driver Video"
-
-ConfirmDriverText="Questa opzione riavvier‡ Unreal e ti consentir‡ di cambiare il path di rendering. Vuoi procedere?"
-
-PawnShadowsText="Ombre dettagliate"
-
-PawnShadowsHelp="Gli oggetti creerano un'ombra pi˘ dettagliata (necessario il cambiamento di mappa per avere effetto)"
-
-PawnShadowList[0]="NESSUNA"
-
-PawnShadowList[1]="Macchia"
-
-PawnShadowList[2]="In Tempo Reale a Bassa Risoluzione"
-
-PawnShadowList[3]="In Tempo Reale a Media Risoluzione"
-
-PawnShadowList[4]="In Tempo Reale ad Alta Risoluzione"
-
-PawnShadowList[5]="In Tempo Reale ad Altissima Risoluzione"
-
-ShowDecalsText="Mostra dettagli"
-
-ShowDecalsHelp="Se selezionata, la grafica degli scontri e delle uccisioni sar‡ pi˘ dettagliata."
-
-MinFramerateText="Freq. fotogr. minima"
-
-MinFramerateHelp="Se la tua frequenza dei fotogrammi scende sotto questo valore, Unreal ridurr‡ gli effetti speciali per aumentarla."
-
-DynamicLightsText="Illuminazione dinamica"
-
-DynamicLightsHelp="Se selezionata, nel gioco verr‡ usata l'illuminazione dinamica."
-
-WideScreenText="Regolazione Widescreen"
-
-WideScreenHelp="Usa la freccia sinistra e destra per regolare il campo di visuale (FoV) per schermi Widescreen"
-
-DecoShadowsText="Ombre Decorazioni"
-
-DecoShadowsHelp="Le decorazioni creeranno un'ombra sul terreno (necessario il cambiamento di mappa per avere effetto)."
-
-FullMeshRendText="Resa completa mesh"
-
-FullMeshRendHelp="(Dipendente dal path di rendering) Se selezionata, corregger‡ il problema con le mesh enormi, ma *potrebbe* causare qualche rallentamento."
-
-FlatShadingText="Obreggiatura uniforme della Mesh"
-
-FlatShadingHelp="Rendering di mesh mediante il modello di ombreggiatura Flat Shading"
-
-CurvyMeshText="Mesh Curve"
-
-CurvyMeshHelp="Permette il rendering di mesh con alcune superfici curve."
-
-
-[UMenuPlayerSetupClient]
-
-NameText="Nome:"
-
-NameHelp="Indica il nome del tuo giocatore."
-
-TeamText="Squadra:"
-
-Teams[0]="Rossa"
-
-Teams[1]="Blu"
-
-Teams[2]="Verde"
-
-Teams[3]="Oro"
-
-NoTeam="Nessuna"
-
-TeamHelp="Seleziona la squadra con cui vuoi giocare."
-
-ClassText="Classe:"
-
-ClassHelp="Seleziona la classe del tuo giocatore."
-
-SkinText="Skin:"
-
-SkinHelp="Scegli una skin per il tuo giocatore."
-
-FaceText="Faccia:"
-
-FaceHelp="Scegli una faccia per il tuo giocatore."
-
-SpectatorText="Gioca come spettatore"
-
-SpectatorHelp="Seleziona questa casella per guardare la partita come uno spettatore."
-
-
 [UMenuPlayerMeshClient]
-
+; EN: FaceText="Face"
 FaceText="Faccia"
-
+; EN: BodyText="Body"
 BodyText="Corpo"
 
-
-[UMenuStartMatchClientWindow]
-
-GameText="Tipo partita:"
-
-GameHelp="Seleziona il tipo di partita."
-
-MapText="Mappa:"
-
-MapHelp="Seleziona la mappa."
-
-MapListText="Elenco mappe"
-
-MapListHelp="Clicca su questo pulsante per passare all'elenco delle mappe."
-
-MutatorText="Mutatori"
-
-MutatorHelp="I mutatori sono script creati dall'utente che modificano gli oggetti e le armi che compaiono in una mappa. Premi questo pulsante per scegliere quali mutatori usare."
-
 [UMenuServerSetupPage]
-
-AdminEmailText="Email admin"
-
+EditAreaWidth=134
+; EN: AdminEmailText="Admin E-mail"
+AdminEmailText="Email Ammin"
+; EN: AdminEMailHelp="Enter an e-mail address so users of this server can contact you."
 AdminEMailHelp="Inserisci un indirizzo email in modo che gli utenti di questo server possano contattarti."
-
-AdminNameText="Nome admin"
-
+; EN: AdminNameText="Admin Name"
+AdminNameText="Nome Ammin"
+; EN: AdminNameHelp="Enter the name of this server's administrator."
 AdminNameHelp="Inserisci il nome dell'amministratore di questo server."
-
+; EN: MOTDLine1Text="MOTD Line 1"
 MOTDLine1Text="MDG linea 1"
-
-MOTDLine1Help="Inserisci un messaggio del giorno che verr‡ presentato agli utenti che si uniscono al tuo server."
-
+; EN: MOTDLine1Help="Enter a message of the day which will be presented to users upon joining your server."
+MOTDLine1Help="Inserisci un messaggio del giorno che verr√† presentato agli utenti che si uniscono al tuo server."
+; EN: MOTDLine2Text="MOTD Line 2"
 MOTDLine2Text="MDG linea 2"
-
-MOTDLine2Help="Inserisci un messaggio del giorno che verr‡ presentato agli utenti che si uniscono al tuo server."
-
+; EN: MOTDLine2Help="Enter a message of the day which will be presented to users upon joining your server."
+MOTDLine2Help="Inserisci un messaggio del giorno che verr√† presentato agli utenti che si uniscono al tuo server."
+; EN: MOTDLine3Text="MOTD Line 3"
 MOTDLine3Text="MDG linea 3"
-
-MOTDLine3Help="Inserisci un messaggio del giorno che verr‡ presentato agli utenti che si uniscono al tuo server."
-
+; EN: MOTDLine3Help="Enter a message of the day which will be presented to users upon joining your server."
+MOTDLine3Help="Inserisci un messaggio del giorno che verr√† presentato agli utenti che si uniscono al tuo server."
+; EN: MOTDLine4Text="MOTD Line 4"
 MOTDLine4Text="MDG linea 4"
-
-MOTDLine4Help="Inserisci un messaggio del giorno che verr‡ presentato agli utenti che si uniscono al tuo server."
-
-ServerNameText="Nome server"
-
-ServerNameHelp="Inserisci la descrizione completa del tuo server, che apparir‡ negli strumenti di interrogazione come UBrowser o GameSpy."
-
-DoUplinkText="Reclamizza server"
-
-DoUplinkHelp="Se marcata, il tuo server verr‡ reclamizzato presso il server primario, in modo che gli utenti provvisti di strumenti di interrogazione come UBrowser o GameSpy possano vedere il tuo server."
-
-ngWorldStatsText="Regist. ngWorldStats"
-
-ngWorldStatsHelp="Se marcata, il tuo server registrer‡ un nome di fioco presso NetGamesUSA per la raccolta delle statistiche. Consulta ut.ngworldstats.com per ulteriori informazioni."
-
+; EN: MOTDLine4Help="Enter a message of the day which will be presented to users upon joining your server."
+MOTDLine4Help="Inserisci un messaggio del giorno che verr√† presentato agli utenti che si uniscono al tuo server."
+; EN: ServerNameText="Server Name"
+ServerNameText="Nome Server"
+; EN: ServerNameHelp="Enter the full description for your server, to appear in query tools such as UBrowser or GameSpy."
+ServerNameHelp="Inserisci la descrizione completa del tuo server, che apparir√† negli strumenti di interrogazione come UBrowser o GameSpy."
+; EN: DoUplinkText="Advertise Server"
+DoUplinkText="Reclamizza Server"
+; EN: DoUplinkHelp="If checked, your server will be advertised to the Master Server, so your server will appear in the global server list."
+DoUplinkHelp="Se marcata, il tuo server verr√† reclamizzato presso il server primario, in modo che gli utenti provvisti di strumenti di interrogazione come UBrowser o GameSpy possano vedere il tuo server."
+; EN: ngWorldStatsText="Stats Logging"
+ngWorldStatsText="Regist. Statistiche"
+; EN: ngWorldStatsHelp="If checked, your server will record and store a log of gameplay stats."
+ngWorldStatsHelp="Se selezionato, il tuo server registrer√† e memorizzer√† un registro delle statistiche di gioco."
+; EN: LanPlayText="Optimize for LAN"
 LanPlayText="Ottimizza per LAN"
-
-LanPlayHelp="Se marcata, un server dedicato avviato sar‡ ottimizzato per giocare su LAN."
-
-
-[UMenuCustomizeClientWindow]
-
-LocalizedKeyName[1]="MouseSinistro"
-
-LocalizedKeyName[2]="MouseDestro"
-
-LocalizedKeyName[3]="Canc"
-
-LocalizedKeyName[4]="MouseMedio"
-
-LocalizedKeyName[5]="Sconosciuto05"
-
-LocalizedKeyName[6]="Sconosciuto06"
-
-LocalizedKeyName[7]="Sconosciuto07"
-
-LocalizedKeyName[8]="Backspace"
-
-LocalizedKeyName[9]="Tab"
-
-LocalizedKeyName[10]="Sconosciuto0A"
-
-LocalizedKeyName[11]="Sconosciuto0B"
-
-LocalizedKeyName[12]="Sconosciuto0C"
-
-LocalizedKeyName[13]="Invio"
-
-LocalizedKeyName[14]="Sconosciuto0E"
-
-LocalizedKeyName[15]="Sconosciuto0F"
-
-LocalizedKeyName[16]="Maiusc"
-
-LocalizedKeyName[17]="Ctrl"
-
-LocalizedKeyName[18]="Alt"
-
-LocalizedKeyName[19]="Pausa"
-
-LocalizedKeyName[20]="CapsLock"
-
-LocalizedKeyName[21]="Mouse 4"
-
-LocalizedKeyName[22]="Mouse 5"
-
-LocalizedKeyName[23]="Mouse 6"
-
-LocalizedKeyName[24]="Mouse 7"
-
-LocalizedKeyName[25]="Mouse 8"
-
-LocalizedKeyName[26]="Sconosciuto1A"
-
-LocalizedKeyName[27]="Esc"
-
-LocalizedKeyName[28]="Sconosciuto1C"
-
-LocalizedKeyName[29]="Sconosciuto1D"
-
-LocalizedKeyName[30]="Sconosciuto1E"
-
-LocalizedKeyName[31]="Sconosciuto1F"
-
-LocalizedKeyName[32]="Spazio"
-
-LocalizedKeyName[33]="PagS˘"
-
-LocalizedKeyName[34]="PagGi˘"
-
-LocalizedKeyName[35]="Fine"
-
-LocalizedKeyName[36]="Home"
-
-LocalizedKeyName[37]="Sinistra"
-
-LocalizedKeyName[38]="Su"
-
-LocalizedKeyName[39]="Destra"
-
-LocalizedKeyName[40]="Gi˘"
-
-LocalizedKeyName[41]="Select"
-
-LocalizedKeyName[42]="Stamp"
-
-LocalizedKeyName[43]="Execute"
-
-LocalizedKeyName[44]="PrintScrn"
-
-LocalizedKeyName[45]="Ins"
-
-LocalizedKeyName[46]="Del"
-
-LocalizedKeyName[47]="Help"
-
-LocalizedKeyName[48]="0"
-
-LocalizedKeyName[49]="1"
-
-LocalizedKeyName[50]="2"
-
-LocalizedKeyName[51]="3"
-
-LocalizedKeyName[52]="4"
-
-LocalizedKeyName[53]="5"
-
-LocalizedKeyName[54]="6"
-
-LocalizedKeyName[55]="7"
-
-LocalizedKeyName[56]="8"
-
-LocalizedKeyName[57]="9"
-
-LocalizedKeyName[58]="Sconosciuto3A"
-
-LocalizedKeyName[59]="Sconosciuto3B"
-
-LocalizedKeyName[60]="Sconosciuto3C"
-
-LocalizedKeyName[61]="Sconosciuto3D"
-
-LocalizedKeyName[62]="Sconosciuto3E"
-
-LocalizedKeyName[63]="SconosciutoF"
-
-LocalizedKeyName[64]="Sconosciuto40"
-
-LocalizedKeyName[65]="A"
-
-LocalizedKeyName[66]="B"
-
-LocalizedKeyName[67]="C"
-
-LocalizedKeyName[68]="D"
-
-LocalizedKeyName[69]="E"
-
-LocalizedKeyName[70]="F"
-
-LocalizedKeyName[71]="G"
-
-LocalizedKeyName[72]="H"
-
-LocalizedKeyName[73]="I"
-
-LocalizedKeyName[74]="J"
-
-LocalizedKeyName[75]="K"
-
-LocalizedKeyName[76]="L"
-
-LocalizedKeyName[77]="M"
-
-LocalizedKeyName[78]="N"
-
-LocalizedKeyName[79]="O"
-
-LocalizedKeyName[80]="P"
-
-LocalizedKeyName[81]="Q"
-
-LocalizedKeyName[82]="R"
-
-LocalizedKeyName[83]="S"
-
-LocalizedKeyName[84]="T"
-
-LocalizedKeyName[85]="U"
-
-LocalizedKeyName[86]="V"
-
-LocalizedKeyName[87]="W"
-
-LocalizedKeyName[88]="X"
-
-LocalizedKeyName[89]="Y"
-
-LocalizedKeyName[90]="Z"
-
-LocalizedKeyName[91]="Sconosciuto5B"
-
-LocalizedKeyName[92]="Sconosciuto5C"
-
-LocalizedKeyName[93]="Sconosciuto5D"
-
-LocalizedKeyName[94]="Sconosciuto5E"
-
-LocalizedKeyName[95]="Sconosciuto5F"
-
-LocalizedKeyName[96]="TastNum0"
-
-LocalizedKeyName[97]="TastNum1"
-
-LocalizedKeyName[98]="TastNum2"
-
-LocalizedKeyName[99]="TastNum3"
-
-LocalizedKeyName[100]="TastNum4"
-
-LocalizedKeyName[101]="TastNum5"
-
-LocalizedKeyName[102]="TastNum6"
-
-LocalizedKeyName[103]="TastNum7"
-
-LocalizedKeyName[104]="TastNum8"
-
-LocalizedKeyName[105]="TastNum9"
-
-LocalizedKeyName[106]="TastNumAsterisco"
-
-LocalizedKeyName[107]="TastNumPi˘"
-
-LocalizedKeyName[108]="TastNumSeparator"
-
-LocalizedKeyName[109]="TastNumMeno"
-
-LocalizedKeyName[110]="TastNumPunto"
-
-LocalizedKeyName[111]="TastNumSlash"
-
-LocalizedKeyName[112]="F1"
-
-LocalizedKeyName[113]="F2"
-
-LocalizedKeyName[114]="F3"
-
-LocalizedKeyName[115]="F4"
-
-LocalizedKeyName[116]="F5"
-
-LocalizedKeyName[117]="F6"
-
-LocalizedKeyName[118]="F7"
-
-LocalizedKeyName[119]="F8"
-
-LocalizedKeyName[120]="F9"
-
-LocalizedKeyName[121]="F10"
-
-LocalizedKeyName[122]="F11"
-
-LocalizedKeyName[123]="F12"
-
-LocalizedKeyName[124]="F13"
-
-LocalizedKeyName[125]="F14"
-
-LocalizedKeyName[126]="F15"
-
-LocalizedKeyName[127]="F16"
-
-LocalizedKeyName[128]="F17"
-
-LocalizedKeyName[129]="F18"
-
-LocalizedKeyName[130]="F19"
-
-LocalizedKeyName[131]="F20"
-
-LocalizedKeyName[132]="F21"
-
-LocalizedKeyName[133]="F22"
-
-LocalizedKeyName[134]="F23"
-
-LocalizedKeyName[135]="F24"
-
-LocalizedKeyName[136]="Sconosciuton88"
-
-LocalizedKeyName[137]="Sconosciuton89"
-
-LocalizedKeyName[138]="Sconosciuton8A"
-
-LocalizedKeyName[139]="Sconosciuton8B"
-
-LocalizedKeyName[140]="Sconosciuton8C"
-
-LocalizedKeyName[141]="Sconosciuton8D"
-
-LocalizedKeyName[142]="Sconosciuton8E"
-
-LocalizedKeyName[143]="Sconosciuton8F"
-
-LocalizedKeyName[144]="Bloc Num"
-
-LocalizedKeyName[145]="Bloc Scorr"
-
-LocalizedKeyName[146]="Sconosciuton92"
-
-LocalizedKeyName[147]="Sconosciuton93"
-
-LocalizedKeyName[148]="Sconosciuton94"
-
-LocalizedKeyName[149]="Sconosciuton95"
-
-LocalizedKeyName[150]="Sconosciuton96"
-
-LocalizedKeyName[151]="Sconosciuton97"
-
-LocalizedKeyName[152]="Sconosciuton98"
-
-LocalizedKeyName[153]="Sconosciuton99"
-
-LocalizedKeyName[154]="Sconosciuton9A"
-
-LocalizedKeyName[155]="Sconosciuton9B"
-
-LocalizedKeyName[156]="Sconosciuton9C"
-
-LocalizedKeyName[157]="Sconosciuton9D"
-
-LocalizedKeyName[158]="Sconosciuton9E"
-
-LocalizedKeyName[159]="Sconosciuton9F"
-
-LocalizedKeyName[160]="Maiusc Sin"
-
-LocalizedKeyName[161]="Maiusc Des"
-
-LocalizedKeyName[162]="Ctrl Sin"
-
-LocalizedKeyName[163]="Ctrl Des"
-
-LocalizedKeyName[164]="SconosciutonA4"
-
-LocalizedKeyName[165]="SconosciutonA5"
-
-LocalizedKeyName[166]="SconosciutonA6"
-
-LocalizedKeyName[167]="SconosciutonA7"
-
-LocalizedKeyName[168]="SconosciutonA8"
-
-LocalizedKeyName[169]="SconosciutonA9"
-
-LocalizedKeyName[170]="SconosciutonAA"
-
-LocalizedKeyName[171]="SconosciutonAB"
-
-LocalizedKeyName[172]="SconosciutonAC"
-
-LocalizedKeyName[173]="SconosciutonAD"
-
-LocalizedKeyName[174]="SconosciutonAE"
-
-LocalizedKeyName[175]="SconosciutonAF"
-
-LocalizedKeyName[176]="SconosciutonB0"
-
-LocalizedKeyName[177]="SconosciutonB1"
-
-LocalizedKeyName[178]="SconosciutonB2"
-
-LocalizedKeyName[179]="SconosciutonB3"
-
-LocalizedKeyName[180]="SconosciutonB4"
-
-LocalizedKeyName[181]="SconosciutonB5"
-
-LocalizedKeyName[182]="SconosciutonB6"
-
-LocalizedKeyName[183]="SconosciutonB7"
-
-LocalizedKeyName[184]="SconosciutonB8"
-
-LocalizedKeyName[185]="SconosciutonB9"
-
-LocalizedKeyName[186]="PuntoVirgola"
-
-LocalizedKeyName[187]="Pi˘"
-
-LocalizedKeyName[188]="Virgola"
-
-LocalizedKeyName[189]="Meno"
-
-LocalizedKeyName[190]="Punto"
-
-LocalizedKeyName[191]="˘"
-
-LocalizedKeyName[192]="Tilde"
-
-LocalizedKeyName[193]="SconosciutonC1"
-
-LocalizedKeyName[194]="SconosciutonC2"
-
-LocalizedKeyName[195]="SconosciutonC3"
-
-LocalizedKeyName[196]="SconosciutonC4"
-
-LocalizedKeyName[197]="SconosciutonC5"
-
-LocalizedKeyName[198]="SconosciutonC6"
-
-LocalizedKeyName[199]="SconosciutonC7"
-
-LocalizedKeyName[200]="Joy1"
-
-LocalizedKeyName[201]="Joy2"
-
-LocalizedKeyName[202]="Joy3"
-
-LocalizedKeyName[203]="Joy4"
-
-LocalizedKeyName[204]="Joy5"
-
-LocalizedKeyName[205]="Joy6"
-
-LocalizedKeyName[206]="Joy7"
-
-LocalizedKeyName[207]="Joy8"
-
-LocalizedKeyName[208]="Joy9"
-
-LocalizedKeyName[209]="Joy10"
-
-LocalizedKeyName[210]="Joy11"
-
-LocalizedKeyName[211]="Joy12"
-
-LocalizedKeyName[212]="Joy13"
-
-LocalizedKeyName[213]="Joy14"
-
-LocalizedKeyName[214]="Joy15"
-
-LocalizedKeyName[215]="Joy16"
-
-LocalizedKeyName[216]="SconosciutonD8"
-
-LocalizedKeyName[217]="SconosciutonD9"
-
-LocalizedKeyName[218]="SconosciutonDA"
-
-LocalizedKeyName[219]="'"
-
-LocalizedKeyName[220]="Backslash"
-
-LocalizedKeyName[221]="Ï"
-
-LocalizedKeyName[222]="‡"
-
-LocalizedKeyName[223]="SconosciutonDF"
-
-LocalizedKeyName[224]="JoyX"
-
-LocalizedKeyName[225]="JoyY"
-
-LocalizedKeyName[226]="JoyZ"
-
-LocalizedKeyName[227]="JoyR"
-
-LocalizedKeyName[228]="MouseX"
-
-LocalizedKeyName[229]="MouseY"
-
-LocalizedKeyName[230]="MouseZ"
-
-LocalizedKeyName[231]="MouseW"
-
-LocalizedKeyName[232]="JoyU"
-
-LocalizedKeyName[233]="JoyV"
-
-LocalizedKeyName[234]="SconosciutonEA"
-
-LocalizedKeyName[235]="SconosciutonEB"
-
-LocalizedKeyName[236]="RotellaMouseS˘"
-
-LocalizedKeyName[237]="RotellaMouseGi˘"
-
-LocalizedKeyName[238]="Sconosciuton10E"
-
-LocalizedKeyName[239]="Sconosciuton10F"
-
-LocalizedKeyName[240]="JoyPovUp"
-
-LocalizedKeyName[241]="JoyPovDown"
-
-LocalizedKeyName[242]="JoyPovLeft"
-
-LocalizedKeyName[243]="JoyPovRight"
-
-LocalizedKeyName[244]="SconosciutonF4"
-
-LocalizedKeyName[245]="SconosciutonF5"
-
-LocalizedKeyName[246]="Attn"
-
-LocalizedKeyName[247]="CrSel"
-
-LocalizedKeyName[248]="ExSel"
-
-LocalizedKeyName[249]="ErEof"
-
-LocalizedKeyName[250]="Play"
-
-LocalizedKeyName[251]="Zoom"
-
-LocalizedKeyName[252]="NoName"
-
-LocalizedKeyName[253]="PA1"
-
-LocalizedKeyName[254]="OEMClear"
-
-LabelList[0]="Fuoco"
-
-LabelList[1]="Fuoco alternativo"
-
-LabelList[2]="Movimento in avanti"
-
-LabelList[3]="Movimento indietro"
-
-LabelList[4]="Gira a sinistra"
-
-LabelList[5]="Gira a destra"
-
-LabelList[6]="Spostamento laterale a sinistra"
-
-LabelList[7]="Spostamento laterale a destra"
-
-LabelList[8]="Salto/su"
-
-LabelList[9]="Abbassamento/gi˘"
-
-LabelList[10]="Sguardo col mouse"
-
-LabelList[11]="Attivazione oggetto"
-
-LabelList[12]="Oggetto successivo"
-
-LabelList[13]="Oggetto precedente"
-
-LabelList[14]="Sguardo in alto"
-
-LabelList[15]="Sguardo in basso"
-
-LabelList[16]="Accentr. visuale"
-
-LabelList[17]="Camminata"
-
-LabelList[18]="Spostamento laterale"
-
-LabelList[19]="Arma successiva"
-
-LabelList[20]="Arma precedente"
-
-LabelList[21]="Lancia arma"
-
-LabelList[22]="Simulazione morte"
-
-LabelList[23]="Menu musica"
-
-LabelList[24]="Chat"
-
-LabelList[25]="Chat Squadra"
-
-LabelList[26]="Mostra punteggi"
-
-LabelList[27]="Raccogli Decorazione"
-
-LabelList[28]="Visuale alle spalle"
-
-OrString=" o "
-
-CustomizeHelp="Clicca sul rettangolo blu e premi il tasto da assegnare a questo comando."
-
-DefaultsText="Predefiniti"
-
-DefaultsHelp="Ripristina tutti i comandi predefiniti."
-
-JoystickText="Joystick"
-
-JoyXText="Asse X"
-
-JoyXHelp="Seleziona il comportamento per l'asse sinistra-destra del joystick."
-
-JoyXOptions[0]="Spostamento sinistra/destra"
-
-JoyXOptions[1]="Giravolta sinistra/destra"
-
-JoyYText="Asse Y"
-
-JoyYHelp="Seleziona il comportamento per l'asse alto-basso del joystick."
-
-JoyYOptions[0]="Movimento avanti/indietro"
-
-JoyYOptions[1]="Sguardo alto/basso"
-
-
-[UMenuGameRulesBase]
-
-FragText="Limite uccisioni"
-
-FragHelp="La partit‡ avr‡ termine se un giocatore riesce a ottenere queste uccisioni. Un valore pari a 0 non pone alcun limite."
-
-TimeText="Tempo limite"
-
-TimeHelp="La partita avr‡ termine quando saranno trascorsi questi minuti. Un valore pari a 0 non pone alcun limite."
-
-MaxPlayersText="Max connessioni"
-
-MaxPlayersHelp="Massimo numero di giocatori umani che possono connettersi alla partita."
-
-MaxSpectatorsText="Max spettatori"
-
-MaxSpectatorsHelp="Massimo numero di spettatori che possono connettersi alla partita."
-
-WeaponsText="Armi rimangono"
-
-WeaponsHelp="Se marcata, le armi, dopo essere state raccolte, rimarranno nella stessa posizione, anzichÈ rigenerarsi."
-
-
-[UMenuBotSetupBase]
-
-BotText="Bot:"
-
-BotHelp="Seleziona il bot che desideri configurare."
-
-BotWord="Bot"
-
-DefaultsText="Predefinito"
-
-DefaultsHelp="Ripristina tutti i comandi predefiniti."
-
-BotSkillText="Abilit‡ del Bot:"
-
-BotSkillHelp="Regola la difficolt‡ del bot (facile-difficile)."
-
-BotAccurText="Precisione:"
-
-BotAccurHelp="Regolare la qualit‡ della mira del bot (buona mira - cattiva mira)."
-
-BotCombatStyleText="Stile di Combattimento:"
-
-BotCombatStyleHelp="Regolare lo stile di combattimento del bot (azione offensiva a distanza- avvicinarsi al nemico in modo aggressivo)."
-
-BotAlertnessText="Vigilanza:"
-
-BotAlertnessHelp="La capacit‡ del bot di essere in allerta (ignaro dell'ambiente circostante-pienamente consapevole dell'ambiente circostante)."
-
-BotCampingText="Camping:"
-
-BotCampingHelp="Regola la probabilit‡ che il bot resta a stazionare in una determinata posizione (sempre a caccia - molto camping)."
-
-FavoriteWeaponText="Arma Preferita:"
-
-FavoriteWeaponHelp="L'arma preferita del bot."
-
-NoFavoriteWeapon="Nessuna preferenza"
-
-NameHelp="Indica il nome di questo bot."
-
-TeamText="Colore:"
-
-TeamHelp="Seleziona il colore della squadra di questo bot."
-
-ClassHelp="Seleziona la classe di questo bot."
-
-SkinHelp="Scegli una skin per questo bot."
-
-FaceHelp="Scegli una faccia per questo bot."
-
+; EN: LanPlayHelp="If checked, a dedicated server started will be optimized for play on a LAN."
+LanPlayHelp="Se marcata, un server dedicato avviato sar√† ottimizzato per giocare su LAN."
 
 [UMenuStatusBar]
-
-DefaultHelp="Premi ESC per tornare alla partita."
-
+; EN: DefaultHelp="Press ESC to return to the game"
+DefaultHelp="Premi ESC per tornare alla partita"
+; EN: DefaultIntroHelp="Use the Game menu to start a new game."
 DefaultIntroHelp="Utilizza il menu di gioco per iniziare una nuova partita."
 
-
-[UMenuGameOptionsClientWindow]
-
-WeaponFlashText="Flash arma"
-
-WeaponFlashHelp="Se marcata, quando sparerai con la tua arma, lo schermo lampegger‡."
-
-WeaponHandText="Lato arma"
-
-WeaponHandHelp="Seleziona dove comparir‡ la tua arma."
-
-LeftName="Sinistra"
-
-CenterName="Centro"
-
-RightName="Destra"
-
-HiddenName="Nascosta"
-
-DodgingText="Schivare"
-
-DodgingHelp="Se marcata, una doppia pressione dei tasti di movimento (avanti, indietro, destra, sinistra) ti consentir‡ di schivare rapidamente un colpo."
-
-ViewBobText="Sobbalzo visuale"
-
-ViewBobHelp="Utilizza il cursore per regolare il livello di sobbalzo della tua visuale durante gli spostamenti."
-
-SpeedText="Velocit‡ di gioco"
-
-GoreText="Livello sangue"
-
-GoreHelp="Scegli il livello di sangue che vuoi vedere nella partita."
-
-GoreLevels[0]="Normale"
-
-GoreLevels[1]="Ridotto"
-
-GoreLevels[2]="Ultra-basso"
-
-LocalText="Regist. locale ngStats"
-
-LocalHelp="Se marcata, il tuo sistema registrer‡ i botmatch e partite a giocatore singolo locali per la compilazione delle statistiche."
-
-
-[UMenuNetworkClientWindow]
-
-NetSpeedText="Velocit‡ di rete:"
-
-NetSpeedHelp="Seleziona la velocit‡ che pi˘ si avvicina alla tua connessione internet per ottenere delle prestazioni migliori. Se dovessi avere lag, abbassa le impostazioni"
-
-NetSpeeds[0]="Modem (28.8K - 56K)"
-
-NetSpeeds[1]="ISDN"
-
-NetSpeeds[2]="Cavo, xDSL"
-
-NetSpeeds[3]="LAN"
-
-
 [UMenuMultiplayerMenu]
-
-StartName="Inizia nuova partita su internet"
-
+; EN: StartName="&Start New Multiplayer Game"
+StartName="&Inizia Nuova Partita su Internet"
+; EN: StartHelp="Start your own network game which others can join."
 StartHelp="Inizia la tua partita in rete, alla quale potranno unirsi altri giocatori."
-
-BrowserName="Trova partite su Internet"
-
+; EN: BrowserName="&Find Internet Games"
+BrowserName="&Trova Partite su Internet"
+; EN: BrowserHelp="Search for games currently in progress on the Internet."
 BrowserHelp="Cerca le partite attualmente in corso su Internet."
-
-LANName="Trova partite su LAN"
-
+; EN: LANName="Find &LAN Games"
+LANName="Trova partite su &LAN"
+; EN: LANHelp="Search for games of your local LAN."
 LANHelp="Cerca le partite attualmente in corso su LAN."
-
-OpenLocationName="Apri Sito"
-
-OpenLocationHelp="Connettiti a un server utilizzando il suo indirizzo IP o l'URL Unreal (unreal://)".
-
-PatchName="Scarica ultimi aggiornamenti"
-
-PatchHelp="Scarica gli ultimi aggiornamenti di Unreal dal web!"
-
-DisconnectName="Disconnettiti dal server"
-
+; EN: OpenLocationName="Open &Location"
+OpenLocationName="Apri &Sito"
+; EN: OpenLocationHelp="Connect to a server using its IP address or unreal:// URL."
+OpenLocationHelp="Connettiti a un server utilizzando il suo indirizzo IP o l'URL unreal://."
+; EN: PatchName="Download Latest &Update"
+PatchName="Scarica Ultimi &Aggiornamenti"
+; EN: PatchHelp="Find the latest update to the game on the web!"
+PatchHelp="Trova gli ultimi aggiornamenti del gioco sul web!"
+; EN: DisconnectName="&Disconnect from Server"
+DisconnectName="&Disconnettiti dal Server"
+; EN: DisconnectHelp="Disconnect from the current server."
 DisconnectHelp="Disconnettiti dall'attuale server."
-
-ReconnectName="Riconnettiti al server"
-
+; EN: ReconnectName="&Reconnect to Server"
+ReconnectName="&Riconnettiti al Server"
+; EN: ReconnectHelp="Attempt to reconnect to the last server you were connected to."
 ReconnectHelp="Tenta di riconnetterti con l'ultimo server con cui sei stato collegato."
-
+; EN: SuggestPlayerSetupTitle="Check Player Name"
 SuggestPlayerSetupTitle="Verifica nome giocatore"
-
-SuggestPlayerSetupText="Il tuo nome Ë attualmente Player. Prima di cimentarti in una partita multigiocatore, ti conviene andare a Configurazione giocatore e scegliere un altro nome."
-
-SuggestNetspeedTitle="Controlla velocit‡ Internet"
-
-SuggestNetspeedText="Non hai ancora configurato Internet. Ti consigliamo di andare alla schermata Impostazioni di rete per essere sicuro di avere la migliore esperienza di gioco online."
-
-
+; EN: SuggestPlayerSetupText="Your name is currently set to "Player". It is recommended that you go to Player Setup and give yourself another name before playing a multiplayer game.\n\nWould you like to go to Player Setup instead?"
+SuggestPlayerSetupText="Il tuo nome √® attualmente "Player". Prima di cimentarti in una partita multigiocatore, ti conviene andare a Configurazione giocatore e scegliere un altro nome.\n\nVuoi andare a Configurazione giocatore?"
+; EN: SuggestNetspeedTitle="Check Internet Speed"
+SuggestNetspeedTitle="Controlla velocit√† Internet"
+; EN: SuggestNetspeedText="You haven't yet configured the type of Internet connection you will be playing with. It is recommended that you go to the Network Settings screen to ensure you have the best online gaming experience.\n\nWould you like to go to Network Settings instead?"
+SuggestNetspeedText="Non hai ancora configurato Internet. Ti consigliamo di andare alla schermata Impostazioni di rete per essere sicuro di avere la migliore esperienza di gioco online.\n\nVuoi andare a Impostazioni di rete?"
 
 [UMenuGameSettingsBase]
-
+; EN: StyleText="Game Style:"
 StyleText="Stile di gioco:"
-
+; EN: Styles[0]="Classic"
 Styles[0]="Normale"
-
+; EN: Styles[1]="Hardcore"
 Styles[1]="Hardcore"
-
+; EN: Styles[2]="Turbo"
 Styles[2]="Turbo"
-
-StyleHelp="Scegli il tuo stile di gioco. Hardcore Ë il 10% pi˘ veloce, con un aumento del 50% nei danni. Turbo Ë come Hardcore con movimenti del giocatore ultrarapidi."
-
-SpeedText="Velocit‡ di gioco"
-
-SpeedHelp="Regola la velocit‡ del gioco."
-
+; EN: StyleHelp="Choose your game style. Hardcore is 10% faster with a 50% damage increase. Turbo also adds ultra fast player movement."
+StyleHelp="Scegli il tuo stile di gioco. Hardcore √® il 10% pi√π veloce, con un aumento del 50% nei danni. Turbo √® come Hardcore con movimenti del giocatore ultrarapidi."
+; EN: SpeedText="Game Speed"
+SpeedText="Velocit√† di gioco"
+; EN: SpeedHelp="Adjust the speed of the game."
+SpeedHelp="Regola la velocit√† del gioco."
 
 [UMenuBotConfigBase]
-
-BaseText="Abilit‡ di base:"
-
-BaseHelp="E' il livello di abilit‡ di base dei bot."
-
+bSingleColumn=False
+; EN: BaseText="Base Skill:"
+BaseText="Abilit√† di base:"
+; EN: BaseHelp="This is the base skill level of the bots."
+BaseHelp="E' il livello di abilit√† di base dei bot."
+; EN: Skills[0]="Novice"
 Skills[0]="Novizio"
-
+; EN: Skills[1]="Average"
 Skills[1]="Medio"
-
+; EN: Skills[2]="Skilled"
 Skills[2]="Abile"
-
+; EN: Skills[3]="Masterful"
 Skills[3]="Maestro"
-
+; EN: SkillTaunts[0]="They won't hurt you...much."
 SkillTaunts[0]="Non ti faranno male... forse."
-
+; EN: SkillTaunts[1]="Don't get cocky."
 SkillTaunts[1]="Non essere presuntuoso."
-
+; EN: SkillTaunts[2]="You think you're tough?"
 SkillTaunts[2]="Credi di essere un duro?"
-
-SkillTaunts[3]="Sei gi‡ morto."
-
-NumBotsText="Numero di bot"
-
+; EN: SkillTaunts[3]="You're already dead."
+SkillTaunts[3]="Sei gi√† morto."
+; EN: NumBotsText="Number of Bots"
+NumBotsText="Numero di Bot"
+; EN: NumBotsHelp="This is the number of bots that you will play against."
 NumBotsHelp="E' il numero di bot contro i quali giocherai."
-
-AutoAdjustText="Autoregolazione abilit‡"
-
-AutoAdjustHelp="Se marcata, l'abilit‡ dei bot aumenter‡ o diminuir‡ per adattarsi alla vostra."
-
-RandomText="Ordine casuale"
-
+; EN: AutoAdjustText="Auto Adjust Skill"
+AutoAdjustText="Autoregolazione Abilit√†"
+; EN: AutoAdjustHelp="If checked, bots will increase or decrease their skill to match your skill level."
+AutoAdjustHelp="Se marcata, l'abilit√† dei bot aumenter√† o diminuir√† per adattarsi alla vostra."
+; EN: RandomText="Random Order"
+RandomText="Ordine Casuale"
+; EN: RandomHelp="If checked, bots will be chosen at random from the list of bot configurations."
 RandomHelp="Se marcata, i bot saranno scelti in maniera casuale dall'elenco delle configurazioni."
-
+; EN: ConfigBotsText="Configure"
 ConfigBotsText="Configura"
-
-ConfigBotsHelp="Configura i nomi, l'aspetto e le altre qualit‡ dei bot individuali."
-
-AtLeastOneBotTitle="Configura bot"
-
+; EN: ConfigBotsHelp="Configure the names, appearance and other attributes of individual bots."
+ConfigBotsHelp="Configura i nomi, l'aspetto e le altre qualit√† dei bot individuali."
+; EN: AtLeastOneBotTitle="Configure Bots"
+AtLeastOneBotTitle="Configura Bot"
+; EN: AtLeastOneBotText="You must choose at least one bot in order to use the configure bots screen."
 AtLeastOneBotText="Devi scegliere almeno un bot, se vuoi utilizzare la schermata di configurazione."
 
-
-[UMenuInputOptionsClientWindow]
-
-AutoAimText="Mira automatica"
-
-AutoAimHelp="Attiva o disattiva l'aiuto per la mira verticale."
-
-JoystickText="Joystick"
-
-JoystickHelp="Abilita o disabilita il joystick."
-
-DirectInputText="DirectInput"
-
-DirectInputHelp="Attivando DirectInput su Windows 9x migliorer‡ la sensibilit‡ del mouse. Devi riavviare il gioco per attivare/disattivare l'impostazione."
-
-SensitivityText="Sensibilit‡ mouse"
-
-SensitivityHelp="Regola la sensibilit‡ del mouse, ossia l'ampiezza dello spostamento che devi fargli compiere per ottenere un movimento nella partita."
-
-InvertMouseText="Inverti mouse"
-
-InvertMouseHelp="Inverti l'asse orizzontale del mouse. Quando attivato, muovendo il mouse in avanti guarderai in basso anzichÈ in alto."
-
-LookSpringText="Visuale centrata"
-
-LookSpringHelp="Se marcata, quando rilasci il tasto dello sguardo col mouse, la visuale viene automaticamente centrata. Questa opzione Ë valida solamente se lo sguardo col mouse Ë disattivato."
-
-MouselookText="Sguardo col mouse"
-
-MouselookHelp="Se marcata, il mouse viene sempre utilizzato per controllare la direzione visiva. In caso contrario, puoi utilizzare il tasto dello Sguardo col Mouse per attivarla."
-
-MouseSmoothText="Massima scorrevolezza"
-
-MouseSmoothHelp="Se marcata, l'input del mouse verr‡ reso ancora pi˘ scorrevole."
-
-bMouseSmoothText="Scorrevolezza mouse"
-
-bMouseSmoothHelp="Se marcata, l'input del mouse verr‡ reso pi˘ scorrevole, in modo da aumentare la fluidit‡ dello sguardo col mouse."
-
-AutoSlopeText="Auto-inclinazione"
-
-AutoSlopeHelp="Se marcata, la tua visuale verr‡ regolata in modo da guardare automaticamente su e gi˘ in prossimit‡ di scale e rampe. Funziona solo se lo sguardo col mouse Ë disattivato."
-
-
-[UMenuAudioClientWindow]
-
-SoundQualityText="Qualit‡ suono"
-
-SoundQualityHelp="Usa una bassa qualit‡ del suono per migliorare le prestazioni di gioco sui computer con meno di 32MB di memoria."
-
-Details[0]="Bassa"
-
-Details[1]="Alta"
-
-MusicVolumeText="Volume musica"
-
-MusicVolumeHelp="Aumenta o diminuisce il volume della musica."
-
-SoundVolumeText="Volume sonoro"
-
-SoundVolumeHelp="Aumenta o diminuisce il volume degli effetti sonori."
-
-VoiceMessagesText="Messaggi vocali"
-
-VoiceMessagesHelp="Se marcata, sentirai messaggi vocali e comandi provenienti dagli altri giocatori."
-
-MessageBeepText="Bip di messaggio"
-
-MessageBeepHelp="Se marcata, quando riceverai un messaggio chat udirai un bip."
-
-
-[UMenuNewGameClientWindow]
-
-GameHelp="Scegli la campagna da iniziare."
-
-GameText="Campagna:"
-
-SkillText="Livello abilit‡:"
-
-Skills[0]="Facile"
-
-Skills[1]="Medio"
-
-Skills[2]="Difficile"
-
-Skills[3]="Veramente Difficile"
-
-Skills[4]="Unreal"
-
-Skills[5]="Divino"
-
-SkillStrings[0]="Modalit‡ turista."
-
-SkillStrings[1]="Pronto all'azione!"
-
-SkillStrings[2]="Non Ë adatto ai deboli di cuore."
-
-SkillStrings[3]="Quando il gioco si fa duro..."
-
-SkillStrings[4]="Desiderio di morte."
-
-SkillStrings[5]="BONTA' DIVINA!"
-
-SkillHelp="Seleziona il livello di difficolt‡ al quale vuoi giocare."
-
-
 [UMenuScreenshotCW]
-
+; EN: PlayersText="Players"
 PlayersText="Giocatori"
 
-
-[UMenuMapListCW]
-
-DefaultText="Usa elenco mappe: "
-
-DefaultHelp="Scegli una mappa predefinita da caricare, oppure scegli Personalizza e configura manualmente l'elenco."
-
-RandomText="Mappe Shuffle:"
-
-RandomHelp="Gioca a queste mappe in ordine casuale."
-
-CustomText="Personalizza"
-
-ExcludeCaption="Mappe fuori elenco"
-
-ExcludeHelp="Clicca su una mappa e trascinala sulla colonna di destra per includerla nell'elenco delle mappe."
-
-IncludeCaption="Mappe nell'elenco"
-
-IncludeHelp="Clicca su una mappa e trascinala nella colonna di sinistra per rimuoverla dall'elenco, oppure spostala in alto o in basso per assegnarle una diversa posizione."
-
-
 [UMenuWeaponPriorityListBox]
-
-WeaponPriorityHelp="Clicca sul nome di un'arma e trascinalo nell'elenco a sinistra per cambiare la sua priorit‡. Le armi pi˘ in alto hanno una priorit‡ pi˘ elevata."
-
+; EN: WeaponPriorityHelp="Click and drag a weapon name in the list on the left to change its priority. Weapons higher in the list have higher priority."
+WeaponPriorityHelp="Clicca sul nome di un'arma e trascinalo nell'elenco a sinistra per cambiare la sua priorit√†. Le armi pi√π in alto hanno una priorit√† pi√π elevata."
 
 [UMenuBotConfigClientWindow]
-
-BIMText="Abilita bot"
-
+; EN: BIMText="Enable Bots"
+BIMText="Abilita Bot"
+; EN: BIMHelp="If checked, bots will be present in your new multiplayer game."
 BIMHelp="Se marcata, nella tua partita multigiocatore saranno presenti dei bot."
 
-
-[UMenuOptionsClientWindow]
-
-GamePlayTab="Gioco"
-
-InputTab="Input"
-
-ControlsTab="Comandi"
-
-AudioTab="Audio"
-
-VideoTab="Video"
-
-NetworkTab="Rete"
-
-HUDTab="HUD"
-
-
-[UMenuHUDConfigCW]
-
-HUDConfigText="Aspetto HUD"
-
-HUDConfigHelp="Utilizza i tasti cursore a destra e a sinistra per selezionare una configurazione dell'HUD."
-
-CrosshairText="Tipo mirino"
-
-CrosshairHelp="Scegli il mirino che comparir‡ al centro dello schermo."
-
-
 [UMenuMutatorCW]
-
-ExcludeCaption="Mutatori non utilizzati"
-
+; EN: ExcludeCaption="Mutators not Used"
+ExcludeCaption="Mutatori non Utilizzati"
+; EN: ExcludeHelp="Click and drag a mutator to the right hand column to include that mutator in this game."
 ExcludeHelp="Clicca e trascina un mutatore sulla colonna di destra per includerlo nella partita."
-
-IncludeCaption="Mutatori utilizzati"
-
+; EN: IncludeCaption="Mutators Used"
+IncludeCaption="Mutatori Utilizzati"
+; EN: IncludeHelp="Click and drag a mutator to the left hand column to remove it from the mutator list, or drag it up or down to re-order it in the mutator list."
 IncludeHelp="Clicca e trascina un mutatore sulla colonna di sinistra per rimuoverlo dall'elenco dei mutatori, o spostalo in alto o in basso per cambiarlo di ordine all'interno della lista."
-
-KeepText="Utilizza sempre questa configurazione"
-
+; EN: KeepText="Always use this Mutator configuration"
+KeepText="Utilizza Sempre Questa Configurazione"
+; EN: KeepHelp="If checked, these Mutators will always be used when starting games."
 KeepHelp="Se marcata, questi mutatori saranno sempre utilizzati all'inizio delle partite."
 
-
 [UMenuTeamGameRulesCWindow]
-
-FFText="Fuoco amico:"
-
+; EN: FFText="Friendly Fire:"
+FFText="Fuoco Amico:"
+; EN: FFHelp="Slide to adjust the amount of damage friendly fire imparts to other teammates."
 FFHelp="Scorri per regolare il livello di danni che il fuoco amico infligge ai compagni di squadra."
 
-
-[UMenuToolsMenu]
-
-ConsoleName="Console di sistema"
-
-ConsoleHelp="Questa opzione mostra la console di Unreal. Puoi usare la console per utilizzare i comandi avanzati e i trucchi."
-
-TimeDemoName="Statistiche TimeDemo"
-
-TimeDemoHelp="Consente alla statistica TimeDemo di misurare il tuo frame rate."
-
-LogName="Mostra eventi"
-
-LogHelp="Mostra la finestra degli eventi di Unreal."
-
-MusicMName="Menu musica"
-
-MusicMHelp="Menu musica: Ti permette di ascoltare musica a tuo scelta (Attenzione: molti software anti-cheat potrebbero considerare l'azione illegale)."
-
-AdminMName="Menu amministratore"
-
-AdminMHelp="Menu amministratore: Permette di fare tante cose, come cacciare/bannare/debannare i giocatori (Attenzione: funziona solo con server alla versione 227 e solo quando sei collegato come amministratore)."
-
-DebugModeName="Modalit‡ debug"
-
-DebugModeHelp="Attiva la modalit‡ debug di UWindow."
-
-
-[UMenuSaveGameClientWindow]
-
-CantSave="Impossibile salvare: sei morto!"
-
-
-[UMenuSlotClientWindow]
-
-MonthNames[0]="Gennaio"
-
-MonthNames[1]="Febbraio"
-
-MonthNames[2]="Marzo"
-
-MonthNames[3]="Aprile"
-
-MonthNames[4]="Maggio"
-
-MonthNames[5]="Giugno"
-
-MonthNames[6]="Luglio"
-
-MonthNames[7]="Agosto"
-
-MonthNames[8]="Settembre"
-
-MonthNames[9]="Ottobre"
-
-MonthNames[10]="Novembre"
-
-MonthNames[11]="Dicembre"
-
-SlotHelp="Premi per attivare questo slot. (Salva/Carica)."
-
-
-[UMenuHelpMenu]
-
-ContextName="&Aiuto contestuale"
-
-ContextHelp="Attiva o disattiva l'area di aiuto contestuale alla base dello schermo."
-
-AboutName="Riconoscimenti Unreal"
-
-AboutHelp="Mostra chi ha creato questo gioco."
-
-EpicGamesURLName="Info su Epic Games"
-
-EpicGamesURLHelp="Clicca per accedere alla pagina web di Epic Games!"
-
-SupportURLName="Supporto tecnico"
-
-SupportURLHelp="Clicca qui per accedere alla pagina web del supporto tecnico di OldUnreal."
-
-
-[UMenuModMenu]
-
-CantUseTitle="Nota: menu Mod"
-
-CantUseInfo="Non puoi usare elementi del menu Mod durante il gioco online."
-
-
 [UMenuStartGameClientWindow]
-
+; EN: DedicatedText="Dedicated"
 DedicatedText="Dedicato"
-
-DedicatedHelp="Premi per avviare un server dedicato."
-
+; EN: DedicatedHelp="Press to launch a dedicated server."
+DedicatedHelp="Premi per lanciare un server dedicato."
+; EN: ServerText="Server"
 ServerText="Server"
 
-
-[UMenuLoadGameClientWindow]
-
-RestartText="Ricomincia"
-
-RestartHelp="Premi per ricominciare il livello attuale."
-
-
-[UMenuOptionsMenu]
-
-PreferencesName="Impostazioni"
-
-PreferencesHelp="Modifica le opzioni di gioco, la configurazione dell'HUD, i comandi e le altre opzioni."
-
-PrioritizeName="Armi"
-
-PrioritizeHelp="Cambia la priorit‡ della tua arma, vedi e imposta le opzioni delle armi."
-
-DesktopName="Mostra Desktop"
-
-DesktopHelp="Ti permette di scegliere lo sfondo del menu tra la partita in corso ed un logo statico."
-
-PlayerMenuName="Configurazione giocatore"
-
-PlayerMenuHelp="Configura il tuo giocatore per le partite multigiocatore e per i botmatch."
-
-AdvancedName="Opzioni avanzate"
-
-AdvancedHelp="Apre il menu delle opzioni avanzate"
-
-
 [UMenuOptionsWindow]
-
+; EN: WindowTitle="Preferences"
 WindowTitle="Impostazioni"
-
+WindowWidth=300
 
 [UMenuWeaponPriorityListArea]
-
-AutoSwitchText="Cambio arma automatico"
-
-AutoSwitchHelp="Sostituisce automaticamente la tua arma quando ne raccogli una pi˘ potente. Se non Ë marcata, dovrai passare da un'arma all'altra manualmente."
-
+; EN: AutoSwitchText="Auto-Switch Weapons"
+AutoSwitchText="Cambio Arma Automatico"
+; EN: AutoSwitchHelp="Automatically switch to a higher priority weapon when you pick it up. If unchecked, you must switch to the new weapon manually."
+AutoSwitchHelp="Sostituisce automaticamente la tua arma quando ne raccogli una pi√π potente. Se non √® marcata, dovrai passare da un'arma all'altra manualmente."
 
 [UMenuPlayerWindow]
-
+; EN: WindowTitle="Player Setup"
 WindowTitle="Configurazione giocatore"
 
-
 [UMenuWeaponPriorityWindow]
-
+; EN: WindowTitle="Weapons"
 WindowTitle="Armi"
 
-
-[UTCreditsWindow]
-
-WindowTitle="Riconoscimenti Unreal"
-
-
 [UMenuMapListWindow]
-
-WindowTitle="Elenco mappe"
-
+; EN: WindowTitle="Map List"
+WindowTitle="Elenco Mappe"
 
 [UMenuMutatorWindow]
-
-WindowTitle="Configura mutatori"
-
+; EN: WindowTitle="Configure Mutators"
+WindowTitle="Configura Mutatori"
 
 [UMenuGameMenu]
-
+; EN: NewGameName="&New"
 NewGameName="&Nuova"
-
-NewGameHelp="Seleziona per impostare una nuova partita a un solo giocatore di Unreal."
-
-LoadName="Carica"
-
+; EN: NewGameHelp="Select to setup a new single player game."
+NewGameHelp="Seleziona per impostare una nuova partita a un solo giocatore."
+; EN: LoadName="&Load"
+LoadName="&Carica"
+; EN: LoadHelp="Select to load a previously saved game."
 LoadHelp="Seleziona per caricare una partita salvata in precedenza."
-
-SaveName="Salva"
-
+; EN: SaveName="&Save"
+SaveName="&Salva"
+; EN: SaveHelp="Select to save your current game."
 SaveHelp="Seleziona per salvare la partita in corso."
-
-BotmatchName="Botmatch"
-
-BotmatchHelp="Seleziona per iniziare una partita a Botmatch: Deathmatch con i bot!"
-
-QuitName="Esci"
-
-QuitHelp="Seleziona per salvare le impostazioni e uscire da Unreal."
-
-QuitTitle="Conferma l'uscita"
-
+; EN: BotmatchName="&Botmatch"
+BotmatchName="&Botmatch"
+; EN: BotmatchHelp="Select to begin a game of Botmatch: Deathmatch with Bots!"
+BotmatchHelp="Seleziona per iniziare una partita a Botmatch: Deathmatch con i Bot!"
+; EN: QuitName="&Quit"
+QuitName="&Esci"
+; EN: QuitHelp="Select to save preferences and exit the game."
+QuitHelp="Seleziona per salvare le impostazioni e uscire dal gioco."
+; EN: QuitTitle="Confirm Quit"
+QuitTitle="Conferma Esci"
+; EN: QuitText="Are you sure you want to Quit?"
 QuitText="Sei sicuro di voler uscire?"
 
-
 [UMenuBotmatchWindow]
-
+; EN: WindowTitle="Botmatch"
 WindowTitle="Botmatch"
 
-
 [UMenuStartGameWindow]
-
-WindowTitle="Inizia partita in rete"
-
-
-[UMenuStatsMenu]
-
-ViewLocalName="Guarda ngStats locali"
-
-ViewLocalHelp="Guarda le tue statistiche di gioco accumulate nelle partite a giocatore singolo e di pratica."
-
-ViewGlobalName="Guarda ngWorldStats globali"
-
-ViewGlobalHelp="Guarda le tue statistiche di gioco per le partite online."
-
-AboutName="Aiuto su ngStats"
-
-AboutHelp="Informazioni sulla registrazione delle statistiche."
-
-About2Name="Guida di ngWorldStats"
-
-About2Help="Offre informazioni sulla registrazione delle statistiche globali."
-
+; EN: WindowTitle="Start Network Game"
+WindowTitle="Inizia Partita in Rete"
 
 [UMenuLoadGameWindow]
-
-WindowTitle="Carica partita"
-
-
-[UMenuConfigIndivBotsWindow]
-
-WindowTitle="Configura bot individuali"
-
-
-[UMenuNewGameWindow]
-
-WindowTitle="Nuova partita"
-
-
-[UMenuSaveGameWindow]
-
-WindowTitle="Salva partita"
-
+; EN: WindowTitle="Load Game"
+WindowTitle="Carica Partita"
 
 [UMenuHelpWindow]
-
+; EN: WindowTitle="Help"
 WindowTitle="Aiuto"
 
+[UMenuNewGameWindow]
+; EN: WindowTitle="New Game"
+WindowTitle="Nuova Partita"
+
+[UMenuSaveGameWindow]
+; EN: WindowTitle="Save Game"
+WindowTitle="Salva Partita"
+
+[UMenuConfigIndivBotsWindow]
+; EN: WindowTitle="Configure Individual Bots"
+WindowTitle="Configura Bot Individuali"
+
+[UnrealConsole]
+; EN: ClassCaption="UMenu Browser Console"
+ClassCaption="Console del Browser UMenu"
+
+[UMenuMenuBar]
+; EN: GameName="&Game"
+GameName="&Partita"
+; EN: GameHelp="Start a new game, load a game, or quit."
+GameHelp="Inizia nuova partita, carica partita o esci."
+; EN: MultiplayerName="&Multiplayer"
+MultiplayerName="&Multigiocatore"
+; EN: MultiplayerHelp="Host or join a multiplayer game."
+MultiplayerHelp="Ospita o unisciti a partita multigiocatore."
+; EN: OptionsName="&Options"
+OptionsName="&Opzioni"
+; EN: OptionsHelp="Configure settings."
+OptionsHelp="Configura impostazioni."
+; EN: ToolName="&Tools"
+ToolName="&Strumenti"
+; EN: ToolHelp="Enable various system tools."
+ToolHelp="Attiva diversi strumenti di sistema."
+; EN: HelpName="&Help"
+HelpName="&Aiuto"
+; EN: HelpHelp="Enable or disable help."
+HelpHelp="Attiva o disattiva aiuto."
+; EN: VersionName="Version"
+VersionName="Versione"
+; EN: ModName="Mo&d"
+ModName="Mo&d"
+; EN: ModHelp="Configure user-created mods you have installed."
+ModHelp="Configura i mod creati dall'utente che hai installato."
+; EN: DemoName="&Recording"
+DemoName="&Registrazione"
+; EN: DemoHelp="Demo recording, record a game which you can view later."
+DemoHelp="Registrazione Demo, registra un gioco che puoi visualizzare in seguito."
+
+[UTCreditsCW]
+; EN: ProgrammersText="Programming"
+ProgrammersText="Programmazione"
+; EN: LevelDesignText="Level Design"
+LevelDesignText="Progettazione Livelli"
+; EN: ArtText="Art & Models"
+ArtText="Grafica e Modelli"
+; EN: MusicSoundText="Music & Sound"
+MusicSoundText="Musica e Sonoro"
+; EN: BizText="Biz"
+BizText="Biz"
+; EN: PatchText="Oldunreal 227 Patch"
+PatchText="Patch OldUnreal ver. 227"
+
+[UMenuVideoClientWindow]
+EditAreaWidth=110
+; EN: DriverText="Video Driver"
+DriverText="Driver Video"
+; EN: DriverHelp="This is the current video driver. Press the Restart button to change it."
+DriverHelp="Questo √® il driver video attuale. Usa il pulsante Cambia per modificare i driver video."
+; EN: ShowWindowedText="Show Fullscreen"
+ShowWindowedText="Mostra a schermo intero"
+; EN: ShowWindowedHelp="If checked, runs Unreal in fullscreen mode."
+ShowWindowedHelp="Se selezionato, esegue Unreal in modalit√† a schermo intero."
+; EN: ResolutionText="Resolution"
+ResolutionText="Risoluzione"
+; EN: ResolutionHelp="Select a new screen resolution."
+ResolutionHelp="Seleziona una nuova risoluzione dello schermo."
+; EN: ColorDepthText="Color Depth"
+ColorDepthText="Profondit√† Colore"
+; EN: ColorDepthHelp="Select a new color depth."
+ColorDepthHelp="Seleziona una nuova profondit√† colore."
+; EN: BitsText="bit"
+BitsText="bit"
+; EN: TextureDetailText="World Texture Detail"
+TextureDetailText="Dettaglio Texture Mondo"
+; EN: TextureDetailHelp="Change the texture detail of world geometry. Use a lower texture detail to improve game performance."
+TextureDetailHelp="Cambia il dettaglio delle texture della geometria del mondo. Usa un dettaglio inferiore per migliorare le prestazioni di gioco."
+; EN: Details[0]="High"
+Details[0]="Alto"
+; EN: Details[1]="Medium"
+Details[1]="Medio"
+; EN: Details[2]="Low"
+Details[2]="Basso"
+; EN: SkinDetailText="Skin Detail"
+SkinDetailText="Dettaglio Skin"
+; EN: SkinDetailHelp="Change the detail of player skins. Use a lower skin detail to improve game performance."
+SkinDetailHelp="Cambia il dettaglio della skin del giocatore. Usa un dettaglio inferiore per migliorare le prestazioni di gioco."
+; EN: BrightnessText="Brightness"
+BrightnessText="Luminosit√†"
+; EN: BrightnessHelp="Adjust display brightness."
+BrightnessHelp="Regola luminosit√† schermo."
+; EN: ScaleText="Font Size"
+ScaleText="Dimensioni Font"
+; EN: ScaleHelp="Adjust the size of elements in the User Interface."
+ScaleHelp="Regola le dimensioni degli elementi dell'interfaccia utente."
+; EN: ScaleSizes[0]="Normal"
+ScaleSizes[0]="Normale"
+; EN: ScaleSizes[1]="Double"
+ScaleSizes[1]="Doppie"
+; EN: TranslatorScaleText="Translator Size"
+TranslatorScaleText="Traduttore Dimensione"
+; EN: TranslatorScaleHelp="Adjust the size of the Translator."
+TranslatorScaleHelp="Regolare la dimensione del Traduttore."
+TranslatorScaleSizes[0]="1x"
+TranslatorScaleSizes[1]="2x"
+TranslatorScaleSizes[2]="3x"
+TranslatorScaleSizes[3]="4x"
+; EN: MouseText="GUI Mouse Speed"
+MouseText="Velocit√† Mouse IU"
+; EN: MouseHelp="Adjust the speed of the mouse in the User Interface."
+MouseHelp="Regola la velocit√† del mouse nell'interfaccia utente."
+; EN: GuiSkinText="GUI Skin"
+GuiSkinText="Skin IU"
+; EN: GuiSkinHelp="Change the look of the User Interface windows to a custom skin."
+GuiSkinHelp="Modifica l'aspetto delle finestre dell'interfaccia utente con una skin personalizzata."
+; EN: ConfirmSettingsTitle="Confirm Video Settings Change"
+ConfirmSettingsTitle="Conferma Cambiamento Impostazioni Video"
+; EN: ConfirmSettingsText="Are you sure you wish to keep these new video settings?"
+ConfirmSettingsText="Sei sicuro di voler mantenere queste nuove impostazioni video?"
+; EN: ConfirmSettingsCancelTitle="Video Settings Change"
+ConfirmSettingsCancelTitle="Cambio Impostazioni Video"
+; EN: ConfirmSettingsCancelText="Your previous video settings have been restored."
+ConfirmSettingsCancelText="Sono state ripristinate le impostazioni video precedenti."
+; EN: ConfirmTextureDetailTitle="Confirm Texture Detail"
+ConfirmTextureDetailTitle="Conferma Dettagli Texture"
+; EN: ConfirmTextureDetailText="Increasing texture detail above its default value may degrade performance on some machines."
+ConfirmTextureDetailText="L'aumento dei dettagli delle texture al di sopra del valore predefinito potrebbe influire negativamente sulle prestazioni di alcuni sistemi.\\n\\nApportare comunque la modifica?"
+; EN: ConfirmDriverTitle="Change Video Driver"
+ConfirmDriverTitle="Cambia Driver Video"
+; EN: ConfirmDriverText="Do you want to restart Unreal with the selected video driver?"
+ConfirmDriverText="Questa opzione riavvier√† Unreal e ti consentir√† di cambiare il driver video. Vuoi procedere?"
+; EN: PawnShadowText="Pawn shadows"
+PawnShadowText="Ombre Dettagliate"
+; EN: PawnShadowHelp="Detail of shadows that pawns should cast on ground (the changes will take effect after a map change)."
+PawnShadowHelp="Gli oggetti creerano un'ombra pi√π dettagliata (necessario il cambiamento di mappa per avere effetto)."
+; EN: PawnShadowList[0]="None"
+PawnShadowList[0]="Nessuna"
+; EN: PawnShadowList[1]="Blob"
+PawnShadowList[1]="Macchia"
+; EN: PawnShadowList[2]="Real-Time Low"
+PawnShadowList[2]="Tempo Reale Bassa Ris."
+; EN: PawnShadowList[3]="Real-Time Medium"
+PawnShadowList[3]="Tempo Reale Media Ris."
+; EN: PawnShadowList[4]="Real-Time High"
+PawnShadowList[4]="Tempo Reale Alta Ris."
+; EN: PawnShadowList[5]="Real-Time Ultra"
+PawnShadowList[5]="Tempo Reale Ultra Ris."
+; EN: ShowDecalsText="Show Decals"
+ShowDecalsText="Mostra Dettagli"
+; EN: ShowDecalsHelp="If checked, impact and gore decals will be used in game."
+ShowDecalsHelp="Se selezionata, la grafica degli scontri e delle uccisioni sar√† pi√π dettagliata."
+; EN: MinFramerateText="Min Desired Framerate"
+MinFramerateText="Freq. Fotogr. Minima"
+; EN: MinFramerateHelp="If your framerate falls below this value, Unreal will reduce special effects to increase the framerate."
+MinFramerateHelp="Se la tua frequenza dei fotogrammi scende sotto questo valore, Unreal ridurr√† gli effetti speciali per aumentarla."
+; EN: DynamicLightsText="Use Dynamic Lighting"
+DynamicLightsText="Illuminazione Dinamica"
+; EN: DynamicLightsHelp="If checked, dynamic lighting will be used in game."
+DynamicLightsHelp="Se selezionata, nel gioco verr√† usata l'illuminazione dinamica."
+; EN: WeaponFlashText="Weapon Flash"
+WeaponFlashText="Flash dell'arma"
+; EN: WeaponFlashHelp="If checked, your screen will flash when you fire your weapon."
+WeaponFlashHelp="Se selezionato, lo schermo lampegger√† quando spari con la tua arma."
+; EN: FovAngleText="FOV Angle"
+FovAngleText="Angolo FOV"
+; EN: FovAngleHelp="Horizontal FOV (field of view) angle in degrees"
+FovAngleHelp="Angolo del FOV (campo visivo) orizzontale in gradi"
+; EN: DecoShadowsText="Decoration shadows"
+DecoShadowsText="Ombre Decorazioni"
+; EN: DecoShadowsHelp="Whether decorations should cast shadows to the ground."
+DecoShadowsHelp="Le decorazioni creeranno un'ombra sul terreno (necessario il cambiamento di mappa per avere effetto)."
+; EN: FlatShadingText="Mesh flat shading"
+FlatShadingText="Obreggiatura uniforme della Mesh"
+; EN: FlatShadingHelp="Allow specific meshes render with flat shading lighting."
+FlatShadingHelp="Rendering di mesh mediante il modello di ombreggiatura Flat Shading."
+; EN: CurvyMeshText="Curvy meshes"
+CurvyMeshText="Mesh Curve"
+; EN: CurvyMeshHelp="Allow specific meshes render with some curved surfaces."
+CurvyMeshHelp="Permette il rendering di mesh con alcune superfici curve."
+; EN: UsePrecacheText="Precache Content"
+UsePrecacheText="Contenuto precache"
+; EN: UsePrecacheHelp="Use this option for precaching map content (such as sounds and textures)."
+UsePrecacheHelp="Utilizzare questa opzione per il precaching del contenuto della mappa (come suoni e trame)."
+; EN: TrilinearFilteringText="Trilinear Filtering"
+TrilinearFilteringText="Filtraggio trilineare"
+; EN: TrilinearFilteringHelp="Use this option to activate/deactivate trilinear texture filtering."
+TrilinearFilteringHelp="Usa questa opzione per attivare / disattivare il filtraggio trilineare delle texture."
+; EN: AnisotropicFilteringText="Anisotropic Filtering"
+AnisotropicFilteringText="Filtraggio anisotropico"
+; EN: AnisotropicFilteringHelp="Anisotropic texture filtering."
+AnisotropicFilteringHelp="Filtraggio texture anisotropo."
+; EN: AnisotropicFilteringModes[0]="Off"
+AnisotropicFilteringModes[0]="Off"
+AnisotropicFilteringModes[1]="%Nx"
+; EN: AntialiasingText="Antialiasing"
+AntialiasingText="Anti aliasing"
+; EN: AntialiasingHelp="Antialiasing mode."
+AntialiasingHelp="Modalit√† antialiasing."
+; EN: AntialiasingModes[0]="Off"
+AntialiasingModes[0]="Off"
+; EN: AntialiasingModes[1]="On"
+AntialiasingModes[1]="Sopra"
+AntialiasingModes[2]="%Nx"
+; EN: VSyncText="Vertical Sync."
+VSyncText="Sincronizzazione verticale."
+; EN: VSyncHelp="If enabled, synchronizes the frame rate of the game with the refresh rate of your monitor. This can reduce screen tearing."
+VSyncHelp="Se abilitato, sincronizza la frequenza dei fotogrammi del gioco con la frequenza di aggiornamento del monitor. Ci√≤ pu√≤ ridurre la lacerazione dello schermo."
+; EN: VSyncModes[0]="Disabled"
+VSyncModes[0]="Disabilitato"
+; EN: VSyncModes[1]="Enabled"
+VSyncModes[1]="Abilitato"
+; EN: VSyncModes[2]="Adaptive"
+VSyncModes[2]="Adaptive"
+; EN: NotAvailableText="Not available"
+NotAvailableText="Non disponibile"
+
+[UMenuPlayerSetupClient]
+EditAreaWidth=110
+; EN: NameText="Name:"
+NameText="Nome:"
+; EN: NameHelp="Set your player name."
+NameHelp="Indica il nome del tuo giocatore."
+; EN: TeamText="Team:"
+TeamText="Squadra:"
+; EN: Teams[0]="Red"
+Teams[0]="Rossa"
+; EN: Teams[1]="Blue"
+Teams[1]="Blu"
+; EN: Teams[2]="Green"
+Teams[2]="Verde"
+; EN: Teams[3]="Gold"
+Teams[3]="Oro"
+; EN: NoTeam="None"
+NoTeam="Nessuna"
+; EN: TeamHelp="Select the team you wish to play on."
+TeamHelp="Seleziona la squadra con cui vuoi giocare."
+; EN: ClassText="Class:"
+ClassText="Classe:"
+; EN: ClassHelp="Select your player class."
+ClassHelp="Seleziona la classe del tuo giocatore."
+; EN: SkinText="Skin:"
+SkinText="Pelle:"
+; EN: SkinHelp="Choose a skin for your player."
+SkinHelp="Scegli una pelle per il tuo giocatore."
+; EN: FaceText="Face:"
+FaceText="Faccia:"
+; EN: FaceHelp="Choose a face for your player."
+FaceHelp="Scegli una faccia per il tuo giocatore."
+; EN: SpectatorText="Play as Spectator"
+SpectatorText="Gioca come Spettatore"
+; EN: SpectatorHelp="Check this checkbox to watch the action in the game as a spectator."
+SpectatorHelp="Seleziona questa casella per guardare la partita come uno spettatore."
+
+[UMenuStartMatchClientWindow]
+; EN: GameText="Game Type:"
+GameText="Tipo Partita:"
+; EN: GameClassText="Game Class:"
+GameClassText="Classe di gioco:"
+; EN: GameHelp="Select the type of game to play."
+GameHelp="Seleziona il tipo di partita."
+; EN: MapText="Map Name:"
+MapText="Nome Mappa:"
+; EN: MapHelp="Select the map to play."
+MapHelp="Seleziona la mappa."
+; EN: MapListText="Map List"
+MapListText="Elenco Mappe"
+; EN: MapListHelp="Click this button to change the list of maps which will be cycled."
+MapListHelp="Clicca su questo pulsante per passare all'elenco delle mappe."
+; EN: MutatorText="Mutators"
+MutatorText="Mutatori"
+; EN: MutatorHelp="Mutators are scripts which modify gameplay.  Press this button to choose which mutators to use."
+MutatorHelp="I mutatori sono script creati dall'utente che modificano gli oggetti e le armi che compaiono in una mappa. Premi questo pulsante per scegliere quali mutatori usare."
+; EN: FilterInvalidGameClassesText="Filter Invalid Game Classes"
+FilterInvalidGameClassesText="Filtra classi di gioco non valide"
+; EN: FilterInvalidGameClassesHelp="When checked, invalid classes are not listed (validation may be slow)."
+FilterInvalidGameClassesHelp="Se selezionata, le classi non valide non sono elencate (la convalida potrebbe essere lenta)."
+; EN: InvalidGameClass="<Invalid Game Class>"
+InvalidGameClass="<Classe di gioco non valida>"
+
+[UMenuCustomizeClientWindow]
+EditAreaWidth=155
+; EN: LocalizedKeyName[1]="Left Mouse"
+LocalizedKeyName[1]="Mouse Sinistro"
+; EN: LocalizedKeyName[2]="Right Mouse"
+LocalizedKeyName[2]="Mouse Destro"
+; EN: LocalizedKeyName[3]="Cancel"
+LocalizedKeyName[3]="Canc"
+; EN: LocalizedKeyName[4]="Middle Mouse"
+LocalizedKeyName[4]="Mouse Medio"
+; EN: LocalizedKeyName[5]="Unknown 05"
+LocalizedKeyName[5]="Sconos. 05"
+; EN: LocalizedKeyName[6]="Unknown 06"
+LocalizedKeyName[6]="Sconos. 06"
+; EN: LocalizedKeyName[7]="Unknown 07"
+LocalizedKeyName[7]="Sconos. 07"
+; EN: LocalizedKeyName[8]="Backspace"
+LocalizedKeyName[8]="Backspace"
+; EN: LocalizedKeyName[9]="Tab"
+LocalizedKeyName[9]="Tab"
+; EN: LocalizedKeyName[10]="Unknown 0A"
+LocalizedKeyName[10]="Sconos. 0A"
+; EN: LocalizedKeyName[11]="Unknown 0B"
+LocalizedKeyName[11]="Sconos. 0B"
+; EN: LocalizedKeyName[12]="Unknown 0C"
+LocalizedKeyName[12]="Sconos. 0C"
+; EN: LocalizedKeyName[13]="Enter"
+LocalizedKeyName[13]="Invio"
+; EN: LocalizedKeyName[14]="Unknown 0E"
+LocalizedKeyName[14]="Sconos. 0E"
+; EN: LocalizedKeyName[15]="Unknown 0F"
+LocalizedKeyName[15]="Sconos. 0F"
+; EN: LocalizedKeyName[16]="Shift"
+LocalizedKeyName[16]="Maiusc"
+; EN: LocalizedKeyName[17]="Control"
+LocalizedKeyName[17]="Ctrl"
+; EN: LocalizedKeyName[18]="Alt"
+LocalizedKeyName[18]="Alt"
+; EN: LocalizedKeyName[19]="Pause"
+LocalizedKeyName[19]="Pausa"
+; EN: LocalizedKeyName[20]="Caps Lock"
+LocalizedKeyName[20]="Caps Lock"
+; EN: LocalizedKeyName[21]="Mouse 4"
+LocalizedKeyName[21]="Mouse 4"
+; EN: LocalizedKeyName[22]="Mouse 5"
+LocalizedKeyName[22]="Mouse 5"
+; EN: LocalizedKeyName[23]="Mouse 6"
+LocalizedKeyName[23]="Mouse 6"
+; EN: LocalizedKeyName[24]="Mouse 7"
+LocalizedKeyName[24]="Mouse 7"
+; EN: LocalizedKeyName[25]="Mouse 8"
+LocalizedKeyName[25]="Mouse 8"
+; EN: LocalizedKeyName[26]="Unknown 1A"
+LocalizedKeyName[26]="Sconos. 1A"
+; EN: LocalizedKeyName[27]="Escape"
+LocalizedKeyName[27]="Esc"
+; EN: LocalizedKeyName[28]="Unknown 1C"
+LocalizedKeyName[28]="Sconos. 1C"
+; EN: LocalizedKeyName[29]="Unknown 1D"
+LocalizedKeyName[29]="Sconos. 1D"
+; EN: LocalizedKeyName[30]="Unknown 1E"
+LocalizedKeyName[30]="Sconos. 1E"
+; EN: LocalizedKeyName[31]="Unknown 1F"
+LocalizedKeyName[31]="Sconos. 1F"
+; EN: LocalizedKeyName[32]="Space"
+LocalizedKeyName[32]="Spazio"
+; EN: LocalizedKeyName[33]="Page Up"
+LocalizedKeyName[33]="Pag. Su"
+; EN: LocalizedKeyName[34]="Page Down"
+LocalizedKeyName[34]="Pag. Gi√π"
+; EN: LocalizedKeyName[35]="End"
+LocalizedKeyName[35]="Fine"
+; EN: LocalizedKeyName[36]="Home"
+LocalizedKeyName[36]="Home"
+; EN: LocalizedKeyName[37]="Left"
+LocalizedKeyName[37]="Sinistra"
+; EN: LocalizedKeyName[38]="Up"
+LocalizedKeyName[38]="Su"
+; EN: LocalizedKeyName[39]="Right"
+LocalizedKeyName[39]="Destra"
+; EN: LocalizedKeyName[40]="Down"
+LocalizedKeyName[40]="Gi√π"
+; EN: LocalizedKeyName[41]="Select"
+LocalizedKeyName[41]="Select"
+; EN: LocalizedKeyName[42]="Print"
+LocalizedKeyName[42]="Stamp"
+; EN: LocalizedKeyName[43]="Execute"
+LocalizedKeyName[43]="Execute"
+; EN: LocalizedKeyName[44]="Prnt Scrn"
+LocalizedKeyName[44]="Print Scrn"
+; EN: LocalizedKeyName[45]="Insert"
+LocalizedKeyName[45]="Ins"
+; EN: LocalizedKeyName[46]="Delete"
+LocalizedKeyName[46]="Del"
+; EN: LocalizedKeyName[47]="Help"
+LocalizedKeyName[47]="Help"
+LocalizedKeyName[48]="0"
+LocalizedKeyName[49]="1"
+LocalizedKeyName[50]="2"
+LocalizedKeyName[51]="3"
+LocalizedKeyName[52]="4"
+LocalizedKeyName[53]="5"
+LocalizedKeyName[54]="6"
+LocalizedKeyName[55]="7"
+LocalizedKeyName[56]="8"
+LocalizedKeyName[57]="9"
+; EN: LocalizedKeyName[58]="Unknown 3A"
+LocalizedKeyName[58]="Sconos. 3A"
+; EN: LocalizedKeyName[59]="Unknown 3B"
+LocalizedKeyName[59]="Sconos. 3B"
+; EN: LocalizedKeyName[60]="Unknown 3C"
+LocalizedKeyName[60]="Sconos. 3C"
+; EN: LocalizedKeyName[61]="Unknown 3D"
+LocalizedKeyName[61]="Sconos. 3D"
+; EN: LocalizedKeyName[62]="Unknown 3E"
+LocalizedKeyName[62]="Sconos. 3E"
+; EN: LocalizedKeyName[63]="Unknown 3F"
+LocalizedKeyName[63]="Sconos. 3F"
+; EN: LocalizedKeyName[64]="Unknown 40"
+LocalizedKeyName[64]="Sconos. 40"
+LocalizedKeyName[65]="A"
+LocalizedKeyName[66]="B"
+LocalizedKeyName[67]="C"
+LocalizedKeyName[68]="D"
+LocalizedKeyName[69]="E"
+LocalizedKeyName[70]="F"
+LocalizedKeyName[71]="G"
+LocalizedKeyName[72]="H"
+LocalizedKeyName[73]="I"
+LocalizedKeyName[74]="J"
+LocalizedKeyName[75]="K"
+LocalizedKeyName[76]="L"
+LocalizedKeyName[77]="M"
+LocalizedKeyName[78]="N"
+LocalizedKeyName[79]="O"
+LocalizedKeyName[80]="P"
+LocalizedKeyName[81]="Q"
+LocalizedKeyName[82]="R"
+LocalizedKeyName[83]="S"
+LocalizedKeyName[84]="T"
+LocalizedKeyName[85]="U"
+LocalizedKeyName[86]="V"
+LocalizedKeyName[87]="W"
+LocalizedKeyName[88]="X"
+LocalizedKeyName[89]="Y"
+LocalizedKeyName[90]="Z"
+; EN: LocalizedKeyName[91]="Unknown 5B"
+LocalizedKeyName[91]="Sconos. 5B"
+; EN: LocalizedKeyName[92]="Unknown 5C"
+LocalizedKeyName[92]="Sconos. 5C"
+; EN: LocalizedKeyName[93]="Unknown 5D"
+LocalizedKeyName[93]="Sconos. 5D"
+; EN: LocalizedKeyName[94]="Unknown 5E"
+LocalizedKeyName[94]="Sconos. 5E"
+; EN: LocalizedKeyName[95]="Unknown 5F"
+LocalizedKeyName[95]="Sconos. 5F"
+; EN: LocalizedKeyName[96]="Num. Pad 0"
+LocalizedKeyName[96]="Tast. Num. 0"
+; EN: LocalizedKeyName[97]="Num. Pad 1"
+LocalizedKeyName[97]="Tast. Num. 1"
+; EN: LocalizedKeyName[98]="Num. Pad 2"
+LocalizedKeyName[98]="Tast. Num. 2"
+; EN: LocalizedKeyName[99]="Num. Pad 3"
+LocalizedKeyName[99]="Tast. Num. 3"
+; EN: LocalizedKeyName[100]="Num. Pad 4"
+LocalizedKeyName[100]="Tast. Num. 4"
+; EN: LocalizedKeyName[101]="Num. Pad 5"
+LocalizedKeyName[101]="Tast. Num. 5"
+; EN: LocalizedKeyName[102]="Num. Pad 6"
+LocalizedKeyName[102]="Tast. Num. 6"
+; EN: LocalizedKeyName[103]="Num. Pad 7"
+LocalizedKeyName[103]="Tast. Num. 7"
+; EN: LocalizedKeyName[104]="Num. Pad 8"
+LocalizedKeyName[104]="Tast. Num. 8"
+; EN: LocalizedKeyName[105]="Num. Pad 9"
+LocalizedKeyName[105]="Tast. Num. 9"
+; EN: LocalizedKeyName[106]="Num. Pad *"
+LocalizedKeyName[106]="Tast. Num. *"
+; EN: LocalizedKeyName[107]="Num. Pad +"
+LocalizedKeyName[107]="Tast. Num. +"
+; EN: LocalizedKeyName[108]="Separator"
+LocalizedKeyName[108]="Separatore"
+; EN: LocalizedKeyName[109]="Num. Pad -"
+LocalizedKeyName[109]="Tast. Num. -"
+; EN: LocalizedKeyName[110]="Num. Pad ."
+LocalizedKeyName[110]="Tast. Num. ."
+; EN: LocalizedKeyName[111]="Num. Pad /"
+LocalizedKeyName[111]="Tast. Num. /"
+LocalizedKeyName[112]="F1"
+LocalizedKeyName[113]="F2"
+LocalizedKeyName[114]="F3"
+LocalizedKeyName[115]="F4"
+LocalizedKeyName[116]="F5"
+LocalizedKeyName[117]="F6"
+LocalizedKeyName[118]="F7"
+LocalizedKeyName[119]="F8"
+LocalizedKeyName[120]="F9"
+LocalizedKeyName[121]="F10"
+LocalizedKeyName[122]="F11"
+LocalizedKeyName[123]="F12"
+LocalizedKeyName[124]="F13"
+LocalizedKeyName[125]="F14"
+LocalizedKeyName[126]="F15"
+LocalizedKeyName[127]="F16"
+LocalizedKeyName[128]="F17"
+LocalizedKeyName[129]="F18"
+LocalizedKeyName[130]="F19"
+LocalizedKeyName[131]="F20"
+LocalizedKeyName[132]="F21"
+LocalizedKeyName[133]="F22"
+LocalizedKeyName[134]="F23"
+LocalizedKeyName[135]="F24"
+; EN: LocalizedKeyName[136]="Unknown 88"
+LocalizedKeyName[136]="Sconos. 88"
+; EN: LocalizedKeyName[137]="Unknown 89"
+LocalizedKeyName[137]="Sconos. 89"
+; EN: LocalizedKeyName[138]="Unknown 8A"
+LocalizedKeyName[138]="Sconos. 8A"
+; EN: LocalizedKeyName[139]="Unknown 8B"
+LocalizedKeyName[139]="Sconos. 8B"
+; EN: LocalizedKeyName[140]="Unknown 8C"
+LocalizedKeyName[140]="Sconos. 8C"
+; EN: LocalizedKeyName[141]="Unknown 8D"
+LocalizedKeyName[141]="Sconos. 8D"
+; EN: LocalizedKeyName[142]="Unknown 8E"
+LocalizedKeyName[142]="Sconos. 8E"
+; EN: LocalizedKeyName[143]="Unknown 8F"
+LocalizedKeyName[143]="Sconos. 8F"
+; EN: LocalizedKeyName[144]="Num. Lock"
+LocalizedKeyName[144]="Bloc. Num."
+; EN: LocalizedKeyName[145]="Scroll Lock"
+LocalizedKeyName[145]="Bloc. Scorr."
+; EN: LocalizedKeyName[146]="Unknown 92"
+LocalizedKeyName[146]="Sconos. 92"
+; EN: LocalizedKeyName[147]="Unknown 93"
+LocalizedKeyName[147]="Sconos. 93"
+; EN: LocalizedKeyName[148]="Unknown 94"
+LocalizedKeyName[148]="Sconos. 94"
+; EN: LocalizedKeyName[149]="Unknown 95"
+LocalizedKeyName[149]="Sconos. 95"
+; EN: LocalizedKeyName[150]="Unknown 96"
+LocalizedKeyName[150]="Sconos. 96"
+; EN: LocalizedKeyName[151]="Unknown 97"
+LocalizedKeyName[151]="Sconos. 97"
+; EN: LocalizedKeyName[152]="Unknown 98"
+LocalizedKeyName[152]="Sconos. 98"
+; EN: LocalizedKeyName[153]="Unknown 99"
+LocalizedKeyName[153]="Sconos. 99"
+; EN: LocalizedKeyName[154]="Unknown 9A"
+LocalizedKeyName[154]="Sconos. 9A"
+; EN: LocalizedKeyName[155]="Unknown 9B"
+LocalizedKeyName[155]="Sconos. 9B"
+; EN: LocalizedKeyName[156]="Unknown 9C"
+LocalizedKeyName[156]="Sconos. 9C"
+; EN: LocalizedKeyName[157]="Unknown 9D"
+LocalizedKeyName[157]="Sconos. 9D"
+; EN: LocalizedKeyName[158]="Unknown 9E"
+LocalizedKeyName[158]="Sconos. 9E"
+; EN: LocalizedKeyName[159]="Unknown 9F"
+LocalizedKeyName[159]="Sconos. 9F"
+; EN: LocalizedKeyName[160]="Left Shift"
+LocalizedKeyName[160]="Maiusc. Sin."
+; EN: LocalizedKeyName[161]="Right Shift"
+LocalizedKeyName[161]="Maiusc. Des."
+; EN: LocalizedKeyName[162]="Left Ctrl."
+LocalizedKeyName[162]="Ctrl. Sin."
+; EN: LocalizedKeyName[163]="Right Ctrl."
+LocalizedKeyName[163]="Ctrl. Des."
+; EN: LocalizedKeyName[164]="Unknown A4"
+LocalizedKeyName[164]="Sconos. A4"
+; EN: LocalizedKeyName[165]="Unknown A5"
+LocalizedKeyName[165]="Sconos. A5"
+; EN: LocalizedKeyName[166]="Unknown A6"
+LocalizedKeyName[166]="Sconos. A6"
+; EN: LocalizedKeyName[167]="Unknown A7"
+LocalizedKeyName[167]="Sconos. A7"
+; EN: LocalizedKeyName[168]="Unknown A8"
+LocalizedKeyName[168]="Sconos. A8"
+; EN: LocalizedKeyName[169]="Unknown A9"
+LocalizedKeyName[169]="Sconos. A9"
+; EN: LocalizedKeyName[170]="Unknown AA"
+LocalizedKeyName[170]="Sconos. AA"
+; EN: LocalizedKeyName[171]="Unknown AB"
+LocalizedKeyName[171]="Sconos. AB"
+; EN: LocalizedKeyName[172]="Unknown AC"
+LocalizedKeyName[172]="Sconos. AC"
+; EN: LocalizedKeyName[173]="Unknown AD"
+LocalizedKeyName[173]="Sconos. AD"
+; EN: LocalizedKeyName[174]="Unknown AE"
+LocalizedKeyName[174]="Sconos. AE"
+; EN: LocalizedKeyName[175]="Unknown AF"
+LocalizedKeyName[175]="Sconos. AF"
+; EN: LocalizedKeyName[176]="Unknown B0"
+LocalizedKeyName[176]="Sconos. B0"
+; EN: LocalizedKeyName[177]="Unknown B1"
+LocalizedKeyName[177]="Sconos. B1"
+; EN: LocalizedKeyName[178]="Unknown B2"
+LocalizedKeyName[178]="Sconos. B2"
+; EN: LocalizedKeyName[179]="Unknown B3"
+LocalizedKeyName[179]="Sconos. B3"
+; EN: LocalizedKeyName[180]="Unknown B4"
+LocalizedKeyName[180]="Sconos. B4"
+; EN: LocalizedKeyName[181]="Unknown B5"
+LocalizedKeyName[181]="Sconos. B5"
+; EN: LocalizedKeyName[182]="Unknown B6"
+LocalizedKeyName[182]="Sconos. B6"
+; EN: LocalizedKeyName[183]="Unknown B7"
+LocalizedKeyName[183]="Sconos. B7"
+; EN: LocalizedKeyName[184]="Unknown B8"
+LocalizedKeyName[184]="Sconos. B8"
+; EN: LocalizedKeyName[185]="Unknown B9"
+LocalizedKeyName[185]="Sconos. B9"
+; EN: LocalizedKeyName[186]="Semicolon"
+LocalizedKeyName[186]="Punto Virgola"
+; EN: LocalizedKeyName[187]="Equals"
+LocalizedKeyName[187]="Pi√π"
+; EN: LocalizedKeyName[188]="Comma"
+LocalizedKeyName[188]="Virgola"
+; EN: LocalizedKeyName[189]="Minus"
+LocalizedKeyName[189]="Meno"
+; EN: LocalizedKeyName[190]="Period"
+LocalizedKeyName[190]="Punto"
+; EN: LocalizedKeyName[191]="Slash"
+LocalizedKeyName[191]="Barra"
+; EN: LocalizedKeyName[192]="Tilde"
+LocalizedKeyName[192]="Tilde"
+; EN: LocalizedKeyName[193]="Unknown C1"
+LocalizedKeyName[193]="Sconos. C1"
+; EN: LocalizedKeyName[194]="Unknown C2"
+LocalizedKeyName[194]="Sconos. C2"
+; EN: LocalizedKeyName[195]="Unknown C3"
+LocalizedKeyName[195]="Sconos. C3"
+; EN: LocalizedKeyName[196]="Unknown C4"
+LocalizedKeyName[196]="Sconos. C4"
+; EN: LocalizedKeyName[197]="Unknown C5"
+LocalizedKeyName[197]="Sconos. C5"
+; EN: LocalizedKeyName[198]="Unknown C6"
+LocalizedKeyName[198]="Sconos. C6"
+; EN: LocalizedKeyName[199]="Unknown C7"
+LocalizedKeyName[199]="Sconos. C7"
+; EN: LocalizedKeyName[200]="Joystick 1"
+LocalizedKeyName[200]="Joystick 1"
+; EN: LocalizedKeyName[201]="Joystick 2"
+LocalizedKeyName[201]="Joystick 2"
+; EN: LocalizedKeyName[202]="Joystick 3"
+LocalizedKeyName[202]="Joystick 3"
+; EN: LocalizedKeyName[203]="Joystick 4"
+LocalizedKeyName[203]="Joystick 4"
+; EN: LocalizedKeyName[204]="Joystick 5"
+LocalizedKeyName[204]="Joystick 5"
+; EN: LocalizedKeyName[205]="Joystick 6"
+LocalizedKeyName[205]="Joystick 6"
+; EN: LocalizedKeyName[206]="Joystick 7"
+LocalizedKeyName[206]="Joystick 7"
+; EN: LocalizedKeyName[207]="Joystick 8"
+LocalizedKeyName[207]="Joystick 8"
+; EN: LocalizedKeyName[208]="Joystick 9"
+LocalizedKeyName[208]="Joystick 9"
+; EN: LocalizedKeyName[209]="Joystick 10"
+LocalizedKeyName[209]="Joystick 10"
+; EN: LocalizedKeyName[210]="Joystick 11"
+LocalizedKeyName[210]="Joystick 11"
+; EN: LocalizedKeyName[211]="Joystick 12"
+LocalizedKeyName[211]="Joystick 12"
+; EN: LocalizedKeyName[212]="Joystick 13"
+LocalizedKeyName[212]="Joystick 13"
+; EN: LocalizedKeyName[213]="Joystick 14"
+LocalizedKeyName[213]="Joystick 14"
+; EN: LocalizedKeyName[214]="Joystick 15"
+LocalizedKeyName[214]="Joystick 15"
+; EN: LocalizedKeyName[215]="Joystick 16"
+LocalizedKeyName[215]="Joystick 16"
+; EN: LocalizedKeyName[216]="Unknown D8"
+LocalizedKeyName[216]="Sconos. D8"
+; EN: LocalizedKeyName[217]="Unknown D9"
+LocalizedKeyName[217]="Sconos. D9"
+; EN: LocalizedKeyName[218]="Unknown DA"
+LocalizedKeyName[218]="Sconos. DA"
+; EN: LocalizedKeyName[219]="Left Bracket"
+LocalizedKeyName[219]="Staffa Sin."
+; EN: LocalizedKeyName[220]="Backslash"
+LocalizedKeyName[220]="Barra Roves."
+; EN: LocalizedKeyName[221]="Right Bracket"
+LocalizedKeyName[221]="Staffa Des."
+; EN: LocalizedKeyName[222]="Single Quote"
+LocalizedKeyName[222]="Cit. Singola"
+; EN: LocalizedKeyName[223]="Unknown DF"
+LocalizedKeyName[223]="Sconos. DF"
+; EN: LocalizedKeyName[224]="Joystick X"
+LocalizedKeyName[224]="Joystick X"
+; EN: LocalizedKeyName[225]="Joystick Y"
+LocalizedKeyName[225]="Joystick Y"
+; EN: LocalizedKeyName[226]="Joystick Z"
+LocalizedKeyName[226]="Joystick Z"
+; EN: LocalizedKeyName[227]="Joystick R"
+LocalizedKeyName[227]="Joystick R"
+; EN: LocalizedKeyName[228]="Mouse X"
+LocalizedKeyName[228]="Mouse X"
+; EN: LocalizedKeyName[229]="Mouse Y"
+LocalizedKeyName[229]="Mouse Y"
+; EN: LocalizedKeyName[230]="Mouse Z"
+LocalizedKeyName[230]="Mouse Z"
+; EN: LocalizedKeyName[231]="Mouse W"
+LocalizedKeyName[231]="Mouse W"
+; EN: LocalizedKeyName[232]="Joystick U"
+LocalizedKeyName[232]="Joystick U"
+; EN: LocalizedKeyName[233]="Joystick V"
+LocalizedKeyName[233]="Joystick V"
+; EN: LocalizedKeyName[234]="Unknown EA"
+LocalizedKeyName[234]="Sconos. EA"
+; EN: LocalizedKeyName[235]="Unknown EB"
+LocalizedKeyName[235]="Sconos. EB"
+; EN: LocalizedKeyName[236]="Mouse Wheel Up"
+LocalizedKeyName[236]="Rot. Mouse S√π"
+; EN: LocalizedKeyName[237]="Mouse Wheel Down"
+LocalizedKeyName[237]="Rot. Mouse Gi√π"
+; EN: LocalizedKeyName[238]="Unknown 10E"
+LocalizedKeyName[238]="Sconos. 10E"
+; EN: LocalizedKeyName[239]="Unknown 10F"
+LocalizedKeyName[239]="Sconos. 10F"
+; EN: LocalizedKeyName[240]="Joystick Pov Up"
+LocalizedKeyName[240]="Joystick Pov S√π"
+; EN: LocalizedKeyName[241]="Joystick Pov Down"
+LocalizedKeyName[241]="Joystick Pov Gi√π"
+; EN: LocalizedKeyName[242]="Joystick Pov Left"
+LocalizedKeyName[242]="Joystick Pov Sin."
+; EN: LocalizedKeyName[243]="Joystick Pov Right"
+LocalizedKeyName[243]="Joystick Pov Des."
+; EN: LocalizedKeyName[244]="Unknown F4"
+LocalizedKeyName[244]="Sconos. F4"
+; EN: LocalizedKeyName[245]="Unknown F5"
+LocalizedKeyName[245]="Sconos. F5"
+; EN: LocalizedKeyName[246]="Attention"
+LocalizedKeyName[246]="Attn"
+; EN: LocalizedKeyName[247]="Cr Sel"
+LocalizedKeyName[247]="Cr Sel"
+; EN: LocalizedKeyName[248]="Ex Sel"
+LocalizedKeyName[248]="Ex Sel"
+; EN: LocalizedKeyName[249]="Er Eof"
+LocalizedKeyName[249]="Er Eof"
+; EN: LocalizedKeyName[250]="Play"
+LocalizedKeyName[250]="Play"
+; EN: LocalizedKeyName[251]="Zoom"
+LocalizedKeyName[251]="Zoom"
+; EN: LocalizedKeyName[252]="No Name"
+LocalizedKeyName[252]="Senza Nome"
+; EN: LocalizedKeyName[253]="PA1"
+LocalizedKeyName[253]="PA1"
+; EN: LocalizedKeyName[254]="OEM Clear"
+LocalizedKeyName[254]="OEM Clear"
+; EN: LabelList[0]="Fire"
+LabelList[0]="Fuoco"
+; EN: LabelList[1]="Alternate Fire"
+LabelList[1]="Fuoco Alternativo"
+; EN: LabelList[2]="Move Forward"
+LabelList[2]="Movimento in Avanti"
+; EN: LabelList[3]="Move Backwards"
+LabelList[3]="Movimento in Dietro"
+; EN: LabelList[4]="Turn Left"
+LabelList[4]="Gira a Sinistra"
+; EN: LabelList[5]="Turn Right"
+LabelList[5]="Gira a Destra"
+; EN: LabelList[6]="Strafe Left"
+LabelList[6]="Spos. Lat. Sinistra"
+; EN: LabelList[7]="Strafe Right"
+LabelList[7]="Spos. Lat. Destra"
+; EN: LabelList[8]="Jump/Up"
+LabelList[8]="Salto/Su"
+; EN: LabelList[9]="Crouch/Down"
+LabelList[9]="Abbassamento/Gi√π"
+; EN: LabelList[10]="Mouse Look"
+LabelList[10]="Sguardo Col Mouse"
+; EN: LabelList[11]="Activate Item"
+LabelList[11]="Attivazione Oggetto"
+; EN: LabelList[12]="Next Item"
+LabelList[12]="Oggetto Successivo"
+; EN: LabelList[13]="Previous Item"
+LabelList[13]="Oggetto Precedente"
+; EN: LabelList[14]="Look Up"
+LabelList[14]="Sguardo in Alto"
+; EN: LabelList[15]="Look Down"
+LabelList[15]="Sguardo in Basso"
+; EN: LabelList[16]="Center View"
+LabelList[16]="Accentr. Visuale"
+; EN: LabelList[17]="Walk"
+LabelList[17]="Camminata"
+; EN: LabelList[18]="Strafe"
+LabelList[18]="Spostamento Laterale"
+; EN: LabelList[19]="Next Weapon"
+LabelList[19]="Arma Successiva"
+; EN: LabelList[20]="Prev. Weapon"
+LabelList[20]="Arma Precedente"
+; EN: LabelList[21]="Throw Weapon"
+LabelList[21]="Lancia Arma"
+; EN: LabelList[22]="Feign Death"
+LabelList[22]="Simulazione Morte"
+; EN: LabelList[23]="Music Menu"
+LabelList[23]="Menu Musica"
+; EN: LabelList[24]="Chat"
+LabelList[24]="Chat"
+; EN: LabelList[25]="Team Chat"
+LabelList[25]="Chat Squadra"
+; EN: LabelList[26]="Show Scores"
+LabelList[26]="Mostra Punteggi"
+; EN: LabelList[27]="Grab Decoration"
+LabelList[27]="Raccogli Decorazione"
+; EN: LabelList[28]="Toggle Behindview"
+LabelList[28]="Visuale Alle Spalle"
+; EN: OrString=" or "
+OrString=" o "
+; EN: CustomizeHelp="Click the blue rectangle and then press the key to bind to this control."
+CustomizeHelp="Clicca sul rettangolo blu e premi il tasto da assegnare a questo comando."
+; EN: DefaultsText="Reset"
+DefaultsText="Predefiniti"
+; EN: DefaultsHelp="Reset all controls to their default settings."
+DefaultsHelp="Ripristina tutti i comandi predefiniti."
+; EN: JoystickText="Joystick"
+JoystickText="Joystick"
+; EN: JoyXText="X Axis"
+JoyXText="Asse X"
+; EN: JoyXHelp="Select the behavior for the left-right axis of your joystick."
+JoyXHelp="Seleziona il comportamento per l'asse sinistra-destra del joystick."
+; EN: JoyXOptions[0]="Strafe Left/Right"
+JoyXOptions[0]="Spostamento sinistra/destra"
+; EN: JoyXOptions[1]="Turn Left/Right"
+JoyXOptions[1]="Giravolta sinistra/destra"
+; EN: JoyYText="Y Axis"
+JoyYText="Asse Y"
+; EN: JoyYHelp="Select the behavior for the up-down axis of your joystick."
+JoyYHelp="Seleziona il comportamento per l'asse alto-basso del joystick."
+; EN: JoyYOptions[0]="Move Forward/Back"
+JoyYOptions[0]="Movimento avanti/indietro"
+; EN: JoyYOptions[1]="Look Up/Down"
+JoyYOptions[1]="Sguardo alto/basso"
+
+[UMenuGameRulesBase]
+bSingleColumn=False
+; EN: FragText="Frag Limit"
+FragText="Limite Uccisioni"
+; EN: FragHelp="The game will end if a player achieves this many frags. A value of 0 sets no frag limit."
+FragHelp="La partit√† avr√† termine se un giocatore riesce a ottenere queste uccisioni. Un valore pari a 0 non pone alcun limite."
+; EN: TimeText="Time Limit"
+TimeText="Tempo Limite"
+; EN: TimeHelp="The game will end if after this many minutes. A value of 0 sets no time limit."
+TimeHelp="La partita avr√† termine quando saranno trascorsi questi minuti. Un valore pari a 0 non pone alcun limite."
+; EN: MaxPlayersText="Max Connections"
+MaxPlayersText="Max Connessioni"
+; EN: MaxPlayersHelp="Maximum number of human players allowed to connect to the game."
+MaxPlayersHelp="Massimo numero di giocatori umani che possono connettersi alla partita."
+; EN: MaxSpectatorsText="Max Spectators"
+MaxSpectatorsText="Max Spettatori"
+; EN: MaxSpectatorsHelp="Maximum number of spectators allowed to connect to the game."
+MaxSpectatorsHelp="Massimo numero di spettatori che possono connettersi alla partita."
+; EN: WeaponsText="Weapons Stay"
+WeaponsText="Armi Rimangono"
+; EN: WeaponsHelp="If checked, weapons will stay at their pickup location after being picked up, instead of respawning."
+WeaponsHelp="Se marcata, le armi, dopo seesere state raccolte, rimarranno nella stessa posizione, anzich√© rigenerarsi."
+; EN: HumansOnlyText="Humans Only"
+HumansOnlyText="Solo Esseri Umani"
+; EN: HumansOnlyHelp="If checked, only human player classes are allowed."
+HumansOnlyHelp="Se selezionata, sono consentite solo le classi di giocatori umani."
+
+[UMenuBotSetupBase]
+; EN: BotText="Bot:"
+BotText="Bot:"
+; EN: BotHelp="Select the bot you wish to configure."
+BotHelp="Seleziona il bot che desideri configurare."
+; EN: BotWord="Bot"
+BotWord="Bot"
+; EN: DefaultsText="Reset"
+DefaultsText="Predefinito"
+; EN: DefaultsHelp="Reset all bot configurations to their default settings."
+DefaultsHelp="Ripristina tutti i comandi predefiniti."
+; EN: BotSkillText="Bot Skill:"
+BotSkillText="Abilit√† del Bot:"
+; EN: BotSkillHelp="Adjust the bot difficulty (easy-hard)."
+BotSkillHelp="Regola la difficolt√† del bot (facile-difficile)."
+; EN: BotAccurText="Accuracy:"
+BotAccurText="Precisione:"
+; EN: BotAccurHelp="Adjust the bot aiming skill (bad aiming-good aiming)."
+BotAccurHelp="Regolare la qualit√† della mira del bot (buona mira-cattiva mira)."
+; EN: BotCombatStyleText="Combat style:"
+BotCombatStyleText="Stile di Combattimento:"
+; EN: BotCombatStyleHelp="Adjust the bot combat style (stay far away attacking-aggressively approach their enemy)."
+BotCombatStyleHelp="Regolare lo stile di combattimento del bot (azione offensiva a distanza-avvicinarsi al nemico in modo aggressivo)."
+; EN: BotAlertnessText="Alertness:"
+BotAlertnessText="Vigilanza:"
+; EN: BotAlertnessHelp="The bot alertness (unaware of their surroundings-fully aware of their surroundings)."
+BotAlertnessHelp="La capacit√† del bot di essere in allerta (ignaro dell'ambiente circostante-pienamente consapevole dell'ambiente circostante)."
+; EN: BotCampingText="Camping:"
+BotCampingText="Camping:"
+; EN: BotCampingHelp="Adjust how likely it is for the bot stay around camping (hunt at all time-camp a lot)."
+BotCampingHelp="Regola la probabilit√† che il bot resta a stazionare in una determinata posizione (sempre a caccia-molto camping)."
+; EN: FavoriteWeaponText="Favorite Weapon:"
+FavoriteWeaponText="Arma Preferita:"
+; EN: FavoriteWeaponHelp="This bot's prefered weapon of choice."
+FavoriteWeaponHelp="L'arma preferita del bot."
+; EN: NoFavoriteWeapon="None prefered"
+NoFavoriteWeapon="Nessuna preferenza"
+; EN: NameHelp="Set this bot's name."
+NameHelp="Indica il nome di questo bot."
+; EN: TeamText="Color:"
+TeamText="Colore:"
+; EN: TeamHelp="Select the team color for this bot."
+TeamHelp="Seleziona il colore della squadra di questo bot."
+; EN: ClassHelp="Select this bot's class."
+ClassHelp="Seleziona la classe di questo bot."
+; EN: SkinHelp="Choose a skin for this bot."
+SkinHelp="Scegli una skin per questo bot."
+; EN: FaceHelp="Choose a face for this bot."
+FaceHelp="Scegli una faccia per questo bot."
+
+[UMenuGameOptionsClientWindow]
+EditAreaWidth=120
+; EN: LanguageText="Language"
+LanguageText="Linguaggio"
+; EN: LanguageHelp="This is the current game language. Change it and press Restart button in order to apply changes."
+LanguageHelp="Questa √® l'attuale lingua del gioco. Modificalo e premi il pulsante Riavvia per applicare le modifiche."
+; EN: ConsoleText="Console"
+ConsoleText="Console"
+; EN: ConsoleHelp="This option determines the look of console and menus. Press Restart button to apply the changes."
+ConsoleHelp="Questa opzione determina l'aspetto della console e dei menu. Premere il pulsante Riavvia per applicare le modifiche."
+; EN: WeaponHandText="Weapon Hand"
+WeaponHandText="Lato Arma"
+; EN: WeaponHandHelp="Select where your weapon will appear."
+WeaponHandHelp="Seleziona dove comparir√† la tua arma."
+; EN: LeftName="Left"
+LeftName="Sinistra"
+; EN: CenterName="Center"
+CenterName="Centro"
+; EN: RightName="Right"
+RightName="Destra"
+; EN: HiddenName="Hidden"
+HiddenName="Nascosta"
+; EN: ViewBobText="View Bob"
+ViewBobText="Sobbalzo Visuale"
+; EN: ViewBobHelp="Use the slider to adjust the amount your view will bob when moving."
+ViewBobHelp="Utilizza il cursore per regolare il livello di sobbalzo della tua visuale durante gli spostamenti."
+; EN: SpeedText="Game Speed"
+SpeedText="Velocit√† di Gioco"
+; EN: GoreText="Gore Level"
+GoreText="Livello Sangue"
+; EN: GoreHelp="Choose the level of gore you wish to see in the game."
+GoreHelp="Scegli il livello di sangue che vuoi vedere nella partita."
+; EN: GoreLevels[0]="Normal"
+GoreLevels[0]="Normale"
+; EN: GoreLevels[1]="Reduced"
+GoreLevels[1]="Ridotto"
+; EN: GoreLevels[2]="Ultra-Low"
+GoreLevels[2]="Ultra-Basso"
+; EN: LocalText="ngStats Local Logging"
+LocalText="Regist. Locale ngStats"
+; EN: LocalHelp="If checked, your system will log local botmatch and single player tournament games for stat compilation."
+LocalHelp="Se marcata, il tuo sistema registrer√† i botmatch e partite a giocatore singolo locali per la compilazione delle statistiche."
+
+[UMenuNetworkClientWindow]
+EditAreaWidth=130
+; EN: NetSpeedText="Internet Connection"
+NetSpeedText="Velocit√† di Rete"
+; EN: NetSpeedHelp="Select the closest match to your internet connection. Try to change this setting if you're getting huge lag."
+NetSpeedHelp="Seleziona la velocit√† che pi√π si avvicina alla tua connessione internet per ottenere delle prestazioni migliori."
+; EN: NetSpeeds[0]="(Dial-Up Networking)"
+NetSpeeds[0]="(Accesso remoto)"
+; EN: NetSpeeds[1]="(Dial-Up Networking)"
+NetSpeeds[1]="(Accesso remoto)"
+; EN: NetSpeeds[2]="(Broadband)"
+NetSpeeds[2]="(Banda larga)"
+; EN: NetSpeeds[3]="(Broadband)"
+NetSpeeds[3]="(Banda larga)"
+; EN: NetSpeeds[4]="(LAN)"
+NetSpeeds[4]="(Rete Locale)"
+
+[UMenuInputOptionsClientWindow]
+; EN: AutoAimText="Auto Aim"
+AutoAimText="Mira Automatica"
+; EN: AutoAimHelp="Enable or disable vertical aiming help."
+AutoAimHelp="Attiva o disattiva l'aiuto per la mira verticale."
+; EN: JoystickText="Joystick"
+JoystickText="Joystick"
+; EN: JoystickHelp="Enable or disable joystick."
+JoystickHelp="Abilita o disabilita il joystick."
+; EN: RawHIDInputText="Raw HID Input"
+RawHIDInputText="Input HID Grezzo"
+; EN: RawHIDInputHelp="Enabling Raw HID Input on Windows machines will improve mouse smoothness and is not affected by mouse acceleration. The game is restarted for this setting to take effect."
+RawHIDInputHelp="L'abilitazione dell'input HID non elaborato su macchine Windows migliorer√† la scorrevolezza del mouse e non sar√† influenzata dall'accelerazione del mouse. Il gioco viene riavviato affinch√© questa impostazione abbia effetto."
+; EN: ConfirmRawHIDRestartTitle="Confirm Raw HID Input Restart"
+ConfirmRawHIDRestartTitle="Conferma il riavvio dell'input HID non elaborato"
+; EN: ConfirmRawHIDText="In order to enable/disable Raw HID Input, this option will restart Unreal now."
+ConfirmRawHIDText="Per abilitare / disabilitare Raw HID Input, questa opzione riavvier√† Unreal ora."
+; EN: SensitivityText="Mouse Sensitivity"
+SensitivityText="Sensibilit√† Mouse"
+; EN: SensitivityHelp="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
+SensitivityHelp="Regola la sensibilit√† del mouse, ossia l'ampiezza dello spostamento che devi fargli compiere per ottenere un movimento nella partita."
+; EN: InvertMouseText="Invert Mouse"
+InvertMouseText="Inverti Mouse"
+; EN: InvertMouseHelp="Invert the mouse X axis.  When true, pushing the mouse forward causes you to look down rather than up."
+InvertMouseHelp="Inverti l'asse orizzontale del mouse. Quando attivato, muovendo il mouse in avanti guarderai in basso anzich√© in alto."
+; EN: LookSpringText="Look Spring"
+LookSpringText="Visuale Centrata"
+; EN: LookSpringHelp="If checked, releasing the mouselook key will automatically center the view. Only valid if Mouselook is disabled."
+LookSpringHelp="Se marcata, quando rilasci il tasto dello sguardo col mouse, la visuale viene automaticamente centrata. Questa opzione √® valida solamente se lo sguardo col mouse √® disattivato."
+; EN: MouselookText="Mouse Look"
+MouselookText="Sguardo Col Mouse"
+; EN: MouselookHelp="If checked, the mouse is always used for controlling your view direction."
+MouselookHelp="Se marcata, il mouse viene sempre utilizzato per controllare la direzione visiva. In caso contrario, puoi utilizzare il tasto dello Sguardo col Mouse per attivarla."
+; EN: MouseSmoothText="Max Smoothing"
+MouseSmoothText="Massima Scorrevolezza"
+; EN: MouseSmoothHelp="If checked, mouse input will be smoothed more to improve Mouselook smoothness."
+MouseSmoothHelp="Se marcata, l'input del mouse verr√† reso ancora pi√π scorrevole."
+; EN: bMouseSmoothText="Mouse Smoothing"
+bMouseSmoothText="Scorrevolezza Mouse"
+; EN: bMouseSmoothHelp="If checked, mouse input will be smoothed to improve Mouselook smoothness."
+bMouseSmoothHelp="Se marcata, l'input del mouse verr√† reso pi√π scorrevole, in modo da aumentare la fluidit√† dello sguardo col mouse."
+; EN: AutoSlopeText="Auto Slope"
+AutoSlopeText="Auto-Inclinazione"
+; EN: AutoSlopeHelp="If checked, your view will automatically adjust to look up and down slopes and stairs. Only valid if Mouselook is disabled."
+AutoSlopeHelp="Se marcata, la tua visuale verr√† regolata in modo da guardare automaticamente su e gi√π in prossimit√† di scale e rampe. Funziona solo se lo sguardo col mouse √® disattivato."
+; EN: DodgingText="Dodging"
+DodgingText="Schivare"
+; EN: DodgingHelp="If checked, double tapping the movement keys (forward, back, and strafe left or right) will result in a fast dodge move."
+DodgingHelp="Se marcata, una doppia pressione dei tasti di movimento (avanti, indietro, destra, sinistra) ti consentir√† di schivare rapidamente un colpo."
+; EN: DodgeClickTimeText="Dodge Double Click Time"
+DodgeClickTimeText="Schivare Tempo Doppio Clic"
+; EN: DodgeClickTimeHelp="Maximal double click interval in seconds for dodge move."
+DodgeClickTimeHelp="Intervallo massimo di doppio clic in secondi per la schivata."
+
+[UMenuAudioClientWindow]
+EditAreaWidth=110
+; EN: DriverText="Audio Driver"
+DriverText="Driver Audio"
+; EN: DriverHelp="This is the current audio driver. Press the Restart button in order to pick a different sound driver."
+DriverHelp="Questo √® il driver audio corrente. Premere il pulsante Riavvia per scegliere un driver audio diverso."
+; EN: ConfirmDriverTitle="Change Audio Driver..."
+ConfirmDriverTitle="Cambia driver audio ..."
+; EN: ConfirmDriverText="Do you want to restart Unreal with the selected audio driver?"
+ConfirmDriverText="Vuoi riavviare Unreal con il driver audio selezionato?"
+; EN: SoundQualityText="Sound Quality"
+SoundQualityText="Qualit√† Suono"
+; EN: SoundQualityHelp="Use low sound quality to improve game performance on machines with less than 32 MB memory."
+SoundQualityHelp="Usa una bassa qualit√† del suono per migliorare le prestazioni di gioco sui computer con meno di 32MB di memoria."
+; EN: Details[0]="Low"
+Details[0]="Bassa"
+; EN: Details[1]="High"
+Details[1]="Alta"
+; EN: MusicVolumeText="Music Volume"
+MusicVolumeText="Volume Musica"
+; EN: MusicVolumeHelp="Increase or decrease music volume."
+MusicVolumeHelp="Aumenta o diminuisce il volume della musica."
+; EN: SoundVolumeText="Sound Volume"
+SoundVolumeText="Volume Sonoro"
+; EN: SoundVolumeHelp="Increase or decrease sound effects volume."
+SoundVolumeHelp="Aumenta o diminuisce il volume degli effetti sonori."
+; EN: VoiceVolumeText="Voice Volume"
+VoiceVolumeText="Volume della voce"
+; EN: VoiceVolumeHelp="Increase or decrease speech, taunt and grunt effects volume."
+VoiceVolumeHelp="Aumenta o diminuisce il volume degli effetti di parole, provocazioni e grugniti"
+; EN: VoiceMessagesText="Voice Messages"
+VoiceMessagesText="Messaggi Vocali"
+; EN: VoiceMessagesHelp="If checked, you will hear voice messages and commands from other players."
+VoiceMessagesHelp="Se marcata, sentirai messaggi vocali e comandi provenienti dagli altri giocatori."
+; EN: MessageBeepText="Message Beep"
+MessageBeepText="Bip di Messaggio"
+; EN: MessageBeepHelp="If checked, you will hear a beep sound when chat message received."
+MessageBeepHelp="Se marcata, quando riceverai un messaggio chat udirai un bip."
+; EN: NotAvailableText="Not available"
+NotAvailableText="Non disponibile"
+
+[UMenuNewGameClientWindow]
+; EN: GameHelp="Select your game to play."
+GameHelp="Scegli la campagna da iniziare."
+; EN: GameText="Campaign:"
+GameText="Campagna:"
+; EN: SkillText="Difficulty:"
+SkillText="Livello Abilit√†:"
+; EN: Skills[0]="Easy"
+Skills[0]="Facile"
+; EN: Skills[1]="Medium"
+Skills[1]="Medio"
+; EN: Skills[2]="Hard"
+Skills[2]="Difficile"
+Skills[3]="Unreal"
+; EN: Skills[4]="Extreme"
+Skills[4]="Estremo"
+; EN: Skills[5]="Nightmare"
+Skills[5]="Incubo"
+Skills[6]="Ultra-Unreal"
+; EN: SkillStrings[0]="Tourist mode."
+SkillStrings[0]="Modalit√† turista."
+; EN: SkillStrings[1]="Ready for some action!"
+SkillStrings[1]="Pronto all'azione!"
+; EN: SkillStrings[2]="Not for the faint of heart."
+SkillStrings[2]="Non √® adatto ai deboli di cuore."
+; EN: SkillStrings[3]="Death wish."
+SkillStrings[3]="Desiderio di morte."
+; EN: SkillStrings[4]="For players who want an extra difficulty."
+SkillStrings[4]="Per i giocatori che vogliono una difficolt√† in pi√π."
+; EN: SkillStrings[5]="For the hardcore gamers."
+SkillStrings[5]="Per i giocatori pi√π accaniti."
+; EN: SkillStrings[6]="HOLY SHIT!"
+SkillStrings[6]="BONTA' DIVINA!"
+; EN: SkillHelp="Select the difficulty you wish to play at."
+SkillHelp="Seleziona il livello di difficolt√† al quale vuoi giocare."
+; EN: UseMutText="Use Mutators"
+UseMutText="Usa i mutatori"
+; EN: UseMutHelp="If should use mutators in this game."
+UseMutHelp="Dovrei usare i mutatori in questo gioco."
+; EN: AdvancedText="Advanced..."
+AdvancedText="Avanzate..."
+
+[UMenuMapListCW]
+; EN: DefaultText="Use Map List: "
+DefaultText="Usa Elenco Mappe: "
+; EN: DefaultHelp="Choose a default map list to load, or choose Custom and configure the map list by hand."
+DefaultHelp="Scegli una mappa predefinita da caricare, oppure scegli Personalizza e configura manualmente l'elenco."
+; EN: RandomText="Mappe Shuffle:"
+RandomText="Mappe shuffle:"
+; EN: RandomHelp="Play these maps in random order."
+RandomHelp="Gioca a queste mappe in ordine casuale."
+; EN: CustomText="Custom"
+CustomText="Personalizza"
+; EN: ExcludeCaption="Maps Not Cycled"
+ExcludeCaption="Mappe Fuori Elenco"
+; EN: ExcludeHelp="Click and drag a map to the right hand column to include that map in the map cycle list."
+ExcludeHelp="Clicca su una mappa e trascinala sulla colonna di destra per includerla nell'elenco delle mappe."
+; EN: IncludeCaption="Maps Cycled"
+IncludeCaption="Mappe nell'Elenco"
+; EN: IncludeHelp="Click and drag a map to the left hand column to remove it from the map cycle list, or drag it up or down to re-order it in the map cycle list."
+IncludeHelp="Clicca su una mappa e trascinala nella colonna di sinistra per rimuoverla dall'elenco, oppure spostala in alto o in basso per assegnarle una diversa posizione."
+
+[UMenuOptionsClientWindow]
+; EN: ConfirmTitle="Save Settings and Restart..."
+ConfirmTitle="Salva impostazioni e riavvia ..."
+; EN: ConfirmText="This option will restart Unreal now and will run with selected settings. ¬øDo you want to do this?"
+ConfirmText="Questa opzione riavvier√† Unreal ora e verr√† eseguita con le impostazioni selezionate. ¬øVuoi farlo?"
+; EN: RestartButtonText="Restart"
+RestartButtonText="Ricomincia"
+; EN: RestartButtonHelp="Press this button to restart the game with current settings."
+RestartButtonHelp="Premi questo pulsante per riavviare il gioco con le impostazioni correnti."
+; EN: GamePlayTab="Game"
+GamePlayTab="Gioco"
+; EN: InputTab="Input"
+InputTab="Input"
+; EN: ControlsTab="Controls"
+ControlsTab="Comandi"
+; EN: AudioTab="Audio"
+AudioTab="Audio"
+; EN: VideoTab="Video"
+VideoTab="Video"
+; EN: NetworkTab="Network"
+NetworkTab="Rete"
+; EN: HUDTab="HUD"
+HUDTab="HUD"
+
+[UMenuHUDConfigCW]
+; EN: HUDConfigText="HUD Layout"
+HUDConfigText="Layout HUD"
+; EN: HUDConfigHelp="Use the left and right arrow keys to select a Heads Up Display configuration."
+HUDConfigHelp="Utilizzare i tasti freccia sinistra e destra per selezionare una configurazione di Heads Up Display."
+; EN: CrosshairText="Crosshair Style"
+CrosshairText="Stile mirino"
+; EN: CrosshairHelp="Choose the crosshair appearing at the center of your screen."
+CrosshairHelp="Scegli il mirino che appare al centro dello schermo."
+; EN: RTNPHeadingText="Return to Na Pali:"
+RTNPHeadingText="Ritorno a Na Pali:"
+; EN: RTNPHeadingHelp="Next settings are only for the mission pack: Return to Na Pali"
+RTNPHeadingHelp="Le prossime impostazioni sono solo per il pacchetto missione: Ritorno a Na Pali"
+; EN: CinematicText="Cinematic styled cutscenes"
+CinematicText="Filmati in stile cinematografico"
+; EN: CinematicHelp="Shows/Hides the cinematic widescreen style in cutscenes"
+CinematicHelp="Mostra / nasconde lo stile widescreen cinematografico nei filmati"
+; EN: SubtitlesText="Show subtitles"
+SubtitlesText="Mostra i sottotitoli"
+; EN: SubtitlesHelp="Shows/Hides the subtitles text in cutscenes"
+SubtitlesHelp="Mostra / nasconde il testo dei sottotitoli nei filmati"
+
+[UMenuToolsMenu]
+; EN: ConsoleName="System &Console"
+ConsoleName="&Console di Sistema"
+; EN: ConsoleHelp="This option brings up the Unreal Console. You can use the console to enter advanced commands and cheats."
+ConsoleHelp="Questa opzione mostra la console di Unreal. Puoi usare la console per utilizzare i comandi avanzati e i trucchi."
+; EN: TimeDemoName="T&imeDemo Statistics"
+TimeDemoName="Statistiche T&imeDemo"
+; EN: TimeDemoHelp="Enable the TimeDemo statistic to measure your frame rate."
+TimeDemoHelp="Consente alla statistica TimeDemo di misurare il tuo frame rate."
+; EN: LogName="Show &Log"
+LogName="Mostra &Eventi"
+; EN: LogHelp="Show the Unreal log window."
+LogHelp="Mostra la finestra degli eventi di Unreal."
+; EN: MusicMName="&Music Menu"
+MusicMName="&Menu Musica"
+; EN: MusicMHelp="Music menu: Allows you to play a custom music during game (Warning: many anti-cheat mods may not like the custom musics)."
+MusicMHelp="Menu Musica: consente di riprodurre una musica personalizzata durante il gioco (Attenzione: molte mod anti-cheat potrebbero non gradire le musiche personalizzate)."
+; EN: AdminMName="&Admin Menu"
+AdminMName="&Menu Amministratore"
+; EN: AdminMHelp="Admin menu: Allows you to do various things, such as kicking/banning/unbanning clients (note: only works on 227 servers and when youre logged in as administrator)."
+AdminMHelp="Menu amministratore: Permette di fare tante cose, come cacciare/bannare/debannare i giocatori (Attenzione: funziona solo con server alla versione 227 e solo quando sei collegato come amministratore)."
+; EN: DebugModeName="&Debug mode"
+DebugModeName="&Modalit√† Debug"
+; EN: DebugModeHelp="Enable UWindow debug mode for debugging."
+DebugModeHelp="Attiva la modalit√† debug di UWindow."
+
+[UMenuSaveGameClientWindow]
+; EN: CantSave="Cannot Save: You are dead."
+CantSave="Impossibile salvare: sei morto."
+; EN: SlotHelp="Press to save the current game to this slot:"
+SlotHelp="Premi per salvare il gioco corrente in questo slot:"
+
+[UMenuSlotClientWindow]
+; EN: MonthNames[0]="January"
+MonthNames[0]="Gennaio"
+; EN: MonthNames[1]="February"
+MonthNames[1]="Febbraio"
+; EN: MonthNames[2]="March"
+MonthNames[2]="Marzo"
+; EN: MonthNames[3]="April"
+MonthNames[3]="Aprile"
+; EN: MonthNames[4]="May"
+MonthNames[4]="Maggio"
+; EN: MonthNames[5]="June"
+MonthNames[5]="Giugno"
+; EN: MonthNames[6]="July"
+MonthNames[6]="Luglio"
+; EN: MonthNames[7]="August"
+MonthNames[7]="Agosto"
+; EN: MonthNames[8]="September"
+MonthNames[8]="Settembre"
+; EN: MonthNames[9]="October"
+MonthNames[9]="Ottobre"
+; EN: MonthNames[10]="November"
+MonthNames[10]="Novembre"
+; EN: MonthNames[11]="December"
+MonthNames[11]="Dicembre"
+; EN: SlotHelp="Press to activate this slot. (Save/Load)"
+SlotHelp="Premi per attivare questo slot. (Salva/Carica)"
+; EN: FoundOldGameSavesTitle="Old game saves found..."
+FoundOldGameSavesTitle="Trovati vecchi salvataggi ..."
+; EN: FoundOldGameSavesText="Found some game saves created with an older engine version than the current. These files are unusable now with this version."
+FoundOldGameSavesText="Trovati alcuni salvataggi di gioco creati con una versione del motore precedente a quella attuale. Questi file sono ora inutilizzabili con questa versione."
+
+[UMenuHelpMenu]
+; EN: ContextName="&Context Help"
+ContextName="&Aiuto Contestuale"
+; EN: ContextHelp="Enable and disable this context help area at the bottom of the screen."
+ContextHelp="Attiva o disattiva l'area di aiuto contestuale alla base dello schermo."
+; EN: AboutName="About &Unreal"
+AboutName="Riconoscimenti &Unreal"
+; EN: AboutHelp="See the credits about who created this game."
+AboutHelp="Mostra chi ha creato questo gioco."
+; EN: EpicGamesURLName="About &Epic Games"
+EpicGamesURLName="Info su &Epic Games"
+; EN: EpicGamesURLHelp="Click to open Epic Games webpage!"
+EpicGamesURLHelp="Clicca per accedere alla pagina web di Epic Games!"
+; EN: SupportURLName="Technical Support"
+SupportURLName="Supporto Tecnico"
+; EN: SupportURLHelp="Click to open the technical support web page at OldUnreal."
+SupportURLHelp="Clicca qui per accedere alla pagina web del supporto tecnico di OldUnreal."
+
+[UMenuLoadGameClientWindow]
+; EN: RestartText="Restart"
+RestartText="Ricomincia"
+; EN: RestartHelp="Press to restart the current level."
+RestartHelp="Premi per ricominciare il livello attuale."
+; EN: SlotHelp="Press to load game from this slot:"
+SlotHelp="Premi per caricare il gioco da questo slot:"
+
+[UMenuOptionsMenu]
+; EN: PreferencesName="P&references"
+PreferencesName="&Impostazioni"
+; EN: PreferencesHelp="Change your game options, audio and video setup, HUD configuration, controls and other options."
+PreferencesHelp="Modifica le opzioni di gioco, la configurazione dell'HUD, i comandi e le altre opzioni."
+; EN: PrioritizeName="&Weapons"
+PrioritizeName="&Armi"
+; EN: PrioritizeHelp="Change your weapon priority, view and set weapon options."
+PrioritizeHelp="Cambia la priorit√† della tua arma, vedi e imposta le opzioni delle armi."
+; EN: DesktopName="Show &Desktop"
+DesktopName="Mostra &Desktop"
+; EN: DesktopHelp="Toggle between showing your game behind the menus, or the desktop logo."
+DesktopHelp="Ti permette di scegliere lo sfondo del menu tra la partita in corso ed un logo statico."
+; EN: PlayerMenuName="&Player Setup"
+PlayerMenuName="&Configurazione Giocatore"
+; EN: PlayerMenuHelp="Configure your player setup for multiplayer and botmatch gaming."
+PlayerMenuHelp="Configura il tuo giocatore per le partite multigiocatore e per i botmatch."
+; EN: AdvancedOptionsName="&Advanced Options"
+AdvancedOptionsName="&Opzioni Avanzate"
+; EN: AdvancedOptionsHelp="Bring up the Advanced Options menu, where you can configure most of the custom mods."
+AdvancedOptionsHelp="Apre il menu delle Opzioni Avanzate, dove puoi configurare la maggior parte delle mod personalizzate."
+
+[UMenuStatsMenu]
+; EN: ViewLocalName="View Local ngStats"
+ViewLocalName="Visualizza ngStats Locali"
+; EN: ViewLocalHelp="View your game statistics accumulated in single player and practice games."
+ViewLocalHelp="Visualizza le tue statistiche di gioco accumulate nelle partite a giocatore singolo e di pratica."
+; EN: ViewGlobalName="View Global ngWorldStats"
+ViewGlobalName="Visualizza ngWorldStats Globali"
+; EN: ViewGlobalHelp="View your game statistics accumulated online."
+ViewGlobalHelp="Visualizza le tue statistiche di gioco per le partite online."
+; EN: AboutName="Help with &ngStats"
+AboutName="Aiuto su &ngStats"
+; EN: AboutHelp="Get information about local stat logging."
+AboutHelp="Informazioni sulla registrazione delle statistiche."
+; EN: About2Name="Help with &ngWorldStats"
+About2Name="Guida di &ngWorldStats"
+; EN: About2Help="Get information about global stat logging."
+About2Help="Offre informazioni sulla registrazione delle statistiche globali."
+
+[UMenuModMenu]
+; EN: CantUseTitle="Note: Mod menu"
+CantUseTitle="Nota: menu Mod"
+; EN: CantUseInfo="You can't use mod menu items during online play."
+CantUseInfo="Non puoi usare elementi del menu Mod durante il gioco online."
+
+[UnrealCreditsWindow]
+; EN: WindowTitle="Unreal Credits"
+WindowTitle="Riconoscimenti Unreal"
 
 [UMenuRecGrid]
-
+; EN: FileNameText="File name"
 FileNameText="Nome File"
 
-
 [UMenuStartRec]
-
-StartRecText="Avvia registrazione demo"
-
+; EN: StartRecText="Start demorec"
+StartRecText="Avvia Registrazione Demo"
+; EN: RecordInfo="Output file name:"
 RecordInfo="Nome file di output:"
 
-
 [UMenuDemoRecMenu]
-
-RecordName="&Registra gioco"
-
+; EN: RecordName="&Record Game"
+RecordName="&Registra Gioco"
+; EN: RecordHelp="Start and end a recording."
 RecordHelp="Avvia e termina una registrazione."
-
-PlaybackName="&Riproduci demo"
-
+; EN: PlaybackName="&Play Demo"
+PlaybackName="&Riproduci Demo"
+; EN: PlaybackHelp="Play a recorded demo."
 PlaybackHelp="Riproduci una demo registrata."
-
+; EN: StopDemoName="&Stop Demo"
+StopDemoName="&Ferma Demo"
+; EN: StopDemoHelp="Stop the current demo."
+StopDemoHelp="Interrompi la demo corrente."
 
 [UMenuRecPlay]
-
+; EN: PlayDemoText="Play demo"
 PlayDemoText="Riproduci demo"
 
-
 [UMenuRecPlayWindow]
-
+; EN: WindowTitle="Play recording"
 WindowTitle="Riproduci registrazione"
 
-
 [UMenuStartRecWindow]
+; EN: WindowTitle="Start recording"
+WindowTitle="Avvia registrazione"
 
-WindowTitle="Avvia registrazione" 
+[UMenuNewStandaloneGameWindow]
+; EN: WindowTitle="New Standalone Game"
+WindowTitle="Nuovo gioco autonomo"
+
+[UMenuSinglePlayerSettingsCWindow]
+; EN: SkillText="Difficulty:"
+SkillText="Difficolt√†:"
+; EN: SkillHelp="Select the difficulty you wish to play at."
+SkillHelp="Seleziona la difficolt√† a cui desideri giocare."
+EditAreaWidth=90
+
+[UMenuCoopGameRulesCWindow]
+bSingleColumn=False
+; EN: FriendlyFireText="Friendly Fire"
+FriendlyFireText="Fuoco amico"
+; EN: FriendlyFireHelp="If checked, friendly fire damage is allowed"
+FriendlyFireHelp="Se selezionato, √® consentito il danno da fuoco amico"
+; EN: InstantWeaponRespawnText="Instant Weapon Respawn"
+InstantWeaponRespawnText="Ricreazione istantanea dell'arma"
+; EN: InstantWeaponRespawnHelp="If checked, weapons will be respawned instantly"
+InstantWeaponRespawnHelp="Se selezionata, le armi verranno rigenerate immediatamente"
+; EN: InstantItemRespawnText="Instant Item Respawn"
+InstantItemRespawnText="Respawn oggetto istantaneo"
+; EN: InstantItemRespawnHelp="If checked, items will be respawned instantly"
+InstantItemRespawnHelp="Se selezionato, gli oggetti verranno rigenerati immediatamente"
+
+[UnrealCreditsCW]
+; EN: ProgrammersText="Programming"
+ProgrammersText="Programmazione"
+; EN: LevelDesignText="Level Design"
+LevelDesignText="Progettazione Livelli"
+; EN: ArtText="Art and Graphical Design"
+ArtText="Arte e Design Grafico"
+; EN: MusicSoundText="Music & Sound"
+MusicSoundText="Musica e Sonoro"
+; EN: BizText="Biz"
+BizText="Biz"
+; EN: PatchText="Oldunreal 227 Patch"
+PatchText="Patch OldUnreal ver. 227"
+
+[UMenuWeaponPriorityCW]
+ListAreaWidth=150

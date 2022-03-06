@@ -1,8 +1,9 @@
-[LevelSummary]
-Title="Intermission 9"
+Ôªø[LevelSummary]
+; EN: Title="Intermission 9"
+Title="Pause 9"
 
 [TransitionGenderEvent3]
-OutDelays[1]=14.500000
-MaleText[0]="Ich bin von den vielen R¸ckschl‰gen schon ganz erschˆpft. Immer, wenn ich irgendwie weiterkam, muﬂte ich wieder schwere Schl‰ge einstecken. Ich weiﬂ, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zur¸ck."
-FemaleText[0]="Ich bin von den vielen R¸ckschl‰gen schon ganz erschˆpft. Immer, wenn ich irgendwie weiterkam, muﬂte ich wieder schwere Schl‰ge einstecken. Ich weiﬂ, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zur¸ck."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm9.uax
+OutDelays[1]=13.500000
+MaleText[0]="Ich bin von den vielen R√ºckschl√§gen schon ganz ersch√∂pft. Immer, wenn ich irgendwie weiterkam, mu√üte ich wieder schwere Schl√§ge einstecken. Ich wei√ü, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zur√ºck."
+FemaleText[0]="Ich bin von den vielen R√ºckschl√§gen schon ganz ersch√∂pft. Immer, wenn ich irgendwie weiterkam, mu√üte ich wieder schwere Schl√§ge einstecken. Ich wei√ü, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zur√ºck."

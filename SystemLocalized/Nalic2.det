@@ -1,0 +1,39 @@
+﻿[LevelInfo1]
+; EN: Title="Escape from Na Pali"
+Title="Die Flucht von Na Pali"
+
+[LevelSummary]
+; EN: Title="Escape from Na Pali"
+Title="Die Flucht von Na Pali"
+
+[TranslatorEvent4]
+; EN: Message="Why me?"
+Message="Warum gerade ich?"
+
+[TranslatorEvent7]
+; EN: Message="LOG: J. Crable: After trying to trade a useless flashlight to one of the Nali natives for some food, he turned me into a cow. I've learned that I must travel to high peaks of Mon-Ton Dew and meet with the high Priestess for a cure. My quest begins."
+Message="LOG: J. Crable: Nachdem ich versucht habe, eine nutzlose Taschenlampe gegen Nahrung mit einem der Eingeborenen zu tauschen, hat er mich in eine Kuh verwandelt. Ich habe gelernt, daß ich auf die Bergspitzen von Mon-ton Dew klettern muß, um mich mit den hohen Priestern wegen dieses Fluchs zu treffen. Meine Suche beginnt."
+
+[TranslatorEvent1]
+; EN: Message="LOG: D. Beck: Our luck seems to have changed. We've found a Terran vessel of some sort settled in a mountain fortress. A gate prevents us from reaching it but the natives say it can be opened from a nearby tower. Looks like we're home free."
+Message="LOG: D. Beck: Das Blatt scheint sich gewandelt zu haben. Wir haben ein Geländefahrzeug gefunden, das irgendwie in einer Bergfestung steht. Ein Tor hindert uns daran, an es zu kommen, aber die Eingeborenen sagen, daß es von einem Turm in der Nähe geöffnet werden kann. Es sieht so aus, als könnten wir endlich nach Hause."
+
+[TranslatorEvent0]
+; EN: Message="They tell me I must hurry. The Sky Demons have uncovered our secret. There is much work here, time escapes me. Nevertheless, the future shines bright in my eyes. We shall be victorious in the next life, but for now, everything must come to an end..."
+Message="Sie sagen mir, ich muß mich beeilen, die Himmelsdämonen haben unser Geheimnis entdeckt. Hier gibt es viel zu tun, die Zeit läuft mir davon. Aber egal, in meinen Augen sieht die Zukunft gut aus. Im nächsten Leben sollten wir siegen können, aber jetzt muß ich dem ein Ende setzen..."
+
+[TranslatorEvent2]
+; EN: Message="LOG: M. Tetreault: As soon as I find that switch to open the gate, we can get the hell out of here. Think happy thoughts. Uh-oh, spotted another one of those Skaarj creatures. That's it, his ass is mine."
+Message="LOG: M. Tetreault: Sobald ich den Schalter gefunden habe, um dieses Tor zu öffnen, können wir endlich von hier verschwinden. Denkt positiv. Uh-oh, habe noch eine dieser Skaarj-Kreaturen entdeckt. Das reicht, den schnapp ich mir!"
+
+[TranslatorEvent6]
+; EN: Message="What is the point of me hanging around on this spike? What does it prove? I'm in a lot of pain here and I fail to see the humor in any of this."
+Message="Was hat das für einen Sinn, wenn ich hier auf dieser Berspitze herumhänge? Was soll das beweisen? Ich habe Schmerzen, und ich kann wirklich nichts Lustiges an dieser Sache finden."
+
+[TranslatorEvent3]
+; EN: Message="My time has come to sleep the eternal sleep. Our struggle with the Sky Demons lives on. We pray for the savior to return to us, but our prayers go unanswered. At least the suffering is almost over..."
+Message="Meine Zeit für den ewigen Schlaf ist gekommen. Unsere Kämpfe mit den Himmelsdämonen halten an. Wir beten, daß der Retter zu uns zurückkehrt, doch unsere Gebete wurden nicht erhört. Wenigstens ist das Leid bald vorbei..."
+
+[TranslatorEvent5]
+; EN: Message="No secrets for you!"
+Message="Keine Geheimnisse!"

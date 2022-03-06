@@ -3,8 +3,7 @@
 Title="Intermisión 2"
 
 [TransitionGenderEvent2]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm2.uax
 OutDelays[1]=26.500000
-; EN: MaleText[0]="After a leap of faith, I'm pausing to record a log entry. I'm still shaken up after running into the Skaarj and their filthy minions. I guess I thought I saw the last of them when I killed the Skaarj Queen on the mother ship... it seems like an eternity ago. Is there another colony nearby? Where are they coming from? This is like a recurring nightmare. Still no sign of the Prometheus. Time to move on."
 MaleText[0]="Me detengo para hacer una anotación en el registro con el corazón aún en la boca. Aún no me he recuperado de mi encuentro con el Skaarj y sus repugnantes sicarios. Creí que no iba a volver a ver ninguna de estas bestias después de haber acabado con la reina Skaarj en la nave nodriza. Parece que fue hace una eternidad. ¿Tendrán otra colonia cerca? ¿De dónde vendrán? Es como una pesadilla sin fin. Aún sin señales del Prometeo. Tengo que continuar."
-; EN: FemaleText[0]="After a leap of faith, I'm pausing to record a log entry. I'm still shaken up after running into the Skaarj and their filthy minions. I guess I thought I saw the last of them when I killed the Skaarj Queen on the mother ship... it seems like an eternity ago. Is there another colony nearby? Where are they coming from? This is like a recurring nightmare. Still no sign of the Prometheus. Time to move on."
 FemaleText[0]="Me detengo para hacer una anotación en el registro con el corazón aún en la boca. Aún no me he recuperado de mi encuentro con el Skaarj y sus repugnantes sicarios. Creí que no iba a volver a ver ninguna de estas bestias después de haber acabado con la reina Skaarj en la nave nodriza. Parece que fue hace una eternidad. ¿Tendrán otra colonia cerca? ¿De dónde vendrán? Es como una pesadilla sin fin. Aún sin señales del Prometeo. Tengo que continuar."

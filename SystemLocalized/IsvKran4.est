@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
-; EN: Title="ISV-Kran Deck 4"
-Title="Cubierta 4 de ISV-Kran"
-; EN: LevelEnterText="Entering ISV-Kran Deck 4"
-LevelEnterText="Entrando a la Cubierta 4 del ISV-Kran"
+; EN: Title="ISV-KRAN Deck 4"
+Title="Cubierta 4 de ISV-KRAN"
+; EN: LevelEnterText="Entering ISV-KRAN Deck 4"
+LevelEnterText="Entrando a la Cubierta 4 del ISV-KRAN"
 
 [LevelSummary]
-; EN: Title="ISV-Kran Deck 4"
-Title="Cubierta 4 de ISV-Kran"
-; EN: LevelEnterText="Entering ISV-Kran Deck 4"
-LevelEnterText="Entrando a la Cubierta 4 del ISV-Kran"
+; EN: Title="ISV-KRAN Deck 4"
+Title="Cubierta 4 de ISV-KRAN"
+; EN: LevelEnterText="Entering ISV-KRAN Deck 4"
+LevelEnterText="Entrando a la Cubierta 4 del ISV-KRAN"
 
 [TranslatorEvent7]
 ; EN: Message="Warehouse Safety Bars Override in Upper Warehouse Loft."

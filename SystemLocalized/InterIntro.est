@@ -7,33 +7,22 @@ Title="Intermisión 1"
 Title="Intermisión 1"
 
 [TransitionGenderEvent0]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/IntroSnd2.uax
 OutDelays[1]=5.00000
 OutDelays[2]=10.000000
 OutDelays[3]=17.000000
 OutDelays[4]=15.000000
 OutDelays[5]=13.000000
 OutDelays[6]=9.000000
-; EN: MaleText[0]="A day after my so-called rescue, and I'm going back to the surface of the planet."
 MaleText[0]="Un día después del supuesto rescate y aquí estoy otra vez, de vuelta a la superficie del planeta."
-; EN: MaleText[1]="They've promised me a full pardon and transit back to Earth in exchange for my help. The alternative was a trip out the airlock without a suit. I agreed to take the mission."
 MaleText[1]="Me han prometido un indulto completo y el viaje de vuelta a la Tierra si les ayudo. Claro que de haberme negado, me proponían un paseíto en el espacio exterior, sin traje. Así que he aceptado. ¡Qué remedio!"
-; EN: MaleText[2]="My job is to find the wreck of another ship, the Prometheus, and recover the data cores of some new secret weapons research project. When I've got the cores, I'm supposed to go to the bridge of the crashed ship and activate the ELT transmitter - the ELT will pinpoint my location for pick-up."
 MaleText[2]="Mi tarea consiste en encontrar los restos de otra nave, el Prometeo, y recuperar los núcleos de datos de un proyecto de investigación sobre nuevas armas secretas. Cuando los haya conseguido, debo acudir al puente de la nave accidentada y activar el transmisor ELT, que dará mi posición exacta para que puedan recogerme."
-; EN: MaleText[3]="They need me because they don't know exactly where the Prometheus went down... apparently the Tarydium in the planet below is wreaking havoc with their scanners. They figure I learned a thing or two during my last romp on the surface. If anyone can find their missing ship, I can."
 MaleText[3]="Me necesitan porque no saben exactamente dónde cayó el Prometeo. Según parece, el taridio del planeta inutiliza sus escáneres, y se imaginan que durante mi último paseo por la superficie he debido aprender alguna que otra cosilla sobre el planeta. Así que si alguien puede encontrar la nave, ése soy yo."
-; EN: MaleText[4]="I'm a little better prepared than last time... they've given me a military-issue combat assault rifle, a new portable scuba unit for under water, and this computer log. They've also made logistics drops of ammo, weapons, and other supplies."
 MaleText[4]="Esta vez estoy un poco mejor preparado. Me han dado un rifle de asalto reglamentario, una nueva unidad de buceo portátil, y este registro computarizado. Además han establecido depósitos estratégicos de municiones, armas y otros suministros."
-; EN: MaleText[5]="So... I did it before, and I'll do it again - but it won't be easy. They call this a salvage mission. I call it a return to hell."
 MaleText[5]="Bueno... lo logré antes y volveré a lograrlo ahora. Pero no será fácil. Ellos le llaman una misión de rescate. Yo lo llamaría más bien volver al infierno."
-; EN: FemaleText[0]="A day after my so-called rescue, and I'm going back to the surface of the planet."
 FemaleText[0]="Un día después del supuesto rescate y aquí estoy otra vez, de vuelta a la superficie del planeta."
-; EN: FemaleText[1]="They've promised me a full pardon and transit back to Earth in exchange for my help. The alternative was a trip out the airlock without a suit. I agreed to take the mission."
 FemaleText[1]="Me han prometido un indulto completo y el viaje de vuelta a la Tierra si les ayudo. Claro que de haberme negado, me proponían un paseíto en el espacio exterior, sin traje. Así que he aceptado. ¡Qué remedio!"
-; EN: FemaleText[2]="My job is to find the wreck of another ship, the Prometheus, and recover the data cores of some new secret weapons research project. When I've got the cores, I'm supposed to go to the bridge of the crashed ship and activate the ELT transmitter - the ELT will pinpoint my location for pick-up."
 FemaleText[2]="Mi tarea consiste en encontrar los restos de otra nave, el Prometeo, y recuperar los núcleos de datos de un proyecto de investigación sobre nuevas armas secretas. Cuando los haya conseguido, debo acudir al puente de la nave accidentada y activar el transmisor ELT, que dará mi posición exacta para que puedan recogerme."
-; EN: FemaleText[3]="They need me because they don't know exactly where the Prometheus went down... apparently the Tarydium in the planet below is wreaking havoc with their scanners. They figure I learned a thing or two during my last romp on the surface. If anyone can find their missing ship, I can."
 FemaleText[3]="Me necesitan porque no saben exactamente dónde cayó el Prometeo. Según parece, el taridio del planeta inutiliza sus escáneres, y se imaginan que durante mi último paseo por la superficie he debido aprender alguna que otra cosilla sobre el planeta. Así que si alguien puede encontrar la nave, ésa soy yo."
-; EN: FemaleText[4]="I'm a little better prepared than last time... they've given me a military-issue combat assault rifle, a new portable scuba unit for under water, and this computer log. They've also made logistics drops of ammo, weapons, and other supplies."
 FemaleText[4]="Esta vez estoy un poco mejor preparada. Me han dado un rifle de asalto reglamentario, una nueva unidad de buceo portátil, y este registro computarizado. Además han establecido depósitos estratégicos de municiones, armas y otros suministros."
-; EN: FemaleText[5]="So... I did it before, and I'll do it again - but it won't be easy. They call this a salvage mission. I call it a return to hell."
 FemaleText[5]="Bueno... lo logré antes y volveré a lograrlo ahora. Pero no será fácil. Ellos le llaman una misión de rescate. Yo lo llamaría más bien volver al infierno."

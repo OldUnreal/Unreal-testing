@@ -7,6 +7,7 @@ Title="Yousa follow me now, okiday?"
 LevelEnterText="What the hell are you doing here..."
 
 [TransitionGenderEvent4]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/Interm4.uax
 OutDelays[1]=23.500000
 MaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
 FemaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."

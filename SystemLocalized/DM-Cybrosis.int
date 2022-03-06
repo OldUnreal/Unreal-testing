@@ -1,0 +1,15 @@
+﻿[LevelInfo0]
+Title="Cybrosis Central"
+IdealPlayerCount="3-8"
+LevelEnterText="Now entering Cybrosis Central"
+
+[LevelSummary]
+Title="Cybrosis Central"
+IdealPlayerCount="3-8"
+LevelEnterText="Now entering Cybrosis Central"
+
+[SpecialEvent4]
+Message="Auxiliary weapons storage closing. Please exit."
+
+[SpecialEvent3]
+Message="Auxiliary weapons storage now available."

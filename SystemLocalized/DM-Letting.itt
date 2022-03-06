@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="Blood Letting"
+Title="Lascio di Sangue"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Entrando nel Lascio di Sangue"
+
+[LevelSummary]
+; EN: Title="Blood Letting"
+Title="Lascio di Sangue"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Entrando nel Lascio di Sangue"

@@ -1,0 +1,31 @@
+﻿[LevelInfo1]
+; EN: Title="Neve's Crossing"
+Title="Neves Kreuzung"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Eingang Neves Kreuzung"
+
+[LevelSummary]
+; EN: Title="Neve's Crossing"
+Title="Neves Kreuzung"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Eingang Neves Kreuzung"
+
+[TranslatorEvent15]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Terra-Neo Minenstation (Norden)"
+
+[TranslatorEvent6]
+; EN: Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
+Message="LOG: B. Bates: Habe Mock gefunden -  mit dem Gesicht nach unten in einem See. Es sieht aus, als wäre er ertrunken. Armer Kerl. Ob er wohl die UMS-Kisten hat vom Himmel fallen sehen? Ich hoffe, Daltons Team hat alles richtig gemacht. Sieht aus, als würden wir doch noch gerettet werden."
+
+[TranslatorEvent5]
+; EN: Message="LOG: P. Mock: Last saw Dalton and the rest two days ago. I'm lost. There are crates dropping down from the sky with UMS markings. Maybe whoever made it off this rock brought back help. I'm going to attempt to slip by the Skaarj through the lake."
+Message="LOG: P. Mock: Habe Dalton und die anderen das letzte Mal vor zwei Tagen gesehen. Ich bin verloren. Hier fallen Kisten mit UMS-Zeichen vom Himmel. Vielleicht hat es ja irgend jemand geschafft, von diesem Planeten zu entkommen und Hilfe zu schicken. Ich werde versuchen, an den Skaarj vorbei zum See zu schleichen."
+
+[TranslatorEvent14]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Terra-Neo Minenstation (Norden)"
+
+[TranslatorEvent0]
+; EN: Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."
+Message="Ich befürchte, unser Kampf ist noch nicht vorbei. Die Himmelsdämonen  haben Eldoras Brunnen entdeckt und nutzen ihn gegen uns. Ich war froh, daß ich mit dem Leben davongekommen bin. Ich werde hier warten in der Hoffnung, daß sie uns schnell wieder verlassen..."

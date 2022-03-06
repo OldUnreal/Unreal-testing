@@ -1,0 +1,31 @@
+﻿[LevelInfo1]
+; EN: Title="Neve's Crossing"
+Title="Cruïlla de Neve"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Entrant a la Cruïlla de Neve"
+
+[LevelSummary]
+; EN: Title="Neve's Crossing"
+Title="Cruïlla de Neve"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Entrant a la Cruïlla de Neve"
+
+[TranslatorEvent15]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Estació minera Terra-Neo (nord)"
+
+[TranslatorEvent6]
+; EN: Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
+Message="REGISTRE: B. Bates: trobat Mock cara avall en un llac proper. Sembla que es va ofegar. Pobre canalla. Em pregunto si va veure com caien les caixes UMS del cel. L’equip de Hope Dalton ho va fer tot bé. Sembla que al cap i a la fi podríem ser rescatats."
+
+[TranslatorEvent5]
+; EN: Message="LOG: P. Mock: Last saw Dalton and the rest two days ago. I'm lost. There are crates dropping down from the sky with UMS markings. Maybe whoever made it off this rock brought back help. I'm going to attempt to slip by the Skaarj through the lake."
+Message="LOG: P. Mock: Va veure Dalton i la resta per última vegada fa dos dies. Estic perdut. Hi ha caixes que baixen del cel amb marques UMS. Potser qui va sortir d’aquesta roca li va retornar ajuda. Intentaré relliscar pel Skaarj pel llac."
+
+[TranslatorEvent14]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Estació minera Terra-Neo (nord)"
+
+[TranslatorEvent0]
+; EN: Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."
+Message="Temo que la nostra lluita encara no hagi acabat. Els dimonis del cel han descobert el pou d’Eldora i l’utilitzen contra nosaltres. Vaig tenir la sort d’escapar amb la meva vida. Espero aquí amb l'esperança que aviat ens deixaran ..."

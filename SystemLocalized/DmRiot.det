@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Riot!"
+Title="Randalieren!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Randalieren!"
+
+[LevelSummary]
+; EN: Title="Riot!"
+Title="Randalieren!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Randalieren!"
+
+[TranslatorEvent0]
+; EN: Message="Started 18/04/10. Abandoned 05/10. Started over on 10/03/11. Layout finished on 14/06/11. Makeover done 20/06/11. Building finished on 21/06/11. Version 1.1 on 22/06/11."
+Message="Begonnen am 18.04.10. Verlassen 05/10. Am 10.03.11 von vorne angefangen. Layout fertiggestellt am 14/06/11. Makeover gemacht 20/06/11. Gebäude fertiggestellt am 21/06/11. Version 1.1 am 22.06.11."
+; EN: Hint="Check your clipped BSP in notepad: vertices might snap off the grid for some reason."
+Hint="Überprüfen Sie Ihr abgeschnittenes BSP im Editor: Scheitelpunkte können aus irgendeinem Grund vom Raster abbrechen."
+; EN: M_HintMessage="LOOK ABOVE FOR MEGA HINT"
+M_HintMessage="SUCHEN SIE OBEN NACH MEGA-TIPP"

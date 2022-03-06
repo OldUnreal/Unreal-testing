@@ -1,0 +1,35 @@
+﻿[LevelInfo1]
+; EN: Title="Foundry Tarydium Plant"
+Title="Planta de tarydium de fosa"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Entrant a la planta de tarydium de fosa"
+
+[LevelSummary]
+; EN: Title="Foundry Tarydium Plant"
+Title="Planta de tarydium de fosa"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Entrant a la planta de tarydium de fosa"
+
+[TranslatorEvent1]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barrera als controls d’elevació més alta intacta. Tots els sistemes són normals."
+
+[TranslatorEvent0]
+; EN: Message="It has been 0 days since our last accident."
+Message="Han passat 0 dies des del nostre últim accident."
+
+[TranslatorEvent2]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barrera als controls d’elevació més alta intacta. Tots els sistemes són normals."
+
+[TranslatorEvent6]
+; EN: Message="Tarydium Processing and Purification Plant"
+Message="Planta de processament i depuració del tarídium"
+
+[TranslatorEvent3]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="La barrera als controls d’elevació més elevats és inactiva."
+
+[TranslatorEvent4]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="La barrera als controls d’elevació més elevats és inactiva."

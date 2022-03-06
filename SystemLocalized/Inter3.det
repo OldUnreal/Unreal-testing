@@ -1,8 +1,9 @@
-[LevelSummary]
-Title="Intermission 3"
+Ôªø[LevelSummary]
+; EN: Title="Intermission 3"
+Title="Pause 3"
 
 [TransitionGenderEvent3]
-OutDelays[1]=26.500000
-MaleText[0]="Ich bin froh 'rausgefunden zu haben, wie ich das Wasser wieder in das unterirdische System kriege. Die Nali werden wenigstens nicht verdursten. Und wie gut, daﬂ das Tauchger‰t einwandfrei funktioniert ... ich h‰tte es ohne die neue Ausr¸stung nicht geschafft. Obwohl ich es wirklich hasse, wieder hier zu sein, tat es auch irgendwie gut, die Nali wiederzusehen. Ich glaube, ich komme der Prometheus n‰her. Irgendwie hab ich das im Gef¸hl."
-FemaleText[0]="Ich bin froh 'rausgefunden zu haben, wie ich das Wasser wieder in das unterirdische System kriege. Die Nali werden wenigstens nicht verdursten. Und wie gut, daﬂ das Tauchger‰t einwandfrei funktioniert ... ich h‰tte es ohne die neue Ausr¸stung nicht geschafft. Obwohl ich es wirklich hasse, wieder hier zu sein, tat es auch irgendwie gut, die Nali wiederzusehen. Ich glaube, ich komme der Prometheus n‰her. Irgendwie hab ich das im Gef¸hl."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm3.uax
+OutDelays[1]=21.000000
+MaleText[0]="Ich bin froh 'rausgefunden zu haben, wie ich das Wasser wieder in das unterirdische System kriege. Die Nali werden wenigstens nicht verdursten. Und wie gut, da√ü das Tauchger√§t einwandfrei funktioniert ... ich h√§tte es ohne die neue Ausr√ºstung nicht geschafft. Obwohl ich es wirklich hasse, wieder hier zu sein, tat es auch irgendwie gut, die Nali wiederzusehen. Ich glaube, ich komme der Prometheus n√§her. Irgendwie hab ich das im Gef√ºhl."
+FemaleText[0]="Ich bin froh 'rausgefunden zu haben, wie ich das Wasser wieder in das unterirdische System kriege. Die Nali werden wenigstens nicht verdursten. Und wie gut, da√ü das Tauchger√§t einwandfrei funktioniert ... ich h√§tte es ohne die neue Ausr√ºstung nicht geschafft. Obwohl ich es wirklich hasse, wieder hier zu sein, tat es auch irgendwie gut, die Nali wiederzusehen. Ich glaube, ich komme der Prometheus n√§her. Irgendwie hab ich das im Gef√ºhl."

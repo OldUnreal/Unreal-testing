@@ -2,6 +2,7 @@
 Title="Intermission 7"
 
 [TransitionGenderEvent1]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/Interm7.uax
 OutDelays[1]=9.000000
 MaleText[0]="The trek to the other shuttle has become a real endurance test. I don't have much to record right now... just staying alive takes all my energy."
 FemaleText[0]="The trek to the other shuttle has become a real endurance test. I don't have much to record right now... just staying alive takes all my energy."

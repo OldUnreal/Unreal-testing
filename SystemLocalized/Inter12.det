@@ -1,11 +1,12 @@
-[LevelInfo0]
-Title="Watcher of the Skies"
+Ôªø; EN: Title="Intermission 12"
+Title="Pause 12"
 
 [LevelSummary]
-Title="Watcher of the Skies"
+; EN: Title="Intermission 12"
+Title="Pause 12"
 
 [TransitionGenderEvent6]
-OutDelays[1]=33.000000
-MaleText[0]="Nachdem ich aus dem Tarydium-Kraftwerk entkommen war, schleppte ich mich nach oben ... auf ein eiskaltes und schneebedecktes Plateau. Der Temperaturunterschied zum Kraftwerk war extrem. Dort oben war ich von schroffen Klippen und scharfkantigen Felsen umgeben, ich muﬂte also irgendwie hoch in den Bergen sein. Vorher muﬂte ich wohl einige Kilometer unter der Erde zur¸ckgelegt haben ... und irgendwie auch ziemlich weit in die Hˆhe gekraxelt sein. Die guten Nachrichten sind, daﬂ ich immer noch in die richtige Richtung gehe."
-FemaleText[0]="Nachdem ich aus dem Tarydium-Kraftwerk entkommen war, schleppte ich mich nach oben ... auf ein eiskaltes und schneebedecktes Plateau. Der Temperaturunterschied zum Kraftwerk war extrem. Dort oben war ich von schroffen Klippen und scharfkantigen Felsen umgeben, ich muﬂte also irgendwie hoch in den Bergen sein. Vorher muﬂte ich wohl einige Kilometer unter der Erde zur¸ckgelegt haben ... und irgendwie auch ziemlich weit in die Hˆhe gekraxelt sein. Die guten Nachrichten sind, daﬂ ich immer noch in die richtige Richtung gehe."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm12.uax
+OutDelays[1]=26.000000
+MaleText[0]="Nachdem ich aus dem Tarydium-Kraftwerk entkommen war, schleppte ich mich nach oben ... auf ein eiskaltes und schneebedecktes Plateau. Der Temperaturunterschied zum Kraftwerk war extrem. Dort oben war ich von schroffen Klippen und scharfkantigen Felsen umgeben, ich mu√üte also irgendwie hoch in den Bergen sein. Vorher mu√üte ich wohl einige Kilometer unter der Erde zur√ºckgelegt haben ... und irgendwie auch ziemlich weit in die H√∂he gekraxelt sein. Die guten Nachrichten sind, da√ü ich immer noch in die richtige Richtung gehe."
+FemaleText[0]="Nachdem ich aus dem Tarydium-Kraftwerk entkommen war, schleppte ich mich nach oben ... auf ein eiskaltes und schneebedecktes Plateau. Der Temperaturunterschied zum Kraftwerk war extrem. Dort oben war ich von schroffen Klippen und scharfkantigen Felsen umgeben, ich mu√üte also irgendwie hoch in den Bergen sein. Vorher mu√üte ich wohl einige Kilometer unter der Erde zur√ºckgelegt haben ... und irgendwie auch ziemlich weit in die H√∂he gekraxelt sein. Die guten Nachrichten sind, da√ü ich immer noch in die richtige Richtung gehe."

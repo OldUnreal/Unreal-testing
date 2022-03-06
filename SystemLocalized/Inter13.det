@@ -1,8 +1,9 @@
-[LevelSummary]
-Title="Intermission 13"
+ï»¿[LevelSummary]
+; EN: Title="Intermission 13"
+Title="Pause 13"
 
 [TransitionGenderEvent7]
-OutDelays[1]=27.500000
-MaleText[0]="Die Eishöhlen und der schmale Grat führten doch in die falsche Richtung, weg vom Shuttle, aber mir blieb keine Wahl. Als ich mich in das Fort kämpfte und den Teleporter sah, stellte ich mir die Frage: Wohin würde er mich bringen? Meinem Ziel näher oder doch an eine ganz andere Stelle auf dem Planeten? Meine Erfahrung sagte mir irgendwie, daß er mich bestimmt nicht weit bringen würde, aber ich hatte einfach keine Wahl ..."
-FemaleText[0]="Die Eishöhlen und der schmale Grat führten doch in die falsche Richtung, weg vom Shuttle, aber mir blieb keine Wahl. Als ich mich in das Fort kämpfte und den Teleporter sah, stellte ich mir die Frage: Wohin würde er mich bringen? Meinem Ziel näher oder doch an eine ganz andere Stelle auf dem Planeten? Meine Erfahrung sagte mir irgendwie, daß er mich bestimmt nicht weit bringen würde, aber ich hatte einfach keine Wahl ..."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm13.uax.
+OutDelays[1]=25.000000
+MaleText[0]="Die EishÃ¶hlen und der schmale Grat fÃ¼hrten doch in die falsche Richtung, weg vom Shuttle, aber mir blieb keine Wahl. Als ich mich in das Fort kÃ¤mpfte und den Teleporter sah, stellte ich mir die Frage: Wohin wÃ¼rde er mich bringen? Meinem Ziel nÃ¤her oder doch an eine ganz andere Stelle auf dem Planeten? Meine Erfahrung sagte mir irgendwie, daÃŸ er mich bestimmt nicht weit bringen wÃ¼rde, aber ich hatte einfach keine Wahl..."
+FemaleText[0]="Die EishÃ¶hlen und der schmale Grat fÃ¼hrten doch in die falsche Richtung, weg vom Shuttle, aber mir blieb keine Wahl. Als ich mich in das Fort kÃ¤mpfte und den Teleporter sah, stellte ich mir die Frage: Wohin wÃ¼rde er mich bringen? Meinem Ziel nÃ¤her oder doch an eine ganz andere Stelle auf dem Planeten? Meine Erfahrung sagte mir irgendwie, daÃŸ er mich bestimmt nicht weit bringen wÃ¼rde, aber ich hatte einfach keine Wahl..."

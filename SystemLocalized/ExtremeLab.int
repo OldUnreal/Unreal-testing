@@ -35,7 +35,7 @@ AltMessage="All the test subjects have been placed in the Detention Area. The fo
 AltMessage="Energy supply for the Source is secured, Alternate Power Supply operational. Maintaining energy flow to the Source is highest priority. Weakness shall be punished."
 
 [TranslatorEvent7]
-Message="ACCESS DENIED: Power Reserves at 100%"
+Message="ACCESS DENIED: Power Reserves at 100%."
 Hint="You need to go the the Research Lab to lower the Energy level."
 
 [TranslatorEvent21]

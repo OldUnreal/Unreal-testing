@@ -3,8 +3,7 @@
 Title="Intermisión 9"
 
 [TransitionGenderEvent3]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm9.uax
 OutDelays[1]=13.500000
-; EN: MaleText[0]="I'm tired of doubling back so often. Everytime I make some progress, it seems I hafta jump through hoops just to stay even. I know I'm getting there, but it's tough going. Two steps forward, one step back."
 MaleText[0]="Estoy harto de tantos retrocesos. Por cada pequeño avance que logro, tengo que hacer auténticas piruetas sólo para no perder el terreno. Sé que me estoy acercando, pero está siendo muy duro: dos pasos adelante, un paso atrás..."
-; EN: FemaleText[0]="I'm tired of doubling back so often. Everytime I make some progress, it seems I hafta jump through hoops just to stay even. I know I'm getting there, but it's tough going. Two steps forward, one step back."
 FemaleText[0]="Estoy harta de tantos retrocesos. Por cada pequeño avance que logro, tengo que hacer auténticas piruetas sólo para no perder el terreno. Sé que me estoy acercando, pero está siendo muy duro: dos pasos adelante, un paso atrás..."

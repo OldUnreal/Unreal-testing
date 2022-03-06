@@ -1,9 +1,17 @@
-[LevelInfo4]
-Title=Yousa follow me now, okiday?
-LevelEnterText=What the hell are you doing here...
+ï»¿[LevelInfo4]
+; EN: Title="Yousa follow me now, okiday?"
+Title="Yousa folge mir jetzt, okiday?"
+; EN: LevelEnterText="What the hell are you doing here..."
+LevelEnterText="Was zur HÃ¶lle machst du hier..."
+
+[LevelSummary]
+; EN: Title="Yousa follow me now, okiday?"
+Title="Yousa folge mir jetzt, okiday?"
+; EN: LevelEnterText="What the hell are you doing here..."
+LevelEnterText="Was zur HÃ¶lle machst du hier..."
 
 [TransitionGenderEvent4]
-OutDelays[1]=28.500000
-MaleText[0]="Ich bin nah dran! Ich habe den ersten Beweis des Absturzes entdeckt. Nachdem ich mich durch ein Dorf der Nali voller Skaarj geschlagen hatte, fand ich ein Teil des abgestürzten Schiffs. Die Trümmer waren beim Wiedereintritt verbrannt und überall in der Gegend verteilt worden. Hoffentlich ist sie nicht schon in der Luft auseinandergebrochen ... wenn doch, steht es nicht gerade gut um die Daten. Die Absturzstelle muß ganz in der Nähe sein. Bald hab' ich es geschafft."
-FemaleText[0]="Ich bin nah dran! Ich habe den ersten Beweis des Absturzes entdeckt. Nachdem ich mich durch ein Dorf der Nali voller Skaarj geschlagen hatte, fand ich ein Teil des abgestürzten Schiffs. Die Trümmer waren beim Wiedereintritt verbrannt und überall in der Gegend verteilt worden. Hoffentlich ist sie nicht schon in der Luft auseinandergebrochen ... wenn doch, steht es nicht gerade gut um die Daten. Die Absturzstelle muß ganz in der Nähe sein. Bald hab' ich es geschafft."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm4.uax
+OutDelays[1]=23.500000
+MaleText[0]="Ich bin nah dran! Ich habe den ersten Beweis des Absturzes entdeckt. Nachdem ich mich durch ein Dorf der Nali voller Skaarj geschlagen hatte, fand ich ein Teil des abgestÃ¼rzten Schiffs. Die TrÃ¼mmer waren beim Wiedereintritt verbrannt und Ã¼berall in der Gegend verteilt worden. Hoffentlich ist sie nicht schon in der Luft auseinandergebrochen ... wenn doch, steht es nicht gerade gut um die Daten. Die Absturzstelle muÃŸ ganz in der NÃ¤he sein. Bald hab' ich es geschafft."
+FemaleText[0]="Ich bin nah dran! Ich habe den ersten Beweis des Absturzes entdeckt. Nachdem ich mich durch ein Dorf der Nali voller Skaarj geschlagen hatte, fand ich ein Teil des abgestÃ¼rzten Schiffs. Die TrÃ¼mmer waren beim Wiedereintritt verbrannt und Ã¼berall in der Gegend verteilt worden. Hoffentlich ist sie nicht schon in der Luft auseinandergebrochen ... wenn doch, steht es nicht gerade gut um die Daten. Die Absturzstelle muÃŸ ganz in der NÃ¤he sein. Bald hab' ich es geschafft."

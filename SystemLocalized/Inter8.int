@@ -2,6 +2,7 @@
 Title="Intermission 8"
 
 [TransitionGenderEvent2]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/Interm8.uax
 OutDelays[1]=20.500000
 MaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
 FemaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."

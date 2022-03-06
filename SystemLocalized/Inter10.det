@@ -1,8 +1,9 @@
-[LevelSummary]
-Title="Intermission 10"
+Ôªø[LevelSummary]
+; EN: Title="Intermission 10"
+Title="Pause 10"
 
 [TransitionGenderEvent4]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm10.uax
 OutDelays[1]=19.000000
-MaleText[0]="Ein Tarydium-Kraftwerk ... betrieben von den Skaarj. Sie m¸ssen hier noch eine Kolonie haben. Die Skaarj sind echt ¸berall. Aber diesmal jage ich sie. Sie wuﬂten wohl nicht, daﬂ ich komme. Ich denke, ich habe den halben Weg zum Shuttle geschafft."
-FemaleText[0]="Ein Tarydium-Kraftwerk ... betrieben von den Skaarj. Sie m¸ssen hier noch eine Kolonie haben. Die Skaarj sind echt ¸berall. Aber diesmal jage ich sie. Sie wuﬂten wohl nicht, daﬂ ich komme. Ich denke, ich habe den halben Weg zum Shuttle geschafft."
-
+MaleText[0]="Ein Tarydium-Kraftwerk ... betrieben von den Skaarj. Sie m√ºssen hier noch eine Kolonie haben. Die Skaarj sind echt √ºberall. Aber diesmal jage ich sie. Sie wu√üten wohl nicht, da√ü ich komme. Ich denke, ich habe den halben Weg zum Shuttle geschafft."
+FemaleText[0]="Ein Tarydium-Kraftwerk ... betrieben von den Skaarj. Sie m√ºssen hier noch eine Kolonie haben. Die Skaarj sind echt √ºberall. Aber diesmal jage ich sie. Sie wu√üten wohl nicht, da√ü ich komme. Ich denke, ich habe den halben Weg zum Shuttle geschafft."

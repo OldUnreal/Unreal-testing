@@ -3,8 +3,7 @@
 Title="Intermisión 3"
 
 [TransitionGenderEvent3]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm3.uax
 OutDelays[1]=21.000000
-; EN: MaleText[0]="I'm glad I figured out how to bring back water into the underground well system. The Nali won't die of thirst. And it's a good thing the scuba gear worked so well... I wouldn't have made it without the new equipment. As much as I hate being back here, I have to say it was good to see the Nali again. I believe I'm getting closer to the Prometheus. I can feel it."
 MaleText[0]="Me alegro de haber descubierto cómo devolver el agua al sistema de pozos subterráneos. Gracias a ello, los Nali no morirán de sed. Menos mal que el equipo de submarinismo ha funcionado bien. Sin él, no lo habría conseguido. Aunque detesto estar aquí de nuevo, debo decir que ha sido un placer volver a ver a los Nali. Creo que me estoy acercando al Prometeo. Lo presiento."
-; EN: FemaleText[0]="I'm glad I figured out how to bring back water into the underground well system. The Nali won't die of thirst. And it's a good thing the scuba gear worked so well... I wouldn't have made it without the new equipment. As much as I hate being back here, I have to say it was good to see the Nali again. I believe I'm getting closer to the Prometheus. I can feel it."
 FemaleText[0]="Me alegro de haber descubierto cómo devolver el agua al sistema de pozos subterráneos. Gracias a ello, los Nali no morirán de sed. Menos mal que el equipo de submarinismo ha funcionado bien. Sin él, no lo habría conseguido. Aunque detesto estar aquí de nuevo, debo decir que ha sido un placer volver a ver a los Nali. Creo que me estoy acercando al Prometeo. Lo presiento."

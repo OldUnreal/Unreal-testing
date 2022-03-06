@@ -1,6 +1,6 @@
 ﻿[public]
 Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
-Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console)
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu")
 Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Gold")
 Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Ice")
 Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metal")
@@ -77,6 +77,7 @@ SpeedText="Game Speed"
 SpeedHelp="Adjust the speed of the game."
 
 [UMenuBotConfigBase]
+bSingleColumn=False
 BaseText="Base Skill:"
 BaseHelp="This is the base skill level of the bots."
 Skills[0]="Novice"
@@ -287,10 +288,10 @@ AntialiasingHelp="Antialiasing mode."
 AntialiasingModes[0]="Off"
 AntialiasingModes[1]="On"
 AntialiasingModes[2]="%Nx"
-VSyncText="Vertical Synchronization"
-VSyncHelp="Vertical synchronization"
-VSyncModes[0]="Off"
-VSyncModes[1]="On"
+VSyncText="Vertical Sync."
+VSyncHelp="If enabled, synchronizes the frame rate of the game with the refresh rate of your monitor. This can reduce screen tearing."
+VSyncModes[0]="Disabled"
+VSyncModes[1]="Enabled"
 VSyncModes[2]="Adaptive"
 NotAvailableText="Not available"
 
@@ -787,7 +788,7 @@ IncludeHelp="Click and drag a map to the left hand column to remove it from the 
 
 [UMenuOptionsClientWindow]
 ConfirmTitle="Save Settings and Restart..."
-ConfirmText="This option will restart Unreal now and will run with selected settings. ¿Do you want to do this?"
+ConfirmText="This option will restart Unreal now and will run with selected settings. Do you want to do this?"
 RestartButtonText="Restart"
 RestartButtonHelp="Press this button to restart the game with current settings."
 GamePlayTab="Game"
@@ -922,6 +923,7 @@ SkillHelp="Select the difficulty you wish to play at."
 EditAreaWidth=90
 
 [UMenuCoopGameRulesCWindow]
+bSingleColumn=False
 FriendlyFireText="Friendly Fire"
 FriendlyFireHelp="If checked, friendly fire damage is allowed"
 InstantWeaponRespawnText="Instant Weapon Respawn"

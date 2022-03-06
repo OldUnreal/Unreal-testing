@@ -113,6 +113,8 @@ FemDeathMessage[3]="%o ha sido asesinada por el %w de %k."
 [Ammo]
 ; EN: PickupMessage="You picked up some ammo"
 PickupMessage="Has recogido algo de munición"
+; EN: ItemName="Ammo"
+ItemName="Munición"
 
 [Counter]
 ; EN: CountMessage="Only %i more to go..."
@@ -129,10 +131,6 @@ MenuName="Espectador"
 Name="asesinado"
 ; EN: AltName="killed"
 AltName="matado"
-; EN: NameFem="killed"
-NameFem="asesinada"
-; EN: AltNameFem="killed"
-AltNameFem="matada"
 
 [Progress]
 ; EN: CancelledConnect="Cancelled Connect Attempt"
@@ -191,16 +189,19 @@ HelpParm[1]="AllAdmin"
 HelpDesc[1]="Da privilegios de administrador a todos los jugadores."
 
 [Console]
+; EN: ClassCaption="Standard Unreal Console"
+ClassCaption="Consola estándar de Unreal"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="CARGANDO"
 ; EN: SavingMessage="SAVING"
 SavingMessage="GUARDANDO"
 ; EN: ConnectingMessage="CONNECTING"
 ConnectingMessage="CONECTANDO"
+; EN: PausedMessage="PAUSED"
 PausedMessage="EN PAUSA"
+; EN: PrecachingMessage="PRECACHING"
 PrecachingMessage="PRECACHEANDO"
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Consola Unreal estándar"
+; EN: ChatChannel="(CHAT) "
 ChatChannel="(CHAT) "
 ; EN: TeamChannel="(TEAM) "
 TeamChannel="(EQUI) "
@@ -222,6 +223,7 @@ EnabledString="Activado"
 DisabledString="Desactivado"
 ; EN: YesString="Yes"
 YesString="Sí"
+; EN: NoString="No"
 NoString="No"
 ; EN: OnString="On"
 OnString="Act"
@@ -231,8 +233,7 @@ OffString="Des"
 [GameInfo]
 ; EN: SwitchLevelMessage="Switching Levels"
 SwitchLevelMessage="Cambiando Nivel"
-; EN: DefaultPlayerName="Player"
-DefaultPlayerName="Jugador"
+DefaultPlayerName="Player"
 ; EN: LeftMessage=" left the game."
 LeftMessage=" ha abandonado la partida."
 ; EN: FailedSpawnMessage="Failed to spawn player actor"
@@ -316,6 +317,15 @@ TempBanned="Tu entrada al servidor ha sido vetada temporalmente"
 ; EN: Kicked="You have been kicked"
 Kicked="Has sido expulsado de la partida"
 
+[General]
+; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
+Upgrade="Para ingresar a este servidor, necesita la última actualización gratuita de Unreal disponible en el sitio web de OldUnreals:"
+UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
+; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
+UpgradeQuestion="¿Desea iniciar su navegador web e ir a la página de actualización ahora?"
+; EN: Version="Version %i"
+Version="Versión %i"
+
 [AdminAccessManager]
 ; EN: AdminLoginText="Administrator %ls logged in"
 AdminLoginText="El administrador %ls ha ingresado"
@@ -330,15 +340,6 @@ MedFont=Engine.MedFont
 LargeFont=Engine.LargeFont
 BigFont=Engine.BigFont
 SmallFont=Engine.SmallFont
-
-[General]
-; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
-Upgrade="Para ingresar a este servidor, necesita la última actualización gratuita de Unreal disponible en el sitio web de OldUnreals:"
-UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
-; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
-UpgradeQuestion="¿Desea iniciar su navegador web e ir a la página de actualización ahora?"
-; EN: Version="Version %i"
-Version="Versión %i"
 
 [LinkerUpdateCommandlet]
 HelpCmd=linkerupdate

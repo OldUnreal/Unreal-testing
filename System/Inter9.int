@@ -2,6 +2,7 @@
 Title="Intermission 9"
 
 [TransitionGenderEvent3]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/Interm9.uax
 OutDelays[1]=13.500000
 MaleText[0]="I'm tired of doubling back so often. Everytime I make some progress, it seems I hafta jump through hoops just to stay even. I know I'm getting there, but it's tough going. Two steps forward, one step back."
 FemaleText[0]="I'm tired of doubling back so often. Everytime I make some progress, it seems I hafta jump through hoops just to stay even. I know I'm getting there, but it's tough going. Two steps forward, one step back."

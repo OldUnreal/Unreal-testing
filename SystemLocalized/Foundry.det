@@ -1,0 +1,35 @@
+﻿[LevelInfo1]
+; EN: Title="Foundry Tarydium Plant"
+Title="Tarydium-Gießerei"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Eingang der Tarydium-Gießerei"
+
+[LevelSummary]
+; EN: Title="Foundry Tarydium Plant"
+Title="Tarydium-Gießerei"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Eingang der Tarydium-Gießerei"
+
+[TranslatorEvent1]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barriere zur oberen Liftsteuerung intakt. Alle Systeme normal."
+
+[TranslatorEvent0]
+; EN: Message="It has been 0 days since our last accident."
+Message="Seit unserem letzten Unfall sind 0 Tage vergangen."
+
+[TranslatorEvent2]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barriere zur oberen Liftsteuerung intakt. Alle Systeme normal."
+
+[TranslatorEvent6]
+; EN: Message="Tarydium Processing and Purification Plant"
+Message="Tarydium-Verarbeitung und -Veredelung"
+
+[TranslatorEvent3]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Barriere zur oberen Liftsteuerung inaktiv."
+
+[TranslatorEvent4]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Barriere zur oberen Liftsteuerung inaktiv."

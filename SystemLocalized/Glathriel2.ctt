@@ -1,0 +1,23 @@
+﻿[LevelInfo0]
+; EN: Title="Glathriel Village"
+Title="Poble de Glathriel"
+
+[LevelSummary]
+; EN: Title="Glathriel Village"
+Title="Poble de Glathriel"
+
+[TranslatorEvent1]
+; EN: Message="Two more died last week. Luckily we got them out through the cave without the Nightstalkers taking notice. We're low on food again..."
+Message="Dos més van morir la setmana passada. Per sort els vam treure per la cova sense que els Nightstalkers se n’adonessin. Tornem a menjar en menjar ..."
+
+[TranslatorEvent2]
+; EN: Message="I found another one of those strange objects that fell from the sky. I will collect all that I can find and then bring them to the priest. He will know what we are meant to do."
+Message="Vaig trobar un altre d’aquests estranys objectes que van caure del cel. Recolliré tot el que puc trobar i després els portaré al sacerdot. Sabrà què hem de fer."
+
+[TranslatorEvent0]
+; EN: Message="Would you die for this? http://www.ocrana.de"
+Message="Et moriries per això? http://www.ocrana.de"
+
+[TranslatorEvent5]
+; EN: Message="What did we do wrong to anger the gods? First the Nightstalkers, then the huge thunderbird flew over our valley and seeded fire and destruction. And now those strange boxes are raining from the sky, hitting our houses and killing our people."
+Message="Què vam fer malament per enfadar els déus? Primer els Nightstalkers, després l'enorme ocell tro va sobrevolar la nostra vall i va sembrar foc i destrucció. I ara aquestes estranyes caixes estan plovent des del cel, colpejant les nostres cases i matant la nostra gent."
