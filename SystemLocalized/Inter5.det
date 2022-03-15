@@ -1,9 +1,15 @@
-[LevelInfo2]
-Title="Intermission 5"
+Ôªø[LevelInfo2]
+; EN: Title="Intermission 5"
+Title="Pause 5"
+LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
+
+[LevelSummary]
+; EN: Title="Intermission 5"
+Title="Pause 5"
 LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
 
 [TransitionGenderEvent5]
-OutDelays[1]=41.500000
-MaleText[0]="Ich konnte die Marines ¸berrumpeln, aber ich habe ihr Shuttle nicht gefunden. Es muﬂ zur Bodega Bay zur¸ckgekehrt sein. Als ich merkte, daﬂ das Schiff nicht hier war, wollte ich im ersten Moment aufgeben. Es ist alles so hoffnungslos. Aber beim letzten Mal hier sah es noch viel hoffnungsloser aus, und da habe ich es doch auch geschafft. Ich werde nicht aufgeben. Und das war richtig ... denn die Hoffnung hatte ich nicht verloren. Einer der Marines hatte ein Funkger‰t mit aktiver Verbindung ... da ist noch ein Squad zehn Klicks westlich von hier im Wald stationiert. Ich weiﬂ zwar nicht, wie ich dorthin kommen soll, aber da ist ein Shuttle und irgendwie werde ich das schon nehmen!"
-FemaleText[0]="Ich konnte die Marines ¸berrumpeln, aber ich habe ihr Shuttle nicht gefunden. Es muﬂ zur Bodega Bay zur¸ckgekehrt sein. Als ich merkte, daﬂ das Schiff nicht hier war, wollte ich im ersten Moment aufgeben. Es ist alles so hoffnungslos. Aber beim letzten Mal hier sah es noch viel hoffnungsloser aus, und da habe ich es doch auch geschafft. Ich werde nicht aufgeben. Und das war richtig ... denn die Hoffnung hatte ich nicht verloren. Einer der Marines hatte ein Funkger‰t mit aktiver Verbindung ... da ist noch ein Squad zehn Klicks westlich von hier im Wald stationiert. Ich weiﬂ zwar nicht, wie ich dorthin kommen soll, aber da ist ein Shuttle und irgendwie werde ich das schon nehmen!"
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm5.uax - the audio is FLog06c/Mlog06c for Female and Male respectively.
+OutDelays[1]=35.000000
+MaleText[0]="Ich konnte die Marines √ºberrumpeln, aber ich habe ihr Shuttle nicht gefunden. Es mu√ü zur Bodega Bay zur√ºckgekehrt sein. Als ich merkte, da√ü das Schiff nicht hier war, wollte ich im ersten Moment aufgeben. Es ist alles so hoffnungslos. Aber beim letzten Mal hier sah es noch viel hoffnungsloser aus, und da habe ich es doch auch geschafft. Ich werde nicht aufgeben. Und das war richtig ... denn die Hoffnung hatte ich nicht verloren. Einer der Marines hatte ein Funkger√§t mit aktiver Verbindung ... da ist noch ein Squad zehn Klicks westlich von hier im Wald stationiert. Ich wei√ü zwar nicht, wie ich dorthin kommen soll, aber da ist ein Shuttle und irgendwie werde ich das schon nehmen!"
+FemaleText[0]="Ich konnte die Marines √ºberrumpeln, aber ich habe ihr Shuttle nicht gefunden. Es mu√ü zur Bodega Bay zur√ºckgekehrt sein. Als ich merkte, da√ü das Schiff nicht hier war, wollte ich im ersten Moment aufgeben. Es ist alles so hoffnungslos. Aber beim letzten Mal hier sah es noch viel hoffnungsloser aus, und da habe ich es doch auch geschafft. Ich werde nicht aufgeben. Und das war richtig ... denn die Hoffnung hatte ich nicht verloren. Einer der Marines hatte ein Funkger√§t mit aktiver Verbindung ... da ist noch ein Squad zehn Klicks westlich von hier im Wald stationiert. Ich wei√ü zwar nicht, wie ich dorthin kommen soll, aber da ist ein Shuttle und irgendwie werde ich das schon nehmen!"

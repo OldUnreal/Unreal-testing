@@ -24,5 +24,5 @@ Hint="Find the Containment rooms A, B and C and activate the buttons to access t
 Message="Control Room Status: Pressurized and locked. Do not access except in case of emergency situation."
 
 [TranslatorEvent1]
-Message="Pumping station has been activated, expected storage capacity after operation: 32%"
+Message="Pumping station has been activated, expected storage capacity after operation: 32%."
 AltMessage="Section D: 54% of full capacity reached."

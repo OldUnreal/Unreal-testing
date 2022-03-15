@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="The Villa Docks"
+Title="Els molls de la Vila"
+IdealPlayerCount="3-9"
+; EN: LevelEnterText="The Villa Docks"
+LevelEnterText="Els molls de la Vila"
+
+[LevelSummary]
+; EN: Title="The Villa Docks"
+Title="Els molls de la Vila"
+IdealPlayerCount="3-9"
+; EN: LevelEnterText="The Villa Docks"
+LevelEnterText="Els molls de la Vila"

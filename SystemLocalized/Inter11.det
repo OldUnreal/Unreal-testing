@@ -1,8 +1,9 @@
-[LevelSummary]
-Title="Intermission 11"
+Ôªø[LevelSummary]
+; EN: Title="Intermission 11"
+Title="Pause 11"
 
 [TransitionGenderEvent5]
-OutDelays[1]=32.500000
-MaleText[0]="Es hat mich bis ans ƒuﬂerste gefordert, den Rest dieses gr‰ﬂlichen Tarydium-Kraftwerks hinter mir zu lassen. Irgendwie habe ich ein Dutzend von Skaarj terminiert und das totale Chaos zur¸ckgelassen. Die Skaarj werden sich hier erst mal nicht mehr blicken lassen. Ich dachte schon, ich h‰tte es geschafft, als ich ein kleines Alienschiff in der Mitte dieses schier unendlich groﬂen Kraftwerks entdeckt hatte ... ich dachte, ich h‰tte mit ihm von diesem Planeten fliehen kˆnnen. Falsch gedacht, es ist offline. Das Shuttle bleibt meine einzige Hoffnung."
-FemaleText[0]="Es hat mich bis ans ƒuﬂerste gefordert, den Rest dieses gr‰ﬂlichen Tarydium-Kraftwerks hinter mir zu lassen. Irgendwie habe ich ein Dutzend von Skaarj terminiert und das totale Chaos zur¸ckgelassen. Die Skaarj werden sich hier erst mal nicht mehr blicken lassen. Ich dachte schon, ich h‰tte es geschafft, als ich ein kleines Alienschiff in der Mitte dieses schier unendlich groﬂen Kraftwerks entdeckt hatte ... ich dachte, ich h‰tte mit ihm von diesem Planeten fliehen kˆnnen. Falsch gedacht, es ist offline. Das Shuttle bleibt meine einzige Hoffnung."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm11.uax
+OutDelays[1]=23.500000
+MaleText[0]="Es hat mich bis ans √Ñu√üerste gefordert, den Rest dieses gr√§√ülichen Tarydium-Kraftwerks hinter mir zu lassen. Irgendwie habe ich ein Dutzend von Skaarj terminiert und das totale Chaos zur√ºckgelassen. Die Skaarj werden sich hier erst mal nicht mehr blicken lassen. Ich dachte schon, ich h√§tte es geschafft, als ich ein kleines Alienschiff in der Mitte dieses schier unendlich gro√üen Kraftwerks entdeckt hatte ... ich dachte, ich h√§tte mit ihm von diesem Planeten fliehen k√∂nnen. Falsch gedacht, es ist offline. Das Shuttle bleibt meine einzige Hoffnung."
+FemaleText[0]="Es hat mich bis ans √Ñu√üerste gefordert, den Rest dieses gr√§√ülichen Tarydium-Kraftwerks hinter mir zu lassen. Irgendwie habe ich ein Dutzend von Skaarj terminiert und das totale Chaos zur√ºckgelassen. Die Skaarj werden sich hier erst mal nicht mehr blicken lassen. Ich dachte schon, ich h√§tte es geschafft, als ich ein kleines Alienschiff in der Mitte dieses schier unendlich gro√üen Kraftwerks entdeckt hatte ... ich dachte, ich h√§tte mit ihm von diesem Planeten fliehen k√∂nnen. Falsch gedacht, es ist offline. Das Shuttle bleibt meine einzige Hoffnung."

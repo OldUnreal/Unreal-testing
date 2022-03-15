@@ -1,0 +1,27 @@
+﻿[LevelInfo3]
+; EN: Title="Nagomi Passage"
+Title="Nagomis Enge"
+; EN: LevelEntryText="Entering the Nagomi Passage"
+LevelEnterText="Eingang Nagomis Enge"
+
+[LevelSummary]
+; EN: Title="Nagomi Passage"
+Title="Nagomis Enge"
+; EN: LevelEntryText="Entering the Nagomi Passage"
+LevelEnterText="Eingang Nagomis Enge"
+
+[TranslatorEvent0]
+; EN: Message="LOG: M. Poesch: Located a mining facility, but the front gates won't open. A large Behemoth seems to control it, but he went back inside. I'll wait for him here. I got 2 clips here with his name on it."
+Message="LOG: M. Poesch: Ich orte eine Minen-Einrichtung, doch die Vordertüren lassen sich nicht öffnen. Ein großer Behemoth scheint sie zu kontrollieren, aber er ist wieder ins Innere gegangen. Ich werde hier auf ihn warten. Ich habe zwei Patronen, auf denen schon sein Name steht."
+
+[TranslatorEvent10]
+; EN: Message="LOG: A. Leiby: Been running from a Skaarj for the past 2 hours. Think I lost him behind a crate. If I can just make it down below I can slip back into the temple. It's darker so it's easier to hide. Wait... I hear someth >>>ERROR<<<"
+Message="LOG: A. Leiby: Ich renne schon seit 2 Stunden vor einem Skaarj weg. Ich glaube, ich habe ihn hinter einem Krater abgeschüttelt. Wenn ich es nur 'runter schaffen würde, könnte ich in den Tempel zurück schleichen. Es ist dunkler, also sollte es leichter sein, sich zu verstecken. Moment ... ich höre da >>>FEHLER<<<"
+
+[TranslatorEvent9]
+; EN: Message="Entering Land of Nagomi"
+Message="Eintritt ins Land von Nagomi"
+
+[TranslatorEvent8]
+; EN: Message="Entering Land of Nagomi"
+Message="Eintritt ins Land von Nagomi"

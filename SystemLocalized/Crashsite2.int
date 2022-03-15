@@ -28,6 +28,7 @@ Message="UMS Prometheus - Navigation Network: Warning: Proximity Warning! Contac
 Message="UMS Prometheus - Navigation Network: Status: Entry into atmosphere detected | Warning: Drop rate exceeding acceptable limit! | Critical: Hull breach detected in Section B3! | Critical: Hull breach detected in Section B2! | Warning: Hull integrity dropped to 26% in Section A3! | Critical: Hull breach detected in Section A2!"
 
 [TransitionGenderEvent0]
+; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/Interm5.uax, sounds FLog06b and MLog06b.
 OutDelays[1]=12.000000
 OutDelays[2]=3.000000
 OutDelays[3]=5.000000

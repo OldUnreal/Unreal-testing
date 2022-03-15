@@ -1,12 +1,8 @@
-[Public]
-
+﻿[Public]
 Object=(Name=ALAudio.ALAudioSubsystem,Class=Class,MetaClass=Engine.AudioSubsystem,Autodetect=)
-
-Preferences=(Caption="Audio"",Parent="Opzioni avanzate")
-
-Preferences=(Caption="ALAudio",Parent="Audio",Class=ALAudio.ALAudioSubsystem,Immediate=True)
-
+; EN: Preferences=(Caption="OpenAL 3D Audio Support",Parent="Audio",Class=ALAudio.ALAudioSubsystem,Immediate=True)
+Preferences=(Caption="Supporto per audio OpenAL 3D",Parent="Audio",Class=ALAudio.ALAudioSubsystem,Immediate=True)
 
 [ALAudioSubsystem]
-
-ClassCaption="Sistema ALAudio" 
+; EN: ClassCaption="OpenAL 3D Audio Support"
+ClassCaption="Supporto per audio OpenAL 3D"

@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Cybrosis Central"
+Title="Central Cybrosis"
+IdealPlayerCount="3-8"
+; EN: LevelEnterText="Now entering Cybrosis Central"
+LevelEnterText="Ora entrando in Central Cybrosis"
+
+[LevelSummary]
+; EN: Title="Cybrosis Central"
+Title="Central Cybrosis"
+IdealPlayerCount="3-8"
+; EN: LevelEnterText="Now entering Cybrosis Central"
+LevelEnterText="Ora entrando in Central Cybrosis"
+
+[SpecialEvent4]
+; EN: Message="Auxiliary weapons storage closing. Please exit."
+Message="Chiusura deposito armi ausiliarie. Per favore esci."
+
+[SpecialEvent3]
+; EN: Message="Auxiliary weapons storage now available."
+Message="Deposito per armi ausiliarie ora disponibile."

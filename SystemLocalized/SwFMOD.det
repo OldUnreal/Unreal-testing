@@ -1,0 +1,8 @@
+﻿[Public]
+Object=(Name=SwFMOD.SwFMOD,Class=Class,MetaClass=Engine.AudioSubsystem,Autodetect=)
+; EN: Preferences=(Caption="SwFModEx Audio Support",Parent="Audio",Class=SwFMOD.SwFMOD,Immediate=True)
+Preferences=(Caption="Unterstützung für SwFModEx-Audio",Parent="Sound",Class=SwFMOD.SwFMOD,Immediate=True)
+
+[SwFMOD]
+; EN: ClassCaption="SwFModEx Audio Support"
+ClassCaption="Unterstützung für SwFModEx-Audio"

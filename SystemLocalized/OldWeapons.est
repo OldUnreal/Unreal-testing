@@ -26,25 +26,25 @@ ItemName="Pistola de Dispersión"
 DeathMessage="%k ha infligido heridas mortales a %o con su %w."
 FemDeathMessage="%k ha infligido heridas mortales a %o con su %w."
 ; EN: PickupMessage="You got the ASMD"
-PickupMessage="Has recogido el Rifle ASMD"
+PickupMessage="Has recogido el ASMD"
 ; EN: ItemName="ASMD"
-ItemName="Rifle ASMD"
+ItemName="ASMD"
 
 [OldEightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
 DeathMessage="%o fue vapuleado varias veces por el %w de %k."
 FemDeathMessage="%o fue vapuleada varias veces por el %w de %k."
 ; EN: PickupMessage="You got the Eightball gun"
-PickupMessage="Has recogido el Lanzacohetes Eightball"
+PickupMessage="Has recogido el Lanzador Eightball"
 ; EN: ItemName="Eightball"
-ItemName="Lanzacohetes Eightball"
+ItemName="Lanzador Eightball"
 
 [OldRifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k ha atravesado la cabeza de %o con una bala."
 FemDeathMessage="%k ha atravesado la cabeza de %o con una bala."
 ; EN: PickupMessage="You got the Rifle"
-PickupMessage="Has recogido el Rifle de Francotirador"
+PickupMessage="Has recogido el Rifle"
 ; EN: ItemName="Sniper Rifle"
 ItemName="Rifle de Francotirador"
 
@@ -61,9 +61,9 @@ ItemName="Cañón de Metralla"
 ; EN: DeathMessage="%o got gatted by %k's %w."
 DeathMessage="%o ha sido acribillado por el %w de %k."
 FemDeathMessage="%o ha sido acribillada por el %w de %k."
-; EN: PickupMessage="You got the AutoMag"
+; EN: PickupMessage="You got the Automag"
 PickupMessage="Has recogido la Autopistola"
-; EN: ItemName="AutoMag"
+; EN: ItemName="Automag"
 ItemName="Autopistola"
 
 [OldMinigun]
@@ -71,9 +71,9 @@ ItemName="Autopistola"
 DeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
 FemDeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
 ; EN: PickupMessage="You got the Minigun"
-PickupMessage="Has recogido la Ametralladora"
+PickupMessage="Has recogido la Metralleta"
 ; EN: ItemName="Minigun"
-ItemName="Ametralladora"
+ItemName="Metralleta"
 
 [OldGESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
@@ -81,15 +81,15 @@ DeathMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
 FemDeathMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
 ; EN: PickupMessage="You got the GES BioRifle"
 PickupMessage="Has recogido el Rifle Biológico GES"
-; EN: ItemName="GES Bio Rifle"
+; EN: ItemName="GES BioRifle"
 ItemName="Rifle Biológico GES"
 
 [OldAmplifier]
-; EN: ExpireMessage="Amplifier is out of power."
+; EN: ExpireMessage="Energy Amplifier is out of power."
 ExpireMessage="El Amplificador Energético se ha agotado."
 ; EN: PickupMessage="You got the Energy Amplifier"
 PickupMessage="Has recogido el Amplificador Energético"
-; EN: ItemName="Amplifier"
+; EN: ItemName="Energy Amplifier"
 ItemName="Amplificador Energético"
 
 [OldStinger]
@@ -104,14 +104,14 @@ ItemName="Cañón Perforador"
 [OldShellBox]
 ; EN: PickupMessage="You picked up 50 bullets"
 PickupMessage="Has recogido una caja de 50 Balas"
-; EN: ItemName="Shell Box"
+; EN: ItemName="Bullet Box"
 ItemName="Caja de Balas"
 
 [OldRifleAmmo]
 ; EN: PickupMessage="You got 8 Rifle rounds"
-PickupMessage="Has recogido 8 Cartuchos para el Rifle de Francotirador"
+PickupMessage="Has recogido 8 Cartuchos para el Rifle"
 ; EN: ItemName="Rifle Rounds"
-ItemName="Cartuchos de Rifle de Francotirador"
+ItemName="Cartuchos de Rifle"
 
 [OldWeaponPowerUp]
 ; EN: PickupMessage="You got the Dispersion Pistol Powerup"
@@ -141,10 +141,10 @@ PickupMessage="Has recogido algo de munción"
 ItemName="Munición"
 
 [OldASMDAmmo]
-; EN: PickupMessage="You picked up an ASMD core"
-PickupMessage="Has recogido un Núcleo de ASMD"
+; EN: PickupMessage="You picked up an ASMD Core"
+PickupMessage="Has recogido un Núcleo ASMD"
 ; EN: ItemName="ASMD Core"
-ItemName="Núcleo de ASMD"
+ItemName="Núcleo ASMD"
 
 [OldStingerAmmo]
 ; EN: PickupMessage="You picked up 40 Tarydium shards"
@@ -166,15 +166,15 @@ ItemName="Residuos de Taridio"
 
 [OldRocketCan]
 ; EN: PickupMessage="You picked up 12 Eightballs"
-PickupMessage="Has recogido 12 Cohetes Eightball"
+PickupMessage="Has recogido 12 Proyectiles Eightball"
 ; EN: ItemName="Eightballs"
-ItemName="Cohetes Eightball"
+ItemName="Proyectiles Eightball"
 
 [OldClip]
 ; EN: PickupMessage="You picked up a clip"
-PickupMessage="Has recogido un Cartucho de Balas"
+PickupMessage="Has recogido un Cartucho"
 ; EN: ItemName="Clip"
-ItemName="Cartucho de Balas"
+ItemName="Cartucho"
 
 [OldRifleRound]
 ; EN: PickupMessage="You got a Rifle round"

@@ -7,16 +7,19 @@ Title="Final"
 Title="Final"
 
 [TransitionGenderEvent0]
+; Note: Make the text coincide with the respective audio entry in Sounds/est/EndSnd.est
 OutDelays[1]=3.000000
-; EN: CommonText[0]="Bodega Bay to shuttle craft. Please authenticate."
+; EN: 
 CommonText[0]="Bodega Bay a nave lanzadera. Autentifíquese, por favor."
 
 [TransitionGenderEvent2]
+; Note: Make the text coincide with the respective audio entry in Sounds/est/EndSnd.est
 OutDelays[1]=3.000000
-; EN: CommonText[0]="Authenticate immediately or we will open fire."
+; EN: 
 CommonText[0]="Autentifíquese inmediatamente o abriremos fuego."
 
 [TransitionGenderEvent1]
+; Note: Make the text coincide with the respective audio entry in Sounds/est/EndSnd.est
 OutDelays[1]=3.000000
-; EN: CommonText[0]="You were warned. We are opening fire."
+; EN: 
 CommonText[0]="Le hemos avisado. Vamos a abrir fuego."

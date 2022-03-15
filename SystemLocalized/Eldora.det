@@ -1,0 +1,19 @@
+﻿[LevelInfo1]
+; EN: Title="The Eldora Well"
+Title="Der Brunnen von Eldora"
+; EN: LevelEntryText="Entering the Eldora Well"
+LevelEntryText="Eingang der Brunnen von Eldora"
+
+[LevelSummary]
+; EN: Title="The Eldora Well"
+Title="Der Brunnen von Eldora"
+; EN: LevelEntryText="Entering the Eldora Well"
+LevelEntryText="Eingang der Brunnen von Eldora"
+
+[TranslatorEvent1]
+; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."
+Message="LOG: S. Brown: Es wird immer schwerer, die Berge zu erklimmen. Ich werde müde. Ich habe gerade einen Brunnen in der Nähe entdeckt, werde Ihn erforschen. Er wird von einigen Viechern bewacht, aber ich sollte es schaffen, unbemerkt an ihnen vorbei zu kommen."
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Walden: No sign of anyone yet. It's getting dark again. Going to camp out near the well until morning. Well seems empty, there may be a way out. Maybe I'll find the others."
+Message="LOG: J. Walden: Bisher kein Lebenszeichen. Es wird schon wieder dunkel. Wir werden in der Nähe des Brunnens heute nacht campen. Der Brunnen scheint leer zu sein, eventuell geht es dort durch einen Weg 'raus. Vielleicht finde ich die anderen ja doch."

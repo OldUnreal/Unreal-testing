@@ -1,8 +1,13 @@
-[LevelInfo0]
-Title="Last Intermission"
+Ôªø[LevelInfo1]
+; EN: Title="Intermission 14"
+Title="Pause 14"
+
+[LevelSummary]
+; EN: Title="Intermission 14"
+Title="Pause 14"
 
 [TransitionGenderEvent8]
-OutDelays[1]=44.000000
-MaleText[0]="Endlich! Ich erreichte das Shuttle und machte es startklar. Der letzte Kampf stand mir bevor. Und die Krall waren auch kein Zuckerschlecken. Ich schaffte es kaum zum Schiff. Und nach alledem muﬂte ich es immer noch mit der Bodega Bay im Orbit aufnehmen. Ein Shuttle gegen ein Schiff der Klasse UMS Freeman ... ein guter Scherz. Es sah nicht gut aus. Mein Shuttle hatte einen ‹berlichtantrieb. Wenn ich ganz, ganz viel Gl¸ck haben sollte, sollte es mir irgendwie gelingen, sie zu umfliegen. Sie konnten einfach nicht mit mir rechnen. Doch was w‰re die Alternative? Auf diesem Planeten zu bleiben? Ich entscheide mich dann doch f¸r das All ..."
-FemaleText[0]="Endlich! Ich erreichte das Shuttle und machte es startklar. Der letzte Kampf stand mir bevor. Und die Krall waren auch kein Zuckerschlecken. Ich schaffte es kaum zum Schiff. Und nach alledem muﬂte ich es immer noch mit der Bodega Bay im Orbit aufnehmen. Ein Shuttle gegen ein Schiff der Klasse UMS Freeman ... ein guter Scherz. Es sah nicht gut aus. Mein Shuttle hatte einen ‹berlichtantrieb. Wenn ich ganz, ganz viel Gl¸ck haben sollte, sollte es mir irgendwie gelingen, sie zu umfliegen. Sie konnten einfach nicht mit mir rechnen. Doch was w‰re die Alternative? Auf diesem Planeten zu bleiben? Ich entscheide mich dann doch f¸r das All ..."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm14.uax.
+OutDelays[1]=40.500000
+MaleText[0]="Endlich! Ich erreichte das Shuttle und machte es startklar. Der letzte Kampf stand mir bevor. Und die Krall waren auch kein Zuckerschlecken. Ich schaffte es kaum zum Schiff. Und nach alledem mu√üte ich es immer noch mit der Bodega Bay im Orbit aufnehmen. Ein Shuttle gegen ein Schiff der Klasse UMS Freeman ... ein guter Scherz. Es sah nicht gut aus. Mein Shuttle hatte einen √úberlichtantrieb. Wenn ich ganz, ganz viel Gl√ºck haben sollte, sollte es mir irgendwie gelingen, sie zu umfliegen. Sie konnten einfach nicht mit mir rechnen. Doch was w√§re die Alternative? Auf diesem Planeten zu bleiben? Ich entscheide mich dann doch f√ºr das All..."
+FemaleText[0]="Endlich! Ich erreichte das Shuttle und machte es startklar. Der letzte Kampf stand mir bevor. Und die Krall waren auch kein Zuckerschlecken. Ich schaffte es kaum zum Schiff. Und nach alledem mu√üte ich es immer noch mit der Bodega Bay im Orbit aufnehmen. Ein Shuttle gegen ein Schiff der Klasse UMS Freeman ... ein guter Scherz. Es sah nicht gut aus. Mein Shuttle hatte einen √úberlichtantrieb. Wenn ich ganz, ganz viel Gl√ºck haben sollte, sollte es mir irgendwie gelingen, sie zu umfliegen. Sie konnten einfach nicht mit mir rechnen. Doch was w√§re die Alternative? Auf diesem Planeten zu bleiben? Ich entscheide mich dann doch f√ºr das All..."

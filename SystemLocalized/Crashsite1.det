@@ -1,0 +1,41 @@
+﻿[LevelInfo2]
+Title="UMS Prometheus"
+; EN: LevelEntryText="Entering the UMS Prometheus"
+LevelEntryText="Eingabe der UMS Prometheus"
+
+[LevelSummary]
+Title="UMS Prometheus"
+; EN: LevelEntryText="Entering the UMS Prometheus"
+LevelEntryText="Eingabe der UMS Prometheus"
+
+[TranslatorEvent4]
+; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 2"
+Message="UMS Prometheus - Stromkreise: Warnung: Stromkreisüberlastung in Netzwerk 2 entdeckt"
+
+[TranslatorEvent11]
+; EN: Message="Log Oliver F. Russel, Scientific Assistant: I know that we got something in the water tanks again. Peter saw some kind of slimeball through the pipe controls again. Looks like another long night of water analysis. God, I hate space vermin..."
+Message="Log. von Oliver F. Russel, Wissenschaftlicher Assistent: Ich weiß, daß wir schon wieder etwas in die Wassertanks bekommen haben. Peter hat wieder eine Art Schleimball durch die Rohrkontrollen gesehen. Das sieht mir ganz nach einer weiteren langen Nacht mit Wasseranalysen aus. Gott, wie ich diese Weltraum-Parasiten hasse..."
+
+[TranslatorEvent10]
+; EN: Message="Log Andrew G. Jackson, Medical Officer: This has been a smooth ride, no major incidents for almost 2 weeks. And I'm still getting full payment. I think work doesn't get much better than this."
+Message="Log. von Andrew G. Jackson, Medizinischer Offizier: Das war eine gemütliche Tour, keine besonderen Zwischenfälle seit fast 2 Wochen; und ich bekomme immer noch mein volles Gehalt. Ich glaube, Arbeit kann kaum besser sein."
+
+[TranslatorEvent8]
+; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
+Message="UMS Prometheus - Info-Terminal: --- Informationsnetzwerk offline ---"
+
+[TranslatorEvent3]
+; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 1"
+Message="UMS Prometheus - Stromkreise: Warnung: Stromkreisüberlastung in Netzwerk 1 entdeckt"
+
+[TranslatorEvent5]
+; EN: Message="UMS Prometheus - Power Circuits: Status: Network 3 normal"
+Message="UMS Prometheus - Stromkreise: Status: Netzwerk 3 normal"
+
+[TranslatorEvent2]
+; EN: Message="UMS Prometheus - Engine 1 Status: Warning: Power level approaching limit | Critical: Pressure level exceeded limit! "
+Message="UMS Prometheus - Antrieb 1 - Status: Warnung: Maximale Energie fast erreicht | Kritisch: Zulässiger Druck wurde überschritten!"
+
+[TranslatorEvent6]
+; EN: Message="UMS Prometheus - Engine 1 Status: Warning: Power level approaching limit | Warning: Pressure level approaching limit"
+Message="UMS Prometheus - Antrieb 1 - Status: Warnung: Maximale Energie fast erreicht | Warnung: Zulässiger Druck fast erreicht"

@@ -1,0 +1,31 @@
+﻿[LevelInfo2]
+; EN: Title="Bounds of Foundry"
+Title="Die Gießerei"
+
+[LevelSummary]
+; EN: Title="Bounds of Foundry"
+Title="Die Gießerei"
+
+[Counter0]
+; EN: CountMessage="%i more to go..."
+CountMessage="%i noch..."
+; EN: CompleteMessage="Pumps destroyed! Emergency doors open."
+CompleteMessage="Pumpen zerstört! Notausgänge offen."
+
+[TranslatorEvent2]
+; EN: Message="Crane controls must be activated in lower control room."
+Message="Die Kransteuerung muß im unteren Kontrollraum aktiviert werden."
+
+[TranslatorEvent6]
+; EN: Message="Warning: Simultaneous activation of both pumps might result in explosion due to pressure level!"
+Message="Warnung: Gleichzeitiges Aktivieren beider Pumpen könnte aufgrund des Drucks zur Explosion führen!"
+
+[TranslatorEvent3]
+; EN: Message="WARNING: Toxic fume buildup exceeds regulation limits. Exercise caution with weaponry near Tarydium byproducts."
+Message="WARNUNG: Giftige Dämpfe übersteigen das zulässige Limit. Setzen Sie keine Waffen in der Nähe von Tarydiumprodukten ein."
+
+[TranslatorEvent5]
+; EN: Message="WARNING: Remain clear of Tarydium Byproducts unless properly outfitted with Toxin Suit."
+Message="WARNUNG: Halten Sie sich ohne Schutzanzug von den Tarydiumprodukten fern."
+; EN: AltMessage="Test!"
+AltMessage="Test!"

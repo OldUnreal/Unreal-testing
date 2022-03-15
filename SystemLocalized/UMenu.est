@@ -1,6 +1,6 @@
 ﻿[public]
 Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
-Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console)
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu")
 ; EN: Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Gold")
 Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Oro")
 ; EN: Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Ice")
@@ -136,6 +136,7 @@ SpeedText="Veloc. del Juego"
 SpeedHelp="Ajusta la velocidad del juego."
 
 [UMenuBotConfigBase]
+bSingleColumn=False
 ; EN: BaseText="Base Skill:"
 BaseText="Dificultad Básica:"
 ; EN: BaseHelp="This is the base skill level of the bots."
@@ -345,7 +346,7 @@ ArtText="Diseño gráfico y arte"
 ; EN: MusicSoundText="Music & Sound"
 MusicSoundText="Música y sonido"
 ; EN: BizText="Biz"
-BizText="Empresariales"
+BizText="Negocios"
 ; EN: PatchText="Oldunreal 227 Patch"
 PatchText="Parche v227 OldUnreal"
 
@@ -1219,6 +1220,7 @@ SpeedText="Velocidad Juego"
 GoreText="Nivel de Sangre"
 ; EN: GoreHelp="Choose the level of gore you wish to see in the game."
 GoreHelp="Elige el nivel de sangre que deseas ver en el juego."
+; EN: GoreLevels[0]="Normal"
 GoreLevels[0]="Normal"
 ; EN: GoreLevels[1]="Reduced"
 GoreLevels[1]="Reducido"
@@ -1636,6 +1638,7 @@ SkillHelp="Selecciona la dificultad en la que quieres jugar."
 EditAreaWidth=90
 
 [UMenuCoopGameRulesCWindow]
+bSingleColumn=False
 ; EN: FriendlyFireText="Friendly Fire"
 FriendlyFireText="Fuego Amigo"
 ; EN: FriendlyFireHelp="If checked, friendly fire damage is allowed."

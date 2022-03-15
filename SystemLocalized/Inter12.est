@@ -7,8 +7,7 @@ Title="Intermisión 12"
 Title="Intermisión 12"
 
 [TransitionGenderEvent6]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm12.uax
 OutDelays[1]=26.000000
-; EN: MaleText[0]="After escaping from the Tarydium plant I wound up outside... on a freezing, ice-filled plateau. The contrast with the lush climate from before was startling. Anyway, while on the surface, I was surrounded by jagged cliffs and sharp peaks, so I'm thinking I'm high in the mountains. I must have covered some distance underground... and gained some serious altitude. The good news is that I'm still headed in the right direction."
 MaleText[0]="Cuando logré salir de la planta de taridio me encontré en el exterior, en una meseta gélida, cargada de hielo. El contraste con el feroz clima anterior era sorprendente. De pronto me encuentro rodeado de acantilados y picos escarpados en medio de las montañas. Debo haber avanzado mucho bajo tierra, y ganado mucha altitud. Pero lo bueno es que sigo avanzando en la dirección correcta."
-; EN: FemaleText[0]="After escaping from the Tarydium plant I wound up outside... on a freezing, ice-filled plateau. The contrast with the lush climate from before was startling. Anyway, while on the surface, I was surrounded by jagged cliffs and sharp peaks, so I'm thinking I'm high in the mountains. I must have covered some distance underground... and gained some serious altitude. The good news is that I'm still headed in the right direction."
 FemaleText[0]="Cuando logré salir de la planta de taridio me encontré en el exterior, en una meseta gélida, cargada de hielo. El contraste con el feroz clima anterior era sorprendente. De pronto me encuentro rodeada de acantilados y picos escarpados en medio de las montañas. Debo haber avanzado mucho bajo tierra, y ganado mucha altitud. Pero lo bueno es que sigo avanzando en la dirección correcta."

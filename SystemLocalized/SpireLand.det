@@ -1,0 +1,27 @@
+﻿[LevelInfo2]
+; EN: Title="Spire Valley"
+Title="Das Tal der Spitzen"
+; EN: LevelEntryText="Entering the Spire Valley"
+LevelEntryText="Eingang das Tal der Spitzen"
+
+[LevelSummary]
+; EN: Title="Spire Valley"
+Title="Das Tal der Spitzen"
+; EN: LevelEntryText="Entering the Spire Valley"
+LevelEntryText="Eingang das Tal der Spitzen"
+
+[TranslatorEvent7]
+; EN: Message="Land of Nagomi"
+Message="Das Land der Nagomi"
+
+[TranslatorEvent3]
+; EN: Message="LOG: R. Ovrevik: Montanus and I are at the top of the spire. We've located an alien shuttle of some sort that rises straight up into the clouds. It's getting rather stormy, but we're going to attempt to ride it."
+Message="LOG: R. Ovrevik: Montanus und ich sind auf der Spitze angekommen. Wir haben ein Alienschiff geortet, eines von denen, die senkrecht in die Wolken aufsteigen. Es wird gerade etwas stürmischer, aber wir werden versuchen, es zu fliegen."
+
+[TranslatorEvent4]
+; EN: Message="LOG: J. Montanus: Ovrevik and I managed to ascend the large towering rock fairly easily. We suspect someone may have cleared the way. Maybe he's the one that made it off this forsaken planet."
+Message="LOG: J. Montanus: Ovrevik und ich haben die Besteigung der großen Felsen relativ leicht gemeistert. Wir nehmen an, daß jemand den Weg geräumt haben muß. Vielleicht ist das derjenige, der es von diesem verdammten Planeten geschafft hat."
+
+[TranslatorEvent6]
+; EN: Message="Land of Nagomi"
+Message="Das Land der Nagomi"

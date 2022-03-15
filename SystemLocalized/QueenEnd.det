@@ -1,0 +1,23 @@
+﻿[LevelInfo2]
+; EN: Title="The Source"
+Title="Die Quelle"
+; EN: LevelEntryText="Entering The Source"
+LevelEntryText="Eingang der Quelle"
+
+[LevelSummary]
+; EN: Title="The Source"
+Title="Die Quelle"
+; EN: LevelEntryText="Entering The Source"
+LevelEntryText="Eingang der Quelle"
+
+[JumpBoots0]
+; EN: ItemName="Super Jump Boots"
+ItemName="Super-Sprungstiefel"
+; EN: PickupMessage="You picked up Super Jump Boots."
+PickupMessage="Super-Sprungstiefel aufgenommen."
+; EN: ExpireMessage="The Super Jump Boots have drained."
+ExpireMessage="Die Super-Sprungstiefel sind leer."
+
+[SpecialEvent18]
+; EN: DamageString="vaporized"
+DamageString="verdampft"

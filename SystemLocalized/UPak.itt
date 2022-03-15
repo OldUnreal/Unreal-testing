@@ -1,197 +1,185 @@
-[Public]
-
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;Return To Napali")
-
+﻿[Public]
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
 Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
-
 Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
-
 Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
-
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
-
+; EN: Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
+Preferences=(Caption="Partita Mimetizzazione",Parent="Tipi di gioco",Class=UPak.CloakMatch,Immediate=True)
+; EN: Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
+Preferences=(Caption="Partita Gravità",Parent="Tipi di gioco",Class=UPak.GravityMatch,Immediate=True)
+; EN: Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
+Preferences=(Caption="Partita Marine",Parent="Tipi di gioco",Class=UPak.MarineMatch,Immediate=True)
+; EN: Preferences=(Caption="Terran Weapon Match",Parent="Game Types",Class=UPak.TerranWeaponMatch,Immediate=True)
+Preferences=(Caption="Partita Armi Terrestri",Parent="Tipi di gioco",Class=UPak.TerranWeaponMatch,Immediate=True)
 
 [TransitionNullHUD]
-
-Statheader=Statistiche uccisioni:
-
-CARStat=Fucile d'Assalto
-
-RLStat=Lanciarazzi
-
-GLStat=Lanciagranate
-
-ASMDStat=ASMD
-
-AutomagStat=Automag
-
-DispersionStat=Pistola Dissolvente
-
-EightballStat=Lancia 8-ball
-
-FlakCannonStat=Cannone Flak
-
-GESBioRifleStat=BioFucile GES
-
-MinigunStat=Minigun
-
-RazorjackStat=Razorjack
-
-RifleStat=Fucile
-
-StingerStat=Stinger
-
-TotalStat=Uccisioni totali
-
-LogEntryMsg=VOCE DI REGISTRO:
-
-
-[UPakSinglePlayer]
-
-GameName=Return to Na Pali
-
+; EN: Statheader="Kill Statistics: "
+Statheader="Statistiche uccisioni: "
+; EN: CARStat="Combat Assault Rifle"
+CARStat="Fucile d'Assalto"
+; EN: RLStat="UMS Rocket Launcher"
+RLStat="Lanciarazzi UMS"
+; EN: GLStat="UMS Grenade Launcher"
+GLStat="Lanciagranate UMS"
+; EN: ASMDStat="ASMD"
+ASMDStat="ASMD"
+; EN: AutomagStat="Automag"
+AutomagStat="Automag"
+; EN: DispersionStat="Dispersion Pistol"
+DispersionStat="Pistola Dissolvente"
+; EN: EightballStat="Eightball"
+EightballStat="Lancia 8-ball"
+; EN: FlakCannonStat="Flak Cannon"
+FlakCannonStat="Cannone Flak"
+; EN: GESBioRifleStat="GES BioRifle"
+GESBioRifleStat="BioFucile GES"
+; EN: MinigunStat="Minigun"
+MinigunStat="Minigun"
+; EN: RazorjackStat="Razorjack"
+RazorjackStat="Razorjack"
+; EN: RifleStat="Sniper Rifle"
+RifleStat="Fucile"
+; EN: StingerStat="Stinger"
+StingerStat="Stinger"
+; EN: TotalStat="Total Kills"
+TotalStat="Uccisioni totali"
+; EN: LogEntryMsg="LOG ENTRY:"
+LogEntryMsg="VOCE DI REGISTRO:"
 
 [GrenadeLauncher]
-
-PickupMessage="Hai preso il Lanciagranate."
-
-ItemName=Lanciagranate
-
+; EN: DeathMessage="%k's grenade made %o blew up."
+DeathMessage="La granata di %k ha fatto esplodere %o."
+; EN: PickupMessage="You got the UMS Grenade Launcher"
+PickupMessage="Hai preso il Lanciagranate UMS"
+; EN: ItemName="UMS Grenade Launcher"
+ItemName="Lanciagranate UMS"
 
 [Cloak]
-
-ExpireMessage=disattivo.
-
-PickupMessage=Hai preso il Mimetizzatore.
-
-ItemName=Mimetizzatore
-
+; EN: ExpireMessage="disengaged."
+ExpireMessage="disattivo."
+; EN: PickupMessage="You got the Cloaking Device"
+PickupMessage="Hai preso il Mimetizzatore"
+; EN: ItemName="Cloaking Device"
+ItemName="Mimetizzatore"
+; EN: M_Activated=" engaged"
 M_Activated=" attivo"
-
+; EN: M_Deactivated=" disengaged"
 M_Deactivated=" disattivo"
 
+[UPakHUD]
+; EN: MultWeapSlotMsg="Press the weapon select button to toggle weapons."
+MultWeapSlotMsg="Premi i tasti di selezione delle armi per scegliere quali usare."
 
-[CARifle]
-
-PickupMessage=Hai preso il Fucile d'Assalto.
-
-ItemName=Fucile d'Assalto
-
+[UPakSinglePlayer]
+; EN: GameName="Unreal Mission Pack"
+GameName="Pacchetto missioni per Unreal"
 
 [RocketLauncher]
-
-PickupMessage=Hai preso il Lanciarazzi.
-
-ItemName=Lanciarazzi
-
+; EN: DeathMessage="%k's rocket turned %o's body into chunks."
+DeathMessage="Il razzo di %k ha trasformato il corpo di %o in pezzi."
+; EN: PickupMessage="You got the UMS Rocket Launcher"
+PickupMessage="Hai preso il Lanciarazzi UMS"
+; EN: ItemName="UMS Rocket Launcher"
+ItemName="Lanciarazzi UMS"
 
 [UPakChooseGameMenu]
-
 MenuList[0]="Return to Na Pali"
-
-MenuList[1]=Unreal
-
-MenuList[2]=Unreal
-
-
-[UPakDebugger]
-
-ItemName=UPak Debugger
-
-
-[UPakScubaGear]
-
-PickupMessage=Hai preso la muta subacquea
-
-M_Deactivated=disattivo... in ricarica.
-
-
-[UPakMaleOne]
-
-MenuName=Uomo 1
-
-
-[UPakFemaleOne]
-
-MenuName=Donna 1
-
-
-[UPakFemaleTwo]
-
-MenuName=Donna 2
-
-
-[UPakMaleThree]
-
-MenuName=Uomo 3
-
-
-[UPakMaleTwo]
-
-MenuName=Uomo 2
-
-
-[CARifleClip]
-
-PickupMessage=Hai preso un caricatore CAR da 50 colpi.
-
-
-[GLAmmo]
-
-PickupMessage=Hai preso 10 granate.
-
-
-[RLAmmo]
-
-PickupMessage=Hai preso 10 razzi.
-
-
-[CompTablet]
-
-PickupMessage=Hai preso la CompTablet.
-
-
-[GravityMatch]
-
-GameName=Partita Gravit�
-
+MenuList[1]="Unreal"
 
 [CloakMatch]
+; EN: GameName="Cloak Match"
+GameName="Partita Mimetizzazione"
 
-GameName=Partita Mimetizzazione
+[CARifle]
+; EN: DeathMessage="%k's %w turned %o into swiss cheese."
+DeathMessage="La %w di %k ha trasformato il %o in formaggio svizzero."
+; EN: PickupMessage="You got the Combat Assault Rifle"
+PickupMessage="Hai preso il Fucile d'Assalto"
+; EN: ItemName="Combat Assault Rifle"
+ItemName="Fucile d'Assalto"
 
-
-[TerranWeaponMatch]
-
-GameName=Partita Armi Terrestri
-
+[UPakScubaGear]
+; EN: RechargedMessage="ScubaGear fully recharged."
+RechargedMessage="ScubaGear completamente ricaricato."
+; EN: LowOxygenMessage="Oxygen supply critically low"
+LowOxygenMessage="Fornitura di ossigeno estremamente bassa"
+; EN: PickupMessage="You picked up the Marine SCUBA Gear"
+PickupMessage="Hai preso la muta subacquea"
+; EN: ItemName="Marine SCUBA Gear"
+ItemName="Muta Subacquea"
+; EN: M_Deactivated="deactivated... Recharging."
+M_Deactivated="disattivo... in ricarica."
 
 [MarineMatch]
+; EN: GameName="Marine Match"
+GameName="Partita Marine"
 
-GameName=Partita Marine 
+[GravityMatch]
+; EN: GameName="Gravity Match"
+GameName="Partita Gravità"
+
+[UPakDebugger]
+; EN: ItemName="UPak Debugger"
+ItemName="UPak Debugger"
+
+[UPakMaleOne]
+; EN: MenuName="Male 1"
+MenuName="Uomo 1"
+
+[UPakFemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Donna 1"
+
+[GLAmmo]
+; EN: PickupMessage="You picked up 10 UMS Grenades"
+PickupMessage="Hai preso 10 granate UMS"
+; EN: ItemName="UMS Grenades"
+ItemName="Granate UMS"
+
+[RLAmmo]
+; EN: PickupMessage="You got 10 UMS Rockets"
+PickupMessage="Hai preso 10 razzi UMS"
+; EN: ItemName="UMS Rockets"
+ItemName="Razzi UMS"
+
+[CARifleClip]
+; EN: PickupMessage="You got a 50 bullet CAR clip"
+PickupMessage="Hai preso un caricatore FdA da 50 colpi"
+; EN: ItemName="CAR Clip"
+ItemName="Caricatore FdA"
+
+[UPakFemaleTwo]
+; EN: MenuName="Female 2"
+MenuName="Donna 2"
+
+[UPakMaleThree]
+; EN: MenuName="Male 3"
+MenuName="Uomo 3"
+
+[UPakMaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Uomo 2"
+
+[TerranWeaponMatch]
+; EN: GameName="Terran Weapon Match"
+GameName="Partita Armi Terrestri"
+
+[CompTablet]
+; EN: PickupMessage="You got the Computer Tablet"
+PickupMessage="Hai preso la tablet del computer"
+; EN: ItemName="Computer Tablet"
+ItemName="Tablet computer"

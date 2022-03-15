@@ -1,21 +1,15 @@
-[public]
-
-Object=(Name=Female1Skins.Drace,Class=Texture)
-
-Object=(Name=Female1Skins.T_Blue,Class=Texture)
-
-Object=(Name=Female1Skins.T_Green,Class=Texture)
-
-Object=(Name=Female1Skins.T_Red,Class=Texture)
-
-Object=(Name=Female1Skins.T_Yellow,Class=Texture)
-
-Object=(Name=Female1Skins.FemGib1,Class=Texture)
-
-Object=(Name=Female1Skins.Gina,Class=Texture)
-
-Object=(Name=Female1Skins.Nikita,Class=Texture)
-
-Object=(Name=Female1Skins.Raquel,Class=Texture)
-
-Object=(Name=Female1Skins.Tamika,Class=Texture) 
+﻿[public]
+Object=(Name=Female1Skins.Drace,Class=Texture,Description="Drace")
+; EN: Object=(Name=Female1Skins.T_Blue,Class=Texture,Description="Blue")
+Object=(Name=Female1Skins.T_Blue,Class=Texture,Description="Blu")
+; EN: Object=(Name=Female1Skins.T_Green,Class=Texture,Description="Green")
+Object=(Name=Female1Skins.T_Green,Class=Texture,Description="verde")
+; EN: Object=(Name=Female1Skins.T_Red,Class=Texture,Description="Red")
+Object=(Name=Female1Skins.T_Red,Class=Texture,Description="Rosso")
+; EN: Object=(Name=Female1Skins.T_Yellow,Class=Texture,Description="Yellow")
+Object=(Name=Female1Skins.T_Yellow,Class=Texture,Description="Giallo")
+Object=(Name=Female1Skins.FemGib1,Class=Texture,Description="Zombie")
+Object=(Name=Female1Skins.Gina,Class=Texture,Description="Gina")
+Object=(Name=Female1Skins.Nikita,Class=Texture,Description="Nikita")
+Object=(Name=Female1Skins.Raquel,Class=Texture,Description="Raquel")
+Object=(Name=Female1Skins.Tamika,Class=Texture,Description="Tamika")

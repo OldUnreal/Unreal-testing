@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
-; EN: Title="ISV-Kran Decks 3 and 2"
-Title="Cubiertas 3 y 2 del ISV-Kran"
-; EN: LevelEnterText="Entering ISV-Kran Deck 3"
-LevelEnterText="Entrando a la Cubierta 3 del ISV-Kran"
+; EN: Title="ISV-KRAN Decks 3 and 2"
+Title="Cubiertas 3 y 2 del ISV-KRAN"
+; EN: LevelEnterText="Entering ISV-KRAN Deck 3"
+LevelEnterText="Entrando a la Cubierta 3 del ISV-KRAN"
 
 [LevelSummary]
-; EN: Title="ISV-Kran Decks 3 and 2"
-Title="Cubiertas 3 y 2 del ISV-Kran"
+; EN: Title="ISV-KRAN Decks 3 and 2"
+Title="Cubiertas 3 y 2 del ISV-KRAN"
 ; EN: LevelEnterText="Entering ISV-Kean Deck 3"
-LevelEnterText="Entrando a la Cubierta 3 del ISV-Kran"
+LevelEnterText="Entrando a la Cubierta 3 del ISV-KRAN"
 
 [TranslatorEvent8]
 ; EN: Message="Main Shuttle Bay Door Override Controls"
@@ -113,11 +113,11 @@ Message="ADVERTENCIA: FUGA DE REFRIGERANTE DE MOTORES EN EL PISO INFERIOR DE EST
 
 [TranslatorEvent3]
 ; EN: Message="Primary Shuttle Bay: Log Entry by Dockmaster Ivan Romanov Second Officer ISV-KRAN. I have sealed the main Iris Hatch with a Laser welding team. No Alien Bastards are going to get into my shuttle bay."
-Message="Bahía de Lanzadera Primaria: Entrada de registro de Ivan Romanov, Segundo Oficial de Puerto del ISV-Kran. He sellado la principal Escotilla Iris con un equipo de soldadura láser. Ningún Bastardo Alienígena va a entrar en mi bahía de lanzadera."
+Message="Bahía de Lanzadera Primaria: Entrada de registro de Ivan Romanov, Segundo Oficial de Puerto del ISV-KRAN. He sellado la principal Escotilla Iris con un equipo de soldadura láser. Ningún Bastardo Alienígena va a entrar en mi bahía de lanzadera."
 
 [TranslatorEvent4]
 ; EN: Message="Primary Shuttle Bay: Log Entry by Dockmaster Ivan Romanov Second Officer ISV-KRAN. The dock doors control panel can be reactivated with the override in one of the Access tubes."
-Message="Bahía de Lanzadera Primaria: Entrada de registro de Ivan Romanov, Segundo Oficial de Puerto del ISV-Kran. El panel de control de las puertas de cubierta puede reactivarse con la anulación de uno de los tubos de acceso."
+Message="Bahía de Lanzadera Primaria: Entrada de registro de Ivan Romanov, Segundo Oficial de Puerto del ISV-KRAN. El panel de control de las puertas de cubierta puede reactivarse con la anulación de uno de los tubos de acceso."
 
 [TranslatorEvent16]
 ; EN: Message="COOLING SYSTEM EMERGENCY PUMP ACTIVATED"

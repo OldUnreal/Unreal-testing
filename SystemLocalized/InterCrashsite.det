@@ -1,13 +1,17 @@
-[LevelInfo1]
-Title=Auf der Reeperbahn nachts um halb 2...
-LevelEnterText=Boah, ich brauch nen neuen Job...
+ï»¿[LevelInfo1]
+; EN: Title="Auf der Reeperbahn nachts um halb 2..."
+Title="Auf der Reeperbahn GebÃ¼hren um halb 2 ..."
+; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
+LevelEnterText="Boah, ich brauch nen neuen Job ..."
 
 [LevelSummary]
-Title="Auf der Reeperbahn nachts um halb 2..."
-LevelEnterText="Boah, ich brauch nen neuen Job..."
+; EN: Title="Auf der Reeperbahn nachts um halb 2..."
+Title="Auf der Reeperbahn GebÃ¼hren um halb 2 ..."
+; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
+LevelEnterText="Boah, ich brauch nen neuen Job ..."
 
 [TransitionGenderEvent0]
-OutDelays[1]=32.500000
-MaleText[0]="Die Prometheus ist in ein Tal gestürzt und verlor diverse Teile, als sie vom Himmel fiel. Überall Leichen. Ich muß davon ausgehen, daß die komplette Crew ausradiert wurde - 150 Mann ... Gott, ich hasse diesen Planeten. Dieses Schiff ist ein Alptraum ... die Hülle ist in mehrere Teile zerbrochen, einer der Energiekerne ist geschmolzen und die Korridore sind voller Söldner. Aber bald bin ich weg hier ... ich muß nur noch die Daten finden und dann das ELT auf der Brücke aktivieren."
-FemaleText[0]="Die Prometheus ist in ein Tal gestürzt und verlor diverse Teile, als sie vom Himmel fiel. Überall Leichen. Ich muß davon ausgehen, daß die komplette Crew ausradiert wurde - 150 Mann ... Gott, ich hasse diesen Planeten. Dieses Schiff ist ein Alptraum ... die Hülle ist in mehrere Teile zerbrochen, einer der Energiekerne ist geschmolzen und die Korridore sind voller Söldner. Aber bald bin ich weg hier ... ich muß nur noch die Daten finden und dann das ELT auf der Brücke aktivieren."
-
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm5.uax.
+OutDelays[1]=29.500000
+MaleText[0]="Die Prometheus ist in ein Tal gestÃ¼rzt und verlor diverse Teile, als sie vom Himmel fiel. Ãœberall Leichen. Ich muÃŸ davon ausgehen, daÃŸ die komplette Crew ausradiert wurde. 150 Mann... Gott, ich hasse diesen Planeten. Dieses Schiff ist ein Alptraum ... die HÃ¼lle ist in mehrere Teile zerbrochen, einer der Energiekerne ist geschmolzen und die Korridore sind voller SÃ¶ldner. Aber bald bin ich weg hier ... ich muÃŸ nur noch die Daten finden und dann das ELT auf der BrÃ¼cke aktivieren."
+FemaleText[0]="Die Prometheus ist in ein Tal gestÃ¼rzt und verlor diverse Teile, als sie vom Himmel fiel. Ãœberall Leichen. Ich muÃŸ davon ausgehen, daÃŸ die komplette Crew ausradiert wurde. 150 Mann... Gott, ich hasse diesen Planeten. Dieses Schiff ist ein Alptraum ... die HÃ¼lle ist in mehrere Teile zerbrochen, einer der Energiekerne ist geschmolzen und die Korridore sind voller SÃ¶ldner. Aber bald bin ich weg hier ... ich muÃŸ nur noch die Daten finden und dann das ELT auf der BrÃ¼cke aktivieren."

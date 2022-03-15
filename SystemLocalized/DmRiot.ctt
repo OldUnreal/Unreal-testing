@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Riot!"
+Title="Motí!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Motí!"
+
+[LevelSummary]
+; EN: Title="Riot!"
+Title="Motí!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Motí!"
+
+[TranslatorEvent0]
+; EN: Message="Started 18/04/10. Abandoned 05/10. Started over on 10/03/11. Layout finished on 14/06/11. Makeover done 20/06/11. Building finished on 21/06/11. Version 1.1 on 22/06/11."
+Message="Començat el 18/04/10. Abandonat el 05/10. Reiniciat el 10/03/11. Disseny finalitzat el 14/06/11. Transformació feta el 20/06/11. Edifici acabat el 21/06/11. Versió 1.1 del 22/06/11."
+; EN: Hint="Check your clipped BSP in notepad: vertices might snap off the grid for some reason."
+Hint="Comproveu el vostre BSP retallat al bloc de notes: els vèrtexs poden sortir de la graella per algun motiu."
+; EN: M_HintMessage="LOOK ABOVE FOR MEGA HINT"
+M_HintMessage="BUSQUEU MEGA SUGGERIMENT"

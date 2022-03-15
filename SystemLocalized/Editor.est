@@ -1,34 +1,36 @@
 ﻿[Public]
+; Shared commandlets
 Object=(Name=Editor.MasterCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.MakeCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.ConformCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.BatchExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.PackageFlagCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.DataRipCommandlet,Class=Class,MetaClass=Core.Commandlet)
-Object=(Name=Editor.PS2ConvertCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.UpdateUModCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.ChecksumPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.StripSourceCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.DumpIntCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.ExportPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.CompareIntCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.ListObjectsCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.DumpMeshInfoCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Editor.CheckUnicodeCommandlet,Class=Class,MetaClass=Core.Commandlet)
+; Unreal-exclusive commandlets
+Object=(Name=Editor.PS2ConvertCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.AudioPackageCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.DumpTextureInfoCommandlet,Class=Class,MetaClass=Core.Commandlet)
-Object=(Name=Editor.ListObjectsCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.MusicPackagesCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.ReduceTexturesCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.SaveEmbeddedCommandlet,Class=Class,MetaClass=Core.Commandlet)
-Object=(Name=Editor.DumpMeshInfoCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.BatchMeshExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.RebuildImportsCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.ProdigiosumInParvoCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.FullBatchExportCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.FontPageDiffCommandlet,Class=Class,MetaClass=Core.Commandlet)
-Object=(Name=Editor.CheckUnicodeCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.RipAndTearCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.TextureMergerCommandlet,Class=Class,MetaClass=Core.Commandlet)
-Object=(Name=Editor.StripSourceCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Editor.FontExporter,Class=Class,MetaClass=Core.Exporter)
+; "Editor" tree
 ; EN: Preferences=(Caption="Editor",Parent="Advanced Options")
 Preferences=(Caption="Editor",Parent="Opciones Avanzadas")
 ; EN: Preferences=(Caption="Advanced (Editor)",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Advanced)
@@ -39,10 +41,21 @@ Preferences=(Caption="Colores",Parent="Editor",Class=Editor.EditorEngine,Immedia
 Preferences=(Caption="Cuadrícula",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=Grid)
 ; EN: Preferences=(Caption="Rotation Grid",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=RotationGrid)
 Preferences=(Caption="Cuadrícula de Rotación",Parent="Editor",Class=Editor.EditorEngine,Immediate=True,Category=RotationGrid)
-; EN: Preferences=(Caption="AudioPackage Commandlet",Parent="Editor",Class=Editor.AudioPackageCommandlet,Immediate=True)
-Preferences=(Caption="Aplicomando AudioPackage",Parent="Editor",Class=Editor.AudioPackageCommandlet,Immediate=True)
-; EN: Preferences=(Caption="MusicPackages Commandlet",Parent="Editor",Class=Editor.MusicPackagesCommandlet,Immediate=True)
-Preferences=(Caption="Aplicomando MusicPackages",Parent="Editor",Class=Editor.MusicPackagesCommandlet,Immediate=True)
+; "Commandlets and Exporters" subtree
+; EN: Preferences=(Caption="Commandlets and Exporters",Parent="Editor")
+Preferences=(Caption="Aplicomandos y Exportadores",Parent="Editor")
+; EN: Preferences=(Caption="AudioPackage Commandlet",Parent="Commandlets and Exporters",Class=Editor.AudioPackageCommandlet,Immediate=True)
+Preferences=(Caption="Aplicomando AudioPackage",Parent="Aplicomandos y Exportadores",Class=Editor.AudioPackageCommandlet,Immediate=True)
+; EN: Preferences=(Caption="BatchMeshExport Commandlet",Parent="Commandlets and Exporters",Class=Editor.BatchMeshExportCommandlet,Immediate=True)
+Preferences=(Caption="Aplicomando BatchMeshExport",Parent="Aplicomandos y Exportadores",Class=Editor.BatchMeshExportCommandlet,Immediate=True)
+; EN: Preferences=(Caption="FullBatchExport Commandlet",Parent="Commandlets and Exporters",Class=Editor.FullBatchExportCommandlet,Immediate=True)
+Preferences=(Caption="Aplicomando FullBatchExport",Parent="Aplicomandos y Exportadores",Class=Editor.FullBatchExportCommandlet,Immediate=True)
+; EN: Preferences=(Caption="MusicPackages Commandlet",Parent="Commandlets and Exporters",Class=Editor.MusicPackagesCommandlet,Immediate=True)
+Preferences=(Caption="Aplicomando MusicPackages",Parent="Aplicomandos y Exportadores",Class=Editor.MusicPackagesCommandlet,Immediate=True)
+; EN: Preferences=(Caption="RebuildImports Commandlet",Parent="Commandlets and Exporters",Class=Editor.RebuildImportsCommandlet,Immediate=True)
+Preferences=(Caption="Aplicomando RebuildImports",Parent="Aplicomandos y Exportadores",Class=Editor.RebuildImportsCommandlet,Immediate=True)
+; EN: Preferences=(Caption="SkeletalAnim (PSA) Exporter",Parent="Commandlets and Exporters",Class=Editor.SkeletalAnimExpPSA,Immediate=True)
+Preferences=(Caption="Exportador SkeletalAnim (PSA)",Parent="Aplicomandos y Exportadores",Class=Editor.SkeletalAnimExpPSA,Immediate=True)
 
 [MasterCommandlet]
 HelpCmd=master
@@ -85,11 +98,11 @@ HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
 HelpOneLiner="Genera archivos binarios conformados."
 ; EN: HelpUsage="conform existing_file.ext old_file.ext"
 HelpUsage="conform archivo_existente.ext archivo_antiguo.ext"
-; EN: HelpParm[0]="existingfile.ext"
+; EN: HelpParm[0]="existing_file.ext"
 HelpParm[0]="archivo_existente.ext"
 ; EN: HelpDesc[0]="Existing binary file to load, conform, and save."
 HelpDesc[0]="Archivo binario existente para cargar, conformar y guardar."
-; EN: HelpParm[1]="oldfile.ext"
+; EN: HelpParm[1]="old_file.ext"
 HelpParm[1]="archivo_antiguo.ext"
 ; EN: HelpDesc[1]="Old file to make source file binary compatible with."
 HelpDesc[1]="Archivo antiguo sobre el cual se va a compatibilizar el archivo fuente."
@@ -152,16 +165,16 @@ HelpParm[1]="opción"
 ; EN: HelpDesc[1]="+ to set a flag, or - to remove a flag, followed by one of:"
 HelpDesc[1]="+ para activar un atributo, o - para eliminarlo, seguido por uno de los siguientes:"
 HelpParm[2]="   AllowDownload"
-; EN: HelpDesc[2]="   Clients are allowed to download package from server."
+; EN: HelpDesc[2]="   Clients are allowed to download this package from the server."
 HelpDesc[2]="   Permite que los clientes puedan descargar este paquete desde el servidor."
 HelpParm[3]="   ClientOptional"
-; EN: HelpDesc[3]="   Clients can chose to skip this package download from server."
+; EN: HelpDesc[3]="   Clients can choose to skip downloading this package from the server."
 HelpDesc[3]="   Permite que los clientes puedan omitir la descarga de este paquete."
 HelpDesc[4]="   ServerSideOnly"
-; EN: HelpDesc[4]="   Package has no network relevancy on a server."
+; EN: HelpDesc[4]="   The package has no network relevancy on a server."
 HelpDesc[4]="   Marca al paquete como irrelevante en un servidor."
 HelpParm[5]="   BrokenLinks"
-; EN: HelpDesc[5]="   Package was loaded with missing links."
+; EN: HelpDesc[5]="   The package can be loaded with missing links."
 HelpDesc[5]="   Permite la carga de este paquete aún con enlaces rotos."
 HelpParm[6]="   Unsecure"
 ; EN: HelpDesc[6]="   Unused."
@@ -310,7 +323,7 @@ HelpDesc[5]="  No muestra la clase."
 HelpParm[6]="  -co"
 ; EN: HelpDesc[6]="   Just display Object Classes instead of each Object."
 HelpDesc[6]="  Solo muestra clases de objeto en lugar de cada objeto."
-; EN: HelpParm[7]="pkg"
+; EN: HelpParm[7]="package"
 HelpParm[7]="paquete"
 ; EN: HelpDesc[7]="Package file."
 HelpDesc[7]="Archivo empaquetado."
@@ -318,6 +331,26 @@ HelpDesc[7]="Archivo empaquetado."
 HelpParm[8]="clase_base"
 ; EN: HelpDesc[8]="Optional base class of listed objects."
 HelpDesc[8]="Clase base de los objetos listados. (Opcional)."
+
+[DumpMeshInfoCommandlet]
+HelpCmd=dumpmeshinfo
+HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
+; EN: HelpOneLiner="Dumps information about meshes."
+HelpOneLiner="Vuelca información sobre mallas."
+; EN: HelpUsage="dumpmeshinfo <pkg>"
+HelpUsage="dumpmeshinfo <paquete>"
+
+[CheckUnicodeCommandlet]
+HelpCmd=checkunicode
+HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
+; EN: HelpUsage="Checks if the contents of a text file contains Unicode characters."
+HelpUsage="Verifica si el contenido de un archivo de texto contiene caracteres Unicode."
+; EN: HelpOneLiner="checkunicode <filewildcard>"
+HelpOneLiner="checkunicode <archivos>"
+; EN: HelpDesc[0]="<filewildcard>"
+HelpDesc[0]="<archivos>"
+; EN: HelpParm[0]="The files to check for Unicode characters. Can accept wildcards such as "*" and "?"."
+HelpParm[0]="Los archivos sobre los cuales se debe llevar a cabo la verificación. Puede aceptar comodines del tipo "?" o "*"."
 
 [AudioPackageCommandlet]
 HelpCmd=audiopackage
@@ -362,14 +395,6 @@ HelpParm[0]="  "
 HelpDesc[0]="  "
 HelpParm[1]="  "
 HelpDesc[1]="  "
-
-[DumpMeshInfoCommandlet]
-HelpCmd=dumpmeshinfo
-HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Dumps information about meshes."
-HelpOneLiner="Vuelca información sobre mallas."
-; EN: HelpUsage="dumptextureinfo <pkg>"
-HelpUsage="dumptextureinfo <paquete>"
 
 [BatchMeshExportCommandlet]
 HelpCmd=batchmeshexport
@@ -420,18 +445,6 @@ HelpOneLiner="Compara páginas de fuentes."
 ; EN: HelpUsage="fontpagediff <left font> <right font>"
 HelpUsage="fontpagediff <fuente_izquierda> <fuente_derecha>"
 
-[CheckUnicodeCommandlet]
-HelpCmd=checkunicode
-HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpUsage="Checks if the contents of a text file contains Unicode characters."
-HelpUsage="Verifica si el contenido de un archivo de texto contiene caracteres Unicode."
-; EN: HelpOneLiner="checkunicode <filewildcard>"
-HelpOneLiner="checkunicode <archivos>"
-; EN: HelpDesc[0]="<filewildcard>"
-HelpDesc[0]="<archivos>"
-; EN: HelpParm[0]="The files to check for Unicode characters. Can accept wildcards such as "*" and "?"."
-HelpParm[0]="Los archivos sobre los cuales se debe llevar a cabo la verificación. Puede aceptar comodines del tipo "?" o "*"."
-
 [RipAndTearCommandlet]
 HelpCmd=ripandtear
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
@@ -455,14 +468,17 @@ HelpParm[2]="La clase de recursos que se extraerán del mapa original."
 [TextureMergerCommandlet]
 HelpCmd=texturemerger
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpUsage="Merges in textures from ../TextureMerge/<packagename>.utx folder to the target package."
-HelpUsage="Une las texturas de la carpeta ../TextureMerge/<packagename>.utx al paquete destino."
-; EN: HelpOneLiner="texturemerger <packagename>"
-HelpOneLiner="texturemerger <paquete>"
-; EN: HelpDesc[0]="<packagename>"
-HelpDesc[0]="<paquete>"
-; EN: HelpParm[0]="The package where the textures will be saved to."
-HelpParm[0]="El paquete en el cual se guardarán las texturas."
+; EN: HelpUsage="Merges new high-res textures into an existing package or adds additional height- and normalmaps. Supports compressing of .bmp textures into BC1-BC7 formats during import. Can add additional footstep, clamp, detail and macrotexture information."
+HelpUsage="Combina nuevas texturas de alta resolución en un paquete existente o agrega mapas de altura ("heightmaps") y mapas normales ("normalmaps"). Soporta texturas .bmp comprimidas con los formatos BC1-BC7 durante la importación. Puede agregar información adicional de pasos, clamp, detalles y microtexturas."
+; EN: HelpOneLiner="texturemerger [packagename]"
+HelpOneLiner="texturemerger [paquete]"
+; EN: HelpDesc[0]="[packagename]"
+HelpDesc[0]="[paquete]"
+; EN: HelpParm[0]="An optional parameter, it's the package where the textures will be saved to."
+HelpParm[0]="Un parámetro opcional, es el paquete en el cual se guardarán las texturas."
+HelpDesc[0]=" "
+; EN: HelpParm[1]="If no PackageName is specified, the TextureMerge directory is used in order to locate the names of all subfolders in searching for corresponding packages."
+HelpParm[1]="Si no se especifica el nombre del paquete, se usará el directorio TextureMerge con el fin de localizar los nombres de todas las subcarpetas en la búsqueda de paquetes correspondientes."
 
 [FontExporter]
 HelpCmd=FontExporter

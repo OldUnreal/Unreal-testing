@@ -1,0 +1,528 @@
+﻿[SVariableBase]
+; EN: MenuName="Variables"
+MenuName="Variables"
+
+[VAR_OBJECT_BASE]
+; EN: MenuName="Object ref"
+MenuName="Ref. Objecte"
+
+[VAR_OBJECTARRAY_BASE]
+; EN: MenuName="Object array"
+MenuName="Matriu d'objectes"
+
+[VAR_Vector]
+MenuName="Vector"
+; EN: Description="Vector variable."
+Description="Variable vectorial."
+
+[VAR_STRUCT_BASE]
+; EN: MenuName="Struct members"
+MenuName="Membres Struct"
+
+[LOGICBASE]
+; EN: MenuName="Logic"
+MenuName="Lògica"
+
+[ACTIONSBASE]
+; EN: MenuName="Actions"
+MenuName="Accions"
+
+[ACTORBASE]
+; EN: MenuName="Actor"
+MenuName="Actor"
+
+[ACTOR_Overlay]
+; EN: MenuName="Mesh Overlay"
+MenuName="Superposició de malla"
+; EN: Description="Adds a temporary mesh overlay to an actor."
+Description="Afegeix una superposició de malla temporal a un actor."
+
+[HUD_DrawIcon]
+; EN: MenuName="Draw Icon"
+MenuName="Icona de dibuix"
+; EN: Description="Draws an icon on the HUD."
+Description="Dibuixa una icona al Monitor Frontal."
+
+[HUDElementBase]
+; EN: MenuName="HUD"
+MenuName="Monitor Frontal"
+
+[HUD_DrawText]
+; EN: MenuName="Draw Text"
+MenuName="Dibuixar text"
+; EN: Description="Draws a message on HUD."
+Description="Dibuixa un missatge a HUD."
+
+[TEXT_ShowMessage]
+; EN: MenuName="Show Message"
+MenuName="Mostra el missatge"
+; EN: Description="Shows a client message on screen.|If no receiver is specified, everyone will receive the message."
+Description="Mostra un missatge de client a la pantalla. | Si no s'especifica cap receptor, tothom rebrà el missatge."
+
+[TEXTBASE]
+; EN: MenuName="Text Op"
+MenuName="Op. Text"
+
+[VAR_ActorList]
+; EN: MenuName="Actor List"
+MenuName="Llista d’actors"
+; EN: Description="Dynamic ActorList reference variable."
+Description="Variable de referència Dynamic ActorList."
+
+[VARIABLEBASE]
+; EN: MenuName="Variables"
+MenuName="Variables"
+
+[VAR_ObjectList]
+; EN: MenuName="Object List"
+MenuName="Llista d'objectes"
+; EN: Description="Object list reference variable.|WARNING: Don't use this to reference dynamic destroyable actors, or the game may crash!"
+Description="Variable de referència de la llista d'objectes."
+
+[LEVELSBASE]
+; EN: MenuName="Level"
+MenuName="Nivell"
+
+[VAR_Actor]
+; EN: MenuName="Actor"
+MenuName="Actor"
+; EN: Description="Dynamic actor reference variable."
+Description="Variable de referència d'actor dinàmic."
+
+[VAR_Float]
+; EN: MenuName="Float"
+MenuName="Flotant"
+; EN: Description="Floating point variable."
+Description="Variable de coma flotant."
+
+[VAR_Int]
+; EN: MenuName="Int"
+MenuName="Ent"
+; EN: Description="32-bit integer variable."
+Description="Variable sencera de 32 bits."
+
+[LEVEL_Network]
+; EN: MenuName="Network data"
+MenuName="Dades de xarxa"
+; EN: Description="Transmits data from server to client.|All inputs you set will also output on client side and fire output event client side every time you fire an input server-side.|If no receiver is specified, the networked event will be broadcast to all clients."
+Description="Transmet dades del servidor al client. | Totes les entrades que configureu també es generaran al costat del client i activaran el succés de sortida del client cada vegada que s'activi un servidor d'entrada. | Si no s'especifica cap receptor, l'esdeveniment en xarxa s'emetrà a tots els clients ."
+
+[LEVEL_RadialActors]
+; EN: MenuName="Radius Actors"
+MenuName="Actors de radi"
+; EN: Description="Grabs all actors within a point in level.|Position input can be an actor or a vector."
+Description="Agafa tots els actors dins d'un punt de nivell. | L'entrada de posició pot ser un actor o un vector."
+
+[MATH_Int]
+; EN: MenuName="Int op"
+MenuName="Op Ent"
+; EN: Description="Does a math operation with integers."
+Description="Fa una operació matemàtica amb enters."
+
+[MATHBASE]
+; EN: MenuName="Math"
+MenuName="Matemàtiques"
+
+[EVENTBASE]
+; EN: MenuName="Events"
+MenuName="Esdeveniments"
+
+[VAR_String]
+; EN: MenuName="String"
+MenuName="Línia de text"
+; EN: Description="Text line variable."
+Description="Variable de línia de text."
+
+[MOVER_MoveToKey]
+; EN: MenuName="Move to key"
+MenuName="Moure a posició"
+; EN: Description="Moves a mover to a keyframe."
+Description="Moveu un motor a un fotograma clau."
+
+[MOVERBASE]
+; EN: MenuName="Mover"
+MenuName="Moure"
+
+[PAWN_SetHealth]
+; EN: MenuName="Give Health"
+MenuName="Dóna Salut"
+; EN: Description="Gives or removes health from a pawn."
+Description="Dóna o elimina la salut d’un peó."
+
+[PAWNBASE]
+; EN: MenuName="Pawn"
+MenuName="Peó"
+
+[EVENT_Triggered]
+; EN: MenuName="Triggered"
+MenuName="Activat"
+; EN: Description="Triggered by a regular in level event.|Tag can be changed by firing Set Tag event and binding NewTag value."
+Description="Activat per un esdeveniment normal de nivell.|L'etiqueta es pot canviar activant l'esdeveniment Set Tag i vinculant el valor NewTag."
+
+[ACTOR_ChangeScale]
+; EN: MenuName="Change scale"
+MenuName="Canviar escala"
+; EN: Description="Resizes an actor with optional blend time."
+Description="Canvia la mida d’un actor amb temps de barreja opcional."
+
+[VAR_Name]
+; EN: MenuName="Name"
+MenuName="Nom"
+; EN: Description="Name variable."
+Description="Variable de nom."
+
+[ACTOR_Destroy]
+; EN: MenuName="Destroy Actor"
+MenuName="Destrueix l'actor"
+; EN: Description="Instantly destroys an actor."
+Description="Destrueix instantàniament un actor."
+
+[MATH_Float]
+; EN: MenuName="Float op"
+MenuName="Opció flotant"
+; EN: Description="Does a math operation with floating point."
+Description="Fa una operació matemàtica amb coma flotant."
+
+[VAR_Bool]
+; EN: MenuName="Boolean"
+MenuName="Booleà"
+; EN: Description="Boolean variable."
+Description="Variable booleana."
+
+[LATENT_MoveToActor]
+; EN: MenuName="AI Move to actor"
+MenuName="Moure IA a Actor"
+; EN: Description="Makes a ScriptedPawn move to a goal actor.|Output is fired when a pawn has reached or not the goal actor, with Reached output set to just finished pawn."
+Description="Fa que un ScriptedPon es mogui a un actor objectiu.|La sortida s'activa quan un peó ha arribat o no a l'actor objectiu, amb la sortida Abast establerta com a peó acabat."
+
+[LATENTBASE]
+; EN: MenuName="Latent"
+MenuName="Latent"
+
+[ACTOR_PlaySound]
+; EN: MenuName="Play Sound"
+MenuName="Reproduir so"
+; EN: Description="Plays a sound effect.|Sound source can be an actor or a vector. If actor array, it will play the sound on all actors in that array."
+Description="Reprodueix un efecte de so. | La font de so pot ser un actor o un vector. Si s’activa la matriu, reproduirà el so a tots els actors d’aquesta matriu."
+
+[VAR_Rotator]
+; EN: MenuName="Rotator"
+MenuName="Rotador"
+; EN: Description="Rotator variable."
+Description="Variable rotativa."
+
+[LEVEL_SpawnActor]
+; EN: MenuName="Spawn Actor"
+MenuName="Engendrar Actor"
+; EN: Description="Spawns a new actor.|If you input Position as actor variable, it will use that actor rotation. Otherwise you can input vector and rotation."
+Description="Crea un actor nou.|Si introduïu Posició com a variable d'actor, s'utilitzarà aquesta rotació d'actor. En cas contrari, podeu introduir vector i rotació."
+
+[LEVEL_AllPawns]
+; EN: MenuName="All Pawns"
+MenuName="Tots Els Peons"
+; EN: Description="Grabs all pawns from level."
+Description="Agafa tots els peons del nivell."
+
+[PAWN_GiveItem]
+; EN: MenuName="Give Item"
+MenuName="Dona Article"
+; EN: Description="Gives an inventory item to a player."
+Description="Dóna un article d’inventari a un jugador."
+
+[LOGIC_ArrayAdd]
+; EN: MenuName="Array Add"
+MenuName="Afegir a Matriu"
+; EN: Description="Adds an unique item to array.|Fires event Found or Not Found depending on the result."
+Description="Afegeix un element únic a la matriu.|Esdeveniment d'incendis trobat o no trobat en funció del resultat."
+
+[VAR_RandInt]
+; EN: MenuName="Random Int"
+MenuName="Int. Aleatoris"
+; EN: Description="Random integer variable."
+Description="Variable sencera aleatòria."
+
+[TEXT_AddText]
+; EN: MenuName="Append Text"
+MenuName="Afegeix text"
+; EN: Description="Adds text to the end of the current textline."
+Description="Afegeix text al final de la línia de text actual."
+
+[VAR_Object]
+; EN: MenuName="Object"
+MenuName="Objecte"
+; EN: Description="Object reference variable.|WARNING: Don't use this to reference dynamic destroyable actors, or the game may crash!"
+Description="Variable de referència d’objecte.|AVÍS: no l’utilitzeu per fer referència a actors destruïbles dinàmics, ja que el joc pot fallar."
+
+[LEVEL_PlayMusic]
+; EN: MenuName="Play Music"
+MenuName="Tocar música"
+; EN: Description="Changes currently played music.|If no player is specified, the event affects all actors."
+Description="Canvis que es reprodueixen actualment.|Si no s'especifica cap reproductor, l'esdeveniment afecta tots els actors."
+
+[VAR_RandFloat]
+; EN: MenuName="Random Float"
+MenuName="Flotador aleatori"
+; EN: Description="Random floating point variable."
+Description="Variable de coma flotant aleatòria."
+
+[LATENT_Timer]
+; EN: MenuName="Timer"
+MenuName="Temporitzador"
+; EN: Description="Waits for specific time."
+Description="Espera per un temps concret."
+
+[ACTOR_SetHidden]
+; EN: MenuName="Set Hidden"
+MenuName="Estableix Amagat"
+; EN: Description="Toggles the Hidden property for an actor."
+Description="Commuta la propietat oculta d'un actor."
+
+[VAR_LocalPlayer]
+; EN: MenuName="Local Player"
+MenuName="Jugador local"
+; EN: Description="Local player variable function."
+Description="Funció variable de jugador local."
+
+[EVENT_PawnDied]
+; EN: MenuName="Pawn Died"
+MenuName="Peó va morir"
+; EN: Description="Triggered when a pawn dies."
+Description="Desencadenat quan un peó mor."
+
+[EVENT_PawnHurt]
+; EN: MenuName="Pawn Hurt"
+MenuName="Peó ferit"
+; EN: Description="Triggered when a pawn takes damage."
+Description="Es desencadena quan un peó fa malbé."
+
+[EVENT_PawnPrevDeath]
+; EN: MenuName="Prevent Death"
+MenuName="Prevenir la mort"
+; EN: Description="Prevents a pawn from dying.|NOTE: Output link is fired, THEN it checks the Input flag. If true, it prevents the pawn from dying."
+Description="Evita que un peó es mori.|NOTA: l'enllaç de sortida s'activa, DESPRÉS comprova el senyal d'entrada. Si és cert, evita que el peó es mori."
+
+[OBJECTBASE]
+; EN: MenuName="Object"
+MenuName="Objecte"
+
+[EVENT_PlayerSpawn]
+; EN: MenuName="Player spawned"
+MenuName="El jugador va aparèixer"
+; EN: Description="Triggered when a player spawns."
+Description="S'activa quan un jugador genera."
+
+[PAWN_Kill]
+; EN: MenuName="Kill Pawn"
+MenuName="Matar Peó"
+; EN: Description="Kills instantly a pawn."
+Description="Mata a l'instant un peó."
+
+[LOGIC_ListIterator]
+; EN: MenuName="ObjList Iterator"
+MenuName="Iterador ObjList"
+; EN: Description="Iterates through an object list."
+Description="Repeteix una llista d'objectes."
+
+[LEVEL_SendEvent]
+; EN: MenuName="Trigger Event"
+MenuName="Desencadenar Esdeveniment"
+; EN: Description="Sends a regular event to all actors in level."
+Description="Envia un esdeveniment habitual a tots els actors de nivell."
+
+[LOGIC_ArrayRemove]
+; EN: MenuName="Array Remove"
+MenuName="Eliminar matriu"
+; EN: Description="Remove a single item from array and return its size.|An empty event is fired once final array entry has been removed."
+Description="Elimineu un sol element de la matriu i torneu-ne la mida. | Es produirà un esdeveniment buit un cop s'hagi eliminat l'entrada final de la matriu."
+
+[TEXT_Replace]
+; EN: MenuName="Replace Text"
+MenuName="Substitueix el text"
+; EN: Description="Replace a part of text with another text."
+Description="Substitueix una part de text per un altre text."
+
+[LOGIC_Dispatch]
+; EN: MenuName="Dispatcher"
+MenuName="Despatxador"
+; EN: Description="Split a call into multiple branches."
+Description="Dividiu una trucada en diverses sucursals."
+
+[ACTOR_TakeDamage]
+; EN: MenuName="Take Damage"
+MenuName="Prengui danys"
+; EN: Description="Make an actor take damage."
+Description="Fer que un actor es faci malbé."
+
+[ACTOR_SetPhysics]
+; EN: MenuName="Set Physics"
+MenuName="Física del conjunt"
+; EN: Description="Changes the actor's movement physics."
+Description="Canvia la física del moviment de l'actor."
+
+[ACTOR_SetCollision]
+; EN: MenuName="Set Collision"
+MenuName="Estableix la col·lisió"
+; EN: Description="Changes the actor's collision state."
+Description="Canvia l'estat de col·lisió de l'actor."
+
+[ACTOR_PlayAnim]
+; EN: MenuName="Play Anim"
+MenuName="Reprodueix Anim"
+; EN: Description="Play an animation on actors.|Note: Pawn code may override the animation!"
+Description="Reprodueix una animació en actors.|Nota: el codi de peó pot anul·lar l'animació."
+
+[LOGIC_CompareFloat]
+; EN: MenuName="Compare Float"
+MenuName="Compareu Float"
+; EN: Description="Compare 2 floating point values."
+Description="Compareu 2 valors de coma flotant."
+
+[PAWN_DeleteItem]
+; EN: MenuName="Delete Item"
+MenuName="Suprimeix l’element"
+; EN: Description="Find and delete an inventory item from a player."
+Description="Cerqueu i suprimiu un element d’inventari d’un jugador."
+
+[LOGIC_CompareInt]
+; EN: MenuName="Compare Int"
+MenuName="Compara Int"
+; EN: Description="Compare 2 integer values."
+Description="Compareu 2 valors enters."
+
+[VARIABLE_ToVector]
+; EN: MenuName="To Vector"
+MenuName="A Vector"
+; EN: Description="Constructs a vector from individual components."
+Description="Construeix un vector a partir de components individuals."
+
+[VARIABLE_ToRotator]
+; EN: MenuName="To Rotator"
+MenuName="A Rotator"
+; EN: Description="Constructs a rotator from individual components."
+Description="Construeix un rotador a partir de components individuals."
+
+[LOGIC_Gate]
+; EN: MenuName="Logic Gate"
+MenuName="Porta lògica"
+; EN: Description="A logic gate."
+Description="Una porta lògica."
+
+[VARIABLE_FromVector]
+; EN: MenuName="From Vector"
+MenuName="De Vector"
+; EN: Description="Grab each vector component."
+Description="Agafa cada component vectorial."
+
+[PAWN_FindItem]
+; EN: MenuName="Find Item"
+MenuName="Cerca l’element"
+; EN: Description="Find an inventory item from a player."
+Description="Cerqueu un article d’inventari d’un jugador."
+
+[VARIABLE_FromRotator]
+; EN: MenuName="From Rotator"
+MenuName="Des de Rotator"
+; EN: Description="Grab each rotator component."
+Description="Agafa cada component del rotador."
+
+[LOGIC_CompareObject]
+; EN: MenuName="Compare Object"
+MenuName="Compara objecte"
+; EN: Description="Compare 2 objects."
+Description="Compareu 2 objectes."
+
+[LOGIC_CompareText]
+; EN: MenuName="Compare Text"
+MenuName="Compareu el text"
+; EN: Description="Compare 2 string text lines."
+Description="Compareu dues línies de text de cadenes."
+
+[ACTOR_GetName]
+; EN: MenuName="Get Name"
+MenuName="Obteniu el nom"
+; EN: Description="Grab the actor name."
+Description="Agafa el nom de l'actor."
+
+[LOGIC_GetArraySize]
+; EN: MenuName="Get Array Size"
+MenuName="Obteniu la mida de la matriu"
+; EN: Description="Check the size of an object array."
+Description="Comproveu la mida d'una matriu d'objectes."
+
+[OBJECT_SetProperty]
+; EN: MenuName="Set Property"
+MenuName="Estableix la propietat"
+; EN: Description="Change actor property value."
+Description="Canvieu el valor de la propietat de l'actor."
+
+[OBJECT_ChangeState]
+; EN: MenuName="Change State"
+MenuName="Canvi d'estat"
+; EN: Description="Change actor script state."
+Description="Canvia l'estat de guió de l'actor."
+
+[LEVEL_AllActors]
+; EN: MenuName="All Actors"
+MenuName="Tots els actors"
+; EN: Description="Grab all actors from level."
+Description="Agafa tots els actors del nivell."
+
+[OBJECT_GetProperty]
+; EN: MenuName="Get Property"
+MenuName="Obtenir propietat"
+; EN: Description="Grab actor property value."
+Description="Agafa el valor de la propietat de l’actor."
+
+[VARIABLE_SetBool]
+; EN: MenuName="Set Bool"
+MenuName="Estableix Bool"
+; EN: Description="Set boolean value."
+Description="Estableix el valor booleà."
+
+[LEVEL_ResetLevel]
+; EN: MenuName="Reset level"
+MenuName="Restableix el nivell"
+; EN: Description="Soft-resets the level."
+Description="Restableix el nivell."
+
+[VARIABLE_SetFloat]
+; EN: MenuName="Set Float"
+MenuName="Estableix Float"
+; EN: Description="Set float value."
+Description="Estableix el valor flotant."
+
+[LOGIC_ArrayEmpty]
+; EN: MenuName="Array Empty"
+MenuName="Matriu buida"
+; EN: Description="Simply blank out an array."
+Description="Simplement buideu una matriu."
+
+[VARIABLE_SetInt]
+; EN: MenuName="Set Int"
+MenuName="Estableix Int"
+; EN: Description="Set integer value."
+Description="Estableix el valor enter."
+
+[VARIABLE_SetString]
+; EN: MenuName="Set Text"
+MenuName="Estableix el text"
+; EN: Description="Set string value."
+Description="Estableix el valor de la cadena."
+
+[EVENT_BeginPlay]
+; EN: MenuName="Begin Play"
+MenuName="Comença a jugar"
+; EN: Description="Fires an event on start of map.|Reset event is fired instead when level was soft-reset."
+Description="S'activa un esdeveniment a l'inici del mapa. | Es reinicia l'esdeveniment de reinici quan es va restablir el nivell."
+
+[LOGIC_CompareBool]
+; EN: MenuName="Compare Bool"
+MenuName="Compareu Bool"
+; EN: Description="Compare a boolean value."
+Description="Compareu un valor booleà."
+
+[LOGIC_ServerType]
+; EN: MenuName="Server Type"
+MenuName="Tipus de servidor"
+; EN: Description="Check in which environment this action is executed on."
+Description="Comproveu en quin entorn s’executa aquesta acció."

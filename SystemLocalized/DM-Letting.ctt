@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="Blood Letting"
+Title="Deixar sang"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Entrant a la sang sang"
+
+[LevelSummary]
+; EN: Title="Blood Letting"
+Title="Deixar sang"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Entrant a la sang sang"

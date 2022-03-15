@@ -5,6 +5,7 @@ Title="Intro 1"
 Title="Intro 1"
 
 [TransitionGenderEvent0]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/IntroSnd2.uax
 OutDelays[1]=7.000000
 OutDelays[2]=3.500000
 OutDelays[3]=17.000000
