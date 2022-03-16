@@ -1,9 +1,19 @@
-[LevelInfo1]
-Title=Auf der Reeperbahn nachts um halb 2...
-LevelEnterText=Boah, ich brauch nen neuen Job...
+Ôªø[LevelInfo1]
+; EN: Title="Auf der Reeperbahn nachts um halb 2..."
+Title="Auf der Reeperbahn nachts um halb 2..."
+; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
+LevelEnterText="Boah, ich brauch nen neuen Job..."
 
-[TransitionText0]
-MessageA="Le PromÈthÈe s'est ÈcrasÈ brutalement dans une vallÈe, dispersant des dÈbris pendant sa chute. Le sol Ètait jonchÈ de cadavres. J'en conclus que l'Èquipage n'a pas survÈcu ‡ l'accident. 150 personnes... Mon dieu, je hais cette planËte de malheur."
-MessageB="Le vaisseau offre une vision de cauchemarÖ la coque est transpercÈe de toute part, l'un des moteurs a fondu, et les coursives abritent des dizaines de Mercenaires."
-MessageC="Mais la fin de ma mission est procheÖ Il ne me reste plus qu'‡ trouver les donnÈes et activer l'Èmetteur ELT de la passerelle."
+[LevelSummary]
+; EN: Title="Auf der Reeperbahn nachts um halb 2..."
+Title="Auf der Reeperbahn nachts um halb 2..."
+; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
+LevelEnterText="Boah, ich brauch nen neuen Job..."
 
+[TransitionGenderEvent0]
+; Note: Make the text coincide with the equivalent in Sounds/frt/Interm5.uax.
+OutDelays[1]=29.500000
+; EN: MaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
+MaleText[0]="Le Prom√©th√©e s'est √©cras√© brutalement dans une vall√©e, dispersant des d√©bris pendant sa chute. Le sol √©tait jonch√© de cadavres. J'en conclus que l'√©quipage n'a pas surv√©cu √† l'accident. 150 personnes... Mon dieu, je hais cette plan√®te de malheur. Le vaisseau offre une vision de cauchemar... La coque est transperc√©e de toute part, l'un des moteurs a fondu et les coursives abritent des dizaines de Mercenaires. Mais la fin de ma mission est proche... Il ne me reste plus qu'√† trouver les donn√©es et activer l'√©metteur ELT de la passerelle."
+; EN: FemaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
+FemaleText[0]="Le Prom√©th√©e s'est √©cras√© brutalement dans une vall√©e, dispersant des d√©bris pendant sa chute. Le sol √©tait jonch√© de cadavres. J'en conclus que l'√©quipage n'a pas surv√©cu √† l'accident. 150 personnes... Mon dieu, je hais cette plan√®te de malheur. Le vaisseau offre une vision de cauchemar... La coque est transperc√©e de toute part, l'un des moteurs a fondu et les coursives abritent des dizaines de Mercenaires. Mais la fin de ma mission est proche... Il ne me reste plus qu'√† trouver les donn√©es et activer l'√©metteur ELT de la passerelle."

@@ -20,19 +20,19 @@ Message="COBERTA 1 DE L'ISV-KRAN:Entrada a Diari: Capità Mikail Leatham. Els at
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN: SCIENCE RESEARCH LAB SPECIMEN MONITOR: I have found these amorphous amoeba to be highly acidic. It's incredible the architecture of their basic genetic structure. Tatiana Zimna - Chief Medical Officer"
-Message="ISV-KRAN: MONITOR D'ESPÈCIMENS DEL LABORATORI DE RECERCA CIENTÍFICA: He trobat que aquestes amebes amorfes són altament acídiques. L'arquitectura de la seva estructura genètica bàsica és increïble. Tatiana Zimna -Oficial Mèdica en Cap"
+Message="ISV-KRAN: MONITOR D'ESPÈCIMENS DEL LABORATORI DE RECERCA CIENTÍFICA: He trobat que aquestes amebes amorfes són altament acídiques. L'arquitectura de la seva estructura genètica bàsica és increïble. Tatiana Zimna - Oficial Mèdica en Cap"
 
 [TranslatorEvent1]
 ; EN: Message="WARNING: LAB DOORS AND SPECIMEN HOLDING FIELDS ARE MALFUNCTIONING - 30 SECOND RELEASE DELAY WILL ENGAGE AFTER ACTIVATION"
-Message="ALERTA:PORTES DE LABORATORI I CAMPS DE CONTENCIÓ D'ESPÈCIMENS ESTAN AVARIATS. RETARD D'ALLIBERAMENT DE 30 SEGONS ES POSARÀ EN MARXA DESPRÉS D'ACTIVACIÓ"
+Message="ALERTA: PORTES DE LABORATORI I CAMPS DE CONTENCIÓ D'ESPÈCIMENS ESTAN AVARIATS - RETARD D'ALLIBERAMENT DE 30 SEGONS ES POSARÀ EN MARXA DESPRÉS D'ACTIVACIÓ"
 
 [TranslatorEvent7]
 ; EN: Message="ISV-KRAN DECK 1: ALERT: ENGINE COOLANT OVERFLOW: MAIN ENGINE RUPTURE: EVACUATE SHIP IMMEDIATELY"
-Message="COBERTA 1 DE L'ISV-KRAN: PERILL, VESSAMENT DE REFRIGERANT DE MOTOR:RUPTURA DEL MOTOR PRINCIPAL:EVACUAR NAU IMMEDIATAMENT"
+Message="COBERTA 1 DE L'ISV-KRAN: PERILL, VESSAMENT DE REFRIGERANT DE MOTOR: RUPTURA DEL MOTOR PRINCIPAL: EVACUAR NAU IMMEDIATAMENT"
 
 [TranslatorEvent6]
 ; EN: Message="ISV-KRAN DECK 1: Log Entry: Captain Mikail Leatham. There's NO Possible way to kill them ALL. There's just too many Skaarj and we don't have enough ammo."
-Message="COBERTA 1 DE L'ISV-KRAN:Entrada a Diari: Capità Mikail Leatham. NO HI HA manera possible de matar-los a TOTS-Hi ha massa skaarj i no tenim prou munició."
+Message="COBERTA 1 DE L'ISV-KRAN:Entrada a Diari: Capità Mikail Leatham. NO HI HA manera possible de matar-los a TOTS-Hi ha massa Skaarj i no tenim prou munició."
 
 [TranslatorEvent9]
 ; EN: Message="BRIDGE ACCESS DENIED: SECURITY FORCEFIELD ACTIVE: MAIN OVERIDE LOCATED IN OBSERVATION LOUNGE"

@@ -1,15 +1,27 @@
-[LevelInfo2]
-Title=VallÈe de l'aiguille
+Ôªø[LevelInfo2]
+; EN: Title="Spire Valley"
+Title="Vall√©e de l'aiguille"
+; EN: LevelEntryText="Entering the Spire Valley"
+LevelEntryText="Arriv√©e √† vall√©e de l'aiguille"
+
+[LevelSummary]
+; EN: Title="Spire Valley"
+Title="Vall√©e de l'aiguille"
+; EN: LevelEntryText="Entering the Spire Valley"
+LevelEntryText="Arriv√©e √† vall√©e de l'aiguille"
 
 [TranslatorEvent7]
-Message=Territoire de Nagomi
-
-[TranslatorEvent6]
-Message=Territoire de Nagomi
-
-[TranslatorEvent4]
-Message=JOURNAL : J. Montanus : Ovrevik et moi avons rÈussi ‡ gravir cette aiguille vertigineuse sans trop de difficultÈ. Nous supposons que quelqu'un nous a ouvert la voie. Peut-Ítre celui qui a rÈussi ‡ s'enfuir de cette planËte maudite... 
+; EN: Message="Land of Nagomi"
+Message="Territoire de Nagomi"
 
 [TranslatorEvent3]
-Message=JOURNAL : R. Ovrevik : Montanus et moi sommes au sommet de l'aiguille. Nous avons repÈrÈ une sorte de vaisseau extra-terrestre qui s'ÈlËve jusque dans les nuages. Le temps devient orageux, mais nous allons essayer de le piloter.
+; EN: Message="LOG: R. Ovrevik: Montanus and I are at the top of the spire. We've located an alien shuttle of some sort that rises straight up into the clouds. It's getting rather stormy, but we're going to attempt to ride it."
+Message="JOURNAL: R. Ovrevik: Montanus et moi sommes au sommet de l'aiguille. Nous avons rep√©r√© une sorte de vaisseau extra-terrestre qui s'√©l√®ve jusque dans les nuages. Le temps devient orageux, mais nous allons essayer de le piloter."
 
+[TranslatorEvent4]
+; EN: Message="LOG: J. Montanus: Ovrevik and I managed to ascend the large towering rock fairly easily. We suspect someone may have cleared the way. Maybe he's the one that made it off this forsaken planet."
+Message="JOURNAL: J. Montanus: Ovrevik et moi avons r√©ussi √† gravir cette aiguille vertigineuse sans trop de difficult√©. Nous supposons que quelqu'un nous a ouvert la voie. Peut-√™tre celui qui a r√©ussi √† s'enfuir de cette plan√®te maudite..."
+
+[TranslatorEvent6]
+; EN: Message="Land of Nagomi"
+Message="Territoire de Nagomi"

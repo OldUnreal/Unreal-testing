@@ -19,10 +19,6 @@ PingingText="Ping dei server"
 ; EN: CompleteText="Complete"
 CompleteText="Completo"
 
-[UBrowserMainWindow]
-; EN: WindowTitleString="Server Browser"
-WindowTitleString="Lista Server"
-
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
 ResolveFailedError="Impossibile raggiungere il server primario: "
@@ -70,14 +66,14 @@ GameModeText="Modalità di Partita"
 GameTypeText="Tipo di Partita"
 ; EN: GameVersionText="Game Version"
 GameVersionText="Versione Gioco"
+; EN: GameSubVersionText="Game SubVersion"
+GameSubVersionText="Sottoversione Gioco"
 ; EN: WorldLogText="ngStats World Stat-Logging"
 WorldLogText="Statistiche mondiali ngStats"
 ; EN: TrueString="Enabled"
 TrueString="Attivati"
 ; EN: FalseString="Disabled"
 FalseString="Disttivati"
-; EN: GameSubVersionText="Game SubVersion"
-GameSubVersionText="Sottoversione Gioco"
 ; EN: MapFileString="Map Filename"
 MapFileString="Nome File Mappa"
 ; EN: DLLString="C++ Library"
@@ -115,9 +111,13 @@ VersionName="Versione"
 ; EN: RefreshName="&Refresh Info"
 RefreshName="&Aggiorna Info"
 ; EN: AttachName="&Attach"
-AttachName="&Allega"
+AttachName="&Allega la Finestra"
 ; EN: CloseName="&Close"
-CloseName="&Chiudi"
+CloseName="&Chiudi la Finestra"
+
+[UBrowserMainWindow]
+; EN: WindowTitleString="Unreal Server Browser"
+WindowTitleString="Lista Server Unreal"
 
 [UBrowserRightClickMenu]
 ; EN: RefreshName="&Refresh All Servers"
@@ -159,6 +159,16 @@ SkinText="Pelle"
 ; EN: IDText="ID"
 IDText="ID"
 
+[UBrowserLibPageWindow]
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLTitleStr="Impossibile connetersi: libreria di collegamento dinamico mancante %ls."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+DLLVerTitleStr="Impossibile connettersi: version della libreria di collegamento dinamico non corretta %ls."
+; EN: InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[0]="La connessione a questo server necessita di una libreria C++ aggiuntiva %ls."
+; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
+InfoText[1]="Per ulteriori informazioni visualizza le informazioni esterne dal sito sottostante (hosting da %ls):"
+
 [UBrowserConsole]
 ; EN: ClassCaption="Unreal Browser Console"
 ClassCaption="Console del Browser Unreal"
@@ -172,16 +182,6 @@ OpenHelp="Inserisci un URL standard, o selezionane una dalla cronologia. Premi I
 [UBrowserServerWebWin]
 ; EN: WindowTitle="Unreal Web Explorer"
 WindowTitle="Explorer Web Unreal"
-
-[UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLTitleStr="Impossibile connetersi: libreria di collegamento dinamico mancante "%ls"."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-DLLVerTitleStr="Impossibile connettersi: version della libreria di collegamento dinamico non corretta "%ls"."
-; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[0]="La connessione a questo server necessita di una libreria C++ aggiuntiva "%ls"."
-; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
-InfoText[1]="Per ulteriori informazioni visualizza le informazioni esterne dal sito sottostante (hosting da %ls):"
 
 [UBrowserServerWebCW]
 ; EN: RefreshString="Refresh page"

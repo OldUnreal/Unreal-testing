@@ -1,27 +1,43 @@
-[LevelInfo2]
-Title=UMS PromÈthÈe
+Ôªø[LevelInfo2]
+; EN: Title="UMS Prometheus"
+Title="UMS Prom√©th√©e"
+; EN: LevelEntryText="Entering the UMS Prometheus"
+LevelEntryText="Arriv√©e √† UMS Prom√©th√©e"
+
+[LevelSummary]
+; EN: Title="UMS Prometheus"
+Title="UMS Prom√©th√©e"
+; EN: LevelEntryText="Entering the UMS Prometheus"
+LevelEntryText="Arriv√©e √† UMS Prom√©th√©e"
 
 [TranslatorEvent4]
-Message=UMS PromÈthÈe - Circuits d'alimentation : Attention : Surcharge dÈtectÈe dans le rÈseau 2
-
-[TranslatorEvent3]
-Message=UMS PromÈthÈe - Circuits d'alimentation : Attention : Surcharge dÈtectÈe dans le rÈseau 1
+; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 2"
+Message="UMS Prom√©th√©e - Circuits d'Alimentation: Attention: Surcharge d√©tect√©e dans le R√©seau 2"
 
 [TranslatorEvent11]
-Message=Journal de Oliver F. Russel, Assistant scientifique : Je sais qu'il y a ‡ nouveau quelque chose dans ces rÈservoirs d'eau. Peter a aperÁu une sorte de forme gluante dans les systËmes de contrÙle des canalisations. Je suis encore bon pour passer une nuit ‡ analyser l'eau. Bon dieu, je dÈteste cette vermine de l'espace...
+; EN: Message="Log Oliver F. Russel, Scientific Assistant: I know that we got something in the water tanks again. Peter saw some kind of slimeball through the pipe controls again. Looks like another long night of water analysis. God, I hate space vermin..."
+Message="Journal de Oliver F. Russel, Assistant Scientifique: Je sais qu'il y a √† nouveau quelque chose dans ces r√©servoirs d'eau. Peter a aper√ßu une sorte de forme gluante dans les syst√®mes de contr√¥le des canalisations. Je suis encore bon pour passer une nuit √† analyser l'eau. Bon dieu, je d√©teste cette vermine de l'espace..."
 
 [TranslatorEvent10]
-Message=Journal de Andrew G. Jackson, MÈdecin-Major : Cette mission commence ‡ ressembler ‡ une promenade de santÈ. Aucun incident majeur ‡ signaler depuis bientÙt 2 semaines. Et je suis payÈ pour Áa ! Les choses ne pourraient aller mieux.
+; EN: Message="Log Andrew G. Jackson, Medical Officer: This has been a smooth ride, no major incidents for almost 2 weeks. And I'm still getting full payment. I think work doesn't get much better than this."
+Message="Journal de Andrew G. Jackson, M√©decin-Major: Cette mission commence √† ressembler √† une promenade de sant√©. Aucun incident majeur √† signaler depuis bient√¥t 2 semaines. Et je suis pay√© pour √ßa! Les choses ne pourraient aller mieux."
 
 [TranslatorEvent8]
-Message=UMS PromÈthÈe - Terminal d'information : --- RÈseau d'information hors-ligne ---
+; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
+Message="UMS Prom√©th√©e - Terminal d'Information: --- R√©seau d'information hors-ligne ---"
 
-[TranslatorEvent6]
-Message=UMS PromÈthÈe - Etat du moteur 1 : Attention : Niveau de puissance proche de la limite | Attention : Niveau de pression proche de la limite
-
-[TranslatorEvent2]
-Message=UMS PromÈthÈe - Etat du moteur 1 : Attention : Niveau de puissance proche de la limite | Critique : Niveau de pression au-del‡ de la limite !
+[TranslatorEvent3]
+; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 1"
+Message="UMS Prom√©th√©e - Circuits d'Alimentation: Attention: Surcharge d√©tect√©e dans le R√©seau 1"
 
 [TranslatorEvent5]
-Message=UMS PromÈthÈe - Circuits d'alimentation : Etat : RÈseau 3 normal
+; EN: Message="UMS Prometheus - Power Circuits: Status: Network 3 normal"
+Message="UMS Prom√©th√©e - Circuits d'Alimentation: Etat: R√©seau 3 normal"
 
+[TranslatorEvent2]
+; EN: Message="UMS Prometheus - Engine 1 Status: Warning: Power level approaching limit | Critical: Pressure level exceeded limit! "
+Message="UMS Prom√©th√©e - Etat du Moteur 1: Attention: Niveau de puissance proche de la limite | Critique: Niveau de pression au-del√† de la limite! "
+
+[TranslatorEvent6]
+; EN: Message="UMS Prometheus - Engine 1 Status: Warning: Power level approaching limit | Warning: Pressure level approaching limit"
+Message="UMS Prom√©th√©e - Etat du Moteur 1: Attention: Niveau de puissance proche de la limite | Attention: Niveau de pression proche de la limite"

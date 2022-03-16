@@ -16,7 +16,7 @@ Message="La meva càrrega mai no acaba. Més esbirros han estat abatuts pels Dé
 
 [TranslatorEvent1]
 ; EN: Message="Log. P. v. Heel: I was attacked by a flying beast, it uses it's tail as a weapon! I was able to kill it, but not without taking a beating. I discovered the orange berries have a healing effect on me. I feel strong enough to proceed."
-Message="Diari. P.v.Heel : He estat atacat per una fera voladora, fa servir la seva cua com una arma! He estat capaç de matar-la , però no sense rebre jo. He descobert que les baies taronges tenen un efecte curatiu sobre mi. Em sento prou fort per continuar."
+Message="Diari. P. v. Heel: He estat atacat per una fera voladora, fa servir la seva cua com una arma! He estat capaç de matar-la, però no sense rebre jo. He descobert que les baies taronges tenen un efecte curatiu sobre mi. Em sento prou fort per continuar."
 ; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
 Hint="Lluitant contra els verros, assegura't que tens prou lloc per esquivar a esquerra o dreta per evitar els míssils que et disparin."
 
@@ -34,17 +34,17 @@ Hint="Lluitant contra els verros, assegura't que tens prou lloc per esquivar a e
 
 [TranslatorEvent10]
 ; EN: Message="Log: N. Vos: Contact with members of ISV-KRAN! (Presumed lost in this area 3 months ago) They have seen a Skaarj vessel in operation. We may need to gain control of it to escape this system."
-Message="Diari: N. Vos: Contacta amb membres de l'ISVKran ! ( presumptament perdut en aquesta àrea fa 3 mesos) Han vist una nau skaarj operant. Potser hauriem d'aconseguir control d'ella per escapar aquest sistema."
+Message="Diari: N. Vos: Contacta amb membres de l'ISV-KRAN! (Presumptament perdut en aquesta àrea fa 3 mesos) Han vist una nau Skaarj operant. Potser hauriem d'aconseguir control d'ella per escapar aquest sistema."
 ; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"
 Hint="Assegura't d'agafar l'Automag a prop de la casa just a fora del Vortex Rikers. Pren-te un bany refrescant ja que hi ets!"
 
 [TranslatorEvent14]
 ; EN: Message="Log: Guard M. v. Wely: I should have stayed with the others, I think my leg is broken in several places. My brother went looking for help 8 hours ago."
-Message="Diari: Guàrdia M. v Wely: Hauria d'haver-me quedat amb la resta, crec que la meva cama està trencada en uns quants llocs. El meu germà ha anat a buscar ajut fa 8 hores."
+Message="Diari: Guàrdia M. v. Wely: Hauria d'haver-me quedat amb la resta, crec que la meva cama està trencada en uns quants llocs. El meu germà ha anat a buscar ajut fa 8 hores."
 
 [TranslatorEvent18]
 ; EN: Message="Log: Guard B. v. Wely: I can't get past the "brutes" to go back and help my brother. My ammo is almost out. There are "brutes" patrolling around at all times."
-Message="Diari: Guàrdia B. v.Wely: No puc passar pels 'verros' per tornar i ajudar el meu germà. Gairebé se m'ha acabat la munició. Hi ha 'verros' patrullant pel voltant a totes hores."
+Message="Diari: Guàrdia B. v. Wely: No puc passar pels "verros" per tornar i ajudar el meu germà. Gairebé se m'ha acabat la munició. Hi ha "verros" patrullant pel voltant a totes hores."
 ; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
 Hint="Lluitant contra els verros, assegura't que tens prou lloc per esquivar a esquerra o dreta per evitar els míssils que et disparin."
 

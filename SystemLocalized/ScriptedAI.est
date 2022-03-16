@@ -1,358 +1,528 @@
 ﻿[SVariableBase]
+; EN: MenuName="Variables"
 MenuName="Variables"
 
 [VAR_OBJECT_BASE]
+; EN: MenuName="Object ref"
 MenuName="Objeto de referencia"
 
 [VAR_OBJECTARRAY_BASE]
+; EN: MenuName="Object array"
 MenuName="Arreglo de objetos"
 
 [VAR_Vector]
+; EN: MenuName="Vector"
 MenuName="Vector"
-Description="Vector variable"
+; EN: Description="Vector variable."
+Description="Variable vectorial."
 
 [VAR_STRUCT_BASE]
+; EN: MenuName="Struct members"
 MenuName="Miembros de estructura"
 
 [LOGICBASE]
+; EN: MenuName="Logic"
 MenuName="Lógica"
 
 [ACTIONSBASE]
+; EN: MenuName="Actions"
 MenuName="Acciones"
 
 [ACTORBASE]
+; EN: MenuName="Actor"
 MenuName="Actor"
 
 [ACTOR_Overlay]
+; EN: MenuName="Mesh Overlay"
 MenuName="Superposición de Mallas"
-Description="Agrega una superposición de malla a un actor"
+; EN: Description="Adds a temporary mesh overlay to an actor."
+Description="Agrega una superposición de malla temporal a un actor."
 
 [HUD_DrawIcon]
-MenuName="Dibujar Icono"
+; EN: MenuName="Draw Icon"
+MenuName="Dibujar icono"
+; EN: Description="Draws an icon on the HUD."
 Description="Dibuja un icono en el monitor frontal (HUD)."
 
 [HUDElementBase]
 MenuName="Mon. Frontal (HUD)"
 
 [HUD_DrawText]
+; EN: MenuName="Draw Text"
 MenuName="Dibujar Texto"
+; EN: Description="Draws a message on HUD."
 Description="Dibuja un mensaje en el monitor frontal (HUD)."
 
 [TEXT_ShowMessage]
+; EN: MenuName="Show Message"
 MenuName="Mostrar Mensaje"
+; EN: Description="Shows a client message on screen.|If no receiver is specified, everyone will receive the message."
 Description="Muestra un mensaje a un cliente en pantalla.|Si no se especifica el receptor, todos recibirán el mensaje."
 
 [TEXTBASE]
+; EN: MenuName="Text Op"
 MenuName="Operación de Texto"
 
 [VAR_ActorList]
+; EN: MenuName="Actor List"
 MenuName="Lista de Actores"
-Description="Variable de referencia dinámica de lista de actores"
+; EN: Description="Dynamic ActorList reference variable."
+Description="Variable dinámica de referencia de lista de actores"
 
 [VARIABLEBASE]
+; EN: MenuName="Variables"
 MenuName="Variables"
 
 [VAR_ObjectList]
+; EN: MenuName="Object List"
 MenuName="Lista de Objetos"
-Description="Variable de referencia de lista de objetos|¡ADVERTENCIA! ¡No utilizar para referenciar actores dinámicos destruíbles o el juego podría fallar!"
+; EN: Description="Object list reference variable.|WARNING: Don't use this to reference dynamic destroyable actors, or the game may crash!"
+Description="Variable de referencia de lista de objetos|¡ADVERTENCIA: No utilizar para referenciar actores dinámicos destructibles o el juego podría fallar!"
 
 [LEVELSBASE]
+; EN: MenuName="Level"
 MenuName="Nivel"
 
 [VAR_Actor]
+; EN: MenuName="Actor"
 MenuName="Actor"
-Description="Variable de referencia dinámica de actor"
+; EN: Description="Dynamic actor reference variable."
+Description="Variable dinámica de referencia de actor."
 
 [VAR_Float]
+; EN: MenuName="Float"
 MenuName="Flotante"
-Description="Variable de punto flotante"
+; EN: Description="Floating point variable."
+Description="Variable de punto flotante."
 
 [VAR_Int]
+; EN: MenuName="Int"
 MenuName="Entero"
-Description="Variable entera de 32 bits"
+; EN: Description="32-bit integer variable."
+Description="Variable entera de 32 bits."
 
 [LEVEL_Network]
+; EN: MenuName="Network data"
 MenuName="Datos de Red"
+; EN: Description="Transmits data from server to client.|All inputs you set will also output on client side and fire output event client side every time you fire an input server-side.|If no receiver is specified, the networked event will be broadcast to all clients."
 Description="Transmite datos de un servidor al cliente.|Todas las entradas que configures serán mostradas al cliente y activarán las salidas de eventos del cliente cada vez que dispares las entradas del lado del servidor.|Si no se especifica el receptor, el evento de red será transmitido a todos los clientes."
 
 [LEVEL_RadialActors]
-MenuName="Actores Radiales"
+; EN: MenuName="Radius Actors"
+MenuName="Actores en Radio"
+; EN: Description="Grabs all actors within a point in level.|Position input can be an actor or a vector."
 Description="Toma a todos los actores dentro de un área radial en el nivel.|La posición de entrada puede ser un actor o vector."
 
 [MATH_Int]
 MenuName="Operación Entera"
-Description="Hace una operación matemática con enteros"
+; EN: Description="Does a math operation with integers."
+Description="Hace una operación matemática con números enteros."
 
 [MATHBASE]
-MenuName="Matemática"
+; EN: MenuName="Math"
+MenuName="Matemáticas"
 
 [EVENTBASE]
+; EN: MenuName="Events"
 MenuName="Eventos"
 
 [VAR_String]
+; EN: MenuName="String"
 MenuName="Cadena"
-Description="Variable de línea de texto"
+; EN: Description="Text line variable."
+Description="Variable de línea de texto."
 
 [MOVER_MoveToKey]
-MenuName="Mover a clave"
-Description="Mueve un objeto móvil a un momento clave."
+; EN: MenuName="Move to key"
+MenuName="Mover a Clave"
+; EN: Description="Moves a mover to a keyframe."
+Description="Mueve un objeto móvil a un punto clave."
 
 [MOVERBASE]
+; EN: MenuName="Mover"
 MenuName="Objeto Móvil"
 
 [PAWN_SetHealth]
+; EN: MenuName="Give Health"
 MenuName="Dar Salud"
-Description="Da o quita salud de un peón."
+; EN: Description="Gives or removes health from a pawn."
+Description="Da o quita salud a un peón."
 
 [PAWNBASE]
+; EN: MenuName="Pawn"
 MenuName="Peón"
 
 [EVENT_Triggered]
+; EN: MenuName="Triggered"
 MenuName="Activado"
+; EN: Description="Triggered by a regular in level event.|Tag can be changed by firing Set Tag event and binding NewTag value."
 Description="Activado por un regular en un evento de nivel.|La etiqueta puede ser cambiada con el evento Especificar Etiqueta y al vincular un valor de etiqueta nueva."
 
 [ACTOR_ChangeScale]
+; EN: MenuName="Change scale"
 MenuName="Cambiar Escala"
+; EN: Description="Resizes an actor with optional blend time."
 Description="Cambia el tamaño de un actor. El tiempo de mezcla es opcional."
 
 [VAR_Name]
+; EN: MenuName="Name"
 MenuName="Nombre"
+; EN: Description="Name variable."
 Description="Nombre de la variable."
 
 [ACTOR_Destroy]
+; EN: MenuName="Destroy Actor"
 MenuName="Destruir Actor"
+; EN: Description="Instantly destroys an actor."
 Description="Destruye instantáneamente un actor."
 
 [MATH_Float]
+; EN: MenuName="Float op"
 MenuName="Operación Flotante"
+; EN: Description="Does a math operation with floating point."
 Description="Hace una operación matemática en punto flotante."
 
 [VAR_Bool]
+; EN: MenuName="Boolean"
 MenuName="Booleano"
+; EN: Description="Boolean variable."
 Description="Variable booleana (Verdadero/Falso)."
 
 [LATENT_MoveToActor]
+; EN: MenuName="AI Move to actor"
 MenuName="IA: Mover Hacia Actor"
+; EN: Description="Makes a ScriptedPawn move to a goal actor.|Output is fired when a pawn has reached or not the goal actor, with Reached output set to just finished pawn."
 Description="Hace que un Peón Guionado (ScriptedPawn) se mueva hacia un actor objetivo.|La salida se activa cuando un peón haya llegado o no a su objetivo, con la salida de "Alcanzado" configurada una vez que el peón llegue."
 
 [LATENTBASE]
+; EN: MenuName="Latent"
 MenuName="Latente"
 
 [ACTOR_PlaySound]
+; EN: MenuName="Play Sound"
 MenuName="Reproducir Sonido"
+; EN: Description="Plays a sound effect.|Sound source can be an actor or a vector. If actor array, it will play the sound on all actors in that array."
 Description="Reproduce un efecto de sonido.|La fuente de sonido puede ser un actor o un vector. Si es un arreglo de actores, reproducirá el sonido en todos los actores de ese arreglo."
 
 [VAR_Rotator]
+; EN: MenuName="Rotator"
 MenuName="Rotador"
-Description="Variable de rotación"
+; EN: Description="Rotator variable."
+Description="Variable de rotación."
 
 [LEVEL_SpawnActor]
+; EN: MenuName="Spawn Actor"
 MenuName="Engendrar Actor"
+; EN: Description="Spawns a new actor.|If you input Position as actor variable, it will use that actor rotation. Otherwise you can input vector and rotation."
 Description="Engendra un nuevo actor.|Si a la variable de actor se le da la entrada de Posición, utilizará esa rotación de actor. De otro modo, se podrá especificar vector y rotación."
 
 [LEVEL_AllPawns]
+; EN: MenuName="All Pawns"
 MenuName="Todos los Peones"
+; EN: Description="Grabs all pawns from level."
 Description="Toma a todos los peones del nivel."
 
 [PAWN_GiveItem]
+; EN: MenuName="Give Item"
 MenuName="Dar Item"
+; EN: Description="Gives an inventory item to a player."
 Description="Le da un objeto de inventario a un jugador."
 
 [LOGIC_ArrayAdd]
+; EN: MenuName="Array Add"
 MenuName="Agregar a Arreglo"
+; EN: Description="Adds an unique item to array.|Fires event Found or Not Found depending on the result."
 Description="Agrega un item singular a un arreglo.|Activa el evento Encontrado o No Encontrado dependiendo del resultado."
 
 [VAR_RandInt]
+; EN: MenuName="Random Int"
 MenuName="Entero Aleatorio"
-Description="Variable entera aleatoria"
+; EN: Description="Random integer variable."
+Description="Variable entera aleatoria."
 
 [TEXT_AddText]
+; EN: MenuName="Append Text"
 MenuName="Agregar Texto"
+; EN: Description="Adds text to the end of the current textline."
 Description="Agrega texto al final de la línea de texto actual."
 
 [VAR_Object]
+; EN: MenuName="Object"
 MenuName="Objeto"
-Description="Variable de referencia de objeto.|¡ADVERTENCIA! ¡No utilizar para referenciar actores dinámicos destruíbles o el juego podría fallar!"
+; EN: Description="Object reference variable.|WARNING: Don't use this to reference dynamic destroyable actors, or the game may crash!"
+Description="Variable de referencia de objeto.|¡ADVERTENCIA: No utilizar para referenciar actores dinámicos destruíbles o el juego podría fallar!"
 
 [LEVEL_PlayMusic]
+; EN: MenuName="Play Music"
 MenuName="Reproducir Música"
+; EN: Description="Changes currently played music.|If no player is specified, the event affects all actors."
 Description="Cambia la música en reproducción.|Si no se especifica el jugador, la música será cambiada para todos."
 
 [VAR_RandFloat]
+; EN: MenuName="Random Float"
 MenuName="Flotante Aleatorio"
+; EN: Description="Random floating point variable."
 Description="Variable de punto flotante aleatoria."
 
 [LATENT_Timer]
+; EN: MenuName="Timer"
 MenuName="Temporizador"
-Description="Espera a un tiempo específico."
+; EN: Description="Waits for specific time."
+Description="Espera un tiempo específico."
 
 [ACTOR_SetHidden]
-MenuName="Especificar Oculto"
-Description="Especifica si un actor debe permanecer oculto."
+; EN: MenuName="Set Hidden"
+MenuName="Establecer Oculto"
+; EN: Description="Toggles the Hidden property for an actor."
+Description="Alterna el atributo de Oculto para un actor."
 
 [VAR_LocalPlayer]
+; EN: MenuName="Local Player"
 MenuName="Jugador Local"
-Description="Función de variable de jugador local"
+; EN: Description="Local player variable function."
+Description="Función de variable de jugador local."
 
 [EVENT_PawnDied]
+; EN: MenuName="Pawn Died"
 MenuName="Peón Muerto"
-Description="Se activa cuando un peón muere."
+; EN: Description="Triggered when a pawn dies."
+Description="Se activa cuando muere un peón."
 
 [EVENT_PawnHurt]
+; EN: MenuName="Pawn Hurt"
 MenuName="Peón Herido"
+; EN: Description="Triggered when a pawn takes damage."
 Description="Se activa cuando un peón recibe daño."
 
 [EVENT_PawnPrevDeath]
+; EN: MenuName="Prevent Death"
 MenuName="Evitar Muerte"
-Description="Evita que un peón muera.|NOTA: El vínculo de salida es activado LUEGO de verificar si la bandera de Entrada es verdadera, en cuyo caso se evita la muerte del peón."
+; EN: Description="Prevents a pawn from dying.|NOTE: Output link is fired, THEN it checks the Input flag. If true, it prevents the pawn from dying."
+Description="Evita que un peón muera.|NOTA: El vínculo de salida se activa LUEGO de verificar si el atributo de Entrada es verdadero, en cuyo caso se evita la muerte del peón."
 
 [OBJECTBASE]
+; EN: MenuName="Object"
 MenuName="Objeto"
 
 [EVENT_PlayerSpawn]
+; EN: MenuName="Player spawned"
 MenuName="Jugador Engendrado"
-Description="Activado cuando se engendra un jugador."
+; EN: Description="Triggered when a player spawns."
+Description="Se activa cuando aparece un jugador."
 
 [PAWN_Kill]
+; EN: MenuName="Kill Pawn"
 MenuName="Matar Peón"
-Description="Mata instantáneamente a un peón."
+; EN: Description="Kills instantly a pawn."
+Description="Mata instantáneamente un peón."
 
 [LOGIC_ListIterator]
-MenuName="Iterador de lista de objetos"
+; EN: MenuName="ObjList Iterator"
+MenuName="Iterador de Lista de Objetos"
+; EN: Description="Iterates through an object list."
 Description="Itera a través de una lista de objetos."
 
 [LEVEL_SendEvent]
+; EN: MenuName="Trigger Event"
 MenuName="Evento de Activación"
+; EN: Description="Sends a regular event to all actors in level."
 Description="Envía un evento regular a todos los actores del nivel."
 
 [LOGIC_ArrayRemove]
+; EN: MenuName="Array Remove"
 MenuName="Eliminar de Arreglo"
-Description="Elimina un item de un arreglo y devuelve su tamaño.|Se activa un evento vacío luego de la remoción del elemento final del arreglo."
+; EN: Description="Remove a single item from array and return its size.|An empty event is fired once final array entry has been removed."
+Description="Elimina un solo elemento de la matriz y devuelve su tamaño. | Se activa un evento vacío una vez que se ha eliminado la entrada final de la matriz."
 
 [TEXT_Replace]
+; EN: MenuName="Replace Text"
 MenuName="Reemplazar Texto"
+; EN: Description="Replace a part of text with another text."
 Description="Reemplaza una parte del texto con otro texto."
 
 [LOGIC_Dispatch]
+; EN: MenuName="Dispatcher"
 MenuName="Repartidor"
+; EN: Description="Split a call into multiple branches."
 Description="Divide una llamada en múltiples ramas."
 
 [ACTOR_TakeDamage]
+; EN: MenuName="Take Damage"
 MenuName="Recibir Daño"
+; EN: Description="Make an actor take damage."
 Description="Hace que un actor reciba daño."
 
 [ACTOR_SetPhysics]
-MenuName="Especificar Física"
+; EN: MenuName="Set Physics"
+MenuName="Establecer Física"
+; EN: Description="Changes the actor's movement physics."
 Description="Cambia la física de movimiento de un actor."
 
 [ACTOR_SetCollision]
-MenuName="Especificar Colisión"
+; EN: MenuName="Set Collision"
+MenuName="Establecer colisión"
+; EN: Description="Changes the actor's collision state."
 Description="Cambia el estado de colisión de un actor."
 
 [ACTOR_PlayAnim]
-MenuName="Reproducir Animación"
-Description="Reproduce una animación en los actores.|NOTA: ¡El código de peón puede sobreponerse a la animación!"
+; EN: MenuName="Play Anim"
+MenuName="Reprod. Animación"
+; EN: Description="Play an animation on actors.|Note: Pawn code may override the animation!"
+Description="Reproducir una animación en los actores.|Nota: ¡El código de peón puede anular la animación!"
 
 [LOGIC_CompareFloat]
+; EN: MenuName="Compare Float"
 MenuName="Comparar Flotante"
+; EN: Description="Compare 2 floating point values."
 Description="Compara dos números de punto flotante."
 
 [PAWN_DeleteItem]
+; EN: MenuName="Delete Item"
 MenuName="Eliminar Item"
-Description="Busca y elimina un item de inventorio de un jugador."
+; EN: Description="Find and delete an inventory item from a player."
+Description="Busca y elimina un item de inventario de un jugador."
 
 [LOGIC_CompareInt]
+; EN: MenuName="Compare Int"
 MenuName="Comparar Entero"
+; EN: Description="Compare 2 integer values."
 Description="Compara dos números enteros."
 
 [VARIABLE_ToVector]
+; EN: MenuName="To Vector"
 MenuName="A Vector"
+; EN: Description="Constructs a vector from individual components."
 Description="Construye un vector a partir de componentes individuales."
 
 [VARIABLE_ToRotator]
+; EN: MenuName="To Rotator"
 MenuName="A Rotador"
+; EN: Description="Constructs a rotator from individual components."
 Description="Construye un rotador a partir de componentes individuales."
 
 [LOGIC_Gate]
+; EN: MenuName="Logic Gate"
 MenuName="Puerta Lógica"
+; EN: Description="A logic gate."
 Description="Una puerta lógica."
 
 [VARIABLE_FromVector]
+; EN: MenuName="From Vector"
 MenuName="Desde Vector"
+; EN: Description="Grab each vector component."
 Description="Toma cada componente de un vector."
 
 [PAWN_FindItem]
+; EN: MenuName="Find Item"
 MenuName="Buscar Item"
-Description="Busca un item de inventorio de un jugador."
+; EN: Description="Find an inventory item from a player."
+Description="Busca un item de inventario de un jugador."
 
 [VARIABLE_FromRotator]
+; EN: MenuName="From Rotator"
 MenuName="Desde Rotador"
+; EN: Description="Grab each rotator component."
 Description="Toma cada componente de un rotador."
 
 [LOGIC_CompareObject]
+; EN: MenuName="Compare Object"
 MenuName="Comparar Objeto"
-Description="Compara dos objetos"
+; EN: Description="Compare 2 objects."
+Description="Compara dos objetos."
 
 [LOGIC_CompareText]
+; EN: MenuName="Compare Text"
 MenuName="Comparar Texto"
+; EN: Description="Compare 2 string text lines."
 Description="Compara dos líneas de cadena de texto."
 
 [ACTOR_GetName]
+; EN: MenuName="Get Name"
 MenuName="Obtener Nombre"
+; EN: Description="Grab the actor name."
 Description="Toma el nombre del actor."
 
 [LOGIC_GetArraySize]
+; EN: MenuName="Get Array Size"
 MenuName="Obtener Tamaño del Arreglo"
+; EN: Description="Check the size of an object array."
 Description="Verifica el tamaño de un objeto de arreglo."
 
 [OBJECT_SetProperty]
+; EN: MenuName="Set Property"
 MenuName="Especificar Propiedad"
+; EN: Description="Change actor property value."
 Description="Cambia el valor de una propiedad de un actor."
 
 [OBJECT_ChangeState]
+; EN: MenuName="Change State"
 MenuName="Cambiar Estado"
+; EN: Description="Change actor script state."
 Description="Cambia el estado de guión de un actor."
 
 [LEVEL_AllActors]
+; EN: MenuName="All Actors"
 MenuName="Todos los Actores"
+; EN: Description="Grab all actors from level."
 Description="Toma a todos los actores del nivel."
 
 [OBJECT_GetProperty]
+; EN: MenuName="Get Property"
 MenuName="Obtener Propiedad"
+; EN: Description="Grab actor property value."
 Description="Toma el valor de una propiedad de un actor."
 
 [VARIABLE_SetBool]
-MenuName="Especificar Booleano"
+; EN: MenuName="Set Bool"
+MenuName="Establecer Booleano"
+; EN: Description="Set boolean value."
 Description="Especifica el valor de una variable booleana."
 
 [LEVEL_ResetLevel]
-MenuName="Reiniciar Nivel."
+; EN: MenuName="Reset level"
+MenuName="Reiniciar Nivel"
+; EN: Description="Soft-resets the level."
 Description="Reinicia el nivel de forma "suave"."
 
 [VARIABLE_SetFloat]
-MenuName="Especificar Flotante"
-Description="Especifica un valor de punto flotante."
+; EN: MenuName="Set Float"
+MenuName="Establecer Flotante"
+; EN: Description="Set float value."
+Description="Establece un valor de punto flotante."
 
 [LOGIC_ArrayEmpty]
+; EN: MenuName="Array Empty"
 MenuName="Vaciar Arreglo"
-Description="Vacía un arreglo."
+; EN: Description="Simply blank out an array."
+Description="Simplemente vacía un arreglo."
 
 [VARIABLE_SetInt]
-MenuName="Especificar Entero"
-Description="Especifica un valor entero."
+; EN: MenuName="Set Int"
+MenuName="Establecer Entero"
+; EN: Description="Set integer value."
+Description="Establece un valor entero."
 
 [VARIABLE_SetString]
-MenuName="Especificar Texto"
-Description="Especifica un valor de texto."
+; EN: MenuName="Set Text"
+MenuName="Establecer Texto"
+; EN: Description="Set string value."
+Description="Establece un valor de texto."
 
 [EVENT_BeginPlay]
-MenuName="Begin Play"
-Description="Activa un evento al iniciar el mapa.|Si el nuvel fue reiniciado de forma "suave", se activa el evento de reiniciado en su lugar."
+; EN: MenuName="Begin Play"
+MenuName="Empezar a Jugar"
+; EN: Description="Fires an event on start of map.|Reset event is fired instead when level was soft-reset."
+Description="Activa un evento al iniciar el mapa.|Si el nivel fue reiniciado de forma "suave", se activa el evento de reiniciado en su lugar."
 
 [LOGIC_CompareBool]
+; EN: MenuName="Compare Bool"
 MenuName="Comparar Booleano"
-Description="Compara un booleano."
+; EN: Description="Compare a boolean value."
+Description="Compara un valor booleano."
 
 [LOGIC_ServerType]
+; EN: MenuName="Server Type"
 MenuName="Tipo de Servidor"
+; EN: Description="Check in which environment this action is executed on."
 Description="Verifica el ambiente en el cual se va a ejecutar esta acción."
+

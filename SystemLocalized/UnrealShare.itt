@@ -2,8 +2,8 @@
 Object=(Name=UnrealShare.DeathMatchGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.UnrealGameInfo,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.TeamGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.VRikersGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.EntryGameInfo,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon)
@@ -30,29 +30,29 @@ Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Descri
 ; EN: Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali")
 Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali")
 ; EN: Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Priest")
-Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Prete Nali")
+Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Priest")
 ; EN: Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Statue")
-Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Statua Nali")
+Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Statue")
 ; EN: Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female")
-Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Female2;D2 Donna")
+Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Donna2;D2 Donna")
 ; EN: Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female2")
-Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Female2;D2 Donna2")
+Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Donna2;D2 Donna2")
 ; EN: Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female3")
-Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Female2;D2 Donna3")
+Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Donna2;D2 Donna3")
 ; EN: Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male")
-Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo")
+Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo")
 ; EN: Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male2")
-Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo2")
+Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo2")
 ; EN: Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male3")
-Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo3")
+Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo3")
 ; EN: Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male4")
-Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo4")
+Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo4")
 ; EN: Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male5")
-Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo5")
+Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo5")
 ; EN: Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male6")
-Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo6")
+Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo6")
 ; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
-Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;U1 Uomo7")
+Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Uomo1;U1 Uomo7")
 Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
 ; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
 Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Arma,Fuoco")
@@ -65,11 +65,11 @@ Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,A
 ; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
 Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,Lancia Arma")
 ; EN: Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Weapon,Disp. Pistol")
-Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Arma,Pist. Dissolvente")
+Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Arma,Pistola Dissolvente")
 ; EN: Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag/4-Shot")
 Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Arma,AutoMag/Colpo Quad.")
 ; EN: Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger/CAR")
-Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Arma,Stinger/Fucile Ass.")
+Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Arma,Stinger/Fucile Assalto")
 ; EN: Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD/UMS GL")
 Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Arma,ASMD/LG UMS")
 ; EN: Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Weapon,8-Ball/UMS RL/Peacemaker")
@@ -81,7 +81,7 @@ Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Ar
 ; EN: Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
 Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Arma,BioFucile GES")
 ; EN: Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
-Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Arma,Fucile Precis.")
+Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Arma,Fucile Precisione")
 ; EN: Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun/Transloc.")
 Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Arma,Mini-Cannone/Trasloc.")
 ; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
@@ -203,132 +203,6 @@ TimeMessage[12]="Tempo Scaduto!"
 ; EN: GameName="Deathmatch"
 GameName="Deathmatch"
 
-[UnrealGameInfo]
-; EN: DeathMessage[0]="killed"
-DeathMessage[0]="ucciso"
-; EN: DeathMessage[1]="ruled"
-DeathMessage[1]="dominato"
-; EN: DeathMessage[2]="smoked"
-DeathMessage[2]="affumicato"
-; EN: DeathMessage[3]="slaughtered"
-DeathMessage[3]="macellato"
-; EN: DeathMessage[4]="annihilated"
-DeathMessage[4]="annichilito"
-; EN: DeathMessage[5]="put down"
-DeathMessage[5]="sottomesso"
-; EN: DeathMessage[6]="splooged"
-DeathMessage[6]="spolpato"
-; EN: DeathMessage[7]="perforated"
-DeathMessage[7]="perforato"
-; EN: DeathMessage[8]="shredded"
-DeathMessage[8]="frantumato"
-; EN: DeathMessage[9]="destroyed"
-DeathMessage[9]="distrutto"
-; EN: DeathMessage[10]="whacked"
-DeathMessage[10]="fatto a pezzi"
-; EN: DeathMessage[11]="canned"
-DeathMessage[11]="silurato"
-; EN: DeathMessage[12]="busted"
-DeathMessage[12]="beccato"
-; EN: DeathMessage[13]="creamed"
-DeathMessage[13]="cremato"
-; EN: DeathMessage[14]="smeared"
-DeathMessage[14]="denigrato"
-; EN: DeathMessage[15]="shut out"
-DeathMessage[15]="scacciato"
-; EN: DeathMessage[16]="beaten down"
-DeathMessage[16]="battuto"
-; EN: DeathMessage[17]="smacked down"
-DeathMessage[17]="picchiato"
-; EN: DeathMessage[18]="pureed"
-DeathMessage[18]="epurato"
-; EN: DeathMessage[19]="sliced"
-DeathMessage[19]="affettato"
-; EN: DeathMessage[20]="diced"
-DeathMessage[20]="evirato"
-; EN: DeathMessage[21]="ripped"
-DeathMessage[21]="squartato"
-; EN: DeathMessage[22]="blasted"
-DeathMessage[22]="disintegrato"
-; EN: DeathMessage[23]="torn up"
-DeathMessage[23]="strappato"
-; EN: DeathMessage[24]="spanked"
-DeathMessage[24]="abbrustolito"
-; EN: DeathMessage[25]="eviscerated"
-DeathMessage[25]="sviscerato"
-; EN: DeathMessage[26]="neutered"
-DeathMessage[26]="castrato"
-; EN: DeathMessage[27]="whipped"
-DeathMessage[27]="smontato"
-; EN: DeathMessage[28]="shafted"
-DeathMessage[28]="fregato"
-; EN: DeathMessage[29]="trashed"
-DeathMessage[29]="cestinato"
-; EN: DeathMessage[30]="smashed"
-DeathMessage[30]="spiattellato"
-; EN: DeathMessage[31]="trounced"
-DeathMessage[31]="troncato"
-; EN: DeathModifier[0]="thoroughly "
-DeathModifier[0]="direttamente "
-; EN: DeathModifier[1]="completely "
-DeathModifier[1]="completamente "
-; EN: DeathModifier[2]="absolutely "
-DeathModifier[2]="assolutamente "
-; EN: DeathModifier[3]="totally "
-DeathModifier[3]="totalmente "
-; EN: DeathModifier[4]="utterly "
-DeathModifier[4]="del tutto "
-; EN: MajorDeathMessage[0]=" ripped a new one"
-MajorDeathMessage[0]=" squartato a dovere"
-; EN: MajorDeathMessage[1]=" messed up real bad"
-MajorDeathMessage[1]=" ridotto a una poltiglia"
-; EN: MajorDeathMessage[2]=" given a new definition of pain"
-MajorDeathMessage[2]=" istruito su una nuova definizione di dolore"
-; EN: HeadLossMessage[0]="decapitated"
-HeadLossMessage[0]="decapitato"
-; EN: HeadLossMessage[1]="beheaded"
-HeadLossMessage[1]="decapitato"
-; EN: DeathVerb=" was "
-DeathVerb=" è stato "
-; EN: DeathPrep=" by "
-DeathPrep=" da "
-; EN: DeathTerm="killed"
-DeathTerm="ucciso"
-; EN: ExplodeMessage=" was blown up"
-ExplodeMessage=" è stato spazzato via"
-; EN: SuicideMessage=" had a sudden heart attack."
-SuicideMessage=" ha subito un attacco di cuore."
-; EN: FallMessage=" left a small crater."
-FallMessage=" ha lasciato un piccolo cratere."
-; EN: DrownedMessage=" forgot to come up for air."
-DrownedMessage=" si è dimenticato di risalire in superficie."
-; EN: BurnedMessage=" was incinerated"
-BurnedMessage=" si è incenerito"
-; EN: CorrodedMessage=" was slimed"
-CorrodedMessage=" si è smerdato"
-; EN: HackedMessage=" was hacked"
-HackedMessage=" si è squarciato"
-; EN: BleededMessage=" bled to death."
-BleededMessage=" dissanguato a morte."
-
-[UnrealHUD]
-; EN: IdentifyName="Name"
-IdentifyName="Nome"
-; EN: IdentifyHealth="Health"
-IdentifyHealth="Salute"
-; EN: SomeoneName="Someone"
-SomeoneName="Qualcuno"
-; EN: VersionMessage="Version"
-VersionMessage="Versione"
-; EN: TeamName[0]="Red Team: "
-TeamName[0]="Squadra Rossa: "
-; EN: TeamName[1]="Blue Team: "
-TeamName[1]="Squadra Blu: "
-; EN: TeamName[2]="Green Team: "
-TeamName[2]="Squadra Verde: "
-; EN: TeamName[3]="Gold Team: "
-TeamName[3]="Squadra Oro: "
-
 [UnrealGameOptionsMenu]
 ; EN: AdvancedString="Advanced Options"
 AdvancedString="Opzioni Avanzate"
@@ -418,10 +292,702 @@ MenuList[6]="Squadra"
 ; EN: MenuTitle="Artificial Intelligence Configuration"
 MenuTitle="Configurazione Intelligenza Artificiale"
 
+[UnrealFavoritesMenu]
+; EN: EditList[0]="Name for Server:"
+EditList[0]="Nome del Server:"
+; EN: EditList[1]="Address:"
+EditList[1]="Indirizzo:"
+; EN: HelpMessage[1]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[1]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[2]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[2]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[3]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[3]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[4]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[4]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[5]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[5]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[6]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[6]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[7]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[7]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[8]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[8]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[9]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[9]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[10]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[10]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[11]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[11]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: HelpMessage[12]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[12]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
+; EN: MenuTitle="FAVORITES"
+MenuTitle="PREFERITI"
+
+[UnrealTeamScoreBoard]
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Squadra Rossa: "
+; EN: TeamName[1]="Blue Team: "
+TeamName[1]="Squadra Blu: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Squadra Verde: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Squadra Oro: "
+
+[UnrealServerMenu]
+; EN: BotTitle="BOTMATCH"
+BotTitle="BOTMATCH"
+; EN: HelpMessage[1]="Choose Game Type."
+HelpMessage[1]="Scegli il tipo di gioco."
+; EN: HelpMessage[2]="Choose Map."
+HelpMessage[2]="Scegli la mappa."
+; EN: HelpMessage[3]="Modify Game Options."
+HelpMessage[3]="Modifica le opzioni di gioco."
+; EN: HelpMessage[4]="Start Game."
+HelpMessage[4]="Inizia il gioco."
+; EN: HelpMessage[5]="Start a dedicated server on this machine."
+HelpMessage[5]="Avvia un server dedicato su questo computer."
+; EN: MenuList[1]="Select Game"
+MenuList[1]="Scegli Gioco"
+; EN: MenuList[2]="Select Map"
+MenuList[2]="Scegli Mappa"
+; EN: MenuList[3]="Configure Game"
+MenuList[3]="Configura Gioco"
+; EN: MenuList[4]="Start Game"
+MenuList[4]="Inizia Gioco"
+; EN: MenuList[5]="Launch Dedicated Server"
+MenuList[5]="Lancia Server Dedicato"
+; EN: MenuTitle="MULTIPLAYER"
+MenuTitle="MULTIGIOCATORE"
+
+[TeamGame]
+; EN: ClassCaption="Team Game"
+ClassCaption="Partita di Squadra"
+; EN: NewTeamMessage=" is now on "
+NewTeamMessage=" è ora con la squadra "
+; EN: TeamColor[0]="Red"
+TeamColor[0]="Rosso"
+; EN: TeamColor[1]="Blue"
+TeamColor[1]="Blu"
+; EN: TeamColor[2]="Green"
+TeamColor[2]="Verde"
+; EN: TeamColor[3]="Gold"
+TeamColor[3]="Oro"
+; EN: GameName="Team Game"
+GameName="Partita di Squadra"
+
+[UnrealWeaponMenu]
+; EN: MenuTitle="PRIORITIES"
+MenuTitle="PRIORITÀ"
+
+[UnrealBotConfigMenu]
+; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
+HelpMessage[1]="Se vero, i Bot regolano il loro livello d'abilità basandosi su quello degli utenti."
+; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
+HelpMessage[2]="Livello dell'abilità di base dei Bot (tra 0 e 3)."
+; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
+HelpMessage[3]="Se vero, i Bot entrano in gioco in ordine casuale. Se falso, entrano nell'ordine di configurazione."
+; EN: HelpMessage[4]="Change the configuration of individual bots."
+HelpMessage[4]="Cambia la configurazione dei singoli Bot."
+; EN: HelpMessage[5]="Number of bots to start play (max 15)."
+HelpMessage[5]="Numero di Bot per iniziare a giocare (max 15)."
+; EN: HelpMessage[6]="Use bots when playing with other people."
+HelpMessage[6]="Usa Bot quando giochi con altre persone."
+; EN: MenuList[1]="Auto-Adjust Skills"
+MenuList[1]="Autoregolazione Abilità"
+; EN: MenuList[2]="Base Skill"
+MenuList[2]="Abilità di Base"
+; EN: MenuList[3]="Random Order"
+MenuList[3]="Ordine Casuale"
+; EN: MenuList[4]="Configure Individual Bots"
+MenuList[4]="Configura Bot Singoli"
+; EN: MenuList[5]="Number of Bots"
+MenuList[5]="Numero di Bot"
+; EN: MenuList[6]="Bots in Multiplayer"
+MenuList[6]="Bot in Multiplayer"
+; EN: MenuTitle="BOTS"
+MenuTitle="BOT"
+
+[ShieldBelt]
+; EN: PickupMessage="You got the Shield Belt"
+PickupMessage="Hai preso la Cintura Scudo"
+; EN: ItemName="Shield Belt"
+ItemName="Cintura Scudo"
+
+[Flashlight]
+; EN: ExpireMessage="Flashlight batteries have died."
+ExpireMessage="Le pile della torcia si sono esaurite."
+; EN: PickupMessage="You picked up the Flashlight"
+PickupMessage="Hai raccolto la Torcia"
+; EN: ItemName="Flashlight"
+ItemName="Torcia"
+
+[UnrealLoadMenu]
+; EN: RestartString="Restart "
+RestartString="Ricomincia "
+; EN: MenuTitle="LOAD GAME"
+MenuTitle="CARICA PART."
+
+[UnrealMainMenu]
+; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
+HelpMessage[1]="Premi Invio per modificare le opzioni di gioco, inclusi il caricamento e il salvataggio delle partite, il livello di difficoltà e i BotMatch."
+; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
+HelpMessage[2]="Premi Invio per modificare le opzioni di setup del multigiocatore, incluso iniziare o partecipare a una partita in rete, e cambiare l'aspetto, il nome, o la squadra."
+; EN: HelpMessage[3]="Hit enter to customize controls."
+HelpMessage[3]="Premi Invio per personalizzare i controlli."
+; EN: HelpMessage[4]="Change sound and display options."
+HelpMessage[4]="Cambia le opzioni audio e video."
+; EN: HelpMessage[5]="Hit enter to quit game."
+HelpMessage[5]="Premi Invio per uscire dal gioco."
+; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
+HelpMessage[7]="Chiama gratis l'1-877-4UNREAL per ordinare UNREAL!"
+; EN: MenuList[1]="GAME"
+MenuList[1]="GIOCO"
+; EN: MenuList[2]="MULTIPLAYER"
+MenuList[2]="MULTIGIOCATORE"
+; EN: MenuList[3]="OPTIONS"
+MenuList[3]="OPZIONI"
+; EN: MenuList[4]="AUDIO/VIDEO"
+MenuList[4]="AUDIO/VIDEO"
+; EN: MenuList[5]="QUIT"
+MenuList[5]="ESCI"
+; EN: MenuList[7]="ORDER INFO"
+MenuList[7]="INFO ORDINAZIONE"
+
+[UnrealGameMenu]
+; EN: HelpMessage[1]="Hit enter to save the current game."
+HelpMessage[1]="Premi Invio per salvare la partita attuale."
+; EN: HelpMessage[2]="Hit enter to load a saved game."
+HelpMessage[2]="Premi Invio per caricare una partita salvata."
+; EN: HelpMessage[3]="Select a difficulty level, and start a new game."
+HelpMessage[3]="Scegli un livello di difficoltà e inizia una nuova partita."
+; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
+HelpMessage[4]="Premi Invio per modificare le opzioni di gioco. Nota che non puoi farlo se stai giocando in modalità multigiocatore."
+; EN: HelpMessage[5]="DeathMatch against Bots."
+HelpMessage[5]="DeathMatch contro i Bot."
+; EN: MenuList[1]="SAVE GAME"
+MenuList[1]="SALVA PARTITA"
+; EN: MenuList[2]="LOAD GAME"
+MenuList[2]="CARICA PARTITA"
+; EN: MenuList[3]="NEW GAME"
+MenuList[3]="NUOVA PARTITA"
+; EN: MenuList[4]="GAME OPTIONS"
+MenuList[4]="OPZIONI GIOCO"
+; EN: MenuList[5]="BOTMATCH"
+MenuList[5]="BOTMATCH"
+
+[NaliFruit]
+; EN: PickupMessage="You picked the Nali Healing Fruit +"
+PickupMessage="Hai raccolto il Frutto Medico dei Nali +"
+; EN: ItemName="Nali Healing Fruit"
+ItemName="Frutto Medico dei Nali"
+
+[Health]
+; EN: PickupMessage="You picked up a Health Pack +"
+PickupMessage="Hai preso un Pacchetto Salute +"
+; EN: ItemName="Health Pack"
+ItemName="Pacchetto Salute"
+
+[UnrealMultiPlayerMenu]
+; EN: HelpMessage[1]="Join a network game."
+HelpMessage[1]="Partecipa a partita in rete."
+; EN: HelpMessage[2]="Set up and start a network game."
+HelpMessage[2]="Imposta e inizia una partita in rete."
+; EN: HelpMessage[3]="Configure appearance, name, and team name."
+HelpMessage[3]="Configura aspetto, nome e nome della squadra."
+; EN: MenuList[1]="JOIN GAME"
+MenuList[1]="PART. GIOCO"
+; EN: MenuList[2]="START GAME"
+MenuList[2]="INIZIA GIOCO"
+; EN: MenuList[3]="PLAYER SETUP"
+MenuList[3]="IMP. GIOCAT."
+
+[YesNoMenu]
+; EN: YesSelString="[YES]  No"
+YesSelString="[SÌ]  No"
+; EN: NoSelString=" Yes  [NO]"
+NoSelString=" Sì  [NO]"
+
+[UnrealListenMenu]
+; EN: HelpMessage[1]="Hit Enter to select this server."
+HelpMessage[1]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[2]="Hit Enter to select this server."
+HelpMessage[2]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[3]="Hit Enter to select this server."
+HelpMessage[3]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[4]="Hit Enter to select this server."
+HelpMessage[4]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[5]="Hit Enter to select this server."
+HelpMessage[5]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[6]="Hit Enter to select this server."
+HelpMessage[6]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[7]="Hit Enter to select this server."
+HelpMessage[7]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[8]="Hit Enter to select this server."
+HelpMessage[8]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[9]="Hit Enter to select this server."
+HelpMessage[9]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[10]="Hit Enter to select this server."
+HelpMessage[10]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[11]="Hit Enter to select this server."
+HelpMessage[11]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[12]="Hit Enter to select this server."
+HelpMessage[12]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[13]="Hit Enter to select this server."
+HelpMessage[13]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[14]="Hit Enter to select this server."
+HelpMessage[14]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[15]="Hit Enter to select this server."
+HelpMessage[15]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[16]="Hit Enter to select this server."
+HelpMessage[16]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[17]="Hit Enter to select this server."
+HelpMessage[17]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[18]="Hit Enter to select this server."
+HelpMessage[18]="Premi Invio per selezionare questo server."
+; EN: HelpMessage[19]="Hit Enter to select this server."
+HelpMessage[19]="Premi Invio per selezionare questo server."
+; EN: MenuTitle="LOCAL SERVERS"
+MenuTitle="SERVER LOCALI"
+
+[SCUBAGear]
+; EN: PickupMessage="You picked up the SCUBA Gear"
+PickupMessage="Hai raccolto l'Equipaggiamento Subacqueo"
+; EN: ItemName="SCUBA Gear"
+ItemName="Equipaggiamento Subacqueo"
+
+[CoopGame]
+; EN: ClassCaption="Cooperative Play"
+ClassCaption="Partita Cooperativa"
+; EN: GameName="Coop Game"
+GameName="Partita Cooperativa"
+
+[UnrealHelpMenu]
+; EN: HelpMessage[1]="Open the troubleshooting document."
+HelpMessage[1]="Apri il documento sulla risoluzione dei problemi."
+; EN: MenuList[1]="TroubleShooting"
+MenuList[1]="Risoluzione dei Problemi"
+; EN: MenuTitle="HELP"
+MenuTitle="AIUTO"
+
+[SinglePlayer]
+GameName="Unreal"
+
+[UnrealSaveMenu]
+; EN: CantSave="CAN'T SAVE WHEN DEAD"
+CantSave="IMPOSSIBILE SALVARE DA MORTO"
+; EN: MenuTitle="SAVE GAME"
+MenuTitle="SALVA PART."
+
+[RocketCan]
+; EN: PickupMessage="You picked up 12 Eightballs"
+PickupMessage="Hai raccolto 12 8-ball"
+; EN: ItemName="Eightballs"
+ItemName="8-ball"
+
+[Amplifier]
+; EN: ExpireMessage="Energy Amplifier is out of power."
+ExpireMessage="L'Amplificatore di Energia è senza energia."
+; EN: PickupMessage="You got the Energy Amplifier"
+PickupMessage="Hai raccolto l'Amplificatore di Energia"
+; EN: ItemName="Energy Amplifier"
+ItemName="Amplificatore di Energia"
+
+[VoiceBox]
+; EN: PickupMessage="You picked up the Voice Box"
+PickupMessage="Hai raccolto il Simulatore Vocale"
+; EN: ItemName="Voice Box"
+ItemName="Simulatore Vocale"
+
+[ShellBox]
+; EN: PickupMessage="You picked up 50 bullets"
+PickupMessage="Hai raccolto 50 Proiettili"
+; EN: ItemName="Bullet Box"
+ItemName="Proiettili"
+
+[Flare]
+; EN: PickupMessage="You got a Flare"
+PickupMessage="Hai un Razzo Segnalatore"
+; EN: ItemName="Flare"
+ItemName="Razzo Segnalatore"
+
+[WeaponPowerUp]
+; EN: PickupMessage="You got the Dispersion Pistol Powerup"
+PickupMessage="Hai preso un Aggiornamento per la Pistola Dissolvente"
+; EN: ItemName="Dispersion Pistol Powerup"
+ItemName="Aggiornamento per Pistola Dissolvente"
+
+[ASMDAmmo]
+; EN: PickupMessage="You picked up an ASMD Core"
+PickupMessage="Hai raccolto un Nucleo ASMD"
+; EN: ItemName="ASMD Core"
+ItemName="Nucleo ASMD"
+
+[MaleThree]
+; EN: MenuName="Male 3"
+MenuName="Uomo 3"
+
+[MaleThreeBot]
+; EN: MenuName="Male 3"
+MenuName="Uomo 3"
+
+[FemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Donna 1"
+
+[FemaleOneBot]
+; EN: MenuName="Female 1"
+MenuName="Donna 1"
+
+[OKMenu]
+; EN: OKString="[OK]"
+OKString="[OK]"
+
+[StingerAmmo]
+; EN: PickupMessage="You picked up 40 Tarydium Shards"
+PickupMessage="Hai raccolto 40 schegge di Tarydium"
+; EN: ItemName="Tarydium Shards"
+ItemName="Schegge di Tarydium"
+
+[UnrealTeamGameOptionsMenu]
+; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
+HelpMessage[10]="Percentuale di danno subito quando colpito dal fuoco amico. Nota che subisci comunque i danni causati dalle tue stesse armi."
+; EN: MenuList[10]="Friendly Fire Scale"
+MenuList[10]="Regolatore Fuoco Amico"
+
+[SuperHealth]
+; EN: PickupMessage="You picked up the Super Health Pack"
+PickupMessage="Hai raccolto la Supersalute"
+; EN: ItemName="Super Health Pack"
+ItemName="Supersalute"
+
+[Shells]
+; EN: PickupMessage="You picked up 12 shells"
+PickupMessage="Hai raccolto 12 ricariche"
+; EN: ItemName="Shells"
+ItemName="Ricariche"
+
+[Clip]
+; EN: PickupMessage="You picked up a Clip"
+PickupMessage="Hai raccolto un Ricaricatore"
+; EN: ItemName="Clip"
+ItemName="Ricaricatore"
+
+[Bandages]
+; EN: PickupMessage="You got some Bandages +"
+PickupMessage="Hai preso alcune bende +"
+; EN: ItemName="Bandages"
+ItemName="Bende"
+
+[Armor]
+; EN: PickupMessage="You got the Assault Vest"
+PickupMessage="Hai raccolto la Tuta Antiproiettile"
+; EN: ItemName="Assault Vest"
+ItemName="Tuta Antiproiettile"
+
+[KevlarSuit]
+; EN: PickupMessage="You picked up the Kevlar Suit"
+PickupMessage="Hai raccolto la Tuta in Kevlar"
+; EN: ItemName="Kevlar Suit"
+ItemName="Tuta in Kevlar"
+
+[BabyCow]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Baby Cow"
+MenuName="Mucca Bambina"
+
+[Bird]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Bird"
+MenuName="Uccello"
+
+[Biterfish]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Biterfish"
+MenuName="Pesce"
+
+[BiterfishSchool]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Biterfish"
+MenuName="Pesce"
+
+[Brute]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Brute"
+MenuName="Bruto"
+
+[CaveManta]
+; EN: NameArticle=" the "
+NameArticle=" la "
+; EN: MenuName="Cave Manta"
+MenuName="Manta delle Caverne"
+
+[Cow]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Nali Cow"
+MenuName="Mucca Nali"
+
+[Devilfish]
+; EN: NameArticle=" a "
+NameArticle=" uno "
+; EN: MenuName="Devilfish"
+MenuName="Squalo"
+
+[Fly]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Fly"
+MenuName="Mosca"
+
+[LesserBrute]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Lesser Brute"
+MenuName="Bruto Bambino"
+
+[Manta]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Manta"
+MenuName="Manta"
+
+[Nali]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Nali"
+MenuName="Nali"
+
+[NaliPriest]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Nali Priest"
+MenuName="Sacerdote Nali"
+
+[NaliRabbit]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Nali Rabbit"
+MenuName="Coniglio Nali"
+
+[Skaarj]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj"
+MenuName="Skaarj"
+
+[SkaarjScout]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Scout"
+MenuName="Esploratore Skaarj"
+
+[SkaarjWarrior]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Warrior"
+MenuName="Guerriero Skaarj"
+
+[Slith]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Slith"
+MenuName="Salamandra"
+
+[Tentacle]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Tentacle"
+MenuName="Tentacolo"
+
+[UnrealGameInfo]
+; EN: DeathMessage[0]="killed"
+DeathMessage[0]="ucciso"
+FemDeathMessage[0]="uccisa"
+; EN: DeathMessage[1]="ruled"
+DeathMessage[1]="dominato"
+FemDeathMessage[1]="dominata"
+; EN: DeathMessage[2]="smoked"
+DeathMessage[2]="affumicato"
+FemDeathMessage[2]="affumicata"
+; EN: DeathMessage[3]="slaughtered"
+DeathMessage[3]="macellato"
+FemDeathMessage[3]="macellata"
+; EN: DeathMessage[4]="annihilated"
+DeathMessage[4]="annichilito"
+FemDeathMessage[4]="annichilita"
+; EN: DeathMessage[5]="put down"
+DeathMessage[5]="sottomesso"
+FemDeathMessage[5]="sottomessa"
+; EN: DeathMessage[6]="splooged"
+DeathMessage[6]="spolpato"
+FemDeathMessage[6]="spolpata"
+; EN: DeathMessage[7]="perforated"
+DeathMessage[7]="perforato"
+FemDeathMessage[7]="perforata"
+; EN: DeathMessage[8]="shredded"
+DeathMessage[8]="frantumato"
+FemDeathMessage[8]="frantumata"
+; EN: DeathMessage[9]="destroyed"
+DeathMessage[9]="distrutto"
+FemDeathMessage[9]="distrutta"
+; EN: DeathMessage[10]="whacked"
+DeathMessage[10]="fatto a pezzi"
+FemDeathMessage[10]="fatta a pezzi"
+; EN: DeathMessage[11]="canned"
+DeathMessage[11]="silurato"
+FemDeathMessage[11]="silurata"
+; EN: DeathMessage[12]="busted"
+DeathMessage[12]="beccato"
+FemDeathMessage[12]="beccata"
+; EN: DeathMessage[13]="creamed"
+DeathMessage[13]="cremato"
+FemDeathMessage[13]="cremata"
+; EN: DeathMessage[14]="smeared"
+DeathMessage[14]="denigrato"
+FemDeathMessage[14]="denigrata"
+; EN: DeathMessage[15]="shut out"
+DeathMessage[15]="scacciato"
+FemDeathMessage[15]="scacciata"
+; EN: DeathMessage[16]="beaten down"
+DeathMessage[16]="battuto"
+FemDeathMessage[16]="battuta"
+; EN: DeathMessage[17]="smacked down"
+DeathMessage[17]="picchiato"
+FemDeathMessage[17]="picchiata"
+; EN: DeathMessage[18]="pureed"
+DeathMessage[18]="epurato"
+FemDeathMessage[18]="epurata"
+; EN: DeathMessage[19]="sliced"
+DeathMessage[19]="affettato"
+FemDeathMessage[19]="affettata"
+; EN: DeathMessage[20]="diced"
+DeathMessage[20]="evirato"
+FemDeathMessage[20]="evirata"
+; EN: DeathMessage[21]="ripped"
+DeathMessage[21]="squartato"
+FemDeathMessage[21]="squartata"
+; EN: DeathMessage[22]="blasted"
+DeathMessage[22]="disintegrato"
+FemDeathMessage[22]="disintegrata"
+; EN: DeathMessage[23]="torn up"
+DeathMessage[23]="strappato"
+FemDeathMessage[23]="strappata"
+; EN: DeathMessage[24]="spanked"
+DeathMessage[24]="abbrustolito"
+FemDeathMessage[24]="abbrustolita"
+; EN: DeathMessage[25]="eviscerated"
+DeathMessage[25]="sviscerato"
+FemDeathMessage[25]="sviscerata"
+; EN: DeathMessage[26]="neutered"
+DeathMessage[26]="castrato"
+FemDeathMessage[26]="castrata"
+; EN: DeathMessage[27]="whipped"
+DeathMessage[27]="smontato"
+FemDeathMessage[27]="smontata"
+; EN: DeathMessage[28]="shafted"
+DeathMessage[28]="fregato"
+FemDeathMessage[28]="fregata"
+; EN: DeathMessage[29]="trashed"
+DeathMessage[29]="cestinato"
+FemDeathMessage[29]="cestinata"
+; EN: DeathMessage[30]="smashed"
+DeathMessage[30]="spiattellato"
+FemDeathMessage[30]="spiattellata"
+; EN: DeathMessage[31]="trounced"
+DeathMessage[31]="troncato"
+FemDeathMessage[31]="troncata"
+; EN: DeathModifier[0]="thoroughly "
+DeathModifier[0]="direttamente "
+; EN: DeathModifier[1]="completely "
+DeathModifier[1]="completamente "
+; EN: DeathModifier[2]="absolutely "
+DeathModifier[2]="assolutamente "
+; EN: DeathModifier[3]="totally "
+DeathModifier[3]="totalmente "
+; EN: DeathModifier[4]="utterly "
+DeathModifier[4]="decisamente "
+; EN: MajorDeathMessage[0]=" ripped a new one"
+MajorDeathMessage[0]=" squartato a dovere"
+FemMajorDeathMessage[0]=" squartata a dovere"
+; EN: MajorDeathMessage[1]=" messed up real bad"
+MajorDeathMessage[1]=" ridotto a una poltiglia"
+FemMajorDeathMessage[1]=" ridotta a una poltiglia"
+; EN: MajorDeathMessage[2]=" given a new definition of pain"
+MajorDeathMessage[2]=" istruito su una nuova definizione di dolore"
+FemMajorDeathMessage[2]=" istruita su una nuova definizione di dolore"
+; EN: HeadLossMessage[0]="decapitated"
+HeadLossMessage[0]="decapitato"
+FemHeadLossMessage[0]="decapitata"
+; EN: HeadLossMessage[1]="beheaded"
+HeadLossMessage[1]="decapitato"
+FemHeadLossMessage[1]="decapitata"
+; EN: DeathVerb=" was "
+DeathVerb=" è stato "
+; EN: DeathPrep=" by "
+DeathPrep=" da "
+; EN: DeathTerm="killed"
+DeathTerm="ucciso"
+FemDeathTerm="uccisa"
+; EN: ExplodeMessage=" was blown up"
+ExplodeMessage=" è stato spazzato via"
+FemExplodeMessage=" è stato spazzata via"
+; EN: SuicideMessage=" had a sudden heart attack."
+SuicideMessage=" ha subito un attacco di cuore."
+FemSuicideMessage=" ha subito un attacco di cuore."
+; EN: FallMessage=" left a small crater."
+FallMessage=" ha lasciato un piccolo cratere."
+FemFallMessage=" ha lasciato un piccolo cratere."
+; EN: DrownedMessage=" forgot to come up for air."
+DrownedMessage=" si è dimenticato di risalire in superficie."
+FemDrownedMessage=" si è dimenticato di risalire in superficie."
+; EN: BurnedMessage=" was incinerated"
+BurnedMessage=" si è incenerito"
+FemBurnedMessage=" si è incenerita"
+; EN: CorrodedMessage=" was slimed"
+CorrodedMessage=" si è smerdato"
+FemCorrodedMessage=" si è smerdata"
+; EN: HackedMessage=" was hacked"
+HackedMessage=" si è squarciato"
+FemHackedMessage=" si è squarciata"
+; EN: BleededMessage=" bled to death."
+BleededMessage=" dissanguato a morte."
+FemBleededMessage=" dissanguata a morte."
+; Set this to true for languages that use gendered messages
+bGenderMessages=True
+
+[UnrealHUD]
+; EN: IdentifyName="Name"
+IdentifyName="Nome"
+; EN: IdentifyHealth="Health"
+IdentifyHealth="Salute"
+; EN: SomeoneName="Someone"
+SomeoneName="Qualcuno"
+; EN: VersionMessage="Version"
+VersionMessage="Versione"
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Squadra Rossa: "
+; EN: TeamName[1]="Blue Team: "
+TeamName[1]="Squadra Blu: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Squadra Verde: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Squadra Oro: "
+; EN: DemoPlaybackProg="Demo: %f %"
+DemoPlaybackProg="Demo: %f %"
+; EN: DemoRecInfo="[REC]"
+DemoRecInfo="[REGI]"
+
 [DispersionPistol]
 ; EN: DeathMessage="%o was killed by %k's %w.  What a loser!"
 DeathMessage="%o è stato ucciso da %w di %k. Che frana!"
-FemDeathMessage="%o è stato ucciso da %w di %k. Che frana!"
+FemDeathMessage="%o è stato uccisa da %w di %k. Che frana!"
+FemKillMessage="%o è stato ucciso da %w di %k. Che frana!"
 ; EN: PickupMessage="You got the Dispersion Pistol"
 PickupMessage="Hai preso la Pistola Dissolvente"
 ; EN: ItemName="Dispersion Pistol"
@@ -434,14 +1000,20 @@ LowText="Bassa"
 HighText="Alta"
 ; EN: ShadowDetail[0]="Blob"
 ShadowDetail[0]="Blob"
-; EN: ShadowDetail[1]="Low Res"
-ShadowDetail[1]="Bassa risoluzione"
-; EN: ShadowDetail[2]="Mid Res"
-ShadowDetail[2]="Mid Res"
-; EN: ShadowDetail[3]="High Res"
-ShadowDetail[3]="Alta risoluzione"
-; EN: ShadowDetail[4]="Ultra Res"
-ShadowDetail[4]="Ultra Res"
+; EN: ShadowDetail[1]="LowRes"
+ShadowDetail[1]="Bassa Ris."
+; EN: ShadowDetail[2]="MedRes"
+ShadowDetail[2]="Media Ris."
+; EN: ShadowDetail[3]="HighRes"
+ShadowDetail[3]="Alta Ris."
+; EN: ShadowDetail[4]="UltraRes"
+ShadowDetail[4]="Ultra Ris."
+; EN: SkyFogDetail[0]="High Detail"
+SkyFogDetail[0]="Dettaglio Alto"
+; EN: SkyFogDetail[1]="Low Detail"
+SkyFogDetail[1]="Dettaglio Basso"
+; EN: SkyFogDetail[2]="Off"
+SkyFogDetail[2]="Disabilitato"
 ; EN: HelpMessage[1]="Adjust display brightness using the left and right arrow keys."
 HelpMessage[1]="Regola la luminosità usando le frecce sinistra e destra."
 ; EN: HelpMessage[2]="Display Unreal in a window. Note that going to a software display mode may remove high detail actors that were visible with hardware acceleration."
@@ -478,6 +1050,10 @@ HelpMessage[16]="Se il blob, usa le ombre del blob, altrimenti usa ombre realist
 HelpMessage[17]="Utilizzare questa opzione per precaching nella cache i contenuti della mappa come suoni e trame."
 ; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
 HelpMessage[18]="Utilizzare questa opzione per attivare / disattivare il filtraggio trilineare."
+; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
+HelpMessage[19]="Livello di dettaglio per l'appannamento applicato al cielo."
+; EN: HelpMessage[20]="The scaling of user HUD."
+HelpMessage[20]="Il ridimensionamento dell'HUD utente."
 ; EN: MenuList[1]="Brightness"
 MenuList[1]="Luminosità"
 ; EN: MenuList[2]="Toggle Fullscreen Mode"
@@ -514,40 +1090,12 @@ MenuList[16]="Ombre Realistiche"
 MenuList[17]="PreCaching dei Contenuti"
 ; EN: MenuList[18]="Trilinear Filtering"
 MenuList[18]="Filtraggio Trilineare"
+; EN: MenuList[19]="Skybox Fogging"
+MenuList[19]="Nebbia Nello Skybox"
+; EN: MenuList[20]="HUD Scale"
+MenuList[20]="Scala HUD"
 ; EN: MenuTitle="AUDIO/VIDEO"
 MenuTitle="AUDIO/VIDEO"
-
-[UnrealFavoritesMenu]
-; EN: EditList[0]="Name for Server:"
-EditList[0]="Nome del Server:"
-; EN: EditList[1]="Address:"
-EditList[1]="Indirizzo:"
-; EN: HelpMessage[1]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[1]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[2]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[2]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[3]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[3]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[4]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[4]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[5]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[5]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[6]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[6]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[7]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[7]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[8]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[8]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[9]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[9]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[10]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[10]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[11]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[11]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: HelpMessage[12]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[12]="Premi Invio per andare al server selezionato. La freccia destra modifica questa voce."
-; EN: MenuTitle="FAVORITES"
-MenuTitle="PREFERITI"
 
 [Translator]
 ; EN: NewMessage="Universal Translator"
@@ -558,48 +1106,6 @@ HintString="Suggerimento:"
 PickupMessage="Premi F2 per attivare il Traduttore"
 ; EN: ItemName="Universal Translator"
 ItemName="Traduttore Universale"
-
-[UnrealTeamScoreBoard]
-; EN: TeamName[0]="Red Team: "
-TeamName[0]="Squadra Rossa: "
-; EN: TeamName[1]="Blue Team: "
-TeamName[1]="Squadra Blu: "
-; EN: TeamName[2]="Green Team: "
-TeamName[2]="Squadra Verde: "
-; EN: TeamName[3]="Gold Team: "
-TeamName[3]="Squadra Oro: "
-
-[UnrealScoreBoard]
-; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
-DeadStr="Sei morto. Premi [Fuoco] per rigenerarti!"
-; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
-SpectatorStr="Stai guardando. Premi [Fuoco] per vederlo da un altro giocatore!"
-
-[UnrealServerMenu]
-; EN: BotTitle="BOTMATCH"
-BotTitle="BOTMATCH"
-; EN: HelpMessage[1]="Choose Game Type."
-HelpMessage[1]="Scegli il tipo di gioco."
-; EN: HelpMessage[2]="Choose Map."
-HelpMessage[2]="Scegli la mappa."
-; EN: HelpMessage[3]="Modify Game Options."
-HelpMessage[3]="Modifica le opzioni di gioco."
-; EN: HelpMessage[4]="Start Game."
-HelpMessage[4]="Inizia il gioco."
-; EN: HelpMessage[5]="Start a dedicated server on this machine."
-HelpMessage[5]="Avvia un server dedicato su questo computer."
-; EN: MenuList[1]="Select Game"
-MenuList[1]="Scegli Gioco"
-; EN: MenuList[2]="Select Map"
-MenuList[2]="Scegli Mappa"
-; EN: MenuList[3]="Configure Game"
-MenuList[3]="Configura Gioco"
-; EN: MenuList[4]="Start Game"
-MenuList[4]="Inizia Gioco"
-; EN: MenuList[5]="Launch Dedicated Server"
-MenuList[5]="Lancia Server Dedicato"
-; EN: MenuTitle="MULTIPLAYER"
-MenuTitle="MULTIGIOCATORE"
 
 [UnrealMeshMenu]
 ; EN: HelpMessage[4]="Change your class using the left and right arrow keys."
@@ -651,9 +1157,9 @@ InternetOption="(Dial-Up)"
 ; EN: FastInternetOption="(Dial-Up)"
 FastInternetOption="(Dial-Up)"
 ; EN: VeryFastInternetOption="(Broadband)"
-VeryFastInternetOption="(Broadband)"
+VeryFastInternetOption="(Banda larga)"
 ; EN: HighSpeedInternetOption="(Broadband)"
-HighSpeedInternetOption="(Broadband)"
+HighSpeedInternetOption="(Banda larga)"
 ; EN: LANOption="(LAN)"
 LANOption="(LAN)"
 ; EN: HelpMessage[1]="Listen for local servers"
@@ -683,9 +1189,9 @@ MenuTitle="PARTECIPA"
 ; EN: HideString="Hidden"
 HideString="Nascosto"
 ; EN: InternetOption="(Dial-Up)"
-InternetOption="(Accesso remoto)"
+InternetOption="(Dial-Up)"
 ; EN: FastInternetOption="(Dial-Up)"
-FastInternetOption="(Accesso remoto)"
+FastInternetOption="(Dial-Up)"
 ; EN: VeryFastInternetOption="(Broadband)"
 VeryFastInternetOption="(Banda larga)"
 ; EN: HighSpeedInternetOption="(Broadband)"
@@ -728,8 +1234,10 @@ HelpMessage[16]="Usa le frecce sinistra e destra per modificare la configurazion
 HelpMessage[17]="Regola il livello di ondeggiamento durante il movimento."
 ; EN: HelpMessage[18]="Set your optimal networking speed. This has an impact on internet gameplay."
 HelpMessage[18]="Impostare la propria velocità di rete ottimale. Questo ha un impatto sulla qualità di gioco."
-; EN: HelpMessage[19]="Open advanced preferences configuration menu."
-HelpMessage[19]="Apri il menu di configurazione delle Opzioni Avanzate."
+; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
+HelpMessage[19]="Questa opzione determina l'aspetto della console e dei menu. Premi Invio per riavviare il gioco e applicare le modifiche."
+; EN: HelpMessage[20]="Open advanced preferences configuration menu."
+HelpMessage[20]="Apri il menu di configurazione delle Opzioni Avanzate."
 ; EN: MenuList[1]="Auto Aim"
 MenuList[1]="Auto-Mira"
 ; EN: MenuList[2]="Joystick Enabled"
@@ -766,72 +1274,28 @@ MenuList[16]="Configurazione HUD"
 MenuList[17]="Liv. Ondeggiamento"
 ; EN: MenuList[18]="Net Speed"
 MenuList[18]="Velocità di Rete"
-; EN: MenuList[19]="Advanced Options"
-MenuList[19]="Opzioni Avanzate"
+; EN: MenuList[19]="Console"
+MenuList[19]="Console"
+; EN: MenuList[20]="Advanced Options"
+MenuList[20]="Opzioni Avanzate"
 ; EN: MenuTitle="OPTIONS MENU"
 MenuTitle="MENU OPZIONI"
-
-[TeamGame]
-; EN: ClassCaption="Team Play"
-ClassCaption="Partita di Squadra"
-; EN: NewTeamMessage=" is now on "
-NewTeamMessage=" è ora con la squadra "
-; EN: TeamColor[0]="Red"
-TeamColor[0]="Rosso"
-; EN: TeamColor[1]="Blue"
-TeamColor[1]="Blu"
-; EN: TeamColor[2]="Green"
-TeamColor[2]="Verde"
-; EN: TeamColor[3]="Gold"
-TeamColor[3]="Oro"
-; EN: GameName="Team Game"
-GameName="Partita di Squadra"
 
 [ASMD]
 ; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
 DeathMessage="%k ha inflitto danni mortali a %o con %w."
 FemDeathMessage="%k ha inflitto danni mortali a %o con %w."
+FemKillMessage="%k ha inflitto danni mortali a %o con %w."
 ; EN: PickupMessage="You got the ASMD"
 PickupMessage="Hai preso l'ASMD"
 ; EN: ItemName="ASMD"
 ItemName="ASMD"
 
-[UnrealWeaponMenu]
-; EN: MenuTitle="PRIORITIES"
-MenuTitle="PRIORITÀ"
-
-[UnrealBotConfigMenu]
-; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
-HelpMessage[1]="Se vero, i Bot regolano il loro livello d'abilità basandosi su quello degli utenti."
-; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
-HelpMessage[2]="Livello dell'abilità di base dei Bot (tra 0 e 3)."
-; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
-HelpMessage[3]="Se vero, i Bot entrano in gioco in ordine casuale. Se falso, entrano nell'ordine di configurazione."
-; EN: HelpMessage[4]="Change the configuration of individual bots."
-HelpMessage[4]="Cambia la configurazione dei singoli Bot."
-; EN: HelpMessage[5]="Number of bots to start play (max 15)."
-HelpMessage[5]="Numero di Bot per iniziare a giocare (max 15)."
-; EN: HelpMessage[6]="Use bots when playing with other people."
-HelpMessage[6]="Usa Bot quando giochi con altre persone."
-; EN: MenuList[1]="Auto-Adjust Skills"
-MenuList[1]="Autoregolazione Abilità"
-; EN: MenuList[2]="Base Skill"
-MenuList[2]="Abilità di Base"
-; EN: MenuList[3]="Random Order"
-MenuList[3]="Ordine Casuale"
-; EN: MenuList[4]="Configure Individual Bots"
-MenuList[4]="Configura Bot Singoli"
-; EN: MenuList[5]="Number of Bots"
-MenuList[5]="Numero di Bot"
-; EN: MenuList[6]="Bots in Multiplayer"
-MenuList[6]="Bot in Multiplayer"
-; EN: MenuTitle="BOTS"
-MenuTitle="BOT"
-
 [Eightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
 DeathMessage="%o è stato picchiato un sacco di volte da %w di %k."
-FemDeathMessage="%o è stato picchiato un sacco di volte da %w di %k."
+FemDeathMessage="%o è stato picchiata un sacco di volte da %w di %k."
+FemKillMessage="%o è stato picchiato un sacco di volte da %w di %k."
 ; EN: PickupMessage="You got the Eightball gun"
 PickupMessage="Hai preso il Lancia 8-ball"
 ; EN: ItemName="Eightball"
@@ -894,72 +1358,7 @@ MenuList[25]="RIPRISTINA DEFAULT"
 ; EN: MenuTitle="CONTROLS"
 MenuTitle="CONTROLLI"
 
-[UnrealNewKeyboardMenu]
-MenuWidth=340
-
-[CoopGame]
-; EN: ClassCaption="Cooperative Play"
-ClassCaption="Partita Cooperativa"
-; EN: GameName="Coop Game"
-GameName="Partita Cooperativa"
-
-[Cow]
-; EN: MenuName="Cow"
-MenuName="Mucca"
-
-[ShieldBelt]
-; EN: PickupMessage="You got the Shield Belt"
-PickupMessage="Hai preso la Cintura Scudo"
-; EN: ItemName="Shield Belt"
-ItemName="Cintura Scudo"
-
-[Flashlight]
-; EN: ExpireMessage="Flashlight batteries have died."
-ExpireMessage="Le pile della torcia si sono esaurite."
-; EN: PickupMessage="You picked up the Flashlight"
-PickupMessage="Hai raccolto la Torcia"
-; EN: ItemName="Flashlight"
-ItemName="Torcia"
-
-[DevilFish]
-; EN: MenuName="DevilFish"
-MenuName="DevilFish"
-
-[UnrealMainMenu]
-; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
-HelpMessage[1]="Premi Invio per modificare le opzioni di gioco, inclusi il caricamento e il salvataggio delle partite, il livello di difficoltà e i BotMatch."
-; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
-HelpMessage[2]="Premi Invio per modificare le opzioni di setup del multigiocatore, incluso iniziare o partecipare a una partita in rete, e cambiare l'aspetto, il nome, o la squadra."
-; EN: HelpMessage[3]="Hit enter to customize controls."
-HelpMessage[3]="Premi Invio per personalizzare i controlli."
-; EN: HelpMessage[4]="Change sound and display options."
-HelpMessage[4]="Cambia le opzioni audio e video."
-; EN: HelpMessage[5]="Hit enter to quit game."
-HelpMessage[5]="Premi Invio per uscire dal gioco."
-; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
-HelpMessage[7]="Chiama gratis l'1-877-4UNREAL per ordinare UNREAL!"
-; EN: MenuList[1]="GAME"
-MenuList[1]="GIOCO"
-; EN: MenuList[2]="MULTIPLAYER"
-MenuList[2]="MULTIGIOCATORE"
-; EN: MenuList[3]="OPTIONS"
-MenuList[3]="OPZIONI"
-; EN: MenuList[4]="AUDIO/VIDEO"
-MenuList[4]="AUDIO/VIDEO"
-; EN: MenuList[5]="QUIT"
-MenuList[5]="ESCI"
-; EN: MenuList[7]="ORDER INFO"
-MenuList[7]="INFO ORDINAZIONE"
-
-[UnrealLoadMenu]
-; EN: RestartString="Restart "
-RestartString="Ricomincia "
-; EN: MenuTitle="LOAD GAME"
-MenuTitle="CARICA PART."
-
 [UnrealSlotMenu]
-; EN: EmptySlot="..Empty.."
-EmptySlot="..Vuoto.."
 ; EN: MonthNames[0]="January"
 MonthNames[0]="Gennaio"
 ; EN: MonthNames[1]="February"
@@ -984,6 +1383,8 @@ MonthNames[9]="Ottobre"
 MonthNames[10]="Novembre"
 ; EN: MonthNames[11]="December"
 MonthNames[11]="Dicembre"
+; EN: EmptySlot="..Empty.."
+EmptySlot="..Vuoto.."
 
 [TranslatorEvent]
 ; EN: M_NewMessage="New Translator Message"
@@ -993,116 +1394,21 @@ M_TransMessage="Messaggio del Traduttore"
 ; EN: M_HintMessage="New hint message (press F3 to read)."
 M_HintMessage="Nuovo messaggio di suggerimento (premere F3 per leggere)."
 
-[NaliFruit]
-; EN: PickupMessage="You picked the Nali Healing Fruit +"
-PickupMessage="Hai raccolto il Frutto Medico dei Nali +"
-; EN: ItemName="Nali Healing Fruit"
-ItemName="Frutto Medico dei Nali"
-
-[Health]
-; EN: PickupMessage="You picked up a Health Pack +"
-PickupMessage="Hai preso un Pacchetto Salute +"
-; EN: ItemName="Health Pack"
-ItemName="Pacchetto Salute"
-
-[BabyCow]
-; EN: MenuName="Baby Cow"
-MenuName="Mucca Bambina"
-
-[UnrealGameMenu]
-; EN: HelpMessage[1]="Hit enter to save the current game."
-HelpMessage[1]="Premi Invio per salvare la partita attuale."
-; EN: HelpMessage[2]="Hit enter to load a saved game."
-HelpMessage[2]="Premi Invio per caricare una partita salvata."
-; EN: HelpMessage[3]="Select a difficulty level, and start a new game."
-HelpMessage[3]="Scegli un livello di difficoltà e inizia una nuova partita."
-; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
-HelpMessage[4]="Premi Invio per modificare le opzioni di gioco. Nota che non puoi farlo se stai giocando in modalità multigiocatore."
-; EN: HelpMessage[5]="DeathMatch against Bots."
-HelpMessage[5]="DeathMatch contro i Bot."
-; EN: MenuList[1]="SAVE GAME"
-MenuList[1]="SALVA PARTITA"
-; EN: MenuList[2]="LOAD GAME"
-MenuList[2]="CARICA PARTITA"
-; EN: MenuList[3]="NEW GAME"
-MenuList[3]="NUOVA PARTITA"
-; EN: MenuList[4]="GAME OPTIONS"
-MenuList[4]="OPZIONI GIOCO"
-; EN: MenuList[5]="BOTMATCH"
-MenuList[5]="BOTMATCH"
-
-[UnrealMultiPlayerMenu]
-; EN: HelpMessage[1]="Join a network game."
-HelpMessage[1]="Partecipa a partita in rete."
-; EN: HelpMessage[2]="Set up and start a network game."
-HelpMessage[2]="Imposta e inizia una partita in rete."
-; EN: HelpMessage[3]="Configure appearance, name, and team name."
-HelpMessage[3]="Configura aspetto, nome e nome della squadra."
-; EN: MenuList[1]="JOIN GAME"
-MenuList[1]="PART. GIOCO"
-; EN: MenuList[2]="START GAME"
-MenuList[2]="INIZIA GIOCO"
-; EN: MenuList[3]="PLAYER SETUP"
-MenuList[3]="IMP. GIOCAT."
-
-[UnrealChooseGameMenu]
-; EN: HelpMessage[1]="Choose which game to play."
-HelpMessage[1]="Scegli quale partita giocare."
-; EN: HelpMessage[2]="Choose which game to play."
-HelpMessage[2]="Scegli quale partita giocare."
-; EN: HelpMessage[3]="Choose which game to play."
-HelpMessage[3]="Scegli quale partita giocare."
-; EN: HelpMessage[4]="Choose which game to play."
-HelpMessage[4]="Scegli quale partita giocare."
-; EN: HelpMessage[5]="Choose which game to play."
-HelpMessage[5]="Scegli quale partita giocare."
-; EN: HelpMessage[6]="Choose which game to play."
-HelpMessage[6]="Scegli quale partita giocare."
-; EN: HelpMessage[7]="Choose which game to play."
-HelpMessage[7]="Scegli quale partita giocare."
-; EN: HelpMessage[8]="Choose which game to play."
-HelpMessage[8]="Scegli quale partita giocare."
-; EN: HelpMessage[9]="Choose which game to play."
-HelpMessage[9]="Scegli quale partita giocare."
-; EN: HelpMessage[10]="Choose which game to play."
-HelpMessage[10]="Scegli quale partita giocare."
-; EN: HelpMessage[11]="Choose which game to play."
-HelpMessage[11]="Scegli quale partita giocare."
-; EN: HelpMessage[12]="Choose which game to play."
-HelpMessage[12]="Scegli quale partita giocare."
-; EN: HelpMessage[13]="Choose which game to play."
-HelpMessage[13]="Scegli quale partita giocare."
-; EN: HelpMessage[14]="Choose which game to play."
-HelpMessage[14]="Scegli quale partita giocare."
-; EN: HelpMessage[15]="Choose which game to play."
-HelpMessage[15]="Scegli quale partita giocare."
-; EN: HelpMessage[16]="Choose which game to play."
-HelpMessage[16]="Scegli quale partita giocare."
-; EN: HelpMessage[17]="Choose which game to play."
-HelpMessage[17]="Scegli quale partita giocare."
-; EN: HelpMessage[18]="Choose which game to play."
-HelpMessage[18]="Scegli quale partita giocare."
-; EN: HelpMessage[19]="Choose which game to play."
-HelpMessage[19]="Scegli quale partita giocare."
-; EN: MenuTitle="CHOOSE GAME"
-MenuTitle="SCEGLI GIOCO"
-
 [AutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
 DeathMessage="%o è stato fatto fuori da %w di %k."
-FemDeathMessage="%o è stato fatto fuori da %w di %k."
+FemDeathMessage="%o è stata fatta fuori da %w di %k."
+FemKillMessage="%o è stato fatto fuori da %w di %k."
 ; EN: PickupMessage="You got the Automag"
 PickupMessage="Hai preso l'Automag"
 ; EN: ItemName="Automag"
 ItemName="Automag"
 
-[UnrealHelpMenu]
-; EN: HelpMessage[1]="Open the troubleshooting document."
-HelpMessage[1]="Apri il documento sulla risoluzione dei problemi."
-; EN: MenuList[1]="TroubleShooting"
-MenuList[1]="Risoluzione dei Problemi"
-; EN: MenuTitle="HELP"
-MenuTitle="AIUTO"
+[UnrealChooseGameMenu]
+; EN: HelpMessage[1]="Choose which game to play."
+HelpMessage[1]="Scegli quale partita giocare."
+; EN: MenuTitle="CHOOSE GAME"
+MenuTitle="SCEGLI GIOCO"
 
 [UnrealDMGameOptionsMenu]
 ; EN: GameStyle[0]="Classic"
@@ -1144,69 +1450,11 @@ MenuList[8]="Stile di Gioco"
 ; EN: MenuList[9]="Death Messages"
 MenuList[9]="Messaggi di Morte"
 
-[YesNoMenu]
-; EN: YesSelString="[YES]  No"
-YesSelString="[SÌ]  No"
-; EN: NoSelString=" Yes  [NO]"
-NoSelString=" Sì  [NO]"
-
-[UnrealListenMenu]
-; EN: HelpMessage[1]="Hit Enter to select this server."
-HelpMessage[1]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[2]="Hit Enter to select this server."
-HelpMessage[2]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[3]="Hit Enter to select this server."
-HelpMessage[3]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[4]="Hit Enter to select this server."
-HelpMessage[4]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[5]="Hit Enter to select this server."
-HelpMessage[5]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[6]="Hit Enter to select this server."
-HelpMessage[6]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[7]="Hit Enter to select this server."
-HelpMessage[7]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[8]="Hit Enter to select this server."
-HelpMessage[8]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[9]="Hit Enter to select this server."
-HelpMessage[9]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[10]="Hit Enter to select this server."
-HelpMessage[10]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[11]="Hit Enter to select this server."
-HelpMessage[11]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[12]="Hit Enter to select this server."
-HelpMessage[12]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[13]="Hit Enter to select this server."
-HelpMessage[13]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[14]="Hit Enter to select this server."
-HelpMessage[14]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[15]="Hit Enter to select this server."
-HelpMessage[15]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[16]="Hit Enter to select this server."
-HelpMessage[16]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[17]="Hit Enter to select this server."
-HelpMessage[17]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[18]="Hit Enter to select this server."
-HelpMessage[18]="Premi Invio per selezionare questo server."
-; EN: HelpMessage[19]="Hit Enter to select this server."
-HelpMessage[19]="Premi Invio per selezionare questo server."
-; EN: MenuTitle="LOCAL SERVERS"
-MenuTitle="SERVER LOCALI"
-
-[SCUBAGear]
-; EN: PickupMessage="You picked up the SCUBA Gear"
-PickupMessage="Hai raccolto l'Equipaggiamento Subacqueo"
-; EN: ItemName="SCUBA Gear"
-ItemName="Equipaggiamento Subacqueo"
-
-[Amplifier]
-; EN: ExpireMessage="Energy Amplifier is out of power."
-ExpireMessage="L'Amplificatore di Energia è senza energia."
-; EN: PickupMessage="You got the Energy Amplifier"
-PickupMessage="Hai raccolto l'Amplificatore di Energia"
-; EN: ItemName="Energy Amplifier"
-ItemName="Amplificatore di Energia"
-
 [UnrealNewGameMenu]
+; EN: ModeString[0]="Enhanced"
+ModeString[0]="Migliorato"
+; EN: ModeString[1]="Classic"
+ModeString[1]="Classico"
 ; EN: HelpMessage[1]="Tourist mode."
 HelpMessage[1]="Modalità turista."
 ; EN: HelpMessage[2]="Ready for some action!"
@@ -1221,6 +1469,8 @@ HelpMessage[5]="Per i giocatori che vogliono una difficoltà in più."
 HelpMessage[6]="Per i giocatori più accaniti."
 ; EN: HelpMessage[7]="HOLY SHIT!"
 HelpMessage[7]="MERDA SANTA!"
+; EN: HelpMessage[8]="Should gameplay contain some minor bugfixes or remain classic?"
+HelpMessage[8]="Il gameplay dovrebbe contenere alcune correzioni di bug minori o rimanere classico?"
 ; EN: MenuList[1]="EASY"
 MenuList[1]="FACILE"
 ; EN: MenuList[2]="MEDIUM"
@@ -1233,82 +1483,18 @@ MenuList[5]="ESTREMO"
 ; EN: MenuList[6]="NIGHTMARE"
 MenuList[6]="INCUBO"
 MenuList[7]="ULTRA-UNREAL"
-
-[TazerProj]
-; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"
-ComboKillMessage="%o non ha potuto evitare l'esplosione di shock dalla %w di %k."
-
-[SinglePlayer]
-GameName="Unreal"
-
-[UnrealSaveMenu]
-; EN: CantSave="CAN'T SAVE WHEN DEAD"
-CantSave="IMPOSSIBILE SALVARE DA MORTO"
-; EN: MenuTitle="SAVE GAME"
-MenuTitle="SALVA PART."
+; EN: MenuList[8]="Balance Mode: "
+MenuList[8]="Bilanciamento: "
 
 [Stinger]
 ; EN: DeathMessage="%o was perforated by %k's %w."
 DeathMessage="%o è stato perforato da %w di %k."
-FemDeathMessage="%o è stato perforato da %w di %k."
+FemDeathMessage="%o è stata perforata da %w di %k."
+FemKillMessage="%o è stato perforato da %w di %k."
 ; EN: PickupMessage="You picked up the Stinger"
 PickupMessage="Hai preso lo Stinger"
 ; EN: ItemName="Stinger"
 ItemName="Stinger"
-
-[RocketCan]
-; EN: PickupMessage="You picked up 12 Eightballs"
-PickupMessage="Hai raccolto 12 8-ball"
-; EN: ItemName="Eightballs"
-ItemName="8-ball"
-
-[VoiceBox]
-; EN: PickupMessage="You picked up the Voice Box"
-PickupMessage="Hai raccolto il Simulatore Vocale"
-; EN: ItemName="Voice Box"
-ItemName="Simulatore Vocale"
-
-[WeaponPowerUp]
-; EN: PickupMessage="You got the Dispersion Pistol Powerup"
-PickupMessage="Hai preso un Aggiornamento per la Pistola Dissolvente"
-; EN: ItemName="Dispersion Pistol Powerup"
-ItemName="Aggiornamento per Pistola Dissolvente"
-
-[Flare]
-; EN: PickupMessage="You got a Flare"
-PickupMessage="Hai un Razzo Segnalatore"
-; EN: ItemName="Flare"
-ItemName="Razzo Segnalatore"
-
-[ShellBox]
-; EN: PickupMessage="You picked up 50 bullets"
-PickupMessage="Hai raccolto 50 Proiettili"
-; EN: ItemName="Bullet Box"
-ItemName="Proiettili"
-
-[ASMDAmmo]
-; EN: PickupMessage="You picked up an ASMD Core"
-PickupMessage="Hai raccolto un Nucleo ASMD"
-; EN: ItemName="ASMD Core"
-ItemName="Nucleo ASMD"
-
-[MaleThree]
-; EN: MenuName="Male 3"
-MenuName="Uomo 3"
-
-[FemaleOne]
-; EN: MenuName="Female 1"
-MenuName="Donna 1"
-
-[OKMenu]
-; EN: OKString="[OK]"
-OKString="[OK]"
-
-[UnrealTeamGameOptionsMenu]
-; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
-HelpMessage[10]="Percentuale di danno subito quando colpito dal fuoco amico. Nota che subisci comunque i danni causati dalle tue stesse armi."
-; EN: MenuList[10]="Friendly Fire Scale"
-MenuList[10]="Regolatore Fuoco Amico"
 
 [UnrealCoopGameOptions]
 ; EN: HelpMessage[3]="Skill level setting."
@@ -1332,55 +1518,41 @@ MenuList[6]="Ric. Istant. dell'Arma"
 ; EN: MenuList[7]="Instant Item Respawn"
 MenuList[7]="Ric. Istant. dell'Oggetto"
 
-[SuperHealth]
-; EN: PickupMessage="You picked up the Super Health Pack"
-PickupMessage="Hai raccolto la Supersalute"
-; EN: ItemName="Super Health Pack"
-ItemName="Supersalute"
-
 [UpgradeMenu]
 ; EN: MenuList[1]="You need a newer version of Unreal to play on this server. Would you like to go to the Unreal web site for a newer version?"
 MenuList[1]="Hai bisogno di una versione più recente di Unreal per giocare su questo server. Vuoi andare al sito web di Unreal per ottenere una versione più recente?"
 
-[StingerAmmo]
-; EN: PickupMessage="You picked up 40 Tarydium Shards"
-PickupMessage="Hai raccolto 40 schegge di Tarydium"
-; EN: ItemName="Tarydium Shards"
-ItemName="Schegge di Tarydium"
+[UnrealScoreBoard]
+; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
+DeadStr="Sei morto. Premi [Fuoco] per rigenerarti!"
+; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
+SpectatorStr="Stai guardando. Premi [Fuoco] per vederlo da un altro giocatore!"
 
-[Shells]
-; EN: PickupMessage="You picked up 12 shells"
-PickupMessage="Hai raccolto 12 ricariche"
-; EN: ItemName="Shells"
-ItemName="Ricariche"
+[TazerProj]
+; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"
+ComboKillMessage="%o non ha potuto evitare l'esplosione di shock dalla %w di %k."
+FemComboKillMessage="%o non ha potuto evitare l'esplosione di shock dalla %w di %k."
 
-[KevlarSuit]
-; EN: PickupMessage="You picked up the Kevlar Suit"
-PickupMessage="Hai raccolto la Tuta in Kevlar"
-; EN: ItemName="Kevlar Suit"
-ItemName="Tuta in Kevlar"
-
-[Clip]
-; EN: PickupMessage="You picked up a Clip"
-PickupMessage="Hai raccolto un Ricaricatore"
-; EN: ItemName="Clip"
-ItemName="Ricaricatore"
-
-[Bandages]
-; EN: PickupMessage="You got some Bandages +"
-PickupMessage="Hai preso alcune bende +"
-; EN: ItemName="Bandages"
-ItemName="Bende"
-
-[Armor]
-; EN: PickupMessage="You got the Assault Vest"
-PickupMessage="Hai raccolto la Tuta Antiproiettile"
-; EN: ItemName="Assault Vest"
-ItemName="Tuta Antiproiettile"
+[UnrealNewKeyboardMenu]
+MenuWidth=340
 
 [Hawk]
+; EN: NameArticle=" a "
+NameArticle=" un "
 ; EN: MenuName="Hawk"
 MenuName="Falco"
+
+[UTranslocator]
+; EN: DeathMessage="%o was telefragged by %k."
+DeathMessage="%o è stato teletrasportato da %k."
+FemDeathMessage="%o è stata teletrasportata da %k."
+FemKillMessage="%o è stato teletrasportato da %k."
+; EN: PickupMessage="You got the Translocator Source Module"
+PickupMessage="Hai il Translocator Source Module"
+; EN: ItemName="Translocator"
+ItemName="Traslocatore"
+; EN: ItemArticle="the"
+ItemArticle="il"
 
 [MiniGunSentry]
 ; EN: PickupMessage="You got an Automatic Sentry Gun"
@@ -1390,29 +1562,20 @@ ItemName="Sentinella Automatica"
 ; EN: M_Activated=" deployed."
 M_Activated=" schierato."
 
-[Woodruff]
-; EN: PickupMessage="You got some Master of the Woods +"
-PickupMessage="Hai un po 'di Maestro dei Boschi +"
-; EN: ItemName="Master of the Woods"
-ItemName="Maestro dei Boschi"
-
 [UIKeyTrigger]
 ; EN: SuccessMessage="Access granted."
 SuccessMessage="Accesso garantito."
 ; EN: FailtureMessage="You need a key to open this door."
 FailtureMessage="Hai bisogno di una chiave per aprire questa porta."
 
-[UTranslocator]
-; EN: DeathMessage="%o was telefragged by %k."
-DeathMessage="%o è stato teletrasportato da %k."
-FemDeathMessage="%o è stato teletrasportato da %k."
-; EN: PickupMessage="You got the Translocator Source Module"
-PickupMessage="Hai il Translocator Source Module"
-; EN: ItemName="Translocator"
-ItemName="Traslocatore"
-; EN: ItemArticle="the"
-ItemArticle="il"
+[Woodruff]
+; EN: PickupMessage="You got some Master of the Woods +"
+PickupMessage="Hai un po 'di Maestro dei Boschi +"
+; EN: ItemName="Master of the Woods"
+ItemName="Maestro dei Boschi"
 
 [WoodruffSchool]
 ; EN: PickupMessage="You got a bunch of Master of the Woods +"
 PickupMessage="Hai un sacco di Maestro dei Boschi +"
+; EN: ItemName="Master of the Woods"
+ItemName="Maestro dei Boschi"

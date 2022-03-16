@@ -1,22 +1,22 @@
 ﻿[Public]
 Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
-Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=upak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=upak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=upak.CARifle,Class=Class,MetaClass=Engine.Weapon)
 ; EN: Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
 Preferences=(Caption="Tarn-Match",Parent="Spieltypen",Class=UPak.CloakMatch,Immediate=True)
 ; EN: Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
@@ -63,6 +63,8 @@ LogEntryMsg="LOG-EINTRAG:"
 [GrenadeLauncher]
 ; EN: DeathMessage="%k's grenade made %o blew up."
 DeathMessage="Die Granate von %k ließ %o explodieren."
+FemDeathMessage="Die Granate von %k ließ %o explodieren."
+FemKillMessage="Die Granate von %k ließ %o explodieren."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
 PickupMessage="Du hast den UMS Granatwerfer"
 ; EN: ItemName="UMS Granatenwerfer"
@@ -85,11 +87,14 @@ M_Deactivated=" deaktiviert"
 MultWeapSlotMsg="Drücke die Waffentaste erneut, um zwischen den Waffen umzuschalten."
 
 [UPakSinglePlayer]
-GameName="Unreal Mission Pack"
+; EN: GameName="Unreal Mission Pack"
+GameName="Unreal Missionspaket"
 
 [RocketLauncher]
 ; EN: DeathMessage="%k's rocket turned %o's body into chunks."
 DeathMessage="Die Rakete von %k verwandelte den Körper von %o in Stücke."
+FemDeathMessage="Die Rakete von %k verwandelte den Körper von %o in Stücke."
+FemKillMessage="Die Rakete von %k verwandelte den Körper von %o in Stücke."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
 PickupMessage="Du hast den UMS Raketenwerfer"
 ; EN: ItemName="UMS Rocket Launcher"
@@ -106,13 +111,15 @@ GameName="Tarn-Match"
 [CARifle]
 ; EN: DeathMessage="%k's %w turned %o into swiss cheese."
 DeathMessage="Das %w von %k verwandelte %o in Schweizer Käse."
+FemDeathMessage="Das %w von %k verwandelte %o in Schweizer Käse."
+FemKillMessage="Das %w von %k verwandelte %o in Schweizer Käse."
 ; EN: PickupMessage="You got the Combat Assault Rifle"
 PickupMessage="Du hast das Sturmgewehr"
 ; EN: ItemName="Combat Assault Rifle"
 ItemName="Sturmgewehr"
 
 [UPakScubaGear]
-; EN: RechargedMessage="ScubaGear fully recharged."
+; EN: RechargedMessage="Marine SCUBA Gear fully recharged."
 RechargedMessage="Tauchausrüstung vollständig aufgeladen."
 ; EN: LowOxygenMessage="Oxygen supply critically low"
 LowOxygenMessage="Sauerstoffversorgung kritisch niedrig"
@@ -182,3 +189,61 @@ GameName="Terran-Waffen-Match"
 PickupMessage="Du hast das Comp-Tablett"
 ; EN: ItemName="Computer Tablet"
 ItemName="Comp-Tablett"
+
+[MarineArctic]
+; EN: MenuName="UMS Arctic Marine"
+MenuName="Arktische Marine UMS"
+
+[MarineDesert]
+; EN: MenuName="UMS Desert Marine"
+MenuName="Wüstenmarine UMS"
+
+[MarineJungle]
+; EN: MenuName="UMS Jungle Marine"
+MenuName="Dschungelmarine UMS"
+
+[SpaceMarine]
+; EN: MenuName="UMS Space Marine"
+MenuName="Space Marine UMS"
+
+[TransitionBrute]
+; EN: NameArticle=" a "
+NameArticle=" ein "
+; EN: MenuName="Brute"
+MenuName="Rohling"
+
+[TransitionCow]
+; EN: NameArticle=" a "
+NameArticle=" eine "
+; EN: MenuName="Nali Cow"
+MenuName="Nali-Kuh"
+
+[NaliCopter]
+; EN: NameArticle=" a "
+NameArticle=" ein "
+; EN: MenuName="NaliCopter"
+MenuName="Nalikopter"
+
+[Predator]
+; EN: NameArticle=" a "
+NameArticle=" ein "
+; EN: MenuName="Predator"
+MenuName="Raubtier"
+
+[TransitionPredator]
+; EN: NameArticle=" a "
+NameArticle=" ein "
+; EN: MenuName="Predator"
+MenuName="Raubtier"
+
+[PackHunter]
+; EN: NameArticle=" a "
+NameArticle=" ein "
+; EN: MenuName="Pack Hunter"
+MenuName="Gruppenjäger"
+
+[Spinner]
+; EN: NameArticle=" a "
+NameArticle=" eine "
+; EN: MenuName="Spinner"
+MenuName="Spinne"

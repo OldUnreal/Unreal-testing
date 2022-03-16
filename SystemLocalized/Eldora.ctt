@@ -12,8 +12,8 @@ LevelEntryText="Entrant al pou Eldora"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."
-Message="LOG: S. Brown: Les muntanyes són cada vegada més difícils de caminar. M'estic cansant. Acabo de descobrir un pou proper, a punt d’investigar. Està protegit per bruts, però hauria de poder relliscar sense ser detectat."
+Message="REGISTRE: S. Brown: Les muntanyes són cada vegada més difícils de caminar. M'estic cansant. Acabo de descobrir un pou proper, a punt d’investigar. Està protegit per bruts, però hauria de poder relliscar sense ser detectat."
 
 [TranslatorEvent0]
 ; EN: Message="LOG: J. Walden: No sign of anyone yet. It's getting dark again. Going to camp out near the well until morning. Well seems empty, there may be a way out. Maybe I'll find the others."
-Message="LOG: J. Walden: Encara no hi ha rastre de ningú. Torna a fer-se fosc. Sortir a acampar prop del pou fins al matí. Sembla buit, pot ser que hi hagi una sortida. Potser trobaré els altres."
+Message="REGISTRE: J. Walden: Encara no hi ha rastre de ningú. Torna a fer-se fosc. Sortir a acampar prop del pou fins al matí. Sembla buit, pot ser que hi hagi una sortida. Potser trobaré els altres."

@@ -37,59 +37,149 @@ Preferences=(Caption="Mapes de Partit Fosc",Parent="Llistes de mapes",Class=Unre
 ; EN: ESCMessage="Press ESC to begin"
 ESCMessage="Premeu ESC per començar"
 
-[EndgameHud]
-; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely.  Yet it's fuel has depleted and you drift aimlessly."
-Message1="La vaina d’escapament Skaarj s’ha alliberat de l’atracció gravitacional del planeta ... amb prou feines. Tot i així, el combustible s’ha esgotat i es deriva sense rumb."
-; EN: Message2="From where many have died, you have escaped.  You laugh to yourself; so much has happened, but little has changed."
-Message2="D’on han mort molts, n’heu escapat. Rius per a tu mateix; han passat tantes coses, però poc ha canviat."
-; EN: Message3="Before the crash landing, you were trapped in a cramped cell.  Now, once again you are confined in a prison."
-Message3="Abans de l’aterratge, quedaves atrapat en una cel·la estreta. Ara, una vegada més, estàs confinat a una presó."
-; EN: Message4="But, you feel confident that someone will come upon your small vessel... eventually."
-Message4="Però, us sentiu segurs que algú arribarà al vostre petit vaixell ... finalment."
-; EN: Message5="Until then, you drift and hope."
-Message5="Fins llavors, es deriva i s’espera."
-; EN: Message6="Press fire to restart"
-Message6="Premeu el disparador per reiniciar"
-
-[KingOfTheHill]
-; EN: ClassCaption="King Of The Hill"
-ClassCaption="El Rei del Turó"
-; EN: KingMessage=" is the new king of the hill!"
-KingMessage=" és el nou rei del turó!"
-; EN: NewKingMessage="%s is the new king of the hill!"
-NewKingMessage="%s és el nou rei del turó!"
-; EN: NewQueenMessage="%s is the new queen of the hill!"
-NewQueenMessage="%s és la nova reina del turó!"
-; EN: GameName="King of the Hill"
-GameName="Rei del Turó"
-
-[ParentBlob]
-; EN: BlobKillMessage="was corroded by a Blob"
-BlobKillMessage="va ser corroït per un Blob"
-
-[FlakCannon]
-; EN: DeathMessage="%o was ripped to shreds by %k's %w."
-DeathMessage="%o va ser destrossat pel %w de %k."
-FemDeathMessage="%o va ser destrossada pel %w de %k."
-; EN: PickupMessage="You got the Flak Cannon"
-PickupMessage="Tens el Canó de Metralla"
-; EN: ItemName="Flak Cannon"
-ItemName="Canó de Metralla"
-
-[Rifle]
-; EN: DeathMessage="%k put a bullet through %o's head."
-DeathMessage="%k posa una bala al cap de %o."
-FemDeathMessage="%k posa una bala al cap de %o."
-; EN: PickupMessage="You got the Rifle"
-PickupMessage="Tens el Fusell"
-; EN: ItemName="Sniper Rifle"
-ItemName="Fusell de Franctirador"
-
 [Queen]
 ; EN: NameArticle=" the "
+NameArticle=" la "
+; EN: MenuName="Queen"
+MenuName="Reina"
+
+[Behemoth]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Behemoth"
+MenuName="Gigante"
+
+[Blob]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Blob"
+MenuName="Gota"
+
+[Bloblet]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Bloblet"
+MenuName="Goteta"
+
+[Gasbag]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Gasbag"
+MenuName="Bossa Gasosa"
+
+[GiantGasbag]
+; EN: NameArticle=" the "
+NameArticle=" la "
+; EN: MenuName="Giant Gasbag"
+MenuName="Bossa Gasosa Gigant"
+
+[GiantManta]
+; EN: NameArticle=" the "
 NameArticle=" el "
+; EN: MenuName="Giant Manta"
+MenuName="Manta Gegant"
+
+[Krall]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Krall"
+MenuName="Krall"
+
+[KrallElite]
+; EN: NameArticle=" an "
+NameArticle=" un "
+; EN: MenuName="Elite Krall"
+MenuName="Krall d'Elit"
+
+[LeglessKrall]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Legless Krall"
+MenuName="Krall Sense Cames"
+
+[Mercenary]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Mercenary"
+MenuName="Mercenari"
+
+[MercenaryElite]
+; EN: NameArticle=" an "
+NameArticle=" un "
+; EN: MenuName="Elite Mercenary"
+MenuName="Mercenari d'Elit"
+
+[Pupae]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Pupae"
+MenuName="Pupa"
+
+[SkaarjAssassin]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Assassin"
+MenuName="Assassí Skaarj"
+
+[SkaarjBerserker]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Berserker"
+MenuName="Berserker Skaarj"
+
+[SkaarjGunner]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Gunner"
+MenuName="Artilhiller Skaarj"
+
+[SkaarjInfantry]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Infantry"
+MenuName="Soldat d'Infanteria Skaarj"
+
+[SkaarjLord]
+; EN: NameArticle=" the "
+NameArticle=" el "
+; EN: MenuName="Skaarj Lord"
+MenuName="Cap Skaarj"
+
+[SkaarjOfficer]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Officer"
+MenuName="Oficial Skaarj"
+
+[SkaarjSniper]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Sniper"
+MenuName="Franctirador Skaarj"
+
+[SkaarjTrooper]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Trooper"
+MenuName="Soldat Skaarj"
+
+[Titan]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Titan"
+MenuName="Tità"
+
+[StoneTitan]
+; EN: NameArticle=" the "
+NameArticle=" el "
+; EN: MenuName="Stone Titan"
+MenuName="Tità de Pedra"
 
 [SkaarjPlayer]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Soldat Skaarj"
+
+[SkaarjPlayerBot]
 ; EN: MenuName="Skaarj Trooper"
 MenuName="Soldat Skaarj"
 
@@ -100,34 +190,8 @@ MenuName="Nali"
 [WarLord]
 ; EN: NameArticle=" the "
 NameArticle=" el "
-
-[Minigun]
-; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
-DeathMessage="%k %w va convertir %o en un tros de carn amb fuites."
-FemDeathMessage="%k %w va convertir %o en un tros de carn amb fuites."
-; EN: PickupMessage="You got the Minigun"
-PickupMessage="Tens el Minigun"
-; EN: ItemName="Minigun"
-ItemName="Minigun"
-
-[GESBioRifle]
-; EN: DeathMessage="%o drank a glass of %k's dripping green load."
-DeathMessage="%o va beure un got de %k de càrrega verda degotejant."
-FemDeathMessage="%o va beure un got de %k de càrrega verda degotejant."
-; EN: PickupMessage="You got the GES BioRifle"
-PickupMessage="Tens el Rifle Bio GES"
-; EN: ItemName="GES BioRifle"
-ItemName="Rifle Bio GES"
-
-[Squid]
-; EN: MenuName="Squid"
-MenuName="Calamar"
-
-[DarkMatch]
-; EN: ClassCaption="Darkmatch"
-ClassCaption="Partit Fosc"
-; EN: GameName="Darkmatch"
-GameName="Partit Fosc"
+; EN: MenuName="WarLord"
+MenuName="Cap Guerrer"
 
 [SearchLight]
 ; EN: ExpireMessage="The Search Light batteries have died."
@@ -143,6 +207,12 @@ PickupMessage="Has recollit algunes Fulles Filoses"
 ; EN: ItemName="Razor Blades"
 ItemName="Fulles Filoses"
 
+[DarkMatch]
+; EN: ClassCaption="Darkmatch"
+ClassCaption="Partit Fosc"
+; EN: GameName="Darkmatch"
+GameName="Partit Fosc"
+
 [FlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
 PickupMessage="Has recollit 10 Projectils de Metralla"
@@ -150,6 +220,10 @@ PickupMessage="Has recollit 10 Projectils de Metralla"
 ItemName="Projectils de Metralla"
 
 [MaleOne]
+; EN: MenuName="Male 1"
+MenuName="Home 1"
+
+[MaleOneBot]
 ; EN: MenuName="Male 1"
 MenuName="Home 1"
 
@@ -181,20 +255,19 @@ PickupMessage="Has recollit el Camp de Força Portàtil"
 ; EN: ItemName="Force Field"
 ItemName="Camp de Força Portàtil"
 
-[RazorJack]
-; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
-DeathMessage="%k va treure un tros cruent de %o amb el %w."
-FemDeathMessage="%k va treure un tros cruent de %o amb el %w."
-; EN: PickupMessage="You got the RazorJack"
-PickupMessage="Tens el Llançador de Fulles"
-; EN: ItemName="RazorJack"
-ItemName="Llançador de Fulles"
-
 [FemaleTwo]
 ; EN: MenuName="Female 2"
 MenuName="Dona 2"
 
+[FemaleTwoBot]
+; EN: MenuName="Female 2"
+MenuName="Dona 2"
+
 [MaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Home 2"
+
+[MaleTwoBot]
 ; EN: MenuName="Male 2"
 MenuName="Home 2"
 
@@ -218,7 +291,7 @@ PickupMessage="Heu recollit el Vestit d’Amiant"
 ; EN: ItemName="Asbestos Suit"
 ItemName="Vestit d'Amiant"
 
-[Fell]
+[fell]
 ; EN: Name="fell"
 Name="caigut"
 FemName="caiguda"
@@ -232,7 +305,7 @@ PickupMessage="Tens un Projectil de Metralla"
 ; EN: ItemName="Flak Shell"
 ItemName="Projectil de Metralla"
 
-[Drowned]
+[drowned]
 ; EN: Name="drowned"
 Name="ofegat"
 FemName="ofegada"
@@ -290,16 +363,126 @@ PickupMessage="Tens un Cartutxo de Fusell"
 ; EN: ItemName="Rifle Round"
 ItemName="Cartutxo de Fusell"
 
+[ParentBlob]
+; EN: BlobKillMessage="was corroded by a Blob"
+BlobKillMessage="ha estat corroït per una Gota"
+FemBlobKillMessage="ha estat corroïda per una Gota"
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Blob"
+MenuName="Gota"
+
+[IceSkaarj]
+; EN: NameArticle=" an "
+NameArticle=" un "
+; EN: MenuName="Ice Skaarj"
+MenuName="Skaarj Gèlid"
+
+[EndgameHud]
+; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely.  Yet it's fuel has depleted and you drift aimlessly."
+Message1="La vaina d’escapament Skaarj s’ha alliberat de l’atracció gravitacional del planeta ... amb prou feines. Tot i així, el combustible s’ha esgotat i es deriva sense rumb."
+; EN: Message2="From where many have died, you have escaped.  You laugh to yourself; so much has happened, but little has changed."
+Message2="D’on han mort molts, n’heu escapat. Rius per a tu mateix; han passat tantes coses, però poc ha canviat."
+; EN: Message3="Before the crash landing, you were trapped in a cramped cell.  Now, once again you are confined in a prison."
+Message3="Abans de l’aterratge, quedaves atrapat en una cel·la estreta. Ara, una vegada més, estàs confinat a una presó."
+; EN: Message4="But, you feel confident that someone will come upon your small vessel... eventually."
+Message4="Però, us sentiu segurs que algú arribarà al vostre petit vaixell ... finalment."
+; EN: Message5="Until then, you drift and hope."
+Message5="Fins llavors, es deriva i s’espera."
+; EN: Message6="To Be Continued..."
+Message6="Continuarà..."
+; EN: Message7="Press fire to restart"
+Message7="Premeu el disparador per reiniciar"
+
+[KingOfTheHill]
+; EN: ClassCaption="King Of The Hill"
+ClassCaption="El Rei del Turó"
+; EN: KingMessage=" is the new king of the hill!"
+KingMessage=" és el nou rei del turó!"
+; EN: NewKingMessage="%s is the new king of the hill!"
+NewKingMessage="%s és el nou rei del turó!"
+; EN: NewQueenMessage="%s is the new queen of the hill!"
+NewQueenMessage="%s és la nova reina del turó!"
+; EN: GameName="King of the Hill"
+GameName="Rei del Turó"
+
+[FlakCannon]
+; EN: DeathMessage="%o was ripped to shreds by %k's %w."
+DeathMessage="%o ha estat destrossat per l'%w de %k."
+FemDeathMessage="%o ha estat destrossada per l'%w de %k."
+FemKillMessage="%o ha estat destrossat per l'%w de %k."
+; EN: PickupMessage="You got the Flak Cannon"
+PickupMessage="Tens el Canó de Metralla"
+; EN: ItemName="Flak Cannon"
+ItemName="Canó de Metralla"
+
+[Rifle]
+; EN: DeathMessage="%k put a bullet through %o's head."
+DeathMessage="%k ha posat una bala al cap de %o."
+FemDeathMessage="%k ha posat una bala al cap de %o."
+FemKillMessage="%k ha posat una bala al cap de %o."
+; EN: PickupMessage="You got the Rifle"
+PickupMessage="Tens el Fusell"
+; EN: ItemName="Sniper Rifle"
+ItemName="Fusell de Franctirador"
+
+[Minigun]
+; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
+DeathMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
+FemDeathMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
+FemKillMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
+; EN: PickupMessage="You got the Minigun"
+PickupMessage="Tens el Minigun"
+; EN: ItemName="Minigun"
+ItemName="Minigun"
+
+[GESBioRifle]
+; EN: DeathMessage="%o drank a glass of %k's dripping green load."
+DeathMessage="%o ha begut un got de la regalima càrrega verda de %k."
+FemDeathMessage="%o ha begut un got de la regalima càrrega verda de %k."
+FemKillMessage="%o ha begut un got de la regalima càrrega verda de %k."
+; EN: PickupMessage="You got the GES BioRifle"
+PickupMessage="Tens el Rifle Bio GES"
+; EN: ItemName="GES BioRifle"
+ItemName="Rifle Bio GES"
+
+[RazorJack]
+; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
+DeathMessage="%k li ha tret un tros de carn a %o amb el %w."
+FemDeathMessage="%k li ha tret un tros de carn a %o amb el %w."
+FemKillMessage="%k li ha tret un tros de carn a %o amb el %w."
+; EN: PickupMessage="You got the RazorJack"
+PickupMessage="Tens el Llançador de Fulles"
+; EN: ItemName="RazorJack"
+ItemName="Llançador de Fulles"
+
+[Squid]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Squid"
+MenuName="Calamar"
+
+[Chameleon]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Chameleon"
+MenuName="Camaleó"
+
 [QuadShot]
 ; EN: DeathMessage="%o was blasted to bits by %k's %w."
 DeathMessage="%o s'ha convertit en peces per %w de %k."
 FemDeathMessage="%o s'ha convertida en peces per %w de %k." 
+FemKillMessage="%o s'ha convertit en peces per %w de %k."
 ; EN: PickupMessage="You got the Quad-Barreled Shotgun"
 PickupMessage="Tens l’Escopeta Quàdruple"
 ; EN: ItemName="Quad-Barreled Shotgun"
 ItemName="Escopeta Quàdruple"
 
 [PeaceMaker]
+; EN: DeathMessage="One of %k's %w missiles blew up %o."
+DeathMessage="Un dels míssils del %w de %k ha arribat a %o."
+FemDeathMessage="Un dels míssils del %w de %k ha arribada a %o."
+FemKillMessage="Un dels míssils del %w de %k ha arribat a %o."
 ; EN: PickupMessage="You got the Peacemaker"
 PickupMessage="Tens el Pacificador"
 ; EN: ItemName="Peacemaker"

@@ -36,7 +36,7 @@ Message="Post de segueretat, ACCÉS DENEGAT."
 ; EN: Message="Primary Power Supply, ACCESS DENIED."
 Message="Font Principal d'Energia, ACCÉS DENEGAT."
 ; EN: Hint="Door can be unlocked from the control panel in the Security Post."
-Hint="La La porta pot ser oberta des del panell de control en el Post de Seguretat."
+Hint="La porta pot ser oberta des del panell de control en el Post de Seguretat."
 
 [TranslatorEvent11]
 ; EN: Message="ACCESS DENIED: The Intruder must be eliminated. All War Masters are being routed to this area upon arrival from the Source."

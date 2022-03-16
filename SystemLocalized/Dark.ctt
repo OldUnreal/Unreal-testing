@@ -2,13 +2,13 @@
 ; EN: Title="Dark Arena"
 Title="Arena Fosca"
 ; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Entrant al Dark Arena"
+LevelEntryText="Entrant a l'Arena Fosca"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Arena Fosca"
 ; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Entrant al Dark Arena"
+LevelEntryText="Entrant a l'Arena Fosca"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."

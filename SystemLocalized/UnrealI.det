@@ -183,10 +183,6 @@ MenuName="Soldat Skaarj"
 ; EN: MenuName="Skaarj Trooper"
 MenuName="Soldat Skaarj"
 
-[NaliPlayer]
-; EN: MenuName="Nali"
-MenuName="Nali"
-
 [WarLord]
 ; EN: NameArticle=" the "
 NameArticle=" der "
@@ -367,6 +363,10 @@ MenuName="Klecks"
 NameArticle=" ein "
 ; EN: MenuName="Ice Skaarj"
 MenuName="Eis Skaarj"
+
+[NaliPlayer]
+; EN: MenuName="Nali"
+MenuName="Nali"
 
 [EndgameHud]
 ; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely. Yet, it's fuel reserve has been depleted, and you drift aimlessly."

@@ -1,7 +1,15 @@
+Ôªø[LevelInfo1]
+; EN: Title="Approaching UMS Prometheus"
+Title="Approche de l'UMS Prom√©th√©e"
+; EN: LevelEnterText="Approaching UMS Prometheus"
+LevelEnterText="Approche de l'UMS Prom√©th√©e"
+
+[LevelSummary]
+; EN: Title="Approaching UMS Prometheus"
+Title="Approche de l'UMS Prom√©th√©e"
+; EN: LevelEnterText="Approaching UMS Prometheus"
+LevelEnterText="Approche de l'UMS Prom√©th√©e"
+
 [TranslatorEvent0]
-Message=Un autre oiseau de tonnerre est tombÈ du ciel, juste sous nos yeux ! J'ai trËs peur. Peur que les dÈmons cÈlestes ne s'en prennent ‡ notre vallÈe.
-
-[LevelInfo1]
-Title=Approche de l'UMS PromÈthÈe
-LevelEnterText=Approche de l'UMS PromÈthÈe
-
+; EN: Message="Another thunderbird has fallen from the sky, right before our eyes! I am very scared. Scared that the Sky Demons will come to our valley now."
+Message="Un autre oiseau de tonnerre est tomb√© du ciel, juste sous nos yeux ! J'ai tr√®s peur. Peur que les d√©mons c√©lestes ne s'en prennent √† notre vall√©e."

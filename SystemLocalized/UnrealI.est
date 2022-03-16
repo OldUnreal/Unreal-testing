@@ -61,41 +61,23 @@ NameArticle=" una "
 ; EN: MenuName="Bloblet"
 MenuName="Gotita"
 
-[Chameleon]
-; EN: NameArticle=" a "
-NameArticle=" un "
-; EN: MenuName="Chameleon"
-MenuName="Camaleón"
-
-[Cow]
-; EN: NameArticle=" a "
-NameArticle=" una "
-; EN: MenuName="Nali Cow"
-MenuName="Vaca Nali"
-
 [Gasbag]
 ; EN: NameArticle=" a "
 NameArticle=" una "
 ; EN: MenuName="Gasbag"
-MenuName="Bolsa de Aire"
+MenuName="Bolsa Gaseosa"
 
 [GiantGasbag]
 ; EN: NameArticle=" the "
 NameArticle=" la "
 ; EN: MenuName="Giant Gasbag"
-MenuName="Superbolsa de Aire"
+MenuName="Superbolsa Gaseosa"
 
 [GiantManta]
 ; EN: NameArticle=" the "
 NameArticle=" el "
 ; EN: MenuName="Giant Manta"
 MenuName="Manta Gigante"
-
-[IceSkaarj]
-; EN: NameArticle=" an "
-NameArticle=" un "
-; EN: MenuName="Ice Skaarj"
-MenuName="Skaarj de Hielo"
 
 [Krall]
 ; EN: NameArticle=" a "
@@ -109,6 +91,12 @@ NameArticle=" un "
 ; EN: MenuName="Elite Krall"
 MenuName="Krall de Élite"
 
+[LeglessKrall]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Legless Krall"
+MenuName="Krall Cojo"
+
 [Mercenary]
 ; EN: NameArticle=" a "
 NameArticle=" un "
@@ -121,23 +109,11 @@ NameArticle=" un "
 ; EN: MenuName="Elite Mercenary"
 MenuName="Mercenario de Élite"
 
-[Nali]
-; EN: NameArticle=" a "
-NameArticle=" un "
-; EN: MenuName="Nali"
-MenuName="Nali"
-
 [Pupae]
 ; EN: NameArticle=" a "
 NameArticle=" una "
 ; EN: MenuName="Pupae"
 MenuName="Pupa"
-
-[Skaarj]
-; EN: NameArticle=" a "
-NameArticle=" un "
-; EN: MenuName="Skaarj"
-MenuName="Skaarj"
 
 [SkaarjAssassin]
 ; EN: NameArticle=" a "
@@ -167,7 +143,7 @@ MenuName="Soldado de Infantería Skaarj"
 ; EN: NameArticle=" the "
 NameArticle=" el "
 ; EN: MenuName="Skaarj Lord"
-MenuName="Señor de los Skaarj"
+MenuName="Jefe Skaarj"
 
 [SkaarjOfficer]
 ; EN: NameArticle=" a "
@@ -206,10 +182,6 @@ MenuName="Soldado Skaarj"
 [SkaarjPlayerBot]
 ; EN: MenuName="Skaarj Trooper"
 MenuName="Soldado Skaarj"
-
-[NaliPlayer]
-; EN: MenuName="Nali"
-MenuName="Nali"
 
 [WarLord]
 ; EN: NameArticle=" the "
@@ -380,12 +352,21 @@ ItemName="Cartucho de Rifle"
 [ParentBlob]
 ; EN: BlobKillMessage="was corroded by a Blob"
 BlobKillMessage="ha sido corroído por una Gota"
-; EN: FemBlobKillMessage="was corroded by a Blob"
 FemBlobKillMessage="ha sido corroída por una Gota"
 ; EN: NameArticle=" a "
 NameArticle=" una "
 ; EN: MenuName="Blob"
 MenuName="Gota"
+
+[IceSkaarj]
+; EN: NameArticle=" an "
+NameArticle=" un "
+; EN: MenuName="Ice Skaarj"
+MenuName="Skaarj de Hielo"
+
+[NaliPlayer]
+; EN: MenuName="Nali"
+MenuName="Nali"
 
 [EndgameHud]
 ; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely. Yet, it's fuel reserve has been depleted, and you drift aimlessly."
@@ -401,7 +382,7 @@ Message5="Hasta entonces, solo puedes esperar y vagar."
 ; EN: Message6="To Be Continued..."
 Message6="Continuará..."
 ; EN: Message7="Press fire to restart"
-Message7="Presiona Escape para reiniciar"
+Message7="Presiona Disparo para reiniciar"
 
 [KingOfTheHill]
 ; EN: ClassCaption="King of the Hill"
@@ -418,9 +399,7 @@ GameName="Rey de la Colina"
 [FlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o ha sido despedazado por el %w de %k."
-; EN: FemDeathMessage="%o was ripped to shreds by %k's %w."
 FemDeathMessage="%o ha sido despedazada por el %w de %k."
-; EN: FemKillMessage="%o was ripped to shreds by %k's %w."
 FemKillMessage="%o ha sido despedazado por el %w de %k."
 ; EN: PickupMessage="You got the Flak Cannon"
 PickupMessage="Has recogido el Cañón de Metralla"
@@ -430,9 +409,7 @@ ItemName="Cañón de Metralla"
 [Rifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k ha atravesado la cabeza de %o con una bala."
-; EN: FemDeathMessage="%k put a bullet through %o's head."
 FemDeathMessage="%k ha atravesado la cabeza de %o con una bala."
-; EN: FemKillMessage="%k put a bullet through %o's head."
 FemKillMessage="%k ha atravesado la cabeza de %o con una bala."
 ; EN: PickupMessage="You got the Rifle"
 PickupMessage="Has recogido el Rifle"
@@ -442,9 +419,7 @@ ItemName="Rifle de Francotirador"
 [Minigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
-; EN: FemDeathMessage="%k's %w turned %o into a leaky piece of meat."
 FemDeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
-; EN: FemKillMessage="%k's %w turned %o into a leaky piece of meat."
 FemKillMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
 ; EN: PickupMessage="You got the Minigun"
 PickupMessage="Has recogido la Metralleta"
@@ -454,14 +429,22 @@ ItemName="Metralleta"
 [GESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
-; EN: FemDeathMessage="%o drank a glass of %k's dripping green load."
 FemDeathMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
-; EN: FemKillMessage="%o drank a glass of %k's dripping green load."
 FemKillMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
 ; EN: PickupMessage="You got the GES BioRifle"
 PickupMessage="Has recogido el Rifle Biológico GES"
 ; EN: ItemName="GES BioRifle"
 ItemName="Rifle Biológico GES"
+
+[RazorJack]
+; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
+DeathMessage="%k le pegó un buen tajo a %o con su %w."
+FemDeathMessage="%k le pegó un buen tajo a %o con su %w."
+FemKillMessage="%k le pegó un buen tajo a %o con su %w."
+; EN: PickupMessage="You got the RazorJack"
+PickupMessage="Has recogido el Lanzacuchillas"
+; EN: ItemName="Razorjack"
+ItemName="Lanzacuchillas"
 
 [Squid]
 ; EN: NameArticle=" a "
@@ -469,24 +452,16 @@ NameArticle=" un "
 ; EN: MenuName="Squid"
 MenuName="Calamar"
 
-[RazorJack]
-; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
-DeathMessage="%k le pegó un buen tajo a %o con su %w."
-; EN: FemDeathMessage="%k took a bloody chunk out of %o with the %w."
-FemDeathMessage="%k le pegó un buen tajo a %o con su %w."
-; EN: FemKillMessage="%k took a bloody chunk out of %o with the %w."
-FemKillMessage="%k le pegó un buen tajo a %o con su %w."
-; EN: PickupMessage="You got the RazorJack"
-PickupMessage="Has recogido el Lanzacuchillas"
-; EN: ItemName="Razorjack"
-ItemName="Lanzacuchillas"
+[Chameleon]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Chameleon"
+MenuName="Camaleón"
 
 [QuadShot]
 ; EN: DeathMessage="%o was blasted to bits by %k's %w."
 DeathMessage="%o ha sido reventado por la %w de %k."
-; EN: FemDeathMessage="%o was blasted to bits by %k's %w."
 FemDeathMessage="%o ha sido reventada por la %w de %k."
-; EN: FemKillMessage="%o was blasted to bits by %k's %w."
 FemKillMessage="%o ha sido reventado por la %w de %k."
 ; EN: PickupMessage="You got the Quad-Barreled Shotgun"
 PickupMessage="Has recogido la Escopeta de Cuádruple Barril"
@@ -496,9 +471,7 @@ ItemName="Escopeta de Cuádruple Barril"
 [PeaceMaker]
 ; EN: DeathMessage="One of %k's %w missiles blew up %o."
 DeathMessage="Uno de los misiles del %w de %k alcanzó a %o."
-; EN: FemDeathMessage="One of %k's %w missiles blew up %o."
 FemDeathMessage="Uno de los misiles del %w de %k alcanzó a %o."
-; EN: FemKillMessage="One of %k's %w missiles blew up %o."
 FemKillMessage="Uno de los misiles del %w de %k alcanzó a %o."
 ; EN: PickupMessage="You got the Peacemaker"
 PickupMessage="Has recogido el Pacificador"
@@ -510,3 +483,4 @@ ItemName="Pacificador"
 PickupMessage="Has recogido las Semillas de Minibosque"
 ; EN: ItemName="Woodruff Seeds"
 ItemName="Semillas de Minibosque"
+

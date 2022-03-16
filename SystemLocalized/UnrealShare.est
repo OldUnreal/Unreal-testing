@@ -2,8 +2,8 @@
 Object=(Name=UnrealShare.DeathMatchGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.UnrealGameInfo,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.TeamGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.VRikersGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.EntryGameInfo,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon)
@@ -26,7 +26,7 @@ Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=UnrealShare.SinglePl
 ; EN: Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Decals")
 Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Marcas")
 ; EN: Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Blood Settings")
-Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Config. de Sangre")
+Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Config. Sangre")
 ; EN: Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali")
 Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali 2;Nali")
 ; EN: Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Priest")
@@ -53,7 +53,6 @@ Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Va
 Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Varón 1;V1 Varón 6")
 ; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
 Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Varón 1;V1 Varón 7")
-; EN: Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
 Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
 ; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
 Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Armas,Disparo")
@@ -66,23 +65,23 @@ Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Armas,
 ; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
 Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Armas,Arrojar Arma")
 ; EN: Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Weapon,Disp. Pistol")
-Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Armas,Pist. Dispersión")
+Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Armas,Pistola de Dispersión")
 ; EN: Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag/4-Shot")
-Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Armas,Autopis./Escopeta-4")
+Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Armas,Autopistola/Escopeta-4")
 ; EN: Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger/CAR")
-Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Armas,Perforador/RAC")
+Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Armas,Perforador/R. A. C.")
 ; EN: Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD/UMS GL")
 Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Armas,ASMD/LG UMS")
 ; EN: Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Weapon,8-Ball/UMS RL/Peacemaker")
 Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Armas,8-Ball/LC UMS/Pacific.")
 ; EN: Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
-Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Armas,Cañón Metralla")
+Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Armas,Cañón de Metralla")
 ; EN: Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
 Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Armas,Lanzacuchillas")
 ; EN: Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
-Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Armas,BioRifle GES")
+Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Armas,Rifle Biológico GES")
 ; EN: Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
-Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Armas,Rifle Francot.")
+Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Armas,Rifle Francotirador")
 ; EN: Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun/Transloc.")
 Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Armas,Minipistola/Transloc.")
 ; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
@@ -135,7 +134,7 @@ Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Juego,Charla
 Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Juego,Charla en Equipo")
 ; EN: Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Game,Show Scores")
 Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Juego,Mostrar Puntajes")
-; EN: Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save
+; EN: Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save")
 Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Juego,Guardado Rápido")
 ; EN: Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Load")
 Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Juego,Carga Rápida")
@@ -169,7 +168,7 @@ Preferences=(Caption="Partida por Equipos",Parent="Tipos de Juego",Class=UnrealS
 Preferences=(Caption="Configuración",Parent="Marcas",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
 ; EN: Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
 Preferences=(Caption="Cliente",Parent="Sangre",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
-; EN: Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True))
+; EN: Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
 Preferences=(Caption="Mapas de Partida a Muerte",Parent="Listas de Mapas",Class=UnrealShare.DmMapList,Immediate=True)
 
 [DeathMatchGame]
@@ -194,7 +193,7 @@ TimeMessage[5]="¡Quedan 30 segundos!"
 ; EN: TimeMessage[6]="10 seconds left!"
 TimeMessage[6]="¡Quedan 10 segundos!"
 ; EN: TimeMessage[7]="5 seconds and counting..."
-TimeMessage[7]="5 segundos y contando ..."
+TimeMessage[7]="5 segundos y contando..."
 TimeMessage[8]="4..."
 TimeMessage[9]="3..."
 TimeMessage[10]="2..."
@@ -203,6 +202,608 @@ TimeMessage[11]="1..."
 TimeMessage[12]="¡Se acabó el tiempo!"
 ; EN: GameName="DeathMatch"
 GameName="Partida a Muerte"
+
+[UnrealGameOptionsMenu]
+; EN: AdvancedString="Advanced Options"
+AdvancedString="Opciones Avanzadas"
+; EN: AdvancedHelp="Edit advanced game configuration options."
+AdvancedHelp="Edita las opciones avanzadas de configuración del juego."
+; EN: HelpMessage[1]="Adjust the speed at which time passes in the game."
+HelpMessage[1]="Ajusta la velocidad a la que pasa el tiempo en el juego."
+; EN: HelpMessage[2]="If true, reduces the gore in the game."."
+HelpMessage[2]="Si se activa, reduce la sangre en el juego."
+; EN: MenuList[1]="Game Speed"
+MenuList[1]="Velocidad de Juego"
+; EN: MenuList[2]="Reduced Gore"
+MenuList[2]="Sangre Reducida"
+; EN: MenuTitle="GAME OPTIONS"
+MenuTitle="OPCIONES DE JUEGO"
+
+[UnrealQuitMenu]
+; EN: YesSelString="[YES]  No "
+YesSelString="[SÍ]  No "
+; EN: NoSelString=" Yes  [NO]"
+NoSelString= " Sí  [NO]"
+; EN: HelpMessage[1]="Select yes and hit enter to return to your puny, miserable, useless real life, if you can't handle UNREALity."
+HelpMessage[1]="Selecciona Sí y pulsa INTRO si de verdad quieres regresar a tu miserable, inútil e insignificante vida real; si de verdad no puedes soportar la insoportable irrealidad de UNREAL."
+; EN: MenuList[0]="A Digital Extremes/Epic Megagames"
+MenuList[0]="Una colaboración de"
+; EN: MenuList[1]="Collaboration"
+MenuList[1]="Digital Extremes y Epic Megagames"
+; EN: MenuList[2]="Game Design: James Schmalz"
+MenuList[2]="Diseño del Juego: James Schmalz"
+MenuList[3]="    Cliff Bleszinski"
+; EN: MenuList[4]="Level Design: Cliff Bleszinski"
+MenuList[4]="Diseño de Niveles: Cliff Bleszinski"
+MenuList[5]="    T. Elliot Cannon  Pancho Eekels"
+MenuList[6]="    Jeremy War  Cedric Fiorentino"
+MenuList[7]="    Shane Caudle"
+; EN: MenuList[8]="Animator: Dave Carter"
+MenuList[8]="Animación: Dave Carter"
+; EN: MenuList[9]="Art: James Schmalz "
+MenuList[9]="Arte: James Schmalz "
+MenuList[10]="    Mike Leatham  Artur Bialas"
+; EN: MenuList[11]="Programming: Tim Sweeney  Steven Polge"
+MenuList[11]="Programación: Tim Sweeney  Steven Polge"
+MenuList[12]="    Erik de Neve  James Schmalz"
+MenuList[13]="    Carlo Vogelsang  Nick Michon"
+; EN: MenuList[14]="Music: Alexander Brandon"
+MenuList[14]="Música: Alexander Brandon"
+MenuList[15]="    Michiel van den Bos"
+; EN: MenuList[16]="Sound Effects: Dave Ewing"
+MenuList[16]="Efectos de sonido: Dave Ewing"
+; EN: MenuList[17]="Producer for GT: Jason Schreiber"
+MenuList[17]="Productor de GT: Jason Schreiber"
+; EN: MenuList[18]="Biz: Mark Rein Nigel Kent"
+MenuList[18]="Empresariales: Mark Rein Nigel Kent"
+MenuList[19]="    Craig Lafferty"
+; EN: MenuList[20]="Oldunreal patch: Jochen Goernitz"
+MenuList[20]="Parche OldUnreal: Jochen Goernitz"
+; EN: MenuList[21]="    and the Oldunreal community"
+MenuList[21]="    y la comunidad de OldUnreal"
+; EN: MenuTitle="Quit?"
+MenuTitle="¿Salir?"
+
+[UnrealIndivBotMenu]
+; EN: HelpMessage[1]="Which Bot Configuration is being edited. Use left and right arrows to change."
+HelpMessage[1]="De qué Bot es la configuración que se está editando. Utiliza las flechas izquierda y derecha para realizar cambios."
+; EN: HelpMessage[2]="Hit enter to edit the name of this bot."
+HelpMessage[2]="Pulsa INTRO para editar el nombre de este Bot."
+; EN: HelpMessage[3]="Use the left and right arrow keys to change the class of this bot."
+HelpMessage[3]="Utiliza las flechas izquierda y derecha para cambiar la clase de este Bot."
+; EN: HelpMessage[4]="Use the left and right arrow keys to change the skin of this bot."
+HelpMessage[4]="Utiliza las flechas izquierda y derecha para cambiar la piel de este Bot."
+; EN: HelpMessage[5]="Adjust the overall skill of this bot by this amount (relative to the base skill for bots)."
+HelpMessage[5]="Modifica la habilidad general de este Bot (en relación a la dificultad base de los Bots)."
+; EN: HelpMessage[6]="Type in which team this bot plays on (Red, Blue, Green, or Yellow)."
+HelpMessage[6]="Escribe en qué equipo juega este bot (rojo, azul, verde o amarillo)."
+; EN: MenuList[1]="Configuration"
+MenuList[1]="Configuración"
+; EN: MenuList[2]="Name"
+MenuList[2]="Nombre"
+; EN: MenuList[3]="Class"
+MenuList[3]="Clase"
+; EN: MenuList[4]="Skin"
+MenuList[4]="Piel"
+; EN: MenuList[5]="Skill Adjust"
+MenuList[5]="Ajuste Habilidad"
+; EN: MenuList[6]="Team"
+MenuList[6]="Equipo"
+; EN: MenuTitle="Artificial Intelligence Configuration"
+MenuTitle="Configuración de la IA"
+
+[UnrealFavoritesMenu]
+; EN: EditList[0]="Name for Server:"
+EditList[0]="Nombre del servidor:"
+; EN: EditList[1]="Address:"
+EditList[1]="Dirección:"
+; EN: HelpMessage[1]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[1]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[2]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[2]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[3]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[3]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[4]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[4]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[5]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[5]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[6]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[6]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[7]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[7]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[8]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[8]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[9]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[9]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[10]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[10]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[11]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[11]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: HelpMessage[12]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[12]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
+; EN: MenuTitle="FAVORITES"
+MenuTitle="FAVORITOS"
+
+[UnrealTeamScoreBoard]
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Equipo Rojo: "
+; EN: TeamName[1]="Blue Team: "
+TeamName[1]="Equipo Azul: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Equipo Verde: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Equipo Dorado: "
+
+[UnrealServerMenu]
+; EN: BotTitle="BOTMATCH"
+BotTitle="PARTIDA CON BOTS"
+; EN: HelpMessage[1]="Choose Game Type."
+HelpMessage[1]="Escoge el tipo de juego."
+; EN: HelpMessage[2]="Choose Map."
+HelpMessage[2]="Escoge el mapa."
+; EN: HelpMessage[3]="Modify Game Options."
+HelpMessage[3]="Modifica las opciones de juego."
+; EN: HelpMessage[4]="Start Game."
+HelpMessage[4]="Inicia la partida."
+; EN: HelpMessage[5]="Start a dedicated server on this machine."
+HelpMessage[5]="Inicia un servidor dedicado en este sistema."
+; EN: MenuList[1]="Select Game"
+MenuList[1]="Tipo de Juego"
+; EN: MenuList[2]="Select Map"
+MenuList[2]="Mapa"
+; EN: MenuList[3]="Configure Game"
+MenuList[3]="Configurar Partida"
+; EN: MenuList[4]="Start Game"
+MenuList[4]="Iniciar Partida"
+; EN: MenuList[5]="Launch Dedicated Server"
+MenuList[5]="Iniciar Serv. Dedicado"
+; EN: MenuTitle="MULTIPLAYER"
+MenuTitle="MULTIJUGADOR"
+
+[TeamGame]
+; EN: ClassCaption="Team Play"
+ClassCaption="Partida por Equipos"
+; EN: NewTeamMessage=" is now on "
+NewTeamMessage=" ahora está en el equipo "
+; EN: TeamColor[0]="Red"
+TeamColor[0]="Rojo"
+; EN: TeamColor[1]="Blue"
+TeamColor[1]="Azul"
+; EN: TeamColor[2]="Green"
+TeamColor[2]="Verde"
+; EN: TeamColor[3]="Gold"
+TeamColor[3]="Dorado"
+; EN: GameName="Team Game"
+GameName="Partida por Equipos"
+
+[UnrealWeaponMenu]
+; EN: MenuTitle="PRIORITIES"
+MenuTitle="PRIORIDADES"
+
+[UnrealBotConfigMenu]
+; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
+HelpMessage[1]="Si está activo, los bots ajustan su nivel de habilidad según su desempeño contra los jugadores."
+; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
+HelpMessage[2]="Nivel de dificultad base de los bots (entre 0 y 3)."
+; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
+HelpMessage[3]="Si está activo, los bots ingresan al juego en orden aleatorio. Si es falso, ingresan según el orden especificado en su configuración."
+; EN: HelpMessage[4]="Change the configuration of individual bots."
+HelpMessage[4]="Cambia la configuración de los Bots individualmente."
+; EN: HelpMessage[5]="Number of bots to start play (max 15)."
+HelpMessage[5]="Número de Bots para empezar a jugar (máx. 15)."
+; EN: HelpMessage[6]="Use bots when playing with other people."
+HelpMessage[6]="Utiliza los Bots cuando juegues con otras personas."
+; EN: MenuList[1]="Auto-Adjust Skills"
+MenuList[1]="Autoajustar Habilidad"
+; EN: MenuList[2]="Base Skill"
+MenuList[2]="Dificultad Base"
+; EN: MenuList[3]="Random Order"
+MenuList[3]="Orden Aleatorio"
+; EN: MenuList[4]="Configure Individual Bots"
+MenuList[4]="Configuración Individual"
+; EN: MenuList[5]="Number of Bots"
+MenuList[5]="Número de Bots"
+; EN: MenuList[6]="Bots in Multiplayer"
+MenuList[6]="Bots en partidas multijugador"
+; EN: MenuTitle="BOTS"
+MenuTitle="BOTS"
+
+[ShieldBelt]
+; EN: PickupMessage="You got the Shield Belt"
+PickupMessage="Has recogido el Cinturón de Protección"
+; EN: ItemName="Shield Belt"
+ItemName="Cinturón de Protección"
+
+[Flashlight]
+; EN: ExpireMessage="Flashlight batteries have died."
+ExpireMessage="Las pilas de la Linterna se han agotado."
+; EN: PickupMessage="You picked up the Flashlight"
+PickupMessage="Has recogido la Linterna"
+; EN: ItemName="Flashlight"
+ItemName="Linterna"
+
+[UnrealLoadMenu]
+; EN: RestartString="Restart "
+RestartString="Reiniciar "
+; EN: MenuTitle="LOAD GAME"
+MenuTitle="CARGAR PARTIDA"
+
+[UnrealMainMenu]
+; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
+HelpMessage[1]="Pulsa INTRO para modificar la configuración de un solo jugador, incluyendo carga y almacenamiento de partidas, nivel de dificultad e iniciar una partida contra Bots."
+; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
+HelpMessage[2]="Pulsa INTRO para modificar la configuración de multijugador, incluyendo iniciar e incorporarse a partidas en red, y cambiar la apariencia, nombre o equipo de tu personaje."
+; EN: HelpMessage[3]="Hit enter to customize controls."
+HelpMessage[3]="Pulsa INTRO para personalizar los controles."
+; EN: HelpMessage[4]="Change sound and display options"
+HelpMessage[4]="Cambia las opciones de sonido y visualización."
+; EN: HelpMessage[5]="Hit enter to quit game."
+HelpMessage[5]="Pulsa INTRO para salir del juego."
+; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
+HelpMessage[7]="¡Llama gratis (sólo desde EE.UU.) al 1-877-4UNREAL para pedir UNREAL!"
+; EN: MenuList[1]="GAME"
+MenuList[1]="JUEGO"
+; EN: MenuList[2]="MULTIPLAYER"
+MenuList[2]="MULTIJUGADOR"
+; EN: MenuList[3]="OPTIONS"
+MenuList[3]="OPCIONES"
+; EN: MenuList[4]="AUDIO/VIDEO"
+MenuList[4]="SONIDO/VÍDEO"
+; EN: MenuList[5]="QUIT"
+MenuList[5]="SALIR"
+; EN: MenuList[7]="ORDER INFO"
+MenuList[7]="INFO. PEDIDOS"
+
+[UnrealGameMenu]
+; EN: HelpMessage[1]="Hit enter to save the current game."
+HelpMessage[1]="Pulsa INTRO para guardar la partida actual."
+; EN: HelpMessage[2]="Hit enter to load a saved game."
+HelpMessage[2]="Pulsa INTRO para cargar una partida guardada."
+; EN: HelpMessage[3]="Select a difficulty level, and start a new game."
+HelpMessage[3]="Selecciona un nivel de dificultad y comienza una nueva partida."
+; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
+HelpMessage[4]="Pulsa INTRO para modificar las opciones del juego. Ten en cuenta que no es posible hacer esto en partidas multijugador."
+; EN: HelpMessage[5]="DeathMatch against Bots."
+HelpMessage[5]="Partida contra Bots en mapas multijugador."
+; EN: MenuList[1]="SAVE GAME"
+MenuList[1]="GUARDAR PARTIDA"
+; EN: MenuList[2]="LOAD GAME"
+MenuList[2]="CARGAR PARTIDA"
+; EN: MenuList[3]="NEW GAME"
+MenuList[3]="NUEVA PARTIDA"
+; EN: MenuList[4]="GAME OPTIONS"
+MenuList[4]="OPCIONES DE JUEGO"
+; EN: MenuList[5]="BOTMATCH"
+MenuList[5]="PARTIDA CON BOTS"
+
+[NaliFruit]
+; EN: PickupMessage="You picked the Nali Healing Fruit +"
+PickupMessage="Has recogido la Fruta Curativa Nali +"
+; EN: ItemName="Nali Healing Fruit"
+ItemName="Fruta Curativa Nali"
+
+[Health]
+; EN: PickupMessage="You picked up a Health Pack +"
+PickupMessage="Has recogido un Botiquín de Salud +"
+; EN: ItemName="Health Pack"
+ItemName="Botiquín de Salud"
+
+[UnrealMultiPlayerMenu]
+; EN: HelpMessage[1]="Join a network game."
+HelpMessage[1]="Incorpórate a una partida en red."
+; EN: HelpMessage[2]="Set up and start a network game."
+HelpMessage[2]="Configura e inicia una partida en red."
+; EN: HelpMessage[3]="Configure appearance, name, and team name."
+HelpMessage[3]="Configura la apariencia, nombre y equipo de tu personaje."
+; EN: MenuList[1]="JOIN GAME"
+MenuList[1]="UNIRSE A PARTIDA"
+; EN: MenuList[2]="START GAME"
+MenuList[2]="INICIAR PARTIDA"
+; EN: MenuList[3]="PLAYER SETUP"
+MenuList[3]="CONFIG. DE JUGADOR"
+
+[YesNoMenu]
+; EN: YesSelString="[YES]  No"
+YesSelString="[SÍ]  No "
+; EN: NoSelString=" Yes  [NO]"
+NoSelString=" Sí  [NO]"
+
+[UnrealListenMenu]
+; EN: HelpMessage[1]="Hit Enter to select this server."
+HelpMessage[1]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[2]="Hit Enter to select this server."
+HelpMessage[2]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[3]="Hit Enter to select this server."
+HelpMessage[3]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[4]="Hit Enter to select this server."
+HelpMessage[4]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[5]="Hit Enter to select this server."
+HelpMessage[5]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[6]="Hit Enter to select this server."
+HelpMessage[6]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[7]="Hit Enter to select this server."
+HelpMessage[7]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[8]="Hit Enter to select this server."
+HelpMessage[8]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[9]="Hit Enter to select this server."
+HelpMessage[9]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[10]="Hit Enter to select this server."
+HelpMessage[10]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[11]="Hit Enter to select this server."
+HelpMessage[11]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[12]="Hit Enter to select this server."
+HelpMessage[12]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[13]="Hit Enter to select this server."
+HelpMessage[13]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[14]="Hit Enter to select this server."
+HelpMessage[14]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[15]="Hit Enter to select this server."
+HelpMessage[15]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[16]="Hit Enter to select this server."
+HelpMessage[16]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[17]="Hit Enter to select this server."
+HelpMessage[17]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[18]="Hit Enter to select this server."
+HelpMessage[18]="Pulsa INTRO para seleccionar este servidor."
+; EN: HelpMessage[19]="Hit Enter to select this server."
+HelpMessage[19]="Pulsa INTRO para seleccionar este servidor."
+; EN: MenuTitle="LOCAL SERVERS"
+MenuTitle="SERVIDORES LOCALES"
+
+[SCUBAGear]
+; EN: PickupMessage="You picked up the SCUBA Gear"
+PickupMessage="Has recogido la Mochila de Buceo"
+; EN: ItemName="SCUBA Gear"
+ItemName="Mochila de Buceo"
+
+[CoopGame]
+; EN: ClassCaption="Coop Game"
+ClassCaption="Juego Cooperativo"
+; EN: GameName="Coop Game"
+GameName="Juego Cooperativo"
+
+[UnrealHelpMenu]
+; EN: HelpMessage[1]="Open the troubleshooting document."
+HelpMessage[1]="Abre el documento de resolución de problemas."
+; EN: MenuList[1]="TroubleShooting"
+MenuList[1]="Resolución de Problemas"
+; EN: MenuTitle="HELP"
+MenuTitle="AYUDA"
+
+[SinglePlayer]
+GameName="Unreal"
+
+[UnrealSaveMenu]
+; EN: CantSave="CAN'T SAVE WHEN DEAD"
+CantSave="IMPOSIBLE GUARDAR TRAS MORIR"
+; EN: MenuTitle="SAVE GAME"
+MenuTitle="GUARDAR PARTIDA"
+
+[RocketCan]
+; EN: PickupMessage="You picked up 12 Eightballs"
+PickupMessage="Has recogido 12 Proyectiles Eightball"
+; EN: ItemName="Eightballs"
+ItemName="Proyectiles Eightball"
+
+[Amplifier]
+; EN: ExpireMessage="Energy Amplifier is out of power."
+ExpireMessage="El Amplificador Energético se ha agotado."
+; EN: PickupMessage="You got the Energy Amplifier"
+PickupMessage="Has recogido el Amplificador Energético"
+; EN: ItemName="Energy Amplifier"
+ItemName="Amplificador Energético"
+
+[VoiceBox]
+; EN: PickupMessage="You picked up the Voice Box"
+PickupMessage="Has recogido la Caja de Voces"
+; EN: ItemName="Voice Box"
+ItemName="Caja de Voces"
+
+[Shellbox]
+; EN: PickupMessage="You picked up 50 bullets"
+PickupMessage="Has recogido una caja de 50 Balas"
+; EN: ItemName="Bullet Box"
+ItemName="Caja de Balas"
+
+[Flare]
+; EN: PickupMessage="You got a Flare"
+PickupMessage="Has recogido una Bengala"
+; EN: ItemName="Flare"
+ItemName="Bengala"
+
+[WeaponPowerUp]
+; EN: PickupMessage="You got the Dispersion Pistol Powerup"
+PickupMessage="Has recogido un Mejorador para la Pistola de Dispersión"
+; EN: ItemName="Dispersion Pistol Powerup"
+ItemName="Mejorador de Pistola de Dispersión"
+
+[ASMDAmmo]
+; EN: PickupMessage="You picked up an ASMD Core"
+PickupMessage="Has recogido un Núcleo ASMD"
+; EN: ItemName="ASMD Core"
+ItemName="Núcleo ASMD"
+
+[MaleThree]
+; EN: MenuName="Male 3"
+MenuName="Varón 3"
+
+[MaleThreeBot]
+; EN: MenuName="Male 3"
+MenuName="Varón 3"
+
+[FemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Mujer 1"
+
+[FemaleOneBot]
+; EN: MenuName="Female 1"
+MenuName="Mujer 1"
+
+[OKMenu]
+; EN: OKString="[OK]"
+OKString="[Aceptar]"
+
+[StingerAmmo]
+; EN: PickupMessage="You picked up 40 Tarydium shards"
+PickupMessage="Has recogido 40 Fragmentos de Taridio"
+; EN: ItemName="Tarydium Shards"
+ItemName="Fragmentos de Taridio"
+
+[UnrealTeamGameOptionsMenu]
+; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
+HelpMessage[10]="Porcentaje de daño inflingido por fuego amigo. Ten en cuenta que siempre sufrirás 100% de daños al recibir daño de tus propias armas."
+; EN: MenuList[10]="Friendly Fire Scale"
+MenuList[10]="Escala Fuego Amigo"
+
+[SuperHealth]
+; EN: PickupMessage="You picked up the Super Health Pack"
+PickupMessage="Has recogido el Superbotiquín de Salud"
+; EN: ItemName="Super Health Pack"
+ItemName="Superbotiquín de Salud"
+
+[Shells]
+; EN: PickupMessage="You picked up 12 shells
+PickupMessage="Has recogido 12 Cartuchos"
+; EN: ItemName="Shells"
+ItemName="Cartuchos"
+
+[Clip]
+; EN: PickupMessage="You picked up a clip"
+PickupMessage="Has recogido un Cartucho"
+; EN: ItemName="Clip"
+ItemName="Cartucho"
+
+[Bandages]
+; EN: PickupMessage="You got some Bandages +"
+PickupMessage="Has recogido algunas Vendas +"
+; EN: ItemName="Bandages"
+ItemName="Vendas"
+
+[Armor]
+; EN: PickupMessage="You got the Assault Vest"
+PickupMessage="Has recogido el Chaleco de Asalto"
+; EN: ItemName="Assault Vest"
+ItemName="Chaleco de Asalto"
+
+[KevlarSuit]
+; EN: PickupMessage="You picked up the Kevlar Suit"
+PickupMessage="Has recogido el Traje de Kevlar"
+; EN: ItemName="Kevlar Suit"
+ItemName="Traje de Kevlar"
+
+[BabyCow]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Baby Cow"
+MenuName="Vaca Bebé"
+
+[Bird]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Bird"
+MenuName="Ave"
+
+[Biterfish]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Biterfish"
+MenuName="Pez"
+
+[BiterfishSchool]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Biterfish"
+MenuName="Escuela de Peces"
+
+[Brute]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Brute"
+MenuName="Bruto"
+
+[CaveManta]
+; EN: NameArticle=" the "
+NameArticle=" el "
+; EN: MenuName="Cave Manta"
+MenuName="Manta de Cueva"
+
+[Cow]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Nali Cow"
+MenuName="Vaca Nali"
+
+[Devilfish]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Devilfish"
+MenuName="Tiburón"
+
+[Fly]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Fly"
+MenuName="Mosca"
+
+[LesserBrute]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Lesser Brute"
+MenuName="Bruto Menor"
+
+[Manta]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Manta"
+MenuName="Manta"
+
+[Nali]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Nali"
+MenuName="Nali"
+
+[NaliPriest]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Nali Priest"
+MenuName="Sacerdote Nali"
+
+[NaliRabbit]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Nali Rabbit"
+MenuName="Conejo Nali"
+
+[Skaarj]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj"
+MenuName="Skaarj"
+
+[SkaarjScout]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Scout"
+MenuName="Explorador Skaarj"
+
+[SkaarjWarrior]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Skaarj Warrior"
+MenuName="Guerrero Skaarj"
+
+[Slith]
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Slith"
+MenuName="Salamandra"
+
+[Tentacle]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="Tentacle"
+MenuName="Tentáculo"
 
 [UnrealGameInfo]
 ; EN: DeathMessage[0]="killed"
@@ -357,6 +958,7 @@ FemHackedMessage=" fue acuchillada"
 ; EN: BleededMessage=" bled to death."
 BleededMessage=" se ha desangrado."
 FemBleededMessage=" se ha desangrado."
+; Set this to true for languages that use gendered messages
 bGenderMessages=True
 
 [UnrealHUD]
@@ -376,100 +978,16 @@ TeamName[1]="Equipo Azul: "
 TeamName[2]="Equipo Verde: "
 ; EN: TeamName[3]="Gold Team: "
 TeamName[3]="Equipo Dorado: "
-
-[UnrealGameOptionsMenu]
-; EN: AdvancedString="Advanced Options"
-AdvancedString="Opciones Avanzadas"
-; EN: AdvancedHelp="Edit advanced game configuration options."
-AdvancedHelp="Edita las opciones avanzadas de configuración del juego."
-; EN: HelpMessage[1]="Adjust the speed at which time passes in the game."
-HelpMessage[1]="Ajusta la velocidad a la que pasa el tiempo en el juego."
-; EN: HelpMessage[2]="If true, reduces the gore in the game."."
-HelpMessage[2]="Si se activa, reduce la sangre en el juego."
-; EN: MenuList[1]="Game Speed"
-MenuList[1]="Velocidad de Juego"
-; EN: MenuList[2]="Reduced Gore"
-MenuList[2]="Sangre Reducida"
-; EN: MenuTitle="GAME OPTIONS"
-MenuTitle="OPCIONES DE JUEGO"
-
-[UnrealQuitMenu]
-; EN: YesSelString="[YES]  No "
-YesSelString="[SÍ]  No "
-; EN: NoSelString=" Yes  [NO]"
-NoSelString= " Sí  [NO]"
-; EN: HelpMessage[1]="Select yes and hit enter to return to your puny, miserable, useless real life, if you can't handle UNREALity."
-HelpMessage[1]="Selecciona Sí y pulsa INTRO si de verdad quieres regresar a tu miserable, inútil e insignificante vida real; si de verdad no puedes soportar la insoportable irrealidad de UNREAL."
-; EN: MenuList[0]="A Digital Extremes/Epic Megagames"
-MenuList[0]="Una colaboración de Digital Extremes"
-; EN: MenuList[1]="Collaboration"
-MenuList[1]="y Epic Megagames"
-; EN: MenuList[2]="Game Design: James Schmalz"
-MenuList[2]="Diseño del Juego: James Schmalz"
-MenuList[3]="    Cliff Bleszinski"
-; EN: MenuList[4]="Level Design: Cliff Bleszinski"
-MenuList[4]="Diseño de Niveles: Cliff Bleszinski"
-MenuList[5]="    T. Elliot Cannon  Pancho Eekels"
-MenuList[6]="    Jeremy War  Cedric Fiorentino"
-MenuList[7]="    Shane Caudle"
-; EN: MenuList[8]="Animator: Dave Carter"
-MenuList[8]="Animación: Dave Carter"
-; EN: MenuList[9]="Art: James Schmalz "
-MenuList[9]="Arte: James Schmalz "
-MenuList[10]="    Mike Leatham  Artur Bialas"
-; EN: MenuList[11]="Programming: Tim Sweeney  Steven Polge"
-MenuList[11]="Programación: Tim Sweeney  Steven Polge"
-MenuList[12]="    Erik de Neve  James Schmalz"
-MenuList[13]="    Carlo Vogelsang  Nick Michon"
-; EN: MenuList[14]="Music: Alexander Brandon"
-MenuList[14]="Música: Alexander Brandon"
-MenuList[15]="    Michiel van den Bos"
-; EN: MenuList[16]="Sound Effects: Dave Ewing"
-MenuList[16]="Efectos de sonido: Dave Ewing"
-; EN: MenuList[17]="Producer for GT: Jason Schreiber"
-MenuList[17]="Productor de GT: Jason Schreiber"
-; EN: MenuList[18]="Biz: Mark Rein Nigel Kent"
-MenuList[18]="Empresariales: Mark Rein Nigel Kent"
-MenuList[19]="    Craig Lafferty"
-; EN: MenuList[20]="Oldunreal patch: Jochen Goernitz"
-MenuList[20]="Parche OldUnreal: Jochen Goernitz"
-; EN: MenuList[21]="    and the Oldunreal community"
-MenuList[21]="    y la comunidad de OldUnreal"
-; EN: MenuTitle="Quit?"
-MenuTitle="¿Salir?"
-
-[UnrealIndivBotMenu]
-; EN: HelpMessage[1]="Which Bot Configuration is being edited. Use left and right arrows to change."
-HelpMessage[1]="De qué Bot es la configuración que se está editando. Utiliza las flechas izquierda y derecha para realizar cambios."
-; EN: HelpMessage[2]="Hit enter to edit the name of this bot."
-HelpMessage[2]="Pulsa INTRO para editar el nombre de este Bot."
-; EN: HelpMessage[3]="Use the left and right arrow keys to change the class of this bot."
-HelpMessage[3]="Utiliza las flechas izquierda y derecha para cambiar la clase de este Bot."
-; EN: HelpMessage[4]="Use the left and right arrow keys to change the skin of this bot."
-HelpMessage[4]="Utiliza las flechas izquierda y derecha para cambiar la piel de este Bot."
-; EN: HelpMessage[5]="Adjust the overall skill of this bot by this amount (relative to the base skill for bots)."
-HelpMessage[5]="Modifica la habilidad general de este Bot (en relación a la dificultad base de los Bots)."
-; EN: HelpMessage[6]="Type in which team this bot plays on (Red, Blue, Green, or Yellow)."
-HelpMessage[6]="Escribe en qué equipo juega este bot (rojo, azul, verde o amarillo)."
-; EN: MenuList[1]="Configuration"
-MenuList[1]="Configuración"
-; EN: MenuList[2]="Name"
-MenuList[2]="Nombre"
-; EN: MenuList[3]="Class"
-MenuList[3]="Clase"
-; EN: MenuList[4]="Skin"
-MenuList[4]="Piel"
-; EN: MenuList[5]="Skill Adjust"
-MenuList[5]="Ajuste Habilidad"
-; EN: MenuList[6]="Team"
-MenuList[6]="Equipo"
-; EN: MenuTitle="Artificial Intelligence Configuration"
-MenuTitle="Configuración de la IA"
+; EN: DemoPlaybackProg="Demo: %f %"
+DemoPlaybackProg="Demo: %f %"
+; EN: DemoRecInfo="[REC]"
+DemoRecInfo="[GRAB]"
 
 [DispersionPistol]
-; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
+; EN: DeathMessage="%o was killed by %k's %w.  What a loser!"
 DeathMessage="A %o lo ha asesinado %k con su %w. ¡Pobre!"
 FemDeathMessage="A %o la ha asesinado %k con su %w. ¡Pobre!"
+FemKillMessage="A %o lo ha asesinado %k con su %w. ¡Pobre!"
 ; EN: PickupMessage="You got the Dispersion Pistol"
 PickupMessage="Has recogido la Pistola de Dispersión"
 ; EN: ItemName="Dispersion Pistol"
@@ -490,6 +1008,12 @@ ShadowDetail[2]="Media Res."
 ShadowDetail[3]="Alta Res."
 ; EN: ShadowDetail[4]="Ultra Res"
 ShadowDetail[4]="Ultra Res."
+; EN: SkyFogDetail[0]="High Detail"
+SkyFogDetail[0]="Alto Detalle"
+; EN: SkyFogDetail[1]="Low Detail"
+SkyFogDetail[1]="Bajo Detalle"
+; EN: SkyFogDetail[2]="Off"
+SkyFogDetail[2]="Desactivado."
 ; EN: HelpMessage[1]="Adjust display brightness using the left and right arrow keys."
 HelpMessage[1]="Ajusta el brillo de la pantalla utilizando las teclas de flecha izquierda y derecha."
 ; EN: HelpMessage[2]="Display Unreal in a window. Note that going to a software display mode may remove high detail actors that were visible with hardware acceleration."
@@ -526,6 +1050,10 @@ HelpMessage[16]="'Simple' utiliza sombras simples, de otro modo se utilizarán s
 HelpMessage[17]="Si se activa, precarga el contenido de nivel tal como texturas y sonidos."
 ; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
 HelpMessage[18]="Activa/desactiva el filtrado trilinear de textura."
+; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
+HelpMessage[19]="Nivel de detalle de niebla aplicado al cielo."
+; EN: HelpMessage[20]="The scaling of user HUD."
+HelpMessage[20]="Escala del Monitor Frontal (HUD) del usuario."
 ; EN: MenuList[1]="Brightness"
 MenuList[1]="Brillo"
 ; EN: MenuList[2]="Toggle Fullscreen Mode"
@@ -562,40 +1090,12 @@ MenuList[16]="Sombras realistas"
 MenuList[17]="Precargar Contenido"
 ; EN: MenuList[18]="Trilinear Filtering"
 MenuList[18]="Filtrado Trilinear"
+; EN: MenuList[19]="Skybox Fogging"
+MenuList[19]="Niebla en Cielo"
+; EN: MenuList[20]="HUD Scale"
+MenuList[20]="Escala de Mon. Frontal"
 ; EN: MenuTitle="AUDIO/VIDEO"
-MenuTitle="SONIDO/VÍDEO"
-
-[UnrealFavoritesMenu]
-; EN: EditList[0]="Name for Server:"
-EditList[0]="Nombre del servidor:"
-; EN: EditList[1]="Address:"
-EditList[1]="Dirección:"
-; EN: HelpMessage[1]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[1]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[2]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[2]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[3]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[3]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[4]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[4]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[5]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[5]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[6]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[6]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[7]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[7]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[8]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[8]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[9]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[9]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[10]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[10]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[11]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[11]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: HelpMessage[12]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
-HelpMessage[12]="Pulsa INTRO para acceder a este servidor. Pulsa flecha derecha para editar esta entrada."
-; EN: MenuTitle="FAVORITES"
-MenuTitle="FAVORITOS"
+MenuTitle="SONIDO/VIDEO"
 
 [Translator]
 ; EN: NewMessage="Universal Translator"
@@ -606,48 +1106,6 @@ HintString="Pista:"
 PickupMessage="Pulsa F2 para activar el Traductor"
 ; EN: ItemName="Universal Translator"
 ItemName="Traductor Universal"
-
-[UnrealTeamScoreBoard]
-; EN: TeamName[0]="Red Team: "
-TeamName[0]="Equipo Rojo: "
-; EN: TeamName[1]="Blue Team: "
-TeamName[1]="Equipo Azul: "
-; EN: TeamName[2]="Green Team: "
-TeamName[2]="Equipo Verde: "
-; EN: TeamName[3]="Gold Team: "
-TeamName[3]="Equipo Dorado: "
-
-[UnrealScoreBoard]
-; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
-DeadStr="Te han matado. ¡Pulsa [Disparo] para reaparecer!"
-; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
-SpectatorStr="Estás observando. ¡Pulsa [Disparo] para ver desde otro jugador!"
-
-[UnrealServerMenu]
-; EN: BotTitle="BOTMATCH"
-BotTitle="PARTIDA CON BOTS"
-; EN: HelpMessage[1]="Choose Game Type."
-HelpMessage[1]="Escoge el tipo de juego."
-; EN: HelpMessage[2]="Choose Map."
-HelpMessage[2]="Escoge el mapa."
-; EN: HelpMessage[3]="Modify Game Options."
-HelpMessage[3]="Modifica las opciones de juego."
-; EN: HelpMessage[4]="Start Game."
-HelpMessage[4]="Inicia la partida."
-; EN: HelpMessage[5]="Start a dedicated server on this machine."
-HelpMessage[5]="Inicia un servidor dedicado en este sistema."
-; EN: MenuList[1]="Select Game"
-MenuList[1]="Tipo de Juego"
-; EN: MenuList[2]="Select Map"
-MenuList[2]="Mapa"
-; EN: MenuList[3]="Configure Game"
-MenuList[3]="Configurar Partida"
-; EN: MenuList[4]="Start Game"
-MenuList[4]="Iniciar Partida"
-; EN: MenuList[5]="Launch Dedicated Server"
-MenuList[5]="Iniciar Serv. Dedicado"
-; EN: MenuTitle="MULTIPLAYER"
-MenuTitle="MULTIJUGADOR"
 
 [UnrealMeshMenu]
 ; EN: HelpMessage[4]="Change your class using the left and right arrow keys."
@@ -723,7 +1181,7 @@ MenuList[3]="Abrir"
 ; EN: MenuList[4]="Net Speed"
 MenuList[4]="Velocidad de Red"
 ; EN: MenuList[5]="Go to the Unreal server list"
-MenuList[5]="Ir a lista serv. de Unreal"
+MenuList[5]="Ir a lista de serv. de Unreal"
 ; EN: MenuTitle="JOIN GAME"
 MenuTitle="UNIRSE A LA PARTIDA"
 
@@ -776,8 +1234,10 @@ HelpMessage[16]="Utiliza las teclas izquierda y derecha para seleccionar la conf
 HelpMessage[17]="Ajusta el nivel de balanceo de la cabeza al moverte."
 ; EN: HelpMessage[18]="Set your optimal networking speed. This has an impact on internet gameplay."
 HelpMessage[18]="Elige la mejor velocidad posible para tu red. Esto afectará al juego en línea."
-; EN: HelpMessage[19]="Open advanced preferences configuration menu."
-HelpMessage[19]="Abre el menú de opciones avanzadas."
+; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
+HelpMessage[19]="Esta opción determina cómo se verán la consola y los menús. Presiona Enter para reiniciar el juego y aplicar los cambios."
+; EN: HelpMessage[20]="Open advanced preferences configuration menu."
+HelpMessage[20]="Abre el menú de opciones avanzadas."
 ; EN: MenuList[1]="Auto Aim"
 MenuList[1]="Autoapuntar"
 ; EN: MenuList[2]="Joystick Enabled"
@@ -790,7 +1250,7 @@ MenuList[4]="Suavizar Ratón"
 MenuList[5]="Invertir Ratón"
 ; EN: MenuList[6]="Look Spring"
 MenuList[6]="Autocentrar Vista"
-; EN: MenuList[7]="Always MouseLook"
+; EN: MenuList[7]="Always Mouse Look"
 MenuList[7]="Vista Perman. con Ratón"
 ; EN: MenuList[8]="Auto Slope Look"
 MenuList[8]="Autoincl. en Desniveles"
@@ -814,71 +1274,28 @@ MenuList[16]="Configuración de HUD"
 MenuList[17]="Oscilación de Vista"
 ; EN: MenuList[18]="Net Speed"
 MenuList[18]="Velocidad de Red"
-; EN: MenuList[19]="Advanced Options"
-MenuList[19]="Opciones Avanzadas"
+; EN: MenuList[19]="Console"
+MenuList[19]="Consola"
+; EN: MenuList[20]="Advanced Options"
+MenuList[20]="Opciones Avanzadas"
 ; EN: MenuTitle="OPTIONS MENU"
 MenuTitle="MENÚ DE OPCIONES"
-
-[TeamGame]
-; EN: ClassCaption="Team Play"
-ClassCaption="Partida por Equipos"
-; EN: NewTeamMessage=" is now on "
-NewTeamMessage=" ahora está en el equipo "
-; EN: TeamColor[0]="Red"
-TeamColor[0]="Rojo"
-; EN: TeamColor[1]="Blue"
-TeamColor[1]="Azul"
-; EN: TeamColor[2]="Green"
-TeamColor[2]="Verde"
-; EN: TeamColor[3]="Gold"
-TeamColor[3]="Dorado"
-; EN: GameName="Team Game"
-GameName="Partida por Equipos"
 
 [ASMD]
 ; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
 DeathMessage="%k ha infligido heridas mortales a %o con su %w."
 FemDeathMessage="%k ha infligido heridas mortales a %o con su %w."
+FemKillMessage="%k ha infligido heridas mortales a %o con su %w."
 ; EN: PickupMessage="You got the ASMD"
 PickupMessage="Has recogido el ASMD"
 ; EN: ItemName="ASMD"
 ItemName="ASMD"
 
-[UnrealWeaponMenu]
-; EN: MenuTitle="PRIORITIES"
-MenuTitle="PRIORIDADES"
-
-[UnrealBotConfigMenu]
-; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
-HelpMessage[1]="Si está activo, los bots ajustan su nivel de habilidad según su desempeño contra los jugadores."
-; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
-HelpMessage[2]="Nivel de dificultad base de los bots (entre 0 y 3)."
-; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
-HelpMessage[3]="Si está activo, los bots ingresan al juego en orden aleatorio. Si es falso, ingresan según el orden especificado en su configuración."
-; EN: HelpMessage[4]="Change the configuration of individual bots."
-HelpMessage[4]="Cambia la configuración de los Bots individualmente."
-; EN: HelpMessage[5]="Number of bots to start play (max 15)."
-HelpMessage[5]="Número de Bots para empezar a jugar (máx. 15)."
-; EN: HelpMessage[6]="Use bots when playing with other people."
-HelpMessage[6]="Utiliza los Bots cuando juegues con otras personas."
-; EN: MenuList[1]="Auto-Adjust Skills"
-MenuList[1]="Autoajustar Habilidad"
-; EN: MenuList[2]="Base Skill"
-MenuList[2]="Dificultad Base"
-; EN: MenuList[3]="Random Order"
-MenuList[3]="Orden Aleatorio"
-; EN: MenuList[4]="Configure Individual Bots"
-MenuList[4]="Configuración Individual"
-; EN: MenuList[5]="Number of Bots"
-MenuList[5]="Número de Bots"
-; EN: MenuList[6]="Bots in Multiplayer"
-MenuList[6]="Bots en partidas multijugador"
-MenuTitle="BOTS"
-
 [Eightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
 DeathMessage="%o fue vapuleado varias veces por el %w de %k."
 FemDeathMessage="%o fue vapuleada varias veces por el %w de %k."
+FemKillMessage="%o fue vapuleado varias veces por el %w de %k."
 ; EN: PickupMessage="You got the Eightball gun"
 PickupMessage="Has recogido el Lanzador Eightball"
 ; EN: ItemName="Eightball"
@@ -941,72 +1358,7 @@ MenuList[25]="RESTABLECER VALORES"
 ; EN: MenuTitle="CONTROLS"
 MenuTitle="CONTROLES"
 
-[UnrealNewKeyboardMenu]
-MenuWidth=340
-
-[CoopGame]
-; EN: ClassCaption="Cooperative Play"
-ClassCaption="Juego Cooperativo"
-; EN: GameName="Coop Game"
-GameName="Juego Cooperativo"
-
-[Cow]
-; EN: MenuName="Cow"
-MenuName="Vaca"
-
-[ShieldBelt]
-; EN: PickupMessage="You got the Shield Belt"
-PickupMessage="Has recogido el Cinturón de Protección"
-; EN: ItemName="Shield Belt"
-ItemName="Cinturón de Protección"
-
-[Flashlight]
-; EN: ExpireMessage="Flashlight batteries have died."
-ExpireMessage="Las pilas de la Linterna se han agotado."
-; EN: PickupMessage="You picked up the Flashlight"
-PickupMessage="Has recogido la Linterna"
-; EN: ItemName="Flashlight"
-ItemName="Linterna"
-
-[DevilFish]
-; EN: MenuName="DevilFish"
-MenuName="Tiburón"
-
-[UnrealMainMenu]
-; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
-HelpMessage[1]="Pulsa INTRO para modificar la configuración de un solo jugador, incluyendo carga y almacenamiento de partidas, nivel de dificultad e iniciar una partida contra Bots."
-; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
-HelpMessage[2]="Pulsa INTRO para modificar la configuración de multijugador, incluyendo iniciar e incorporarse a partidas en red, y cambiar la apariencia, nombre o equipo de tu personaje."
-; EN: HelpMessage[3]="Hit enter to customize controls."
-HelpMessage[3]="Pulsa INTRO para personalizar los controles."
-; EN: HelpMessage[4]="Change sound and display options"
-HelpMessage[4]="Cambia las opciones de sonido y visualización."
-; EN: HelpMessage[5]="Hit enter to quit game."
-HelpMessage[5]="Pulsa INTRO para salir del juego."
-; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
-HelpMessage[7]="¡Llama gratis (sólo desde EE.UU.) al 1-877-4UNREAL para pedir UNREAL!"
-; EN: MenuList[1]="GAME"
-MenuList[1]="JUEGO"
-; EN: MenuList[2]="MULTIPLAYER"
-MenuList[2]="MULTIJUGADOR"
-; EN: MenuList[3]="OPTIONS"
-MenuList[3]="OPCIONES"
-; EN: MenuList[4]="AUDIO/VIDEO"
-MenuList[4]="SONIDO/VÍDEO"
-; EN: MenuList[5]="QUIT"
-MenuList[5]="SALIR"
-; EN: MenuList[7]="ORDER INFO"
-MenuList[7]="INFO. PEDIDOS"
-
-[UnrealLoadMenu]
-; EN: RestartString="Restart "
-RestartString="Reiniciar "
-; EN: MenuTitle="LOAD GAME"
-MenuTitle="CARGAR PARTIDA"
-
 [UnrealSlotMenu]
-; EN: EmptySlot="..Empty.."
-EmptySlot="..Vacío.."
 ; EN: MonthNames[0]="January"
 MonthNames[0]="Enero"
 ; EN: MonthNames[1]="February"
@@ -1031,6 +1383,8 @@ MonthNames[9]="Octubre"
 MonthNames[10]="Noviembre"
 ; EN: MonthNames[11]="December"
 MonthNames[11]="Diciembre"
+; EN: EmptySlot="..Empty.."
+EmptySlot="..Vacío.."
 
 [TranslatorEvent]
 ; EN: M_NewMessage="New Translator Message"
@@ -1040,115 +1394,21 @@ M_TransMessage="Mensaje del Traductor"
 ; EN: M_HintMessage="New hint message (press F3 to read)."
 M_HintMessage="Nueva Pista (Pulsa F3 para leer)."
 
-[NaliFruit]
-; EN: PickupMessage="You picked the Nali Healing Fruit +"
-PickupMessage="Has recogido la Fruta Curativa Nali +"
-; EN: ItemName="Nali Healing Fruit "
-ItemName="Fruta Curativa Nali "
-
-[Health]
-; EN: PickupMessage="You picked up a Health Pack +"
-PickupMessage="Has recogido un Botiquín de Salud +"
-; EN: ItemName="Health Pack"
-ItemName="Botiquín de Salud"
-
-[BabyCow]
-; EN: MenuName="Baby Cow"
-MenuName="Vaca bebé"
-
-[UnrealGameMenu]
-; EN: HelpMessage[1]="Hit enter to save the current game."
-HelpMessage[1]="Pulsa INTRO para guardar la partida actual."
-; EN: HelpMessage[2]="Hit enter to load a saved game."
-HelpMessage[2]="Pulsa INTRO para cargar una partida guardada."
-; EN: HelpMessage[3]="Select a difficulty level, and start a new game."
-HelpMessage[3]="Selecciona un nivel de dificultad y comienza una nueva partida."
-; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
-HelpMessage[4]="Pulsa INTRO para modificar las opciones del juego. Ten en cuenta que no es posible hacer esto en partidas multijugador."
-; EN: HelpMessage[5]="DeathMatch against Bots."
-HelpMessage[5]="Partida contra Bots en mapas multijugador."
-; EN: MenuList[1]="SAVE GAME"
-MenuList[1]="GUARDAR PARTIDA"
-; EN: MenuList[2]="LOAD GAME"
-MenuList[2]="CARGAR PARTIDA"
-; EN: MenuList[3]="NEW GAME"
-MenuList[3]="NUEVA PARTIDA"
-; EN: MenuList[4]="GAME OPTIONS"
-MenuList[4]="OPCIONES DE JUEGO"
-MenuList[5]="PARTIDA CON BOTS"
-
-[UnrealMultiPlayerMenu]
-; EN: HelpMessage[1]="Join a network game."
-HelpMessage[1]="Incorpórate a una partida en red."
-; EN: HelpMessage[2]="Set up and start a network game."
-HelpMessage[2]="Configura e inicia una partida en red."
-; EN: HelpMessage[3]="Configure appearance, name, and team name."
-HelpMessage[3]="Configura la apariencia, nombre y equipo de tu personaje."
-; EN: MenuList[1]="JOIN GAME"
-MenuList[1]="UNIRSE A PARTIDA"
-; EN: MenuList[2]="START GAME"
-MenuList[2]="INICIAR PARTIDA"
-; EN: MenuList[3]="PLAYER SETUP"
-MenuList[3]="CONFIG. DE JUGADOR"
-
-[UnrealChooseGameMenu]
-; EN: HelpMessage[1]="Choose which game to play."
-HelpMessage[1]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[2]="Choose which game to play."
-HelpMessage[2]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[3]="Choose which game to play."
-HelpMessage[3]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[4]="Choose which game to play."
-HelpMessage[4]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[5]="Choose which game to play."
-HelpMessage[5]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[6]="Choose which game to play."
-HelpMessage[6]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[7]="Choose which game to play."
-HelpMessage[7]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[8]="Choose which game to play."
-HelpMessage[8]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[9]="Choose which game to play."
-HelpMessage[9]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[10]="Choose which game to play."
-HelpMessage[10]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[11]="Choose which game to play."
-HelpMessage[11]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[12]="Choose which game to play."
-HelpMessage[12]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[13]="Choose which game to play."
-HelpMessage[13]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[14]="Choose which game to play."
-HelpMessage[14]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[15]="Choose which game to play."
-HelpMessage[15]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[16]="Choose which game to play."
-HelpMessage[16]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[17]="Choose which game to play."
-HelpMessage[17]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[18]="Choose which game to play."
-HelpMessage[18]="Escoge la partida de la cual deseas participar."
-; EN: HelpMessage[19]="Choose which game to play."
-HelpMessage[19]="Escoge la partida de la cual deseas participar."
-; EN: MenuTitle="CHOOSE GAME"
-MenuTitle="ESCOGER PARTIDA"
-
 [AutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
 DeathMessage="%o ha sido acribillado por el %w de %k."
 FemDeathMessage="%o ha sido acribillada por el %w de %k."
-; EN: PickupMessage="You got the Automag"
+FemKillMessage="%o ha sido acribillado por el %w de %k."
+; EN: PickupMessage="You got the AutoMag"
 PickupMessage="Has recogido la Autopistola"
 ; EN: ItemName="Automag"
 ItemName="Autopistola"
 
-[UnrealHelpMenu]
-; EN: HelpMessage[1]="Open the troubleshooting document."
-HelpMessage[1]="Abre el documento de resolución de problemas."
-; EN: MenuList[1]="TroubleShooting"
-MenuList[1]="Resolución de Problemas"
-; EN: MenuTitle="HELP"
-MenuTitle="AYUDA"
+[UnrealChooseGameMenu]
+; EN: HelpMessage[1]="Choose which game to play."
+HelpMessage[1]="Escoge la partida de la cual deseas participar."
+; EN: MenuTitle="CHOOSE GAME"
+MenuTitle="ESCOGER PARTIDA"
 
 [UnrealDMGameOptionsMenu]
 ; EN: GameStyle[0]="Classic"
@@ -1190,69 +1450,11 @@ MenuList[8]="Estilo de Juego"
 ; EN: MenuList[9]="Death Messages"
 MenuList[9]="Mensajes de Muerte"
 
-[YesNoMenu]
-; EN: YesSelString="[YES]  No"
-YesSelString="[SÍ]  No "
-; EN: NoSelString=" Yes  [NO]"
-NoSelString=" Sí  [NO]"
-
-[UnrealListenMenu]
-; EN: HelpMessage[1]="Hit Enter to select this server."
-HelpMessage[1]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[2]="Hit Enter to select this server."
-HelpMessage[2]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[3]="Hit Enter to select this server."
-HelpMessage[3]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[4]="Hit Enter to select this server."
-HelpMessage[4]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[5]="Hit Enter to select this server."
-HelpMessage[5]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[6]="Hit Enter to select this server."
-HelpMessage[6]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[7]="Hit Enter to select this server."
-HelpMessage[7]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[8]="Hit Enter to select this server."
-HelpMessage[8]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[9]="Hit Enter to select this server."
-HelpMessage[9]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[10]="Hit Enter to select this server."
-HelpMessage[10]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[11]="Hit Enter to select this server."
-HelpMessage[11]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[12]="Hit Enter to select this server."
-HelpMessage[12]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[13]="Hit Enter to select this server."
-HelpMessage[13]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[14]="Hit Enter to select this server."
-HelpMessage[14]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[15]="Hit Enter to select this server."
-HelpMessage[15]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[16]="Hit Enter to select this server."
-HelpMessage[16]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[17]="Hit Enter to select this server."
-HelpMessage[17]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[18]="Hit Enter to select this server."
-HelpMessage[18]="Pulsa INTRO para seleccionar este servidor."
-; EN: HelpMessage[19]="Hit Enter to select this server."
-HelpMessage[19]="Pulsa INTRO para seleccionar este servidor."
-; EN: MenuTitle="LOCAL SERVERS"
-MenuTitle="SERVIDORES LOCALES"
-
-[SCUBAGear]
-; EN: PickupMessage="You picked up the SCUBA Gear"
-PickupMessage="Has recogido la Mochila de Buceo"
-; EN: ItemName="SCUBA Gear"
-ItemName="Mochila de Buceo"
-
-[Amplifier]
-; EN: ExpireMessage="Energy Amplifier is out of power."
-ExpireMessage="El Amplificador Energético se ha agotado."
-; EN: PickupMessage="You got the Energy Amplifier"
-PickupMessage="Has recogido el Amplificador Energético"
-; EN: ItemName="Energy Amplifier"
-ItemName="Amplificador Energético"
-
 [UnrealNewGameMenu]
+; EN: ModeString[0]="Enhanced"
+ModeString[0]="Mejorado"
+; EN: ModeString[1]="Classic"
+ModeString[1]="Clásico"
 ; EN: HelpMessage[1]="Tourist mode."
 HelpMessage[1]="Modo turista."
 ; EN: HelpMessage[2]="Ready for some action!"
@@ -1267,6 +1469,8 @@ HelpMessage[5]="Para jugadores que quieran una dificultad extra."
 HelpMessage[6]="Para jugadores bien duros de matar."
 ; EN: HelpMessage[7]="HOLY SHIT!"
 HelpMessage[7]="¡CARAJOS!"
+; EN: HelpMessage[8]="Should gameplay contain some minor bugfixes or remain classic?"
+HelpMessage[8]="Especifica si el juego debería contener arreglos menores que mejoran la jugabilidad o permanecer "clásico"."
 ; EN: MenuList[1]="EASY"
 MenuList[1]="FÁCIL"
 ; EN: MenuList[2]="MEDIUM"
@@ -1281,81 +1485,18 @@ MenuList[5]="EXTREMO"
 MenuList[6]="PESADILLA"
 ; EN: MenuList[7]="ULTRA-UNREAL"
 MenuList[7]="ULTRA-UNREAL"
-
-[TazerProj]
-; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"
-ComboKillMessage="%o no pudo evitar la onda de choque del %w de %k"
-
-[SinglePlayer]
-GameName="Unreal"
-
-[UnrealSaveMenu]
-; EN: CantSave="CAN'T SAVE WHEN DEAD"
-CantSave="IMPOSIBLE GUARDAR TRAS LA MUERTE"
-; EN: MenuTitle="SAVE GAME"
-MenuTitle="GUARDAR PARTIDA"
+; EN: MenuList[8]="Balance Mode: "
+MenuList[8]="Modo de Balance: "
 
 [Stinger]
 ; EN: DeathMessage="%o was perforated by %k's %w."
 DeathMessage="%o ha sido perforado por el %w de %k."
-FemDeathMessage="%o ha sido perforada por el %w de %k."
+FemDeathMessage="%o ha sido perforado por el %w de %k."
+FemKillMessage="%o ha sido perforado por el %w de %k."
 ; EN: PickupMessage="You picked up the Stinger"
 PickupMessage="Has recogido el Cañón Perforador"
 ; EN: ItemName="Stinger"
 ItemName="Cañón Perforador"
-
-[RocketCan]
-; EN: PickupMessage="You picked up 12 Eightballs"
-PickupMessage="Has recogido 12 Proyectiles Eightball"
-; EN: ItemName="Eightballs"
-ItemName="Proyectiles Eightball"
-
-[VoiceBox]
-; EN: PickupMessage="You picked up the Voice Box"
-PickupMessage="Has recogido la Caja de Voces"
-; EN: ItemName="Voice Box"
-ItemName="Caja de Voces"
-
-[WeaponPowerUp]
-; EN: PickupMessage="You got the Dispersion Pistol Powerup"
-PickupMessage="Has recogido un Mejorador para la Pistola de Dispersión"
-; EN: ItemName="Dispersion Pistol Powerup"
-ItemName="Mejorador de Pistola de Dispersión"
-
-[Flare]
-; EN: PickupMessage="You got a Flare"
-PickupMessage="Has recogido una Bengala"
-; EN: ItemName="Flare"
-ItemName="Bengala"
-
-[ShellBox]
-; EN: PickupMessage="You picked up 50 bullets"
-PickupMessage="Has recogido una caja de 50 Balas"
-; EN: ItemName="Bullet Box"
-ItemName="Caja de Balas"
-
-[ASMDAmmo]
-; EN: PickupMessage="You picked up an ASMD Core"
-PickupMessage="Has recogido un Núcleo ASMD"
-; EN: ItemName="ASMD Core"
-ItemName="Núcleo ASMD"
-
-[MaleThree]
-; EN: MenuName="Male 3"
-MenuName="Varón 3"
-
-[FemaleOne]
-; EN: MenuName="Female 1"
-MenuName="Mujer 1"
-
-[OKMenu]
-OKString="[Aceptar]"
-
-[UnrealTeamGameOptionsMenu]
-; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
-HelpMessage[10]="Porcentaje de daño inflingido por fuego amigo. Ten en cuenta que siempre sufrirás 100% de daños al recibir daño de tus propias armas."
-; EN: MenuList[10]="Friendly Fire Scale"
-MenuList[10]="Escala Fuego Amigo"
 
 [UnrealCoopGameOptions]
 ; EN: HelpMessage[3]="Skill level setting."
@@ -1379,55 +1520,41 @@ MenuList[6]="Reap. Inst. de Armas"
 ; EN: MenuList[7]="Instant Item Respawn"
 MenuList[7]="Reap. Inst. de Items"
 
-[SuperHealth]
-; EN: PickupMessage="You picked up the Super Health Pack"
-PickupMessage="Has recogido el Superbotiquín de Salud"
-; EN: ItemName="Super Health Pack"
-ItemName="Superbotiquín de Salud"
-
 [UpgradeMenu]
 ; EN: MenuList[1]="You need a newer version of Unreal to play on this server. Would you like to go to the OldUnreal web site for a newer version?"
 MenuList[1]="Necesitas una versión más reciente de Unreal para jugar en este servidor. ¿Quieres acceder a al sitio web de OldUnreal para conseguirla?"
 
-[StingerAmmo]
-; EN: PickupMessage="You picked up 40 Tarydium shards"
-PickupMessage="Has recogido 40 Fragmentos de Taridio"
-; EN: ItemName="Tarydium Shards"
-ItemName="Fragmentos de Taridio"
+[UnrealScoreBoard]
+; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
+DeadStr="Te han matado. ¡Pulsa [Disparo] para reaparecer!"
+; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
+SpectatorStr="Estás observando. ¡Pulsa [Disparo] para ver desde otro jugador!"
 
-[Shells]
-; EN: PickupMessage="You picked up 12 shells
-PickupMessage="Has recogido 12 Cartuchos"
-; EN: ItemName="Shells"
-ItemName="Cartuchos"
+[TazerProj]
+; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"
+ComboKillMessage="%o no pudo evitar la onda de choque del %w de %k"
+FemComboKillMessage="%o no pudo evitar la onda de choque del %w de %k"
 
-[KevlarSuit]
-; EN: PickupMessage="You picked up the Kevlar Suit"
-PickupMessage="Has recogido el Traje de Kevlar"
-; EN: ItemName="Kevlar Suit"
-ItemName="Traje de Kevlar"
-
-[Clip]
-; EN: PickupMessage="You picked up a clip"
-PickupMessage="Has recogido un Cartucho"
-; EN: ItemName="Clip"
-ItemName="Cartucho"
-
-[Bandages]
-; EN: PickupMessage="You got some Bandages +"
-PickupMessage="Has recogido algunas Vendas +"
-; EN: ItemName="Bandages"
-ItemName="Vendas"
-
-[Armor]
-; EN: PickupMessage="You got the Assault Vest"
-PickupMessage="Has recogido el Chaleco de Asalto"
-; EN: ItemName="Assault Vest"
-ItemName="Chaleco de Asalto"
+[UnrealNewKeyboardMenu]
+MenuWidth=340
 
 [Hawk]
+; EN: NameArticle=" a "
+NameArticle=" a "
 ; EN: MenuName="Hawk"
-MenuName="Halcón"
+MenuName="Hawk"
+
+[UTranslocator]
+; EN: DeathMessage="%o was telefragged by %k."
+DeathMessage="%o intentó invadir el espacio personal de %k."
+FemDeathMessage="%o intentó invadir el espacio personal de %k."
+FemKillMessage="%o intentó invadir el espacio personal de %k."
+; EN: PickupMessage="You got the Translocator Source Module"
+PickupMessage="Has recogido el Módulo Fuente del Translocalizador"
+; EN: ItemName="Translocator"
+ItemName="Translocalizador"
+; EN: ItemArticle=" the "
+ItemArticle=" el "
 
 [MiniGunSentry]
 ; EN: PickupMessage="You got an Automatic Sentry Gun"
@@ -1437,29 +1564,21 @@ ItemName="Arma Centinela Automática"
 ; EN: M_Activated=" deployed."
 M_Activated=" desplegada."
 
-[Woodruff]
-; EN: PickupMessage="You got some Master of the Woods +"
-PickupMessage="Has recogido un Maestro de los Bosques +"
-; EN: ItemName="Master of the Woods"
-ItemName="Maestro de los Bosques"
-
 [UIKeyTrigger]
 ; EN: SuccessMessage="Access granted."
 SuccessMessage="Acceso permitido."
 ; EN: FailtureMessage="You need a key to open this door."
 FailtureMessage="Necesitas una llave para abrir esta puerta."
 
-[UTranslocator]
-; EN: DeathMessage="%o was telefragged by %k."
-DeathMessage="%o intentó invadir el espacio personal de %k."
-FemDeathMessage="%o intentó invadir el espacio personal de %k."
-; EN: PickupMessage="You got the Translocator Source Module"
-PickupMessage="Has recogido el Módulo Fuente del Translocalizador"
-; EN: ItemName="Translocator"
-ItemName="Translocalizador"
-; EN: ItemArticle="the"
-ItemArticle="el"
+[Woodruff]
+; EN: PickupMessage="You got some Master of the Woods +"
+PickupMessage="Has recogido un Maestro de los Bosques +"
+; EN: ItemName="Master of the Woods"
+ItemName="Maestro de los Bosques"
 
 [WoodruffSchool]
 ; EN: PickupMessage="You got a bunch of Master of the Woods +"
 PickupMessage="Has recogido un puñado de Maestros de los Bosques +"
+; EN: ItemName="Master of the woods"
+ItemName="Maestros de los Bosques"
+

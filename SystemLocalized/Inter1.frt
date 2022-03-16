@@ -1,5 +1,11 @@
-[TransitionText0]
-MessageA="Quand j'ai lev� les yeux au ciel et vu le vaisseau s'�loigner, �a m'a vraiment fait quelque chose. J'�tais revenu. Et instantan�ment, j'ai retrouv� cette sensation malsaine et d�sormais famili�re d'une d�charge d'adr�naline m�l�e de peur.
-MessageB=Bien entendu, il ne m'a pas fallu attendre longtemps pour me retrouver face � une brute. Depuis cette rencontre, je ne cesse de me frayer un chemin � travers la nature qui m'entoure. La bonne nouvelle, c'est que mon fusil d'assaut est tr�s efficace.
-MessageC=Aucune trace du Prom�th�e dans cette vall�e ou dans les environs... Je dois continuer � chercher."
+﻿[LevelSummary]
+; EN: Title="Intermission 1"
+Title="Intermission 1"
 
+[TransitionGenderEvent1]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/frt/Interm1.uax
+OutDelays[1]=24.500000
+; EN: MaleText[0]="When I looked up and saw the shuttle pulling away it really hit me, I was back. I felt a familiar, sick rush of adrenaline and fear. Sure enough, it wasn't long before I ran into a Brute. I've been battling my way through the environment ever since. At least the combat assault rifle is a powerful weapon. No sign of the Prometheus in this valley or the surroundings... I need to keep searching."
+MaleText[0]="Quand j'ai levé les yeux au ciel et vu le vaisseau s'éloigner, ça m'a vraiment fait quelque chose. J'étais revenu. Et instantanément, j'ai retrouvé cette sensation malsaine et désormais familière d'une décharge d'adrénaline mêlée de peur. Bien entendu, il ne m'a pas fallu attendre longtemps pour me retrouver face à une brute. Depuis cette rencontre, je ne cesse de me frayer un chemin à travers la nature qui m'entoure. La bonne nouvelle c'est que mon fusil d'assaut est très efficace. Aucune trace du Prométhée dans cette vallée ou dans les environs... Je dois continuer à chercher."
+; EN: FemaleText[0]="When I looked up and saw the shuttle pulling away it really hit me, I was back. I felt a familiar, sick rush of adrenaline and fear. Sure enough, it wasn't long before I ran into a Brute. I've been battling my way through the environment ever since. At least the combat assault rifle is a powerful weapon. No sign of the Prometheus in this valley or the surroundings... I need to keep searching."
+FemaleText[0]="Quand j'ai levé les yeux au ciel et vu le vaisseau s'éloigner, ça m'a vraiment fait quelque chose. J'étais revenue. Et instantanément, j'ai retrouvé cette sensation malsaine et désormais familière d'une décharge d'adrénaline mêlée de peur. Bien entendu, il ne m'a pas fallu attendre longtemps pour me retrouver face à une brute. Depuis cette rencontre, je ne cesse de me frayer un chemin à travers la nature qui m'entoure. La bonne nouvelle c'est que mon fusil d'assaut est très efficace. Aucune trace du Prométhée dans cette vallée ou dans les environs... Je dois continuer à chercher."

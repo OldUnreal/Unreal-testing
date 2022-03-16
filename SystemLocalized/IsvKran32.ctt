@@ -2,19 +2,19 @@
 ; EN: Title="ISV-KRAN Decks 3 and 2"
 Title="Cobertes 3 i 2 de l'ISV-KRAN"
 ; EN: LevelEnterText="Entering ISV-KRAN Deck 3"
-LevelEnterText="Entrant a Cobertes 3 i 2 de l'ISV-KRAN"
+LevelEnterText="Entrant a la Coberta 3 de l'ISV-KRAN"
 
 [LevelSummary]
 ; EN: Title="ISV-KRAN Decks 3 and 2"
 Title="Cobertes 3 i 2 de l'ISV-KRAN"
 ; EN: LevelEnterText="Entering ISV-KRAN Deck 3"
-LevelEnterText="Entrant a Cobertes 3 i 2 de l'ISV-KRAN"
+LevelEnterText="Entrant a la Coberta 3 de l'ISV-KRAN"
 
 [TranslatorEvent8]
 ; EN: Message="Main Shuttle Bay Door Override Controls"
 Message="Controls d'Anulació de la Porta Principal de Badia Llançadora"
 ; EN: AltMessage="Main Shuttle Bay Door Controls Fully Powered Now - Bypass Successful"
-AltMessage="Controls de la Porta Principal de Badia Llençadora ara completament actius-Derivació Aconseguida"
+AltMessage="Controls de la Porta Principal de Badia Llençadora ara completament actius - Derivació Aconseguida"
 
 [TranslatorEvent11]
 ; EN: Message="PRIMARY TURBO LIFT REQUIRES FULL ENGINE POWER"
@@ -36,11 +36,11 @@ Message="Aquest panell requereix derivació per ser activat."
 
 [TranslatorEvent10]
 ; EN: Message="The Skaarj have infiltrated the Dock area. We will retreat to Deck 1 and set up a makeshift high voltage barrier. We should be safe."
-Message="Els skaarj s'han infiltrat a l'àrea del Moll. Ens retirarem a la Coberta 1 i establirem una barrera d'alt voltatge improvisada. Hauriem d'estar segurs."
+Message="Els Skaarj s'han infiltrat a l'àrea del Moll. Ens retirarem a la Coberta 1 i establirem una barrera d'alt voltatge improvisada. Hauriem d'estar segurs."
 
 [TranslatorEvent24]
 ; EN: Message="BIO SUIT CONTROL STATION: SYSTEM FAILURE: POWER IS BEING REROUTED BY INTRUDERS ON DECK 1."
-Message="ESTACIÓ DE CONTROL DE BIOVESTITS:FALLADA DEL SISTEMA:ENERGIA REDIRIGIDA PER INTRUSOS EN COBERTA 1."
+Message="ESTACIÓ DE CONTROL DE BIOVESTITS: FALLADA DEL SISTEMA: ENERGIA REDIRIGIDA PER INTRUSOS EN COBERTA 1."
 
 [TranslatorEvent26]
 ; EN: Message="SCANNING STATION 1: Short range surface scans indicate location of large Alien spacecraft on the planet surface that matches the description of the same ship viewed entering and leaving the planet's Tarydium field's prior to orbital decay."
@@ -71,7 +71,7 @@ Message="Enginyeria Principal Ha Estat Segellada amb un Camp de Contenció. Gene
 
 [TranslatorEvent6]
 ; EN: Message="The first wave of Skaarj have been isolated within DECK 4. I doubt they will be able to get through the ductwork and enter the Main Ship. We will retreat to Deck 1 and seal Engineering with a containment force field."
-Message="La primera onada de skaarj ha estat aïllada dins de Coberta 4. Dubto que siguin capaços de passar a través dels conductes i entrar a la Nau Principal. Ens retirarem a Coberta 1 i segellarem enginyeria amb un Camp de Força de Contenció."
+Message="La primera onada de Skaarj ha estat aïllada dins de Coberta 4. Dubto que siguin capaços de passar a través dels conductes i entrar a la Nau Principal. Ens retirarem a Coberta 1 i segellarem enginyeria amb un Camp de Força de Contenció."
 
 [TranslatorEvent28]
 ; EN: Message="CONTAINMENT FIELD GENERATOR ONLINE. GOLD POWER CORES UNSTABLE DUE TO EXCESS STRESS FROM SEALING ENGINEERING. MAIN ENGINEERING CONTAINMENT FORCE FIELDS MAY BE DISABLED BY DESTROYING GOLD CORES."
@@ -95,13 +95,13 @@ Message="VÀLVULA DE DRENATGE D'EMERGÈNCIA DEL SISTEMA DE REFRIGERACIÓ ACTIVAD
 
 [TranslatorEvent18]
 ; EN: Message="MAIN ENGINEERING: EMERGENCY CONTAINMENT FIELD ACTIVE. CONTAINMENT FIELD GENERATOR GOLD CORES MUST BE DESTROYED BEFORE THIS FIELD WILL DISENGAGE."
-Message="ENGINYERIA PRINCIPAL:CAMP DE CONTENCIÓ D'EMERGÈNCIA ACTIVAT. ELS NUCLIS DAURATS DEL GENERADOR DE CAMP DE CONTENCIÓ HAN DE SER DESTRUÏTS ABANS DE QUE AQUEST CAMP S'APAGUI."
+Message="ENGINYERIA PRINCIPAL: CAMP DE CONTENCIÓ D'EMERGÈNCIA ACTIVAT. ELS NUCLIS DAURATS DEL GENERADOR DE CAMP DE CONTENCIÓ HAN DE SER DESTRUÏTS ABANS DE QUE AQUEST CAMP S'APAGUI."
 ; EN: AltMessage="MAIN ENGINEERING: INTRUDERS DETECTED. PROCEED WITH CAUTION."
 AltMessage="ENGINYERIA PRINCIPAL: INTRUSOS DETECTATS, PROCEDIR AMB CURA."
 
 [TranslatorEvent20]
 ; EN: Message="CONTAINMENT ENERGY CORES EXTREMELY VOLATILE: ALL WEAPONS MUST BE PLACED ON SAFETY."
-Message="NÚCLIS D'ENERGIA DE CONTENCIÓ EXTREMADAMENT VOLÀTILS:TOTES LES ARMES HAN D'ESTAR ASSEGURADES."
+Message="NÚCLIS D'ENERGIA DE CONTENCIÓ EXTREMADAMENT VOLÀTILS: TOTES LES ARMES HAN D'ESTAR ASSEGURADES."
 
 [TranslatorEvent22]
 ; EN: Message="WARNING CONTAINMENT CORE EXPOSED: THIS CORE IS HIGHLY EXPLOSIVE - STAND BACK BEFORE DISCHARGING WEAPONS."
