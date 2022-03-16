@@ -12,42 +12,58 @@ Object=(Name=OldWeapons.OldAutomag,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=OldWeapons.OldRifle,Class=Class,MetaClass=Engine.Weapon)
 
 [OldDispersionPistol]
-DeathMessage="%o was killed by %k's %w. What a loser!"
+DeathMessage="%o was killed by %k's %w.  What a loser!"
+FemDeathMessage="%o was killed by %k's %w.  What a loser!"
+FemKillMessage="%o was killed by %k's %w.  What a loser!"
 PickupMessage="You got the Dispersion Pistol"
 ItemName="Dispersion Pistol"
 
 [OldASMD]
 DeathMessage="%k inflicted mortal damage upon %o with the %w."
+FemDeathMessage="%k inflicted mortal damage upon %o with the %w."
+FemKillMessage="%k inflicted mortal damage upon %o with the %w."
 PickupMessage="You got the ASMD"
 ItemName="ASMD"
 
 [OldEightball]
 DeathMessage="%o was smacked down multiple times by %k's %w."
+FemDeathMessage="%o was smacked down multiple times by %k's %w."
+FemKillMessage="%o was smacked down multiple times by %k's %w."
 PickupMessage="You got the Eightball gun"
 ItemName="Eightball"
 
 [OldRifle]
 DeathMessage="%k put a bullet through %o's head."
+FemDeathMessage="%k put a bullet through %o's head."
+FemKillMessage="%k put a bullet through %o's head."
 PickupMessage="You got the Rifle"
 ItemName="Sniper Rifle"
 
 [OldFlakCannon]
 DeathMessage="%o was ripped to shreds by %k's %w."
+FemDeathMessage="%o was ripped to shreds by %k's %w."
+FemKillMessage="%o was ripped to shreds by %k's %w."
 PickupMessage="You got the Flak Cannon"
 ItemName="Flak Cannon"
 
 [OldAutoMag]
 DeathMessage="%o got gatted by %k's %w."
+FemDeathMessage="%o got gatted by %k's %w."
+FemKillMessage="%o got gatted by %k's %w."
 PickupMessage="You got the Automag"
 ItemName="Automag"
 
 [OldMinigun]
 DeathMessage="%k's %w turned %o into a leaky piece of meat."
+FemDeathMessage="%k's %w turned %o into a leaky piece of meat."
+FemKillMessage="%k's %w turned %o into a leaky piece of meat."
 PickupMessage="You got the Minigun"
 ItemName="Minigun"
 
 [OldGESBioRifle]
 DeathMessage="%o drank a glass of %k's dripping green load."
+FemDeathMessage="%o drank a glass of %k's dripping green load."
+FemKillMessage="%o drank a glass of %k's dripping green load."
 PickupMessage="You got the GES BioRifle"
 ItemName="GES BioRifle"
 
@@ -58,6 +74,8 @@ ItemName="Energy Amplifier"
 
 [OldStinger]
 DeathMessage="%o was perforated by %k's %w."
+FemDeathMessage="%o was perforated by %k's %w."
+FemKillMessage="%o was perforated by %k's %w."
 PickupMessage="You picked up the Stinger"
 ItemName="Stinger"
 
@@ -79,6 +97,8 @@ ItemName="Flak Shells"
 
 [OldRazorjack]
 DeathMessage="%k took a bloody chunk out of %o with the %w."
+FemDeathMessage="%k took a bloody chunk out of %o with the %w."
+FemKillMessage="%k took a bloody chunk out of %o with the %w."
 PickupMessage="You got the RazorJack"
 ItemName="RazorJack"
 
@@ -117,3 +137,4 @@ ItemName="Rifle Round"
 [OldFlakShellAmmo]
 PickupMessage="You got a Flak Shell"
 ItemName="Flak Shell"
+

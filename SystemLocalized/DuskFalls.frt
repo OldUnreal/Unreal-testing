@@ -1,40 +1,55 @@
-[LevelInfo2]
-Title=Falaise de Na Pali (chutes du crépuscule)
+ï»¿[LevelInfo2]
+; EN: Title="Edge of Na Pali"
+Title="Falaise de Na Pali"
+
+[LevelSummary]
+; EN: Title="Edge of Na Pali"
+Title="Falaise de Na Pali"
 
 [TranslatorEvent6]
-Message=JOURNAL : M. Worch : Ma tête ne cesse de tourner depuis le crash. Ou alors quelqu'un n'arrête pas de faire bouger le sol ! Oh non, je vais encore être malade...
-
-[TranslatorEvent0]
-Message=JOURNAL : J. Parkman : A bord du Prométhée, l'équipage formait vraiment une équipe. Ici, c'est chacun pour soi. J'aimerais ne pas avoir à compter sur eux pour ma survie. Je pense que Dalton a délibérément conduit les brutes jusqu'à Marshall. Et qu'il l'a ensuite regardé mourir.
+; EN: Message="LOG: M. Worch: My head hasn't stop spinning since the crash. Who keeps moving the ground down there? Oh God, I'm going to be sick again..."
+Message="JOURNAL: M. Worch: Ma tÃªte ne cesse de tourner depuis le crash. Ou alors quelqu'un n'arrÃªte pas de faire bouger le sol! Oh non, je vais encore Ãªtre malade..."
 
 [TranslatorEvent5]
-Message=JOURNAL : K. Divad : Notre mission de repérage du Vortex Rikers est un échec. L'UMS-Chantilly a été attiré dans l'atmosphère de cette planète maudite et s'est écrasé sur une montagne. Seuls Worch le pilote et moi avons survécu. Je ne suis vraiment pas assez payé !
+; EN: Message="LOG: K. Divad: Our mission to locate the Vortex Rikers is a failure. The UMS Chantilly was pulled into the atmosphere of this god-forsaken planet and we crashed into a mountain. Only Pilot Worch and myself survived. They don't pay me enough for this."
+Message="JOURNAL: K. Divad: Notre mission de repÃ©rage du Vortex Rikers est un Ã©chec. L'UMS-Chantilly a Ã©tÃ© attirÃ© dans l'atmosphÃ¨re de cette planÃ¨te maudite et s'est Ã©crasÃ© sur une montagne. Seuls Worch le pilote et moi avons survÃ©cu. Je ne suis vraiment pas assez payÃ©!"
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Parkman: On the Prometheus the crew behaved like a team. Here, they have turned on each other. Wish I didn't have to rely on them to survive. I think crewman Dalton deliberately led the brutes to crewman Marshall. Then he watched him die."
+Message="JOURNAL: J. Parkman: A bord du PromÃ©thÃ©e, l'Ã©quipage formait vraiment une Ã©quipe. Ici, c'est chacun pour soi. J'aimerais ne pas avoir Ã  compter sur eux pour ma survie. Je pense que Dalton a dÃ©libÃ©rÃ©ment conduit les brutes jusqu'Ã  Marshall. Et qu'il l'a ensuite regardÃ© mourir."
 
 [TranslatorEvent4]
-Message=JOURNAL : J. Airoldi : J'ai croisé une petite créature reptilienne ce matin en cherchant de la nourriture. Elle s'est enfuie mais est revenue avec trois autres bestioles du même type. Je pense qu'ils ont passé la journée à me guetter. Ils me foutent les jetons.
+; EN: Message="LOG: J. Airoldi: Had an encounter with a small reptilian creature this morning while scouting for food. It ran away, but came back with three more I think and they've been waiting outside all day. They're giving me the creeps."
+Message="JOURNAL: J. Airoldi: J'ai croisÃ© une petite crÃ©ature reptilienne ce matin en cherchant de la nourriture. Elle s'est enfuie mais est revenue avec trois autres bestioles du mÃªme type. Je pense qu'ils ont passÃ© la journÃ©e Ã  me guetter. Ils me foutent les jetons."
 
 [TranslatorEvent7]
-Message=Bunker de minage Terra-Emi
+; EN: Message="Terra-Emi Mining Bunker"
+Message="Bunker MiniÃ¨re Terra-Emi"
 
 [TranslatorEvent2]
-Message=JOURNAL : W. Marshall : J'ai bien avancé dans la montagne. Devrais atteindre les coordonnées de Dahlgren dans quelques heures. Ai enfin trouvé de l'eau. Ai failli mourir de déshydratation.
+; EN: Message="LOG: W. Marshall: Hiked through the mountains and making good time. Should make it to Dahlgren's coordinates in a few hours. Finally found some water. Thought I was going to die of dehydration."
+Message="JOURNAL: W. Marshall: J'ai bien avancÃ© dans la montagne. Devrais atteindre les coordonnÃ©es de Dahlgren dans quelques heures. Ai enfin trouvÃ© de l'eau. Ai failli mourir de dÃ©shydratation."
 
 [TranslatorEvent8]
-Message=Station minière Terra-Sun (Sud)
+; EN: Message="Terra-Sun Mining Station (South)"
+Message="Station MiniÃ¨re Terra-Sun (Sud)"
 
 [TranslatorEvent11]
-Message=Station minière Terra-Neo
+; EN: Message="Terra-Neo Mining Station"
+Message="Station MiniÃ¨re Terra-Neo"
 
 [TranslatorEvent1]
-Message=JOURNAL : G. Dahlgren : Toujours aucune réponse de l'équipe de Dalton. Ça fait maintenant quatre jours et aucun signe des autres. Je ne pense pas qu'on puisse survivre. J'ai entendu dire que quelqu'un avait réussi à s'enfuir de cette planète. J'espère qu'ils enverront un vaisseau pour nous récupérer...
-M_TransMessage=
+; EN: Message="LOG: G. Dahlgren: Still no reply from Dalton's team. It's been four days now and no sign of the others. I don't think we're going to survive. I heard someone actually made it off this planet. Hope they send a ship back for us..."
+Message="JOURNAL: G. Dahlgren: Toujours aucune rÃ©ponse de l'Ã©quipe de Dalton. Ã‡a fait maintenant quatre jours et aucun signe des autres. Je ne pense pas qu'on puisse survivre. J'ai entendu dire que quelqu'un avait rÃ©ussi Ã  s'enfuir de cette planÃ¨te. J'espÃ¨re qu'ils enverront un vaisseau pour nous rÃ©cupÃ©rer..."
 
 [TranslatorEvent9]
-Message=Station minière Terra-Sun (Nord)
+; EN: Message="Terra-Sun Mining Station (North)"
+Message="Station MiniÃ¨re Terra-Sun (Nord)"
 
 [TranslatorEvent10]
-Message=Centre minier Terra-Mina
+; EN: Message="Terra-Mina Mining Facility"
+Message="Centre Minier Terra-Mina"
 
 [TranslatorEvent3]
-Message=JOURNAL : S. Dalton : J'ai vu ces brutes battre Marshall à mort la nuit dernière. Il n'a rien vu venir et c'est peut-être mieux comme ça. J'ai vidé un chargeur entier sur un de ces monstres mais ça ne l'empêchait pas de continuer à avancer. Par chance, ils n'ont pas essayé de s'en prendre à moi là-haut...
-
+; EN: Message="LOG: S. Dalton: Watched those brutes beat Marshall to a pulp last night. He never saw it coming. Probably better that way. I emptied an entire clip on one of them and he just kept coming. At least they haven't tried to get me up here..."
+Message="JOURNAL: S. Dalton: J'ai vu ces brutes battre Marshall Ã  mort la nuit derniÃ¨re. Il n'a rien vu venir et c'est peut-Ãªtre mieux comme Ã§a. J'ai vidÃ© un chargeur entier sur un de ces monstres mais Ã§a ne l'empÃªchait pas de continuer Ã  avancer. Par chance, ils n'ont pas essayÃ© de s'en prendre Ã  moi lÃ -haut..."

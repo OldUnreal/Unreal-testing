@@ -12,11 +12,11 @@ Message="Per què jo?"
 
 [TranslatorEvent7]
 ; EN: Message="LOG: J. Crable: After trying to trade a useless flashlight to one of the Nali natives for some food, he turned me into a cow. I've learned that I must travel to high peaks of Mon-Ton Dew and meet with the high Priestess for a cure. My quest begins."
-Message="LOG: J. Crable: Després d’intentar canviar una llanterna inútil a una de les natives de Nali per obtenir menjar, em va convertir en una vaca. He après que he de viatjar als alts cims de Mon-Ton Dew i reunir-me amb l’alta sacerdotessa per obtenir una cura. Comença la meva recerca."
+Message="REGISTRE: J. Crable: Després d’intentar canviar una llanterna inútil a una de les natives de Nali per obtenir menjar, em va convertir en una vaca. He après que he de viatjar als alts cims de Mon-Ton Dew i reunir-me amb l’alta sacerdotessa per obtenir una cura. Comença la meva recerca."
 
 [TranslatorEvent1]
 ; EN: Message="LOG: D. Beck: Our luck seems to have changed. We've found a Terran vessel of some sort settled in a mountain fortress. A gate prevents us from reaching it but the natives say it can be opened from a nearby tower. Looks like we're home free."
-Message="LOG: D. Beck: La nostra sort sembla que ha canviat. Hem trobat una mena de vaixells terrestres instal·lats en una fortalesa de muntanya. Una porta ens impedeix arribar-hi, però els nadius diuen que es pot obrir des d’una torre propera. Sembla que som a casa lliures."
+Message="REGISTRE: D. Beck: La nostra sort sembla que ha canviat. Hem trobat una mena de vaixells terrestres instal·lats en una fortalesa de muntanya. Una porta ens impedeix arribar-hi, però els nadius diuen que es pot obrir des d’una torre propera. Sembla que som a casa lliures."
 
 [TranslatorEvent0]
 ; EN: Message="They tell me I must hurry. The Sky Demons have uncovered our secret. There is much work here, time escapes me. Nevertheless, the future shines bright in my eyes. We shall be victorious in the next life, but for now, everything must come to an end..."
@@ -24,7 +24,7 @@ Message="Em diuen que m’he d’afanyar. Els dimonis del cel han descobert el n
 
 [TranslatorEvent2]
 ; EN: Message="LOG: M. Tetreault: As soon as I find that switch to open the gate, we can get the hell out of here. Think happy thoughts. Uh-oh, spotted another one of those Skaarj creatures. That's it, his ass is mine."
-Message="LOG: M. Tetreault: Tan aviat com trobi aquest interruptor per obrir la porta, podem sortir de l'infern. Penseu en pensaments feliços. Uh-oh, vaig veure una altra d’aquestes criatures Skaarj. Ja està, el cul és meu."
+Message="REGISTRE: M. Tetreault: Tan aviat com trobi aquest interruptor per obrir la porta, podem sortir de l'infern. Penseu en pensaments feliços. Uh-oh, vaig veure una altra d’aquestes criatures Skaarj. Ja està, el cul és meu."
 
 [TranslatorEvent6]
 ; EN: Message="What is the point of me hanging around on this spike? What does it prove? I'm in a lot of pain here and I fail to see the humor in any of this."

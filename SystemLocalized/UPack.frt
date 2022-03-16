@@ -1,3 +1,3 @@
-[LevelInfo1]
-Title="Ch�teau Nali"
-
+﻿[LevelInfo1]
+; EN: Title="Nali Castle"
+Title="Le Château Nali"

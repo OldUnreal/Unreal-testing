@@ -10,4 +10,4 @@ IdealPlayerCount="2-5"
 
 [Counter0]
 ; EN: CompleteMessage="Core Unstable!"
-CompleteMessage="Nucli inestable."
+CompleteMessage="Nucli inestable!"

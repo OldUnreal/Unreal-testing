@@ -4,6 +4,7 @@ Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Descr
 Preferences=(Caption="Navegador Web UBrowser",Parent="Juego en Red",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserServerListWindow]
+; EN: InfoName="Info"
 InfoName="Info"
 ; EN: PlayerCountName="Players"
 PlayerCountName="Jugadores"
@@ -17,10 +18,6 @@ QueryFailedText="Error del Servidor Maestro: "
 PingingText="Consultando Servidores"
 ; EN: CompleteText="Complete"
 CompleteText="Finalizado"
-
-[UBrowserMainWindow]
-; EN: WindowTitleString="Server Browser"
-WindowTitleString="Buscador de Servidores"
 
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
@@ -69,14 +66,14 @@ GameModeText="Modo de Juego"
 GameTypeText="Tipo de juego"
 ; EN: GameVersionText="Game Version"
 GameVersionText="Versión del juego"
+; EN: GameSubVersionText="Game SubVersion"
+GameSubVersionText="Sub-Versión del juego"
 ; EN: WorldLogText="ngStats World Stat-Logging"
 WorldLogText="Reg. Estad. Mundiales ngStats"
 ; EN: TrueString="Enabled"
 TrueString="Activado"
 ; EN: FalseString="Disabled"
 FalseString="Desactivado"
-; EN: GameSubVersionText="Game SubVersion"
-GameSubVersionText="Subversión del juego"
 ; EN: MapFileString="Map Filename"
 MapFileString="Nom. Arch. Mapa"
 ; EN: DLLString="C++ Library"
@@ -94,9 +91,9 @@ GameClassString="Clase de juego"
 ; EN: FavoritesName="Favorites"
 FavoritesName="Favoritos"
 ; EN: NewsName="Community News"
-NewsName="Noticias de la comunidad"
-; EN: RecentName="Recent servers"
-RecentName="Servidores recientes"
+NewsName="Noticias de la Comunidad"
+; EN: RecentName="Recent Servers"
+RecentName="Servidores Recientes"
 
 [UBrowserServerGrid]
 ; EN: ServerName="Server"
@@ -104,7 +101,7 @@ ServerName="Servidor"
 ; EN: PingName="Ping"
 PingName="Ping"
 ; EN: MapNameName="Map Name"
-MapNameName="Nombre del mapa"
+MapNameName="Nom. del Mapa"
 ; EN: PlayersName="Players"
 PlayersName="Jugadores"
 ; EN: VersionName="Version"
@@ -113,14 +110,18 @@ VersionName="Versión"
 [UBrowserInfoMenu]
 ; EN: RefreshName="&Refresh Info"
 RefreshName="Actualiza&r Info."
-; EN: AttachName="&Attach"
-AttachName="&Adjuntar"
-; EN: CloseName="&Close"
-CloseName="&Cerrar"
+; EN: AttachName="&Attach Window"
+AttachName="&Adjuntar Ventana"
+; EN: CloseName="&Close Window"
+CloseName="&Cerrar Ventana"
+
+[UBrowserMainWindow]
+; EN: WindowTitleString="Unreal Server Browser"
+WindowTitleString="Buscador de Servidores de Unreal"
 
 [UBrowserRightClickMenu]
 ; EN: RefreshName="&Refresh All Servers"
-RefreshName="&Actualizar todos los servidores"
+RefreshName="&Actualizar Todos los Servidores"
 ; EN: FavoritesName="Add to &Favorites"
 FavoritesName="Agregar a &Favoritos"
 ; EN: RemoveFavoritesName="Remove from &Favorites"
@@ -133,13 +134,13 @@ PingAllName="Consultar &Todos Los Servidores"
 InfoName="Info. de &Servidores y Jugadores"
 ; EN: JoinPasswordName="Join with &Password"
 JoinPasswordName="&Unirse con Contraseña"
-; EN: JoinServerName="&Join server"
+; EN: JoinServerName="&Join Server"
 JoinServerName="U&nirse al Servidor"
 ; EN: SpectateServerName="Join as &Spectator"
 SpectateServerName="Un&irse como Espectador"
-; EN: ServerWebsiteName="Show server &Website"
+; EN: ServerWebsiteName="Show Server &Website"
 ServerWebsiteName="Mostrar Sitio &Web de Servidor"
-; EN: CopyAddressName="&Copy server address"
+; EN: CopyAddressName="&Copy Server address"
 CopyAddressName="Copiar &Dirección de Servidor"
 
 [UBrowserPlayerGrid]
@@ -158,6 +159,16 @@ SkinText="Piel"
 ; EN: IDText="ID"
 IDText="ID"
 
+[UBrowserLibPageWindow]
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLTitleStr="No se puede conectar: Librería de Vínculo Dinámico %ls No Encontrada."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+DLLVerTitleStr="No se puede conectar: Versión Errónea de Librería de Vínculo Dinámico %ls."
+; EN: InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[0]="Para conectarse a este servidor se necesita la librería de C++ adicional %ls."
+; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
+InfoText[1]="Para mayor información ver la información externa a continuación (alojada por %ls):"
+
 [UBrowserConsole]
 ; EN: ClassCaption="Unreal Browser Console"
 ClassCaption="Consola de Buscador de Unreal"
@@ -169,18 +180,8 @@ OpenText="Abrir:"
 OpenHelp="Introduce una URL estándar, o selecciona una del historial de URL. Pulsa Intro para activarla."
 
 [UBrowserServerWebWin]
-; EN: WindowTitle="Web Explorer"
-WindowTitle="Explorador web"
-
-[UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLTitleStr="No se puede conectar: Librería de Vínculo Dinámico "%ls" No Encontrada."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-DLLVerTitleStr="No se puede conectar: Versión Errónea de Librería de Vínculo Dinámico "%ls"."
-; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[0]="Para conectarse a este servidor se necesita la librería de C++ adicional "%ls"."
-; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
-InfoText[1]="Para mayor información ver la información externa a continuación (alojada por %ls):"
+; EN: WindowTitle="Unreal Web Explorer"
+WindowTitle="Explorador Web Unreal"
 
 [UBrowserServerWebCW]
 ; EN: RefreshString="Refresh page"

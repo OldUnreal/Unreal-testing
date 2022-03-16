@@ -1,8 +1,15 @@
-[LevelInfo2]
-Title=Watcher of the Skies
+Ôªø[LevelInfo2]
+; EN: Title="Intermission 12"
+Title="Intermission 12"
 
-[TransitionText3]
-MessageA="AprËs m'Ítre ÈchappÈ de l'usine de Tarydium, je me suis glissÈ ‡ l'extÈrieur pour me retrouver sur un plateau... gelÈ et glacÈ. Le contraste avec le climat tropical que j'avais connu jusqu'‡ lors Ètait saisissant. 
-MessageB=EntourÈ comme je l'Ètais de falaises et de pics vertigineux, je me suis dit que j'avais parcouru une sacrÈe distance sous terre, puisque je me retrouvais en pleine montagne!
-MessageC=La bonne nouvelle, c'est que je suis toujours dans la bonne direction."
+[LevelSummary]
+; EN: Title="Intermission 12"
+Title="Intermission 12"
 
+[TransitionGenderEvent6]
+; Note: Make the text coincide with the equivalent in Sounds/frt/Interm12.uax
+OutDelays[1]=26.000000
+; EN: MaleText[0]="After escaping from the Tarydium plant I wound up outside... on a freezing, ice-filled plateau. The contrast with the lush climate from before was startling. Anyway, while on the surface, I was surrounded by jagged cliffs and sharp peaks, so I'm thinking I'm high in the mountains. I must have covered some distance underground... and gained some serious altitude. The good news is that I'm still headed in the right direction."
+MaleText[0]="Apr√®s m'√™tre √©chapp√© de l'usine de Tarydium, je me suis gliss√© √† l'ext√©rieur pour me retrouver sur un plateau enti√®rement gel√©. Le contraste avec le climat tropical que j'avais connu jusqu'alors √©tait saisissant. Entour√© comme je l'√©tais de falaises et de pics vertigineux, je me suis dit que j'avais parcouru une sacr√©e distance sous terre, puisque je me retrouvais en pleine montagne! La bonne nouvelle, c'est que je suis toujours dans la bonne direction."
+; EN: FemaleText[0]="After escaping from the Tarydium plant I wound up outside... on a freezing, ice-filled plateau. The contrast with the lush climate from before was startling. Anyway, while on the surface, I was surrounded by jagged cliffs and sharp peaks, so I'm thinking I'm high in the mountains. I must have covered some distance underground... and gained some serious altitude. The good news is that I'm still headed in the right direction."
+FemaleText[0]="Apr√®s m'√™tre √©chapp√©e de l'usine de Tarydium, je me suis gliss√©e √† l'ext√©rieur pour me retrouver sur un plateau enti√®rement gel√©. Le contraste avec le climat tropical que j'avais connu jusqu'alors √©tait saisissant. Entour√©e comme je l'√©tais de falaises et de pics vertigineux, je me suis dit que j'avais parcouru une sacr√©e distance sous terre, puisque je me retrouvais en pleine montagne! La bonne nouvelle, c'est que je suis toujours dans la bonne direction."

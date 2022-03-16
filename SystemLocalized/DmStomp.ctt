@@ -1,7 +1,9 @@
 ﻿[LevelInfo0]
-LevelEnterText="Stomp"
+; EN: LevelEnterText="Stomp"
+LevelEnterText="Trepitjo"
 IdealPlayerCount="2-5"
 
 [LevelSummary]
-LevelEnterText="Stomp"
+; EN: LevelEnterText="Stomp"
+LevelEnterText="Trepitjo"
 IdealPlayerCount="2-5"

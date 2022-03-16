@@ -26,7 +26,7 @@ Message="ALERTA: Resistència d'esclaus nali detectada al Sector 3A. Força leta
 
 [TranslatorEvent2]
 ; EN: Message="Harobed Village is on the other side of these mountains. I will wait until the two suns have set and proceed through Rrajigar mine. It is the only way."
-Message="La Vila Harobed és a l'altre costat d'aquestes muntanyes. Esperaré fins que els dos sols s'hagin post i procediré per la mina Rrajigar. És l'única forma."
+Message="El Poble Harobed és a l'altre costat d'aquestes muntanyes. Esperaré fins que els dos sols s'hagin post i procediré per la mina Rrajigar. És l'única forma."
 
 [TranslatorEvent10]
 ; EN: Message="WARNING: Force Field power source two status is inactive. Security Condition Two reached."

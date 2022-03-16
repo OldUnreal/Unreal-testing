@@ -12,7 +12,7 @@ LevelEntryText="Entrant al pic de Gala"
 
 [TranslatorEvent2]
 ; EN: Message="LOG: R. Wisnewski: Damn, it's cold. The walkway outside is impassable. I almost fell off twice, and it's a long way down. I'll try again later. I have a feeling it's going to be worth the effort to reach that structure up ahead."
-Message="LOG: R. Wisnewski: Maleït, fa fred. La passarel·la exterior és intransitable. Gairebé em vaig caure dues vegades i queda molt lluny. Ho tornaré a intentar més tard. Tinc la sensació que valdrà la pena l’esforç per assolir aquesta estructura per endavant."
+Message="REGISTRE: R. Wisnewski: Maleït, fa fred. La passarel·la exterior és intransitable. Gairebé em vaig caure dues vegades i queda molt lluny. Ho tornaré a intentar més tard. Tinc la sensació que valdrà la pena l’esforç per assolir aquesta estructura per endavant."
 
 [TranslatorEvent1]
 ; EN: Message="System: Teleporter Online."

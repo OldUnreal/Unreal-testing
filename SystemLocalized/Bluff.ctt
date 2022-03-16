@@ -24,7 +24,7 @@ Message="M'he estat amagant aquí durant mesos, pel que ja sembla. Les forces Sk
 
 [TranslatorEvent8]
 ; EN: Message="MAGNETIC LOCKS ENGAGED: AUTHORIZED BY CAPTAIN DUK'CHOROTH - OF THE 12th HOUSE OF dUBREVI"
-Message="PANYS MAGNÈTICS ACTIUS: AUTORITZAT PEL CAPITÀ DUK'CHOROTH - DE LA 12a CASA DE dUBREVI"
+Message="PANYS MAGNÈTICS ACTIUS: AUTORITZAT PEL CAPITÀ DUK'CHOROTH-DE LA 12a CASA DE dUBREVI"
 ; EN: AltMessage="MAGNETIC LOCKS DISENGAGED"
 AltMessage="PANYS MAGNÊTICS DESACTIVATS"
 
@@ -64,7 +64,7 @@ Message="Em trobo malament. La meva tos ha empitjorat i aquesta cel·la enfosqui
 
 [TranslatorEvent1]
 ; EN: Message="Security Officer Sergai Dubrov: ISV-KRAN: LOG ENTRY: We are hot on the trail of the Skaarj Hunting party that captured Kira near the Sunspire. They are headed north towards the blue electrical storms on the horizon."
-Message="Oficial de Seguretat Sergai Dubrov: ISV-KRAN:ENTRADA AL DIARI:Estem trepitjant la cua de la partida de caça skaarj que va capturar Kira a prop de la Punta del Sol. Van cap al nord cap a les tempestes elèctriques blaus a l'horitzó."
+Message="Oficial de Seguretat Sergai Dubrov: ISV-KRAN: ENTRADA AL REGISTRE:Estem trepitjant la cua de la partida de caça skaarj que va capturar Kira a prop de la Punta del Sol. Van cap al nord cap a les tempestes elèctriques blaus a l'horitzó."
 
 [TranslatorEvent12]
 ; EN: Message="I have discovered a secret! Last night I snuck out of my hiding place and swam through the pipes to the prison. They have captured a Girl! The Krall sergeant took two boots in the mouth when he approached her. Haha! I can only laugh at their stupidity."
@@ -102,7 +102,7 @@ Message="El meu germà Kriin és a la cel·la a sota meu. El meu altre germa Kru
 
 [TranslatorEvent15]
 ; EN: Message="Vault of the Dead - Herein lies the last resting place of the High Priest of Bluff Eversmoking and the artifacts used by the Messiah."
-Message="Volta dels Morts-Aquí jeu l'últim lloc de descans del Summe Sacerdot del Penya-segat Eversmoking i els artefactes emprats pel Messíes."
+Message="Volta dels Morts - Aquí jeu l'últim lloc de descans del Summe Sacerdot del Penya-segat Eversmoking i els artefactes emprats pel Messíes."
 ; EN: Hint="Find a secret lever in the graveyard"
 Hint="Troba una palanca secreta al cementiri"
 
@@ -112,7 +112,7 @@ Message="Oficial Científica Kira Argmanov: Separada dels meus companys de tripu
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."
-Message="Diari de l'Oficial Mèdica en Cap del ISV-KRAN:-Tatiana Zimna: Hem arribat a aquest monestir del llac de la gorja preciós buscant els segrestadors de Kira. Acamparem sota aquest crucifix aquesta nit i sortirem demà a l'alba."
+Message="Registre de l'Oficial Mèdica en Cap del ISV-KRAN:-Tatiana Zimna: Hem arribat a aquest monestir del llac de la gorja preciós buscant els segrestadors de Kira. Acamparem sota aquest crucifix aquesta nit i sortirem demà a l'alba."
 
 [TranslatorEvent26]
 ; EN: Message="Shipping Log: Grorq of the Red Hand Tribe. I am really getting sick with the way the Skaarj are treating us. Constantly bossing us around and making us watch over their pathetic Nali slaves. My troops are getting sick of this situation."

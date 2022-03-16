@@ -13,7 +13,7 @@ CancelText="Annulla"
 
 [UWindowConsoleWindow]
 ; EN: WindowTitle="System Console"
-WindowTitle="Console di sistema"
+WindowTitle="Console di Sistema"
 
 [UWindowSmallCloseButton]
 ; EN: CloseText="Close"
@@ -32,6 +32,8 @@ OKText="OK"
 ShowColorsText="Mostra messaggi nella console a colori"
 ; EN: ShowChatText="Log only chat messages"
 ShowChatText="Registra solo i messaggi di chat"
+; EN: ShowWarningText="Log script errors"
+ShowWarningText="Registra errori di script"
 
 [AdminGUIPlayersGrid]
 ; EN: PlayerID="ID#"
@@ -42,22 +44,22 @@ PlayerName="Nome Giocatore"
 PlayerIP="Indirizzo IP"
 ; EN: PlayerClientID="Client ID"
 PlayerClientID="ID Client"
-; EN: MaxLengthExceeded="Maximum player list length exceeded "%i""
+; EN: MaxLengthExceeded="Maximum player list length exceeded %i"
 MaxLengthExceeded="Superata lunghezza massima lista giocatori "%i""
 ; EN: IDMismatchedStr="Response ID mismatched: %i/%j"
 IDMismatchedStr="Non combacia ID di risposta: %i/%j"
-; EN: ClientReceivedStr="Received client "%ls"."
-ClientReceivedStr="Ricevuto client "%ls"."
+; EN: ClientReceivedStr="Received client %ls."
+ClientReceivedStr="Ricevuto client %ls."
 ; EN: GettingInfoStr="Getting player list from server, if nothing happens you may not be logged in as admin."
 GettingInfoStr="Prelevamento lista giocatori dal server, se non avviena nulla potresti non essere connesso come ammistratore."
 
 [AdminGUIBanLGrid]
-; EN: LengthExceeded="Maximum player list length exceeded "%i""
-LengthExceeded="Superata la lunghezza massima della lista giocatori "%i""
+; EN: LengthExceeded="Maximum player list length exceeded %i"
+LengthExceeded="Superata la lunghezza massima della lista giocatori %i"
 ; EN: ResponseMismatch="Response ID mismatched: %i/%j"
 ResponseMismatch="Non combacia ID di risposta: %i/%j"
-; EN: ReceiveBanText="Received ban "%ls"."
-ReceiveBanText="Ricevuto ban "%s"."
+; EN: ReceiveBanText="Received ban %ls."
+ReceiveBanText="Ricevuto ban %ls."
 ; EN: GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
 GettingBanListText="Prelevamento banlist dal server, se non avviena nulla potresti non essere connesso come ammistratore (oppure non ci sono ban sul server)."
 
@@ -66,24 +68,26 @@ GettingBanListText="Prelevamento banlist dal server, se non avviena nulla potres
 MusicNameStr="Nome Musica"
 ; EN: MusicPackStr="Music package"
 MusicPackStr="Pacchetto Musicale"
-; EN: FailedToPlayStr="Failed to play: Music "%ls" was not found or failed to load."
-FailedToPlayStr="Riproduzione non riuscita: Musica '%s' non è stata trovata o impossibile aprire."
-; EN: StartedPlayStr="Started playing music "%ls" with section %i."
-StartedPlayStr="Iniziata esecuzione musica "%ls" dalla sezione musicale %i."
+; EN: FailedToPlayStr="Failed to play: Music %ls was not found or failed to load."
+FailedToPlayStr="Riproduzione non riuscita: Musica %ls non è stata trovata o impossibile aprire."
+; EN: StartedPlayStr="Started playing music %ls with section %i."
+StartedPlayStr="Iniziata esecuzione musica %ls dalla sezione musicale %i."
 ; EN: NullErrorStr="Failed to add: NULL is not a valid song."
 NullErrorStr="Impossibile aggiungere: NULL non è una canzone valida."
-; EN: FailedLoadStr="Failed to add: Music "%ls" file could not be found or loaded."
-FailedLoadStr="Impossibile aggiungere: File musicale "%ls" impossibile da trovare o aprire."
+; EN: FailedLoadStr="Failed to add: Music %ls file could not be found or loaded."
+FailedLoadStr="Impossibile aggiungere: File musicale %ls impossibile da trovare o aprire."
 ; EN: ConfirmInsertDuplicateTitle="Adding an already listed track"
 ConfirmInsertDuplicateTitle="Aggiunta di una traccia già elencata"
 ; EN: ConfirmInsertDuplicateText="Such a track is already included in the playlist. Insert it anyway?"
 ConfirmInsertDuplicateText="Tale traccia è già inclusa nella playlist. Inserirlo comunque?"
-; EN: AddedStr="Added music "%ls" (%i)."
-AddedStr="Aggiunta musica "%ls" (%i)."
+; EN: AddedStr="Added music %ls (%i)."
+AddedStr="Aggiunta musica %ls (%i)."
 ; EN: RemoveSongStr="Removed song #%i."
 RemoveSongStr="Rimosso brano #%i."
 ; EN: ClearListStr="Removed all tracks from the playlist."
 ClearListStr="Rimosse tutte le tracce dalla playlist."
+; EN: AddAllStr="Added all musics to the list."
+AddAllStr="Tutti i brani aggiunti all'elenco."
 ; EN: ConfirmClearListTitle="Confirm clearing the playlist"
 ConfirmClearListTitle="Conferma la cancellazione della playlist"
 ; EN: ConfirmClearListText="Do you want to clear the playlist?"
@@ -95,9 +99,9 @@ BadIndexStr="Impossibile rimuovere: Indice di rimozione errato."
 ; EN: PlayersListTxt="Clients List"
 PlayersListTxt="Lista Client"
 ; EN: BanListTxt="Banned Clients"
-BanListTxt="Client bannati"
+BanListTxt="Client Bannati"
 ; EN: TempBanListTxt="Session Banned Clients"
-TempBanListTxt="Client bannati per la sessione"
+TempBanListTxt="Client Bannati per la Sessione"
 
 [AdminGUIManBanClientW]
 ; EN: PlayerNameTxt="Client name (for banlisting purposes only):"
@@ -109,17 +113,17 @@ InsertBanTxt="Inserimento ban"
 
 [MMMainWindow]
 ; EN: WindowTitle="Music Menu"
-WindowTitle="Menù musica"
+WindowTitle="Menù Musica"
 
 [UWindowNetErrorClientWindow]
 ; EN: ReconnectText="Reconnect to server"
 ReconnectText="Riconnetti al server"
-; EN: KickNetworkText="KICKED!|You have been kicked from this server by an administrator for remainder of the game.\"
-KickNetworkText="CACCIATO!|Sei stato cacciato da questo server da un amministratore per il resto del gioco.\"
-; EN: BanNetworkText="BANNED!|You have been banned from this server by an administrator for bad behaviour.\\If you feel like you don't deserve this ban, contact the administrator at: "
-BanNetworkText="BANNATO!|Sei stato bannato da questo server da un amministratore per comportamento irresponsabile.\\Se credi che questa punizione sia ingiusta, contatta l'amministratore al: "
-; EN: TempBanNetworkText="SESSION BANNED!|You have been temporarily banned from this server for remainder of the map.\"
-TempBanNetworkText="MOMENTANEAMENTE BANNATO!|Sei stato temporaneamente bannato da questo server per il resto della mappa.\"
+; EN: KickNetworkText="KICKED!|You have been kicked from this server by an administrator for remainder of the game.\\"
+KickNetworkText="CACCIATO!|Sei stato cacciato da questo server da un amministratore per il resto del gioco.\\"
+; EN: BanNetworkText="BANNED!|You have been banned from this server by an administrator for bad behaviour.\\\\If you feel like you don't deserve this ban, contact the administrator at: "
+BanNetworkText="BANNATO!|Sei stato bannato da questo server da un amministratore per comportamento irresponsabile.\\\\Se credi che questa punizione sia ingiusta, contatta l'amministratore al: "
+; EN: TempBanNetworkText="SESSION BANNED!|You have been temporarily banned from this server for remainder of the map.\\"
+TempBanNetworkText="MOMENTANEAMENTE BANNATO!|Sei stato temporaneamente bannato da questo server per il resto della mappa.\\"
 
 [MMControlsClient]
 ; EN: MusicVolumeText="Music Volume"
@@ -128,6 +132,14 @@ MusicVolumeText="Volume Musica"
 BrowseText="Navigare"
 ; EN: BrowseHint="Browse music files"
 BrowseHint="Sfoglia files musicali"
+; EN: AddAllText="Add All"
+AddAllText="Aggiungi Tutto"
+; EN: AddAllHint="This will search through entire music directory and add all audio tracks to playlist."
+AddAllHint="Questo cercherà i brani nell'intera directory musicale e aggiungerà tutti i brani trovati all'elenco."
+; EN: AddAllWinHdr="WARNING: Add all songs?"
+AddAllWinHdr="AVVISO: Aggiungere tutte le tracce?"
+; EN: AddAllWarningText="This operation will be slow and will add every possible song to your playlist, proceed?"
+AddAllWarningText="Questa operazione sarà lenta e aggiungerà ogni possibile canzone alla tua lista. Vuoi fare questo?"
 ; EN: AddMusicText="Add Music"
 AddMusicText="Aggiungi musica"
 ; EN: AddMusicHint="Add music with the specified name"
@@ -150,6 +162,10 @@ StopTrackHint="Interrompi Musica"
 PriorTrackHint="Traccia precedente"
 ; EN: NextTrackHint="Next track"
 NextTrackHint="Riproduci Seguente"
+; EN: ShuffleText="Shuffle playlist"
+ShuffleText="Randomizzare l'elenco"
+; EN: ShuffleHint="Next track is always selected at random."
+ShuffleHint="La traccia successiva sarà sempre selezionata casualmente."
 
 [UWindowNetErrorWindow]
 ; EN: WindowTitle="Player Network error status"
@@ -157,7 +173,7 @@ WindowTitle="Errore di rete"
 
 [AdminGUIMainWindow]
 ; EN: WindowTitle="Admin Menu"
-WindowTitle="Menu amministrazione"
+WindowTitle="Menu Ammin."
 
 [AdminGUIBanLPullDown]
 ; EN: RemoveBanTxt="&Remove ban"
@@ -170,8 +186,8 @@ RefreshTxt="Aggio&rna lista bannati"
 ManualBanTxt="Inserimento &manualmente del ban"
 
 [MMMusListWindow]
-; EN: WindowTitle="Found music tracks:"
-WindowTitle="Trovate molteplici musiche:"
+; EN: WindowTitle="Multiple music tracks found:"
+WindowTitle="Trovate più tracce musicali:"
 
 [MMListPullDown]
 ; EN: PlaySongStr="&Play"
@@ -219,16 +235,10 @@ MedFontBold=UWindowFonts.TahomaB20
 LargeFont=UWindowFonts.Tahoma30
 LargeFontBold=UWindowFonts.TahomaB30
 
-[AdminGUIBanLGrid]
-; EN: LengthExceeded="Maximum player list length exceeded "%i""
-LengthExceeded="Superata la lunghezza massima della lista giocatori "%i""
-; EN: ResponseMismatch="Response ID mismatched: %i/%j"
-ResponseMismatch="Non combacia ID di risposta: %i/%j"
-; EN: ReceiveBanText="Received ban "%ls"."
-ReceiveBanText="Ricevuto ban "%ls"."
-; EN: GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
-GettingBanListText="Prelevamento banlist dal server, se non avviena nulla potresti non essere connesso come ammistratore (oppure non ci sono ban sul server)."
-
 [UWindowSmallRestartButton]
 ; EN: RestartText="Restart"
 RestartText="Ricomincia"
+
+[WindowConsole]
+; EN: WarningMessage="Something is creating script warnings..."
+WarningMessage="Qualcosa sta creando avvisi di script..."

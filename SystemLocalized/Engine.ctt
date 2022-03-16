@@ -53,20 +53,6 @@ Preferences=(Caption="Ombres de Projectil",Parent="Marques",Class=Engine.Project
 ; EN: Preferences=(Caption="Server",Parent="Blood",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
 Preferences=(Caption="Servidor",Parent="Sang",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
 
-[PlayerPawn]
-; EN: QuickSaveString="Quick Saving"
-QuickSaveString="Guardant Ràpidament"
-; EN: NoPauseMessage="Game is not pauseable"
-NoPauseMessage="El joc no es pot pausar"
-; EN: ViewingFrom="Now viewing from "
-ViewingFrom="Ara observant des de "
-; EN: OwnCamera="own camera"
-OwnCamera="la pròpia càmera"
-; EN: FailedView="Failed to change view."
-FailedView="No s'ha pogut canviar vista."
-; EN: CantChangeNameMsg="You can't change your name during a global logged game."
-CantChangeNameMsg="No pots canviar el teu nom durant un joc registrat globalment."
-
 [Pawn]
 ; EN: NameArticle=" a "
 NameArticle=" un "
@@ -75,7 +61,7 @@ NameArticle=" un "
 ; EN: PickupMessage="Snagged an item"
 PickupMessage="S'ha agafat un objecte"
 ; EN: ItemArticle="a"
-ItemArticle="a"
+ItemArticle="un"
 ; EN: M_Activated=" activated."
 M_Activated=" activat."
 ; EN: M_Selected=" selected."
@@ -83,33 +69,19 @@ M_Selected=" seleccionat."
 ; EN: M_Deactivated=" deactivated."
 M_Deactivated=" desactivat."
 
-[LevelInfo]
-; EN: Title="Untitled"
-Title="Sense Títol"
-
-[Weapon]
-; EN: MessageNoAmmo=" has no ammo."
-MessageNoAmmo=" no té munició."
-; EN: DeathMessage="%o was killed by %k's %w."
-DeathMessage="%o ha estat mort per el %w de %k."
-; EN: PickupMessage="You got a weapon"
-PickupMessage="Tens una arma"
-; EN: ItemName="Weapon"
-ItemName="Arma"
-; EN: DeathMessage[0]="%o was killed by %k's %w."
-DeathMessage[0]="%o ha estat mort per el %w de %k."
-; EN: DeathMessage[1]="%o was killed by %k's %w."
-DeathMessage[1]="%o ha estat mort per el %w de %k."
-; EN: DeathMessage[2]="%o was killed by %k's %w."
-DeathMessage[2]="%o ha estat mort per el %w de %k."
-; EN: DeathMessage[3]="%o was killed by %k's %w."
-DeathMessage[3]="%o ha estat mort per el %w de %k."
-
 [Ammo]
 ; EN: PickupMessage="You picked up some ammo"
 PickupMessage="Has agafat una mica de munició"
 ; EN: ItemName="Ammo"
 ItemName="Munició"
+
+[LevelInfo]
+; EN: Title="Untitled"
+Title="Sense Títol"
+
+[Spectator]
+; EN: MenuName="Spectator"
+MenuName="Espectador"
 
 [Counter]
 ; EN: CountMessage="Only %i more to go..."
@@ -117,29 +89,19 @@ CountMessage="Queden %i per acabar..."
 ; EN: CompleteMessage="Completed!"
 CompleteMessage="Completat!"
 
-[Spectator]
-; EN: MenuName="Spectator"
-MenuName="Espectador"
-
-[DamageType]
-; EN: Name="killed"
-Name="mort"
-; EN: AltName="killed"
-AltName="abatut"
-
 [Progress]
 ; EN: CancelledConnect="Cancelled Connect Attempt"
 CancelledConnect="Cancel·lat intent de connexió"
 ; EN: RunningNet="%ls: %ls (%i players)"
 RunningNet="%ls: %ls (%i jugadors)"
-; EN: NetReceiving="Receiving "%ls": %i/%i
-NetReceiving="Rebent "%ls": %i/%i"
-; EN: NetReceiveOk="Successfully received "%ls""
+; EN: NetReceiving="Receiving %ls: %i/%i
+NetReceiving="Rebent %ls: %i/%i"
+; EN: NetReceiveOk="Successfully received %ls"
 NetReceiveOk=""%ls" rebut amb èxit"
-; EN: NetSend="Sending "%ls""
-NetSend="Enviant "%ls""
-; EN: NetSending="Sending "%ls": %i/%i"
-NetSending="Enviant "%ls": %i/%i"
+; EN: NetSend="Sending %ls"
+NetSend="Enviant %ls"
+; EN: NetSending="Sending %ls: %i/%i"
+NetSending="Enviant %ls: %i/%i"
 ; EN: Connecting="Connecting..."
 Connecting="Connectant..."
 ; EN: Listening="Listening for clients..."
@@ -150,24 +112,15 @@ Loading="Carregant"
 Saving="Guardant"
 ; EN: Paused="Paused by %ls"
 Paused="Pausat per %ls"
-; EN: ReceiveFile="Receiving "%ls" (F10 Cancels)"
-ReceiveFile="Rebent "%ls" (F10 per cancel·lar)"
-; EN: ReceiveOptionalFile="Receiving optional file "%ls" (Press F10 to Skip)"
-ReceiveOptionalFile="Rebent fitxer opcional "%ls" (Prem F10 per saltar)"
+; EN: ReceiveFile="Receiving %ls (F10 Cancels)"
+ReceiveFile="Rebent %ls (F10 per cancel·lar)"
+; EN: ReceiveOptionalFile="Receiving optional file %ls (Press F10 to Skip)"
+ReceiveOptionalFile="Rebent fitxer opcional %ls (Prem F10 per saltar)"
 ; EN: ReceiveSize="Size %iK, Complete %3.1f%% = %iK, %i Packages remaining"
 ReceiveSize="Grandària %iK, Complet %3.1f%% = %iK, %i Paquets romanen"
 ; EN: ConnectingText="Connecting (F10 Cancels):"
 ConnectingText="Connectar (F10 per cancel·lar):"
 ConnectingURL="unreal://%ls/%ls"
-
-[WarpZoneInfo]
-OtherSideURL=""
-
-[Pickup]
-ExpireMessage=""
-
-[SpecialEvent]
-DamageString=""
 
 [ServerCommandlet]
 HelpCmd=server
@@ -183,6 +136,20 @@ HelpParm[1]="AllAdmin"
 ; EN: HelpDesc[1]="Give all players admin privileges."
 HelpDesc[1]="Dóna a tots els jugadors privilegis d'administració."
 
+[PlayerPawn]
+; EN: QuickSaveString="Quick Saving"
+QuickSaveString="Guardant Ràpidament"
+; EN: NoPauseMessage="Game is not pauseable"
+NoPauseMessage="El joc no es pot pausar"
+; EN: ViewingFrom="Now viewing from "
+ViewingFrom="Ara observant des de "
+; EN: OwnCamera="own camera"
+OwnCamera="la pròpia càmera"
+; EN: FailedView="Failed to change view."
+FailedView="No s'ha pogut canviar vista."
+; EN: CantChangeNameMsg="You can't change your name during a global logged game."
+CantChangeNameMsg="No pots canviar el teu nom durant un joc registrat globalment."
+
 [Console]
 ; EN: ClassCaption="Standard Unreal Console"
 ClassCaption="Consola Unreal Estàndard"
@@ -196,14 +163,8 @@ ConnectingMessage="CONNECTANT"
 PausedMessage="PAUSAT"
 ; EN: PrecachingMessage="PRECACHING"
 PrecachingMessage="PRECATXEJANT"
-; EN: ChatChannel="(CHAT) "
-ChatChannel="(XAT) "
-; EN: TeamChannel="(TEAM) "
-TeamChannel="(EQUI) "
 
 [Menu]
-MenuList=" "
-HelpMessage=" "
 ; EN: HelpMessage[1]="This menu has not yet been implemented."
 HelpMessage[1]="Aquest menú encara no ha estat implementat."
 ; EN: LeftString="Left"
@@ -250,9 +211,29 @@ WrongPassword="La contrasenya introduïda és incorrecta."
 ; EN: NeedPassword="You need to enter a password to join this game."
 NeedPassword="Es necessita introduir una contrasenya per unir-se a aquest joc."
 ; EN: MaleGender="his"
-MaleGender="seva"
+MaleGender="seu"
 ; EN: FemaleGender="her"
-FemaleGender="ella"
+FemaleGender="seu"
+
+[Weapon]
+; EN: MessageNoAmmo=" has no ammo."
+MessageNoAmmo=" no té munició."
+; EN: DeathMessage="%o was killed by %k's %w."
+DeathMessage="%o ha estat mort per el %w de %k."
+FemDeathMessage="%o ha estat morta per el %w de %k."
+FemKillMessage="%o ha estat mort per el %w de %k."
+; EN: PickupMessage="You got a weapon"
+PickupMessage="Tens una arma"
+; EN: ItemName="Weapon"
+ItemName="Arma"
+
+[DamageType]
+; EN: Name="killed"
+Name="mort"
+FemName="morta"
+; EN: AltName="killed"
+AltName="abatut"
+AltFemName="abatuta"
 
 [Errors]
 ; EN: NetOpen="Error opening file"
@@ -328,6 +309,10 @@ AdminLoginText="Administrador %ls s'ha registrat"
 AdminLogoutText="Administrador %ls ha sortit"
 ; EN: CheatUsedStr="%ls used admin/cheat command: %c"
 CheatUsedStr="%ls ha emprat comandament admin/truc: %c"
+
+[AutosaveTrigger]
+; EN: AutoSaveString="Auto Saving"
+AutoSaveString="Autoguardat..."
 
 [Fonts]
 WhiteFont=UnrealShare.WhiteFont

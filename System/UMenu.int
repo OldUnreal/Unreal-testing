@@ -22,7 +22,7 @@ BodyText="Body"
 
 [UMenuServerSetupPage]
 EditAreaWidth=134
-AdminEmailText="Admin E-mail"
+AdminEmailText="Admin E-Mail"
 AdminEMailHelp="Enter an e-mail address so users of this server can contact you."
 AdminNameText="Admin Name"
 AdminNameHelp="Enter the name of this server's administrator."
@@ -47,26 +47,6 @@ LanPlayHelp="If checked, a dedicated server started will be optimized for play o
 DefaultHelp="Press ESC to return to the game"
 DefaultIntroHelp="Use the Game menu to start a new game."
 
-[UMenuMultiplayerMenu]
-StartName="&Start New Multiplayer Game"
-StartHelp="Start your own network game which others can join."
-BrowserName="&Find Internet Games"
-BrowserHelp="Search for games currently in progress on the Internet."
-LANName="Find &LAN Games"
-LANHelp="Search for games of your local LAN."
-OpenLocationName="Open &Location"
-OpenLocationHelp="Connect to a server using its IP address or unreal:// URL."
-PatchName="Download Latest &Update"
-PatchHelp="Find the latest update to the game on the web!"
-DisconnectName="&Disconnect from Server"
-DisconnectHelp="Disconnect from the current server."
-ReconnectName="&Reconnect to Server"
-ReconnectHelp="Attempt to reconnect to the last server you were connected to."
-SuggestPlayerSetupTitle="Check Player Name"
-SuggestPlayerSetupText="Your name is currently set to "Player". It is recommended that you go to Player Setup and give yourself another name before playing a multiplayer game.\n\nWould you like to go to Player Setup instead?"
-SuggestNetspeedTitle="Check Internet Speed"
-SuggestNetspeedText="You haven't yet configured the type of Internet connection you will be playing with. It is recommended that you go to the Network Settings screen to ensure you have the best online gaming experience.\n\nWould you like to go to Network Settings instead?"
-
 [UMenuGameSettingsBase]
 StyleText="Game Style:"
 Styles[0]="Classic"
@@ -76,38 +56,21 @@ StyleHelp="Choose your game style. Hardcore is 10% faster with a 50% damage incr
 SpeedText="Game Speed"
 SpeedHelp="Adjust the speed of the game."
 
-[UMenuBotConfigBase]
-bSingleColumn=False
-BaseText="Base Skill:"
-BaseHelp="This is the base skill level of the bots."
-Skills[0]="Novice"
-Skills[1]="Average"
-Skills[2]="Skilled"
-Skills[3]="Masterful"
-SkillTaunts[0]="They won't hurt you...much."
-SkillTaunts[1]="Don't get cocky."
-SkillTaunts[2]="You think you're tough?"
-SkillTaunts[3]="You're already dead."
-NumBotsText="Number of Bots"
-NumBotsHelp="This is the number of bots that you will play against."
-AutoAdjustText="Auto Adjust Skill"
-AutoAdjustHelp="If checked, bots will increase or decrease their skill to match your skill level."
-RandomText="Random Order"
-RandomHelp="If checked, bots will be chosen at random from the list of bot configurations."
-ConfigBotsText="Configure"
-ConfigBotsHelp="Configure the names, appearance and other attributes of individual bots."
-AtLeastOneBotTitle="Configure Bots"
-AtLeastOneBotText="You must choose at least one bot in order to use the configure bots screen."
-
 [UMenuScreenshotCW]
 PlayersText="Players"
 
 [UMenuWeaponPriorityListBox]
-WeaponPriorityHelp="Click and drag a weapon name in the list on the left to change its priority. Weapons higher in the list have higher priority."
+WeaponPriorityHelp="Click and drag a weapon name in the list on the left to change its priority.  Weapons higher in the list have higher priority."
 
 [UMenuBotConfigClientWindow]
 BIMText="Enable Bots"
 BIMHelp="If checked, bots will be present in your new multiplayer game."
+
+[UMenuHUDConfigCW]
+HUDConfigText="HUD Layout"
+HUDConfigHelp="Use the left and right arrow keys to select a Heads Up Display configuration."
+CrosshairText="Crosshair Style"
+CrosshairHelp="Choose the crosshair appearing at the center of your screen."
 
 [UMenuMutatorCW]
 ExcludeCaption="Mutators not Used"
@@ -121,18 +84,25 @@ KeepHelp="If checked, these Mutators will always be used when starting games."
 FFText="Friendly Fire:"
 FFHelp="Slide to adjust the amount of damage friendly fire imparts to other teammates."
 
+[UMenuSaveGameClientWindow]
+CantSave="Cannot Save: You are dead."
+
 [UMenuStartGameClientWindow]
 DedicatedText="Dedicated"
 DedicatedHelp="Press to launch a dedicated server."
 ServerText="Server"
 
+[UMenuLoadGameClientWindow]
+RestartText="Restart"
+RestartHelp="Press to restart the current level."
+
 [UMenuOptionsWindow]
-WindowTitle="Preferences"
 WindowWidth=300
+WindowTitle="Preferences"
 
 [UMenuWeaponPriorityListArea]
 AutoSwitchText="Auto-Switch Weapons"
-AutoSwitchHelp="Automatically switch to a higher priority weapon when you pick it up. If unchecked, you must switch to the new weapon manually."
+AutoSwitchHelp="Automatically switch to a higher priority weapon when you pick it up.  If unchecked, you must switch to the new weapon manually."
 
 [UMenuPlayerWindow]
 WindowTitle="Player Setup"
@@ -146,20 +116,6 @@ WindowTitle="Map List"
 [UMenuMutatorWindow]
 WindowTitle="Configure Mutators"
 
-[UMenuGameMenu]
-NewGameName="&New"
-NewGameHelp="Select to setup a new single player game."
-LoadName="&Load"
-LoadHelp="Select to load a previously saved game."
-SaveName="&Save"
-SaveHelp="Select to save your current game."
-BotmatchName="&Botmatch"
-BotmatchHelp="Select to begin a game of Botmatch: Deathmatch with Bots!"
-QuitName="&Quit"
-QuitHelp="Select to save preferences and exit the game."
-QuitTitle="Confirm Quit"
-QuitText="Are you sure you want to Quit?"
-
 [UMenuBotmatchWindow]
 WindowTitle="Botmatch"
 
@@ -169,8 +125,8 @@ WindowTitle="Start Network Game"
 [UMenuLoadGameWindow]
 WindowTitle="Load Game"
 
-[UMenuHelpWindow]
-WindowTitle="Help"
+[UMenuConfigIndivBotsWindow]
+WindowTitle="Configure Individual Bots"
 
 [UMenuNewGameWindow]
 WindowTitle="New Game"
@@ -178,11 +134,8 @@ WindowTitle="New Game"
 [UMenuSaveGameWindow]
 WindowTitle="Save Game"
 
-[UMenuConfigIndivBotsWindow]
-WindowTitle="Configure Individual Bots"
-
-[UnrealConsole]
-ClassCaption="UMenu Browser Console"
+[UMenuHelpWindow]
+WindowTitle="Help"
 
 [UMenuMenuBar]
 GameName="&Game"
@@ -201,44 +154,32 @@ ModHelp="Configure user-created mods you have installed."
 DemoName="&Recording"
 DemoHelp="Demo recording, record a game which you can view later."
 
-[UTCreditsCW]
-ProgrammersText="Programming"
-LevelDesignText="Level Design"
-ArtText="Art & Models"
-MusicSoundText="Music & Sound"
-BizText="Biz"
-PatchText="Oldunreal 227 Patch"
-
 [UMenuVideoClientWindow]
 EditAreaWidth=110
 DriverText="Video Driver"
-DriverHelp="This is the current video driver. Press the Restart button to change it."
-ShowWindowedText="Show Fullscreen"
-ShowWindowedHelp="If checked, runs Unreal in fullscreen mode."
+DriverHelp="This is the current video driver. Press the Restart button to apply changes."
 ResolutionText="Resolution"
 ResolutionHelp="Select a new screen resolution."
+ShowWindowedText="Show Fullscreen"
+ShowWindowedHelp="If checked, Unreal attempts to run in fullscreen mode."
 ColorDepthText="Color Depth"
 ColorDepthHelp="Select a new color depth."
 BitsText="bit"
 TextureDetailText="World Texture Detail"
-TextureDetailHelp="Change the texture detail of world geometry. Use a lower texture detail to improve game performance."
+TextureDetailHelp="Change the texture detail of world geometry.  Use a lower texture detail to improve game performance."
 Details[0]="High"
 Details[1]="Medium"
 Details[2]="Low"
 SkinDetailText="Skin Detail"
-SkinDetailHelp="Change the detail of player skins. Use a lower skin detail to improve game performance."
+SkinDetailHelp="Change the detail of player skins.  Use a lower skin detail to improve game performance."
 BrightnessText="Brightness"
 BrightnessHelp="Adjust display brightness."
 ScaleText="Font Size"
 ScaleHelp="Adjust the size of elements in the User Interface."
 ScaleSizes[0]="Normal"
 ScaleSizes[1]="Double"
-TranslatorScaleText="Translator Size"
-TranslatorScaleHelp="Adjust the size of the Translator."
-TranslatorScaleSizes[0]="1x"
-TranslatorScaleSizes[1]="2x"
-TranslatorScaleSizes[2]="3x"
-TranslatorScaleSizes[3]="4x"
+HUDScaleText="HUD Scaling"
+HUDScaleHelp="Adjust the size of the in-game Heads-up-Display."
 MouseText="GUI Mouse Speed"
 MouseHelp="Adjust the speed of the mouse in the User Interface."
 GuiSkinText="GUI Skin"
@@ -252,15 +193,25 @@ ConfirmTextureDetailText="Increasing texture detail above its default value may 
 ConfirmDriverTitle="Change Video Driver"
 ConfirmDriverText="Do you want to restart Unreal with the selected video driver?"
 PawnShadowText="Pawn shadows"
-PawnShadowHelp="Detail of shadows that pawns should cast on ground (the changes will take effect after a map change)."
+PawnShadowHelp="Detail of shadows that pawns should cast on ground (changes will take effect after mapchange)."
 PawnShadowList[0]="None"
 PawnShadowList[1]="Blob"
 PawnShadowList[2]="Real-Time Low"
 PawnShadowList[3]="Real-Time Medium"
 PawnShadowList[4]="Real-Time High"
 PawnShadowList[5]="Real-Time Ultra"
+ShadowDistanceText="Shadow draw distance"
+ShadowDistanceHelp="Draw distance of pawn/decoration realtime shadows."
+ShadowDistanceOpts[0]="Low (-50 %)"
+ShadowDistanceOpts[1]="Medium"
+ShadowDistanceOpts[2]="Long (2x)"
+ShadowDistanceOpts[3]="High (4x)"
+ShadowDistanceOpts[4]="Ultra (8x)"
+ShadowDistanceOpts[5]="Unlimited"
 ShowDecalsText="Show Decals"
 ShowDecalsHelp="If checked, impact and gore decals will be used in game."
+ShowSpecularText="Enable Specular Lights"
+ShowSpecularHelp="If checked, allow game render meshes old style lighting."
 MinFramerateText="Min Desired Framerate"
 MinFramerateHelp="If your framerate falls below this value, Unreal will reduce special effects to increase the framerate."
 DynamicLightsText="Use Dynamic Lighting"
@@ -278,7 +229,7 @@ CurvyMeshHelp="Allow specific meshes render with some curved surfaces."
 UsePrecacheText="Precache Content"
 UsePrecacheHelp="Use this option for precaching map content (such as sounds and textures)."
 TrilinearFilteringText="Trilinear Filtering"
-TrilinearFilteringHelp="Use this option to activate/deactivate trilinear texture filtering."
+TrilinearFilteringHelp="Trilinear texture filtering."
 AnisotropicFilteringText="Anisotropic Filtering"
 AnisotropicFilteringHelp="Anisotropic texture filtering."
 AnisotropicFilteringModes[0]="Off"
@@ -288,11 +239,15 @@ AntialiasingHelp="Antialiasing mode."
 AntialiasingModes[0]="Off"
 AntialiasingModes[1]="On"
 AntialiasingModes[2]="%Nx"
-VSyncText="Vertical Sync."
-VSyncHelp="If enabled, synchronizes the frame rate of the game with the refresh rate of your monitor. This can reduce screen tearing."
-VSyncModes[0]="Disabled"
-VSyncModes[1]="Enabled"
+VSyncText="Vertical Synchronization"
+VSyncHelp="Vertical synchronization"
+VSyncModes[0]="Off"
+VSyncModes[1]="On"
 VSyncModes[2]="Adaptive"
+SkyFogText="Sky fog mode"
+SkyFogHelp="Change how volumetric fog is being rendered on skybox."
+LightLODText="Lightmap LOD"
+LightLODHelp="Change the lighting LOD aggressiveness on world (lower meaning it will cut down light framerate on complex scenes)."
 NotAvailableText="Not available"
 
 [UMenuPlayerSetupClient]
@@ -585,35 +540,6 @@ LocalizedKeyName[251]="Zoom"
 LocalizedKeyName[252]="No Name"
 LocalizedKeyName[253]="PA1"
 LocalizedKeyName[254]="OEM Clear"
-LabelList[0]="Fire"
-LabelList[1]="Alternate Fire"
-LabelList[2]="Move Forward"
-LabelList[3]="Move Backwards"
-LabelList[4]="Turn Left"
-LabelList[5]="Turn Right"
-LabelList[6]="Strafe Left"
-LabelList[7]="Strafe Right"
-LabelList[8]="Jump/Up"
-LabelList[9]="Crouch/Down"
-LabelList[10]="Mouse Look"
-LabelList[11]="Activate Item"
-LabelList[12]="Next Item"
-LabelList[13]="Previous Item"
-LabelList[14]="Look Up"
-LabelList[15]="Look Down"
-LabelList[16]="Center View"
-LabelList[17]="Walk"
-LabelList[18]="Strafe"
-LabelList[19]="Next Weapon"
-LabelList[20]="Prev. Weapon"
-LabelList[21]="Throw Weapon"
-LabelList[22]="Feign Death"
-LabelList[23]="Music Menu"
-LabelList[24]="Chat"
-LabelList[25]="Team Chat"
-LabelList[26]="Show Scores"
-LabelList[27]="Grab Decoration"
-LabelList[28]="Toggle Behindview"
 OrString=" or "
 CustomizeHelp="Click the blue rectangle and then press the key to bind to this control."
 DefaultsText="Reset"
@@ -640,8 +566,8 @@ MaxSpectatorsText="Max Spectators"
 MaxSpectatorsHelp="Maximum number of spectators allowed to connect to the game."
 WeaponsText="Weapons Stay"
 WeaponsHelp="If checked, weapons will stay at their pickup location after being picked up, instead of respawning."
-HumansOnlyText="Humans Only"
-HumansOnlyHelp="If checked, only human player classes are allowed."
+HumansOnlyText="Humans only"
+HumansOnlyHelp="If checked, only human player classes are allowed"
 
 [UMenuBotSetupBase]
 BotText="Bot:"
@@ -649,7 +575,7 @@ BotHelp="Select the bot you wish to configure."
 BotWord="Bot"
 DefaultsText="Reset"
 DefaultsHelp="Reset all bot configurations to their default settings."
-BotSkillText="Bot Skill:"
+BotSkillText="Bot skill:"
 BotSkillHelp="Adjust the bot difficulty (easy-hard)."
 BotAccurText="Accuracy:"
 BotAccurHelp="Adjust the bot aiming skill (bad aiming-good aiming)."
@@ -672,15 +598,19 @@ FaceHelp="Choose a face for this bot."
 [UMenuGameOptionsClientWindow]
 EditAreaWidth=120
 LanguageText="Language"
-LanguageHelp="This is the current game language. Change it and press Restart button in order to apply changes."
+LanguageHelp="This is the current game language. Change it and press Restart button."
 ConsoleText="Console"
 ConsoleHelp="This option determines the look of console and menus. Press Restart button to apply the changes."
+WeaponFlashText="Weapon Flash"
+WeaponFlashHelp="If checked, your screen will flash when you fire your weapon."
 WeaponHandText="Weapon Hand"
 WeaponHandHelp="Select where your weapon will appear."
 LeftName="Left"
 CenterName="Center"
 RightName="Right"
 HiddenName="Hidden"
+DodgingText="Dodging"
+DodgingHelp="If checked, double tapping the movement keys (forward, back, and strafe left or right) will result in a fast dodge move."
 ViewBobText="View Bob"
 ViewBobHelp="Use the slider to adjust the amount your view will bob when moving."
 SpeedText="Game Speed"
@@ -702,24 +632,65 @@ NetSpeeds[2]="(Broadband)"
 NetSpeeds[3]="(Broadband)"
 NetSpeeds[4]="(LAN)"
 
+[UMenuMultiplayerMenu]
+StartName="&Start New Multiplayer Game"
+StartHelp="Start your own network game which others can join."
+BrowserName="&Find Internet Games"
+BrowserHelp="Search for games currently in progress on the Internet."
+LANName="Find &LAN Games"
+LANHelp="Search for games of your local LAN."
+OpenLocationName="Open &Location"
+OpenLocationHelp="Connect to a server using its IP address or unreal:// URL."
+PatchName="Download Latest &Update"
+PatchHelp="Find the latest update to Unreal on the web!"
+DisconnectName="&Disconnect from Server"
+DisconnectHelp="Disconnect from the current server."
+ReconnectName="&Reconnect to Server"
+ReconnectHelp="Attempt to reconnect to the last server you were connected to."
+SuggestPlayerSetupTitle="Check Player Name"
+SuggestPlayerSetupText="Your name is currently set to "Player". It is recommended that you go to Player Setup and give yourself another name before playing a multiplayer game.\n\nWould you like to go to Player Setup instead?"
+SuggestNetspeedTitle="Check Internet Speed"
+SuggestNetspeedText="You haven't yet configured the type of Internet connection you will be playing with. It is recommended that you go to the Network Settings screen to ensure you have the best online gaming experience.\n\nWould you like to go to Network Settings instead?"
+
+[UMenuBotConfigBase]
+bSingleColumn=False
+BaseText="Base Skill:"
+BaseHelp="This is the base skill level of the bots."
+Skills[0]="Novice"
+Skills[1]="Average"
+Skills[2]="Skilled"
+Skills[3]="Masterful"
+SkillTaunts[0]="They won't hurt you...much."
+SkillTaunts[1]="Don't get cocky."
+SkillTaunts[2]="You think you're tough?"
+SkillTaunts[3]="You're already dead."
+NumBotsText="Number of Bots"
+NumBotsHelp="This is the number of bots that you will play against."
+AutoAdjustText="Auto Adjust Skill"
+AutoAdjustHelp="If checked, bots will increase or decrease their skill to match your skill level."
+RandomText="Random Order"
+RandomHelp="If checked, bots will chosen at random from the list of bot configurations."
+ConfigBotsText="Configure"
+ConfigBotsHelp="Configure the names, appearance and other attributes of individual bots."
+AtLeastOneBotTitle="Configure Bots"
+AtLeastOneBotText="You must choose at least one bot in order to use the configure bots screen."
+
 [UMenuInputOptionsClientWindow]
 AutoAimText="Auto Aim"
 AutoAimHelp="Enable or disable vertical aiming help."
 JoystickText="Joystick"
 JoystickHelp="Enable or disable joystick."
 RawHIDInputText="Raw HID Input"
-RawHIDInputHelp="Enabling Raw HID Input on Windows machines will improve mouse smoothness and is not affected by mouse acceleration. The game is restarted for this setting to take effect."
+RawHIDInputHelp="Enabling Raw HID Input on Windows machines will improve mouse smoothness and is not affected by mouse acceleration.  The game is restarted for this setting to take effect."
 ConfirmRawHIDRestartTitle="Confirm Raw HID Input Restart"
-ConfirmRawHIDText="In order to enable/disable Raw HID Input, this option will restart Unreal now."
-SensitivityText="Mouse Sensitivity"
-SensitivityHelp="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
+ConfirmRawHIDText="This option will restart Unreal now to enable/disable Raw HID Input"
 InvertMouseText="Invert Mouse"
 InvertMouseHelp="Invert the mouse X axis.  When true, pushing the mouse forward causes you to look down rather than up."
 LookSpringText="Look Spring"
 LookSpringHelp="If checked, releasing the mouselook key will automatically center the view. Only valid if Mouselook is disabled."
 MouselookText="Mouse Look"
 MouselookHelp="If checked, the mouse is always used for controlling your view direction."
-MouseSmoothText="Max Smoothing"
+MouseSmoothText="Max. Smoothing"
 MouseSmoothHelp="If checked, mouse input will be smoothed more to improve Mouselook smoothness."
 bMouseSmoothText="Mouse Smoothing"
 bMouseSmoothHelp="If checked, mouse input will be smoothed to improve Mouselook smoothness."
@@ -727,17 +698,19 @@ AutoSlopeText="Auto Slope"
 AutoSlopeHelp="If checked, your view will automatically adjust to look up and down slopes and stairs. Only valid if Mouselook is disabled."
 DodgingText="Dodging"
 DodgingHelp="If checked, double tapping the movement keys (forward, back, and strafe left or right) will result in a fast dodge move."
+SensitivityText="Mouse Sensitivity"
+SensitivityHelp="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
 DodgeClickTimeText="Dodge Click Time"
 DodgeClickTimeHelp="Maximal double click interval in seconds for dodge move."
 
 [UMenuAudioClientWindow]
 EditAreaWidth=110
 DriverText="Audio Driver"
-DriverHelp="This is the current audio driver. Press the Restart button in order to pick a different sound driver."
+DriverHelp="This is the current audio driver. Press the Restart button to apply changes."
 ConfirmDriverTitle="Change Audio Driver..."
 ConfirmDriverText="Do you want to restart Unreal with the selected audio driver?"
 SoundQualityText="Sound Quality"
-SoundQualityHelp="Use low sound quality to improve game performance on machines with less than 32 MB memory."
+SoundQualityHelp="Use low sound quality to improve game performance on machines with less than 32 Mb memory."
 Details[0]="Low"
 Details[1]="High"
 MusicVolumeText="Music Volume"
@@ -771,8 +744,12 @@ SkillStrings[4]="For players who want an extra difficulty."
 SkillStrings[5]="For the hardcore gamers."
 SkillStrings[6]="HOLY SHIT!"
 SkillHelp="Select the difficulty you wish to play at."
+HighSkillTitle="WARNING!"
+HighSkillWarning="This skill level falls outside of the standard difficulty settings. It will brutalize you in singleplayer. Are you sure you want to proceed?"
 UseMutText="Use Mutators"
 UseMutHelp="If should use mutators in this game."
+UseClassicText="Use Classic Balance"
+UseClassicHelp="Some gameplay mechanics should behave as old Unreal versions."
 AdvancedText="Advanced..."
 
 [UMenuMapListCW]
@@ -787,10 +764,10 @@ IncludeCaption="Maps Cycled"
 IncludeHelp="Click and drag a map to the left hand column to remove it from the map cycle list, or drag it up or down to re-order it in the map cycle list."
 
 [UMenuOptionsClientWindow]
-ConfirmTitle="Save Settings and Restart..."
-ConfirmText="This option will restart Unreal now and will run with selected settings. Do you want to do this?"
 RestartButtonText="Restart"
 RestartButtonHelp="Press this button to restart the game with current settings."
+ConfirmText="This option will restart Unreal now and will run with selected settings. do you want to do this?"
+ConfirmTitle="Save Settings and Restart..."
 GamePlayTab="Game"
 InputTab="Input"
 ControlsTab="Controls"
@@ -798,18 +775,6 @@ AudioTab="Audio"
 VideoTab="Video"
 NetworkTab="Network"
 HUDTab="HUD"
-
-[UMenuHUDConfigCW]
-HUDConfigText="HUD Layout"
-HUDConfigHelp="Use the left and right arrow keys to select a Heads Up Display configuration."
-CrosshairText="Crosshair Style"
-CrosshairHelp="Choose the crosshair appearing at the center of your screen."
-RTNPHeadingText="Return to Na Pali:"
-RTNPHeadingHelp="Next settings are only for the mission pack: Return to Na Pali"
-CinematicText="Cinematic styled cutscenes"
-CinematicHelp="Shows/Hides the cinematic widescreen style in cutscenes"
-SubtitlesText="Show subtitles"
-SubtitlesHelp="Shows/Hides the subtitles text in cutscenes"
 
 [UMenuToolsMenu]
 ConsoleName="System &Console"
@@ -824,10 +789,6 @@ AdminMName="&Admin Menu"
 AdminMHelp="Admin menu: Allows you to do various things, such as kicking/banning/unbanning clients (note: only works on 227 servers and when youre logged in as administrator)."
 DebugModeName="&Debug mode"
 DebugModeHelp="Enable UWindow debug mode for debugging."
-
-[UMenuSaveGameClientWindow]
-CantSave="Cannot Save: You are dead."
-SlotHelp="Press to save the current game to this slot:"
 
 [UMenuSlotClientWindow]
 MonthNames[0]="January"
@@ -856,11 +817,6 @@ EpicGamesURLHelp="Click to open Epic Games webpage!"
 SupportURLName="Technical Support"
 SupportURLHelp="Click to open the technical support web page at Oldunreal."
 
-[UMenuLoadGameClientWindow]
-RestartText="Restart"
-RestartHelp="Press to restart the current level."
-SlotHelp="Press to load game from this slot:"
-
 [UMenuOptionsMenu]
 PreferencesName="P&references"
 PreferencesHelp="Change your game options, audio and video setup, HUD configuration, controls and other options."
@@ -873,6 +829,20 @@ PlayerMenuHelp="Configure your player setup for multiplayer and botmatch gaming.
 AdvancedOptionsName="&Advanced Options"
 AdvancedOptionsHelp="Bring up the Advanced Options menu, where you can configure most of the custom mods."
 
+[UMenuGameMenu]
+NewGameName="&New"
+NewGameHelp="Select to setup a new single player game of Unreal."
+LoadName="&Load"
+LoadHelp="Select to load a previously saved game."
+SaveName="&Save"
+SaveHelp="Select to save your current game."
+BotmatchName="&Botmatch"
+BotmatchHelp="Select to begin a game of Botmatch: Deathmatch with Bots!"
+QuitName="&Quit"
+QuitHelp="Select to save preferences and exit Unreal."
+QuitTitle="Confirm Quit"
+QuitText="Are you sure you want to Quit?"
+
 [UMenuStatsMenu]
 ViewLocalName="View Local ngStats"
 ViewLocalHelp="View your game statistics accumulated in single player and practice games."
@@ -883,12 +853,13 @@ AboutHelp="Get information about local stat logging."
 About2Name="Help with &ngWorldStats"
 About2Help="Get information about global stat logging."
 
-[UMenuModMenu]
-CantUseTitle="Note: Mod menu"
-CantUseInfo="You can't use mod menu items during online play."
-
-[UnrealCreditsWindow]
-WindowTitle="Unreal Credits"
+[UnrealCreditsCW]
+ProgrammersText="Programming"
+LevelDesignText="Level Design"
+ArtText="Art & Models"
+MusicSoundText="Music & Sound"
+BizText="Biz"
+PatchText="Oldunreal 227 Patch"
 
 [UMenuRecGrid]
 FileNameText="File name"
@@ -896,6 +867,9 @@ FileNameText="File name"
 [UMenuStartRec]
 StartRecText="Start demorec"
 RecordInfo="Output file name:"
+
+[UMenuRecPlay]
+PlayDemoText="Play demo"
 
 [UMenuDemoRecMenu]
 RecordName="&Record game"
@@ -905,8 +879,8 @@ PlaybackHelp="Play a recorded demo."
 StopDemoName="&Stop demo"
 StopDemoHelp="Stop the current demo."
 
-[UMenuRecPlay]
-PlayDemoText="Play demo"
+[UnrealCreditsWindow]
+WindowTitle="Unreal Credits"
 
 [UMenuRecPlayWindow]
 WindowTitle="Play recording"
@@ -914,13 +888,10 @@ WindowTitle="Play recording"
 [UMenuStartRecWindow]
 WindowTitle="Start recording"
 
-[UMenuNewStandaloneGameWindow]
-WindowTitle="New Standalone Game"
-
 [UMenuSinglePlayerSettingsCWindow]
+EditAreaWidth=90
 SkillText="Difficulty:"
 SkillHelp="Select the difficulty you wish to play at."
-EditAreaWidth=90
 
 [UMenuCoopGameRulesCWindow]
 bSingleColumn=False
@@ -931,13 +902,16 @@ InstantWeaponRespawnHelp="If checked, weapons will be respawned instantly"
 InstantItemRespawnText="Instant Item Respawn"
 InstantItemRespawnHelp="If checked, items will be respawned instantly"
 
-[UnrealCreditsCW]
-ProgrammersText="Programming"
-LevelDesignText="Level design"
-ArtText="Art and graphical design"
-MusicSoundText="Sound and music"
-BizText="Biz"
-PatchText="OldUnreal v227 Patch"
+[UMenuNewStandaloneGameWindow]
+WindowTitle="New Standalone Game"
+
+[UnrealConsole]
+ClassCaption="UMenu Browser Console"
 
 [UMenuWeaponPriorityCW]
 ListAreaWidth=150
+
+[UMenuModMenu]
+CantUseTitle="Note: Mod menu"
+CantUseInfo="You can't use mod menu items during online play."
+

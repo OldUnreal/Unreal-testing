@@ -39,6 +39,7 @@ Message="UMS Prometheus - Xarxa de navegació: advertència: advertència de pro
 Message="UMS Prometheus - Xarxa de navegació: Estat: Entrada detectada a l'atmosfera | Advertiment: la taxa de caiguda supera el límit acceptable. | Crític: s'ha detectat una violació del casc a la secció B3. | Crític: s'ha detectat una infracció del casc a la secció B2. | Advertiment: la integritat del casc va caure al 26% a la secció A3. | Crític: s'ha detectat una violació del casc a la secció A2."
 
 [TransitionGenderEvent0]
+; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/ctt/Interm5.uax, sounds FLog06b and MLog06b.
 OutDelays[1]=12.000000
 OutDelays[2]=3.000000
 OutDelays[3]=5.000000

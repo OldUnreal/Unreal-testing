@@ -1,5 +1,11 @@
-[TransitionText0]
-MessageA="Pas f�ch� d'�tre arriv�. Je suis habitu� � �tre battu, frapp�, pris pour cible, poignard� ou explos�. 
-MessageB=Mais l�, j'aurais pu �tre broy�, hach�, br�l�, embroch� et d�coup� en tranches ou en d�s. Celui qui a con�u cet endroit est vraiment un sadique.
-MessageC=Je poursuis ma travers�e. C'est un marathon, pas un sprint."
+﻿[LevelSummary]
+; EN: Title="Intermission 8"
+Title="Intermission 8"
 
+[TransitionGenderEvent2]
+; Note: Make the text coincide with the equivalent in Sounds/frt/Interm8.uax
+OutDelays[1]=20.500000
+; EN: MaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
+MaleText[0]="Pas fâché d'être arrivé. Je suis habitué à être battu, frappé, pris pour cible, poignardé ou explosé. Mais là, j'aurais pu être broyé, haché, brûlé, embroché et découpé en tranches ou en dés. Celui qui a conçu cet endroit est vraiment un sadique. Je poursuis ma traversée. C'est un marathon, pas un sprint."
+; EN: FemaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
+FemaleText[0]="Pas fâchée d'être arrivée. Je suis habituée à être battue, frappée, prise pour cible, poignardée ou explosée. Mais là, j'aurais pu être broyée, hachée, brûlée, embrochée et découpée en tranches ou en dés. Celui qui a conçu cet endroit est vraiment un sadique. Je poursuis ma traversée. C'est un marathon, pas un sprint."

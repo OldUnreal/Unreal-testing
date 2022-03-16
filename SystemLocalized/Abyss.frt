@@ -1,12 +1,23 @@
-[LevelInfo5]
-Title=Pic de Gala
+Ôªø[LevelInfo5]
+; EN: Title="Gala's Peak"
+Title="Pic de Gala"
+; EN: LevelEntryText="Entering Gala's Peak"
+LevelEntryText="Arriv√©e √† Pic de Gala"
 
-[TranslatorEvent0]
-Message=SystËme : TÈlÈporteur hors-ligne. Activation requise via unitÈ de contrÙle souterraine.
-
-[TranslatorEvent1]
-Message=SystËme : TÈlÈporteur hors-ligne.
+[LevelSummary]
+; EN: Title="Gala's Peak"
+Title="Pic de Gala"
+; EN: LevelEntryText="Entering Gala's Peak"
+LevelEntryText="Arriv√©e √† Pic de Gala"
 
 [TranslatorEvent2]
-Message=JOURNAL : R. Wisnewski : Bon dieu, qu'il fait froid ! Le passage ‡ l'extÈrieur est impraticable. J'ai dÈj‡ failli tomber deux fois et la descente est trËs longue. J'essaierai ‡ nouveau plus tard. Quelque chose me dit qu'il faut absolument atteindre cette structure l‡-haut.
+; EN: Message="LOG: R. Wisnewski: Damn, it's cold. The walkway outside is impassable. I almost fell off twice, and it's a long way down. I'll try again later. I have a feeling it's going to be worth the effort to reach that structure up ahead."
+Message="JOURNAL: R. Wisnewski: Bon dieu, qu'il fait froid ! Le passage √† l'ext√©rieur est impraticable. J'ai d√©j√† failli tomber deux fois et la descente est tr√®s longue. J'essaierai √† nouveau plus tard. Quelque chose me dit qu'il faut absolument atteindre cette structure l√†-haut."
 
+[TranslatorEvent1]
+; EN: Message="System: Teleporter Online."
+Message="Syst√®me: T√©l√©porteur hors-ligne."
+
+[TranslatorEvent0]
+; EN: Message="System: Teleporter Offline. Activation required via underground control unit."
+Message="Syst√®me: T√©l√©porteur hors-ligne. Activation requise via unit√© de contr√¥le souterraine."

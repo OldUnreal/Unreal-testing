@@ -2,13 +2,13 @@
 ; EN: Title="ISV-KRAN Deck 4"
 Title="Coberta 4 de l'ISV-KRAN"
 ; EN: LevelEnterText="Entering ISV-KRAN Deck 4"
-LevelEnterText="Entrant a Coberta 4 de l'ISV-KRAN"
+LevelEnterText="Entrant a la Coberta 4 de l'ISV-KRAN"
 
 [LevelSummary]
 ; EN: Title="ISV-KRAN Deck 4"
 Title="Coberta 4 de l'ISV-KRAN"
 ; EN: LevelEnterText="Entering ISV-KRAN Deck 4"
-LevelEnterText="Entrant a Coberta 4 de l'ISV-KRAN"
+LevelEnterText="Entrant a la Coberta 4 de l'ISV-KRAN"
 
 [TranslatorEvent7]
 ; EN: Message="Warehouse Safety Bars Override in Upper Warehouse Loft."
@@ -16,7 +16,7 @@ Message="Anulació de Barres de Seguretat de Magatzem en Loft Superior de Magatz
 
 [TranslatorEvent13]
 ; EN: AltMessage="Warehouse Safety Bars Disengaged: Access to Dock Permitted."
-AltMessage="Barres de Seguretat de Magatzem Desacoblades:Accés al Moll permès."
+AltMessage="Barres de Seguretat de Magatzem Desacoblades: Accés al Moll permès."
 
 [TranslatorEvent19]
 ; EN: Message="ISV-KRAN DECK 4 STATUS: INTRUDER ALERT: SECURITY LOCKS ACTIVATED: INTRUDERS ON ALL DECKS AND ATTEMPTING TO REACTIVATE MAIN ENGINES - DECK 1 EMERGENCY TELEPORTER AT BRIDGE SECURE"
@@ -24,7 +24,7 @@ Message="ESTAT DE COBERTA 4 ISV-KRAN: ALERTA D'INTRÚS: PANYS DE SEGURETAT ACTIV
 
 [TranslatorEvent1]
 ; EN: Message="Ventilation Processing Mezzanine Ducts: Maintenance Personnel Only: WARNING - ENGINE COOLANT LEAK IN MEZZANINE"
-Message="Conductes Entresol de Processament de Ventilació:Només Personal de Manteniment:ALRTA, FUITA DE REFRIGERANT DE MOTOR EN ENTRESOL"
+Message="Conductes Entresol de Processament de Ventilació: Només Personal de Manteniment: ALRTA - FUITA DE REFRIGERANT DE MOTOR EN ENTRESOL"
 
 [TranslatorEvent15]
 ; EN: Message="PANEL REWIRED TO TRIP ALARM - SYSTEM ACCESSED BY UNAUTHORIZED USERS"

@@ -4,6 +4,7 @@ Object=(Name=GlideDrv.GlideRenderDevice,Class=Class,MetaClass=Engine.RenderDevic
 Preferences=(Caption="Suport per al vídeo 3dfx Glide",Parent="Renderització",Class=GlideDrv.GlideRenderDevice,Immediate=True)
 
 [GlideRenderDevice]
+; EN: ClassCaption="3dfx Glide Support"
 ClassCaption="Suport per al vídeo 3dfx Glide"
 ; EN: AskInstalled="Do you have a 3dfx card installed?"
 AskInstalled="Tens una targeta 3dfx instal·lada?"

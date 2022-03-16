@@ -1,15 +1,35 @@
-[LevelInfo1]
-Title=Fonderie de Tarydium
+﻿[LevelInfo1]
+; EN: Title="Foundry Tarydium Plant"
+Title="Fonderie de Tarydium"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Arrivée à Fonderie de Tarydium"
 
-[TranslatorEvent6]
-Message=Usine de traitement et d'�puration du Tarydium
+[LevelSummary]
+; EN: Title="Foundry Tarydium Plant"
+Title="Fonderie de Tarydium"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Arrivée à Fonderie de Tarydium"
+
+[TranslatorEvent1]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barrière d'accès à l'ascenseur intacte. Tous les systèmes fonctionnement normalement."
 
 [TranslatorEvent0]
-Message=0 jours se sont �coul�s depuis notre dernier accident.
+; EN: Message="It has been 0 days since our last accident."
+Message="0 jours se sont écoulés depuis notre dernier accident."
 
 [TranslatorEvent2]
-Message=Barri�re d'acc�s � l'ascenseur intacte. Tous les syst�mes fonctionnement normalement.
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barrière d'accès à l'ascenseur intacte. Tous les systèmes fonctionnement normalement."
+
+[TranslatorEvent6]
+; EN: Message="Tarydium Processing and Purification Plant"
+Message="Usine de traitement et d'épuration du Tarydium"
 
 [TranslatorEvent3]
-Message=Commandes de la barri�re d'acc�s � l'ascenseur inactives.
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Commandes de la barrière d'accès à l'ascenseur inactives."
 
+[TranslatorEvent4]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Commandes de la barrière d'accès à l'ascenseur inactives."

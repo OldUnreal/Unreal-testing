@@ -6,13 +6,10 @@ Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainC
 InfoName="Info"
 PlayerCountName="Players"
 ServerCountName="Servers"
-QueryServerText="Querying Master Server (hit F5 if nothing happens)"
+QueryServerText="Querying master server (hit F5 if nothing happens)"
 QueryFailedText="Master Server Failed: "
 PingingText="Pinging Servers"
 CompleteText="Complete"
-
-[UBrowserMainWindow]
-WindowTitleString="Server Browser"
 
 [UBrowserGSpyLink]
 ResolveFailedError="The master server could not be resolved: "
@@ -42,10 +39,10 @@ TimeLimitText="Time Limit"
 GameModeText="Game Mode"
 GameTypeText="Game Type"
 GameVersionText="Game Version"
+GameSubVersionText="Game SubVersion"
 WorldLogText="ngStats World Stat-Logging"
 TrueString="Enabled"
 FalseString="Disabled"
-GameSubVersionText="Game SubVersion"
 MapFileString="Map Filename"
 DLLString="C++ Library"
 DLLVerString="%ls (ver %i)"
@@ -56,7 +53,7 @@ GameClassString="Game Class"
 [UBrowserMainClientWindow]
 FavoritesName="Favorites"
 NewsName="Community News"
-RecentName="Recent servers"
+RecentName="Recent Servers"
 
 [UBrowserServerGrid]
 ServerName="Server"
@@ -67,8 +64,11 @@ VersionName="Version"
 
 [UBrowserInfoMenu]
 RefreshName="&Refresh Info"
-AttachName="&Attach"
-CloseName="&Close"
+AttachName="&Attach Window"
+CloseName="&Close Window"
+
+[UBrowserMainWindow]
+WindowTitleString="Unreal Server Browser"
 
 [UBrowserRightClickMenu]
 RefreshName="&Refresh All Servers"
@@ -92,6 +92,12 @@ MeshText="Mesh"
 SkinText="Skin"
 IDText="ID"
 
+[UBrowserLibPageWindow]
+DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[1]="For more info view the external info from below (hosted by %ls):"
+
 [UBrowserConsole]
 ClassCaption="Unreal Browser Console"
 
@@ -100,13 +106,7 @@ OpenText="Open:"
 OpenHelp="Enter a standard URL, or select one from the URL history. Press Enter to activate."
 
 [UBrowserServerWebWin]
-WindowTitle="Web Explorer"
-
-[UBrowserLibPageWindow]
-DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[1]="For more info view the external info from below (hosted by %ls):"
+WindowTitle="Unreal Web Explorer"
 
 [UBrowserServerWebCW]
 RefreshString="Refresh page"

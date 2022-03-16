@@ -1,48 +1,67 @@
-[Setup]
-LocalProduct=Unreal
-DefaultFolder=C:\Unreal
-ReadMe=Help\ReadMe.htm
-SetupWindowTitle=Unreal
-AutoplayWindowTitle=Unreal Options
-ProductURL=http://www.unreal.com/
-VersionURL=http://unreal.epicgames.com/versions.htm
-Developer=Epic Games, Inc.
-DeveloperURL=http://www.epicgames.com/
-Logo=Help\Logo.bmp
+ï»¿[Setup]
+LocalProduct="Unreal"
+DefaultFolder="C:\Program Files\Unreal"
+ReadMe="Help\ReadMe.htm"
+; EN: SetupWindowTitle="Unreal Setup"
+SetupWindowTitle="Installation d'Unreal"
+; EN: AutoplayWindowTitle="Unreal Options"
+AutoplayWindowTitle="Options d'Unreal"
+ProductURL="http://www.unrealengine.com/"
+VersionURL="http://www.oldunreal.com"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 par Oldunreal"
+DeveloperURL="https://www.oldunreal.com/"
+Logo="Help\SetupLogo.bmp"
 
 [General]
-PlayLevelCommand=&Play this Unreal level
-OpenLinkCommand=&Open this Unreal link
-InstallModuleCommand=&Install this Unreal module
-EditLevelCommand=&Edit this Unreal level
+; EN: PlayLevelCommand="&Play this Unreal level"
+PlayLevelCommand="&Lancer ce niveau Unreal"
+; EN: OpenLinkCommand="&Open this Unreal link"
+OpenLinkCommand="&Ouvrir le lien Unreal"
+; EN: InstallModuleCommand="&Install this Unreal module"
+InstallModuleCommand="&Installer ce module Unreal"
+; EN: EditLevelCommand="&Edit this Unreal level"
+EditLevelCommand="&Editer ce niveau Unreal"
 
 [ContentGroup]
-Caption=Contenu du jeu
-Description=Installez ce composant pour une meilleure performance. Si vous ne le sélectionnez pas, le contenu du jeu sera chargé depuis le CD pendant l'exécution du jeu ; la performance sera moindre mais vous économiserez de l'espace disque.
+; EN: Caption="Game Content"
+Caption="Contenu du jeu"
+; EN: Description="Unreal game content. Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space."
+Description="Installez ce composant pour une meilleure performance. Si vous ne le sÃ©lectionnez pas, le contenu du jeu sera chargÃ© depuis le CD pendant l'exÃ©cution du jeu ; la performance sera moindre mais vous Ã©conomiserez de l'espace disque."
 
 [GameGroup]
-Caption=Jeu Unreal
-Description=Installation requise.
+; EN: Caption="Unreal Game"
+Caption="Jeu Unreal"
+; EN: Description="Unreal game. Installation is required."
+Description="Jeu Unreal. Installation nÃ©cessaire."
 
 [DirectXGroup]
-Caption=DirectX
-Description=Microsoft DirectX 6.
+Caption="DirectX"
+; EN: Description="Optional Microsoft DirectX 8 drivers for enhanced graphics, sound, and joystick support."
+Description="Pilotes DirectX 8 facultatifs pour de meilleurs performances graphiques, audio et un meilleur support du joystick."
 
 [EditorGroup]
-Caption=Unreal Editor
-Description=Unreal Editor vous permet de créer vos propres scénarios 3D d'Unreal. Cette option vise des joueurs avancés; l'installation n'est pas requise.
+; EN: Caption="Unreal Editor"
+Caption="Editeur Unreal"
+; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="L'Ã©diteur Unreal vous permet de crÃ©er vos propres scÃ©narios 3D pour Unreal. PrÃ©vu pour les utilisateurs avancÃ©s; l'installation n'est pas requise."
 
 [PlayShortcut]
-Caption=Exécuter Unreal
+; EN: Caption="Play Unreal"
+Caption="Lancer Unreal"
 
 [SafeModeShortcut]
-Caption=Unreal en mode protégé
+; EN: Caption="Unreal Safe Mode"
+Caption="Lancer Unreal en mode sans Ã©chec"
 
 [EditorShortcut]
-Caption=Unreal Editor
+; EN: Caption="Unreal Editor"
+Caption="Editeur Unreal"
 
 [DocumentationShortcut]
-Caption=Documentation
+; EN: Caption="Documentation"
+Caption="Documentation"
 
 [WebShortcut]
-Caption=Page d’accueil d’Unreal
+; EN: Caption="Unreal Web Page"
+Caption="Page Web Unreal"

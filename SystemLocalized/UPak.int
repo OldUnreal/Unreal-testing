@@ -1,22 +1,22 @@
 ﻿[Public]
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
-Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Napali")
+Object=(Name=upak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=upak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=upak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=upak.CARifle,Class=Class,MetaClass=Engine.Weapon)
 Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
 Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
 Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
@@ -42,6 +42,8 @@ LogEntryMsg="LOG ENTRY:"
 
 [GrenadeLauncher]
 DeathMessage="%k's grenade made %o blew up."
+FemDeathMessage="%k's grenade made %o blew up."
+FemKillMessage="%k's grenade made %o blew up."
 PickupMessage="You got the UMS Grenade Launcher"
 ItemName="UMS Grenade Launcher"
 
@@ -60,6 +62,8 @@ GameName="Unreal Mission Pack"
 
 [RocketLauncher]
 DeathMessage="%k's rocket turned %o's body into chunks."
+FemDeathMessage="%k's rocket turned %o's body into chunks."
+FemKillMessage="%k's rocket turned %o's body into chunks."
 PickupMessage="You got the UMS Rocket Launcher"
 ItemName="UMS Rocket Launcher"
 
@@ -72,11 +76,13 @@ GameName="Cloak Match"
 
 [CARifle]
 DeathMessage="%k's %w turned %o into swiss cheese."
+FemDeathMessage="%k's %w turned %o into swiss cheese."
+FemKillMessage="%k's %w turned %o into swiss cheese."
 PickupMessage="You got the Combat Assault Rifle"
 ItemName="Combat Assault Rifle"
 
 [UPakScubaGear]
-RechargedMessage="ScubaGear fully recharged."
+RechargedMessage="Marine SCUBA Gear fully recharged."
 LowOxygenMessage="Oxygen supply critically low"
 PickupMessage="You picked up the Marine SCUBA Gear"
 ItemName="Marine SCUBA Gear"
@@ -124,3 +130,43 @@ GameName="Terran Weapon Match"
 [CompTablet]
 PickupMessage="You got the Computer Tablet"
 ItemName="Computer Tablet"
+
+[MarineArctic]
+MenuName="UMS Arctic Marine"
+
+[MarineDesert]
+MenuName="UMS Desert Marine"
+
+[MarineJungle]
+MenuName="UMS Jungle Marine"
+
+[SpaceMarine]
+MenuName="UMS Space Marine"
+
+[TransitionBrute]
+NameArticle=" a "
+MenuName="Brute"
+
+[TransitionCow]
+NameArticle=" a "
+MenuName="Nali Cow"
+
+[NaliCopter]
+NameArticle=" a "
+MenuName="NaliCopter"
+
+[Predator]
+NameArticle=" a "
+MenuName="Predator"
+
+[TransitionPredator]
+NameArticle=" a "
+MenuName="Predator"
+
+[PackHunter]
+NameArticle=" a "
+MenuName="Pack Hunter"
+
+[Spinner]
+NameArticle=" a "
+MenuName="Spinner"
