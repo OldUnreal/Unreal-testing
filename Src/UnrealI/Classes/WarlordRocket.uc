@@ -111,4 +111,6 @@ defaultproperties
 	AmbientSound=Sound'BRocket'
 	bBounce=True
 	bNetInterpolatePos=true
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

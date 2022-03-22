@@ -35,7 +35,8 @@ function PostBeginPlay()
 {
 	Timer();
 	SetTimer(2.0, true);
-	bIsFemale = Pawn(Owner).bIsFemale;
+	if( Pawn(Owner) )
+		bIsFemale = Pawn(Owner).bIsFemale;
 }
 
 simulated function PostNetBeginPlay()
@@ -48,7 +49,7 @@ function Timer()
 {
 	local int i;
 	
-	if( PlayerPawn(Owner) )
+	if( Owner && Owner.bIsPlayerPawn )
 	{
 		i = int(Owner.ConsoleCommand("GETPING"));
 		if( i!=Ping )
@@ -61,4 +62,5 @@ defaultproperties
 	bAlwaysRelevant=True
 	team=255
 	bOnlyDirtyReplication=true
+	bOptionalNetOwner=true
 }

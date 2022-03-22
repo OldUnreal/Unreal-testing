@@ -11,7 +11,7 @@ var() int capacity;		// max number of items ever buildable (-1 = no limit)
 var() float interval;	// average time interval between spawnings
 var() name	itemtag;	// tag given to items produced at this factory
 var() bool	bFalling;	// non-pawn items spawned should be set to falling
-var() name  FinishedEvent; // Called once all items has been spawned and destroyed.
+var() name  FinishedEvent; // 227: Called once all items has been spawned and destroyed.
 
 var() enum EDistribution
 {

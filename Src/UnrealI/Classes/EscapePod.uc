@@ -35,5 +35,6 @@ defaultproperties
 	bDirectional=True
 	DrawType=DT_Mesh
 	Mesh=LodMesh'UnrealI.Escapep'
+	bNoDynamicShadowCast=true
+	bNetInterpolatePos=true
 }
-

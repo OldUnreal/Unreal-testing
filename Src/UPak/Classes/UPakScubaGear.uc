@@ -33,6 +33,8 @@ function Activate()
 {
 	if (Charge > 0 && Pawn(Owner).HeadRegion.Zone.bWaterZone && !Pawn(Owner).FootRegion.Zone.bPainZone)
 		Super.Activate();
+	else if (!IsInState('Activated'))
+		bActive = false; // travel value should be reset if activation is not done
 }
 
 function UsedUp()

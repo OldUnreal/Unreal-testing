@@ -89,6 +89,8 @@ var(Sounds)	sound	Threaten;
 
 function PreBeginPlay()
 {
+	local float newskill;
+	
 	super.PreBeginPlay();
 
 	if ( Level.Game.bVeryLowGore )
@@ -108,8 +110,24 @@ function PreBeginPlay()
 	bInitialFear = (AttitudeToPlayer == ATTITUDE_Fear);
 
 	if (Level.Game.Difficulty > 3)
-		BonusSkill = FMin(BonusSkill+Level.Game.Difficulty-2.f, 3.f);
-
+	{
+		if( Class'GameInfo'.Default.bUseClassicBalance && BonusSkill<=0.f )
+		{
+			newskill = FClamp(Level.Game.Difficulty-3, 1, 3);
+			if( Health > 9 ) // give weaker pawns a small boost
+				Health += (100 *newskill) / Health;
+			Health *= 1+(0.15*newskill);
+			SightRadius += 100*newskill;
+			ProjectileSpeed += 100*newskill;
+			RotationRate.Yaw *= 1+(0.15*newskill);
+			AccelRate += 100*newskill;
+			GroundSpeed += 10*newskill;
+			WaterSpeed += 10*newskill;
+			AirSpeed += 10*newskill;
+			DamageScaling = Default.DamageScaling+(0.5*newskill);
+		}
+		else BonusSkill = FMin(BonusSkill+Level.Game.Difficulty-2.f, 3.f);
+	}
 	if (BonusSkill > 0.f)
 	{
 		if( AttitudeToPlayer==ATTITUDE_Friendly ) // Make Nalis extra weak to damage.

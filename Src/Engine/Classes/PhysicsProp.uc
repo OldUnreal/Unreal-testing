@@ -58,13 +58,16 @@ event bool RanInto( Actor Other )
 
 function Bump( actor Other )
 {
-	local float M;
+	local float M,S,OtherVel;
 
-	if ( bPushable && (Pawn(Other)!=None) && (Other.Mass > 40) && PhysicsData!=None )
+	if ( bPushable && Other.bIsPawn && (Other.Mass > 40) && PhysicsData )
 	{
 		M = GetBaseMomentumModifier();
-		PhysicsData.Impulse( (Other.Velocity-Velocity)*(0.25f*PushingForce*M) + Normal(Location-Other.Location)*(FMin(Other.Mass / Mass,1.f)*75.f*PushingForce*M), Other.Location);
-		if (PushSound!=none)
+		S = Normal(Other.Velocity) Dot Velocity;
+		OtherVel = FMax(VSize(Other.Velocity), Pawn(Other).GroundSpeed*0.5f);
+		if( S<OtherVel )
+			PhysicsData.Impulse( (Other.Velocity-Velocity)*(0.25f*PushingForce*M) + Normal(Location-Other.Location)*(FMin(Other.Mass / Mass,1.f)*(OtherVel-S)*PushingForce*M), Other.Location);
+		if( PushSound )
 		{
 			AmbientSound=PushSound;
 			SoundRadius=32;

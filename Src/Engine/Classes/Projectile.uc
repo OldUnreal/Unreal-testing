@@ -192,6 +192,11 @@ simulated event OnSubLevelChange( LevelInfo PrevLevel )
 // Pos.X/Y are screen position, Pos.Z is the depth scaling 1 -> 0
 simulated event PostRender2D( canvas Canvas, vector Pos );
 
+simulated function Reset()
+{
+	Destroy();
+}
+
 defaultproperties
 {
 	MaxSpeed=+02000.000000
@@ -213,4 +218,6 @@ defaultproperties
 	CollisionFlag=COLLISIONFLAG_Projectile
 	bTraceHitBoxes=true
 	bNoDynamicShadowCast=true
+	bNetInitialVelocity=true
+	bNetInitExactLocation=true
 }

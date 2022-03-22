@@ -47,7 +47,7 @@ function Paint(Canvas C, float X, float Y)
 		P = GetPlayerOwner();
 		OldFov = P.FOVAngle;
 		P.FOVAngle = 30;
-		DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, R, vect(0, 0, 0) );
+		DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, R, vect(0, 0, 0), true );
 		C.SetCustomLighting();
 		C.ClearCustomLightSources();
 		P.FOVAngle = OldFov;

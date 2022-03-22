@@ -62,4 +62,6 @@ defaultproperties
 	bCorona=False
 	bNetTemporary=false
 	bNetInterpolatePos=true
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

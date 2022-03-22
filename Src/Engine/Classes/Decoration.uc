@@ -403,4 +403,5 @@ defaultproperties
 	Texture=None
 	Mass=0.000000
 	CollisionFlag=COLLISIONFLAG_Decoration
+	bNetInitExactLocation=true
 }

@@ -338,6 +338,24 @@ function bool AtKeyFrame( byte Num )
 	return (KeyNum==Num && PhysAlpha>0.98f);
 }
 
+simulated function OnMirrorMode()
+{
+	local int i;
+	
+	Super.OnMirrorMode();
+	BasePos.Y *= -1.f;
+	BaseRot.Yaw = -BaseRot.Yaw;
+	BaseRot.Pitch = -BaseRot.Pitch;
+	for( i=0; i<ArrayCount(KeyPos); ++i )
+	{
+		KeyPos[i].Y *= -1;
+		KeyRot[i].Yaw = -KeyRot[i].Yaw;
+		KeyRot[i].Pitch = -KeyRot[i].Pitch;
+	}
+	if( Physics==PHYS_Rotating && !bRotateToDesired )
+		RotationRate.Yaw = -RotationRate.Yaw;
+}
+
 //-----------------------------------------------------------------------------
 // Movement functions.
 

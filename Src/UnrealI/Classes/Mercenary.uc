@@ -164,7 +164,7 @@ function PreBeginPlay()
 	bCanDuck = bHasInvulnerableShield;
 	if ( bMovingRangedAttack )
 		bMovingRangedAttack = ( 0.2 * Skill + 0.3 > FRand() );
-	bInvisibilityShield = (bInvisibilityShield || BonusSkill>2.f);
+	//bInvisibilityShield = (bInvisibilityShield || BonusSkill>2.f);
 	bCanFireWhileInvulnerable = (bCanFireWhileInvulnerable || (FRand()<(BonusSkill*0.25f)));
 }
 
@@ -814,19 +814,37 @@ function SprayTarget()
 	local actor HitActor;
 	local rotator AdjRot;
 	local vector X,Y,Z;
+	local float Offset;
 
-	if ( Target == None || Target.bDeleteme )
+	if ( !Target || Target.bDeleteme )
 	{
-		PlayChallenge();
+		if ( AnimSequence != 'Dead5' )
+			PlayChallenge();
 		return;
 	}
-	AdjRot = Rotation;
-	if ( AnimSequence == 'Dead5' )
-		AdjRot.Yaw += 3000 * (2 - sprayOffset);
+	if( BonusSkill>0.f )
+	{
+		X = Normal(Target.Location-Location);
+		Y = Normal(X Cross vect(0,0,1));
+		
+		if ( AnimSequence == 'Dead5' )
+			Offset = float(2 - sprayOffset) * 0.075f;
+		else if( AnimSequence=='WalkSpray' )
+			Offset = float(1 - sprayOffset) * 0.055f;
+		else Offset = float(3 - sprayOffset) * 0.045f;
+		fireDir = Normal(X+(Y*Offset));
+	}
 	else
-		AdjRot.Yaw += 1000 * (3 - sprayOffset);
+	{
+		AdjRot = Rotation;
+		if ( AnimSequence == 'Dead5' )
+			AdjRot.Yaw += 3000 * (2 - sprayOffset);
+		else
+			AdjRot.Yaw += 1000 * (3 - sprayOffset);
+		fireDir = vector(AdjRot);
+	}
 	sprayoffset++;
-	fireDir = vector(AdjRot);
+	
 	if ( (sprayoffset == 1) || (sprayoffset == 3) || (sprayoffset == 5) )
 	{
 		GetAxes(Rotation,X,Y,Z);
@@ -838,8 +856,8 @@ function SprayTarget()
 	if ( AnimSequence == 'Dead5' )
 		sprayoffset++;
 	EndTrace = Location + 2000 * fireDir;
-	if (Target.IsA('Pawn'))
-		EndTrace.Z = Pawn(Target).Location.Z + Pawn(Target).CollisionHeight * 0.6;
+	if( Target.bIsPawn && BonusSkill<=0.f )
+		EndTrace.Z = Target.Location.Z + Target.CollisionHeight * 0.6;
 	HitActor = TraceShot(HitLocation,HitNormal,EndTrace,Location);
 	if (HitActor == Level)   // Hit a wall
 	{
@@ -847,7 +865,7 @@ function SprayTarget()
 		spawn(class'SpriteSmokePuff',,,HitLocation+HitNormal*9);
 		spawn(class'LightWallHitEffect',,, HitLocation+HitNormal*9, Rotator(HitNormal));
 	}
-	else if ((HitActor != none)&& (HitActor != self))
+	else if ( HitActor && (HitActor != self))
 	{
 		HitActor.TakeDamage(10, self, HitLocation, 10000.0*fireDir, 'shot');
 		spawn(class'SpriteSmokePuff',,,HitLocation+HitNormal*9);

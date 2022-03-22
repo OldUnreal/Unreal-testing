@@ -44,6 +44,12 @@ state Active
 			SetTimer(RepeatDelay, True);
 		}
 	}
+	function Reset()
+	{
+		ArrowCount = 0;
+		SetTimer(0, false);
+		GoToState('');
+	}
 Begin:
 	ArrowCount = 0;
 	SetTimer(TriggerDelay, True);

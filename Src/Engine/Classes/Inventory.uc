@@ -623,13 +623,9 @@ auto state Pickup
 	// Validate touch, and if valid trigger event.
 	function bool ValidTouch( actor Other )
 	{
-		local Actor A;
-
 		if ( Other.bIsPawn && Pawn(Other).bIsPlayer && (Pawn(Other).Health > 0) && Level.Game.PickupQuery(Pawn(Other), self) )
 		{
-			if ( Event != '' )
-				foreach AllActors( class 'Actor', A, Event )
-				A.Trigger( Other, Other.Instigator );
+			TriggerEvent(Event, Other, Other.Instigator);
 			return true;
 		}
 		return false;
@@ -673,10 +669,13 @@ auto state Pickup
 	{
 		local Pawn P;
 
-		SetLocation(Location); // Update touchlist
 		bSleepTouch = false;
-		foreach TouchingActors(Class'Pawn',P)
-			Touch(P);
+		CheckEncroachments(); // Update touchlist
+		if( IsInState('Pickup') )
+		{
+			foreach TouchingActors(Class'Pawn',P)
+				Touch(P);
+		}
 	}
 
 	function Timer()
@@ -780,11 +779,7 @@ State Sleeping
 	}
 	function EndState()
 	{
-		local Pawn P;
-
-		bSleepTouch = false;
-		foreach TouchingActors(Class'Pawn',P)
-			bSleepTouch = true;
+		bSleepTouch = true;
 	}
 	function Reset()
 	{

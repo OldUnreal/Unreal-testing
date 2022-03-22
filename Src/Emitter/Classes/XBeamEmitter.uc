@@ -34,6 +34,15 @@ var transient const array<float> SegmentScales;
 // Bitmask
 var(EmBeam) bool bDynamicNoise,bDoBeamNoise;
 
+simulated function OnMirrorMode()
+{
+	local int i;
+	
+	Super.OnMirrorMode();
+	for( i=0; i<BeamTarget.Size(); ++i )
+		BeamTarget[i].Offset.Y *= -1;
+}
+
 defaultproperties
 {
 	TurnRate=1

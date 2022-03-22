@@ -176,6 +176,22 @@ simulated function Reset()
 	bDisabled = BACKUP_Disabled;
 }
 
+simulated final function SwapFloatMirror( out float A, out float B )
+{
+	local float T;
+	
+	T = A;
+	A = -B;
+	B = -T;
+}
+
+simulated function OnMirrorMode()
+{
+	SwapFloatMirror(BoxVelocity.Y.Min, BoxVelocity.Y.Max);
+	SwapFloatMirror(ParticleAcceleration.Y.Min, ParticleAcceleration.Y.Max);
+	SwapFloatMirror(BoxLocation.Y.Min, BoxLocation.Y.Max);
+}
+
 defaultproperties
 {
 	bRespawnParticles=True

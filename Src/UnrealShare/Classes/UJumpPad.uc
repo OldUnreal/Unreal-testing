@@ -7,13 +7,16 @@ var() sound JumpSound;
 var() vector JumpVelocityModifier;
 var() float JumpZHeightModifier;
 var() const bool bForceFullAccurancy; // Always jump perfectly into the Dest point, but is a little bit more CPU intensive and may variate the velocity a little bit.
+var() bool bAllowMonsters,bAllowPlayers; // Whatever if monsters or players/bots can use this jump pad.
 var vector BackUp_Velocity,JumpVelocity;
 var nowarn Pawn PendingTouch; //unused, for older version compat only.
 var UJumpDest MyDest;
 
+var bool BACKUP_Enabled;
+
 replication
 {
-	// Replace Jump velocity to client to keep them better in sync with server.
+	// Replicate Jump velocity to client to keep them better in sync with server.
 	reliable if ( Role==ROLE_Authority )
 		JumpVelocity;
 }
@@ -23,62 +26,64 @@ function PostBeginPlay()
 	local byte i;
 	local Actor St,En;
 	local int RF,D;
-	local float ZHgh;
 
-	For( i=0; i<16; i++ )
+	For( i=0; i<ArrayCount(Paths); i++ )
 	{
 		if ( Paths[i]==-1 )
 			Continue;
 		describeSpec(Paths[i],St,En,RF,D);
-		if ( UJumpDest(En)!=None )
+		if ( UJumpDest(En) )
 		{
 			MyDest = UJumpDest(En);
-			if ( !bForceFullAccurancy )
-			{
-				ZHgh = CalcRequiredZHeight(En.Location.Z,Location.Z,Region.Zone.ZoneGravity.Z)+JumpZHeightModifier;
-				JumpVelocity = SuggestFallVelocity(Location,En.Location,ZHgh,6000.f);
-			}
-			else JumpVelocity = MyDest.Location;
+			if ( bForceFullAccurancy )
+				JumpVelocity = MyDest.Location+JumpVelocityModifier;
+			else JumpVelocity = CalcThrowVelocity(Location,En.Location);
 			Break;
 		}
 	}
-	JumpVelocity+=JumpVelocityModifier;
+	if( !MyDest )
+		JumpVelocity = JumpVelocityModifier;
 	BackUp_Velocity = JumpVelocity;
+	BACKUP_Enabled = bCollideActors;
+	bSpecialCost = !(bCollideActors && bAllowMonsters && bAllowPlayers);
 }
 function Reset()
 {
 	JumpVelocity = BackUp_Velocity;
+	SetCollision(BACKUP_Enabled);
+	bSpecialCost = !(bCollideActors && bAllowMonsters && bAllowPlayers);
+	bForceNetUpdate = true;
 }
 simulated function Touch( Actor Other )
 {
-	if ( Other.bIsPawn && Pawn(Other).Health>0 )
+	if ( Other.bIsPawn && Pawn(Other).Health>0 && (Pawn(Other).bIsPlayer ? bAllowPlayers : bAllowMonsters) )
 		SetPendingTouch(Other);
 }
 simulated function PostTouch( Actor Other )
 {
-	local float ZH;
-
 	if ( !Other.bDeleteMe && Other.bIsPawn )
 	{
-		if ( PlayerPawn(Other)==None )
+		if ( !Other.bIsPlayerPawn )
 		{
 			Pawn(Other).PlayInAir(); // Make sure this pawn plays falling animation.
 			Other.Acceleration = vect(0,0,0);
-			if ( MyDest!=None )
+			if ( MyDest )
 				Pawn(Other).MoveTarget = MyDest.SpecialHandling(Pawn(Other));
 		}
 		// Only set the physics on server OR net owner.
 		if ( Other.Role>=ROLE_AutonomousProxy && Other.Physics!=PHYS_Falling && Other.Physics!=PHYS_Flying )
 			Other.SetPhysics(PHYS_Falling);
-		if ( !bForceFullAccurancy )
-			Other.Velocity = JumpVelocity;
-		else
+		if ( bForceFullAccurancy )
+			Other.Velocity = CalcThrowVelocity(Other.Location,JumpVelocity);
+		else Other.Velocity = JumpVelocity;
+		
+		if( Level.NetMode!=NM_Client )
 		{
-			ZH = CalcRequiredZHeight(JumpVelocity.Z,Other.Location.Z,Region.Zone.ZoneGravity.Z)+JumpZHeightModifier;
-			Other.Velocity = SuggestFallVelocity(Other.Location,JumpVelocity,ZH,6000.f)+JumpVelocityModifier;
+			if ( JumpSound )
+				MakeJumpNoise();
+			if( Event!='' )
+				TriggerEvent(Event,Self,Pawn(Other));
 		}
-		if ( JumpSound && Level.NetMode!=NM_Client )
-			MakeJumpNoise();
 	}
 }
 function MakeJumpNoise()
@@ -99,7 +104,11 @@ simulated final function float CalcRequiredZHeight( float DestZ, float StartZ, f
 		DestZ+=StartZ*0.05f;
 		LCount++;
 	}
-	Return Abs(StartZ);
+	return Abs(StartZ) + JumpZHeightModifier;
+}
+simulated final function vector CalcThrowVelocity( vector Start, vector End )
+{
+	return SuggestFallVelocity(Start,End,0.f,VSize2D(End-Start),CalcRequiredZHeight(End.Z,Start.Z,Region.Zone.ZoneGravity.Z)) + JumpVelocityModifier;
 }
 
 // Use original behaviour.
@@ -119,12 +128,17 @@ function DrawEditorSelection( Canvas C )
 	foreach AllActors(Class'UJumpDest',Dest)
 		if( Dest.LiftTag==LiftTag )
 			break;
-	if( Dest==None )
-		return;
+	if( Dest )
+	{
+		if ( bForceFullAccurancy )
+			V = CalcThrowVelocity(Location,Dest.Location+JumpVelocityModifier);
+		else V = CalcThrowVelocity(Location,Dest.Location);
+	}
+	else if ( bForceFullAccurancy )
+		V = CalcThrowVelocity(Location,JumpVelocityModifier);
+	else V = JumpVelocityModifier;
 
 	Color = MakeColor(255,255,0);
-	V = SuggestFallVelocity(Location,Dest.Location,CalcRequiredZHeight(Dest.Location.Z,Location.Z,Region.Zone.ZoneGravity.Z),6000.f) + JumpVelocityModifier;
-
 	G = Region.Zone.ZoneGravity*Square(0.05f);
 	V*=0.05f;
 	P = Location;
@@ -138,6 +152,31 @@ function DrawEditorSelection( Canvas C )
 	}
 }
 
+function Trigger( Actor Other, Pawn EventInstigator )
+{
+	bSkipActorReplication = false; // Enable replication for bCollideActors.
+	SetCollision(!bCollideActors);
+	bForceNetUpdate = true;
+	if( bCollideActors )
+	{
+		bSpecialCost = !(bAllowMonsters && bAllowPlayers);
+		CheckEncroachments();
+	}
+	else bSpecialCost = true;
+}
+
+function int SpecialCost(Pawn Seeker)
+{
+	if( bCollideActors && (Seeker.bIsPlayer ? bAllowPlayers : bAllowMonsters) )
+		return 0;
+	return -1;
+}
+
+simulated function OnMirrorMode()
+{
+	JumpVelocityModifier.Y *= -1.f;
+}
+
 defaultproperties
 {
 	bEditorSelectRender=True
@@ -147,4 +186,8 @@ defaultproperties
 	bCollideActors=True
 	NetPriority=7.000000
 	NetUpdateFrequency=5
+	bOnlyDirtyReplication=true
+	bAllowMonsters=true
+	bAllowPlayers=true
+	bSpecialCost=true
 }

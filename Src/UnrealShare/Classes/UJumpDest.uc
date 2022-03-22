@@ -16,12 +16,12 @@ function PostBeginPlay()
 		if ( Paths[i]==-1 )
 			Continue;
 		describeSpec(Paths[i],St,En,RF,D);
-		if ( UJumpPad(En)!=None )
+		if ( UJumpPad(En) )
 		{
 			Start = UJumpPad(En);
 			Paths[i] = -1;
 		}
-		else if ( UJumpPadEnd(En)!=None )
+		else if ( UJumpPadEnd(En) )
 			End = UJumpPadEnd(En);
 	}
 }
@@ -38,10 +38,21 @@ function PathBuildingType EdPathBuildExec( NavigationPoint End, out int ForcedDi
 	return PATHING_Proscribe;
 }
 
+// Make JumpPad draw trajectory.
+function DrawEditorSelection( Canvas C )
+{
+	local UJumpPad J;
+
+	foreach AllActors(Class'UJumpPad',J)
+		if( J.LiftTag==LiftTag && !J.bSelected )
+			J.DrawEditorSelection(C);
+}
+
 defaultproperties
 {
 	ExtraCost=20
 	bStatic=True
+	bEditorSelectRender=True
 	RemoteRole=ROLE_None
 	Texture=Texture'S_SpawnP'
 }

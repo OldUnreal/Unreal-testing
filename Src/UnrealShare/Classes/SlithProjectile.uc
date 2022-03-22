@@ -177,4 +177,6 @@ defaultproperties
 	bFixedRotationDir=True
 	RemoteRole=ROLE_DumpProxy
 	bNetInterpolatePos=true
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

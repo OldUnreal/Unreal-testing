@@ -32,6 +32,14 @@ var scale   TempScale;
 var() color BrushColor;
 var() int	PolyFlags;
 var() bool  bColored;
+var() bool  bStrictMerging; // 227j: This brush should be strictly merged with other geometry (can be used to avoid having builder make tiny gaps if there are many surfaces or edges parallel to each other).
+
+simulated function OnMirrorMode()
+{
+	PrePivot.Y *= -1.f;
+	if( DrawType==DT_Mesh )
+		DrawScale3D.Y *= -1;
+}
 
 defaultproperties
 {

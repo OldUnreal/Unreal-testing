@@ -226,4 +226,8 @@ defaultproperties
 	bMeshCurvy=False
 	bNetTemporary=false
 	bNoDynamicShadowCast=false
+	
+	// Marco: Disabled this here because bigrock chunks are so plentiful and a bandwidth hog already...
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

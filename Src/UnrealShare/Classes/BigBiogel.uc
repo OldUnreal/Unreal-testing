@@ -75,4 +75,6 @@ defaultproperties
 	CollisionHeight=+00004.000000
 	LifeSpan=+00025.000000
 	RemoteRole=ROLE_DumbProxy
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

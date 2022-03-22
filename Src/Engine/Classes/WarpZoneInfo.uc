@@ -17,7 +17,7 @@ var() bool		 bNoTeleFrag;	// Don't allow pawns telefrag each other while warping
 // Internal.
 
 var const int              iWarpZone;
-var const coords           WarpCoords;
+var coords                 WarpCoords;
 var transient WarpZoneInfo OtherSideActor;
 var transient Object       OtherSideLevel;
 var() string		       Destinations[8]; // Altering destinations when triggering this zone.
@@ -162,8 +162,7 @@ simulated function PostTouch( actor Other )
 
 	// 227f: if both warpzones have same coords, dont affect some of the components.
 	if ( WarpCoords.XAxis~=OtherSideActor.WarpCoords.XAxis
-			&& WarpCoords.YAxis~=OtherSideActor.WarpCoords.YAxis
-			&& WarpCoords.ZAxis~=OtherSideActor.WarpCoords.ZAxis )
+			&& WarpCoords.YAxis~=OtherSideActor.WarpCoords.YAxis )
 	{
 		L = L-WarpCoords.Origin+OtherSideActor.WarpCoords.Origin;
 		if ( Other.bIsPawn )
@@ -313,6 +312,14 @@ event DrawEditorSelection( Canvas C )
 	C.Draw3DLine(MakeColor(0,255,0), WarpCoords.Origin, WarpCoords.Origin+WarpCoords.XAxis*32.f);
 	C.Draw3DLine(MakeColor(255,0,0), WarpCoords.Origin, WarpCoords.Origin+WarpCoords.YAxis*32.f);
 	C.Draw3DLine(MakeColor(0,0,255), WarpCoords.Origin, WarpCoords.Origin+WarpCoords.ZAxis*32.f);
+}
+
+simulated function OnMirrorMode()
+{
+	WarpCoords.Origin.Y *= -1.f;
+	WarpCoords.XAxis.Y *= -1.f;
+	WarpCoords.YAxis.Y *= -1.f;
+	WarpCoords.ZAxis.Y *= -1.f;
 }
 
 defaultproperties

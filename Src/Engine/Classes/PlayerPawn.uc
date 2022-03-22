@@ -82,6 +82,7 @@ var transient ZoneInfo DistanceFogOld; // Tracking camera zonechanges.
 var transient float FogDensity; // Client FogDensity. For exponential fog.
 var transient int FogMode; // 0 = Linear, 1 = Exponential, 2 = Exponential 2
 var PortalModifier CameraModifier; // Allow modders to modify camera (overrides ZoneInfo.CameraModifier).
+var PlayerInteraction LocalInteractions; // User interactions to override this player.
 
 // Input axes.
 var input float
@@ -284,6 +285,69 @@ simulated event RenderOverlays( canvas Canvas )
 
 	if ( myHUD != None )
 		myHUD.RenderOverlays(Canvas);
+}
+
+// Add/remove 227j PlayerInteractions to allow for easy playerpawn hooks.
+simulated final function PlayerInteraction AddInteraction( class<PlayerInteraction> Type, optional bool bUnique )
+{
+	local PlayerInteraction I,N;
+	
+	if( bUnique )
+	{
+		for( I=LocalInteractions; I; I=I.NextInteraction )
+			if( I.Class==Type )
+				return I;
+	}
+	N = new(Outer) Type;
+	N.PlayerOwner = Self;
+	if( !LocalInteractions || LocalInteractions.Priority<=N.Priority )
+	{
+		N.NextInteraction = LocalInteractions;
+		LocalInteractions = N;
+	}
+	else
+	{
+		for( I=LocalInteractions; I; I=I.NextInteraction )
+			if( !I.NextInteraction || I.NextInteraction.Priority<=N.Priority )
+			{
+				N.NextInteraction = I.NextInteraction;
+				I.NextInteraction = N;
+				break;
+			}
+	}
+	
+	N.Initialized();
+	return N;
+}
+simulated final function RemoveInteraction( PlayerInteraction N )
+{
+	local PlayerInteraction I;
+	
+	if( LocalInteractions )
+	{
+		if( LocalInteractions==N )
+			LocalInteractions = N.NextInteraction;
+		else
+		{
+			for( I=LocalInteractions; I; I=I.NextInteraction )
+				if( I.NextInteraction==N )
+				{
+					I.NextInteraction = N.NextInteraction;
+					break;
+				}
+		}
+	}
+	N.NextInteraction = None;
+	N.PlayerOwner = None;
+}
+simulated final function PlayerInteraction FindInteraction( class<PlayerInteraction> Type )
+{
+	local PlayerInteraction I;
+
+	for( I=LocalInteractions; I; I=I.NextInteraction )
+		if( I.Class==Type )
+			return I;
+	return None;
 }
 
 exec function ViewPlayerNum(optional int num)
@@ -1524,6 +1588,7 @@ exec function Say( string Msg )
 	local Pawn P;
 	local GameRules G;
 
+	SanitizeString(Msg);
 	if ( Level.Game.GameRules!=None )
 	{
 		for ( G=Level.Game.GameRules; G!=None; G=G.NextRules )
@@ -1550,6 +1615,7 @@ exec function TeamSay( string Msg )
 		return;
 	}
 
+	SanitizeString(Msg);
 	if ( Level.Game.GameRules!=None )
 	{
 		for ( G=Level.Game.GameRules; G!=None; G=G.NextRules )
@@ -2164,6 +2230,7 @@ function ChangeDodgeClickTime( float F )
 exec function SetName( coerce string S )
 {
 	S = Left(S,40);
+	SanitizeString(S);
 	ChangeName(S);
 	UpdateURL("Name", S, true);
 	SaveConfig();
@@ -2174,7 +2241,10 @@ function ChangeName( coerce string S )
 	if (Level.Game.WorldLog != None)
 		ClientMessage(CantChangeNameMsg);
 	else
+	{
+		SanitizeString(S);
 		Level.Game.ChangeName( self, S, true );
+	}
 }
 
 function ChangeTeam( int N )

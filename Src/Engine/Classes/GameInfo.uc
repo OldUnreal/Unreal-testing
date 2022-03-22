@@ -165,9 +165,10 @@ struct SavedGameInfo
 // 227j: Tell FindPlayerStart which level were about to spawn in.
 var transient LevelInfo SpawnLevel;
 
-// 227h color code functions:
-static invariant native final function StripColorCodes( out string S ); // Strip color codes from a string
-static invariant native final function string MakeColorCode( color Color ); // Make a color code string
+// 227 color code functions:
+static invariant native final function StripColorCodes( out string S ); // 227h: Strip color codes from a string
+static invariant native final function string MakeColorCode( color Color ); // 227h: Make a color code string
+static invariant native final function SanitizeString( out string S ); // 227j: Strip color codes, new lines and misc unsafe characters from string (for playername/chat).
 
 // Grab a list of saved games!
 native(1700) static final iterator function AllSavedGames( out SavedGameInfo Save, out int Index );
@@ -1808,4 +1809,5 @@ defaultproperties
 	InventoryDataIni="InventoryData"
 	GameMaxChannels=1024
 	DesiredMaxChannels=1024
+	bUseClassicBalance=true
 }

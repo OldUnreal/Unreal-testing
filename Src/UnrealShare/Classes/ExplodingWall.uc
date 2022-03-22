@@ -22,8 +22,13 @@ var() sound BreakingSound;
 var() bool bTranslucentGlass;
 var() bool bUnlitGlass;
 
+var int BACKUP_Health;
+var bool BACKUP_Collision;
+
 function PreBeginPlay()
 {
+	BACKUP_Collision = bCollideActors;
+	BACKUP_Health = Health;
 	DrawType = DT_None;
 	Super.PreBeginPlay();
 }
@@ -48,7 +53,11 @@ Auto State Exploding
 		{
 			bAbort = true;
 			for ( i=0; i<5; i++ )
-				if (DamageType==ActivatedBy[i]) bAbort=False;
+				if (DamageType==ActivatedBy[i])
+				{
+					bAbort=False;
+					break;
+				}
 			if ( bAbort )
 				return;
 		}
@@ -102,7 +111,28 @@ Auto State Exploding
 				if (bTranslucentGlass) s.Style = STY_Translucent;
 			}
 		}
-		Destroy();
+		GoToState('Inactive');
+	}
+	function Reset()
+	{
+		Health = BACKUP_Health;
+	}
+}
+
+state Inactive
+{
+Ignores Trigger,TakeDamage;
+
+	function BeginState()
+	{
+		SetCollision(false);
+		bHidden = true;
+	}
+	function Reset()
+	{
+		SetCollision(BACKUP_Collision);
+		Health = BACKUP_Health;
+		GoToState('Exploding');
 	}
 }
 

@@ -65,15 +65,14 @@ function Initialized()
 
 function ResetUWindow()
 {
-	local int i,l;
+	local int i;
 
 	// Cleanup list.
-	l = Array_Size(TempNewWindowList);
-	for ( i=0; i<l; i++ )
+	for( i=(TempNewWindowList.Size()-1); i>=0; --i )
 		TempNewWindowList[i].NotifyWindowRemoved();
-	Array_Size(TempNewWindowList,0);
+	TempNewWindowList.Empty();
 
-	if (Root != None)
+	if( Root )
 		Root.Close();
 	Root = None;
 	bCreatedRoot = False;
@@ -85,14 +84,11 @@ function ResetUWindow()
 event bool KeyEvent( EInputKey Key, EInputAction Action, FLOAT Delta )
 {
 	local byte k;
-	local int j,l;
+	local UWinInteraction I;
 
-	l = Array_Size(Interactions);
-	for ( j=0; j<l; j++ )
-	{
-		if ( Interactions[j].bRequestInput && Interactions[j].KeyEvent(Key,Action,Delta) )
+	foreach Interactions(I)
+		if ( I.bRequestInput && I.KeyEvent(Key,Action,Delta) )
 			Return True;
-	}
 	k = Key;
 	switch (Action)
 	{
@@ -123,7 +119,7 @@ event bool KeyEvent( EInputKey Key, EInputAction Action, FLOAT Delta )
 }
 event bool KeyType( EInputKey Key )
 {
-	local int j,l;
+	local UWinInteraction I;
 
 	if (!bLocked && GlobalConsoleKey == 0 && LastInputKey != 0 && LastInputKey == ConsoleKeyChar)
 	{
@@ -133,12 +129,9 @@ event bool KeyType( EInputKey Key )
 			ShowConsole();
 	}
 
-	l = Interactions.Size();
-	for ( j=0; j<l; j++ )
-	{
-		if ( Interactions[j].bRequestInput && Interactions[j].KeyType(Min(LastInputKey, 255)) );
+	foreach Interactions(I)
+		if ( I.bRequestInput && I.KeyType(Min(LastInputKey, 255)) );
 			Return True;
-	}
 	return False;
 }
 
@@ -159,7 +152,7 @@ function HideConsole()
 
 event Tick( float Delta )
 {
-	local int j,l;
+	local UWinInteraction I;
 
 	if (MusicMenuTimer != none)
 	{
@@ -172,12 +165,9 @@ event Tick( float Delta )
 				TimerCounter = 0;
 		}
 	}
-	l = Array_Size(Interactions);
-	for ( j=0; j<l; j++ )
-	{
-		if ( Interactions[j].bRequestTick )
-			Interactions[j].Tick(Delta);
-	}
+	foreach Interactions(I)
+		if ( I.bRequestTick )
+			I.Tick(Delta);
 	Super.Tick(Delta);
 
 	if (bLevelChange && Root != None && string(Viewport.Actor.Level) != OldLevel)
@@ -216,21 +206,17 @@ state UWindow
 
 	event PostRender( canvas Canvas )
 	{
-		local int j,l;
+		local UWinInteraction I;
 
 		if( Viewport.Actor.Level.LevelAction==LEVACT_SaveScreenshot ) return;
 	
-		if ( Viewport.Actor.myHUD != None )
-			Viewport.Actor.myHUD.DisplayMessages(Canvas);
-		if ( TimeDemo != None )
+		DrawSingleView(Canvas);
+		if( TimeDemo )
 			TimeDemo.PostRender( Canvas );
-		l = Array_Size(Interactions);
-		for ( j=0; j<l; j++ )
-		{
-			if ( Interactions[j].bRequestRender )
-				Interactions[j].PostRender(Canvas);
-		}
-		if (Root != None)
+		foreach Interactions(I)
+			if( I.bRequestRender )
+				I.PostRender(Canvas);
+		if( Root )
 			Root.bUWindowActive = True;
 		RenderUWindow( Canvas );
 		if( bDisplayWarning )
@@ -381,7 +367,6 @@ state UWindow
 		else NetworkErrorWindow.ShowWindow();
 		UWindowNetErrorClientWindow(NetworkErrorWindow.ClientArea).SetNetworkMessage(Reason);
 	}
-Begin:
 }
 
 function ToggleUWindow()
@@ -578,14 +563,11 @@ function Message( PlayerReplicationInfo PRI, coerce string Msg, name N )
 {
 	local string OutText;
 	local color MsgC;
-	local int j,l;
-
-	l = Array_Size(Interactions);
-	for ( j=0; j<l; j++ )
-	{
-		if ( Interactions[j].bRequestMessages && Interactions[j].Message(PRI,Msg,N) )
+	local UWinInteraction I;
+	
+	foreach Interactions(I)
+		if ( I.bRequestMessages && I.Message(PRI,Msg,N) )
 			Return;
-	}
 	if ( MessageCatcher!=None && MessageCatcher.OverrideMessage(PRI,Msg,N) )
 		Return;
 	if ( N=='Networking' )

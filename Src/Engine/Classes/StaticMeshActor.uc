@@ -7,6 +7,12 @@ var StaticLightData StaticLightD;
 var() bool bBuildStaticLights; // This static mesh should compute vertex light colors on map rebuild.
 var() bool bComputeUnlitColor; // This static mesh should compute ActorGUnlitColor value on map rebuild.
 
+simulated function OnMirrorMode()
+{
+	DrawScale3D.Y *= -1.f;
+	PrePivot.Y *= -1.f;
+}
+
 defaultproperties
 {
 	DrawType=DT_Mesh

@@ -47,7 +47,8 @@ var config bool bMutatorsSelected, bClassicChecked;
 
 function WindowShown()
 {
-	UseClassicCheck.bChecked = bClassicChecked;
+	if( UseClassicCheck )
+		UseClassicCheck.bChecked = bClassicChecked;
 	UseMutatorsCheck.bChecked = bMutatorsSelected;
 	Super.WindowShown();
 }
@@ -182,8 +183,11 @@ function BeforePaint(Canvas C, float X, float Y)
 	UseMutatorsCheck.AutoWidth(C);
 	UseMutatorsCheck.WinLeft = ControlRight - UseMutatorsCheck.WinWidth + 3;
 	
-	UseClassicCheck.AutoWidth(C);
-	UseClassicCheck.WinLeft = ControlRight - UseClassicCheck.WinWidth + 3;
+	if( UseClassicCheck )
+	{
+		UseClassicCheck.AutoWidth(C);
+		UseClassicCheck.WinLeft = ControlRight - UseClassicCheck.WinWidth + 3;
+	}
 
 	MutatorButton.AutoWidthBy(C, ButtonWidth);
 	MutatorButton.WinLeft = ControlRight - MutatorButton.WinWidth;
@@ -212,8 +216,11 @@ function Notify(UWindowDialogControl C, byte E)
 			SaveConfig();
 			break;
 		case UseClassicCheck:
-			bClassicChecked = UseClassicCheck.bChecked;
-			SaveConfig();
+			if( UseClassicCheck )
+			{
+				bClassicChecked = UseClassicCheck.bChecked;
+				SaveConfig();
+			}
 			break;
 		case GameCombo:
 			OnCampignChange();
@@ -331,6 +338,7 @@ function Close(optional bool bByParent)
 defaultproperties
 {
 	LastSelectedSkill=1
+	bClassicChecked=true
 	GameHelp="Select your game to play."
 	GameText="Campaign:"
 	SkillText="Difficulty:"

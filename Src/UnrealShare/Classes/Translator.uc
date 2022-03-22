@@ -18,7 +18,7 @@ class Translator extends Pickup;
 #exec MESHMAP SCALE MESHMAP=TranslatorMesh X=0.04 Y=0.04 Z=0.08
 #exec MESHMAP SETTEXTURE MESHMAP=TranslatorMesh NUM=1 TEXTURE=JTranslator1 TLOD=10
 
-#exec TEXTURE IMPORT NAME=TranslatorHUDHD FILE="Textures\HUD\translator.bmp" GROUP="HD" FLAGS=2 MIPS=On BTC=3
+#exec TEXTURE IMPORT NAME=TranslatorHUDHD FILE="Textures\HUD\HDTranslator.dds" GROUP="HD" FLAGS=131074 MIPS=0
 #exec TEXTURE IMPORT NAME=TranslatorHUD3 FILE=models\TRANHUD3.pcx GROUP="Icons" FLAGS=2 MIPS=OFF HD=TranslatorHUDHD
 
 var globalconfig float TranslatorScale;

@@ -16,6 +16,15 @@ function PostBeginPlay()
 	Super.PostBeginPlay();
 
 	bClassicDeathMessages = True;
+	
+	// hack to skip end game in coop play
+	if( string(Outer.Name) ~= "EndGame" )
+		SetTimer(80,false,'SkipEndGame');
+}
+
+function SkipEndGame()
+{
+	Level.ServerTravel( "Vortex2", False);
 }
 
 function bool IsRelevant(actor Other)
@@ -156,19 +165,19 @@ function SendPlayer( PlayerPawn aPlayer, string URL )
 				return;
 	}
 	// hack to skip end game in coop play
-	if ( left(URL,7) ~= "endgame")
+	/*if ( left(URL,7) ~= "endgame")
 	{
 		Level.ServerTravel( "Vortex2", False);
 		return;
-	}
-	if ( left(URL,11) ~= "extremeDGen")//change to fixed map instead
+	}*/
+	/*if ( left(URL,11) ~= "extremeDGen")//change to fixed map instead
 	{
 		if(DynamicLoadObject("EXTREMEDarkGen.MyLevel",class'Level') != None)
 		{
 			Level.ServerTravel( "EXTREMEDarkGen", True);
 			return;
 		}
-	}
+	}*/
 	Level.ServerTravel( URL, true );
 }
 

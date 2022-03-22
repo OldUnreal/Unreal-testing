@@ -1,7 +1,8 @@
 // Normal particle emitter with network replication for triggering.
 Class NetSpriteEmitter extends XSpriteEmitter;
 
-var byte RepCounter,ClientRepCounter;
+var transient repnotify byte RepCounter;
+var transient byte ClientRepCounter;
 
 replication
 {
@@ -9,24 +10,22 @@ replication
 		RepCounter;
 }
 
-function PreBeginPlay()
-{
-	RepCounter = 0;
-}
+function PreBeginPlay(); // preserved for binary compatibility with old derived classes
+function PostNetBeginPlay();
+function PostNetReceive();
 
-simulated event PostBeginPlay()
+simulated function OnRepNotify( name Property )
 {
-	super.PostBeginPlay();
-	bNetNotify = true;
-}
-
-simulated event PostNetReceive()
-{
-	if (ClientRepCounter != RepCounter)
+	if( Property=='RepCounter' )
 	{
-		if (RepCounter == 0)
+		if( bNetBeginPlay )
+		{
+			if( TriggerAction==ETR_ToggleDisabled && (RepCounter & 1) )
+				EmTrigger();
+		}
+		else if (RepCounter == 0)
 			Reset();
-		else if (TriggerAction != ETR_ToggleDisabled || ((RepCounter - ClientRepCounter) & 1) != 0)
+		else if (TriggerAction != ETR_ToggleDisabled || ((RepCounter - ClientRepCounter) & 1) )
 			EmTrigger();
 		ClientRepCounter = RepCounter;
 	}
@@ -36,6 +35,7 @@ simulated function Reset()
 {
 	RepCounter = 0;
 	bDisabled = BACKUP_Disabled;
+	bForceNetUpdate = true;
 }
 
 function Trigger( Actor Other, Pawn EventInstigator )
@@ -44,14 +44,16 @@ function Trigger( Actor Other, Pawn EventInstigator )
 		EmTrigger();
 	if ( ++RepCounter==255 )
 		RepCounter = 1;
+	bForceNetUpdate = true;
 }
 
 defaultproperties
 {
+	Texture=Texture'S_EmitterNet'
 	RemoteRole=ROLE_SimulatedProxy
 	bAlwaysRelevant=True
-	bCarriedItem=True
-	Texture=Texture'S_EmitterNet'
+	bSkipActorReplication=True
 	bNoDelete=True
-	RepCounter=255
+	NetUpdateFrequency=1
+	bOnlyDirtyReplication=true
 }

@@ -96,8 +96,7 @@ function Touch(Actor Other)
 
 defaultproperties
 {
-     Texture=None
-     CollisionRadius=20.000000
-     CollisionHeight=20.000000
-     bCollideActors=True
+	CollisionRadius=20.000000
+	CollisionHeight=20.000000
+	bCollideActors=True
 }

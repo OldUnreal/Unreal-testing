@@ -9,6 +9,8 @@ cpptext
 {
 	AInventorySpot() {}
 	UBOOL IsValidOnImport() { return FALSE; }
+	UBOOL IsInventorySpot() const {	return TRUE; }
+	class AInventory* GetMarkedItem() const { return markedItem; }
 }
 
 var Inventory markedItem;

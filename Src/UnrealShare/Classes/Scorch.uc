@@ -55,6 +55,11 @@ simulated function Timer()
 	Destroy();
 }
 
+simulated function Reset()
+{
+	Destroy();
+}
+
 defaultproperties
 {
 	MultiDecalLevel=4

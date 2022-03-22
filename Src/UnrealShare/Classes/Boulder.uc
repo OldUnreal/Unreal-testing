@@ -44,4 +44,6 @@ defaultproperties
 	bBlockActors=True
 	bBlockPlayers=True
 	bProjTarget=True
+	bNoDynamicShadowCast=true
+	bNetInterpolatePos=true
 }

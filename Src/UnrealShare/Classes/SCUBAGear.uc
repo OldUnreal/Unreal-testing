@@ -25,6 +25,13 @@ class SCUBAGear extends Pickup;
 var vector X,Y,Z;
 var Actor EffectsActor;
 
+event TravelPreAccept()
+{
+	if (!Pawn(Owner).HeadRegion.Zone.bWaterZone)
+		bActive = false;
+	Super.TravelPreAccept();
+}
+
 function inventory PrioritizeArmor( int Damage, name DamageType, vector HitLocation )
 {
 	if (DamageType == 'Breathe')

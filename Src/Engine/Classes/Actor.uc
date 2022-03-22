@@ -111,6 +111,9 @@ var bool bRepAmbientSound;					// Should replicate ambient sound.
 var bool bSimulatedPawnRep;					// Should replicate physics like simulated pawns.
 var bool bRepMesh;							// Should replicate mesh and the skins.
 var const bool bNetInitialRotation;			// Should initially network rotation when opening this actor channel (makes rotation valid on BeginPlay event clientside).
+var const bool bNetInitialVelocity;			// Should replicate exact velocity initially when opening actor channel (not while on DumpProxy).
+var const bool bNetInitExactLocation;		// Should replicate exact location when initially opening this actor channel.
+var bool bOptionalNetOwner;					// If Owner can't be replicated, it wont keep actor dirty and forcing replication every net update.
 
 // Collision flags.
 var(Collision) const bool bCollideActors;   // Collides with other actors.
@@ -769,7 +772,8 @@ native(256) final latent function Sleep( float Seconds );
 
 // Collision.
 native(262) final function SetCollision( optional bool NewColActors, optional bool NewBlockActors, optional bool NewBlockPlayers, optional bool bNewBlockRbPhys );
-native(283) final function bool SetCollisionSize( float NewRadius, float NewHeight, optional bool bCheckEncroachment ); // CheckEncroachment also updates touch. Does return 0 if CheckEncroachment fails (and only then).
+native(283) final function bool SetCollisionSize( float NewRadius, float NewHeight, optional bool bCheckEncroachment ); // CheckEncroachment also updates touch. Does return false if CheckEncroachment fails (and only then).
+native(285) final function bool CheckEncroachments(); // Check encroachment of actors under this (returns false if encroachment failed).
 
 // Movement.
 native(266) final function bool Move( vector Delta, optional rotator NewRotation, optional bool bTest ); // use optional bTest flag to test only without actually really moving it.
@@ -855,8 +859,8 @@ const BONESPACE_World = 2; // Space is absolute to world coordinates.
 // @ Space, which transformation space to use, see above.
 native(1729) final function bool SetBoneRotation( int Index, rotator RotModifier, optional float Alpha, optional byte Space ); // Set bone rotation (-1 Index will change mesh local rotation).
 native(1730) final function bool SetBoneScale( int Index, vector New3DScale, optional float Alpha ); // Set bone size 3D.
-native(1731) final function bool SetBoneRoot( int Index, optional int RootIndex ); // Change bone's root bone (attach bone to bone, 0 root = orginal bone).
-native(1732) final function bool SetBonePosition( int Index, vector Offset, optional float Alpha, optional byte Space ); // Change bone location offset (offset is in mesh coords, not world coords) NOTE: -1 Index will change mesh local offset.
+native(1731) final function bool SetBoneRoot( int Index, optional int RootIndex ); // Change a bones parent bone (attach bone to bone, 0 RootIndex = orginal bone).
+native(1732) final function bool SetBonePosition( int Index, vector Offset, optional float Alpha, optional byte Space ); // Set bone offset (-1 Index will change mesh local offset).
 
 // Play an animation with bone index as root.
 // @ Index - The root bone index for the animation.
@@ -1613,6 +1617,10 @@ event OnSubLevelChange( LevelInfo PrevLevel );
 
 // User changed shadow detail settings.
 event ShadowModeChange();
+
+// Level started with Y-axis mirror mode.
+// This event is called BEFORE GameInfo.InitGame and anything else!
+simulated event OnMirrorMode();
 
 defaultproperties
 {

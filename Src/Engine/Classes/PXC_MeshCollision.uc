@@ -9,8 +9,9 @@ var(Collision) bool bUseConvex; // You should use convex shape in order to allow
 cpptext
 {
 	UPXC_MeshCollision() {}
-	void DrawPreview(FSceneNode* Frame, const FCoords& Coords);
-	PX_ShapesBase* GetShape();
+	void DrawPreview(FSceneNode* Frame, class AActor* Owner);
+	void ApplyShape( struct PX_PhysicsObject* Object, const FVector& Scale );
+	UBOOL IsValidShape() const;
 }
 
 defaultproperties

@@ -23,19 +23,14 @@ class UnrealHUD extends HUD
 #exec TEXTURE IMPORT NAME=Crosshair6 FILE=Textures\Hud\chair6.pcx GROUP="Icons" FLAGS=2 MIPS=OFF
 #exec TEXTURE IMPORT NAME=Crosshair7 FILE=Textures\Hud\chair7.pcx GROUP="Icons" FLAGS=2 MIPS=OFF
 
-/*#exec Texture Import File=Textures\HD_Font\HD_LargeGreenFont.pcx Name=HD_LargeGreenFont Group="HD" Mips=Off Flags=2
-#exec Texture Import File=Textures\HD_Font\HD_LargeRedFont.pcx Name=HD_LargeRedFont Group="HD" Mips=Off Flags=2
-#exec Texture Import File=Textures\HD_Font\HD_TinyFont.pcx Name=HD_TinyFont Group="HD" Mips=Off Flags=2
-#exec Texture Import File=Textures\HD_Font\HD_TinyRedFont.pcx Name=HD_TinyRedFont Group="HD" Mips=Off Flags=2
-#exec Texture Import File=Textures\HD_Font\HD_TinyWhiteFont.pcx Name=HD_TinyWhiteFont Group="HD" Mips=Off Flags=2
-#exec Texture Import File=Textures\HD_Font\HD_WhiteFont.pcx Name=HD_WhiteFont Group="HD" Mips=Off Flags=2*/
+#exec Texture Import File=Textures\HD_Fonts\HD_WhiteFont.dds Name=HD_WhiteFont Group="HD" Mips=Off Flags=131074
 
 #exec Font Import File=Textures\Lrgred.pcx Name=LargeRedFont //HD=HD_LargeRedFont
 #exec Font Import File=..\Engine\Textures\LargeFont_New.pcx Name=LargeGreenFont //HD=HD_LargeGreenFont // for non-localized text
 #exec Font Import File=Textures\TinyFont.pcx Name=TinyFont //HD=HD_TinyFont
 #exec Font Import File=Textures\TinyFon3.pcx Name=TinyWhiteFont //HD=HD_TinyWhiteFont
 #exec Font Import File=Textures\TinyFon2.pcx Name=TinyRedFont //HD=HD_TinyRedFont
-#exec Font Import File=Textures\MedFont3.pcx Name=WhiteFont //HD=HD_WhiteFont
+#exec Font Import File=Textures\MedFont3.pcx Name=WhiteFont HD=HD_WhiteFont
 
 var int TranslatorTimer;
 var() int TranslatorY,CurTranY,SizeY,Count;

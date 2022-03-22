@@ -191,4 +191,6 @@ defaultproperties
 	NetPriority=+00002.000000
 	bNetTemporary=false
 	bNoDynamicShadowCast=false
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

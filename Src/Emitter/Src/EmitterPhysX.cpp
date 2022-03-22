@@ -119,15 +119,11 @@ void AXEmitter::InitPhysXParticle(AActor* A, PartsType* Data)
 {
 	guard(AXEmitter::InitPhysXParticle);
 	UPX_RigidBodyData* RBD = Cast<UPX_RigidBodyData>(PhysicsData);
-	if (!RBD || !RBD->CollisionShape || !XLevel->PhysicsScene)
-		return;
-
-	PX_ShapesBase* Body = RBD->CollisionShape->GetShape();
-	if (!Body)
+	if (!RBD || !RBD->CollisionShape || !XLevel->PhysicsScene || !RBD->CollisionShape->IsValidShape())
 		return;
 
 	RBD->Actor = A;
-	PX_PhysicsObject* P = XLevel->PhysicsScene->CreateRigidBody(RBD, Body);
+	PX_PhysicsObject* P = XLevel->PhysicsScene->CreateRigidBody(RBD);
 	RBD->Actor = this;
 	if (P)
 	{
@@ -135,6 +131,7 @@ void AXEmitter::InitPhysXParticle(AActor* A, PartsType* Data)
 		P->SetLimits(RBD->MaxAngularVelocity, RBD->MaxLinearVelocity);
 		P->SetDampening(RBD->AngularDamping, RBD->LinearDamping);
 		P->SetGravity(A->Acceleration);
+		P->SetCollisionFlags(UCONST_COLLISIONFLAG_Movers, 0);
 	}
 	unguard;
 }

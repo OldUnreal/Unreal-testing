@@ -100,11 +100,11 @@ function Paint(Canvas C, float X, float Y)
 		if (bFace)
 		{
 			if( bIsHuman )
-				DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(-10, 0, -1.5) );
-			else DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(-10, 0, -2.5) );
+				DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(-10, 0, -1.5), true );
+			else DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(-10, 0, -2.5), true );
 		}
 		else
-			DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(0, 0, 0) );
+			DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(0, 0, 0), true );
 		C.SetCustomLighting();
 		C.ClearCustomLightSources();
 		P.FOVAngle = OldFov;

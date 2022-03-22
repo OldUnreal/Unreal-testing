@@ -112,4 +112,8 @@ defaultproperties
 	bMeshCurvy=False
 	bBounce=True
 	NetPriority=6.000000
+	
+	// Marco: Disabled this because chunks are plentiful and doesn't need exact position.
+	bNetInitialVelocity=false
+	bNetInitExactLocation=false
 }

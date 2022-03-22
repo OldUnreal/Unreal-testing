@@ -506,21 +506,17 @@ simulated function DrawSingleView( Canvas C )
 	C.SetOrigin(0.0, 0.0);
 
 	// Ask the HUD to deal with messages.
-	if ( Viewport.Actor.myHUD != None )
+	if ( Viewport.Actor.myHUD )
 	{
 		XL = Class'HUD'.Default.HudScaler;
 		if( XL!=1.f )
 		{
-			YL = FrameY;
-			FrameY/=XL;
 			C.PushCanvasScale(XL,true);
 			if ( Viewport.Actor.myHUD.DisplayMessages(C) )
 			{
-				FrameY = YL;
 				C.PopCanvasScale();
 				return;
 			}
-			FrameY = YL;
 			C.PopCanvasScale();
 		}
 		else if ( Viewport.Actor.myHUD.DisplayMessages(C) )

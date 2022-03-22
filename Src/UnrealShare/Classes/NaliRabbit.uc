@@ -50,23 +50,21 @@ function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation,
 					 Vector momentum, name damageType)
 {
 	local CreatureChunks carc;
-	local Pawn aPawn;
+	local NaliRabbit aPawn;
 
 	if ( Damage > 4 )
 	{
+		Health = 0;
 		Velocity += momentum/mass;
-		if ( instigator != None )
+		if ( instigatedBy && instigatedBy.Health>0 && !Class'GameInfo'.Default.bUseClassicBalance )
 		{
-			aPawn = Level.PawnList;
-			While ( aPawn != None )
+			foreach RadiusActors(class'NaliRabbit',aPawn,500.f)
 			{
-				if ( aPawn.IsA('NaliRabbit') && (Location.Z - aPawn.Location.Z < 120)
-						&& (VSize(Location - aPawn.Location) < 500) )
+				if ( aPawn!=Self && aPawn.Health>0 && Abs(Location.Z - aPawn.Location.Z) < 120.f )
 				{
-					aPawn.Enemy = instigator;
+					aPawn.Enemy = instigatedBy;
 					aPawn.GotoState('Evade');
 				}
-				aPawn = aPawn.NextPawn;
 			}
 		}
 		Spawn(class'BloodBurst');
@@ -99,9 +97,9 @@ auto state Grazing
 
 	function Bump(actor Other)
 	{
-		if ( (Normal(Destination - Location) Dot Normal(Other.Location - Location)) > 0.7 )
+		if ( (Normal2D(Destination - Location) Dot Normal2D(Other.Location - Location)) > 0.7 )
 			MoveTimer = -1.0;
-		if ( Other.bIsPawn && (Pawn(Other).bIsPlayer || Other.IsA('ScriptedPawn')) )
+		if ( Other.bIsPawn && !Pawn(Other).bIsAmbientCreature )
 		{
 			Enemy = Pawn(Other);
 			GotoState('Evade');
@@ -115,6 +113,12 @@ auto state Grazing
 		local float minDist, Dist;
 		local actor HitActor;
 
+		if( Class'GameInfo'.Default.bUseClassicBalance && VSize2DSq(Location)>Square(500.f) )
+		{
+			pick = vect(0,0,0);
+			return true;
+		}
+		
 		dir.Z = 0;
 		dir = Normal(dir);
 		minDist = FMin(180.0, 6*CollisionRadius);
@@ -123,8 +127,8 @@ auto state Grazing
 		HitActor = Trace(HitLocation, HitNormal, pick, Location, false, vect(10,10,10));
 		if( HitActor )
 		{
-			Dist = VSize(HitLocation - Location);
-			if ( (Dist < minDist) && (HitNormal.Z < 0.7) )
+			Dist = VSizeSq(HitLocation - Location);
+			if ( (Dist < Square(minDist)) && (HitNormal.Z < 0.7) )
 			{
 				if ( !bAlongWall )
 					return false;
@@ -138,7 +142,7 @@ auto state Grazing
 
 		if( !PointReachable(pick) )
 		{
-			if( VSize(LastReachTest-Location)<5.f )
+			if( VSize2DSq(LastReachTest-Location)<Square(5.f) )
 				return false;
 			pick = LastReachTest;
 		}
@@ -268,9 +272,9 @@ State Evade
 
 	function Bump(actor Other)
 	{
-		if ( (Normal(Destination - Location) Dot Normal(Other.Location - Location)) > 0.75 )
+		if ( (Normal2D(Destination - Location) Dot Normal2D(Other.Location - Location)) > 0.75 )
 			MoveTimer = -1.0;
-		if ( (Pawn(Other) != None) && (Pawn(Other).bIsPlayer || Other.IsA('ScriptedPawn')) )
+		if ( Other.bIsPawn && !Pawn(Other).bIsAmbientCreature )
 			Enemy = Pawn(Other);
 
 		Disable('Bump');

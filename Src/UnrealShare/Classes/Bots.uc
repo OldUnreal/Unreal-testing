@@ -4767,28 +4767,10 @@ ignores Bump, Hitwall, WarnTarget;
 	//choose a jump velocity
 	function adjustJump()
 	{
-		local float velZ;
-		local vector FullVel;
-
-		velZ = Velocity.Z;
-		FullVel = Normal(Velocity) * GroundSpeed;
-
-		If (Location.Z > Destination.Z + CollisionHeight + 2 * MaxStepHeight)
-		{
-			Velocity = FullVel;
-			Velocity.Z = velZ;
-			Velocity = EAdjustJump();
-			Velocity.Z = 0;
-			if ( VSize(Velocity) < 0.9 * GroundSpeed )
-			{
-				Velocity.Z = velZ;
-				return;
-			}
-		}
-
-		Velocity = FullVel;
-		Velocity.Z = JumpZ + velZ;
-		Velocity = EAdjustJump();
+		local float Z;
+		
+		Z = Default.JumpZ*0.5f;
+		Velocity = SuggestFallVelocity(Location,Destination,FMax(JumpZ-Z,0.f),GroundSpeed,Velocity.Z+Z);
 	}
 
 	function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation,
@@ -5002,10 +4984,15 @@ Begin:
 			SetPhysics(PHYS_Swimming);
 			GotoState(NextState, NextLabel);
 		}
-		if ( !bJumpOffPawn )
-			AdjustJump();
-		else
+		if ( bJumpOffPawn )
 			bJumpOffPawn = false;
+		else AdjustJump();
+		if( JumpZ>0.f && Velocity.Z>(JumpZ*0.75) && Velocity.Z<(JumpZ*1.1) ) // Marco: Do this check even if bJumpOffPawn because AdjustWall can change it to true aswell.
+		{
+			PlaySound(JumpSound, SLOT_Talk, 1.0, true, 1200, 1.0);
+			if( bCountJumps && Inventory )
+				Inventory.OwnerJumped();
+		}
 PlayFall:
 		TweenToFalling();
 		FinishAnim();

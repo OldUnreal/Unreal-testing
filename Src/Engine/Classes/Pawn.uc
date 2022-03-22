@@ -244,6 +244,7 @@ var PlayerReplicationInfo PlayerReplicationInfo;
 // 227 enhancements
 var Actor BleedingActor; //Destroy() this from anything and bleeding will stop.
 var(AI) float SightDistanceMulti; // Multiply this AI's sight distance with this.
+var transient float TeleportHackTime; // C++ code timer.
 
 // shadow decal
 var transient Actor Shadow;
@@ -1794,28 +1795,23 @@ event PainTimer()
 function bool CheckWaterJump(out vector WallNormal)
 {
 	local actor HitActor;
-	local vector HitLocation, HitNormal, checkpoint, start, checkNorm, Extent;
+	local vector HitLocation, HitNormal, checkpoint, start, checkNorm;
 
-	if (CarriedDecoration != None)
+	if( CarriedDecoration )
 		return false;
-	checkpoint = vector(Rotation);
-	checkpoint.Z = 0.0;
-	checkNorm = Normal(checkpoint);
+	checkNorm = Normal2D(vector(Rotation));
 	checkPoint = Location + CollisionRadius * checkNorm;
-	Extent = CollisionRadius * vect(1,1,0);
-	Extent.Z = CollisionHeight;
-	HitActor = Trace(HitLocation, HitNormal, checkpoint, Location, true, Extent);
-	if ( (HitActor != None) && (Pawn(HitActor) == None) )
+	HitActor = Trace(HitLocation, HitNormal, checkpoint, Location, true, GetExtent(),,,{TRACE_AllColliding | TRACE_Blocking});
+	if( HitActor && !HitActor.bIsPawn )
 	{
 		WallNormal = -1 * HitNormal;
 		start = Location;
 		start.Z += 1.1 * MaxStepHeight;
 		checkPoint = start + 2 * CollisionRadius * checkNorm;
-		HitActor = Trace(HitLocation, HitNormal, checkpoint, start, true);
-		if (HitActor == None)
+		HitActor = Trace(HitLocation, HitNormal, checkpoint, start, true,,,,{TRACE_AllColliding | TRACE_Blocking});
+		if( !HitActor )
 			return true;
 	}
-
 	return false;
 }
 

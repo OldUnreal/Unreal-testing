@@ -63,6 +63,11 @@ function Timer()
 	Throwing();
 }
 
+simulated function OnMirrorMode()
+{
+	throwVect.Y *= -1.f;
+}
+
 defaultproperties
 {
 	Numthrows=1

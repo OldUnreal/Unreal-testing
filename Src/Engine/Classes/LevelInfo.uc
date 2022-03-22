@@ -76,6 +76,7 @@ var() bool			bSpecularLight;		/* Enables specular lighting effect, which causes 
 										 For proper lighting disable it in new maps. */
 var config bool		bDisableSpeclarLight; // Override and disable specular lighting mode.
 var bool			bNetworkTimeSeconds; // Should network NetTimeSeconds (you should use function EnableNetTimeSeconds to enable this).
+var noedsave const editconst bool bMirrorMode; // 227j: Level is running with mirror mode enabled.
 
 //-----------------------------------------------------------------------------
 // Audio properties.

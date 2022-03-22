@@ -45,4 +45,6 @@ defaultproperties
 	DrawType=DT_Mesh
 	Mesh=CandleM
 	bMeshCurvy=False
+	bNoDynamicShadowCast=true
+	bNetInterpolatePos=true
 }

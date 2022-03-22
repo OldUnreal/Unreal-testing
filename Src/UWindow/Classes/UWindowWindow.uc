@@ -1291,7 +1291,7 @@ final function ClipTextWidth(Canvas C, float X, float Y, coerce string S, float 
 	ClipText(C, X, Y, S);
 }
 
-final function DrawClippedActor( Canvas C, float X, float Y, Actor A, bool WireFrame, rotator RotOffset, vector LocOffset )
+final function DrawClippedActor( Canvas C, float X, float Y, Actor A, bool WireFrame, rotator RotOffset, vector LocOffset, optional bool bWideScreenFix )
 {
 	local vector MeshLoc;
 	local float FOV;
@@ -1303,7 +1303,9 @@ final function DrawClippedActor( Canvas C, float X, float Y, Actor A, bool WireF
 	MeshLoc.Z = 0;
 
 	A.SetRotation(RotOffset);
-	A.SetLocation((MeshLoc + LocOffset) * (FMax(X / Y, 1.f) * 0.7f));
+	if( bWideScreenFix )
+		A.SetLocation((MeshLoc + LocOffset) * (FMax(X / Y, 1.f) * 0.7f));
+	else A.SetLocation(MeshLoc + LocOffset);
 
 	C.DrawClippedActor(A, WireFrame, ClippingRegion.W * Root.GUIScale, ClippingRegion.H * Root.GUIScale, C.OrgX + ClippingRegion.X * Root.GUIScale, C.OrgY + ClippingRegion.Y * Root.GUIScale, True);
 }

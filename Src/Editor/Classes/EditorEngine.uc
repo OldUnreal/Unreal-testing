@@ -23,7 +23,7 @@ class EditorEngine extends Engine extends FNotifyHook
 
 // Objects.
 var const Level       Level;
-var const Model       TempModel;
+var const Model       TempModel,bspProcessModel;
 var const Texture     CurrentTexture;
 var const Class       CurrentClass;
 var pointer<class UTransactor*>			Trans;
