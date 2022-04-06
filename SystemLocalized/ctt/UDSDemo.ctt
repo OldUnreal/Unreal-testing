@@ -6,3 +6,31 @@ Credits3="I EPIC GAMES"
 ; EN: Credits4="PRESENT"
 Credits4="PRESENTEN"
 GameTitle="UNREAL: RETURN TO NA PALI"
+
+[CSFemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Dona 1"
+
+[CSFemaleTwo]
+; EN: MenuName="Female 2"
+MenuName="Dona 2"
+
+[CSMaleOne]
+; EN: MenuName="Male 1"
+MenuName="Home 1"
+
+[CSMaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Home 2"
+
+[CSMaleThree]
+; EN: MenuName="Male 3"
+MenuName="Home 3"
+
+[CSSkaarj]
+; EN: MenuName="Skaarj"
+MenuName="Skaarj"
+
+[CSSkaarjTrooper]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Soldat Skaarj"

@@ -1,6 +1,5 @@
 ﻿[public]
-; EN: Object=(Name=Male3Skins.Bane,Class=Texture,Description="Bane")
-Object=(Name=Male3Skins.Bane,Class=Texture,Description="Maledicció")
+Object=(Name=Male3Skins.Bane,Class=Texture,Description="Bane")
 Object=(Name=Male3Skins.Dante,Class=Texture,Description="Dante")
 Object=(Name=Male3Skins.Dregor,Class=Texture,Description="Dregor")
 Object=(Name=Male3Skins.Krige,Class=Texture,Description="Krige")

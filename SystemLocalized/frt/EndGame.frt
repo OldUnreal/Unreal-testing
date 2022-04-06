@@ -1,3 +1,3 @@
 ﻿[LevelInfo2]
 ; EN: Title="Ending Sequence"
-Title="Séquence de fin"
+Title="Séquence de Fin"

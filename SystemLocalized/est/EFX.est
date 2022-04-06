@@ -1,4 +1,4 @@
 ﻿[EFXVacuumZone]
 ; EN: DamageString="%o was depressurized."
-DamageString="%o fue despresurizado."
-FemDamageString="%o fue despresurizada."
+DamageString="%o ha sido despresurizado."
+FemDamageString="%o ha sido despresurizada."

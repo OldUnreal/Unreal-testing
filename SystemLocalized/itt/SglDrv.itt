@@ -4,7 +4,7 @@ Object=(Name=SGLDrv.SGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Au
 Preferences=(Caption="Supporto per video PowerVR SGL",Parent="Resa",Class=SGLDrv.SGLRenderDevice,Immediate=True)
 
 [SglRenderDevice]
-; EN: ClassCaption="PowerVR SGL Support"
+; EN: ClassCaption="PowerVR SGL for Windows"
 ClassCaption="Supporto per video PowerVR SGL"
 ; EN: AskInstalled="Do you have a PowerVR card installed?"
 AskInstalled="Hai una scheda PowerVR installata?"

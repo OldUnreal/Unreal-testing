@@ -33,3 +33,4 @@ Message="Commandes de la barrière d'accès à l'ascenseur inactives."
 [TranslatorEvent4]
 ; EN: Message="Barrier to higher lift controls inactive."
 Message="Commandes de la barrière d'accès à l'ascenseur inactives."
+

@@ -16,7 +16,7 @@ Message="Barrera de protección de los controles del ascensor superior intacta. 
 
 [TranslatorEvent0]
 ; EN: Message="It has been 0 days since our last accident."
-Message="Han pasado 0 días desde nuestro último accidente."
+Message="Han transcurrido 0 días desde el último accidente."
 
 [TranslatorEvent2]
 ; EN: Message="Barrier to higher lift controls intact. All systems normal."
@@ -24,7 +24,7 @@ Message="Barrera de protección de los controles del ascensor superior intacta. 
 
 [TranslatorEvent6]
 ; EN: Message="Tarydium Processing and Purification Plant"
-Message="Planta de procesamiento y purificación de taridio"
+Message="Planta de Procesamiento y Purificación de Taridio"
 
 [TranslatorEvent3]
 ; EN: Message="Barrier to higher lift controls inactive."

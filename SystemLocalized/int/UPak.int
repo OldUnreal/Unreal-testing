@@ -1,5 +1,5 @@
 ﻿[Public]
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Napali")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
 Object=(Name=upak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=upak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=upak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)

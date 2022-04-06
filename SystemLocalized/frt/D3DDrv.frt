@@ -9,4 +9,3 @@ ClassCaption="Support Direct3D 7"
 ; EN: AskInstalled="Do you want to use Direct3D 7?"
 AskInstalled="Souhaitez-vous utiliser Direct3D 7?"
 AskUse=""
-NoEditor=True
