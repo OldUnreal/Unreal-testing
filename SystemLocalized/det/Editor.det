@@ -171,7 +171,7 @@ HelpDesc[2]="   Clients dürfen dieses Paket vom Server herunterladen."
 HelpParm[3]="   ClientOptional"
 ; EN: HelpDesc[3]="   Clients can choose to skip downloading this package from the server."
 HelpDesc[3]="   Clients können das Herunterladen dieses Pakets vom Server überspringen."
-HelpDesc[4]="   ServerSideOnly"
+HelpParm[4]="   ServerSideOnly"
 ; EN: HelpDesc[4]="   The package has no network relevancy on a server."
 HelpDesc[4]="   Das Paket hat keine Netzwerkrelevanz auf einem Server."
 HelpParm[5]="   BrokenLinks"
@@ -182,8 +182,8 @@ HelpParm[6]="   Unsecure"
 HelpDesc[6]="   Ungebraucht."
 
 [DataRipCommandlet]
-; EN: HelpCmd=datarip
-HelpCmd=DatenaripHelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
+HelpCmd=datarip
+HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
 ; EN: HelpOneLiner="Create a package with Texture, Music and Sound data ripped out."
 HelpOneLiner="Erstellen Sie ein Paket mit herausgerissenen Textur-, Musik- und Sounddaten."
 ; EN: HelpUsage="datarip srcpackage.ext dstpackage.ext"
@@ -431,6 +431,12 @@ HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
 HelpOneLiner="Paket mit Verzeichnisstruktur extrahieren."
 ; EN: HelpUsage="fullbatchexport <pkg> <outpath>"
 HelpUsage="fullbatchexport <pkg> <outpath>"
+; EN: HelpDesc[0]="Optional, to define export format:"
+HelpDesc[0]="Optional, um das Exportformat zu definieren:"
+HelpParm[0]="   -DefaultFontExtension"
+HelpParm[1]="   -DefaultMusicExtension"
+HelpParm[2]="   -DefaultSoundExtension"
+HelpParm[3]="   -DefaultTextureExtension"
 
 [FontPageDiffCommandlet]
 HelpCmd=fontpagediff

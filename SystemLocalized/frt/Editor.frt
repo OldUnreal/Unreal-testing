@@ -171,7 +171,7 @@ HelpDesc[2]="   Les clients sont autorisés à télécharger ce package à parti
 HelpParm[3]="   ClientOptional"
 ; EN: HelpDesc[3]="   Clients can choose to skip downloading this package from the server."
 HelpDesc[3]="   Les clients peuvent choisir de ne pas télécharger ce package à partir du serveur."
-HelpDesc[4]="   ServerSideOnly"
+HelpParm[4]="   ServerSideOnly"
 ; EN: HelpDesc[4]="   The package has no network relevancy on a server."
 HelpDesc[4]="   Le package n'a aucune pertinence réseau sur un serveur."
 HelpParm[5]="   BrokenLinks"
@@ -432,6 +432,12 @@ HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
 HelpOneLiner="Extraire le package avec la structure de répertoires."
 ; EN: HelpUsage="fullbatchexport <pkg> <outpath>"
 HelpUsage="fullbatchexport <pkg> <outpath>"
+; EN: HelpDesc[0]="Optional, to define export format:"
+HelpDesc[0]="Optionnel, pour définir le format d'export:"
+HelpParm[0]="   -DefaultFontExtension"
+HelpParm[1]="   -DefaultMusicExtension"
+HelpParm[2]="   -DefaultSoundExtension"
+HelpParm[3]="   -DefaultTextureExtension"
 
 [FontPageDiffCommandlet]
 HelpCmd=fontpagediff
