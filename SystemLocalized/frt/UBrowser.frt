@@ -1,7 +1,6 @@
 ﻿[Public]
 Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
-; EN: Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
-Preferences=(Caption="UBrowser",Parent="Réseau",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
+Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserServerListWindow]
 ; EN: InfoName="Info"

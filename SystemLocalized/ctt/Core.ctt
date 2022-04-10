@@ -1,6 +1,5 @@
 ﻿[Public]
-; EN: Preferences=(Caption="File System",Parent="Advanced",Class=Core.System,Immediate=True)
-Preferences=(Caption="Sistema de Fitxers",Parent="Avançades",Class=Core.System,Immediate=True)
+Preferences=(Caption="File System",Parent="Advanced",Class=Core.System,Immediate=True)
 
 [Language]
 Language="Català"

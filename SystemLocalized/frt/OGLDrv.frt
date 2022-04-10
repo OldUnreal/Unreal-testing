@@ -1,7 +1,6 @@
 ﻿[Public]
 Object=(Name=OGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-; EN: Preferences=(Caption="OGLDrv Support",Parent="Rendering",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
-Preferences=(Caption="Support OGLDrv",Parent="Rendu",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
+Preferences=(Caption="OGLDrv Support",Parent="Rendering",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OGLDrv Support"
