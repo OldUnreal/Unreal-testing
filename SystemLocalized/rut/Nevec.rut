@@ -1,0 +1,31 @@
+﻿[LevelInfo1]
+; EN: Title="Neve's Crossing"
+Title="Перекресток Нивеи"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Въезд на Перекресток Нивеи"
+
+[LevelSummary]
+; EN: Title="Neve's Crossing"
+Title="Перекресток Нивеи"
+; EN: LevelEntryText="Entering Neve's Crossing"
+LevelEntryText="Въезд на Перекресток Нивеи"
+
+[TranslatorEvent15]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Горнодобывающая станция Терра-Нэо (Север)"
+
+[TranslatorEvent6]
+; EN: Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
+Message="Дневник: Б. Бэйтс: Нашел Мока лежащего мордой вниз на дне озера неподалеку. Похоже он утонул. Жалкий ублюдок. Интересно, видел ли он как ящики с эмблемой ОВС сыпались с неба. Надеюсь команда Далтона сделала все как надо. После всего этого, похоже, что мы будем спасены."
+
+[TranslatorEvent5]
+; EN: Message="LOG: P. Mock: Last saw Dalton and the rest two days ago. I'm lost. There are crates dropping down from the sky with UMS markings. Maybe whoever made it off this rock brought back help. I'm going to attempt to slip by the Skaarj through the lake."
+Message="Дневник: П. Мок: Последний раз видел Далтона и остальных два дня назад. Я заблудился. Тут ящики падают с неба с маркировкой ОВС. Возможно кто-то покинул эту каменную глыбу и привел помощь. Мне нужно переправиться через озеро, попытаюсь проскользнуть мимо Скааржа."
+
+[TranslatorEvent14]
+; EN: Message="Terra-Neo Mining Station (North)"
+Message="Горнодобывающая станция Терра-Нэо (Север)"
+
+[TranslatorEvent0]
+; EN: Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."
+Message="Я боюсь что наша борьба еще не закончена. Демоны Небес обнаружили источник Эльдора и используют его против нас. Мне повезло что я смог сбежать и спасти свою жизнь. Я останусь ждать здесь в надежде что они скоро оставят нас в покое..."

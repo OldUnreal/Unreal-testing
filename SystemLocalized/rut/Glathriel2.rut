@@ -1,0 +1,23 @@
+﻿[LevelInfo0]
+; EN: Title="Glathriel Village"
+Title="Деревня Глафриэль"
+
+[LevelSummary]
+; EN: Title="Glathriel Village"
+Title="Деревня Глафриэль"
+
+[TranslatorEvent1]
+; EN: Message="Two more died last week. Luckily we got them out through the cave without the Nightstalkers taking notice. We're low on food again..."
+Message="Еще двое умерли на прошлой неделе. К счастью мы вывели их через пещеры и небыли замечены Ночными странниками. У нас заканчиваются припасы..."
+
+[TranslatorEvent2]
+; EN: Message="I found another one of those strange objects that fell from the sky. I will collect all that I can find and then bring them to the priest. He will know what we are meant to do."
+Message="Я нашел еще один из этих странных предметов что упал с неба. Я подобрал всё что смог найти и отнес священнику. Он должен бы знать что мы намереваемся сделать."
+
+[TranslatorEvent0]
+; EN: Message="Would you die for this? http://www.ocrana.de"
+Message="Готов ли ты умереть за это? http://www.ocrana.de"
+
+[TranslatorEvent5]
+; EN: Message="What did we do wrong to anger the gods? First the Nightstalkers, then the huge thunderbird flew over our valley and seeded fire and destruction. And now those strange boxes are raining from the sky, hitting our houses and killing our people."
+Message="Что мы сделали не так? Чем мы разгневали богов? Сначала эти Ночные странники, затем эта огромная громовая птица пролетела над нашей долиной сея огонь и разрушение. Теперь эти странные ящики падают с небес, разрушают наши дома и убивают наших людей."

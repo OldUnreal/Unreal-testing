@@ -1,0 +1,119 @@
+﻿[LevelInfo0]
+; EN: Title="The Sunspire"
+Title="Санспайр"
+; EN: LevelEntryText="Entering The Sunspire"
+LevelEntryText="Вход в Санспайр"
+
+[LevelSummary]
+; EN: Title="The Sunspire"
+Title="Санспайр"
+; EN: LevelEntryText="Entering The Sunspire"
+LevelEntryText="Вход в Санспайр"
+
+[TranslatorEvent17]
+; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."
+Message="Я не вернусь в Санспайр сегодня. Меня едва не убили Демоны Небес этим утром и я переживаю за наших братьев которые остались там. Я чувствую, что уже не увижу их в этой жизни."
+; EN: Hint="Watch out on the ledge. If you fall, you will fall to your death."
+Hint="Будьте осторожны на краю. Падение будет смертельным."
+
+[TranslatorEvent1]
+; EN: Message="Chambers of Honour"
+Message="Палаты Славы"
+
+[TranslatorEvent3]
+; EN: Message="Chambers of Honour"
+Message="Палаты Славы"
+
+[TranslatorEvent20]
+; EN: Message="Log: Security Officer A. Connectof: We are running out of ammo fast. There's only one weapon left. We have to reach the top where we can activate the crystal that calls the Sky Elevator, according to the Nali at the gates."
+Message="Дневник офицера охраны А. Коннектоф: Мы израсходовали боеприпасы очень быстро. Осталось только одно оружие. Мы доберемся до пика где сможем активировать "Небесный Лифт", если верить тому что говорил Нали у ворот."
+; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
+Hint="Найдите способ попасть в кристальную палату. Оттуда вы сможете вызвать Небесный Лифт."
+
+[TranslatorEvent10]
+; EN: Message="Cistern"
+Message="Водохранилище"
+; EN: Hint="There is a secret in the water. Make sure you bring your flashlight."
+Hint="Под водой что-то есть. Убедитесь, что взяли фонарик."
+
+[TranslatorEvent14]
+; EN: Message="Sleeping Chambers"
+Message="Спальные комнаты"
+
+[TranslatorEvent9]
+; EN: Message="Primary Ascension"
+Message="Главное восхождение"
+; EN: Hint="Proceed with great care. Find your way to the top."
+Hint="Передвигайтесь с большой осторожностью. Отыщите путь к вершине."
+
+[TranslatorEvent0]
+; EN: Message="Great Hall."
+Message="Большой Холл."
+; EN: Hint="Find the switch on the wall in the great hall. It will show you a secret and you will be able to proceed upwards."
+Hint="Найдите переключатель на стене в большом зале. Откроется секретная область и вы сможете продвигаться наверх."
+
+[TranslatorEvent5]
+; EN: Message="Primary Ascension"
+Message="Главное восхождение"
+
+[TranslatorEvent7]
+; EN: Message="Chamber of Crystals"
+Message="Кристальная Палата"
+; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
+Hint="Активируйте кристалл, затем выйдите наружу и ждите пока спустится небесный лифт. Залазьте в него и наслаждайтесь."
+
+[TranslatorEvent15]
+; EN: Message="Feast Hall"
+Message="Торжественный зал"
+
+[TranslatorEvent6]
+; EN: Message="Kitchens"
+Message="Кухни"
+; EN: Hint="Sometimes the dark can lead you to the right way. Make sure you bring your flashlight."
+Hint="Иногда, правильным путём вас будет вести темнота. Не забудьте фонарик."
+
+[TranslatorEvent11]
+; EN: Message="Sleeping Chambers"
+Message="Спальные комнаты"
+; EN: Hint="Sometimes the dark can lead you to the right way. Make sure you bring your flashlight."
+Hint="Иногда, правильным путём вас будет вести темнота. Не забудьте фонарик."
+
+[TranslatorEvent13]
+; EN: Message="Feast Hall"
+Message="Торжественный зал"
+
+[TranslatorEvent12]
+; EN: Message="Bathing Chambers"
+Message="Купальни"
+
+[TranslatorEvent4]
+; EN: Message="Sunspire"
+Message="Солнечный Шпиль"
+; EN: Hint="Proceed with great care. Find your way to the top."
+Hint="Передвигайтесь с особой осторожностью. Ищите путь к вершине."
+
+[TranslatorEvent8]
+; EN: Message="Prepare to Embark"
+Message="Приготовься к посадке"
+; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
+Hint="Активируйте кристалл, затем выйдите наружу и ждите пока спустится небесный лифт. Залазьте в него и наслаждайтесь."
+
+[TranslatorEvent16]
+; EN: Message="Primary Ascension"
+Message="Главное восхождение"
+; EN: Hint="Proceed with great care. Find your way to the top."
+Hint="Передвигайтесь с особой осторожностью. Ищите путь к вершине."
+
+[TranslatorEvent25]
+; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
+Hint="Найдите способ попасть в кристальную палату. Оттуда вы сможете вызвать небесный лифт."
+
+[TranslatorEvent24]
+; EN: Message="Log: Petty Officer N. Onalopov: We split up so we would have a better chance of finding Kira. Those bastards are going to pay for taking her. I love you Kira. I swear I'll find you."
+Message="Журнал: Младшего Офицера Н. Оналопов: Мы разделились , теперь у нас больше шансов найти Киру. Эти ублюдки дорого заплатят за её похищение. Я люблю тебя Кира, я клянусь, я найду тебя."
+; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
+Hint="Найдите способ попасть в кристальную палату. Оттуда вы сможете вызвать небесный лифт."
+
+[TranslatorEvent23]
+; EN: Hint="You've made it so far, keep going..."
+Hint="Вы достигли немалых успехов. Не останавливайтесь..."

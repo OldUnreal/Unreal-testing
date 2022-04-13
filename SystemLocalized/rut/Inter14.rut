@@ -1,0 +1,14 @@
+﻿[LevelInfo1]
+; EN: Title="Intermission 14"
+Title="Антракт 14"
+
+[LevelSummary]
+; EN: Title="Intermission 14"
+Title="Антракт 14"
+
+[TransitionGenderEvent8]
+OutDelays[1]=40.500000
+; EN: MaleText[0]="At last! I've reached the shuttle and prepped her for take off. The last battle with the Warlord was grueling. And the Krall before that were no picnic. I barely made it to the ship. And after all that, I still have to deal with the Bodega Bay in orbit. A shuttle against a UMS Freeman Class Cruiser... what a joke. The odds aren't good. But my shuttle has a trans-light drive. If I'm very, very lucky, I can find some way to outsmart or out-fly the Bodega Bay. They sure as hell won't be expecting me. What's the alternative? Stay on the planet? I'll take my chances in space..."
+MaleText[0]="Наконец-то! Я добрался до шаттла и приготовил его к старту. Последняя драка была очень трудной. Но я ведь заранее знал, что это не пикник. Я еле добрался до корабля. И после всего этого придётся ещё столкнуться с 'Бодага Бей' на орбите. Шаттл против военного крейсера класса 'Фримен'. Что за больная фантазия? Но у моего шаттла есть транс­световой двигатель. И если мне очень­очень повезёт, я умудрюсь каким­нибудь способом перехитрить "Бодага Бей" и сбежать от него. Я уверен, что они меня не ждут. Да и какие у меня есть варианты? Остаться на планете? Хы! Нет уж, лучше я попытаю счастья в космосе."
+; EN: FemaleText[0]="At last! I've reached the shuttle and prepped her for take off. The last battle with the Warlord was grueling. And the Krall before that were no picnic. I barely made it to the ship. And after all that, I still have to deal with the Bodega Bay in orbit. A shuttle against a UMS Freeman Class Cruiser... what a joke. The odds aren't good. But my shuttle has a trans-light drive. If I'm very, very lucky, I can find some way to outsmart or out-fly the Bodega Bay. They sure as hell won't be expecting me. What's the alternative? Stay on the planet? I'll take my chances in space..."
+FemaleText[0]="Наконец-то! Я добралась до шаттла и приготовила его к старту. Последняя драка была очень трудной. Но я ведь заранее знала, что это не пикник. Я еле добралась до корабля. И после всего этого придётся ещё столкнуться с 'Бодага Бей' на орбите. Шаттл против военного крейсера класса 'Фримен'. Что за больная фантазия? Но у моего шаттла есть транс­световой двигатель. И если мне очень­очень повезёт, я умудрюсь каким­нибудь способом перехитрить "Бодага Бей" и сбежать от него. Я уверена, что они не ждут меня. Да и какие у меня есть варианты? Остаться на планете? Хы! Нет, уж лучше я попытаю счастья в космосе." 

@@ -1,0 +1,35 @@
+﻿[LevelInfo1]
+; EN: Title="Foundry Tarydium Plant"
+Title="Planta de Fundición de Taridio"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Entrando a la Planta de Fundición de Taridio"
+
+[LevelSummary]
+; EN: Title="Foundry Tarydium Plant"
+Title="Planta de Fundición de Taridio"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Entrando a la Planta de Fundición de Taridio"
+
+[TranslatorEvent1]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barrera de protección de los controles del ascensor superior intacta. Todos los sistemas normales."
+
+[TranslatorEvent0]
+; EN: Message="It has been 0 days since our last accident."
+Message="Han transcurrido 0 días desde el último accidente."
+
+[TranslatorEvent2]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barrera de protección de los controles del ascensor superior intacta. Todos los sistemas normales."
+
+[TranslatorEvent6]
+; EN: Message="Tarydium Processing and Purification Plant"
+Message="Planta de Procesamiento y Purificación de Taridio"
+
+[TranslatorEvent3]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Barrera de protección de los controles del ascensor superior inactiva."
+
+[TranslatorEvent4]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Barrera de protección de los controles del ascensor superior inactiva."

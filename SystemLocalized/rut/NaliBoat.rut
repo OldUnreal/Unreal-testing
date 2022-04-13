@@ -1,0 +1,15 @@
+﻿[LevelInfo3]
+; EN: Title="Serpent Canyon"
+Title="Змеиный Каньон"
+; EN: LevelEntryText="Entering the Serpent Canyon"
+LevelEntryText="Вход в Змеиный Каньон"
+
+[LevelSummary]
+; EN: Title="Serpent Canyon"
+Title="Змеиный Каньон"
+; EN: LevelEntryText="Entering the Serpent Canyon"
+LevelEntryText="Вход в Змеиный Каньон"
+
+[TranslatorEvent0]
+; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."
+Message="Здесь покоится Хаиф Молнер, пусть его душа пребывает с богами."

@@ -1,0 +1,19 @@
+﻿[LevelInfo1]
+; EN: Title="The Eldora Well"
+Title="El Pozo de Eldora"
+; EN: LevelEntryText="Entering the Eldora Well"
+LevelEntryText="Entrando al Pozo de Eldora"
+
+[LevelSummary]
+; EN: Title="The Eldora Well"
+Title="El Pozo de Eldora"
+; EN: LevelEntryText="Entering the Eldora Well"
+LevelEntryText="Entrando al Pozo de Eldora"
+
+[TranslatorEvent1]
+; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."
+Message="REGISTRO: S. Brown: Atravesar las montañas se hace cada vez más difícil. Me estoy cansando. Acabo de descubrir un pozo cerca, voy a investigarlo. Está custodiado por brutos, pero debería poder infiltrarme sin que me descubran."
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Walden: No sign of anyone yet. It's getting dark again. Going to camp out near the well until morning. Well seems empty, there may be a way out. Maybe I'll find the others."
+Message="REGISTRO: J. Walden: Aún no hay señales de nadie. Está oscureciendo de nuevo. Voy a acampar cerca del pozo hasta la madrugada. El pozo parece vacío, quizás haya una salida. Puede que encuentre a los demás."

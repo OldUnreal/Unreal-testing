@@ -1,0 +1,14 @@
+﻿[LevelInfo2]
+; EN: Title="Intermission 12"
+Title="Смотритель небес"
+
+[LevelSummary]
+; EN: Title="Intermission 12"
+Title="Смотритель небес"
+
+[TransitionGenderEvent6]
+OutDelays[1]=26.000000
+; EN: MaleText[0]="After escaping from the Tarydium plant I wound up outside... on a freezing, ice-filled plateau. The contrast with the lush climate from before was startling. Anyway, while on the surface, I was surrounded by jagged cliffs and sharp peaks, so I'm thinking I'm high in the mountains. I must have covered some distance underground... and gained some serious altitude. The good news is that I'm still headed in the right direction."
+MaleText[0]="После побега с завода я пошёл наверх. И попал на холодное плато, покрытое льдами. Такой контраст после предыдущего климата и пейзажа. Как бы там ни было, когда я выбрался на поверхность, я был окружён изломанными утёсами и высокими пиками. Так что я решил, что я высоко в горах. Похоже, я покрыл довольно большое расстояние под землёй и забрался на порядочную высоту. Ну а что касается хороших новостей, то я всё ещё иду в правильном направлении."
+; EN: FemaleText[0]="After escaping from the Tarydium plant I wound up outside... on a freezing, ice-filled plateau. The contrast with the lush climate from before was startling. Anyway, while on the surface, I was surrounded by jagged cliffs and sharp peaks, so I'm thinking I'm high in the mountains. I must have covered some distance underground... and gained some serious altitude. The good news is that I'm still headed in the right direction."
+FemaleText[0]="После побега с завода я пошла наверх. И попала на холодное плато, покрытое льдами. Такой контраст после предыдущего климата и пейзажа. Как бы там ни было, когда я выбралась на поверхность, я была окружена изломанными утёсами и высокими пиками. Так что я решила, что я высоко в горах. Похоже, я покрыла довольно большое расстояние под землёй и забралась на порядочную высоту. Ну а что касается хороших новостей, то я всё ещё иду в правильном направлении."

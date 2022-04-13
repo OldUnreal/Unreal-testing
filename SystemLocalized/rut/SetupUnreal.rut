@@ -1,0 +1,67 @@
+﻿[Setup]
+LocalProduct="Unreal"
+DefaultFolder="C:\Program Files\Unreal"
+ReadMe="Help\ReadMe.htm"
+; EN: SetupWindowTitle="Unreal Setup"
+SetupWindowTitle="Установка Unreal"
+; EN: AutoplayWindowTitle="Unreal Options"
+AutoplayWindowTitle="Опции Unreal"
+ProductURL="http://www.unrealengine.com/"
+VersionURL="http://www.oldunreal.com"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 от Oldunreal"
+DeveloperURL="https://www.oldunreal.com/"
+Logo="Help\SetupLogo.bmp"
+
+[General]
+; EN: PlayLevelCommand="&Play this Unreal level"
+PlayLevelCommand="&Играть на этом уровне"
+; EN: OpenLinkCommand="&Open this Unreal link"
+OpenLinkCommand="&Открыть эту ссылку"
+; EN: InstallModuleCommand="&Install this Unreal module"
+InstallModuleCommand="&Установить этот модуль"
+; EN: EditLevelCommand="&Edit this Unreal level"
+EditLevelCommand="&Редактировать этот уровень"
+
+[ContentGroup]
+; EN: Caption="Game Content"
+Caption="Содержимое игры"
+; EN: Description="Unreal game content. Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space."
+Description="Содержимое игры Unreal. Установите это для наилучшей производительности. Если вы это не выберете, содержимое будет загружено с CD во время игры, уменьшая производительность, но используя меньше дискового пространства."
+
+[GameGroup]
+; EN: Caption="Unreal Game"
+Caption="Игра Unreal"
+; EN: Description="Unreal game. Installation is required."
+Description="Игра Unreal. Требуется установка."
+
+[DirectXGroup]
+Caption="DirectX"
+; EN: Description="Optional Microsoft DirectX 8 drivers for enhanced graphics, sound, and joystick support."
+Description="Необязательный драйвер Microsoft DirectX 8 для улучшенной графики, звука и поддержки джойстика."
+
+[EditorGroup]
+; EN: Caption="Unreal Editor"
+Caption="Редактор Unreal"
+; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Редактор миров Unreal для создания собственных 3D уровней. Для опытных пользователей; установка необязательна."
+
+[PlayShortcut]
+; EN: Caption="Play Unreal"
+Caption="Играть в Unreal"
+
+[SafeModeShortcut]
+; EN: Caption="Unreal Safe Mode"
+Caption="Безопасный режим"
+
+[EditorShortcut]
+; EN: Caption="Unreal Editor"
+Caption="Редактор Unreal"
+
+[DocumentationShortcut]
+; EN: Caption="Documentation"
+Caption="Документация"
+
+[WebShortcut]
+; EN: Caption="Unreal Web Page"
+Caption="Веб страница Unreal"

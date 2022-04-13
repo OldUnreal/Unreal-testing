@@ -1,0 +1,39 @@
+﻿[LevelInfo0]
+; EN: Title="First Intermission"
+Title="Вступление"
+
+[LevelSummary]
+; EN: Title="First Intermission"
+Title="Вступление"
+
+[TransitionGenderEvent0]
+OutDelays[1]=5.00000
+OutDelays[2]=10.000000
+OutDelays[3]=17.000000
+OutDelays[4]=15.000000
+OutDelays[5]=13.000000
+OutDelays[6]=9.000000
+; EN: MaleText[0]="A day after my so-called rescue, and I'm going back to the surface of the planet."
+MaleText[0]="На следующий день после моего так называемого спасения я возвращаюсь к поверхности планеты."
+; EN: MaleText[1]="They've promised me a full pardon and transit back to Earth in exchange for my help. The alternative was a trip out the airlock without a suit. I agreed to take the mission."
+MaleText[1]="Они пообещали мне полное прощение и полёт обратно на Землю в обмен на мою помощь. И я согласился, потому что иначе мне пришлось бы полететь из шлюза без скафандра."
+; EN: MaleText[2]="My job is to find the wreck of another ship, the Prometheus, and recover the data cores of some new secret weapons research project. When I've got the cores, I'm supposed to go to the bridge of the crashed ship and activate the ELT transmitter - the ELT will pinpoint my location for pick-up."
+MaleText[2]="Моим заданием было найти обломки ещё одного корабля, 'Прометея', и спасти с него данные о каком­то там секретном проекте, связанном с оружием. Когда я найду данные, я должен буду попасть на мостик разбитого корабля и включить передатчик радиомаяка, по которому меня смогут найти и забрать оттуда."
+; EN: MaleText[3]="They need me because they don't know exactly where the Prometheus went down... apparently the Tarydium in the planet below is wreaking havoc with their scanners. They figure I learned a thing or two during my last romp on the surface. If anyone can find their missing ship, I can."
+MaleText[3]="Я нужен им, потому что они не знают точно где разбился 'Прометей'. Очень сложный ландшафт планеты сильно мешает работе сканеров. Но они узнали, что я лучше всех ориентируюсь на поверхности планеты. Так что если кто­то и может найти корабль, то это я."
+; EN: MaleText[4]="I'm a little better prepared than last time... they've given me a military-issue combat assault rifle, a new portable scuba unit for under water, and this computer log. They've also made logistics drops of ammo, weapons, and other supplies."
+MaleText[4]="Я немного лучше подготовлен, чем в прошлый раз. Они мне дали штурмовую винтовку военного образца, новый аппарат для дыхания под водой и этот компьютерный журнал. И ещё целую кучу патронов, еды и других припасов."
+; EN: MaleText[5]="So... I did it before, and I'll do it again - but it won't be easy. They call this a salvage mission. I call it a return to hell."
+MaleText[5]="Ну, это мне не впервой, и я сделаю это. Но это не легко. Они называют это миссией по спасению, но я бы назвал это возвращением в ад."
+; EN: FemaleText[0]="A day after my so-called rescue, and I'm going back to the surface of the planet."
+FemaleText[0]="На следующий день после моего так называемого спасения я возвращаюсь к поверхности планеты."
+; EN: FemaleText[1]="They've promised me a full pardon and transit back to Earth in exchange for my help. The alternative was a trip out the airlock without a suit. I agreed to take the mission."
+FemaleText[1]="Они пообещали мне полное прощение и полёт обратно на Землю в обмен на мою помощь. И я согласилась, потому что иначе мне пришлось бы лететь из шлюза без скафандра."
+; EN: FemaleText[2]="My job is to find the wreck of another ship, the Prometheus, and recover the data cores of some new secret weapons research project. When I've got the cores, I'm supposed to go to the bridge of the crashed ship and activate the ELT transmitter - the ELT will pinpoint my location for pick-up."
+FemaleText[2]="Моим заданием было найти обломки ещё одного корабля, 'Прометея', и спасти с него данные о каком­то там секретном проекте, связанном с оружием. Когда я найду данные, я должна буду попасть на мостик разбитого корабля и включить передатчик радиомаяка, по которому меня смогут найти и забрать оттуда."
+; EN: FemaleText[3]="They need me because they don't know exactly where the Prometheus went down... apparently the Tarydium in the planet below is wreaking havoc with their scanners. They figure I learned a thing or two during my last romp on the surface. If anyone can find their missing ship, I can."
+FemaleText[3]="Я нужна им, потому что они не знают точно где разбился 'Прометей'. Очень сложный ландшафт планеты сильно мешает работе сканеров. Но они узнали, что я лучше всех ориентируюсь на поверхности планеты. Так что если кто­то и может найти корабль, то это я."
+; EN: FemaleText[4]="I'm a little better prepared than last time... they've given me a military-issue combat assault rifle, a new portable scuba unit for under water, and this computer log. They've also made logistics drops of ammo, weapons, and other supplies."
+FemaleText[4]="Я немного лучше подготовлена, чем в прошлый раз. Они мне дали штурмовую винтовку военного образца, новый аппарат для дыхания под водой и этот компьютерный журнал. И ещё целую кучу патронов, еды и других припасов."
+; EN: FemaleText[5]="So... I did it before, and I'll do it again - but it won't be easy. They call this a salvage mission. I call it a return to hell."
+FemaleText[5]="Ну, это мне не впервой, и я сделаю это. Но это не легко. Они называют это миссией по спасению, но я бы назвала это возвращением в ад."

@@ -1,0 +1,77 @@
+﻿[LevelInfo0]
+; EN: Title="Rrajigar Mine"
+Title="Шахты Ражигар"
+; EN: LevelEntryText="Entering the Rrajigar Mine"
+LevelEntryText="Вход в Шахты Ражигар"
+
+[LevelSummary]
+; EN: Title="Rrajigar Mine"
+Title="Шахты Ражигар"
+; EN: LevelEntryText="Entering the Rrajigar Mine"
+LevelEntryText="Вход в Шахты Ражигар"
+
+[TranslatorEvent11]
+; EN: Message="WARNING: Intruder detected in Sections C-6 and D-8. All personnel are responsible for patrolling their local area."
+Message="ВНИМАНИЕ: Вторжение зафиксировано в секторах C-6 и D8. Всему персоналу патрулировать свою территорию."
+; EN: Hint="Shoot the red button nearby to raise the narrow bridge across the lava."
+Hint="Стреляйте в красную кнопку чтобы поднять мост через лаву."
+
+[TranslatorEvent1]
+; EN: Message="WARNING: Access bridges in lower half of mine are unsafe. Proceed with caution."
+Message="ВНИМАНИЕ: Мосты в нижней части шахт не безопасны. Соблюдайте осторожность."
+
+[TranslatorEvent0]
+; EN: Message="ALERT: Nali slave resistance detected in Sector 3A. Lethal force authorized to suppress rebellious activity."
+Message="ТРЕВОГА: Зафиксирован бунт рабов Нали в Секторе 3А. Разрешено применять грубую силу для подавления восстания."
+
+[TranslatorEvent2]
+; EN: Message="Harobed Village is on the other side of these mountains. I will wait until the two suns have set and proceed through Rrajigar mine. It is the only way."
+Message="Деревня Харобед расположена по другую сторону этих гор. Я дождусь пока сядут два солнца и отправлюсь через шахту Ражигар. Это единственный путь."
+
+[TranslatorEvent10]
+; EN: Message="WARNING: Force Field power source two status is inactive. Security Condition Two reached."
+Message="ВНИМАНИЕ: второй источник силового поля статус — отключен. Установлен второй статус охраны."
+
+[TranslatorEvent6]
+; EN: Message="Force field intact. All systems normal."
+Message="Силовое поле активно. Все системы в норме."
+; EN: Hint="The force field must be deactivated. Find the control room."
+Hint="Силовое поле должно быть отключено. Найдите комнату управления."
+
+[TranslatorEvent5]
+; EN: Message="WARNING! Force field de-activated. Intruder detected in Section C-6. Eliminate any unauthorized presence."
+Message="ВНИМАНИЕ! Силовое поле отключено. Вторжение в Секторе С-6. Уничтожить проникшего в шахту противника."
+; EN: Hint="Shoot all red barrels."
+Hint="Стреляйте по всем красным бочкам."
+
+[TranslatorEvent9]
+; EN: Message="WARNING: Force Field power source one status is inactive. Security Condition Two reached."
+Message="ВНИМАНИЕ: первый источник силового поля статус — отключен. Установлен второй статус охраны."
+
+[TranslatorEvent19]
+; EN: Message="NOTE: Area must be clear for transport lift to perform properly."
+Message="ЗАМЕТКА: Для правильной работы лифта маршрут его движения должен быть свободен."
+
+[TranslatorEvent15]
+; EN: Message="You are SO dead."
+Message="Вы так мертвы."
+
+[TranslatorEvent14]
+; EN: Message="What the hell are you doing up here?"
+Message="Какого черта вы здесь делаете?"
+
+[TranslatorEvent20]
+; EN: Message="Force Field Control Area"
+Message="Центр Управления Силовым Полем"
+
+[TranslatorEvent8]
+; EN: Message="Force Field power source one status is active."
+Message="Первый источник питания силового поля, статус – активный."
+; EN: Hint="Press the red buttons on the wall by bumping into them."
+Hint="Нажмите на красные кнопки в стене врезаясь в них."
+
+[TranslatorEvent7]
+; EN: Message="Force Field power source two status is active."
+Message="Второй источник питания силового поля, статус – активный."
+; EN: Hint="Press the red buttons on the wall by bumping into them."
+Hint="Нажмите на красные кнопки в стене врезаясь в них."

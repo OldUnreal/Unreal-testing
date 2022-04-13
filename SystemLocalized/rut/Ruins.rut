@@ -1,0 +1,31 @@
+﻿[LevelInfo0]
+; EN: Title="Temple of Vandora"
+Title="Храм Вандоры"
+; EN: LevelEntryText="Entering the Temple of Vandora"
+LevelEntryText="Вход в Храм Вандоры"
+
+[LevelSummary]
+; EN: Title="Temple of Vandora"
+Title="Храм Вандоры"
+; EN: LevelEntryText="Entering the Temple of Vandora"
+LevelEntryText="Вход в Храм Вандоры"
+
+[TranslatorEvent0]
+; EN: Message="And Vandora came forth, with fire from the Sky upon her lips, and sanctified the sacred fountain with her kiss. Thus, she said, he who follows me shall cast off the bonds of flesh and become as elusive as the mist."
+Message="И снизошла Вандора с огнем небес на своих устах, и осветила фонтан своим поцелуем. И сказала она кто последует за мной будет избавлен от уз плоти и станет неуловимый как мгла."
+; EN: Hint="Sanctify the sacred fountain with fire and become as elusive as the mist."
+Hint="Освятите священный фонтан огнем и станьте неуловимым как мгла."
+
+[TranslatorEvent1]
+; EN: Message="The Way is filled with darkness. The Torch of Tranquility must light the path of the worthy. Spiritual progression is achieved by those who set the Torch of Tranquility aflame."
+Message="Путь окутан тьмой. Факел Спокойствия должен освещать путь верного. Духовные силы будут дарованы тому кто зажжет факел спокойствия."
+; EN: Hint="Set the Torch of Thunder aflame to gain access."
+Hint="Для того чтобы получить доступ зажгите факел грома."
+
+[TranslatorEvent3]
+; EN: Message="Vandora, Goddess of Lightning."
+Message="Вандора, богиня Молний."
+
+[TranslatorEvent2]
+; EN: Message="Torch of Tranquility"
+Message="Факел Спокойствия"

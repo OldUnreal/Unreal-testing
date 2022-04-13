@@ -1,0 +1,27 @@
+﻿[LevelInfo0]
+; EN: Title="Dasa Mountain Pass"
+Title="Перевал Даса"
+; EN: LevelEnterText="Entering Dasa Mouantain Pass"
+LevelEnterText="На пути к Перевалу Даса"
+
+[LevelSummary]
+; EN: Title="Dasa Mountain Pass"
+Title="Перевал Даса"
+; EN: LevelEnterText="Entering Dasa Mouantain Pass"
+LevelEnterText="На пути к Перевалу Даса"
+
+[TranslatorEvent3]
+; EN: Message="Diary: Grok Vhul'rath: I ordered repairs to the Drawbridge again! This is getting really old. I'm sick of dealing with the Behemoths. They constantly break things and they're slobs like Aldarian Pigs. I'm anxious to get back to my homeworld."
+Message="Дневник: Грок Вульрэф: Я вновь отдал приказ отремонтировать разводной мост! Он становится негодным. Я жалею о сделке с этими Бегемотами. Они постоянно что-то ломают , они грязные как Альдаранские свиньи. Я с нетерпением жду возвращения домой."
+
+[TranslatorEvent4]
+; EN: Message="Bridge Foreman Khan Vhranna: I've about had it with Grok Vhul'rath. He's such a pompous son-of-a Bulrach. If he makes us fix the drawbridge one more time in the rain, I'm going to bust his face in."
+Message="Смотритель Хан Вранна: Речь идет об Гроке Вульрэфе. Он чертов напыщенный сукин сын. Если он еще раз заставит нас ремонтировать разводной мост в дождь, я набью ему морду."
+
+[TranslatorEvent2]
+; EN: Message="SHIPPING LOG: Dasa Pass Mountain Station: Grok Vhul'rath: We've decided to ditch using the Nali as slaves here. The word is they all believe their "savior" has come from the stars to kill us. We decided to execute them for refusing to work anyways."
+Message="Журнал: Горная станция Даса: Грок Вульрэф: Мы решили использовать рабов Нали на земляных работах. Все они верят что их так называемый «спаситель» придет с небес чтобы убить нас. Мы все равно будем использовать их, чтобы не утруждать себя."
+
+[TranslatorEvent0]
+; EN: Message="SHIPPING LOG: Dasa Pass Mountain Station: Grok Vhul'rath: This past week we've received over 45 cases of high tech equipment from the crashed human spacecraft ISV-KRAN. I've decided to store them in the cellars before we ship to the Warlord."
+Message="Журнал: Горная станция Даса: Грок Вульрэф: За прошедшею неделю мы получили более 45 ящиков высокотехнологичного оборудования с этого разбившегося корабля Землян ИСВ-Кран. Я решил разместить их в погребах до отправки военачальнику."

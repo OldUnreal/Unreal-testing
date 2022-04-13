@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Noork's Elbow"
+Title="Локоть Нурка"
+; EN: LevelEntryText="Entering Noork's Elbow"
+LevelEntryText="Вход в Локоть Нурка"
+
+[LevelSummary]
+; EN: Title="Noork's Elbow"
+Title="Локоть Нурка"
+; EN: LevelEntryText="Entering Noork's Elbow"
+LevelEntryText="Вход в Локоть Нурка"
+
+[TranslatorEvent4]
+; EN: Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."
+Hint="Обыщи все дома по пути к руинам. Остерегайся врагов что скрываются на твоем пути."
+
+[TranslatorEvent0]
+; EN: Message="Log: L. Goeranov: We've been stuck here for days. There are plenty of fish to eat but they taste kinda funny. I never liked fish."
+Message="Дневник: Л. Гоиранов: Мы застряли здесь надолго. Здесь много рыбы но её вкус очень странный. Я никогда не любила рыбу."
+; EN: Hint="You might get a helping hand from a friendly individual at the ruins' drawbridge."
+Hint="Вы можете получить помощь от друга что на другой стороне моста."

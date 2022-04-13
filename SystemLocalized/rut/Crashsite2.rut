@@ -1,0 +1,72 @@
+﻿[LevelInfo1]
+; EN: Title="Inside UMS Prometheus"
+Title="Внутри ОВС Прометея"
+; EN: LevelEntryText="Inside UMS Prometheus"
+LevelEntryText="Внутри ОВС Прометея"
+
+[LevelSummary]
+; EN: Title="Inside UMS Prometheus"
+Title="Внутри ОВС Прометея"
+; EN: LevelEntryText="Inside UMS Prometheus"
+LevelEntryText="Внутри ОВС Прометея"
+
+[CompTablet0]
+; EN: PickupMessage="You found the weapon logs!"
+PickupMessage="Вы нашли записи об оружии!"
+
+[TranslatorEvent3]
+; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
+Message="ОВС Прометей - Информационный терминал: --- Информационная сеть отключена ---"
+
+[TranslatorEvent2]
+; EN: Message="UMS Prometheus - Navigation Network: Error: Planet not found in map database! | Please stand by for results of primary analysis....."
+Message="ОВС Прометей - Навигационная сеть: Ошибка: Планета не найдена в базе данных карт! | Пожалуйста, подождите результаты первичного анализа....."
+
+[TranslatorEvent4]
+; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
+Message="ОВС Прометей - Информационный терминал: --- Информационная сеть отключена ---"
+
+[TranslatorEvent12]
+; EN: Message="Log Michael T. Williams, Scientific Officer: Research has been completed for a few days, and we still got over a week left to our destination. This would be a great time to relax - if we weren't trapped on this damn ship."
+Message="Журнал научного сотрудника Майкла Т. Вильямса: Исследование было завершено в течение нескольких дней, и у нас пока есть больше недели, чтобы добраться до места назначения. Теперь можно было бы хорошенько расслабиться, если б мы не были заперты в этом проклятом корабле."
+
+[TranslatorEvent1]
+; EN: Message="UMS Prometheus - Navigation Network: Warning: Proximity Warning! Contact with planetary surface imminent!"
+Message="ОВС Прометей - Навигационная сеть: Внимание: Опасное сближение! Столкновение с поверхностью планеты неизбежно!"
+
+[TranslatorEvent0]
+; EN: Message="UMS Prometheus - Navigation Network: Status: Entry into atmosphere detected | Warning: Drop rate exceeding acceptable limit! | Critical: Hull breach detected in Section B3! | Critical: Hull breach detected in Section B2! | Warning: Hull integrity dropped to 26% in Section A3! | Critical: Hull breach detected in Section A2!"
+Message="ОВС Прометей - Навигационная сеть: Статус: Зафиксирован вход в атмосферу | Внимание: Скорость снижения превышает допустимый порог! | Критическое состояние: Выявлена разгерметизация корпуса в отсеке B3! | Критическое состояние: Выявлена разгерметизация корпуса в отсеке B2! | Внимание: Целостность корпуса в отсеке A3 сократилась до 26%! | Критическое состояние: Выявлена разгерметизация корпуса в отсеке A2!"
+
+[TransitionGenderEvent0]
+OutDelays[1]=12.000000
+OutDelays[2]=3.000000
+OutDelays[3]=5.000000
+OutDelays[4]=1.500000
+OutDelays[5]=11.000000
+OutDelays[6]=3.000000
+OutDelays[7]=7.000000
+OutDelays[8]=9.000000
+OutDelays[9]=26.000000
+; EN: MaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
+MaleText[0]="Каким-то чудом световая система связи на «Прометее» все еще работает. Когда я исследовал центр связи, я наткнулся на этот обмен, захваченный и записанный компьютерами:"
+; EN: FemaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
+FemaleText[0]="Каким-то чудом световая система связи на «Прометее» все еще работает. Когда я исследовал центр связи, я наткнулся на этот обмен, захваченный и записанный компьютерами:"
+; EN: CommonText[1]="Deep space warship UMS Bodega Bay..."
+CommonText[1]="Военный корабль дальнего космоса UMS Bodega Bay ..."
+; EN: CommonText[2]="...clear to take whatever steps are necessary to ensure the success of Operation 'Talon Hunter'."
+CommonText[2]="... ясно, что нужно предпринять все необходимые шаги для обеспечения успеха операции «Охотник за когтями»."
+; EN: CommonText[3]="Acknowledged."
+CommonText[3]="Подтверждено."
+; EN: CommonText[4]="Ah, Bodega Bay, one more thing, Operation 'Talon Hunter' is classified Deep Ultra. Once you've finished your mission, you must implement measures to eliminate any security risks."
+CommonText[4]="Ах, Бодега Бэй, еще одно, операция «Охотник на когтей» классифицируется как Deep Ultra. После того, как вы закончите свою миссию, вы должны принять меры для устранения любых угроз безопасности."
+; EN: CommonText[5]="Please clarify, Starlight Base."
+CommonText[5]="Уточните, пожалуйста, база "Звездный свет"."
+; EN: CommonText[6]="Bodega Bay, make sure prisoner #849 doesn't come back; terminate the prisoner once the job is done."
+CommonText[6]="Бодега Бэй, проследи, чтобы заключенный № 849 не вернулся; уволить заключенного, как только работа будет сделана."
+; EN: CommonText[7]="Understood, Starlight Base. We will dispose of prisoner #849 after Operation 'Talon Hunter' is concluded. Bodega Bay out."
+CommonText[7]="Понятно, база "Звездный свет". Мы избавимся от заключенного № 849 после завершения операции «Охотник за когтями». Бодега Бэй ушел."
+; EN: MaleText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
+MaleText[8]="Меня предали. Почему меня это не удивляет? Я должен был знать, чего ожидать от этих ублюдков. Думаю, все, что я могу сделать, это разыграть эту руку; восстановить ядра данных, активировать ELT на мосту, а затем попытаться угнать шаттл, когда они придут за мной. Это долгий путь, но это все, что у меня есть. Если я этого не сделаю и кто-нибудь когда-нибудь восстановит этот журнал, возможно, правда выйдет наружу."
+; EN: FemaleText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
+FemaleText[8]="Меня предали. Почему меня это не удивляет? Я должен был знать, чего ожидать от этих ублюдков. Думаю, все, что я могу сделать, это разыграть эту руку; восстановить ядра данных, активировать ELT на мосту, а затем попытаться угнать шаттл, когда они придут за мной. Это долгий путь, но это все, что у меня есть. Если я этого не сделаю и кто-нибудь когда-нибудь восстановит этот журнал, возможно, правда выйдет наружу."

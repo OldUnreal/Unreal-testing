@@ -1,0 +1,43 @@
+﻿[LevelInfo0]
+; EN: Title="Sacred Passage"
+Title="Священный переход"
+; EN: LevelEntryText="Entering the Sacred Passage"
+LevelEntryText="Вход в Священный переход"
+
+[LevelSummary]
+; EN: Title="Sacred Passage"
+Title="Священный переход"
+; EN: LevelEntryText="Entering the Sacred Passage"
+LevelEntryText="Вход в Священный переход"
+
+[TranslatorEvent1]
+; EN: Hint="Go for a swim and look for a secret passage."
+Hint="Путь к священному проходу можно найти в озере."
+
+[TranslatorEvent12]
+; EN: Message=""...For that will be the key""
+Message=""...и это будет ключом""
+; EN: Hint="Activate the lever to let the water run."
+Hint="Опустите рычаг чтобы заполнить бассейн водой."
+
+[TranslatorEvent13]
+; EN: Message="You must have a keen eye, so that you may bathe in the sacred waters."
+Message="У вас должен быть зоркий глаз чтобы плавать в священных водах."
+; EN: Hint="Look at each face."
+Hint="Проверьте каждое лицо."
+
+[TranslatorEvent11]
+; EN: Message=""Wood must break free...""
+Message=""Дерево должно быть освобождено...""
+; EN: Hint="Activate the lever to let the water run."
+Hint="Опустите рычаг чтобы заполнить бассейн водой."
+
+[TranslatorEvent0]
+; EN: Hint="Go for a swim and look for a secret passage."
+Hint="Путь к священному проходу можно найти в озере."
+
+[TranslatorEvent2]
+; EN: Message="Only the purest of heart may pay homage to the God of The Good Lore Chizra"
+Message="Только чистый сердцем сможет почтить Бога Добра Чизру."
+; EN: Hint="Activate the lever to let the water run."
+Hint="Опустите рычаг чтобы заполнить бассейн водой."

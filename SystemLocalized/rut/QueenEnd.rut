@@ -1,0 +1,23 @@
+﻿[LevelInfo2]
+; EN: Title="The Source"
+Title="Источник"
+; EN: LevelEntryText="Entering The Source"
+LevelEntryText="Вход в Источник"
+
+[LevelSummary]
+; EN: Title="The Source"
+Title="Источник"
+; EN: LevelEntryText="Entering The Source"
+LevelEntryText="Вход в Источник"
+
+[JumpBoots0]
+; EN: ItemName="Super Jump Boots"
+ItemName="Сапоги для супер прыжков"
+; EN: PickupMessage="You picked up Super Jump Boots."
+PickupMessage="Вы взяли Супер Ботинки прыжка."
+; EN: ExpireMessage="The Super Jump Boots have drained."
+ExpireMessage="Ботинки для супер прыжков истощились."
+
+[SpecialEvent18]
+; EN: DamageString="vaporized"
+DamageString="испарился"

@@ -1,0 +1,35 @@
+﻿[LevelInfo1]
+; EN: Title="Foundry Tarydium Plant"
+Title="Литейный таридиумный завод"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Вход в Литейный таридиумный завод"
+
+[LevelSummary]
+; EN: Title="Foundry Tarydium Plant"
+Title="Литейный таридиумный завод"
+; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
+LevelEntryText="Вход в Литейный таридиумный завод"
+
+[TranslatorEvent1]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Защитный барьер панели управления лифтом верхнего уровня не поврежден. Все системы в норме."
+
+[TranslatorEvent0]
+; EN: Message="It has been 0 days since our last accident."
+Message="Не прошло и дня с момента последней аварии."
+
+[TranslatorEvent2]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Защитный барьер панели управления лифтом верхнего уровня не поврежден. Все системы в норме."
+
+[TranslatorEvent6]
+; EN: Message="Tarydium Processing and Purification Plant"
+Message="Завод обработки и очистки таридиума"
+
+[TranslatorEvent3]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Защитный барьер панели управления лифтом верхнего уровня отключен."
+
+[TranslatorEvent4]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Защитный барьер панели управления лифтом верхнего уровня отключен."

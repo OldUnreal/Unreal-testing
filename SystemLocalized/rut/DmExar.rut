@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="Exar"
+Title="Экзар"
+IdealPlayerCount="2-4"
+; EN: LevelEnterText="227-Patch Map."
+LevelEnterText="Карта исправлений 227."
+
+[LevelSummary]
+; EN: Title="Exar"
+Title="Экзар"
+IdealPlayerCount="2-4"
+; EN: LevelEnterText="227-Patch Map."
+LevelEnterText="Карта исправлений 227."

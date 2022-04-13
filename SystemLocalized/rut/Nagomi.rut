@@ -1,0 +1,27 @@
+﻿[LevelInfo3]
+; EN: Title="Nagomi Passage"
+Title="Земли Нагоми"
+; EN: LevelEntryText="Entering the Nagomi Passage"
+LevelEntryText="Вход в Земли Нагоми"
+
+[LevelSummary]
+; EN: Title="Nagomi Passage"
+Title="Земли Нагоми"
+; EN: LevelEntryText="Entering the Nagomi Passage"
+LevelEntryText="Вход в Земли Нагоми"
+
+[TranslatorEvent0]
+; EN: Message="LOG: M. Poesch: Located a mining facility, but the front gates won't open. A large Behemoth seems to control it, but he went back inside. I'll wait for him here. I got 2 clips here with his name on it."
+Message="Дневник: М. Поэш: Обнаружили горнодобывающую станцию, но фронтальные ворота не открываются. Здоровый бегемот похоже контролирует их, но он вернулся обратно внутрь. Я дождусь его. У меня 2 обоймы и на каждой пуле выбито его имя."
+
+[TranslatorEvent10]
+; EN: Message="LOG: A. Leiby: Been running from a Skaarj for the past 2 hours. Think I lost him behind a crate. If I can just make it down below I can slip back into the temple. It's darker so it's easier to hide. Wait... I hear someth >>>ERROR<<<"
+Message="Дневник: А. Лейби: Последние два часа убегала от Скааржа. Думаю что потеряла его за ящиками. Если я спущусь вниз то я смогла бы проскользнуть обратно в храм. Сейчас темно и поэтому не составит большого труда пройти незаметно. Стойте... Я что-то слышу >>>ОШИБКА<<<"
+
+[TranslatorEvent9]
+; EN: Message="Entering Land of Nagomi"
+Message="На пути к Землям Нагоми"
+
+[TranslatorEvent8]
+; EN: Message="Entering Land of Nagomi"
+Message="На пути к Землям Нагоми"

@@ -1,0 +1,23 @@
+﻿[LevelInfo5]
+; EN: Title="Gala's Peak"
+Title="Пик празднества"
+; EN: LevelEntryText="Entering Gala's Peak"
+LevelEntryText="Выход на пик Гала"
+
+[LevelSummary]
+; EN: Title="Gala's Peak"
+Title="Пик празднества"
+; EN: LevelEntryText="Entering Gala's Peak"
+LevelEntryText="Выход на пик Гала"
+
+[TranslatorEvent2]
+; EN: Message="LOG: R. Wisnewski: Damn, it's cold. The walkway outside is impassable. I almost fell off twice, and it's a long way down. I'll try again later. I have a feeling it's going to be worth the effort to reach that structure up ahead."
+Message=Журнал: Р. Вишневский: Черт, так холодно. Дорожка снаружи непроходима. Я дважды оступился и едва не упал в эту пропасть. Позже, Я предприму еще одну попытку. Мне кажется то что мы найдем в этой постройке будет стоить затраченных усилий.
+
+[TranslatorEvent1]
+; EN: Message="System: Teleporter Online."
+Message="Система: Телепорт включен."
+
+[TranslatorEvent0]
+; EN: Message="System: Teleporter Offline. Activation required via underground control unit."
+Message="Система: Телепорт отключен. Активация через подземный модуль управления."

@@ -1,0 +1,10 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 8"
+Title="Антракт 8"
+
+[TransitionGenderEvent2]
+OutDelays[1]=20.500000
+; EN: MaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
+MaleText[0]="Я рад, что выбралась оттуда. Меня частенько били, рубили, кололи. В меня стреляли и меня взрывали. Но там, там меня могли раздавить, мелко нашинковать, сжечь и развеять по ветру. Тот, кто построил это место, был настоящим извергом. Я всё ещё двигаюсь вперёд. Этот спринтерский забег оказался марафоном."
+; EN: FemaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
+FemaleText[0]="Я рада, что выбралась оттуда. Меня частенько били, рубили, кололи. В меня стреляли и меня взрывали. Но там, там меня могли раздавить, мелко нашинковать, сжечь и развеять по ветру. Тот, кто построил это место, был настоящим извергом. Я всё ещё двигаюсь вперёд. Этот спринтерский забег оказался марафоном." 

@@ -1,0 +1,35 @@
+﻿[LevelInfo2]
+; EN: Title="Demon Crater"
+Title="Кратер Демона"
+; EN: LevelEntryText="Entering the Demon Crater"
+LevelEntryText="Вход в Кратер Демона"
+
+[LevelSummary]
+; EN: Title="Demon Crater"
+Title="Кратер Демона"
+; EN: LevelEntryText="Entering the Demon Crater"
+LevelEntryText="Вход в Кратер Демона"
+
+[TranslatorEvent1]
+; EN: Message="Generator Control Panel. Generator is operational. Power output nominal."
+Message="Панель управления генератором. Генератор работает. Выходная энергия номинальна."
+
+[TranslatorEvent0]
+; EN: Message="Portal Gate: Warning: not enough power to establish portal link. Activate the Generator."
+Message="Портал: Внимание; недостаточно энергии чтобы установить связь. Активируйте генератор."
+; EN: AltMessage="Portal Gate: Link Established. Enter transport field."
+AltMessage="Портал: Соединение установлено. Вход в транспортную зону."
+; EN: Hint="Activate the Generator that powers the portal to the ship."
+Hint="Активируйте генератор, он питает портал к кораблю."
+
+[TranslatorEvent3]
+; EN: Message="Generator and Loading Room."
+Message="Генераторная."
+; EN: Hint="Activate the Generator that powers the portal to the ship."
+Hint="Активируйте генератор, он питает портал к кораблю."
+
+[TranslatorEvent4]
+; EN: Message="Intruder Alert. Secure all access points, all personnel on full alert. Protect the Mother, failure results in DEATH."
+Message="Вторжение зафиксировано. Защищайте все точки доступа, всему персоналу быть наготове. Защищайте Мать, провал будет означать - СМЕРТЬ!"
+; EN: Hint="Activate the Generator that powers the portal to the ship."
+Hint="Активируйте генератор, он питает портал к кораблю."

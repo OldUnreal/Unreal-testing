@@ -1,0 +1,1613 @@
+﻿[Public]
+Object=(Name=UnrealShare.DeathMatchGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.UnrealGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.TeamGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.VRikersGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.EntryGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon)
+; EN: Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 1")
+Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Женщина 1")
+; EN: Object=(Name=UnrealShare.MaleThree,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 3")
+Object=(Name=UnrealShare.MaleThree,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Мужик 3")
+; EN: Object=(Name=UnrealShare.UnrealSpectator,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Spectator")
+Object=(Name=UnrealShare.UnrealSpectator,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Зритель")
+; EN: Object=(Name=UnrealShare.FemaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Female 1")
+Object=(Name=UnrealShare.FemaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Женщина 1")
+; EN: Object=(Name=UnrealShare.MaleThreeBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Male 3")
+Object=(Name=UnrealShare.MaleThreeBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Мужик 3")
+Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=UnrealShare.SinglePlayer)
+; EN: Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Decals")
+Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Декали")
+; EN: Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Blood Settings")
+Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Кровь")
+; EN: Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali")
+Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Нали")
+; EN: Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Priest")
+Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Священник Нали")
+; EN: Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Statue")
+Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Статуя Нали")
+; EN: Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female")
+Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Женщина")
+; EN: Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female2")
+Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Женщина 2")
+; EN: Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female3")
+Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Женщина 3")
+; EN: Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male")
+Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик")
+; EN: Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male2")
+Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик 2")
+; EN: Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male3")
+Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик 3")
+; EN: Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male4")
+Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик 4")
+; EN: Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male5")
+Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик 5")
+; EN: Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male6")
+Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик 6")
+; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
+Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужик 7")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
+; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
+Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Оружие,Огонь")
+; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
+Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Оружие,Альтернативный огонь")
+; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
+Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Оружие,Следующее оружие")
+; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
+Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Оружие,Предыдущее оружие")
+; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
+Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Оружие,Выбросить оружие")
+; EN: Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Weapon,Disp. Pistol")
+Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Оружие,Дисперсионный пистолет")
+; EN: Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag/4-Shot")
+Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Оружие,Автомаг/Квадшот")
+; EN: Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger/CAR")
+Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Оружие,Стингер/Штурмовая винтовка")
+; EN: Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD/UMS GL")
+Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Оружие,ASMD/Гранатомет UMS")
+; EN: Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Weapon,8-Ball/UMS RL/Peacemaker")
+Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Оружие,Восьмой мяч/Ру UMS/Миротворец")
+; EN: Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
+Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Оружие,Зенитная пушка")
+; EN: Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
+Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Оружие,Резак")
+; EN: Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
+Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Оружие,Биовинтовка GES")
+; EN: Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
+Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Оружие,Снайперское Ружьё")
+; EN: Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun/Transloc.")
+Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Оружие,Миниган/Транслокатор")
+; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
+Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Движение вперёд")
+; EN: Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
+Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Движение назад")
+; EN: Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Left")
+Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Поворот влево")
+; EN: Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Right")
+Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Поворот вправо")
+; EN: Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Left")
+Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Движение влево")
+; EN: Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Right")
+Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Движение вправо")
+; EN: Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Movement,Jump/Up")
+Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Прыжок/Вверх")
+; EN: Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Movement,Crouch/Down")
+Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Приседание/Вниз")
+; EN: Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Movement,Walk")
+Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Ходьба")
+; EN: Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe")
+Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Движение вбок")
+; EN: Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Movement,Feign Death")
+Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Перемещение,Притвориться мёртвым")
+; EN: Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
+Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Инвентарь,Использовать предмет")
+; EN: Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
+Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Инвентарь,Следующий предмет")
+; EN: Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
+Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Инвентарь,Предыдущий предмет")
+; EN: Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Translator")
+Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Инвентарь,Использовать транслятор")
+; EN: Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="View,Mouse Look")
+Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="Обзор,Обзор мышью")
+; EN: Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="View,Look Up")
+Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="Обзор,Смотреть вверх")
+; EN: Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="View,Look Down")
+Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="Обзор,Смотреть вниз")
+; EN: Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="View,Center View")
+Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="Обзор,Горизонтальный обзор")
+; EN: Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="View,Toggle Behindview")
+Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="Обзор,Вид сзади")
+; EN: Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Game,Grab Decoration")
+Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Игра,Взаимодействие")
+; EN: Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Game,Suicide")
+Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Игра,Суицид")
+; EN: Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Game,Chat")
+Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Игра,Чат")
+; EN: Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Game,Team Chat")
+Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Игра,Командный чат")
+; EN: Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Game,Show Scores")
+Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Игра,Статистика игры")
+; EN: Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save")
+Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Игра,Быстрое сохранение")
+; EN: Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Load")
+Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Игра,Быстрая загрузка")
+; EN: Object=(Name="Shot",Class=Class,MetaClass=Engine.Input,Description="Game,Screenshot")
+Object=(Name="Shot",Class=Class,MetaClass=Engine.Input,Description="Игра,Снимок экрана")
+; EN: Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Game,Change Brightness")
+Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Игра,Изменить яркость")
+; EN: Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Music menu")
+Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Игра,Музыкальный плеер")
+; EN: Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Admin menu")
+Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Игра,Администрирование")
+; EN: Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
+Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Соединение с сервером,Отмена соединения")
+; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
+Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Соединение с сервером,Отключение от сервера")
+; EN: Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
+Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Соединение с сервером,Переподключение к серверу")
+; EN: Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
+Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Консоль,Кнопка консоли")
+; EN: Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
+Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Консоль,Символ консоли")
+; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
+Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Консоль,Упрощённая консоль")
+Preferences=(Caption="Coop Play",Parent="Game Types",Class=UnrealShare.CoopGame,Immediate=True)
+Preferences=(Caption="Deathmatch",Parent="Game Types",Class=UnrealShare.DeathmatchGame,Immediate=True)
+Preferences=(Caption="Team Play",Parent="Game Types",Class=UnrealShare.TeamGame,Immediate=True)
+Preferences=(Caption="Config",Parent="Decals",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
+Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
+Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
+
+[DeathMatchGame]
+; EN: ClassCaption="Deathmatch"
+ClassCaption="Бой насмерть"
+; EN: GlobalNameChange=" changed name to "
+GlobalNameChange=" сменил(а) имя на "
+; EN: NoNameChange=" is already in use"
+NoNameChange=" уже используется"
+; EN: TimeMessage[0]="5 minutes left in the game!"
+TimeMessage[0]="5 минут до окончания игры!"
+; EN: TimeMessage[1]="4 minutes left in the game!"
+TimeMessage[1]="4 минуты до окончания игры!"
+; EN: TimeMessage[2]="3 minutes left in the game!"
+TimeMessage[2]="3 минуты до окончания игры!"
+; EN: TimeMessage[3]="2 minutes left in the game!"
+TimeMessage[3]="2 минуты до окончания игры!"
+; EN: TimeMessage[4]="1 minute left in the game!"
+TimeMessage[4]="1 минута до окончания игры!"
+; EN: TimeMessage[5]="30 seconds left!"
+TimeMessage[5]="Осталось 30 секунд!"
+; EN: TimeMessage[6]="10 seconds left!"
+TimeMessage[6]="Осталось 10 секунд!"
+; EN: TimeMessage[7]="5 seconds and counting..."
+TimeMessage[7]="5 секунд..."
+TimeMessage[8]="4..."
+TimeMessage[9]="3..."
+TimeMessage[10]="2..."
+TimeMessage[11]="1..."
+; EN: TimeMessage[12]="Time Up!"
+TimeMessage[12]="Время вышло!"
+; EN: GameName="DeathMatch"
+GameName="Бой насмерть"
+
+[UnrealGameInfo]
+bGenderMessages=True
+; EN: DeathMessage[0]="killed"
+DeathMessage[0]="был убит"
+FemDeathMessage[0]="была убита"
+; EN: DeathMessage[1]="ruled"
+DeathMessage[1]="был замочен"
+FemDeathMessage[1]="была замоченa"
+; EN: DeathMessage[2]="smoked"
+DeathMessage[2]="был поджарен"
+FemDeathMessage[2]="была поджарена"
+; EN: DeathMessage[3]="slaughtered"
+DeathMessage[3]="был избит"
+FemDeathMessage[3]="была избита"
+; EN: DeathMessage[4]="annihilated"
+DeathMessage[4]="был поражён"
+FemDeathMessage[4]="была поражена"
+; EN: DeathMessage[5]="put down"
+DeathMessage[5]="был повержен"
+FemDeathMessage[5]="была повержена"
+; EN: DeathMessage[6]="splooged"
+DeathMessage[6]="был уничтожен"
+FemDeathMessage[6]="была уничтожена"
+; EN: DeathMessage[7]="perforated"
+DeathMessage[7]="был продырявлен"
+FemDeathMessage[7]="была продырявлена"
+; EN: DeathMessage[8]="shredded"
+DeathMessage[8]="был нашинкован"
+FemDeathMessage[8]="была нашинкована"
+; EN: DeathMessage[9]="destroyed"
+DeathMessage[9]="был ликвидирован"
+FemDeathMessage[9]="была ликвидирована"
+; EN: DeathMessage[10]="whacked"
+DeathMessage[10]="был сокрушён"
+FemDeathMessage[10]="была сокрушена"
+; EN: DeathMessage[11]="canned"
+DeathMessage[11]="был превращён в консервы"
+FemDeathMessage[11]="была превращена в консервы"
+; EN: DeathMessage[12]="busted"
+DeathMessage[12]="был выпорот"
+FemDeathMessage[12]="была выпорота"
+; EN: DeathMessage[13]="creamed"
+DeathMessage[13]="был размазан"
+FemDeathMessage[13]="была размазана"
+; EN: DeathMessage[14]="smeared"
+DeathMessage[14]="был подавлен"
+FemDeathMessage[14]="была подавлена"
+; EN: DeathMessage[15]="shut out"
+DeathMessage[15]="был остановлен"
+FemDeathMessage[15]="была остановлена"
+; EN: DeathMessage[16]="beaten down"
+DeathMessage[16]="был побит"
+FemDeathMessage[16]="была побита"
+; EN: DeathMessage[17]="smacked down"
+DeathMessage[17]="был шлёпнут"
+FemDeathMessage[17]="была шлёпнута"
+; EN: DeathMessage[18]="pureed"
+DeathMessage[18]="был превращён в пюре"
+FemDeathMessage[18]="была превращена в пюре"
+; EN: DeathMessage[19]="sliced"
+DeathMessage[19]="был порублен"
+FemDeathMessage[19]="была порублена"
+; EN: DeathMessage[20]="diced"
+DeathMessage[20]="был нарезан"
+FemDeathMessage[20]="была нарезана"
+; EN: DeathMessage[21]="ripped"
+DeathMessage[21]="был порван"
+FemDeathMessage[21]="была порвана"
+; EN: DeathMessage[22]="blasted"
+DeathMessage[22]="был уничтожен"
+FemDeathMessage[22]="была уничтожена"
+; EN: DeathMessage[23]="torn up"
+DeathMessage[23]="был разорван"
+FemDeathMessage[23]="была разорвана"
+; EN: DeathMessage[24]="spanked"
+DeathMessage[24]="был отшлёпан"
+FemDeathMessage[24]="была отшлёпана"
+; EN: DeathMessage[25]="eviscerated"
+DeathMessage[25]="был распотрошён"
+FemDeathMessage[25]="была распотрошена"
+; EN: DeathMessage[26]="neutered"
+DeathMessage[26]="был нейтрализован"
+FemDeathMessage[26]="была нейтрализована"
+; EN: DeathMessage[27]="whipped"
+DeathMessage[27]="был высечен"
+FemDeathMessage[27]="была высечена"
+; EN: DeathMessage[28]="shafted"
+DeathMessage[28]="был хорошенько обработан"
+FemDeathMessage[28]="была хорошенько обработана"
+; EN: DeathMessage[29]="trashed"
+DeathMessage[29]="был превращён в кучку мусора"
+FemDeathMessage[29]="была превращена в кучку мусора"
+; EN: DeathMessage[30]="smashed"
+DeathMessage[30]="был разгромлен"
+FemDeathMessage[30]="была разгромлена"
+; EN: DeathMessage[31]="trounced"
+DeathMessage[31]="был наказан"
+FemDeathMessage[31]="была наказана"
+; EN: DeathModifier[0]="thoroughly "
+DeathModifier[0]=" "
+; EN: DeathModifier[1]="completely "
+DeathModifier[1]=" "
+; EN: DeathModifier[2]="absolutely "
+DeathModifier[2]=" "
+; EN: DeathModifier[3]="totally "
+DeathModifier[3]=" "
+; EN: DeathModifier[4]="utterly "
+DeathModifier[4]=" "
+; EN: MajorDeathMessage[0]=" ripped a new one"
+MajorDeathMessage[0]=" был превращён в отбивную"
+FemMajorDeathMessage[0]=" была превращена в отбивную"
+; EN: MajorDeathMessage[1]=" messed up real bad"
+MajorDeathMessage[1]=" был хорошенько выпорот"
+FemMajorDeathMessage[1]=" была хорошенько выпорота"
+; EN: MajorDeathMessage[2]=" given a new definition of pain"
+MajorDeathMessage[2]=" познал, что такое боль от"
+FemMajorDeathMessage[2]=" познала, что такое боль от"
+; EN: HeadLossMessage[0]="decapitated"
+HeadLossMessage[0]="был обезглавлен"
+FemHeadLossMessage[0]="была обезглавлена"
+; EN: HeadLossMessage[1]="beheaded"
+HeadLossMessage[1]="был обезглавлен"
+FemHeadLossMessage[1]="была обезглавлена"
+; EN: DeathVerb=" was "
+DeathVerb=" "
+; EN: DeathPrep=" by "
+DeathPrep=" "
+; EN: DeathTerm="killed"
+DeathTerm="был убит"
+FemDeathTerm="была убита"
+; EN: ExplodeMessage=" was blown up"
+ExplodeMessage=" был взорван"
+FemExplodeMessage=" была взорвана"
+; EN: SuicideMessage=" had a sudden heart attack."
+SuicideMessage=" скончался от внезапного сердечного приступа."
+FemSuicideMessage=" скончалась от внезапного сердечного приступа."
+; EN: FallMessage=" left a small crater."
+FallMessage=" ушёл в мир иной."
+FemFallMessage=" ушла в мир иной."
+; EN: DrownedMessage=" forgot to come up for air."
+DrownedMessage=" забыл подышать."
+FemDrownedMessage=" забыла подышать."
+; EN: BurnedMessage=" was incinerated"
+BurnedMessage=" был поджарен"
+FemBurnedMessage=" была поджарена"
+; EN: CorrodedMessage=" was slimed"
+CorrodedMessage=" растворился в химикалиях"
+FemCorrodedMessage=" растворлась в химикалиях"
+; EN: HackedMessage=" was hacked"
+HackedMessage=" был убит"
+FemHackedMessage=" была убита"
+; EN: BleededMessage=" bled to death."
+BleededMessage=" истек кровью."
+FemBleededMessage=" истек кровью."
+
+[UnrealHUD]
+; EN: IdentifyName="Name"
+IdentifyName="Имя"
+; EN: IdentifyHealth="Health"
+IdentifyHealth="Здоровье"
+; EN: SomeoneName="Someone"
+SomeoneName="Кто-то"
+; EN: VersionMessage="Version"
+VersionMessage="Версия"
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Красная команда: "
+; EN: TeamName[1]="Blue Team: "
+TeamName[1]="Синяя команда: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Зелёная команда: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Золотая команда: "
+; EN: DemoPlaybackProg="Demo: %f %"
+DemoPlaybackProg="Демо: %f %"
+; EN: DemoRecInfo="[REC]"
+DemoRecInfo="[ЗАПИСЬ]"
+
+[UnrealGameOptionsMenu]
+; EN: AdvancedString="Advanced Options"
+AdvancedString="Расширенные настройки"
+; EN: AdvancedHelp="Edit advanced game configuration options."
+AdvancedHelp="Позволяет управлять расширенными настройками игры."
+; EN: HelpMessage[1]="Adjust the speed at which time passes in the game."
+HelpMessage[1]="Установка скорости игры."
+; EN: HelpMessage[2]="If true, reduces the gore in the game."
+HelpMessage[2]="Уменьшение крови в игре."
+; EN: MenuList[1]="Game Speed"
+MenuList[1]="Скорость игры"
+; EN: MenuList[2]="Reduced Gore"
+MenuList[2]="Меньше крови"
+; EN: MenuTitle="GAME OPTIONS"
+MenuTitle="Настройки игры"
+
+[UnrealQuitMenu]
+; EN: YesSelString="[YES]  No "
+YesSelString=" [ДА]  Нет"
+; EN: NoSelString=" Yes  [NO]"
+NoSelString=" Да  [НЕТ]"
+; EN: HelpMessage[1]="Select yes and hit enter to return to your puny, miserable, useless real life, if you can't handle UNREALity."
+HelpMessage[1]="Выбери Да и нажми Enter, чтобы вернуться к своей ничтожной, жалкой, бесполезной реальной жизни, раз ты не можешь осилить НЕРЕАЛьность."
+; EN: MenuList[0]="A Digital Extremes/Epic Megagames"
+MenuList[0]="Digital Extremes / Epic Megagames"
+; EN: MenuList[1]="Collaboration"
+MenuList[1]=" "
+; EN: MenuList[2]="Game Design: James Schmalz"
+MenuList[2]="Игровой дизайн: James Schmalz"
+MenuList[3]="    Cliff Bleszinski"
+; EN: MenuList[4]="Level Design: Cliff Bleszinski"
+MenuList[4]="Дизайн уровней: Cliff Bleszinski"
+MenuList[5]="    T. Elliot Cannon  Pancho Eekels"
+MenuList[6]="    Jeremy War  Cedric Fiorentino"
+MenuList[7]="    Shane Caudle"
+; EN: MenuList[8]="Animator: Dave Carter"
+MenuList[8]="Аниматор: Dave Carter"
+; EN: MenuList[9]="Art: James Schmalz "
+MenuList[9]="Художники: James Schmalz "
+MenuList[10]="    Mike Leatham  Artur Bialas"
+; EN: MenuList[11]="Programming: Tim Sweeney  Steven Polge"
+MenuList[11]="Программирование: Tim Sweeney  Steven Polge"
+MenuList[12]="    Erik de Neve  James Schmalz"
+MenuList[13]="    Carlo Vogelsang  Nick Michon"
+; EN: MenuList[14]="Music: Alexander Brandon"
+MenuList[14]="Музыка: Alexander Brandon"
+MenuList[15]="    Michiel van den Bos"
+; EN: MenuList[16]="Sound Effects: Dave Ewing"
+MenuList[16]="Звуковые эффекты: Dave Ewing"
+; EN: MenuList[17]="Producer for GT: Jason Schreiber"
+MenuList[17]="Продюсер для GT: Jason Schreiber"
+; EN: MenuList[18]="Biz: Mark Rein Nigel Kent"
+MenuList[18]="Бизнес: Mark Rein  Nigel Kent"
+MenuList[19]="    Craig Lafferty"
+; EN: MenuList[20]="Oldunreal patch: Jochen Goernitz"
+MenuList[20]="Патч Oldunreal: Jochen Goernitz"
+; EN: MenuList[21]="    and the Oldunreal community"
+MenuList[21]="    совместно с сообществом Oldunreal"
+; EN: MenuTitle="Quit?"
+MenuTitle="Выйти?"
+
+[UnrealIndivBotMenu]
+; EN: HelpMessage[1]="Which Bot Configuration is being edited. Use left and right arrows to change."
+HelpMessage[1]="Конфигурацию какого бота вы хотели бы изменить. Используйте стрелки влево и вправо."
+; EN: HelpMessage[2]="Hit enter to edit the name of this bot."
+HelpMessage[2]="Нажмите Enter, чтобы изменить имя этого бота."
+; EN: HelpMessage[3]="Use the left and right arrow keys to change the class of this bot."
+HelpMessage[3]="Используйте стрелки влево и вправо, чтобы изменить класс этого бота."
+; EN: HelpMessage[4]="Use the left and right arrow keys to change the skin of this bot."
+HelpMessage[4]="Используйте стрелки влево и вправо, чтобы изменить скин этого бота."
+; EN: HelpMessage[5]="Adjust the overall skill of this bot by this amount (relative to the base skill for bots)."
+HelpMessage[5]="Задайте уровень мастерства этого бота (относительно базового уровня ботов)."
+; EN: HelpMessage[6]="Type in which team this bot plays on (Red, Blue, Green, or Yellow)."
+HelpMessage[6]="Выберите, за какую команду играет этот бот (Красная, Синяя, Зеленая, Золотая)."
+; EN: MenuList[1]="Configuration"
+MenuList[1]="Конфигурация"
+; EN: MenuList[2]="Name"
+MenuList[2]="Имя"
+; EN: MenuList[3]="Class"
+MenuList[3]="Класс"
+; EN: MenuList[4]="Skin"
+MenuList[4]="Скин"
+; EN: MenuList[5]="Skill Adjust"
+MenuList[5]="Навык"
+; EN: MenuList[6]="Team"
+MenuList[6]="Команда"
+; EN: MenuTitle="Artificial Intelligence Configuration"
+MenuTitle="Настройка искусственного интеллекта"
+
+[DispersionPistol]
+; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
+DeathMessage="%o был убит из дисперсионного пистолета %k, вот неудачник!"
+FemDeathMessage="%o была убита из дисперсионного пистолета %k, вот неудачница!"
+; EN: PickupMessage="You got the Dispersion Pistol"
+PickupMessage="Вы подобрали дисперсионный пистолет"
+; EN: ItemName="Dispersion Pistol"
+ItemName="Дисперсионный пистолет"
+
+[UnrealVideoMenu]
+; EN: LowText="Low"
+LowText="Низк."
+; EN: HighText="High"
+HighText="Высок."
+; EN: ShadowDetail[0]="Blob"
+ShadowDetail[0]="Круглые"
+; EN: ShadowDetail[1]="Low Res"
+ShadowDetail[1]="Низк."
+; EN: ShadowDetail[2]="Mid Res"
+ShadowDetail[2]="Сред."
+; EN: ShadowDetail[3]="High Res"
+ShadowDetail[3]="Высок."
+; EN: ShadowDetail[4]="Ultra Res"
+ShadowDetail[4]="Ультра"
+; EN: HelpMessage[1]="Adjust display brightness using the left and right arrow keys."
+HelpMessage[1]="Настройте яркость изображения, используя стрелки влево и вправо."
+; EN: HelpMessage[2]="Display Unreal in a window. Note that going to a software display mode may remove high detail actors that were visible with hardware acceleration."
+HelpMessage[2]="Переключение между полноэкранным и оконным режимами. Обратите внимание, что переход в режим программного отображения может привести к удалению актеров с высокой детализацией, которые были видны при аппаратном ускорении."
+; EN: HelpMessage[3]="Use the left and right arrows to select a resolution, and press enter to select this resolution."
+HelpMessage[3]="Используйте стрелки влево и вправо для выбора разрешения экрана и нажмите Enter, чтобы применить изменение."
+; EN: HelpMessage[4]="Use the left and right arrows to adjust Field of View (FoV) for widescreen displays"
+HelpMessage[4]="Используйте стрелки влево и вправо для выбора горизонтального угла обзора (FoV) для широкоформатных дисплеев."
+; EN: HelpMessage[5]="Use the low texture detail option to improve performance.  Changes to this setting will take effect on the next level change."
+HelpMessage[5]="Используйте низкое качество текстур, чтобы повысить быстродействие. Изменения вступят в силу при следующей загрузке уровня."
+; EN: HelpMessage[6]="Adjust the volume of the music using the left and right arrow keys."
+HelpMessage[6]="Настройте уровень громкости музыки, используя стрелки влево и вправо."
+; EN: HelpMessage[7]="Adjust the volume of sound effects in the game using the left and right arrow keys."
+HelpMessage[7]="Настройте уровень громкости звуковых эффектов в игре, используя стрелки влево и вправо."
+; EN: HelpMessage[8]="Adjust the volume of speech, taunt and grunt effects in the game using the left and right arrow keys."
+HelpMessage[8]="Настройте уровень громкости речи и прочих голосовых звуков, используя стрелки влево и вправо."
+; EN: HelpMessage[9]="Use the low sound quality option to improve performance on machines with 32 megabytes or less of memory.  Changes to this setting will take effect on the next level change."
+HelpMessage[9]="Используйте низкое качество звука, чтобы повысить производительность на машинах с 32 и менее МБ оперативной памяти. Изменения вступят в силу при следующей загрузке уровня."
+; EN: HelpMessage[10]="If enabled, you will hear voice messages during gametypes that use them."
+HelpMessage[10]="Вкл./выкл. голосовые сообщения."
+; EN: HelpMessage[11]="If enabled, you will hear a beep when you receive a message."
+HelpMessage[11]="Вкл./выкл. звуковые сигналы при получении сообщений."
+; EN: HelpMessage[12]="If enabled, some specific meshes may use flat shading."
+HelpMessage[12]="Вкл./выкл. использование равномерного затенения (flat shading) при прорисовке некоторых моделей."
+; EN: HelpMessage[13]="If enabled, some specific meshes may use curved surfaces for extra detail."
+HelpMessage[13]="Вкл./выкл. прорисовку некоторых моделей с использованием криволинейных поверхностей."
+; EN: HelpMessage[14]="If enabled, pawns cast shadows. Changes to this setting will take effect on the next level change."
+HelpMessage[14]="Вкл./выкл. отображение теней от персонажей. Изменения вступят в силу при следующей загрузке уровня."
+; EN: HelpMessage[15]="If enabled, decoration cast shadows. Changes to this setting will take effect on the next level change."
+HelpMessage[15]="Вкл./выкл. отображение теней от декораций. Изменения вступят в силу при следующей загрузке уровня."
+; EN: HelpMessage[16]="If blob, use blob shadows, else use realistic shadows with different resolutions."
+HelpMessage[16]="Изменение детализации теней. Если blob, используйте тени blob, иначе используйте реалистичные тени с разным разрешением."
+; EN: HelpMessage[17]="Use this option to precaching map content like sounds and textures."
+HelpMessage[17]="Вкл./выкл. прекеширование содержимого карт (например, звуков и текстур)."
+; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
+HelpMessage[18]="Вкл./выкл. трилинейную фильтрацию текстур."
+; EN: MenuList[1]="Brightness"
+MenuList[1]="Яркость"
+; EN: MenuList[2]="Toggle Fullscreen Mode"
+MenuList[2]="Полноэкранный режим"
+; EN: MenuList[3]="Select Resolution"
+MenuList[3]="Разрешение экрана"
+; EN: MenuList[4]="Field of View"
+MenuList[4]="Поле зрения (FoV)"
+; EN: MenuList[5]="Texture Detail"
+MenuList[5]="Детальность текстур"
+; EN: MenuList[6]="Music Volume"
+MenuList[6]="Громкость музыки"
+; EN: MenuList[7]="Sound Volume"
+MenuList[7]="Громкость звука"
+; EN: MenuList[8]="Speech Volume"
+MenuList[8]="Громкость голоса"
+; EN: MenuList[9]="Sound Quality"
+MenuList[9]="Качество звука"
+; EN: MenuList[10]="Voice Messages"
+MenuList[10]="Голосовые сообщения"
+; EN: MenuList[11]="Message Beep"
+MenuList[11]="Звуковые сигналы"
+; EN: MenuList[12]="Flat Shading"
+MenuList[12]="Равномерн. затенен."
+; EN: MenuList[13]="Curvy Meshes"
+MenuList[13]="Криволинейные модели"
+; EN: MenuList[14]="Cast Shadows"
+MenuList[14]="Отображение теней"
+; EN: MenuList[15]="Deco Shadows"
+MenuList[15]="Тени от декораций"
+; EN: MenuList[16]="Realistic Shadows"
+MenuList[16]="Детализация теней"
+; EN: MenuList[17]="PreCaching Content"
+MenuList[17]="Прекеширование"
+; EN: MenuList[18]="Trilinear Filtering"
+MenuList[18]="Трилинейн. фильтрация"
+; EN: SkyFogDetail[0]="High Detail"
+SkyFogDetail[0]="Высокая детализация"
+; EN: SkyFogDetail[1]="Low Detail"
+SkyFogDetail[1]="Низкая детализация"
+; EN: SkyFogDetail[2]="Off"
+SkyFogDetail[2]="Выкл"
+; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
+HelpMessage[19]="Уровень детализации запотевания неба."
+; EN: HelpMessage[20]="The scaling of user HUD."
+HelpMessage[20]="Масштабирование пользовательского HUD."
+; EN: MenuList[19]="Skybox Fogging"
+MenuList[19]="Запотевание скайбокса"
+; EN: MenuList[20]="HUD Scale"
+MenuList[20]="Масштаб HUD"
+; EN: MenuTitle="AUDIO/VIDEO"
+MenuTitle="АУДИО/ВИДЕО"
+
+[UnrealFavoritesMenu]
+; EN: EditList[0]="Name for Server:"
+EditList[0]="Имя для сервера:"
+; EN: EditList[1]="Address:"
+EditList[1]="Адрес:"
+; EN: HelpMessage[1]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[1]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[2]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[2]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[3]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[3]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[4]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[4]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[5]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[5]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[6]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[6]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[7]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[7]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[8]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[8]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[9]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[9]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[10]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[10]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[11]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[11]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: HelpMessage[12]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[12]="Нажмите Enter, чтобы подключиться к серверу. Нажмите стрелку вправо, чтобы редактировать."
+; EN: MenuTitle="FAVORITES"
+MenuTitle="ИЗБРАННОЕ"
+
+[Translator]
+; EN: NewMessage="Universal Translator"
+NewMessage="Универсальный транслятор"
+; EN: HintString="Hint:"
+HintString="Намекать:"
+; EN: PickupMessage="Press F2 to activate the Translator"
+PickupMessage="Нажмите F2, чтобы активировать транслятор"
+; EN: ItemName="Universal Translator"
+ItemName="Транслятор"
+M_Selected=" выбран"
+M_Activated=" активирован"
+M_Deactivated=" деактивирован"
+
+[UnrealTeamScoreBoard]
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Красная команда: "
+; EN: TeamName[1]="Blue Team: "
+TeamName[1]="Синяя команда: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Зеленая команда: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Золотая команда: "
+
+[UnrealScoreBoard]
+; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
+DeadStr="Вы мертвы. Нажмите [Огонь] для возрождения!"
+; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
+SpectatorStr="Вы находитесь в режиме зрителя. Нажмите [Огонь] для обзора с позиции другого игрока!"
+
+[UnrealServerMenu]
+; EN: BotTitle="BOTMATCH"
+BotTitle="БОТМАТЧ"
+; EN: HelpMessage[1]="Choose Game Type."
+HelpMessage[1]="Выбор типа игры."
+; EN: HelpMessage[2]="Choose Map."
+HelpMessage[2]="Выбор карты."
+; EN: HelpMessage[3]="Modify Game Options."
+HelpMessage[3]="Изменение настроек игры."
+; EN: HelpMessage[4]="Start Game."
+HelpMessage[4]="Запуск игры."
+; EN: HelpMessage[5]="Start a dedicated server on this machine."
+HelpMessage[5]="Запуск выделенного сервера на данном компьютере."
+; EN: MenuList[1]="Select Game"
+MenuList[1]="Выбор игры"
+; EN: MenuList[2]="Select Map"
+MenuList[2]="Выбор карты"
+; EN: MenuList[3]="Configure Game"
+MenuList[3]="Настройки игры"
+; EN: MenuList[4]="Start Game"
+MenuList[4]="Начать игру"
+; EN: MenuList[5]="Launch Dedicated Server"
+MenuList[5]="Запустить выделенный сервер"
+; EN: MenuTitle="MULTIPLAYER"
+MenuTitle="Сетевая игра"
+
+[UnrealMeshMenu]
+; EN: HelpMessage[4]="Change your class using the left and right arrow keys."
+HelpMessage[4]="Для изменения вашего класса используйте кнопки влево и вправо"
+; EN: HelpMessage[5]="To enter with an adminpassword or gamepassword, launch the server Browser, right click a server and select 'Join with password'."
+HelpMessage[5]="Для входа с паролем откройте обозреватель серверов, сделайте правый клик мыши на нужном сервере и выберите 'Войти с паролем'."
+; EN: HelpMessage[6]="Should spectate the match instead of playing."
+HelpMessage[6]="Наблюдение за игрой без принятия участия в ней"
+; EN: HelpMessage[7]="Press enter to start game."
+HelpMessage[7]="Нажмите Enter для начала игры."
+; EN: MenuList[4]="Class:"
+MenuList[4]="Класс:"
+; EN: MenuList[5]="Passwords are now entered from the Unreal Server browser."
+MenuList[5]="Пароли теперь вводятся в обозревателе серверов Unreal."
+; EN: MenuList[6]="Spectate:"
+MenuList[6]="Зритель:"
+; EN: MenuList[7]="Start Game"
+MenuList[7]="Начать игру"
+
+[UnrealPlayerMenu]
+; EN: Teams[0]="Red"
+Teams[0]="Красные"
+; EN: Teams[1]="Blue"
+Teams[1]="Синие"
+; EN: Teams[2]="Green"
+Teams[2]="Зелёные"
+; EN: Teams[3]="Gold"
+Teams[3]="Золотые"
+; EN: Teams[4]="None"
+Teams[4]="Никто"
+; EN: HelpMessage[1]="Hit enter to type in your name. Be sure to do this before joining a multiplayer game."
+HelpMessage[1]="Нажмите Enter для ввода вашего ника. Желательно выбрать ник до входа в сетевую игру."
+; EN: HelpMessage[2]="Use the arrow keys to change your team color (Red, Blue, Green, or Yellow)."
+HelpMessage[2]="Используйте стрелки влево и вправо для выбора команды, за которую собираетесь играть (красные, синие, зелёные или золотые)."
+; EN: HelpMessage[3]="Change your skin using the left and right arrow keys."
+HelpMessage[3]="Используйте стрелки влево и вправо для выбора скина."
+; EN: MenuList[1]="Name: "
+MenuList[1]="Имя: "
+; EN: MenuList[2]="Team Color:"
+MenuList[2]="Команда:"
+; EN: MenuList[3]="Skin:"
+MenuList[3]="Скин:"
+; EN: MenuTitle="Select Digital Representation"
+MenuTitle="Настройки вашего персонажа"
+
+[UnrealJoinGameMenu]
+; EN: InternetOption="(Dial-Up)"
+InternetOption="(Модем)"
+; EN: FastInternetOption="(Dial-Up)"
+FastInternetOption="(Модем)"
+; EN: VeryFastInternetOption="(Broadband)"
+VeryFastInternetOption="(Скоростн.)"
+; EN: HighSpeedInternetOption="(Broadband)"
+HighSpeedInternetOption="(Скоростн.)"
+; EN: LANOption="(LAN)"
+LANOption="(LAN)"
+; EN: HelpMessage[1]="Listen for local servers"
+HelpMessage[1]="Поиск локальных серверов"
+; EN: HelpMessage[2]="Choose a server from a list of favorites"
+HelpMessage[2]="Выбор серверов из списка избранных"
+; EN: HelpMessage[3]="Hit enter to type in a server address.  Hit enter again to go to this server."
+HelpMessage[3]="Нажмите Enter для ввода адреса сервера. Нажмите Enter ещё раз, чтобы зайти на сервер."
+; EN: HelpMessage[4]="Set networking speed."
+HelpMessage[4]="Установка скорости сетевого соединения."
+; EN: HelpMessage[5]="Open Unreal Server List"
+HelpMessage[5]="Открыть список серверов Unreal"
+; EN: MenuList[1]="Find Local Servers"
+MenuList[1]="Найти локальные сервера"
+; EN: MenuList[2]="Choose From Favorites"
+MenuList[2]="Выбрать из списка избранных"
+; EN: MenuList[3]="Open"
+MenuList[3]="Открыть"
+; EN: MenuList[4]="Net Speed"
+MenuList[4]="Скор. соед-ния"
+; EN: MenuList[5]="Go to the Unreal server list"
+MenuList[5]="Перейдите в список серверов Unreal"
+; EN: MenuTitle="JOIN GAME"
+MenuTitle="ПОДКЛ. К ИГРЕ"
+
+[UnrealOptionsMenu]
+; EN: HideString="Hidden"
+HideString="Скрыто"
+; EN: InternetOption="(Dial-Up)"
+InternetOption="(Набрать номер)"
+; EN: FastInternetOption="(Dial-Up)"
+FastInternetOption="(Набрать номер)"
+; EN: VeryFastInternetOption="(Broadband)"
+VeryFastInternetOption="(скоростн.)"
+; EN: HighSpeedInternetOption="(Broadband)"
+HighSpeedInternetOption="(скоростн.)"
+; EN: LANOption="(LAN)"
+LANOption="(LAN)"
+; EN: HelpMessage[1]="Enable or disable vertical aiming help."
+HelpMessage[1]="Помощь в вертикальном прицеливании."
+; EN: HelpMessage[2]="Toggle enabling of joystick."
+HelpMessage[2]="Поддержка джойстика."
+; EN: HelpMessage[3]="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
+HelpMessage[3]="Чувствительность мыши. Определяет, как далеко вы должны переместить мышь, чтобы получить желаемое движение в игре."
+; EN: HelpMessage[4]="Enable or disable mouse smoothing (disable for high resolution mice)"
+HelpMessage[4]="Сглаживание мыши (для мышей с высоким разрешением рекомендуется отключить сглаживание)"
+; EN: HelpMessage[5]="Invert the mouse X axis.  When true, pushing the mouse forward causes you to look down rather than up."
+HelpMessage[5]="При инвертировании движения мыши вперёд и назад перемещают ваш взгляд соответственно вниз и вверх, а не вверх и вниз."
+; EN: HelpMessage[6]="If enabled, when you let go of the mouselook key the view will automatically center itself."
+HelpMessage[6]="Если включено, то при отпускании кнопки обзора мышью направление взгляда станет горизонтальным."
+; EN: HelpMessage[7]="If enabled, the mouse is always used for looking up and down, with no need for a mouselook key."
+HelpMessage[7]="Если включен, мышь всегда будет использоваться для изменения направления взгляда."
+; EN: HelpMessage[8]="If enabled, when not mouse-looking your view will automatically be adjusted to look up and down slopes and stairs."
+HelpMessage[8]="Если включена, ваш взгляд будет автоматически подстраиваться на склоне или лестнице."
+; EN: HelpMessage[9]="If enabled, your screen will flash when you fire your weapon."
+HelpMessage[9]="Вспышки на экране при стрельбе из оружия."
+; EN: HelpMessage[10]="Choose the crosshair appearing at the center of your screen"
+HelpMessage[10]="Стиль прицела, который отображается по центру экрана"
+; EN: HelpMessage[11]="Select where your weapon will appear."
+HelpMessage[11]="Расположение используемого игроком оружия."
+; EN: HelpMessage[12]="If enabled, double-clicking on the movement keys (forward, back, strafe left, and strafe right) will cause you to do a fast dodge move."
+HelpMessage[12]="Если включено, двойное нажатие клавиши перемещения (вперёд, назад, влево, вправо) приведёт к быстрому рывку в соотв. направлении."
+; EN: HelpMessage[13]="Hit enter to customize keyboard, mouse, and joystick configuration."
+HelpMessage[13]="Нажмите Enter для изменения настроек клавиатуры, мыши и джойстика."
+; EN: HelpMessage[14]="Hit enter to prioritize weapon switching order. (If never auto-switch is false)"
+HelpMessage[14]="Нажмите Enter для изменения приоритета оружия. (Если никогда не автопереключение ложно)"
+; EN: HelpMessage[15]="Never auto-switch to better weapon on pickup."
+HelpMessage[15]="Не использовать автопереключение оружия при его подборе."
+; EN: HelpMessage[16]="Use the left and right arrow keys to select a Heads Up Display configuration."
+HelpMessage[16]="Используйте стрелки влево и вправо, чтобы настроить расположение экранных индикаторов."
+; EN: HelpMessage[17]="Adjust the amount of bobbing when moving."
+HelpMessage[17]="Амплитуда раскачивания камеры при перемещении игрока."
+; EN: HelpMessage[18]="Set your optimal networking speed. This has an impact on internet gameplay."
+HelpMessage[18]="Установка скорости сетевого соединения. Влияет на игру через Интернет."
+; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
+HelpMessage[19]="Данная настройка задаёт тип консоли и внешний вид меню. Нажмите Enter для перезапуска игры и применения изменений."
+; EN: MenuList[1]="Auto Aim"
+MenuList[1]="Автоприцеливание"
+; EN: MenuList[2]="Joystick Enabled"
+MenuList[2]="Джойстик"
+; EN: MenuList[3]="Mouse Sensitivity"
+MenuList[3]="Чувствительность мыши"
+; EN: MenuList[4]="Mouse Smoothing"
+MenuList[4]="Сглаживание мыши"
+; EN: MenuList[5]="Invert Mouse"
+MenuList[5]="Инверт. мыши"
+; EN: MenuList[6]="Look Spring"
+MenuList[6]="Автоцентр. обзора"
+; EN: MenuList[7]="Always MouseLook"
+MenuList[7]="Обзор мышью"
+; EN: MenuList[8]="Auto Slope Look"
+MenuList[8]="Автоподстройка взгляда"
+; EN: MenuList[9]="Weapon Flash"
+MenuList[9]="Вспышки при выстрелах"
+; EN: MenuList[10]="Crosshair"
+MenuList[10]="Прицел"
+; EN: MenuList[11]="Weapon Hand"
+MenuList[11]="Расположение оружия"
+; EN: MenuList[12]="Dodging"
+MenuList[12]="Горизонтальные прыжки"
+; EN: MenuList[13]="Customize Controls"
+MenuList[13]="Настройка управления"
+; EN: MenuList[14]="Prioritize Weapons"
+MenuList[14]="Приоритет оружия"
+; EN: MenuList[15]="No Auto Weapon Switch"
+MenuList[15]="Нет автоперекл. оружия"
+; EN: MenuList[16]="HUD Configuration"
+MenuList[16]="Настройка HUD"
+; EN: MenuList[17]="View Bob"
+MenuList[17]="Раскачивание"
+; EN: MenuList[18]="Net Speed"
+MenuList[18]="Скорость соединения"
+; EN: MenuList[19]="Console"
+MenuList[19]="Консоль"
+; EN: HelpMessage[20]="Open advanced preferences configuration menu."
+HelpMessage[20]="Открыть меню конфигурации дополнительных настроек."
+; EN: MenuList[20]="Advanced Options"
+MenuList[20]="Дополнительные параметры"
+; EN: MenuTitle="OPTIONS MENU"
+MenuTitle="НАСТРОЙКИ"
+
+[TeamGame]
+; EN: ClassCaption="Team Play"
+ClassCaption="Командная игра"
+; EN: NewTeamMessage=" is now on "
+NewTeamMessage=" теперь в команде "
+; EN: TeamColor[0]="Red"
+TeamColor[0]="Красн."
+; EN: TeamColor[1]="Blue"
+TeamColor[1]="Син."
+; EN: TeamColor[2]="Green"
+TeamColor[2]="Зелён."
+; EN: TeamColor[3]="Gold"
+TeamColor[3]="Золот."
+; EN: GameName="Team Game"
+GameName="Командная игра"
+
+[ASMD]
+; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
+DeathMessage="%k нанёс смертельное ранение %o из %w."
+FemKillMessage="%k нанесла смертельное ранение %o из %w."
+; EN: PickupMessage="You got the ASMD"
+PickupMessage="Вы подобрали ASMD"
+; EN: ItemName="ASMD"
+ItemName="ASMD"
+
+[UnrealWeaponMenu]
+; EN: MenuTitle="PRIORITIES"
+MenuTitle="ПРИОРИТЕТ"
+
+[UnrealBotConfigMenu]
+; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
+HelpMessage[1]="Если включено, боты адаптируются под навыки игроков."
+; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
+HelpMessage[2]="Базовый навык ботов (от 0 до 3 включительно)."
+; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
+HelpMessage[3]="Если включено, боты вступают в игру в случайном порядке, иначе - в установленном порядке."
+; EN: HelpMessage[4]="Change the configuration of individual bots."
+HelpMessage[4]="Изменение настроек отдельно взятых ботов."
+; EN: HelpMessage[5]="Number of bots to start play (max 15)."
+HelpMessage[5]="Количество ботов в начале игры (макс. 15)."
+; EN: HelpMessage[6]="Use bots when playing with other people."
+HelpMessage[6]="Использование ботов при игре с другими людьми."
+; EN: MenuList[1]="Auto-Adjust Skills"
+MenuList[1]="Автовыбор навыка"
+; EN: MenuList[2]="Base Skill"
+MenuList[2]="Базовый навык"
+; EN: MenuList[3]="Random Order"
+MenuList[3]="Случайный порядок"
+; EN: MenuList[4]="Configure Individual Bots"
+MenuList[4]="Настройка отдельных ботов"
+; EN: MenuList[5]="Number of Bots"
+MenuList[5]="Количество ботов"
+; EN: MenuList[6]="Bots in Multiplayer"
+MenuList[6]="Боты в сетевой игре"
+; EN: MenuTitle="BOTS"
+MenuTitle="БОТЫ"
+
+[Eightball]
+; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
+DeathMessage="%o был размазан по стенам из %w %k."
+FemDeathMessage="%o была размазана по стенам из %w %k."
+; EN: PickupMessage="You got the Eightball gun"
+PickupMessage="Вы подобрали Восьмой мяч"
+; EN: ItemName="Eightball"
+ItemName="Восьмой мяч"
+
+[UnrealKeyboardMenu]
+; EN: OrString=" or "
+OrString=" или "
+HelpMessage[1]=""
+; EN: MenuList[1]="Fire"
+MenuList[1]="Огонь"
+; EN: MenuList[2]="Alternate Fire"
+MenuList[2]="Альтернативный огонь"
+; EN: MenuList[3]="Move Forward"
+MenuList[3]="Движение вперёд"
+; EN: MenuList[4]="Move Backward"
+MenuList[4]="Движение назад"
+; EN: MenuList[5]="Turn Left"
+MenuList[5]="Поворот влево"
+; EN: MenuList[6]="Turn Right"
+MenuList[6]="Поворот вправо"
+; EN: MenuList[7]="Strafe Left"
+MenuList[7]="Движение влево"
+; EN: MenuList[8]="Strafe Right"
+MenuList[8]="Движение вправо"
+; EN: MenuList[9]="Jump/Up"
+MenuList[9]="Прыжок/Вверх"
+; EN: MenuList[10]="Crouch/Down"
+MenuList[10]="Приседание/Вниз"
+; EN: MenuList[11]="Mouse Look"
+MenuList[11]="Обзор мышью"
+; EN: MenuList[12]="Activate Item"
+MenuList[12]="Использовать предмет"
+; EN: MenuList[13]="Next Item"
+MenuList[13]="Следующий предмет"
+; EN: MenuList[14]="Previous Item"
+MenuList[14]="Предыдущий предмет"
+; EN: MenuList[15]="Look Up"
+MenuList[15]="Смотреть вверх"
+; EN: MenuList[16]="Look Down"
+MenuList[16]="Смотреть вниз"
+; EN: MenuList[17]="Center View"
+MenuList[17]="Горизонтальный обзор"
+; EN: MenuList[18]="Walk"
+MenuList[18]="Ходьба"
+; EN: MenuList[19]="Strafe"
+MenuList[19]="Движение вбок"
+; EN: MenuList[20]="Next Weapon"
+MenuList[20]="Следующее оружие"
+; EN: MenuList[21]="Prev Weapon"
+MenuList[21]="Предыдущее оружие"
+; EN: MenuList[22]="Grab Decoration"
+MenuList[22]="Взаимодействие"
+; EN: MenuList[23]="Show Admin Menu"
+MenuList[23]="Администрирование"
+; EN: MenuList[24]="Show Music Menu"
+MenuList[24]="Музыкальный плеер"
+; EN: MenuList[25]="RESET TO DEFAULTS"
+MenuList[25]="Сброс по умолчанию"
+; EN: MenuTitle="CONTROLS"
+MenuTitle="Управление"
+
+[UnrealNewKeyboardMenu]
+MenuWidth=400
+
+[CoopGame]
+; EN: ClassCaption="Cooperative Play"
+ClassCaption="Кооперативная игра"
+; EN: GameName="Coop Game"
+GameName="Кооперативная игра"
+
+[Cow]
+; EN: MenuName="Cow"
+MenuName="Корова"
+
+[ShieldBelt]
+; EN: PickupMessage="You got the Shield Belt"
+PickupMessage="Вы подобрали защитный пояс"
+; EN: ItemName="Shield Belt"
+ItemName="Защитный пояс"
+
+[Flashlight]
+; EN: ExpireMessage="Flashlight batteries have died."
+ExpireMessage="Батарейки в фонарике сдохли."
+; EN: PickupMessage="You picked up the Flashlight"
+PickupMessage="Вы подобрали фонарик"
+; EN: ItemName="Flashlight"
+ItemName="Фонарик"
+M_Selected=" выбран"
+M_Activated=" включён"
+M_Deactivated=" выключен"
+
+[DevilFish]
+; EN: MenuName="DevilFish"
+MenuName="ДьяволРыба"
+
+[UnrealMainMenu]
+; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
+HelpMessage[1]="Нажмите Еnter для изменения настроек игры, загрузки или сохранения игры, изменения уровня сложности или начала матча с ботами."
+; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
+HelpMessage[2]="Нажмите Еnter для изменения настроек и запуска сетевой игры, входа в сетевую игру, изменения вашего вида, имени или команды."
+; EN: HelpMessage[3]="Hit enter to customize controls."
+HelpMessage[3]="Нажмите Еnter для перехода к настройкам игры."
+; EN: HelpMessage[4]="Change sound and display options"
+HelpMessage[4]="Изменение настроек звука и изображения."
+; EN: HelpMessage[5]="Hit enter to quit game."
+HelpMessage[5]="Нажмите Enter для выхода из игры."
+; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
+HelpMessage[7]="Звоните на бесплатный номер 1-877-4UNREAL для заказа UNREAL!"
+; EN: MenuList[1]="GAME"
+MenuList[1]="ИГРА"
+; EN: MenuList[2]="MULTIPLAYER"
+MenuList[2]="СЕТЕВАЯ ИГРА"
+; EN: MenuList[3]="OPTIONS"
+MenuList[3]="НАСТРОЙКИ"
+; EN: MenuList[4]="AUDIO/VIDEO"
+MenuList[4]="АУДИО/ВИДЕО"
+; EN: MenuList[5]="QUIT"
+MenuList[5]="ВЫХОД"
+; EN: MenuList[7]="ORDER INFO"
+MenuList[7]="ПРИОБРЕТЕНИЕ"
+
+[UnrealLoadMenu]
+; EN: RestartString="Restart "
+RestartString="Перезапустить "
+; EN: MenuTitle="LOAD GAME"
+MenuTitle="Загрузка игры"
+
+[UnrealSlotMenu]
+; EN: EmptySlot="..Empty.."
+EmptySlot="..Empty.."
+; EN: MonthNames[0]="January"
+MonthNames[0]="Янв."
+; EN: MonthNames[1]="February"
+MonthNames[1]="Февр."
+; EN: MonthNames[2]="March"
+MonthNames[2]="Мар."
+; EN: MonthNames[3]="April"
+MonthNames[3]="Апр."
+; EN: MonthNames[4]="May"
+MonthNames[4]="Май"
+; EN: MonthNames[5]="June"
+MonthNames[5]="Июн."
+; EN: MonthNames[6]="July"
+MonthNames[6]="Июл."
+; EN: MonthNames[7]="August"
+MonthNames[7]="Авг."
+; EN: MonthNames[8]="September"
+MonthNames[8]="Сент."
+; EN: MonthNames[9]="October"
+MonthNames[9]="Окт."
+; EN: MonthNames[10]="November"
+MonthNames[10]="Нояб."
+; EN: MonthNames[11]="December"
+MonthNames[11]="Дек."
+
+[TranslatorEvent]
+; EN: M_NewMessage="New Translator Message"
+M_NewMessage="Новое сообщение транслятора"
+; EN: M_TransMessage="Translator Message"
+M_TransMessage="Сообщение транслятора"
+; EN: M_HintMessage="New hint message (press F3 to read)."
+M_HintMessage="Новая подсказка (нажмите F3, чтобы прочитать)."
+
+[NaliFruit]
+; EN: PickupMessage="You picked the Nali Healing Fruit +"
+PickupMessage="Вы взяли целебный фрукт Нали +"
+; EN: ItemName="Nali Healing Fruit "
+ItemName="Фрукт Нали "
+
+[Health]
+; EN: PickupMessage="You picked up a Health Pack +"
+PickupMessage="Вы подобрали аптечку +"
+; EN: ItemName="Health Pack"
+ItemName="Аптечка"
+
+[BabyCow]
+; EN: MenuName="Baby Cow"
+MenuName="Baby Cow"
+
+[UnrealGameMenu]
+; EN: HelpMessage[1]="Hit enter to save the current game."
+HelpMessage[1]="Нажмите Enter для сохранения текущей игры."
+; EN: HelpMessage[2]="Hit enter to load a saved game."
+HelpMessage[2]="Нажмите Enter для загрузки сохранённой игры."
+; EN: HelpMessage[3]="Select a difficulty level, and start a new game."
+HelpMessage[3]="Выберите уровень сложности и начните новую игру."
+; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
+HelpMessage[4]="Нажмите Enter для изменения настроек игры. В сетевой игре настройки могут быть недоступны."
+; EN: HelpMessage[5]="DeathMatch against Bots."
+HelpMessage[5]="Смертельный бой с ботами."
+; EN: MenuList[1]="SAVE GAME"
+MenuList[1]="СОХРАНЕНИЕ"
+; EN: MenuList[2]="LOAD GAME"
+MenuList[2]="ЗАГРУЗКА"
+; EN: MenuList[3]="NEW GAME"
+MenuList[3]="НОВАЯ ИГРА"
+; EN: MenuList[4]="GAME OPTIONS"
+MenuList[4]="УСТАНОВКИ"
+; EN: MenuList[5]="BOTMATCH"
+MenuList[5]="БОТМАТЧ"
+
+[UnrealMultiPlayerMenu]
+; EN: HelpMessage[1]="Join a network game."
+HelpMessage[1]="Вход в сетевую игру на сервере."
+; EN: HelpMessage[2]="Set up and start a network game."
+HelpMessage[2]="Настройка и запуск новой сетевой игры."
+; EN: HelpMessage[3]="Configure appearance, name, and team name."
+HelpMessage[3]="Настройка вашего внешнего вида, имени и цвета команды."
+; EN: MenuList[1]="JOIN GAME"
+MenuList[1]="ВХОД В ИГРУ"
+; EN: MenuList[2]="START GAME"
+MenuList[2]="НОВАЯ ИГРА"
+; EN: MenuList[3]="PLAYER SETUP"
+MenuList[3]="ИГРОК"
+
+[UnrealChooseGameMenu]
+; EN: HelpMessage[1]="Choose which game to play."
+HelpMessage[1]="Выберите желаемую игру."
+; EN: HelpMessage[2]="Choose which game to play."
+HelpMessage[2]="Выберите желаемую игру."
+; EN: HelpMessage[3]="Choose which game to play."
+HelpMessage[3]="Выберите желаемую игру."
+; EN: HelpMessage[4]="Choose which game to play."
+HelpMessage[4]="Выберите желаемую игру."
+; EN: HelpMessage[5]="Choose which game to play."
+HelpMessage[5]="Выберите желаемую игру."
+; EN: HelpMessage[6]="Choose which game to play."
+HelpMessage[6]="Выберите желаемую игру."
+; EN: HelpMessage[7]="Choose which game to play."
+HelpMessage[7]="Выберите желаемую игру."
+; EN: HelpMessage[8]="Choose which game to play."
+HelpMessage[8]="Выберите желаемую игру."
+; EN: HelpMessage[9]="Choose which game to play."
+HelpMessage[9]="Выберите желаемую игру."
+; EN: HelpMessage[10]="Choose which game to play."
+HelpMessage[10]="Выберите желаемую игру."
+; EN: HelpMessage[11]="Choose which game to play."
+HelpMessage[11]="Выберите желаемую игру."
+; EN: HelpMessage[12]="Choose which game to play."
+HelpMessage[12]="Выберите желаемую игру."
+; EN: HelpMessage[13]="Choose which game to play."
+HelpMessage[13]="Выберите желаемую игру."
+; EN: HelpMessage[14]="Choose which game to play."
+HelpMessage[14]="Выберите желаемую игру."
+; EN: HelpMessage[15]="Choose which game to play."
+HelpMessage[15]="Выберите желаемую игру."
+; EN: HelpMessage[16]="Choose which game to play."
+HelpMessage[16]="Выберите желаемую игру."
+; EN: HelpMessage[17]="Choose which game to play."
+HelpMessage[17]="Выберите желаемую игру."
+; EN: HelpMessage[18]="Choose which game to play."
+HelpMessage[18]="Выберите желаемую игру."
+; EN: HelpMessage[19]="Choose which game to play."
+HelpMessage[19]="Выберите желаемую игру."
+; EN: MenuTitle="CHOOSE GAME"
+MenuTitle="ВЫБОР ИГРЫ"
+
+[AutoMag]
+; EN: DeathMessage="%o got gatted by %k's %w."
+DeathMessage="%o был застрелен из пистолета %k"
+FemDeathMessage="%o была застрелена из пистолета %k"
+; EN: PickupMessage="You got the Automag"
+PickupMessage="Вы подобрали Автомаг"
+; EN: ItemName="Automag"
+ItemName="Автомаг"
+
+[UnrealHelpMenu]
+; EN: HelpMessage[1]="Open the troubleshooting document."
+HelpMessage[1]="Открыть руководство."
+; EN: MenuList[1]="TroubleShooting"
+MenuList[1]="Руководство"
+; EN: MenuTitle="HELP"
+MenuTitle="ПОМОЩЬ"
+
+[UnrealDMGameOptionsMenu]
+; EN: GameStyle[0]="Classic"
+GameStyle[0]="Классика"
+; EN: GameStyle[1]="Hardcore"
+GameStyle[1]="Хардкор"
+; EN: GameStyle[2]="Turbo"
+GameStyle[2]="Турбо"
+; EN: DeathMessages[0]="Classic"
+DeathMessages[0]="Классические"
+; EN: DeathMessages[1]="Weapon Based"
+DeathMessages[1]="Соотв. оружию"
+; EN: HelpMessage[3]="Number of frags scored by leading player to end game.  If 0, there is no limit."
+HelpMessage[3]="Число фрагов, которое нужно набрать, чтобы выиграть. При значении 0 лимита нет."
+; EN: HelpMessage[4]="Time limit (in minutes) to end game.  If 0, there is no limit."
+HelpMessage[4]="Игра завершается по истечении указанного количества минут. При значении 0 лимита нет."
+; EN: HelpMessage[5]="Maximum number of players allowed in the game."
+HelpMessage[5]="Максимальное количество людей, которые одновременно могут принимать участие в игре."
+; EN: HelpMessage[6]="If Weapons Stay is enabled, weapons respawn instantly, but can only be picked up once by a given player."
+HelpMessage[6]="Если данная опция включена, то оружие после подбора игроком остаётся на месте."
+; EN: HelpMessage[7]="Configure bot game and individual parameters."
+HelpMessage[7]="Настройка манеры игры и параметров ботов."
+; EN: HelpMessage[8]="Choose Game Style:  Hardcore game speed is faster and weapons do more damage than Classic. Turbo is Hardcore with really fast movement."
+HelpMessage[8]="Выберите стиль игры. При хардкорном стиле игра на 10% быстрее, а повреждения на 50% больше. Турбо вдобавок делает передвижение игроков быстрее."
+; EN: HelpMessage[9]="Classic or new style (weapon based) deathmessages."
+HelpMessage[9]="Классический или новый стиль сообщений об убийствах (при новом стиле указывается оружие)."
+; EN: MenuList[3]="Frag limit"
+MenuList[3]="Лимит фрагов"
+; EN: MenuList[4]="Time Limit"
+MenuList[4]="Лимит времени"
+; EN: MenuList[5]="Max Players"
+MenuList[5]="Максимум игроков"
+; EN: MenuList[6]="Weapons Stay"
+MenuList[6]="Оружие остаётся"
+; EN: MenuList[7]="Configure Bots"
+MenuList[7]="Настройка ботов"
+; EN: MenuList[8]="Game Style"
+MenuList[8]="Стиль игры"
+; EN: MenuList[9]="Death Messages"
+MenuList[9]="Сообщения о смертях"
+
+[YesNoMenu]
+; EN: YesSelString="[YES]  No"
+YesSelString="[ДА]  Нет"
+; EN: NoSelString=" Yes  [NO]"
+NoSelString=" Да  [НЕТ]"
+
+[UnrealListenMenu]
+; EN: HelpMessage[1]="Hit Enter to select this server."
+HelpMessage[1]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[2]="Hit Enter to select this server."
+HelpMessage[2]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[3]="Hit Enter to select this server."
+HelpMessage[3]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[4]="Hit Enter to select this server."
+HelpMessage[4]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[5]="Hit Enter to select this server."
+HelpMessage[5]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[6]="Hit Enter to select this server."
+HelpMessage[6]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[7]="Hit Enter to select this server."
+HelpMessage[7]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[8]="Hit Enter to select this server."
+HelpMessage[8]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[9]="Hit Enter to select this server."
+HelpMessage[9]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[10]="Hit Enter to select this server."
+HelpMessage[10]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[11]="Hit Enter to select this server."
+HelpMessage[11]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[12]="Hit Enter to select this server."
+HelpMessage[12]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[13]="Hit Enter to select this server."
+HelpMessage[13]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[14]="Hit Enter to select this server."
+HelpMessage[14]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[15]="Hit Enter to select this server."
+HelpMessage[15]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[16]="Hit Enter to select this server."
+HelpMessage[16]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[17]="Hit Enter to select this server."
+HelpMessage[17]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[18]="Hit Enter to select this server."
+HelpMessage[18]="Нажмите Enter для выбора данного сервера."
+; EN: HelpMessage[19]="Hit Enter to select this server."
+HelpMessage[19]="Нажмите Enter для выбора данного сервера."
+; EN: MenuTitle="LOCAL SERVERS"
+MenuTitle="Локальн. сервера"
+
+[SCUBAGear]
+; EN: PickupMessage="You picked up the SCUBA Gear"
+PickupMessage="Вы подобрали акваланг"
+; EN: ItemName="SCUBA Gear"
+ItemName="Акваланг"
+M_Selected=" выбран."
+M_Activated=" активирован."
+M_Deactivated=" деактивирован."
+
+[Amplifier]
+; EN: ExpireMessage="Energy Amplifier is out of power."
+ExpireMessage="Заряд усилителя закончился."
+; EN: PickupMessage="You got the Energy Amplifier"
+PickupMessage="Вы подобрали энергоусилитель."
+; EN: ItemName="Energy Amplifier"
+ItemName="Усилитель"
+M_Selected=" выбран."
+M_Activated=" активирован."
+M_Deactivated=" деактивирован."
+
+[UnrealNewGameMenu]
+; EN: HelpMessage[1]="Tourist mode."
+HelpMessage[1]="Для туристов."
+; EN: HelpMessage[2]="Ready for some action!"
+HelpMessage[2]="Готовьтесь к бою!"
+; EN: HelpMessage[3]="Not for the faint of heart."
+HelpMessage[3]="Не для слабонервных."
+; EN: HelpMessage[4]="Death wish."
+HelpMessage[4]="Жажда смерти."
+; EN: HelpMessage[5]="For players who want an extra difficulty."
+HelpMessage[5]="Для тех, кому мало обычных уровней сложности."
+; EN: HelpMessage[6]="For the hardcore gamers."
+HelpMessage[6]="Для хардкорных игроков."
+; EN: HelpMessage[7]="HOLY SHIT!"
+HelpMessage[7]="МЕГАЖЕСТЬ!"
+; EN: MenuList[1]="EASY"
+MenuList[1]="Легко"
+; EN: MenuList[2]="MEDIUM"
+MenuList[2]="Средне"
+; EN: MenuList[3]="HARD"
+MenuList[3]="Трудно"
+; EN: MenuList[4]="UNREAL"
+MenuList[4]="Unreal"
+; EN: MenuList[5]="EXTREME"
+MenuList[5]="Экстрим"
+; EN: MenuList[6]="NIGHTMARE"
+MenuList[6]="Кошмар"
+; EN: MenuList[7]="ULTRA-UNREAL"
+MenuList[7]="УЛЬТРА-Unreal"
+; EN: ModeString[0]="Enhanced"
+ModeString[0]="Расширенный"
+; EN: ModeString[1]="Classic"
+ModeString[1]="Классический"
+; EN: HelpMessage[8]="Should gameplay contain some minor bugfixes or remain classic?"
+HelpMessage[8]="Должен ли геймплей содержать небольшие исправления или оставаться классическим?"
+; EN: MenuList[8]="Balance Mode: "
+MenuList[8]="Режим баланса: "
+
+[TazerProj]
+; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"
+ComboKillMessage="%o не смог уклониться от %w комбо %k"
+FemComboKillMessage="o не смогла уклониться от %w комбо %k"
+
+[SinglePlayer]
+GameName="Unreal"
+
+[UnrealSaveMenu]
+; EN: CantSave="CAN'T SAVE WHEN DEAD"
+CantSave="Нельзя сохраняться будучи мёртвым."
+; EN: MenuTitle="SAVE GAME"
+MenuTitle="Сохранение игры"
+
+[Stinger]
+; EN: DeathMessage="%o was perforated by %k's %w."
+DeathMessage="%o был продырявлен из %w %k"
+FemDeathMessage="%o была продырявлена из %w %k."
+; EN: PickupMessage="You picked up the Stinger"
+PickupMessage="Вы подобрали Стингер"
+; EN: ItemName="Stinger"
+ItemName="Стингер"
+
+[RocketCan]
+; EN: PickupMessage="You picked up 12 Eightballs"
+PickupMessage="Вы подобрали ракеты для Eightball"
+; EN: ItemName="Eightballs"
+ItemName="ракеты для Eightball"
+
+[VoiceBox]
+; EN: PickupMessage="You picked up the Voice Box"
+PickupMessage="Вы подобрали шумовое устройство"
+; EN: ItemName="Voice Box"
+ItemName="Шумовое устройство"
+M_Selected=" выбрано"
+M_Activated=" приведено в действие"
+
+[WeaponPowerUp]
+; EN: PickupMessage="You got the Dispersion Pistol Powerup"
+PickupMessage="Вы подобрали модификатор для дисперсионного пистолета"
+; EN: ItemName="Dispersion Pistol Powerup"
+ItemName="модификатор для дисперсионного пистолета"
+
+[Flare]
+; EN: PickupMessage="You got a Flare"
+PickupMessage="Вы подобрали световую шашку"
+; EN: ItemName="Flare"
+ItemName="Световая шашка"
+M_Selected=" выбрана"
+M_Activated=" зажжена"
+
+[ShellBox]
+; EN: PickupMessage="You picked up 50 bullets"
+PickupMessage="Вы подобрали ящик с патронами"
+; EN: ItemName="Bullet Box"
+ItemName="ящик с патронами"
+
+[ASMDAmmo]
+; EN: PickupMessage="You picked up an ASMD core"
+PickupMessage="Вы подобрали заряды к ASMD"
+; EN: ItemName="ASMD Core"
+ItemName="заряды к ASMD"
+
+[MaleThree]
+; EN: MenuName="Male 3"
+MenuName="Мужик 3"
+
+[FemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Женщина 1"
+
+[OKMenu]
+; EN: OKString="[OK]"
+OKString="[OK]"
+
+[UnrealTeamGameOptionsMenu]
+; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
+HelpMessage[10]="Множитель урона от соратников по игре (Примечание: вы всегда получаете полный урон от своего оружия)."
+; EN: MenuList[10]="Friendly Fire Scale"
+MenuList[10]="Урон от своих"
+
+[UnrealCoopGameOptions]
+; EN: HelpMessage[3]="Skill level setting."
+HelpMessage[3]="Уровень сложности игры."
+; EN: HelpMessage[4]="If enabled, no friendly fire is allowed."
+HelpMessage[4]="Отключение урона от соратников по игре."
+; EN: HelpMessage[5]="If enabled, weapons respawn instantly, but can only be picked up once by a given player."
+HelpMessage[5]="Если данная опция включена, то оружие после подбора игроком остаётся на месте."
+; EN: HelpMessage[6]="If enabled, weapons will be respawned instantly."
+HelpMessage[6]="Если данная опция включена, то оружие будет респауниться сразу после подбора."
+; EN: HelpMessage[7]="If enabled, items will be respawned instantly."
+HelpMessage[7]="Если данная опция включена, то предметы будут респауниться сразу после подбора."
+; EN: MenuList[3]="Difficulty"
+MenuList[3]="Сложность"
+; EN: MenuList[4]="No Friendly Fire"
+MenuList[4]="Нет урона от своих"
+; EN: MenuList[5]="Weapons Stay"
+MenuList[5]="Оружие остаётся"
+; EN: MenuList[6]="Instant Weapon Respawn"
+MenuList[6]="Мгн. респ. оружия"
+; EN: MenuList[7]="Instant Item Respawn"
+MenuList[7]="Мгн. респ. инвентаря"
+
+[SuperHealth]
+; EN: PickupMessage="You picked up the Super Health Pack"
+PickupMessage="Вы подобрали супераптечку"
+; EN: ItemName="Super Health Pack"
+ItemName="супераптечку"
+
+[UpgradeMenu]
+; EN: MenuList[1]="You need a newer version of Unreal to play on this server. Would you like to go to the Unreal web site for a newer version?"
+MenuList[1]="Для игры на этом сервере требуется более новая версия Unreal. Перейти на веб-сайт Unreal, чтобы скачать обновление?"
+
+[StingerAmmo]
+; EN: PickupMessage="You picked up 40 Tarydium Shards"
+PickupMessage="Вы подобрали кристаллы таридиума"
+; EN: ItemName="Tarydium Shards"
+ItemName="кристаллы таридиума"
+
+[Shells]
+; EN: PickupMessage="You picked up 12 shells"
+PickupMessage="Вы подобрали патроны"
+; EN: ItemName="Shells"
+ItemName="патроны"
+
+[KevlarSuit]
+; EN: PickupMessage="You picked up the Kevlar Suit"
+PickupMessage="Вы подобрали кевларовый костюм"
+; EN: ItemName="Kevlar Suit"
+ItemName="кевларовый костюм"
+
+[Clip]
+; EN: PickupMessage="You picked up a Clip"
+PickupMessage="Вы подобрали обойму"
+; EN: ItemName="Clip"
+ItemName="обойму"
+
+[Bandages]
+; EN: PickupMessage="You got some Bandages +"
+PickupMessage="Вы подобрали бинты +"
+; EN: ItemName="Bandages"
+ItemName="бинты"
+
+[Armor]
+; EN: PickupMessage="You got the Assault Vest"
+PickupMessage="Вы подобрали бронежилет"
+; EN: ItemName="Assault Vest"
+ItemName="бронежилет"
+
+[Hawk]
+; EN: MenuName="Hawk"
+MenuName="ястреб"
+
+[MiniGunSentry]
+; EN: PickupMessage="You got an Automatic Sentry Gun"
+PickupMessage="Вы подобрали автоматическую турель"
+; EN: ItemName="Minigun Sentry"
+ItemName="Автоматическая турель"
+; EN: M_Activated=" deployed."
+M_Activated=" активирована."
+M_Selected=" выбрана."
+
+[Woodruff]
+; EN: PickupMessage="You got some Master of the Woods +"
+PickupMessage="Вы подобрали ясменник +"
+; EN: ItemName="Master of the Woods"
+ItemName="ясменник"
+
+[UIKeyTrigger]
+; EN: SuccessMessage="Access granted."
+SuccessMessage="Доступ разрешён."
+; EN: FailtureMessage="You need a key to open this door."
+FailtureMessage="Нужен ключ."
+
+[UTranslocator]
+; EN: DeathMessage="%o was telefragged by %k."
+DeathMessage="%o был телефрагирован %k."
+FemDeathMessage="%o была телефрагирована %k."
+; EN: PickupMessage="You got the Translocator Source Module"
+PickupMessage="Вы подобрали модуль транслокатора"
+; EN: ItemName="Translocator"
+ItemName="Транслокатор"
+; EN: ItemArticle="the"
+ItemArticle=""
+
+[WoodruffSchool]
+; EN: PickupMessage="You got a bunch of Master of the Woods +"
+PickupMessage="У вас есть связка Мастера леса +"
+
+[MaleThreeBot]
+; EN: MenuName="Male 3"
+MenuName="Мужик 3"
+
+[FemaleOneBot]
+; EN: MenuName="Female 1"
+MenuName="Женщина 1"
+
+[Bird]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Bird"
+MenuName="Птица"
+
+[Biterfish]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Biterfish"
+MenuName="Битерфиш"
+
+[BiterfishSchool]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Biterfish"
+MenuName="Битерфиш"
+
+[Brute]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Brute"
+MenuName="Грубый"
+
+[CaveManta]
+; EN: NameArticle=" the "
+NameArticle=" "
+; EN: MenuName="Cave Manta"
+MenuName="Пещера Манта"
+
+[Fly]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Fly"
+MenuName="Летать"
+
+[LesserBrute]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Lesser Brute"
+MenuName="Меньший зверь"
+
+[Manta]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Manta"
+MenuName="Манта"
+
+[Nali]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Nali"
+MenuName="Нали"
+
+[NaliPriest]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Nali Priest"
+MenuName="Нали Жрец"
+
+[NaliRabbit]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Nali Rabbit"
+MenuName="Кролик Нали"
+
+[Skaarj]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Skaarj"
+MenuName="Скаардж"
+
+[SkaarjScout]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Skaarj Scout"
+MenuName="Скаардж Разведчик"
+
+[SkaarjWarrior]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Skaarj Warrior"
+MenuName="Скаардж-воин"
+
+[Slith]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Slith"
+MenuName="Слит"
+
+[Tentacle]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Tentacle"
+MenuName="Щупальце"

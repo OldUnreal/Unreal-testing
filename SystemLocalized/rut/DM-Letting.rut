@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="Blood Letting"
+Title="Кровопускание"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Вход в кровопускание"
+
+[LevelSummary]
+; EN: Title="Blood Letting"
+Title="Кровопускание"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Вход в кровопускание"
