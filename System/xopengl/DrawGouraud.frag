@@ -405,7 +405,7 @@ void main(void)
 #endif
 
 # if SIMULATEMULTIPASS
-    if((gPolyFlags & PF_Modulated) == PF_Modulated)
+    if((gPolyFlags & PF_Modulated) == PF_Modulated || (gPolyFlags & PF_Translucent) == PF_Translucent)
     {
         FragColor	= TotalColor;
         FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor);
