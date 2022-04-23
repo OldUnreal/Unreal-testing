@@ -7,8 +7,11 @@
 =============================================================================*/
 #if BINDLESSTEXTURES
 #extension GL_ARB_bindless_texture : require
-#extension GL_ARB_gpu_shader_int64 : enable
+#extension GL_ARB_gpu_shader_int64 : enable // we store bindless textures in interface blocks. This only works if we support int64s in GLSL
 #extension GL_ARB_shading_language_420pack : enable
+#endif
+
+#if SHADERDRAWPARAMETERS
 #extension GL_ARB_shader_draw_parameters : require
 #endif
 
