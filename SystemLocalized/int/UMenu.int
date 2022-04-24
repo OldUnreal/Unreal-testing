@@ -249,6 +249,8 @@ SkyFogHelp="Change how volumetric fog is being rendered on skybox."
 LightLODText="Lightmap LOD"
 LightLODHelp="Change the lighting LOD aggressiveness on world (lower meaning it will cut down light framerate on complex scenes)."
 NotAvailableText="Not available"
+BorderlessFSText="Fake Fullscreen"
+BorderlessFSHelp="Specifies if Unreal should run game in fake fullscreen (borderless windowed) mode."
 
 [UMenuPlayerSetupClient]
 EditAreaWidth=110

@@ -432,6 +432,10 @@ LightLODText="LD Mappa di Luce"
 LightLODHelp="Modifica l'aggressività del LD dell'illuminazione nel mondo (un valore più basso ridurrà il frame rate dell'illuminazione nelle scene complesse)."
 ; EN: NotAvailableText="Not available"
 NotAvailableText="Non disponibile"
+; EN: BorderlessFSText="Fake Fullscreen"
+BorderlessFSText="Schermo intero falso"
+; EN: BorderlessFSHelp="Unreal should run game in fake fullscreen (borderless windowed) mode."
+BorderlessFSHelp="Specifica se Unreal deve eseguire il gioco in modalità a schermo intero falso (finestra senza bordi)."
 
 [UMenuPlayerSetupClient]
 EditAreaWidth=110

@@ -12,7 +12,7 @@ LevelEntryText="Вход в Лаборатория материнского ко
 
 [TranslatorEvent0]
 ; EN: AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."
-AltMessage="Основной источник энергии работает на своей пиковой мощности. Дополнительный источник загружен на 80%. Включение альтернативного источника для энергетических полей обязательно. Слабые понесут наказание."
+AltMessage="Основной источник энергии работает на своей пиковой мощности. Дополнительный источник загружен на 80%. Включение альтернативного источника для энергетических полей  обязательно. Слабые понесут наказание."
 
 [TranslatorEvent3]
 ; EN: Message="Intruder detected. Protect the Source at any cost. Intruder must be halted before penetrating the Source's defensive perimeter."
@@ -36,9 +36,9 @@ AltMessage="Статус Криокапсул: температура 269 по �
 
 [TranslatorEvent26]
 ; EN: Message="Power Reserve at 100%, Shielding effect at 0.0025%. EEG/EKG readings are normal, physiological state is cryogenised."
-Message="Резерв энергии 100%, Эффект щита 0,0025%. Энцефалограмма и электрокардиограмма в норме, физиологическое состояние: замороженный."
+Message="Резерв энергии 100%, Эффект щита 0,0025%. Энцефалограмма и электрокардиограмма  в норме, физиологическое состояние: замороженный."
 ; EN: AltMessage="Power Reserve at 80%, Shielding effect at 5.64%, EEG/EKG readings showing massive disturbances, physiological state is active and endorphin/adrenal systems are producing hormonal overloads."
-AltMessage="Резервы электроэнергии на отметке 80%, эффект щита на 5,64%, электрокардиограмма/электроэнцефалограмма считываются и показывают перевозбуждение, физиологический статус — активный, системы регистрируют чрезмерное выделение эндорфина/адреналина."
+AltMessage="Резервы электроэнергии на отметке 80%, эффект щита на 5,64%, электрокардиограмма/ электроэнцефалограмма  считываются и показывают перевозбуждение, физиологический статус — активный, системы регистрируют чрезмерное выделение эндорфина/адреналина."
 
 [TranslatorEvent25]
 ; EN: AltMessage="All the test subjects have been placed in the Detention Area. The force fields are keeping them confined and unshielded. All subjects continue to exhibit extremely aggressive behaviour when not in carefully tuned magnetic fields."
@@ -76,7 +76,7 @@ AltMessage="Отчет 187: Сшарк'Тэйджи младший смотря�
 
 [TranslatorEvent16]
 ; EN: AltMessage="Report 189: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. After cross-analysis of the test results on all subects, we've reached the conclusion that the Core Generator's magnetic field is probably the cause of the failures."
-AltMessage="Отчет 189: Сшарк'Тэйджи младший смотрящий Исса'Тэйджи. После перекрестного анализа полученных результатов всех испытуемых, мы пришли к выводу что Основной Генератор магнитного поля — вероятно является причиной сбоев."
+AltMessage="Отчет 189: Сшарк'Тэйджи младший смотрящий Исса'Тэйджи.  После перекрестного анализа полученных результатов всех испытуемых, мы пришли к выводу что Основной Генератор магнитного поля — вероятно является причиной сбоев."
 
 [TranslatorEvent17]
 ; EN: AltMessage="Report 188: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. Studies on the test subjects' cells are showing persistent shielding, with minor fluctuations in reflectivity. Strangely these are all perfectly synchronized."

@@ -1,22 +1,23 @@
 ﻿[Public]
 Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
-Object=(Name=upak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=upak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=upak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=upak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UPak.UPakConsole,Class=Class,MetaClass=Engine.Console,Description="Unreal Gold")
+Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
 Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
 Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
 Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
@@ -243,3 +244,7 @@ MenuName="Caçador de Grup"
 NameArticle=" una "
 ; EN: MenuName="Spinner"
 MenuName="Aranya"
+
+[UPakConsole]
+; EN: ClassCaption="Unreal Gold Console"
+ClassCaption="Consola d'Unreal Gold"

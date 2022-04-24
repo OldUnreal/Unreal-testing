@@ -227,6 +227,8 @@ NeedPassword="Вам нужно ввести пароль, чтобы присо
 MaleGender="его"
 ; EN: FemaleGender="her"
 FemaleGender="ей"
+; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
+MaxedOutSpectatorsMsg="Превышено максимальное количество зрителей"
 
 [Errors]
 ; EN: NetOpen="Error opening file"

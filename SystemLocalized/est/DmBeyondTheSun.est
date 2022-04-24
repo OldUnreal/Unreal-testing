@@ -7,3 +7,31 @@ IdealPlayerCount="4-8"
 ; EN: Title="Beyond The Sun"
 Title="Más Allá Del Sol"
 IdealPlayerCount="4-8"
+
+[ZoneInfo0]
+; EN: ZoneName="East Island, Inside"
+ZoneName="Isla Este, Interior"
+
+[ZoneInfo1]
+; EN: ZoneName="East Island, Lower Corridor"
+ZoneName="Isla Este, Pasillo Inferior"
+
+[ZoneInfo2]
+; EN: ZoneName="South Island"
+ZoneName="Isla Sur"
+
+[ZoneInfo3]
+; EN: ZoneName="Inner Corridors, West Wing"
+ZoneName="Interiores, Ala Oeste"
+
+[ZoneInfo4]
+; EN: ZoneName="Outside"
+ZoneName="Afueras"
+
+[ZoneInfo5]
+; EN: ZoneName="Inner Corridors, Center"
+ZoneName="Interiores, Centro"
+
+[ZoneInfo6]
+; EN: ZoneName="Inner Corridors, East Wing"
+ZoneName="Interiores, Ala Este"

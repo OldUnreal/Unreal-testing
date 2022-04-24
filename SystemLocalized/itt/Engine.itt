@@ -192,6 +192,8 @@ NeedPassword="È necessario immettere la password per partecipare alla partita."
 MaleGender="suo"
 ; EN: FemaleGender="her"
 FemaleGender="sua"
+; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
+MaxedOutSpectatorsMsg="Numero massimo di spettatori superato"
 
 [Weapon]
 ; EN: MessageNoAmmo=" has no ammo."

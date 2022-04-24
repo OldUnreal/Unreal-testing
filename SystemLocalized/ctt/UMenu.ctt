@@ -539,6 +539,10 @@ SkyFogHelp="Canviar com es representa la boira volumètrica a Skybox."
 LightLODText="Nivell de detall del mapa de llum"
 ; EN: LightLODHelp="Change the lighting LOD aggressiveness on world (lower meaning it will cut down light framerate on complex scenes)."
 LightLODHelp="Canvieu l'agressivitat del LOD de la il·luminació al món (més baix, significa que reduirà la velocitat de fotogrames de la llum en escenes complexes)."
+; EN: BorderlessFSText="Fake Fullscreen"
+BorderlessFSText="Pantalla completa falsa"
+; EN: BorderlessFSHelp="Unreal should run game in fake fullscreen (borderless windowed) mode."
+BorderlessFSHelp="Especifica si Unreal ha d'executar el joc en mode de pantalla completa falsa (finestra sense vores)."
 
 [UMenuPlayerSetupClient]
 EditAreaWidth=110

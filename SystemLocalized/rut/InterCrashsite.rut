@@ -11,6 +11,7 @@ Title="Рипербан ночь 1:30"
 LevelEnterText="Эх, я мог бы использовать новую работу ..."
 
 [TransitionGenderEvent0]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/rut/Interm5.uax
 OutDelays[1]=29.500000
 ; EN: MaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
 MaleText[0]="'Прометей' разбился в этой долине, разбрасывая обломки, пока он нёсся вниз к земле. Везде трупы. Похоже, что вся команда погибла. Сто пятьдесят человек! Как я ненавижу эту планету! Корабль в ужасном состоянии. Корпус пробит в нескольких местах. Один из реакторов двигателей расплавлен. И всё это кишит местными образчиками фауны. Но я близок к цели. Осталось только найти носители данных и включить радиомаяк на мостике."

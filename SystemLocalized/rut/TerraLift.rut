@@ -16,26 +16,26 @@ Message="ТРЕВОГА"
 
 [TranslatorEvent0]
 ; EN: Message="Biowaste Flow Control: the Biowaste flow is constant. Monitor it for dangerous fluctuations in viscosity or pressure. The alarm still seems to have problems, in case of malfunction activate the two override controls."
-Message="Управление потоком био отходов: поток непрерывный. Следите за показателями давления и вязкости. Сбой в системе оповещения об опасности, в случае сбоя активируйте запасное управление."
+Message="Управление потоком биологических отходов: поток непрерывный. Следите за опасными изменениями вязкости и давления. Кажется с сигнализацией всё ещё есть проблемы, в случае сбоя активируйте два запасных выключателя."
 ; EN: AltMessage="Lift activated. All personnel are reminded to complete assigned tasks."
-AltMessage="Лифт включен. Напоминание всему персоналу — выполняйте свою работу."
+AltMessage="Лифт включён. Напоминание всему персоналу - выполняйте свою работу."
 
 [TranslatorEvent5]
 ; EN: Message="Drainage Status: Biowaste flow is at nominal levels. All pumps operational. Section C empty and available for any Biowaster overflow. Please be sure that the regular pipe maintenance is handled."
-Message="Состояние стоков: поток био отходов номинальный. Все помпы задействованы. Секция C пуста и готова для перенаправления отходов. Пожалуйста, убедитесь, что выполняется регулярное обслуживание трубы."
+Message="Состояние стоков: поток биологических отходов на номинальном уровне. Все насосы задействованы. Секция C пуста и готова для заполнения отходами. Пожалуйста, убедитесь, что выполняется регулярное обслуживание трубы."
 
 [TranslatorEvent4]
 ; EN: Message="Security Status: Intruder detected at entrance. Activating security screens on Scientific Research Lab and Hydroponics Section. All security elements deploy around access points in Sections A, B and C to deny intruder access to Lift 1."
-Message="Статус системы охраны: вторжение зафиксировано у главного входа. Активировать защитные экраны на исследовательской лаборатории и в теплицах. Мобилизовать все силы безопасности вокруг контрольных точек в секторе A, B и C чтобы помешать незваному гостю  получить доступ к лифту №1."
+Message="Статус системы охраны: Вторжение зафиксировано у входа. Активировать защитные экраны в Исследовательской Лаборатории и в Теплице. Мобилизовать все силы безопасности вокруг контрольных точек в Секциях A, B и C, чтобы помешать нарушителю получить доступ к Первому Лифту."
 ; EN: Hint="Find the Containment rooms A, B and C and activate the buttons to access the Lift 1."
-Hint="Отыщите комнаты A,B и C и активируйте кнопки чтобы получить доступ к лифту 1."
+Hint="Найдите комнаты Удержания A,B и C и активируйте кнопки, что бы получить доступ к Первому Лифту."
 
 [TranslatorEvent3]
 ; EN: Message="Control Room Status: Pressurized and locked. Do not access except in case of emergency situation."
-Message="Состояние комнаты управления: Герметично и закрыто. Не входить, за исключением аварийных ситуаций."
+Message="Состояние Комнаты Управления: Герметично и закрыто. Не входить, за исключением аварийных ситуаций."
 
 [TranslatorEvent1]
 ; EN: Message="Pumping station has been activated, expected storage capacity after operation: 32%."
-Message="Насосная станция активирована. Предполагаемая вместимость после выполнения операции 32%."
+Message="Насосная станция активирована, предполагаемая вместимость после выполнения операции: 32%."
 ; EN: AltMessage="Section D: 54% of full capacity reached."
-AltMessage="Секция D: Заполнено на 54%."
+AltMessage="Секция D: достигнуто 54% от полной ёмкости."
