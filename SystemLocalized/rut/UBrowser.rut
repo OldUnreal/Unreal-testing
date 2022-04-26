@@ -2,26 +2,6 @@
 Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
 Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
-[UBrowserServerListWindow]
-; EN: InfoName="Info"
-InfoName="Инфо"
-; EN: PlayerCountName="Players"
-PlayerCountName="Игроков"
-; EN: ServerCountName="Servers"
-ServerCountName="Серверов"
-; EN: QueryServerText="Querying Master Server (hit F5 if nothing happens)"
-QueryServerText="Опрашиваю Мастер Сервер (нажмите F5, если ничего не происходит)"
-; EN: QueryFailedText="Master Server Failed: "
-QueryFailedText="Неудача опроса Мастер Сервера: "
-; EN: PingingText="Pinging Servers"
-PingingText="Пингую сервера"
-; EN: CompleteText="Complete"
-CompleteText="Сделано"
-
-[UBrowserMainWindow]
-; EN: WindowTitleString="Server Browser"
-WindowTitleString="Обозреватель серверов"
-
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
 ResolveFailedError="Мастер сервер не может быть найден в ДНС: "
@@ -50,6 +30,22 @@ RuleText="Правило"
 ; EN: ValueText="Value"
 ValueText="Значение"
 
+[UBrowserServerListWindow]
+; EN: InfoName="Info"
+InfoName="Инфо"
+; EN: PlayerCountName="Players"
+PlayerCountName="Игроков"
+; EN: ServerCountName="Servers"
+ServerCountName="Серверов"
+; EN: QueryServerText="Querying Master Server (hit F5 if nothing happens)"
+QueryServerText="Опрашиваю Мастер Сервер (нажмите F5, если ничего не происходит)"
+; EN: QueryFailedText="Master Server Failed: "
+QueryFailedText="Неудача опроса Мастер Сервера: "
+; EN: PingingText="Pinging Servers"
+PingingText="Пингую сервера"
+; EN: CompleteText="Complete"
+CompleteText="Сделано"
+
 [UBrowserServerPing]
 ; EN: AdminEmailText="Admin Email"
 AdminEmailText="Email админа"
@@ -69,14 +65,14 @@ GameModeText="Режим игры"
 GameTypeText="Тип игры"
 ; EN: GameVersionText="Game Version"
 GameVersionText="Версия игры"
+; EN: GameSubVersionText="Game SubVersion"
+GameSubVersionText="ПодВерсия игры"
 ; EN: WorldLogText="ngStats World Stat-Logging"
 WorldLogText="Глоб. лог ngStats"
 ; EN: TrueString="Enabled"
 TrueString="Включено"
 ; EN: FalseString="Disabled"
 FalseString="Выключено"
-; EN: GameSubVersionText="Game SubVersion"
-GameSubVersionText="ПодВерсия игры"
 ; EN: MapFileString="Map Filename"
 MapFileString="Имя файла карты"
 ; EN: DLLString="C++ Library"
@@ -118,19 +114,23 @@ AttachName="&Прикрепить окно"
 ; EN: CloseName="&Close"
 CloseName="&Закрыть окно"
 
+[UBrowserMainWindow]
+; EN: WindowTitleString="Unreal Server Browser"
+WindowTitleString="Обозреватель серверов Unreal"
+
 [UBrowserRightClickMenu]
 ; EN: RefreshName="&Refresh All Servers"
 RefreshName="&Обновить все сервера"
 ; EN: FavoritesName="Add to &Favorites"
 FavoritesName="Добавить в &Избранные"
-; EN: RemoveFavoritesName="Remove from &Favorites"
-RemoveFavoritesName="Убрать из &Избранных"
 ; EN: RefreshServerName="&Ping This Server"
 RefreshServerName="&Пинговать этот сервер"
-; EN: PingAllName="Ping &All Servers"
-PingAllName="Пинговать &все сервера"
 ; EN: InfoName="&Server and Player Info"
 InfoName="&Инфо о Сервере и Игроках"
+; EN: PingAllName="Ping &All Servers"
+PingAllName="Пинговать &все сервера"
+; EN: RemoveFavoritesName="Remove from &Favorites"
+RemoveFavoritesName="Убрать из &Избранных"
 ; EN: JoinPasswordName="Join with &Password"
 JoinPasswordName="Присоединиться с &Паролем"
 ; EN: JoinServerName="&Join server"
@@ -158,6 +158,16 @@ SkinText="Скин"
 ; EN: IDText="ID"
 IDText="ID"
 
+[UBrowserLibPageWindow]
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
+DLLTitleStr="Не могу соединиться: Не найдена динамическая библиотека "%ls"."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
+DLLVerTitleStr="Не могу соединиться: Версия динамической библиотеки не совпадает "%ls"."
+; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
+InfoText[0]="Для соединения с этим сервером вам нужна дополнительная библиотека C++ "%ls"."
+; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
+InfoText[1]="дополнительную информацию вы можете получить отсюда (предоставлено %ls):"
+
 [UBrowserConsole]
 ; EN: ClassCaption="Unreal Browser Console"
 ClassCaption="Консоль с Unreal Browser"
@@ -169,18 +179,8 @@ OpenText="Открыть:"
 OpenHelp="Введите стандартное URL, или выберете из истории URL. Нажмите Возврат для активации."
 
 [UBrowserServerWebWin]
-; EN: WindowTitle="Web Explorer"
-WindowTitle="Веб обозреватель"
-
-[UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLTitleStr="Не могу соединиться: Не найдена динамическая библиотека "%ls"."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-DLLVerTitleStr="Не могу соединиться: Версия динамической библиотеки не совпадает "%ls"."
-; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[0]="Для соединения с этим сервером вам нужна дополнительная библиотека C++ "%ls"."
-; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
-InfoText[1]="дополнительную информацию вы можете получить отсюда (предоставлено %ls):"
+; EN: WindowTitle="Unreal Web Explorer"
+WindowTitle="Веб обозреватель Unreal"
 
 [UBrowserServerWebCW]
 ; EN: RefreshString="Refresh page"

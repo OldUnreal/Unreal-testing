@@ -3,8 +3,9 @@
 Title="Антракт 6"
 
 [TransitionGenderEvent0]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/rut/Interm6.uax
 OutDelays[1]=5.000000
 ; EN: MaleText[0]="Life was hard. Then it got harder. I hate Titans."
 MaleText[0]="Всё было и так плохо, а теперь ещё хуже. Ненавижу титанов."
 ; EN: FemaleText[0]="Life was hard. Then it got harder. I hate Titans."
-FemaleText[0]="Всё было и так плохо, а теперь ещё хуже. Ненавижу титанов." 
+FemaleText[0]="Всё было и так плохо, а теперь ещё хуже. Ненавижу титанов."

@@ -2,15 +2,6 @@
 Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
 Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
-[UBrowserServerListWindow]
-InfoName="Info"
-PlayerCountName="Players"
-ServerCountName="Servers"
-QueryServerText="Querying master server (hit F5 if nothing happens)"
-QueryFailedText="Master Server Failed: "
-PingingText="Pinging Servers"
-CompleteText="Complete"
-
 [UBrowserGSpyLink]
 ResolveFailedError="The master server could not be resolved: "
 TimeOutError="Timeout talking to the master server"
@@ -28,6 +19,15 @@ NotReadyError="Window is not ready: "
 [UBrowserRulesGrid]
 RuleText="Rule"
 ValueText="Value"
+
+[UBrowserServerListWindow]
+InfoName="Info"
+PlayerCountName="Players"
+ServerCountName="Servers"
+QueryServerText="Querying master server (hit F5 if nothing happens)"
+QueryFailedText="Master Server Failed: "
+PingingText="Pinging Servers"
+CompleteText="Complete"
 
 [UBrowserServerPing]
 AdminEmailText="Admin Email"
@@ -73,10 +73,10 @@ WindowTitleString="Unreal Server Browser"
 [UBrowserRightClickMenu]
 RefreshName="&Refresh All Servers"
 FavoritesName="Add to &Favorites"
-RemoveFavoritesName="Remove from &Favorites"
 RefreshServerName="&Ping This Server"
-PingAllName="Ping &All Servers"
 InfoName="&Server and Player Info"
+PingAllName="Ping &All Servers"
+RemoveFavoritesName="Remove from &Favorites"
 JoinPasswordName="Join with &Password"
 JoinServerName="&Join server"
 SpectateServerName="Join as &Spectator"

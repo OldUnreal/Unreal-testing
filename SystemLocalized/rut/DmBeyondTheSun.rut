@@ -7,3 +7,31 @@ IdealPlayerCount="4-8"
 ; EN: Title="Beyond The Sun"
 Title="За пределами Солнца"
 IdealPlayerCount="4-8"
+
+[ZoneInfo0]
+; EN: ZoneName="East Island, Inside"
+ZoneName="Восточный остров, внутри"
+
+[ZoneInfo1]
+; EN: ZoneName="East Island, Lower Corridor"
+ZoneName="Восточный остров, нижний коридор"
+
+[ZoneInfo2]
+; EN: ZoneName="South Island"
+ZoneName="Южный остров"
+
+[ZoneInfo3]
+; EN: ZoneName="Inner Corridors, West Wing"
+ZoneName="Внутренние коридоры, западное крыло"
+
+[ZoneInfo4]
+; EN: ZoneName="Outside"
+ZoneName="Снаружи"
+
+[ZoneInfo5]
+; EN: ZoneName="Inner Corridors, Center"
+ZoneName="Внутренние коридоры, центр"
+
+[ZoneInfo6]
+; EN: ZoneName="Inner Corridors, East Wing"
+ZoneName="Внутренние коридоры, восточное крыло"

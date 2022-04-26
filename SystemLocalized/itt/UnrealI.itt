@@ -444,7 +444,7 @@ FemKillMessage="%k ha preso un pezzo sanguinante di %o con %w."
 ; EN: PickupMessage="You got the RazorJack"
 PickupMessage="Hai preso il RazorJack"
 ; EN: ItemName="Razorjack"
-ItemName="Razorjack"
+ItemName="RazorJack"
 
 [Squid]
 ; EN: NameArticle=" a "

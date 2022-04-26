@@ -3,6 +3,7 @@
 Title="Антракт 2"
 
 [TransitionGenderEvent2]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/rut/Interm2.uax
 OutDelays[1]=26.500000
 ; EN: MaleText[0]="After a leap of faith, I'm pausing to record a log entry. I'm still shaken up after running into the Skaarj and their filthy minions. I guess I thought I saw the last of them when I killed the Skaarj Queen on the mother ship... it seems like an eternity ago. Is there another colony nearby? Where are they coming from? This is like a recurring nightmare. Still no sign of the Prometheus. Time to move on."
 MaleText[0]="Даже сейчас, сидя тут в безопасности и делая запись в журнале, я до сих пор трясусь, вспоминая, как попал прямо в самую кучу мерзких скааров. Я думал, что видел их в последний раз, когда убил их матку на главном корабле. Но, кажется, это никогда не кончится. Здесь что, ещё одно их гнездо? Откуда они взялись? Это как повторяющийся страшный сон. 'Прометея' всё ещё не видно. Пора двигаться."

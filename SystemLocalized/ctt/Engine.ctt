@@ -192,6 +192,8 @@ NeedPassword="Es necessita introduir una contrasenya per unir-se a aquest joc."
 MaleGender="seu"
 ; EN: FemaleGender="her"
 FemaleGender="seu"
+; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
+MaxedOutSpectatorsMsg="Màxim d'espectadors superat"
 
 [Weapon]
 ; EN: MessageNoAmmo=" has no ammo."

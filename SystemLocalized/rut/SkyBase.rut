@@ -36,11 +36,11 @@ Message="Управление левой дверью ангара"
 
 [TranslatorEvent2]
 ; EN: Message="Message Log 7: Mothership acknowledges request for resupply of Outpost 3J. Scout Skimmer 3J-1A authorized to return to the mothership to pick up cargo."
-Message="Журнал Сообщение №7: Материнский корабль подтвердил получение запроса о пополнении запасов Аванпоста. Разведывательный-грузовой корабль 3J-1А  заберет груз с материнского корабля."
+Message="Журнал Сообщение №7: Материнский корабль подтвердил получение запроса о пополнении запасов Аванпоста. Разведывательно-грузовой корабль 3J-1А  заберет груз с материнского корабля."
 
 [TranslatorEvent1]
 ; EN: Message="Main Bay Door Controls"
-Message="Управление основными дверьми"
+Message="Управление основными дверями"
 
 [TranslatorEvent10]
 ; EN: Message="Lower Security Access Panel"
@@ -48,7 +48,7 @@ Message="Пульт управления нижнего уровня"
 
 [TranslatorEvent9]
 ; EN: Message="No unauthorized access to lower church catacombs. All personnel must be checked by security before access is granted."
-Message="Несанкционированный доступ к церковным катакомбам запрещен. Весь персонал должен быть проверен службой безопасности прежде чем получит доступ."
+Message="Несанкционированный доступ к церковным катакомбам запрещен. Весь персонал должен быть проверен службой безопасности, прежде, чем получит доступ."
 
 [TranslatorEvent8]
 ; EN: Message="Teleporter target coordinates set for surface transporter pad 13. Sentry personnel already dispatched to location to secure area against resistance. Area cleared for cargo transmission."

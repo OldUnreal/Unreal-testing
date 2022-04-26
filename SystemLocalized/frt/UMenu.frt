@@ -432,6 +432,10 @@ LightLODText="Niveau Détail Lightmap"
 LightLODHelp="Modifie l'agressivité du LOD d'éclairage sur le monde (une valeur inférieure signifie que cela réduira le framerate de lumière sur les scènes complexes)."
 ; EN: NotAvailableText="Not available"
 NotAvailableText="Indisponible"
+; EN: BorderlessFSText="Fake Fullscreen"
+BorderlessFSText="Faux plein écran"
+; EN: BorderlessFSHelp="Unreal should run game in fake fullscreen (borderless windowed) mode."
+BorderlessFSHelp="Spécifie si Unreal doit exécuter le jeu en faux mode plein écran (fenêtre sans bordure)."
 
 [UMenuPlayerSetupClient]
 EditAreaWidth=110

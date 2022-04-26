@@ -14,28 +14,31 @@ Object=(Name=OldWeapons.OldRifle,Class=Class,MetaClass=Engine.Weapon)
 
 [OldDispersionPistol]
 ; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
-DeathMessage="%o был убит из дисперсионного пистолета %k, вот неудачник!"
-FemDeathMessage="%o была убита из дисперсионного пистолета %k, вот неудачница!"
+DeathMessage="%k пристрелил %o из дисперсионного пистолета. Вот неудачник!"
+FemDeathMessage="%k пристрелила %o из дисперсионного пистолета. Вот неудачникца!"
+FemKillMessage="%k пристрелила %o из дисперсионного пистолета. Вот неудачникца!"
 ; EN: PickupMessage="You got the Dispersion Pistol"
-PickupMessage="Вы подобрали дисперсионный пистолет"
+PickupMessage="Вы получили дисперсионный пистолет"
 ; EN: ItemName="Dispersion Pistol"
 ItemName="Дисперсионный пистолет"
 
 [OldASMD]
 ; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
-DeathMessage="%k нанёс смертельное ранение %o из %w."
-FemKillMessage="%k нанесла смертельное ранение %o из %w."
+DeathMessage="%k нанёс смертельный ущерб %o из %w."
+FemDeathMessage="%k нанесла смертельный ущерб %o из %w."
+FemKillMessage="%k нанесла смертельный ущерб %o из %w."
 ; EN: PickupMessage="You got the ASMD"
-PickupMessage="Вы подобрали ASMD"
+PickupMessage="Вы получили ASMD"
 ; EN: ItemName="ASMD"
 ItemName="ASMD"
 
 [OldEightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
-DeathMessage="%o был размазан по стенам из %w %k."
-FemDeathMessage="%o была размазана по стенам из %w %k."
+DeathMessage="%k разорвал %o на куски из %w'а."
+FemDeathMessage="%k разорвала %o на куски из %w'а."
+FemKillMessage="%k разорвала %o на куски из %w'а."
 ; EN: PickupMessage="You got the Eightball gun"
-PickupMessage="Вы подобрали Восьмой мяч"
+PickupMessage="Вы получили Восьмой мяч"
 ; EN: ItemName="Eightball"
 ItemName="Восьмой мяч"
 
@@ -61,12 +64,13 @@ ItemName="Зенитная пушка"
 
 [OldAutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
-DeathMessage="%o был застрелен из пистолета %k"
-FemDeathMessage="%o была застрелена из пистолета %k"
+DeathMessage="%k расстрелял %o из %wа."
+FemDeathMessage="%k расстреляла %o из %wа."
+FemKillMessage="%k расстреляла %o из %wа."
 ; EN: PickupMessage="You got the Automag"
-PickupMessage="Вы подобрали Автомаг"
+PickupMessage="Вы получили пистолет"
 ; EN: ItemName="Automag"
-ItemName="Автомаг"
+ItemName="Пистолет"
 
 [OldMinigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
@@ -90,19 +94,20 @@ ItemName="Биовинтовка GES"
 
 [OldAmplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
-ExpireMessage="Заряд усилителя закончился."
+ExpireMessage="Энергия усилителя кончилась."
 ; EN: PickupMessage="You got the Energy Amplifier"
-PickupMessage="Вы подобрали энергоусилитель."
+PickupMessage="Вы получили Усилитель энергии"
 ; EN: ItemName="Energy Amplifier"
-ItemName="Усилитель"
+ItemName="Усилитель энергии"
 M_Selected=" выбран."
 M_Activated=" активирован."
 M_Deactivated=" деактивирован."
 
 [OldStinger]
 ; EN: DeathMessage="%o was perforated by %k's %w."
-DeathMessage="%o был продырявлен из %w %k"
-FemDeathMessage="%o была продырявлена из %w %k."
+DeathMessage="%o был перфорирован %wом %k."
+FemDeathMessage="%o была перфорирован %wом %k."
+FemKillMessage="%o была перфорирован %wом %k."
 ; EN: PickupMessage="You picked up the Stinger"
 PickupMessage="Вы подобрали Стингер"
 ; EN: ItemName="Stinger"
@@ -110,9 +115,9 @@ ItemName="Стингер"
 
 [OldShellBox]
 ; EN: PickupMessage="You picked up 50 bullets"
-PickupMessage="Вы подобрали ящик с патронами"
+PickupMessage="Вы подобрали 50 пуль"
 ; EN: ItemName="Bullet Box"
-ItemName="ящик с патронами"
+ItemName="пуль"
 
 [OldRifleAmmo]
 ; EN: PickupMessage="You got 8 Rifle Rounds"
@@ -122,9 +127,9 @@ ItemName="патронов к винтовке"
 
 [OldWeaponPowerUp]
 ; EN: PickupMessage="You got the Dispersion Pistol Powerup"
-PickupMessage="Вы подобрали модификатор для дисперсионного пистолета"
+PickupMessage="Вы получили улучшитель дисперсионного пистолета"
 ; EN: ItemName="Dispersion Pistol Powerup"
-ItemName="модификатор для дисперсионного пистолета"
+ItemName="улучшитель дисперсионного пистолета"
 
 [OldFlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
@@ -146,19 +151,19 @@ ItemName="Резак"
 ; EN: PickupMessage="You picked up some ammo"
 PickupMessage="Вы подобрали немного боеприпасов"
 ; EN: ItemName="Ammo"
-ItemName="Боеприпасы"
+ItemName="боеприпасов"
 
 [OldASMDAmmo]
 ; EN: PickupMessage="You picked up an ASMD core"
-PickupMessage="Вы подобрали заряды к ASMD"
+PickupMessage="Вы подобрали ядро ASMD"
 ; EN: ItemName="ASMD Core"
-ItemName="заряды к ASMD"
+ItemName="ядро ASMD"
 
 [OldStingerAmmo]
 ; EN: PickupMessage="You picked up 40 Tarydium Shards"
-PickupMessage="Вы подобрали кристаллы таридиума"
+PickupMessage="Вы подобрали 40 кристаллов таридиума"
 ; EN: ItemName="Tarydium Shards"
-ItemName="кристаллы таридиума"
+ItemName="кристаллов таридиума"
 
 [OldRazorAmmo]
 ; EN: PickupMessage="You picked up Razor Blades"
@@ -174,9 +179,9 @@ ItemName="таридиумных соплей"
 
 [OldRocketCan]
 ; EN: PickupMessage="You picked up 12 Eightballs"
-PickupMessage="Вы подобрали ракеты для Eightball"
+PickupMessage="Вы подобрали 12 ракет"
 ; EN: ItemName="Eightballs"
-ItemName="ракеты для Eightball"
+ItemName="ракет"
 
 [OldClip]
 ; EN: PickupMessage="You picked up a Clip"

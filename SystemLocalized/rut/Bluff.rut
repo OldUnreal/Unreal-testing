@@ -30,7 +30,7 @@ AltMessage="МАГНИТНЫЕ ЗАМКИ ОТКЛЮЧЕНЫ"
 
 [TranslatorEvent9]
 ; EN: Message="STATIC DISCHARGE NODES: EAST AND WEST BREAKERS MUST BE THROWN TO RELEASE STATIC DISCHARGE."
-Message="Статические узлы разгрузки: Восточный и западный рубильники должны быть опущены чтобы запустить статическую разгрузку."
+Message="Статические узлы разгрузки: Восточный и западный рубильники должны быть опущены что бы запустить статическую разгрузку."
 ; EN: AltMessage="STATIC DISCHARGE SUCCESSFUL - HYDRO-ELECTRIC SHIPPING CAR NOW FULLY OPERATIONAL."
 AltMessage="Статическая разгрузка произведена успешно. Гидроэлектрический транспортер теперь полностью функционирует."
 
@@ -44,11 +44,11 @@ Message="Алтарник Нефер Дунис 350-488"
 
 [TranslatorEvent14]
 ; EN: Message="The woman they captured is scheduled to be executed. I cannot let this happen! As foolish as it sounds I will attempt to sneak her out of the prison cell through our secret caves. From there she can escape to the bell tower until darkness."
-Message="Я боюсь что они хотят причинить вред этой девушке. Я не могу позволить этому случиться! Как бы глупо это не звучало, но я попробую тайно вывести её из тюрьмы через наши секретные пещеры. Оттуда она сможет попасть в колокольню до наступления темноты."
+Message="Я боюсь что они хотят причинить вред этой девушке. Я не могу позволить этому случиться! Как бы глупо это не звучало, но я попробую тайно вывести её из тюрьмы через наши секретные пещеры. Оттуда она сможет попасть в колокольню до наступления темноты.."
 
 [TranslatorEvent5]
 ; EN: Message="SKAARJ SHIPPING FACILITY POWER MANAGEMENT STATION: HYDRO-ELECTRIC SHIPPING CAR STATUS - OFF / REACTIVATION REQUIRES STATIC DISCHARGE NODES TO BE OPENED AT TOP OF BELL TOWER."
-Message="Станция управления подачей питания на транспортер: гидроэлектрический транспортер – отключение и повторное включение требует чтобы статические узлы разгрузки были открыты наверху колокольни."
+Message="Станция управления подачей питания на транспортер: гидроэлектрический транспортер – отключение и повторное включение требует что-бы статические узлы разгрузки были открыты наверху колокольни."
 
 [TranslatorEvent10]
 ; EN: Message="HAVE FAITH AND NEVER SWAY FROM YOUR BELIEFS. ONLY A SOUL THAT KEEPS THE FAITH DESPITE ALL OPPRESSION SHALL TRIUMPH WHEN THE SAVIOUR PRINCESS COMES FROM THE STARS"
@@ -108,7 +108,7 @@ Hint="Найди секретный рычаг на кладбище"
 
 [TranslatorEvent2]
 ; EN: Message="Science Officer Kira Argmanov: Separated from my crewmates from ISV-KRAN, I've only been able to stay alive by holding up in this bell tower. A native Nali help me escape the prison cell the Skaarj put me in. Hopefully the Skaarj won't find me here."
-Message="Старший научный сотрудник Кира Аргманова: отделившись от моих товарищей с ИСВ-Кран все что я могу предпринять чтобы выжить это прятаться в этой колокольне. Местные Нали помогли мне совершить побег из тюремной камеры где меня удерживали Скааржи. Надеюсь что Сккаржи не будут искать меня здесь."
+Message="Старший научный сотрудник Кира Аргманова: отделившись от моих товарищей с ИСВ-Кран все что я могу предпринять что-бы выжить это прятаться в этой колокольне. Местные Нали помогли мне совершить побег из тюремной камеры где меня удерживали Скааржи. Надеюсь что Сккаржи не будут искать меня здесь."
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."

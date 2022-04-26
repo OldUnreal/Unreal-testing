@@ -54,36 +54,6 @@ Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Ho
 ; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
 Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Homme1;M1 Homme7")
 Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
-; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
-Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Arme,Tirer")
-; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
-Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Arme,Tir Secondaire")
-; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
-Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Arme,Arme Suiv.")
-; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
-Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Arme,Arme Préc.")
-; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
-Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Arme,Jeter arme")
-; EN: Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Weapon,Disp. Pistol")
-Object=(Name="SwitchWeapon 1",Class=Class,MetaClass=Engine.Input,Description="Arme,Pistolet à Dispersion")
-; EN: Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag/4-Shot")
-Object=(Name="SwitchWeapon 2",Class=Class,MetaClass=Engine.Input,Description="Arme,AutoMag/Quad. Fusil")
-; EN: Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger/CAR")
-Object=(Name="SwitchWeapon 3",Class=Class,MetaClass=Engine.Input,Description="Arme,Stinger/Fusil Assaut")
-; EN: Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD/UMS GL")
-Object=(Name="SwitchWeapon 4",Class=Class,MetaClass=Engine.Input,Description="Arme,ASMD/LG UMS")
-; EN: Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Weapon,8-Ball/UMS RL/Peacemaker")
-Object=(Name="SwitchWeapon 5",Class=Class,MetaClass=Engine.Input,Description="Arme,L.Roquet./LR UMS/Pacific.")
-; EN: Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
-Object=(Name="SwitchWeapon 6",Class=Class,MetaClass=Engine.Input,Description="Arme,Canon Flak")
-; EN: Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
-Object=(Name="SwitchWeapon 7",Class=Class,MetaClass=Engine.Input,Description="Arme,Lance-lames")
-; EN: Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
-Object=(Name="SwitchWeapon 8",Class=Class,MetaClass=Engine.Input,Description="Arme,Fusil Bio GES")
-; EN: Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
-Object=(Name="SwitchWeapon 9",Class=Class,MetaClass=Engine.Input,Description="Arme,Fusil Précision")
-; EN: Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun/Transloc.")
-Object=(Name="SwitchWeapon 10",Class=Class,MetaClass=Engine.Input,Description="Arme,Minigun/Téléporteur")
 ; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
 Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Avancer")
 ; EN: Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
@@ -106,14 +76,6 @@ Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Movement,
 Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Movement,Dpl. Latéral")
 ; EN: Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Movement,Feign Death")
 Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Movement,Simuler Mort")
-; EN: Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
-Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Utiliser")
-; EN: Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
-Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Objet Suiv.")
-; EN: Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
-Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Objet Préc.")
-; EN: Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Translator")
-Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Util. Traducteur")
 ; EN: Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="View,Mouse Look")
 Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="Vue,Vue Souris")
 ; EN: Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="View,Look Up")
@@ -124,6 +86,56 @@ Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="Vue,Vise
 Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="Vue,Centrer Vue")
 ; EN: Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="View,Toggle Behindview")
 Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="Vue,Vue 3ème Pers.")
+; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
+Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Arme,Tirer")
+; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
+Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Arme,Tir Secondaire")
+; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
+Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Arme,Arme Suiv.")
+; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
+Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Arme,Arme Préc.")
+; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
+Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Arme,Jeter arme")
+; EN: Object=(Name="GetWeapon UnrealShare.DispersionPistol",Class=Class,MetaClass=Engine.Input,Description="Weapon,Dispersion Pistol")
+Object=(Name="GetWeapon UnrealShare.DispersionPistol",Class=Class,MetaClass=Engine.Input,Description="Arme,Pistolet à Dispersion")
+; EN: Object=(Name="GetWeapon UnrealShare.Automag",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag")
+Object=(Name="GetWeapon UnrealShare.Automag",Class=Class,MetaClass=Engine.Input,Description="Arme,AutoMag")
+; EN: Object=(Name="GetWeapon UnrealShare.Stinger",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger")
+Object=(Name="GetWeapon UnrealShare.Stinger",Class=Class,MetaClass=Engine.Input,Description="Arme,Stinger")
+; EN: Object=(Name="GetWeapon UnrealShare.ASMD",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD")
+Object=(Name="GetWeapon UnrealShare.ASMD",Class=Class,MetaClass=Engine.Input,Description="Arme,ASMD")
+; EN: Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Weapon,Eightball")
+Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Arme,Lance-roquettes")
+; EN: Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
+Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Arme,Canon Flak")
+; EN: Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
+Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Arme,Lance-lames")
+; EN: Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
+Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Arme,Fusil Bio GES")
+; EN: Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
+Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Arme,Fusil de Précision")
+; EN: Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun")
+Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Description="Arme,Minigun")
+; EN: Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Combat Assault Rifle")
+Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Arme,Fusil d'Assaut")
+; EN: Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Grenade Launcher")
+Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Arme,Lance-grenades UMS")
+; EN: Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Rocket Launcher")
+Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Arme,Lance-missiles UMS")
+; EN: Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Weapon,Quad-Barreled Shotgun")
+Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Arme,Fusil à Quadruple Pompe")
+; EN: Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Weapon,Translocator")
+Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Arme,Téléporteur")
+; EN: Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,Description="Weapon,Peacemaker")
+Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,Description="Arme,Negociateur")
+; EN: Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
+Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Utiliser")
+; EN: Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
+Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Objet Suiv.")
+; EN: Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
+Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Objet Préc.")
+; EN: Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Translator")
+Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Util. Traducteur")
 ; EN: Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Game,Grab Decoration")
 Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Jeu,Attraper")
 ; EN: Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Game,Suicide")
@@ -1118,6 +1130,14 @@ MenuList[5]="Les mots de passe s'entrent maintenant dans le Server browser d'Unr
 MenuList[6]="Spectateur:" 
 ; EN: MenuList[7]="Start Game"
 MenuList[7]="Lancer la Partie"
+; EN: HelpMessage[8]="Should use mutators with this game?"
+HelpMessage[8]="Spécifie si la session en cours doit être jouée avec des mutateurs."
+; EN: HelpMessage[9]="Select which mutators to use with this game."
+HelpMessage[9]="Sélectionnez les mutateurs à utiliser avec ce jeu."
+; EN: MenuList[8]="Mutators:"
+MenuList[8]="Mutateurs:"
+; EN: MenuList[9]="Select Mutators"
+MenuList[9]="Sélectionner les mutateurs"
 
 [UnrealPlayerMenu]
 ; EN: Teams[0]="Red"
@@ -1144,6 +1164,10 @@ MenuList[2]="Couleur:"
 MenuList[3]="Skin:"
 ; EN: MenuTitle="Select Digital Representation"
 MenuTitle="Sélection de l'avatar"
+; EN: HelpMessage[4]="Change your face skin using the left and right arrow keys."
+HelpMessage[4]="Changez l'apparence de votre visage à l'aide des touches fléchées gauche et droite."
+; EN: MenuList[4]="Face:"
+MenuList[4]="Visage:"
 
 [UnrealJoinGameMenu]
 ; EN: InternetOption="(Dial-Up)"
@@ -1573,3 +1597,15 @@ ItemName="Muguet"
 PickupMessage="Vous avez cueilli un Beau Brin de Muguet +"
 ; EN: ItemName="Master of the woods"
 ItemName="Muguet"
+
+[UnrealMutatorMenu]
+; EN: InUseString="In Use"
+InUseString="En cours d'utilisation"
+; EN: NotInUseString="Inactive"
+NotInUseString="Inactif"
+; EN: HelpMessage[0]="Return back to previous menu"
+HelpMessage[0]="Revenir au menu précédent"
+; EN: MenuList[0]="Return"
+MenuList[0]="Retour"
+; EN: MenuTitle="MUTATORS"
+MenuTitle="MUTATEURS"

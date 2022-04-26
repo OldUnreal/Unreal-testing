@@ -432,6 +432,10 @@ LightLODText="ND Mapas de Luz"
 LightLODHelp="Cambia el nivel de detalle de impacto de los mapas de luz (lightmaps) en el mundo (los valores menores implican menor impacto de luz en escenas muy complejas)."
 ; EN: NotAvailableText="Not available"
 NotAvailableText="No disponible"
+; EN: BorderlessFSText="Fake Fullscreen"
+BorderlessFSText="Pant. Comp. Falsa"
+; EN: BorderlessFSHelp="Unreal should run game in fake fullscreen (borderless windowed) mode."
+BorderlessFSHelp="Especifica si Unreal debería correr en modo de pantalla completa falsa (ventana sin bordes)."
 
 [UMenuPlayerSetupClient]
 EditAreaWidth=110
