@@ -68,7 +68,7 @@ IDC_Prompt="To pierwsze uruchomienie gry Unreal. Jeśli napotkasz jakiekolwiek p
 
 [IDDIALOG_ConfigPageRenderer]
 IDC_ConfigPageRenderer=" "
-; EN: IDC_RenderPrompt="Your computer supports the following 3D video devices. Chose the optimal one for your system."
+; EN: IDC_RenderPrompt="Your computer supports the following 3D video devices. Choose the optimal one for your system."
 IDC_RenderPrompt="Ten komputer obsługuje następujące opcje wyświetlania grafiki. Proszę wybrać tę, która jest optymalna dla zainstalowanej karty graficznej."
 IDC_RenderNote=" "
 ; EN: IDC_Compatible="Show certified, compatible devices"
@@ -78,7 +78,7 @@ IDC_All="Wszystkie opcje"
 
 [IDDIALOG_ConfigPageSound]
 IDC_ConfigPageSound=" "
-; EN: IDC_SoundPrompt="Your computer supports the following sound devices.  Chose the optimal one for your system."
+; EN: IDC_SoundPrompt="Your computer supports the following sound devices.  Choose the optimal one for your system."
 IDC_SoundPrompt="Ten komputer obsługuje następujące opcje odtwarzania dźwięku. Proszę wybrać tę, która jest optymalna dla zainstalowanej karty graficznej."
 IDC_SoundNote=" "
 ; EN: IDC_Compatible="Show certified, compatible devices"
