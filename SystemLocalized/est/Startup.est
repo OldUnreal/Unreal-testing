@@ -68,7 +68,7 @@ IDC_Prompt="Unreal está iniciándose por primera vez. Si te encuentras con alg�
 
 [IDDIALOG_ConfigPageRenderer]
 IDC_ConfigPageRenderer=" "
-; EN: IDC_RenderPrompt="Your computer supports the following 3D video devices. Chose the optimal one for your system."
+; EN: IDC_RenderPrompt="Your computer supports the following 3D video devices. Choose the optimal one for your system."
 IDC_RenderPrompt="Tu ordenador soporta los siguientes dispositivos de video en 3D. Elige el que más se adecúe a tu sistema."
 IDC_RenderNote=" "
 ; EN: IDC_Compatible="Show certified, compatible devices"
@@ -78,7 +78,7 @@ IDC_All="Mostrar todos los dispositivos"
 
 [IDDIALOG_ConfigPageSound]
 IDC_ConfigPageSound=" "
-; EN: IDC_SoundPrompt="Your computer supports the following sound devices.  Chose the optimal one for your system."
+; EN: IDC_SoundPrompt="Your computer supports the following sound devices.  Choose the optimal one for your system."
 IDC_SoundPrompt="Tu ordenador soporta los siguientes dispositivos de sonido. Elige el que más se adecúe a tu sistema."
 IDC_SoundNote=" "
 ; EN: IDC_Compatible="Show certified, compatible devices"

@@ -68,7 +68,7 @@ IDC_Prompt="Unreal startet zum ersten Mal. Wenn Sie Probleme haben, lesen Sie bi
 
 [IDDIALOG_ConfigPageRenderer]
 IDC_ConfigPageRenderer=" "
-; EN: IDC_RenderPrompt="Your computer supports the following 3D video devices. Chose the optimal one for your system."
+; EN: IDC_RenderPrompt="Your computer supports the following 3D video devices. Choose the optimal one for your system."
 IDC_RenderPrompt="Der Computer unterstützt die folgenden 3D Grafik Systeme. Wähle das Optimale für Dein System."
 IDC_RenderNote=" "
 ; EN: IDC_Compatible="Show certified, compatible devices"

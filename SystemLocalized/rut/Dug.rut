@@ -8,7 +8,7 @@ Title="Глубины Ражигар"
 
 [TranslatorEvent4]
 ; EN: Message="WARNING: Exercise caution when in the vicinity of Tarydium barrels."
-Message="ВНИМАНИЕ: Будьте осторожны находясь рядом с бочками таридиума."
+Message="ПРЕДУПРЕЖДЕНИЕ: Будьте осторожны находясь рядом с бочками таридиума."
 
 [TranslatorEvent17]
 ; EN: Message="Come on in, the Lava's fine!"
@@ -16,22 +16,22 @@ Message="Давай, лава хороша!"
 
 [TranslatorEvent18]
 ; EN: Message="Craig is Grand Master Doofus."
-Message="Грэиг это гранд мастер Дуфус."
+Message="Грэиг - это великий мастер Дуфус."
 
 [TranslatorEvent16]
 ; EN: Message="Canada is really cold. I like Dos Equis beer. My cats are fuzzy."
-Message="В Канаде по настоящему холодно. Люблю пиво. Мои кошки пушистые."
+Message="В Канаде по настоящему холодно. Я люблю пиво Dos Equis. Мои кошки пушистые."
 
 [TranslatorEvent3]
 ; EN: Message="Secondary Tarydium transport cart activation unit."
-Message="Управление дополнительной телегой для транспортировки таридиума."
+Message="Модуль управления дополнительной тележкой для транспортировки таридиума."
 
 [TranslatorEvent12]
 ; EN: Message="Gas Re-Routing Station Status: Doors are pressurized and locked."
-Message="Станция рециркуляции газа: Двери герметичны и закрыты."
+Message="Статус станции рециркуляции газа: Двери герметичны и закрыты."
 ; EN: AltMessage="Doors depressurized. Access permitted."
 AltMessage="Двери разгерметизированы. Доступ получен."
 
 [TranslatorEvent2]
 ; EN: Message="Primary Tarydium transport cart activation unit."
-Message="Управление основной телегой для транспортировки таридиума."
+Message="Модуль управления основной тележкой для транспортировки таридиума."

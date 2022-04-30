@@ -1,12 +1,12 @@
 ﻿[LevelInfo0]
 ; EN: Title="Chizra - Nali Water God"
-Title="Чизра - Бог воды Нали"
+Title="Чизра — Бог воды Нали"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
 LevelEnterText="Вход в Храм Бога воды Нали"
 
 [LevelSummary]
 ; EN: Title="Chizra - Nali Water God"
-Title="Чизра - Бог воды Нали"
+Title="Чизра — Бог воды Нали"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
 LevelEnterText="Вход в Храм Бога воды Нали"
 
@@ -16,15 +16,15 @@ Message="Храм Бога воды осквернен водными змеям
 
 [TranslatorEvent11]
 ; EN: Message="Take the stick of 6 fires and go forth to the inner ceremonial chamber. There you shall find you way back to the place from whence you came and the metal chariot that fell from the stars."
-Message="Возьми палку шести огней и направляйся во внутренние церемониальные палаты. Там ты найдешь дорогу назад, туда откуда пришел, и стальную колесницу упавшую с небес."
+Message="Возьми палку шести огней и направляйся во внутренние церемониальные палаты. Там ты найдешь дорогу назад, туда откуда пришел и стальную колесницу упавшую с небес."
 
 [TranslatorEvent20]
 ; EN: Message="Look into your own eyes. And when your courage is strongest your last step to the prize will be upheld by your faith."
-Message="Посмотри себе в глаза. И когда отвага наполнит тебя, твой последний шаг к награде будет сделан самой судьбой."
+Message="Взгляни себе в глаза. В миг, когда твое мужество достигнет наивысшей точки, твоя вера поддержит тебя в последнем шаге к награде."
 
 [TranslatorEvent8]
 ; EN: Message="The stick of 6 fires can only be reached by a warrior who has bathed in the pool of thunder, past the obelisk of the clouds."
-Message="Палка шести огней может принадлежать лишь воину который совершил омовение в водах грома за обелиском облаков."
+Message="Палка шести огней может принадлежать лишь воину который совершил омовение в озере грома за обелиском облаков."
 
 [TranslatorEvent9]
 ; EN: Message="The pyramid is the key to the chamber of death. Here you shall find more power for the stick of 6 fires."
@@ -32,7 +32,7 @@ Message="Пирамида - ключ к палатам смерти. Здесь 
 
 [Counter3]
 ; EN: CountMessage="Snap!"
-CountMessage="Щелчок!"
+CountMessage="Щелк!"
 ; EN: CompleteMessage="The raft is loose"
 CompleteMessage="Плот свободен"
 
@@ -42,7 +42,7 @@ Message="За этой каменной печатью находятся вну
 
 [TranslatorEvent18]
 ; EN: Message="Beyond this golden door lies the holy altar of the stick of 6 fires. Only by touching the outset stones of the lightning fire pillars may one enter."
-Message="За этой золотой дверью находится священный алтарь палки шести огней. Только после прикосновения к столбам огня молний, можно будет войти туда."
+Message="За этой золотой дверью находится священный алтарь палки шести огней. Только после прикосновения к столбам огня молний, можно будет войти."
 
 [TranslatorEvent14]
 ; EN: Message="The demons came down from the stars in a metal chariot as punishment for the sins of The Nali."
@@ -54,7 +54,7 @@ Message="Только воин обладающий палкой 6 огней с
 
 [TranslatorEvent10]
 ; EN: Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY. TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
-Message="Палка шести огней пришла от Бога Воды Нали когда с неба упала звезда. Чтобы найти звезду нужно пройти через церемониальное крыло храма."
+Message="Палка шести огней пришла от Бога Воды Нали когда с неба упала звезда. Что бы найти звезду нужно пройти через церемониальное крыло храма."
 
 [TranslatorEvent13]
 ; EN: Message="The pyramid's center is the focal point of Chizra the Nali water god's power."
@@ -74,15 +74,15 @@ Message="Это Озеро Грома. Грешные души что омыва
 
 [TranslatorEvent4]
 ; EN: Message="Only a warrior who has touched the face of the water god idol may enter this temple."
-Message="Только воин прикоснувшийся к идолу Бога Воды сможет войти в этот храм."
+Message="Только воин дотронувшийся до идола Бога Воды сможет войти в этот храм."
 
 [TranslatorEvent3]
 ; EN: Message="To reach the pool of thunder one must climb the loose stones."
-Message="Взбирайся по камням, чтобы достичь Озера Грома."
+Message="Взбирайся по камням, чтобы достигнуть Озера Грома."
 
 [TranslatorEvent15]
 ; EN: Message="1400 hours Commander Mac Harrison: SITREP: These local natives have a 6 barreled rocket launcher on an altar but it is heavily guarded by those Salamander things. "The Stick of 6 fires" is what the Nali keep calling it. I'll try to sneak in tonight."
-Message="Командир Мак Харрисон: 14:00. Текущая обстановка: На алтаре у местных аборигенов находится 6ти зарядная мобильная ракетница , но она хорошо охраняется этими саламандрами. Палка шести огней так Нали называют её. Я попытаюсь прокрасться внутрь сегодня ночью."
+Message="Командир Мак Харрисон: 14:00. Текущая обстановка: На алтаре у местных аборигенов находится 6-ти зарядная мобильная ракетница, но она хорошо охраняется этими саламандрами. «Палка шести огней» так Нали называют её. Я попытаюсь прокрасться внутрь сегодня ночью."
 
 [TranslatorEvent2]
 ; EN: Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder."

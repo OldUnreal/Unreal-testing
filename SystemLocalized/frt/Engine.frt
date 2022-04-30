@@ -192,6 +192,8 @@ NeedPassword="Vous devez saisir un mot de passe pour rejoindre cette partie."
 MaleGender="son"
 ; EN: FemaleGender="her"
 FemaleGender="sa"
+; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
+MaxedOutSpectatorsMsg="Max spectateurs dépassés"
 
 [Weapon]
 ; EN: MessageNoAmmo=" has no ammo."

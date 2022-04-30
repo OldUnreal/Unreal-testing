@@ -36,7 +36,7 @@ Message="ОВС Прометей - Электро цепи: Статус: Сет
 
 [TranslatorEvent2]
 ; EN: Message="UMS Prometheus - Engine 1 Status: Warning: Power level approaching limit | Critical: Pressure level exceeded limit! "
-Message="ОВС Прометей - Двигатель 1 Статус: Внимание: Уровень энергии достиг предельного значения - Критический: Уровень давления превысил лимит! "
+Message="ОВС Прометей - Двигатель 1 Статус: Внимание: Уровень энергии достиг предельного значения - Критический: Уровень давления превысил лимит!"
 
 [TranslatorEvent6]
 ; EN: Message="UMS Prometheus - Engine 1 Status: Warning: Power level approaching limit | Warning: Pressure level approaching limit"

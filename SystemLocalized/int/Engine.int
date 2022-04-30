@@ -126,6 +126,7 @@ WrongPassword="The password you entered is incorrect."
 NeedPassword="You need to enter a password to join this game."
 MaleGender="his"
 FemaleGender="her"
+MaxedOutSpectatorsMsg="Max spectators exceeded"
 
 [Weapon]
 MessageNoAmmo=" has no ammo."

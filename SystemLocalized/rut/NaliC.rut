@@ -20,7 +20,7 @@ Hint="Твой путь теперь свободен."
 ; EN: Message="Only the enlightened one who has read the Book of the Good Lore in the chapel shall be granted passage to the tower through these divine gates."
 Message="Только просвещенный кто прочел книгу добрых познаний в часовне сможет пройти во внешнюю часть замка через божественные врата."
 ; EN: Hint="Travel to the chapel and read the book to gain access."
-Hint="Пройди в часовню и прочти книгу чтобы получить доступ."
+Hint="Пройди в часовню и прочти книгу что бы получить доступ."
 
 [TranslatorEvent4]
 ; EN: Message="He who seeks knowledge would be well rewarded for perusing the tomes stored in the main feast hall."

@@ -1,37 +1,37 @@
 ﻿[LevelInfo0]
 ; EN: Title="Spire Village"
-Title="Деревня Солнечного Шпиля"
+Title="Долина солнечного шпиля"
 ; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Вход в Деревня Солнечного Шпиля"
+LevelEntryText="Вход в Долина солнечного шпиля"
 
 [LevelSummary]
 ; EN: Title="Spire Village"
-Title="Деревня Солнечного Шпиля"
+Title="Долина солнечного шпиля"
 ; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Вход в Деревня Солнечного Шпиля"
+LevelEntryText="Вход в Долина солнечного шпиля"
 
 [TranslatorEvent19]
 ; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"
-Message="Наш рай, великий Санспайр, дарованный нам добрыми богами, был осквернен Демонами небес. Наша единственная надежда теперь вселяет в нас ужас. Демоны небес сильны как никогда. Я предвижу смерть от одного из тех чудовищ что обитают в наших землях"
+Message="Наш рай, великий Санспайр, дарованный нам добрыми богами, был осквернен Демонами небес. Наша единственная надежда теперь вселяет в нас ужас. Демоны небес сильны как никогда. Я предвижу смерть от одного из тех чудовищ, что обитают в наших землях"
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
-Hint="Тщательно обыщите дома и следуйте в долину ведущую к вратам. Опасайтесь этих Титанов!"
+Hint="Тщательно обыщите дома и направляйтесь к воротам в долине. Опасайтесь Титанов!"
 
 [TranslatorEvent2]
 ; EN: Message="Safe haven for those who seek peace, welcome."
 Message="Рай для тех кто ищет мира, добро пожаловать."
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
-Hint="Тщательно обыщите дома и следуйте в долину ведущую к вратам. Опасайтесь этих Титанов!"
+Hint="Тщательно обыщите дома и направляйтесь к воротам в долине. Опасайтесь Титанов!"
 
 [TranslatorEvent18]
 ; EN: Message="The minions of our Gods are cast to the ground to do battle. We are put to the test. Our world is weakening, it spews forth terrible creatures. We will pray again tonight. Oh, hear our plea! Send our messiah!"
 Message="Слуги наших богов призваны в наш мир для битвы. Нам дано испытание. Наш мир слаб и порождает на свет ужасных созданий. Этой ночью мы будем возносить молитвы. Ох , услышь наши мольбы! Пошли нам мессию!"
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
-Hint="Тщательно обыщите дома и следуйте в долину ведущую к вратам. Опасайтесь этих Титанов!"
+Hint="Тщательно обыщите дома и направляйтесь к воротам в долине. Опасайтесь Титанов!"
 
 [TranslatorEvent22]
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
-Hint="Тщательно обыщите дома и следуйте в долину ведущую к вратам. Опасайтесь этих Титанов!"
+Hint="Тщательно обыщите дома и направляйтесь к воротам в долине. Опасайтесь Титанов!"
 
 [TranslatorEvent21]
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
-Hint="Тщательно обыщите дома и следуйте в долину ведущую к вратам. Опасайтесь этих Титанов!"
+Hint="Тщательно обыщите дома и направляйтесь к воротам в долине. Опасайтесь Титанов!"
