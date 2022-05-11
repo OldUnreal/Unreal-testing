@@ -339,3 +339,7 @@ HelpUsage="shaupdate <NazwaPliku>"
 HelpParm[0]="<NazwaPliku>"
 ; EN: HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
 HelpDesc[0]="Plik do obliczenia sumy kontrolnej SHA256 do późniejszego przechowywania. "
+
+[AutosaveTrigger]
+; EN: AutoSaveString="Auto Saving"
+AutoSaveString="Autozapisywanie"

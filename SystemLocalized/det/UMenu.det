@@ -337,7 +337,7 @@ ConfirmTextureDetailText="Das erhöhen der Texturdetails kann auf einigen Comput
 ; EN: ConfirmDriverText="Do you want to restart Unreal with the selected video driver?"
 ConfirmDriverText="Diese Option startet Unreal neu um einen anderen Grafiktreiber zu wählen. Möchtest Du das tun?"
 ; EN: PawnShadowText="Pawn shadows"
-PawnShadowsText="Schatten für Spielfiguren"
+PawnShadowText="Schatten für Spielfiguren"
 ; EN: PawnShadowHelp="Detail of shadows that pawns should cast on ground (the changes will take effect after a map change)."
 PawnShadowHelp="Spielfiguren werfen Schatten (Änderungen werden erst nach einem Levelwechsel wirksam)."
 ; EN: PawnShadowList[0]="None"
@@ -1103,6 +1103,7 @@ LanguageHelp="Das ist die aktuelle Spracheinstellung. Ändere es und drücke den
 ConsoleText="Konsole"
 ; EN: ConsoleHelp="This option determines the look of console and menus. Press Restart button to apply the changes."
 ConsoleHelp="Diese Option bestimmt das Aussehen der Konsole und der Menüs. Klicken Sie auf die Schaltfläche Neustart, um die Änderungen zu übernehmen."
+EditAreaWidth=120
 
 [UMenuNetworkClientWindow]
 ; EN: NetSpeedText="Internet Connection"
