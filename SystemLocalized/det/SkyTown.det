@@ -1,18 +1,18 @@
 ﻿[LevelInfo2]
 ; EN: Title="Na Pali Haven"
-Title="Na Pali Zufluchtssort"
+Title="Na Pali-Zuflucht"
 ; EN: LevelEntryText="Entering Na Pali Haven"
-LevelEntryText="Eingang Na Pali Zufluchtssort"
+LevelEntryText="Betrete die Na Pali-Zuflucht"
 
 [LevelSummary]
 ; EN: Title="Na Pali Haven"
-Title="Na Pali Zufluchtssort"
+Title="Na Pali-Zuflucht"
 ; EN: LevelEntryText="Entering Na Pali Haven"
-LevelEntryText="Eingang Na Pali Zufluchtssort"
+LevelEntryText="Eingang Na Pali-Zuflucht"
 
 [TranslatorEvent0]
 ; EN: Message="I have gathered all of these strange artifacts in the hope that the Messiah shall make use of them in the quest to free us from the Sky Demons. I know not what their uses are but the signs were clear, the stars foretold the need."
-Message="Ich habe all diese seltsamen Artefakte gesammelt in der Hoffnung, daß der Messias uns damit von den Himmelsdämonen befreien wird. Ich weiß nicht, wozu sie dienen sollen, aber laut den Vorzeichen und den Sternen wird er sie brauchen."
+Message="Ich habe all diese seltsamen Artefakte gesammelt in der Hoffnung, dass der Messias uns damit von den Himmelsdämonen befreien wird. Ich weiß nicht, wozu sie dienen sollen, aber laut den Vorzeichen und den Sternen wird er sie brauchen."
 
 [TranslatorEvent7]
 ; EN: Message="Mountain Base Underwater Entrance Door Controls"
@@ -36,8 +36,8 @@ Message="Warum müssen sie ihr Spiel mit uns treiben? Mein Lokal war früher ein
 
 [TranslatorEvent2]
 ; EN: Message="I've seen strange flying beasts vanishing into the depths of the mountain at night. The roar as they fly overhead is deafening. Never before have I heard its like. I feel that a great evil must dwell within the mountain."
-Message="Ich habe gesehen, wie seltsame fliegende Bestien nachts im Berg verschwinden. Ihr Gebrüll, wenn sie über mir fliegen ist ohrenbetäubend. Nie zuvor habe ich so etwas gehört. Ich spüre, daß ein großes Übel innerhalb des Berges weilen muß."
+Message="Ich habe gesehen, wie seltsame fliegende Bestien nachts im Berg verschwinden. Ihr Gebrüll, wenn sie über mir fliegen ist ohrenbetäubend. Nie zuvor habe ich so etwas gehört. Ich spüre, dass ein großes Übel innerhalb des Berges weilen muss."
 
 [TranslatorEvent1]
 ; EN: Message="They let us go about our business here, but it is a farce. I know that they are watching us, controlling us. I believe this once safe haven is as deadly as the surface planet below."
-Message="Man läßt uns hier unseren Geschäften nachgehen, aber es ist eine Farce. Ich weiß, daß man uns beobachtet und kontrolliert. Ich glaube, dieser einst sichere Ort ist inzwischen so gefährlich wie die Oberfläche des Planeten unter uns."
+Message="Man lässt uns hier unseren Geschäften nachgehen, aber es ist eine Farce. Ich weiß, dass man uns beobachtet und kontrolliert. Ich glaube, dieser einst sichere Ort ist inzwischen so gefährlich wie die Oberfläche des Planeten unter uns."

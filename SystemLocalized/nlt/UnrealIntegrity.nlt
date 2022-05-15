@@ -1,0 +1,12 @@
+﻿[Public]
+Preferences=(Caption="Unreal Integrity",Parent="Networking")
+Preferences=(Caption="Integrity Server",Parent="Unreal Integrity",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
+Preferences=(Caption="Whitelist",Parent="Unreal Integrity",Class=UnrealIntegrity.ExternalWhiteList,Immediate=True)
+
+[General]
+; EN: ScanningInfo="Unreal Integrity is scanning your client for possible cheats..."
+ScanningInfo="Unreal Integriteit scant je cliënt op mogelijke cheats..."
+; EN: MidGameScan="You have died, performing mid-game cheat scan."
+MidGameScan="Je bent gestorven, voert nu een cheat-scan in het midden van het spel uit."
+; EN: EndGameScan="Game has ended, performing end-game cheat scan."
+EndGameScan="Spel is afgelopen, voert nu een cheat-scan voor het einde van het spel uit."

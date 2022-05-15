@@ -14,7 +14,7 @@ ResFailed="Fehler beim Einstellen der Auflösung"
 
 [XOpenGLRenderDevice]
 ; EN: ClassCaption="XOpenGL Support"
-ClassCaption="XOpenGL Unterstützung"
+ClassCaption="XOpenGL-Unterstützung"
 ; EN: AskInstalled="Do you have a graphics card supporting at least OpenGL version 3.3 or greater installed?"
 AskInstalled="Haben Sie eine Grafikkarte installiert, die mindestens OpenGL Version 3.3 oder höher unterstützt?"
 ; EN: AskUse="Do you want Unreal to use your XOpenGL accelerator?"

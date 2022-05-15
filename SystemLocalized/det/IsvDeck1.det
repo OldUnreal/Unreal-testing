@@ -2,25 +2,25 @@
 ; EN: Title="ISV-KRAN Deck 1"
 Title="ISV-KRAN Deck 1"
 ; EN: LevelEntryText="Entering the ISV-KRAN Deck 1"
-LevelEntryText="Eingang von ISV-KRAN Deck 1"
+LevelEntryText="Betrete Deck 1 der ISV-KRAN"
 
 [LevelSummary]
 ; EN: Title="ISV-KRAN Deck 1"
 Title="ISV-KRAN Deck 1"
 ; EN: LevelEntryText="Entering the ISV-KRAN Deck 1"
-LevelEntryText="Eingang von ISV-KRAN Deck 1"
+LevelEntryText="Betrete  Deck 1 der ISV-KRAN"
 
 [TranslatorEvent12]
 ; EN: Message="EMERGENCY TRANSPORTER INSTRUCTIONS: STEP ONTO OCTAGONAL TRANSPORTER PAD - SYSTEM WILL ACTIVATE AUTOMATICALLY"
-Message="NOTTRANSPORTER GEBRAUCHSANLEITUNG: AUF ACHTECKIGES TRANSPORTERFELD TRETEN - SYSTEM WIRD AUTOMATISCH AKTIVIERT"
+Message="NOTTRANSPORTER-GEBRAUCHSANLEITUNG: AUF ACHTECKIGES TRANSPORTERFELD TRETEN - SYSTEM WIRD AUTOMATISCH AKTIVIERT"
 
 [TranslatorEvent2]
 ; EN: Message="ISV-KRAN DECK 1: Log Entry: Captain Mikail Leatham. Skaarj attacks have forced us to retreat to the Science and Research Lab. We set up a makeshift Electrical Field Barrier that destroyed 40 of them but 20 still remain."
-Message="ISV-KRAN DECK 1:Logbuch Capt. M. Leatham. Angriffe der Skaarj haben uns dazu gezwungen, uns in das Labor zurückzuziehen. Eine behelfsmäßige Hochspannungsabsperrung hat 40 von ihnen vernichtet, aber 20 sind noch übriggeblieben."
+Message="ISV-KRAN DECK 1: Logbuch Capt. M. Leatham. Angriffe der Skaarj haben uns dazu gezwungen, uns in das Labor zurückzuziehen. Eine behelfsmäßige Hochspannungsabsperrung hat 40 von ihnen vernichtet, aber 20 sind noch übriggeblieben."
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN: SCIENCE RESEARCH LAB SPECIMEN MONITOR: I have found these amorphous amoeba to be highly acidic. It's incredible the architecture of their basic genetic structure. Tatiana Zimna - Chief Medical Officer"
-Message="ISV-KRAN: WISSENSCHAFTLICHES FORSCHUNGSLABOR, PROBENBETRACHTUNGSMONITOR: Ich habe entdeckt, daß diese Amöben höchst säurehaltig sind. Ihre genetische Struktur ist einfach unglaublich. Tatiana Zimna - Chefsanitätsoffizier"
+Message="ISV-KRAN: WISSENSCHAFTLICHES FORSCHUNGSLABOR, PROBENBETRACHTUNGSMONITOR: Ich habe entdeckt, dass diese Amöben höchst säurehaltig sind. Ihre genetische Struktur ist einfach unglaublich. Tatiana Zimna - Chefsanitätsoffizier"
 
 [TranslatorEvent1]
 ; EN: Message="WARNING: LAB DOORS AND SPECIMEN HOLDING FIELDS ARE MALFUNCTIONING - 30 SECOND RELEASE DELAY WILL ENGAGE AFTER ACTIVATION"

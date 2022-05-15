@@ -1,0 +1,33 @@
+﻿[LevelInfo0]
+; EN: Title="Harobed Village"
+Title="Harobed Havendorp"
+; EN: LevelEntryText="Entering the Harobed Village"
+LevelEntryText="Harobed Havendorp binnenkomen"
+
+[LevelSummary]
+; EN: Title="Harobed Village"
+Title="Harobed Havendorp"
+; EN: LevelEntryText="Entering the Harobed Havendorp"
+LevelEntryText="Harobed Havendorp binnenkomen"
+
+[TranslatorEvent3]
+; EN: Hint="Proceed to the crashed spaceship up ahead."
+Hint="Ga verder naar het neergestorte ruimteschip verderop."
+
+[TranslatorEvent1]
+; EN: Message="I'll not stay here any longer. With the next passing of the two suns, I'll try to reach the Sunspire. There I will be safe. Before I go I will retrieve the sky demon's weapon from the abbey."
+Message="Ik blijf hier niet langer. Met de volgende passage van de twee zonnen, zal ik proberen de Zonnespits te bereiken. Daar ben ik veilig. Voordat ik ga, zal ik het wapen van de luchtdemon uit de abdij halen."
+; EN: Hint="Search the church atop the hill, the Nali may have a surprise for you."
+Hint="Doorzoek de kerk bovenop de heuvel, de Nali heeft misschien een verrassing voor je."
+
+[TranslatorEvent0]
+; EN: Message="Sadness fills my soul. The Sky Demons came and took many of us to work in the mines. If we don't obey, we'll be slaughtered. The Sky Demons know about our secret in the abbey, but haven't found it."
+Message="Verdriet vult mijn ziel. De Sky Demons kwamen en namen velen van ons mee om in de mijnen te werken. Als we niet gehoorzamen, worden we afgeslacht. De Sky Demons kennen ons geheim in de abdij, maar hebben het niet gevonden."
+; EN: Hint="Search the church atop the hill, the Nali may have a surprise for you."
+Hint="Doorzoek de kerk bovenop de heuvel, de Nali heeft misschien een verrassing voor je."
+
+[TranslatorEvent2]
+; EN: Message="We shall pray before we set off for the Sunspire. We will find refuge there. Praise be to the God of the Good Lore for giving us sanctuary. The journey will be treacherous but we will prevail!"
+Message="We zullen bidden voordat we op weg gaan naar de Zonnespits. We zullen daar een toevluchtsoord vinden. Geprezen zij de God van de goede kennis die ons een heiligdom heeft gegeven. De reis zal verraderlijk zijn, maar we zullen zegevieren!"
+; EN: Hint="Look very closely along the walls."
+Hint="Kijk heel goed langs de muren."

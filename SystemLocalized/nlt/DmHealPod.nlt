@@ -1,0 +1,9 @@
+﻿[LevelInfo0]
+; EN: Title="Healing Pod"
+Title="Genezing Pod"
+IdealPlayerCount="3-8"
+
+[LevelSummary]
+; EN: Title="Healing Pod"
+Title="Genezing Pod"
+IdealPlayerCount="3-8"

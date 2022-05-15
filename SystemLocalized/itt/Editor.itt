@@ -465,7 +465,7 @@ HelpOneLiner="texturemerger [nomePacchetto]"
 HelpDesc[0]="[nomePacchetto]"
 ; EN: HelpParm[0]="An optional parameter, it's the package where the textures will be saved to."
 HelpParm[0]="Un parametro opzionale, è il pacchetto in cui verranno salvate le trame."
-HelpDesc[0]=" "
+HelpDesc[1]=" "
 ; EN: HelpParm[1]="If no PackageName is specified, the TextureMerge directory is used in order to locate the names of all subfolders in searching for corresponding packages."
 HelpParm[1]="Se non viene specificato alcun nomePacchetto, viene utilizzata la directory TextureMerge per individuare i nomi di tutte le sottocartelle nella ricerca dei pacchetti corrispondenti." 
 

@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Glathriel Village"
-Title="Glathriel-Dorf"
+Title="Dorf Glathriel"
 
 [LevelSummary]
 ; EN: Title="Glathriel Village"
-Title="Glathriel-Dorf"
+Title="Dorf Glathriel"
 
 [TranslatorEvent1]
 ; EN: Message="Two more died last week. Luckily we got them out through the cave without the Nightstalkers taking notice. We're low on food again..."
-Message="In der letzten Woche sind zwei weitere gestorben. Gott sei Dank haben wir es geschafft, sie zur Höhle zu bringen, ohne daß die Nachtjäger etwas davon bemerkt haben. Wir sind schon wieder knapp an Nahrungsmitteln..."
+Message="In der letzten Woche sind zwei weitere gestorben. Gott sei Dank haben wir es geschafft, sie zur Höhle zu bringen, ohne dass die Nachtjäger etwas davon bemerkt haben. Wir sind schon wieder knapp an Nahrungsmitteln..."
 
 [TranslatorEvent2]
 ; EN: Message="I found another one of those strange objects that fell from the sky. I will collect all that I can find and then bring them to the priest. He will know what we are meant to do."
@@ -20,4 +20,4 @@ Message="Würdest du dafür sterben?? http://www.ocrana.de"
 
 [TranslatorEvent5]
 ; EN: Message="What did we do wrong to anger the gods? First the Nightstalkers, then the huge thunderbird flew over our valley and seeded fire and destruction. And now those strange boxes are raining from the sky, hitting our houses and killing our people."
-Message="Was haben wir nur falsch gemacht, daß die Götter so verärgert sind? Erst die Nachtjäger, dann ist der riesige Donnervogel über unser Tal geflogen und hat Feuer und Verwüstung gesät, und nun regnen diese komischen Kisten vom Himmel, die unsere Häuser zerstören und unsere Leute töten."
+Message="Was haben wir nur falsch gemacht, dass die Götter so verärgert sind? Erst die Nachtjäger, dann ist der riesige Donnervogel über unser Tal geflogen und hat Feuer und Verwüstung gesät, und nun regnen diese komischen Kisten vom Himmel, die unsere Häuser zerstören und unsere Leute töten."

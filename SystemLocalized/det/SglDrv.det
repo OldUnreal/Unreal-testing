@@ -4,8 +4,8 @@ Preferences=(Caption="PowerVR SGL Support",Parent="Rendering",Class=SGLDrv.SGLRe
 
 [SglRenderDevice]
 ; EN: ClassCaption="PowerVR SGL for Windows"
-ClassCaption="PowerVR SGL Unterstützung"
+ClassCaption="PowerVR SGL-Unterstützung"
 ; EN: AskInstalled="Do you have a PowerVR card installed?"
 AskInstalled="Besitzt Du eine PowerVR-Karte?"
 ; EN: AskUse="Do you want Unreal to use your PowerVR card?"
-AskUse="Möchtest Du, daß Unreal die PowerVR-Karte verwendet?"
+AskUse="Möchtest Du, dass Unreal die PowerVR-Karte verwendet?"

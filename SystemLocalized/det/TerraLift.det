@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Terraniux Underground"
-Title="Terraniux unter Tage"
+Title="Betrete Terraniux unter Tage"
 ; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Eingang Terraniux unter Tage"
+LevelEntryText="Betrete Terraniux unter Tage"
 
 [LevelSummary]
 ; EN: Title="Terraniux Underground"
 Title="Terraniux unter Tage"
 ; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Eingang Terraniux unter Tage"
+LevelEntryText="Betrete Terraniux unter Tage"
 
 [SpecialEvent0]
 ; EN: Message="ALERT"
@@ -18,7 +18,7 @@ Message="ALARMBEREITSCHAFT"
 ; EN: Message="Biowaste Flow Control: the Biowaste flow is constant. Monitor it for dangerous fluctuations in viscosity or pressure. The alarm still seems to have problems, in case of malfunction activate the two override controls."
 Message="Biomüll Durchflußkontrolle: Durchflußmenge konstant. Auf gefährliche Viskositäts- bzw. Druckschwankungen hin kontrollieren. Der Alarm scheint noch defekt zu sein. Bei Funktionsstörung Abschaltungsregler betätigen."
 ; EN: AltMessage="Lift activated. All personnel are reminded to complete assigned tasks."
-AltMessage="Lift aktiviert. Alle Mitarbeiter werden daran erinnert, daß erteilte Aufgaben erledigt werden müssen."
+AltMessage="Lift aktiviert. Alle Mitarbeiter werden daran erinnert, dass erteilte Aufgaben erledigt werden müssen."
 
 [TranslatorEvent5]
 ; EN: Message="Drainage Status: Biowaste flow is at nominal levels. All pumps operational. Section C empty and available for any Biowaster overflow. Please be sure that the regular pipe maintenance is handled."

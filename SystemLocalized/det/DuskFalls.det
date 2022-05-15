@@ -12,11 +12,11 @@ Message="LOG: M. Worch: Seit dem Crash dreht sich alles in meinem Kopf. Wer dreh
 
 [TranslatorEvent5]
 ; EN: Message="LOG: K. Divad: Our mission to locate the Vortex Rikers is a failure. The UMS Chantilly was pulled into the atmosphere of this god-forsaken planet and we crashed into a mountain. Only Pilot Worch and myself survived. They don't pay me enough for this."
-Message="LOG: K. Divad: Unsere Mission, die Vortex Rikers zu finden, war ein Mißerfolg. Die UMS-Chantilly wurde in die Atmosphäre dieses gottverdammten Planeten gesogen, und wir sind in einen Berg gestürzt. Nur der Pilot Worch und ich haben den Crash überlebt. Für so was bezahlt man mich wirklich nicht gut genug."
+Message="LOG: K. Divad: Unsere Mission, die Vortex Rikers zu finden, war ein Misserfolg. Die UMS-Chantilly wurde in die Atmosphäre dieses gottverdammten Planeten gesogen, und wir sind in einen Berg gestürzt. Nur der Pilot Worch und ich haben den Crash überlebt. Für so was bezahlt man mich wirklich nicht gut genug."
 
 [TranslatorEvent0]
 ; EN: Message="LOG: J. Parkman: On the Prometheus the crew behaved like a team. Here, they have turned on each other. Wish I didn't have to rely on them to survive. I think crewman Dalton deliberately led the brutes to crewman Marshall. Then he watched him die."
-Message="LOG: J. Parkman: Auf der Prometheus hat sich die Crew wie ein Team verhalten. Hier sind sie alle irgendwie agressiv. Ich wünschte, ich müßte mich nicht auf sie verlassen, um zu überleben. Ich denke, Dalton hat die Jungs absichtlich zu Marshall geführt, damit sie zusehen konnten, wie er starb."
+Message="LOG: J. Parkman: Auf der Prometheus hat sich die Crew wie ein Team verhalten. Hier sind sie alle irgendwie agressiv. Ich wünschte, ich müsste mich nicht auf sie verlassen, um zu überleben. Ich denke, Dalton hat die Jungs absichtlich zu Marshall geführt, damit sie zusehen konnten, wie er starb."
 
 [TranslatorEvent4]
 ; EN: Message="LOG: J. Airoldi: Had an encounter with a small reptilian creature this morning while scouting for food. It ran away, but came back with three more I think and they've been waiting outside all day. They're giving me the creeps."
@@ -40,7 +40,7 @@ Message="Terra-Neo Minen-Station"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: G. Dahlgren: Still no reply from Dalton's team. It's been four days now and no sign of the others. I don't think we're going to survive. I heard someone actually made it off this planet. Hope they send a ship back for us..."
-Message="LOG: G. Dahlgren: Immer noch keine Antwort von Daltons Team. Es sind jetzt schon vier Tage vergangen, und immer noch kein Lebenszeichen von den anderen. Ich glaube nicht, daß wir überleben werden. Ich habe gehört, daß es jemand tatsächlich geschafft haben soll, von diesem Planeten zu entkommen. Ich hoffe, sie schicken uns ein Schiff hierher ..."
+Message="LOG: G. Dahlgren: Immer noch keine Antwort von Daltons Team. Es sind jetzt schon vier Tage vergangen, und immer noch kein Lebenszeichen von den anderen. Ich glaube nicht, dass wir überleben werden. Ich habe gehört, dass es jemand tatsächlich geschafft haben soll, von diesem Planeten zu entkommen. Ich hoffe, sie schicken uns ein Schiff hierher ..."
 
 [TranslatorEvent9]
 ; EN: Message="Terra-Sun Mining Station (North)"

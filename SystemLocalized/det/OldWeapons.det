@@ -88,17 +88,17 @@ DeathMessage="%o trank ein Glas von %ks grüner Flüssigkeit."
 FemDeathMessage="%o trank ein Glas von %ks grüner Flüssigkeit."
 FemKillMessage="%o trank ein Glas von %ks grüner Flüssigkeit."
 ; EN: PickupMessage="You got the GES BioRifle"
-PickupMessage="Du hast das GES BioGewehr"
+PickupMessage="Du hast das GES Bio-Gewehr"
 ; EN: ItemName="GES BioRifle"
-ItemName="GES BioGewehr"
+ItemName="GES-Biogewehr"
 
 [OldAmplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
-ExpireMessage="Energie-Verstärker ist leer."
+ExpireMessage="Energieverstärker ist leer."
 ; EN: PickupMessage="You got the Energy Amplifier"
-PickupMessage="Du hast den Energie-Verstärker"
+PickupMessage="Du hast den Energieverstärker"
 ; EN: ItemName="Energy Amplifier"
-ItemName="Energie-Verstärker"
+ItemName="Energieverstärker"
 
 [OldStinger]
 ; EN: DeathMessage="%o was perforated by %k's %w."
@@ -114,7 +114,7 @@ ItemName="Stinger"
 ; EN: PickupMessage="You picked up 50 bullets"
 PickupMessage="Sie haben 50 Kugeln aufgenommen"
 ; EN: ItemName="Bullet Box"
-ItemName="Kugeln"
+ItemName="Kugelkarton"
 
 [OldRifleAmmo]
 ; EN: PickupMessage="You got 8 Rifle Rounds"
@@ -126,13 +126,13 @@ ItemName="Kampfgewehrpatronen"
 ; EN: PickupMessage="You got the Dispersion Pistol Powerup"
 PickupMessage="Du hast das Powerup für Dispersionspistole aufgenommen"
 ; EN: ItemName="Dispersion Pistol Powerup"
-ItemName="Powerup für Dispersionspistole"
+ItemName="Power-Up für Dispersionspistole"
 
 [OldFlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
 PickupMessage="Du hast 10 Flak-Geschosse"
 ; EN: ItemName="Flak Shells"
-ItemName="Flak-Geschosse"
+ItemName="Flakgeschosse"
 
 [OldRazorjack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
@@ -194,7 +194,7 @@ ItemName="Kampfgewehrrunde"
 
 [OldFlakShellAmmo]
 ; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Du hast eine Flak-Geschoß"
+PickupMessage="Du hast ein Flak-Geschoss"
 ; EN: ItemName="Flak Shell"
-ItemName="Flak-Geschoß"
+ItemName="Flak-Geschoss"
 

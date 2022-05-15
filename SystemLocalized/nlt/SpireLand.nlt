@@ -1,0 +1,27 @@
+﻿[LevelInfo2]
+; EN: Title="Spire Valley"
+Title="Spits vallei"
+; EN: LevelEntryText="Entering the Spire Valley"
+LevelEntryText="De Spits-vallei binnengaan"
+
+[LevelSummary]
+; EN: Title="Spire Valley"
+Title="Spits vallei"
+; EN: LevelEntryText="Entering the Spire Valley"
+LevelEntryText="De Spits-vallei binnengaan"
+
+[TranslatorEvent7]
+; EN: Message="Land of Nagomi"
+Message="Land van Nagomi"
+
+[TranslatorEvent3]
+; EN: Message="LOG: R. Ovrevik: Montanus and I are at the top of the spire. We've located an alien shuttle of some sort that rises straight up into the clouds. It's getting rather stormy, but we're going to attempt to ride it."
+Message="LOGBOEK: R. Ovrevik: Montanus en ik staan bovenaan de torenspits. We hebben een soort buitenaardse shuttle gevonden die recht omhoog de wolken in gaat. Het begint nogal stormachtig te worden, maar we gaan proberen om erop te rijden."
+
+[TranslatorEvent4]
+; EN: Message="LOG: J. Montanus: Ovrevik and I managed to ascend the large towering rock fairly easily. We suspect someone may have cleared the way. Maybe he's the one that made it off this forsaken planet."
+Message="LOGBOEK: J. Montanus: Ovrevik en ik slaagden er vrij gemakkelijk in om de grote torenhoge rots te beklimmen. We vermoeden dat iemand de weg heeft vrijgemaakt. Misschien is hij degene die van deze verlaten planeet wist te ontsnappen. "
+
+[TranslatorEvent6]
+; EN: Message="Land of Nagomi"
+Message="Land van Nagomi"

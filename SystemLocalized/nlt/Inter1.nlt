@@ -1,0 +1,11 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 1"
+Title="Pauze 1"
+
+[TransitionGenderEvent1]
+; N_K: Make the texts and their length coincide with their equivalents in Sounds/nlt/Interm1.uax
+OutDelays[1]=24.500000
+; EN: MaleText[0]="When I looked up and saw the shuttle pulling away it really hit me, I was back. I felt a familiar, sick rush of adrenaline and fear. Sure enough, it wasn't long before I ran into a Brute. I've been battling my way through the environment ever since. At least the combat assault rifle is a powerful weapon. No sign of the Prometheus in this valley or the surroundings... I need to keep searching."
+MaleText[0]="Toen ik opkeek en zag dat de shuttle wegreed, raakte hij me echt, ik was terug. Ik voelde een bekende, zieke adrenalinestoot en angst. En ja hoor, het duurde niet lang voordat ik een Bruut tegenkwam. Sindsdien vecht ik me een weg door de omgeving. Het gevechtsgeweer is tenminste een krachtig wapen. Geen teken van de Prometheus in deze vallei of de omgeving ... Ik moet blijven zoeken."
+; EN: FemaleText[0]="When I looked up and saw the shuttle pulling away it really hit me, I was back. I felt a familiar, sick rush of adrenaline and fear. Sure enough, it wasn't long before I ran into a Brute. I've been battling my way through the environment ever since. At least the combat assault rifle is a powerful weapon. No sign of the Prometheus in this valley or the surroundings... I need to keep searching."
+FemaleText[0]="Toen ik opkeek en zag dat de shuttle wegreed, raakte hij me echt, ik was terug. Ik voelde een bekende, zieke adrenalinestoot en angst. En ja hoor, het duurde niet lang voordat ik een Bruut tegenkwam. Sindsdien vecht ik me een weg door de omgeving. Het gevechtsgeweer is tenminste een krachtig wapen. Geen teken van de Prometheus in deze vallei of de omgeving ... Ik moet blijven zoeken."

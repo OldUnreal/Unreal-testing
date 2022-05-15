@@ -1,0 +1,187 @@
+﻿[Public]
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
+
+[UBrowserGSpyLink]
+; EN: ResolveFailedError="The master server could not be resolved: "
+ResolveFailedError="De masterserver kan niet worden opgelost: "
+; EN: TimeOutError="Timeout talking to the master server"
+TimeOutError="Time-out tijdens het praten met de masterserver"
+; EN: CouldNotConnectError="Connecting to the master server timed out: "
+CouldNotConnectError="Er is een time-out opgetreden bij het verbinden met de masterserver: "
+
+[UBrowserHTTPLink]
+; EN: ResolveFailedError="The master server could not be resolved: "
+ResolveFailedError="De masterserver kan niet worden opgelost: "
+; EN: TimeOutError="Timeout talking to the master server"
+TimeOutError="Time-out tijdens het praten met de masterserver"
+; EN: CouldNotConnectError="Connecting to the master server timed out: "
+CouldNotConnectError="Er is een time-out opgetreden bij het verbinden met de masterserver: "
+
+[UBrowserSubsetFact]
+; EN: NotFoundError="Could not find the window: "
+NotFoundError="Kan het venster niet vinden: "
+; EN: NotReadyError="Window is not ready: "
+NotReadyError="Venster is niet klaar: "
+
+[UBrowserRulesGrid]
+; EN: RuleText="Rule"
+RuleText="Regel"
+; EN: ValueText="Value"
+ValueText="Waarde"
+
+[UBrowserServerListWindow]
+; EN: InfoName="Info"
+InfoName="Info"
+; EN: PlayerCountName="Players"
+PlayerCountName="Spelers"
+; EN: ServerCountName="Servers"
+ServerCountName="Servers"
+; EN: QueryServerText="Querying Master Server (hit F5 if nothing happens)"
+QueryServerText="Master Server opvragen (druk op F5 als er niets gebeurt)"
+; EN: QueryFailedText="Master Server Failed: "
+QueryFailedText="Master-server mislukt: "
+; EN: PingingText="Pinging Servers"
+PingingText="Servers pingen"
+; EN: CompleteText="Complete"
+CompleteText="Compleet"
+
+[UBrowserServerPing]
+; EN: AdminEmailText="Admin Email"
+AdminEmailText="E-mailadres van beheerder"
+; EN: AdminNameText="Admin Name"
+AdminNameText="Admin Naam"
+; EN: ChangeLevelsText="Change Levels"
+ChangeLevelsText="Verander niveaus"
+; EN: MultiplayerBotsText="Bots in Multiplayer"
+MultiplayerBotsText="Bots in multiplayer"
+; EN: FragLimitText="Frag Limit"
+FragLimitText="Fraggrens"
+; EN: TimeLimitText="Time Limit"
+TimeLimitText="Tijdslimiet"
+; EN: GameModeText="Game Mode"
+GameModeText="Spelmodus"
+; EN: GameTypeText="Game Type"
+GameTypeText="Speltype"
+; EN: GameVersionText="Game Version"
+GameVersionText="Game-versie"
+; EN: GameSubVersionText="Game SubVersion"
+GameSubVersionText="Game SubVersion"
+; EN: WorldLogText="ngStats World Stat-Logging"
+WorldLogText="ngStats World Stat-Logging"
+; EN: TrueString="Enabled"
+TrueString="Ingeschakeld"
+; EN: FalseString="Disabled"
+FalseString="Gehandicapt"
+; EN: MapFileString="Map Filename"
+MapFileString="Map bestandsnaam"
+; EN: DLLString="C++ Library"
+DLLString="C ++ Bibliotheek"
+; EN: DLLVerString="%ls (ver %i)"
+DLLVerString="%ls (ver %i)"
+; EN: WebURLString="Website URL"
+WebURLString="Website URL"
+; EN: ServerOSString="Server OS"
+ServerOSString="Server-besturingssysteem"
+; EN: GameClassString="Game Class"
+GameClassString="Spelklasse"
+
+[UBrowserMainClientWindow]
+; EN: FavoritesName="Favorites"
+FavoritesName="Favorieten"
+; EN: NewsName="Community News"
+NewsName="Community nieuws"
+; EN: RecentName="Recent servers"
+RecentName="Recente servers"
+
+[UBrowserServerGrid]
+; EN: ServerName="Server"
+ServerName="Server"
+; EN: PingName="Ping"
+PingName="Ping"
+; EN: MapNameName="Map Name"
+MapNameName="Kaartnaam"
+; EN: PlayersName="Players"
+PlayersName="Spelers"
+; EN: VersionName="Version"
+VersionName="Versie"
+
+[UBrowserInfoMenu]
+; EN: RefreshName="&Refresh Info"
+RefreshName="&Info vernieuwen"
+; EN: AttachName="&Attach Window"
+AttachName="&Venster bijvoegen"
+; EN: CloseName="&Close Window"
+CloseName="&Venster sluiten"
+
+[UBrowserMainWindow]
+; EN: WindowTitleString="Unreal Server Browser"
+WindowTitleString="Unreal Server browser"
+
+[UBrowserRightClickMenu]
+; EN: RefreshName="&Refresh All Servers"
+RefreshName="&Alle servers vernieuwen"
+; EN: FavoritesName="Add to &Favorites"
+FavoritesName="Toevoegen aan favorieten"
+; EN: RefreshServerName="&Ping This Server"
+RefreshServerName="&Deze server pingen"
+; EN: InfoName="&Server and Player Info"
+InfoName="&Server- en spelerinfo"
+; EN: PingAllName="Ping &All Servers"
+PingAllName="Ping en alle servers"
+; EN: RemoveFavoritesName="Remove from &Favorites"
+RemoveFavoritesName="Verwijder van favorieten"
+; EN: JoinPasswordName="Join with &Password"
+JoinPasswordName="Doe mee met &wachtwoord"
+; EN: JoinServerName="&Join server"
+JoinServerName="&Kom bij de server"
+; EN: SpectateServerName="Join as &Spectator"
+SpectateServerName="Doe mee als &Toeschouwer"
+; EN: ServerWebsiteName="Show server &Website"
+ServerWebsiteName="Toon server en website"
+; EN: CopyAddressName="&Copy server address"
+CopyAddressName="&Kopieer het serveradres"
+
+[UBrowserPlayerGrid]
+; EN: NameText="Name"
+NameText="Naam"
+; EN: FragsText="Frags"
+FragsText="Fragmenten"
+; EN: PingText="Ping"
+PingText="Ping"
+; EN: TeamText="Team"
+TeamText="Team"
+; EN: MeshText="Mesh"
+MeshText="Mesh"
+; EN: SkinText="Skin"
+SkinText="Huid"
+; EN: IDText="ID"
+IDText="ID"
+
+[UBrowserLibPageWindow]
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
+DLLTitleStr="Kan geen verbinding maken: Dynamic Link Library "%ls" ontbreekt."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
+DLLVerTitleStr="Kan geen verbinding maken: Dynamic Link Library-versie komt niet overeen met "%ls"."
+; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
+InfoText[0]="Om verbinding te maken met deze server heb je een extra C ++ bibliotheek "%ls" nodig."
+; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
+InfoText[1]="Bekijk voor meer info de externe info van onderen (gehost door %ls):"
+
+[UBrowserConsole]
+; EN: ClassCaption="Unreal Browser Console"
+ClassCaption="Unreal Browser Console"
+
+[UBrowserOpenBar]
+; EN: OpenText="Open:"
+OpenText="Open:"
+; EN: OpenHelp="Enter a standard URL, or select one from the URL history. Press Enter to activate."
+OpenHelp="Voer een standaard-URL in of selecteer er een uit de URL-geschiedenis. Druk op Enter om te activeren."
+
+[UBrowserServerWebWin]
+; EN: WindowTitle="Unreal Web Explorer"
+WindowTitle="Unreal Webverkenner"
+
+[UBrowserServerWebCW]
+; EN: RefreshString="Refresh page"
+RefreshString="Pagina vernieuwen"

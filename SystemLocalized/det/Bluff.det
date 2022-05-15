@@ -1,30 +1,30 @@
 ﻿[LevelInfo0]
 ; EN: Title="Bluff Eversmoking"
-Title="Bluff Eversmoking"
+Title="Felskloster der Ewigen Flamme"
 ; EN: LevelEnterText="Entering Bluff Eversmoking"
-LevelEnterText="Eingang Bluff Eversmoking"
+LevelEnterText="Betrete das Felskloster der Ewigen Flamme"
 
 [LevelSummary]
 ; EN: Title="Bluff Eversmoking"
-Title="Bluff Eversmoking"
+Title="Felskloster der Ewigen Flamme"
 ; EN: LevelEnterText="Entering Bluff Eversmoking"
-LevelEnterText="Eingang Bluff Eversmoking"
+LevelEnterText="Betrete das Felskloster der Ewigen Flamme"
 
 [TranslatorEvent7]
 ; EN: Message="HYDRO-ELECTRIC SHIPPING CAR FULLY POWERED AND READY FOR DEPARTURE. ELECTRO-STATIC DISCHARGE NODES AT TOP OF BELL TOWER MUST BE ACTIVATED PRIOR TO CAR START-UP."
-Message="HYDROELEKTRISCHER TRANSPORTWAGON VOLL AUFGELADEN UND ABFAHRBEREIT. VOR DEM START DES WAGGONS MÜSSEN DIE ELEKTROSTATISCHEN ENTLADUNGSKNOTENPUNKTE AM GLOCKENTURM AKTIVIERT WERDEN."
+Message="HYDROELEKTRISCHER TRANSPORTWAGON VOLL AUFGELADEN UND ABFAHRBEREIT. VOR DEM START DES WAGONS MÜSSEN DIE ELEKTROSTATISCHEN ENTLADUNGSKNOTENPUNKTE AM GLOCKENTURM AKTIVIERT WERDEN."
 
 [TranslatorEvent20]
 ; EN: Message="High Priest De'Nasha Breeche 255-480"
-Message="Hoher Priester De'Nasha Breeche 255-480"
+Message="Hohepriester De'Nasha Breeche 255-480"
 
 [TranslatorEvent11]
 ; EN: Message="I have been hiding here for what seems like months now. The Skaarj forces that have taken over our monastery continue to transport stolen tarydium and other strange mechanical devices using their lightning sled. I fear that they may find me."
-Message="Mir ist, als ob ich mich hier schon seit Monaten verstecke. Die Skaarj die unser Kloster übernommen haben transportieren weiterhin seltsame mechanische Apparate mit Hilfe ihres Blitzschlittens. Ich habe Angst, daß sie mich entdecken."
+Message="Mir ist, als ob ich mich hier schon seit Monaten verstecke. Die Skaarj, die unser Kloster übernommen haben, befördern weiterhin seltsame mechanische Apparate mit Hilfe ihres Blitzschlittens. Ich habe Angst, dass sie mich entdecken."
 
 [TranslatorEvent8]
 ; EN: Message="MAGNETIC LOCKS ENGAGED: AUTHORIZED BY CAPTAIN DUK'CHOROTH - OF THE 12th HOUSE OF dUBREVI"
-Message="MAGNETSCHLÖSSER AKTIVIERT: GENEHMIGT VON CAPTAIN DUK'CHOROTH- VOM 12en HAUS dUBREVI"
+Message="MAGNETSCHLÖSSER AKTIVIERT: GENEHMIGT VON CAPTAIN DUK'CHOROTH - VOM 12en HAUS dUBREVI"
 ; EN: AltMessage="MAGNETIC LOCKS DISENGAGED"
 AltMessage="MAGNETSCHLÖSSER DEAKTIVIERT"
 
@@ -44,15 +44,15 @@ Message="Ministrant Ne'Pher Dunis 350-488"
 
 [TranslatorEvent14]
 ; EN: Message="The woman they captured is scheduled to be executed. I cannot let this happen! As foolish as it sounds I will attempt to sneak her out of the prison cell through our secret caves. From there she can escape to the bell tower until darkness."
-Message="Die Frau soll hingerichtet werden. Das kann ich nicht zulassen! Ich will versuchen, sie aus der Zelle hinaus und durch den Geheimtunnel nach draußen zu schmuggeln. Bis zum Einbruch der Dunkelheit kann sie sich im Glockenturm verstecken."
+Message="Die Frau soll hingerichtet werden. Das kann ich nicht zulassen! Ich werde versuchen, sie aus der Zelle hinaus und durch den Geheimtunnel nach draußen zu schmuggeln. Bis zum Einbruch der Dunkelheit kann sie sich im Glockenturm verstecken."
 
 [TranslatorEvent5]
 ; EN: Message="SKAARJ SHIPPING FACILITY POWER MANAGEMENT STATION: HYDRO-ELECTRIC SHIPPING CAR STATUS - OFF / REACTIVATION REQUIRES STATIC DISCHARGE NODES TO BE OPENED AT TOP OF BELL TOWER."
-Message="SKAARJ TRANSPORTBETRIEB - ENERGIEVERTEILUNGSSTATION: HYDROELEKTRISCHER TRANSPORTWAGON STATUS - AUS / ZUR REAKTIVIERUNG ELEKTROSTATISCHE-ENTLADUNGS-KNOTENPUNKTE AM GLOCKENTURM ÖFFNEN."
+Message="SKAARJ-VERSANDANLAGE, ENERGIEVERTEILUNGSSTATION: STATUS DES HYDROELEKTRISCHEN TRANSPORTWAGONS - AUS / ZUR REAKTIVIERUNG ELEKTROSTATISCHE ENTLADUNGS-KNOTENPUNKTE AM GLOCKENTURM ÖFFNEN."
 
 [TranslatorEvent10]
 ; EN: Message="HAVE FAITH AND NEVER SWAY FROM YOUR BELIEFS. ONLY A SOUL THAT KEEPS THE FAITH DESPITE ALL OPPRESSION SHALL TRIUMPH WHEN THE SAVIOUR PRINCESS COMES FROM THE STARS"
-Message="HABE VERTRAUEN UND WEICHE NICHT VON DEINEM GLAUBEN AB. NUR EINE SEELE, DIE TROTZ ALLER UNTERDRÜCKUNG DEM GLAUBEN TREU BLEIBT WIRD TRIUMPHIEREN WENN DIE RETTENDE PRINZESSIN VON DEN STERNEN KOMMT"
+Message="HABE VERTRAUEN UND WEICHE NICHT VON DEINEM GLAUBEN AB. NUR EINE SEELE, DIE TROTZ ALLER UNTERDRÜCKUNG DEM GLAUBEN TREU BLEIBT, WIRD TRIUMPHIEREN WENN DIE RETTER-PRINZESSIN VON DEN STERNEN KOMMT"
 
 [TranslatorEvent13]
 ; EN: Message="Myscha Nov 28th 1994- June 1997"
@@ -60,15 +60,15 @@ Message="Myscha 28. November 1994 - Juni 1997"
 
 [TranslatorEvent19]
 ; EN: Message="I am feeling ill. My cough has gotten worse and this darkened cell is not helping. I only hope that my  brother Kruun can escape to our childhood hiding hole in the sewers. From there he can access the inner walls of the monastery."
-Message="Ich bin krank, habe einen schlimmen Husten. Diese Zelle ist feucht. Ich hoffe nur, daß mein Bruder Kruun entkommen und unser Kindheitsversteck in den Abwasserkanälen finden kann. Von dort aus kann er ins Innere des Klosters gelangen."
+Message="Ich bin krank, habe einen schlimmen Husten. Diese Zelle ist feucht. Ich hoffe nur, dass mein Bruder Kruun entkommen und unser Kindheitsversteck in den Abwasserkanälen finden kann. Von dort aus kann er ins Innere des Klosters gelangen."
 
 [TranslatorEvent1]
 ; EN: Message="Security Officer Sergai Dubrov: ISV-KRAN: LOG ENTRY: We are hot on the trail of the Skaarj Hunting party that captured Kira near the Sunspire. They are headed north towards the blue electrical storms on the horizon."
-Message="Sicherheitsoffizier Sergai Dubrov: ISV-KRAN: LOGBUCHEINTRAG: Wir sind der Skaarj-Patrouille dicht auf den Fersen, die Kira in der Nähe des Sonnenturms gefangengenommen hat. Sie steuert auf die blauen Gewitter am Horizont zu."
+Message="Sicherheitsoffizier Sergai Dubrov: ISV-KRAN: LOGBUCHEINTRAG: Wir sind der Skaarj-Patrouille dicht auf den Fersen, die Kira in der Nähe des Sonnenturms gefangen genommen hat. Sie steuert auf die blauen Gewitter am Horizont zu."
 
 [TranslatorEvent12]
 ; EN: Message="I have discovered a secret! Last night I snuck out of my hiding place and swam through the pipes to the prison. They have captured a Girl! The Krall sergeant took two boots in the mouth when he approached her. Haha! I can only laugh at their stupidity."
-Message="Gestern Nacht verließ ich mein Versteck und schwamm durch die Rohre ins Gefängnis. Ein Mädchen wird dort gefangengehalten! Ein Soldtat bekam ihren Stiefel ins Gesicht als er versuchte, sich an sie ranzumachen. Ha! Das geschah ihm recht!"
+Message="Eine Offenbarung! Gestern Nacht verließ ich mein Versteck und schwamm durch die Rohre ins Gefängnis. Sie haben ein Mädchen geschnappt! Ein Soldat bekam ihren Stiefel ins Gesicht als er versuchte, sich an sie ranzumachen. Haha! Geschieht ihm recht."
 
 [TranslatorEvent22]
 ; EN: Message="Son of Ne'Lin Garas 380-390"
@@ -76,15 +76,15 @@ Message="Sohn von Ne'Lin Garas 380-390"
 
 [TranslatorEvent23]
 ; EN: Message="Pelit Jan 20 1997-July 17 1997"
-Message="Pelit 20. Jan 1997- 17. Juli 1997"
+Message="Pelit 20. Jan 1997-17. Juli 1997"
 
 [TranslatorEvent17]
 ; EN: Message="Only by facing the direction of the rising sun may one find a new day."
-Message="Nur wenn man in die Richtung der aufgehenden Sonne blickt wird man einen neuen Tag entdecken."
+Message="Nur mit Blick in Richtung der aufgehenden Sonne blickt findet man zu einem neuen Tag."
 
 [TranslatorEvent16]
 ; EN: Message="WARNING-STATIC DISCHARGE NODES-STAY CLEAR DURING OPERATION."
-Message="ACHTUNG- ELEKTROSTATISCHE ENTLADUNGSPUNKTE - VORSICHT BEI BETRIEB."
+Message="ACHTUNG - ELEKTROSTATISCHE ENTLADUNGSPUNKTE - VORSICHT BEI BETRIEB."
 
 [TranslatorEvent21]
 ; EN: Message="Acolyte Ne'Lin Garas 353-487"
@@ -92,52 +92,52 @@ Message="Ministrant Ne'Lin Garas 353-487"
 
 [TranslatorEvent4]
 ; EN: Message="HYDRO-LASER CONTROL STATION: LASERS ON AND OPERATIONAL"
-Message="HYDROLASER KONTROLLSTATION: LASERS AKTIVIERT UND EINSATZBEREIT"
+Message="HYDROLASER-KONTROLLSTATION: LASER AN UND EINSATZBEREIT"
 ; EN: AltMessage="HYDRO-LASER CONTROL STATION: LASERS DISENGAGED - ACCESS TO HYDRO-ELECTRIC GENERATOR BELOW BELL TOWER PERMITTED"
-AltMessage="HYDROLASER KONTROLLSTATION: LASERS DEAKTIVIERT - ZUGANG ZUM HYDROELEKTRISCHEN GENERATOR UNTERHALB GLOCKENTURM GESTATTET"
+AltMessage="HYDROLASER-KONTROLLSTATION: LASER DEAKTIVIERT - ZUGANG ZUM HYDROELEKTRISCHEN GENERATOR UNTERHALB GLOCKENTURM GESTATTET"
 
 [TranslatorEvent3]
 ; EN: Message="My brother Kriin is in the cell below me. My other brother Kruun escaped through the water tunnel under the stairs. They sacrificed my best friend Jaara for Kruun's escape."
-Message="Mein Bruder Kriin ist in der Zelle unter mir. Kruun, mein anderer Bruder, ist durch den Wassertunnel unter den Sternen entkommen. Mein bester Freund Jaara hat sich geopfert, um Kruun's Ausbruch zu ermöglichen."
+Message="Mein Bruder Kriin ist in der Zelle unter mir. Kruun, mein anderer Bruder, ist durch den Wassertunnel unter der Treppe entkommen. Mein bester Freund Jaara hat sich geopfert, um Kruun den Ausbruch zu ermöglichen."
 
 [TranslatorEvent15]
 ; EN: Message="Vault of the Dead - Herein lies the last resting place of the High Priest of Bluff Eversmoking and the artifacts used by the Messiah."
-Message="Gruft der Toten - Hierin befindet sich die letzte Ruhestätte des Hohenpriesters von Bluff Eversmoking sowie die vom Messias verwendeten Artefakte."
+Message="Gruft der Toten - Hier befindet sich die letzte Ruhestätte des Hohepriesters des Klosters der Ewigen Flamme sowie die vom Messias verwendeten Artefakte."
 ; EN: Hint="Find a secret lever in the graveyard"
 Hint="Suche nach einem geheimen Hebel im Friedhof."
 
 [TranslatorEvent2]
 ; EN: Message="Science Officer Kira Argmanov: Separated from my crewmates from ISV-KRAN, I've only been able to stay alive by holding up in this bell tower. A native Nali help me escape the prison cell the Skaarj put me in. Hopefully the Skaarj won't find me here."
-Message="Unteroffizier Kira Argmanov: Bin von der übrigen Besatzung getrennt. Ein Einheimischer hat mir geholfen, aus der Zelle auszubrechen in der mich die Skaarj gehalten haben. Ich habe mich hier in einem Glockenturm verschanzt."
+Message="Unteroffizierin Kira Argmanov: Nach der Trennung von meinen Kameraden von der ISV-Kran hält mich nur meine Position hier im Glockenturm am Leben. Ein einheimischer Nali half mir, dem Gefängnis der Skaarj zu entkommen. Hoffentlich finden sie mich hier nicht."
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."
-Message="ISV-KRAN Logbuch: Chefsanitätsoffizier Tatiana Zimna: Bei unserer Suche nach Kira´s Entführer haben wir ein Kloster gefunden. Wir schlagen heute Abend unser Lager neben diesem Kruzifix auf und ziehen morgen früh gleich weiter."
+Message="ISV-KRAN Logbuch: Chefsanitätsoffizierin Tatiana Zimna: Bei unserer Suche nach Kiras Entführern kamen wir zu diesem wunderschönen Kloster am See, mitten in einer Schlucht. Heute Nacht schlagen wir hier am Kruzifix unser Lager auf und beginnen morgen früh."
 
 [TranslatorEvent26]
 ; EN: Message="Shipping Log: Grorq of the Red Hand Tribe. I am really getting sick with the way the Skaarj are treating us. Constantly bossing us around and making us watch over their pathetic Nali slaves. My troops are getting sick of this situation."
-Message="Grorq vom Stamm der Roten Hände. Allmählich werde ich es leid, wie uns die Skaarj behandeln. Sie kommandieren uns herum und wir müssen ihre jämmerlichen Nali-Sklaven bewachen. Meine Truppen haben es auch langsam satt."
+Message="Versand-Log: Grorq vom Stamm der Roten Hände. Langsam werde ich es leid, wie uns die Skaarj behandeln. Ständig befehlen sie uns herum und wir müssen ihre jämmerlichen Nali-Sklaven bewachen. Meine Truppen haben es auch langsam satt."
 
 [TranslatorEvent24]
 ; EN: Message="Shipping Log: Grorq of the Red Hand Tribe. Coming the next full moon we are expecting a large shipment of salvaged supplies from the human spacecraft. I need to make a few repairs to the electric rails around the bluff but we should be ready by then."
-Message="Grorq vom Stamm der Roten Hände. Wir erwarten demnächst einen größeren Transport aus dem Menschenraumschiff. Ich muß ein paar Reparaturen an den elektrischen Schienen am Kliff vornehmen lassen, aber bis dahin müßten wir fertig sein."
+Message="Versand-Log: Grorq vom Stamm der Roten Hände. Zum nächsten Vollmond erwarten wir eine große Ladung Bergungsgut aus dem Menschenraumschiff. Ich muss ein paar Reparaturen an den elektrischen Schienen am Kliff vornehmen lassen, aber bis dahin müssten wir fertig sein."
 
 [TranslatorEvent25]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: we have captured a Terran girl. Some of my soldiers want to try and take liberties with her. I guess that's OK as long as they watch those boots! She kicked me in the Hrangos last time."
-Message="Gefängniswärter Hrang: wir haben ein Mädchen vom Planeten Terra gefangengenommen. Einige von meinen Soldaten wollen ein bißchen Spaß mit ihr haben. Hauptsache sie nehmen sich vor ihren Stiefeln in acht. Mich hat sie in die Eier getreten."
+Message="Wärter Hrang vom Stamm der Roten Hände: Wir haben ein Weib vom Planeten Terra gefangengenommen. Einige meiner Soldaten wollen sich ein bisschen mit ihr begnügen. Müsste passen, solang sie sich vor diesen Stiefeln in Acht nehmen!. Letztes Mal hat sie mich am kleinen Hrango erwischt."
 
 [TranslatorEvent27]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: Dorro owes me 25,000 gold Paaras when we get home! He truly sucks at death bones. Hustling him is like taking candy from a Terran baby. Speaking of which I think it's time to go beat on that ugly Terran girl some more!"
-Message="Gefängniswärter Hrang: Dorro schuldet mir 25,000 Goldpaaras! Er ist miserabel im Todesknochenspiel. Ihn zu beschummeln ist echt leicht. So, ich glaube es wird wieder Zeit, dieses häßliche Mädchen von Terra zu verprügeln!"
+Message="Wärter Hrang vom Stamm der Roten Hände: Dorro schuldet mir 25.000 Goldpaaras! Er ist miserabel im Todesknochenspiel. Ihn zu beschummeln ist echt leicht. Aber jetzt wird's, glaube ich, wieder Zeit, dieses hässliche terranische Weib zu verprügeln!"
 
 [TranslatorEvent28]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: I can't believe it!!! That Terran girl escaped! One of those worthless Nali Monks must have tunneled her out. I am in DEEP SHIT! If Captain DUK'CHOROTH comes and finds out I let her escape I'll be de-hrangod for sure!"
-Message="Gefängniswärter Hrang: Nicht zu fassen! Das Mädchen ist entkommen! Einer von diesen nichtsnützigen Nali-Mönchen muß sie durch einen Tunnel geschleust haben. So eine Scheiße!"
+Message="Wärter Hrang vom Stamm der Roten Hände: Nicht zu fassen! Das Weib ist entkommen! Einer von diesen nichtsnützigen Nali-Mönchen muss sie durch einen Tunnel geschleust haben. So eine Scheiße! Wenn Captain DUK'CHOROTH das rausfindet, war's das mit meinem kleinen Hrango!"
 
 [TranslatorEvent29]
 ; EN: Message="Kruun's personal diary: I have to be careful how many times I sneak into the monastery through the tunnels. I've marked the tunnel that leads to the inner monastery with a cross, the other leads to the prison where my brother is still being held."
-Message="Kruun's Tagebuch: Ich darf nicht zu oft durch die Höhlen ins Kloster. Ich habe den quadratischen Tunnel der ins Kloster führt mit einem Kreuz gekennzeichnet. Der andere Tunnel führt zum Gefängnis, in dem mein Bruder festgehalten wird."
+Message="Kruuns Tagebuch: Ich darf nicht mehr zu oft durch die Höhlen ins Kloster. Ich habe den quadratischen Tunnel, der ins Kloster führt, mit einem Kreuz gekennzeichnet. Der andere Tunnel führt zum Gefängnis, wo sie immer noch meinen Bruder fest halten."
 
 [TranslatorEvent30]
 ; EN: Message="MAIN GATE GUARD TOWER"
-Message="WACHTTURM HAUPTTOR"
+Message="HAUPTTOR ZUM WACHTURM"

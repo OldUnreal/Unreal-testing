@@ -2,13 +2,13 @@
 ; EN: Title="Nagomi Passage"
 Title="Nagomis Enge"
 ; EN: LevelEntryText="Entering the Nagomi Passage"
-LevelEnterText="Eingang Nagomis Enge"
+LevelEnterText="Betrete Nagomis Enge"
 
 [LevelSummary]
 ; EN: Title="Nagomi Passage"
 Title="Nagomis Enge"
 ; EN: LevelEntryText="Entering the Nagomi Passage"
-LevelEnterText="Eingang Nagomis Enge"
+LevelEnterText="Betrete Nagomis Enge"
 
 [TranslatorEvent0]
 ; EN: Message="LOG: M. Poesch: Located a mining facility, but the front gates won't open. A large Behemoth seems to control it, but he went back inside. I'll wait for him here. I got 2 clips here with his name on it."

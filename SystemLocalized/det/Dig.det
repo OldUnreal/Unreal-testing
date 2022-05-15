@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Rrajigar Mine"
-Title="Rrajigar Bergwerk"
+Title="Rrajigar-Bergwerk"
 ; EN: LevelEntryText="Entering the Rrajigar Mine"
-LevelEntryText="Eingang Rrajigar Bergwerk"
+LevelEntryText="Betrete das Rrajigar-Bergwerk"
 
 [LevelSummary]
 ; EN: Title="Rrajigar Mine"
-Title="Rrajigar Bergwerk"
+Title="Rrajigar-Bergwerk"
 ; EN: LevelEntryText="Entering the Rrajigar Mine"
-LevelEntryText="Eingang Rrajigar Bergwerk"
+LevelEntryText="Betrete das Rrajigar-Bergwerk"
 
 [TranslatorEvent11]
 ; EN: Message="WARNING: Intruder detected in Sections C-6 and D-8. All personnel are responsible for patrolling their local area."
@@ -26,7 +26,7 @@ Message="ACHTUNG: Aufstand der Nali festgestellt im Sektor 3A. Tödliche Gewalta
 
 [TranslatorEvent2]
 ; EN: Message="Harobed Village is on the other side of these mountains. I will wait until the two suns have set and proceed through Rrajigar mine. It is the only way."
-Message="Das Harobed Dorf befindet sich jenseits dieser Berge. Ich werde warten, bis die beiden Sonnen untergehen, und dann meinen Weg durch das Rrajigar Bergwerk fortsetzen. Das ist der einzige Weg."
+Message="Das Dorf Harobed befindet sich jenseits dieser Berge. Ich werde warten, bis die beiden Sonnen untergehen, und dann meinen Weg durch das Rrajigar-Bergwerk fortsetzen. Das ist der einzige Weg."
 
 [TranslatorEvent10]
 ; EN: Message="WARNING: Force Field power source two status is inactive. Security Condition Two reached."
@@ -36,7 +36,7 @@ Message="ACHTUNG: Kraftfeld Energieversorgung zwei, Status ist inaktiv. Sicherhe
 ; EN: Message="Force field intact. All systems normal."
 Message="Kraftfeld unbeschädigt. Alle Systeme normal."
 ; EN: Hint="The force field must be deactivated. Find the control room."
-Hint="Das Kraftfeld muß deaktiviert werden. Finde den Kontrollraum."
+Hint="Das Kraftfeld muss deaktiviert werden. Finde den Kontrollraum."
 
 [TranslatorEvent5]
 ; EN: Message="WARNING! Force field de-activated. Intruder detected in Section C-6. Eliminate any unauthorized presence."
@@ -46,32 +46,32 @@ Hint="Schieße auf alle roten Fässer."
 
 [TranslatorEvent9]
 ; EN: Message="WARNING: Force Field power source one status is inactive. Security Condition Two reached."
-Message="ACHTUNG: Kraftfeld Energieversorgung eins, Status ist inaktiv. Sicherheitszustand Zwei erreicht."
+Message="ACHTUNG: Kraftfeld-Energieversorgung eins, Status ist inaktiv. Sicherheitszustand Zwei erreicht."
 
 [TranslatorEvent19]
 ; EN: Message="NOTE: Area must be clear for transport lift to perform properly."
-Message="ACHTUNG: Bereich muß freigehalten werden, damit Transportfahrstuhl richtig funktioniert."
+Message="ACHTUNG: Bereich muss freigehalten werden, damit Transportfahrstuhl richtig funktioniert."
 
 [TranslatorEvent15]
 ; EN: Message="You are SO dead."
-Message="Du bist tot."
+Message="Du bist SO tot."
 
 [TranslatorEvent14]
 ; EN: Message="What the hell are you doing up here?"
-Message="Was zum Teufel hast du hier oben zu suchen?"
+Message="Was machst du denn bitte hier oben?"
 
 [TranslatorEvent20]
 ; EN: Message="Force Field Control Area"
-Message="Kraftfeld Kontrollbereich."
+Message="Kraftfeld-Kontrollbereich"
 
 [TranslatorEvent8]
 ; EN: Message="Force Field power source one status is active."
-Message="Kraftfeld Energieversorgung eins, Status ist aktiv."
+Message="Kraftfeld-Energieversorgung Eins, Status ist aktiv."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Drücke auf die roten Knöpfe an der Wand, indem du gegen sie stößt."
 
 [TranslatorEvent7]
 ; EN: Message="Force Field power source two status is active."
-Message="Kraftfeld Energieversorgung zwei, Status ist aktiv."
+Message="Kraftfeld-Energieversorgung Zwei, Status ist aktiv."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Drücke auf die roten Knöpfe an der Wand, indem du gegen sie stößt."

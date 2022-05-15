@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Harobed Village"
-Title="Harobed Dorf"
+Title="Dorf Harobed"
 ; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Eingang von Harobed Dorf"
+LevelEntryText="Betrete das Dorf Harobed"
 
 [LevelSummary]
 ; EN: Title="Harobed Village"
-Title="Harobed Dorf"
+Title="Dorf Harobed"
 ; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Eingang von Harobed Dorf"
+LevelEntryText="Betrete das Dorf Harobed"
 
 [TranslatorEvent3]
 ; EN: Hint="Proceed to the crashed spaceship up ahead."
@@ -28,6 +28,6 @@ Hint="Durchsuche die Kirche auf dem Hügel, die Nali haben vielleicht eine Über
 
 [TranslatorEvent2]
 ; EN: Message="We shall pray before we set off for the Sunspire. We will find refuge there. Praise be to the God of the Good Lore for giving us sanctuary. The journey will be treacherous but we will prevail!"
-Message="Wir werden beten, bevor wir zum Sonnenturm aufbrechen. Dort werden wir Zuflucht finden. Dem Herrn der guten Kunde sei Lob und Preis, daß Er uns Zuflucht gewährt. Die Reise wird gefährlich sein, aber wir werden siegen!"
+Message="Wir werden beten, bevor wir zum Sonnenturm aufbrechen. Dort werden wir Zuflucht finden. Dem Herrn der guten Kunde sei Lob und Preis, dass Er uns Zuflucht gewährt. Die Reise wird gefährlich sein, aber wir werden siegen!"
 ; EN: Hint="Look very closely along the walls."
 Hint="Betrachte die Wände sehr genau."

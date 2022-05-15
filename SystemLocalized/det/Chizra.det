@@ -1,60 +1,60 @@
 ﻿[LevelInfo0]
 ; EN: Title="Chizra - Nali Water God"
-Title="Chizra - Nali Tempel des Wassergottes"
+Title="Chizra - Wassergott der Nali"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
-LevelEnterText="Eingang von Chizra - Der Nali Tempel des Wassergottes"
+LevelEnterText="Betrete Chizra - Tempel des Nali-Wassergottes"
 
 [LevelSummary]
 ; EN: Title="Chizra - Nali Water God"
-Title="Chizra - Nali Tempel des Wassergottes"
+Title="Chizra - Wassergott der Nali"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
-LevelEnterText="Eingang von Chizra - Der Nali Tempel des Wassergottes"
+LevelEnterText="Betrete Chizra - Tempel des Nali-Wassergottes"
 
 [TranslatorEvent7]
 ; EN: Message="The Nali Water God Chizra and his holy temple has been overrun by the water serpents and the demons who came from the stars. Only the messiah can purify the temple now."
-Message="Der heilige Tempel des Nali Wassergottes Chizra ist von den Wasserschlangen und den Dämonen, die von den Sternen kamen überlaufen. Jetzt kann nur der Messias den Tempel reinigen."
+Message="Der Nali-Wassergott Chizra und sein heiliger Tempel wurden von den Wasserschlangen und den Dämonen, die von den Sternen kamen, überrannt. Nun kann bloß noch der Messias den Tempel reinigen."
 
 [TranslatorEvent11]
 ; EN: Message="Take the stick of 6 fires and go forth to the inner ceremonial chamber. There you shall find you way back to the place from whence you came and the metal chariot that fell from the stars."
-Message="NIMM DEN STOCK DER SECHS FLAMMEN UND BEGIB DICH ZU DEN INNEREN ZEREMONIENKAMMERN. DORT WIRST DU DEN WEG AN DEN ORT ZURÜCKFINDEN, WOHER DU GEKOMMEN BIST, UND DEN METALLENEN WAGEN, DER VOM STERNENHIMMEL FIEL."
+Message="Nimm den Stab der Sechs Flammen und begib dich zu den inneren Zeremonienkammern. Dort findest du den Weg zurück dorthin, woher du gekommen bist, sowie den metallenen Wagen, der von den Sternen fiel."
 
 [TranslatorEvent20]
 ; EN: Message="Look into your own eyes. And when your courage is strongest your last step to the prize will be upheld by your faith."
-Message="Sieh in deine eigenen Augen hinein. Und wenn dein Mut am stärksten ist, wird dein letzter Schritt, der dich zum Preis führt, durch deinen Glauben gestützt."
+Message="Blicke in deine eigenen Augen. Und wenn dein Mut am Stärksten ist, so erhebt dein Glauben deinen letzten Schritt zur Entlohnung."
 
 [TranslatorEvent8]
 ; EN: Message="The stick of 6 fires can only be reached by a warrior who has bathed in the pool of thunder, past the obelisk of the clouds."
-Message="DEN STOCK DER SECHS FLAMMEN KANN NUR EIN KRIEGER ERREICHEN, DER IM TÜMPEL DES DONNERS, JENSEITS DES OBELISKS DER WOLKEN, GEBADET HAT."
+Message="Den Stab der Sechs Flammen erreicht nur ein Krieger, der im Donnernden Becken jenseits des Obelisks der Wolken gebadet ist."
 
 [TranslatorEvent9]
 ; EN: Message="The pyramid is the key to the chamber of death. Here you shall find more power for the stick of 6 fires."
-Message="DIE PYRAMIDE IST DER SCHLÜSSEL ZUR KAMMER DES TODES. DORT WIRST DU MEHR KRAFT FINDEN FÜR DEN STOCK DER SECHS FLAMMEN."
+Message="Die Pyramide ist der Schlüssel zur Kammer des Todes. In jener sollst du weitere Stärkung für den Stab der Sechs Flammen finden."
 
 [Counter3]
 ; EN: CountMessage="Snap!"
 CountMessage="Knacks!"
 ; EN: CompleteMessage="The raft is loose"
-CompleteMessage="Das Floß treibt davon"
+CompleteMessage="Das Floß treibt dahin"
 
 [TranslatorEvent6]
 ; EN: Message="Beyond this stone seal lies the inner ceremonial chambers of the Nali water god."
-Message="Jenseits dieses Steinsiegels liegen die inneren Zeremonienkammern des Nali Wassergottes."
+Message="Jenseits dieses Steinsiegels liegen die inneren Zeremonienkammern des Wassergottes der Nali."
 
 [TranslatorEvent18]
 ; EN: Message="Beyond this golden door lies the holy altar of the stick of 6 fires. Only by touching the outset stones of the lightning fire pillars may one enter."
-Message="Jenseits dieses goldenen Tores befindet sich der heilige Altar des Stockes der sechs Flammen. Eintreten kann nur, wer die eingelassenen Steine in den Säulen des Blitzfeuers berührt."
+Message="Jenseits dieses goldenen Tores befindet sich der heilige Altar des Stabes der Sechs Flammen. Nur durch Berührung der eingelassenen Steine an den Säulen des Blitzfeuers vermag man es zu betreten."
 
 [TranslatorEvent14]
 ; EN: Message="The demons came down from the stars in a metal chariot as punishment for the sins of The Nali."
-Message="Die Dämonen kamen in einem metallenen Wagen von den Sternen herunter, um die Sünden der Nali zu bestrafen."
+Message="Die Dämonen kamen in einem metallenen Wagen von den Sternen herab, um die Sünden der Nali zu bestrafen."
 
 [TranslatorEvent5]
 ; EN: Message="Only a warrior who wields the stick of 6 fires may enter the inner ceremonial chambers. Once the stick of 6 fires is in your grasp the stone seal will rise."
-Message="Nur ein Krieger, der den Stock der sechs Flammen bei sich trägt darf die inneren Zeremonienkammern betreten. Sobald du den Stock der sechs Flammen zu fassen bekommst, wird das Steinsiegel aufgehen."
+Message="Nur ein Krieger, der den Stab der Sechs Flammen bei sich trägt, darf die inneren Zeremonienkammern betreten. Sobald du den Stab der Sechs Flammen zu fassen bekommst, wird das Steinsiegel aufgehen."
 
 [TranslatorEvent10]
 ; EN: Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY. TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
-Message="DER STOCK DER SECHS FLAMMEN KAM VON DEM NALI WASSERGOTT, ALS DER STERN VOM HIMMEL FIEL. UM DEN STERN ZU FINDEN MUSS MAN DEN ZEREMONIENFLÜGEL DURCHQUEREN."
+Message="DER STAB DER SECHS FLAMMEN KAM VON DEM NALI-WASSERGOTT, ALS DER STERN VOM HIMMEL FIEL. UM DEN STERN ZU FINDEN, MUSS MAN DEN ZEREMONIENFLÜGEL DURCHQUEREN."
 
 [TranslatorEvent13]
 ; EN: Message="The pyramid's center is the focal point of Chizra the Nali water god's power."
@@ -62,32 +62,32 @@ Message="Das Zentrum der Pyramide ist der Brennpunkt der Macht von Chizra, dem W
 
 [TranslatorEvent19]
 ; EN: Message="Climb the loose stones to reach the lagoon of lightning fire. Beware the demon who came from the stars lurks in the shadows. A fool shall surely perish."
-Message="Klettere die losen Steine hinauf, um die Lagune des Blitzfeuers zu erreichen. Achtung: der Dämon, der von den Sternen kam versteckt sich in den Schatten. Ein Narr wird bestimmt sterben."
+Message="Klettere die losen Steine hinauf, um die Lagune des Blitzfeuers zu erreichen. Habe Acht, so versteckt sich nämlich der Dämon, der von den Sternen kam, in den Schatten. Das Leben eines Narren wird schnell erlöschen."
 
 [TranslatorEvent1]
 ; EN: Message="Powerful strength comes from those who let the waterfall wash over them at the pool of thunder."
-Message="Mächtige Kraft kommt von denen, die sich am Tümpel des Donners vom Wasserfall überfluten lassen."
+Message="Machtvolle Fähigkeiten erlangen jene, die den Wasserfall am Donnernden Becken über sich ergehen lassen."
 
 [TranslatorEvent12]
 ; EN: Message="This is the pool of thunder. Impure souls who bathe in the water shall face the demon that came from the stars"
-Message="Dies ist der Tümpel des Donners. Unreine Seelen, die in diesem Wasser baden, müssen sich dem Dämon stellen, der von den Sternen stammt."
+Message="Dies ist das Donnernde Becken. Unreine Seelen, die in diesem Wasser baden, müssen sich dem Dämon stellen, der von den Sternen stammt."
 
 [TranslatorEvent4]
 ; EN: Message="Only a warrior who has touched the face of the water god idol may enter this temple."
-Message="Nur ein Krieger, der das Gesicht des Wassergottes berührt hat, darf diesen Tempel betreten."
+Message="Nur ein Krieger, der das Gesicht des Wassergott-Idols berührt hat, darf diesen Tempel betreten."
 
 [TranslatorEvent3]
 ; EN: Message="To reach the pool of thunder one must climb the loose stones."
-Message="Um den Tümpel des Donners zu erreichen muß man die losen Steine hinaufklettern."
+Message="Um das Donnernde Becken zu erreichen muss man die losen Steine hinaufklettern."
 
 [TranslatorEvent15]
 ; EN: Message="1400 hours Commander Mac Harrison: SITREP: These local natives have a 6 barreled rocket launcher on an altar but it is heavily guarded by those Salamander things. "The Stick of 6 fires" is what the Nali keep calling it. I'll try to sneak in tonight."
-Message="Capt. Mac Harrison: Die Nali haben einen Raketenwerfer mit 6 Rohren auf einem Altar aufbewahrt, der von diesen Salamanderkreaturen bewacht wird. Er wird "Stock der 6 Flammen" genannt. Ich versuche heute Abend mich hineinzuschleichen."
+Message="14:00 - Capt. Mac Harrison: LAGEBERICHT: Diese Einheimischen bewahren einen sechsläufigen Raketenwerfer auf ihrem Altar auf, dieser ist jedoch unter schwerer Aufsicht dieser Salamanderkreaturen. Die Nali sagen dazu ständig "Stab der Sechs Flammen". Heute Nacht versuche ich, mich hinzuschleichen."
 
 [TranslatorEvent2]
 ; EN: Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder."
-Message="Dies ist der Obelisk der Wolken. Jenseits von hier liegt der Tümpel des Donners."
+Message="Dies ist der Obelisk der Wolken. Jenseits von hier liegt das Donnernde Becken."
 
 [TranslatorEvent0]
 ; EN: Message="Beware those of impure motives who enter the pool of thunder shall face the demon from the stars"
-Message="Achtung: Diejenigen, die aus niederen Beweggründen den Tümpel des Donners betreten, müssen sich dem Dämon von den Sternen stellen"
+Message="Habet Acht, denn die, die das Donnernde Becken aus niederen Beweggründen ersuchen, müssen sich dem Dämon von den Sternen stellen"

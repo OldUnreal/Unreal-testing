@@ -1,0 +1,15 @@
+﻿[LevelInfo3]
+; EN: Title="The Darkening"
+Title="De verduistering"
+
+[LevelSummary]
+; EN: Title="The Darkening"
+Title="De verduistering"
+
+[TranslatorEvent10]
+; EN: Message="The Source Antechamber, ACCESS DENIED."
+Message="De Bron Antichambre, TOEGANG GEWEIGERD."
+
+[TranslatorEvent0]
+; EN: AltMessage="Authorization granted. Activate the Emergency Power Supply."
+AltMessage="Autorisatie verleend. Activeer de noodstroomvoorziening."
