@@ -1,0 +1,19 @@
+﻿[LevelInfo2]
+; EN: Title="Velora Temple"
+Title="Templo de Velora"
+; EN: LevelEntryText="Entering Velora Temple"
+LevelEntryText="Entrando no Templo de Velora"
+
+[LevelSummary]
+; EN: Title="Velora Temple"
+Title="Templo de Velora"
+; EN: LevelEntryText="Entering Velora Temple"
+LevelEntryText="Entrando no Templo de Velora"
+
+[TranslatorEvent1]
+; EN: Message="LOG: M. Verdu: Lost Leiby and Poesch about an hour ago. They must have made it outside. I think I'm getting close, but it's so dark it's hard to tell. Wait, something just fell off the wall. Coming this way... >>>ERROR<<<"
+Message="Registro: M. Verdu: Perdi Leiby e Poesch há cerca de uma hora atrás. Eles devem ter conseguido sair. Eu acho que estou chegando perto, mas esta tão escuro que é difícil dizer. Espere, alguma coisa acabou de cair da parede. Esta vendi para cá.... >>>Erro<<<"
+
+[TranslatorEvent0]
+; EN: Message="LOG: M. Fox: Someone get me the hell out of here!!"
+Message="Registro: M. Fox: Alguém me tire daqui!!"

@@ -1,0 +1,43 @@
+﻿[LevelInfo0]
+; EN: Title="Sacred Passage"
+Title="Passagem Sagrado"
+; EN: LevelEntryText="Entering the Sacred Passage"
+LevelEntryText="Entrando na Passagem Sagrado"
+
+[LevelSummary]
+; EN: Title="Sacred Passage"
+Title="Passagem Sagrado"
+; EN: LevelEntryText="Entering the Sacred Passage"
+LevelEntryText="Entrando na Passagem Sagrado"
+
+[TranslatorEvent1]
+; EN: Hint="Go for a swim and look for a secret passage."
+Hint="Vá nadar e procure por uma passagem secreta."
+
+[TranslatorEvent12]
+; EN: Message=""...For that will be the key""
+Message="" ...Para que se encontre a chave.""
+; EN: Hint="Activate the lever to let the water run."
+Hint="Use a alavanca para deixar a água correr."
+
+[TranslatorEvent13]
+; EN: Message="You must have a keen eye, so that you may bathe in the sacred waters."
+Message="Você deve ter um olhar aguçado, somente assim poderá se banhar nas águas sagradas."
+; EN: Hint="Look at each face."
+Hint="Olhe em cada face."
+
+[TranslatorEvent11]
+; EN: Message=""Wood must break free...""
+Message=""A mdeira deverá ser quebrada...""
+; EN: Hint="Activate the lever to let the water run."
+Hint="Use a alavanca para deixar a água correr."
+
+[TranslatorEvent0]
+; EN: Hint="Go for a swim and look for a secret passage."
+Hint="Vá nadar e procure por uma passagem secreta."
+
+[TranslatorEvent2]
+; EN: Message="Only the purest of heart may pay homage to the God of The Good Lore Chizra"
+Message="Somente o mais puro de coração poderá prestar homenagem ao Deus das Boas Crenças Chizra"
+; EN: Hint="Activate the lever to let the water run."
+Hint="Use a alavanca para deixar a água correr."

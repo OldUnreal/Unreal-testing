@@ -1,0 +1,23 @@
+﻿[LevelInfo0]
+; EN: Title="Glathriel Village"
+Title="Vilarejo Glathriel"
+; EN: LevelEntryText="Entering the Glathriel Village"
+LevelEntryText="Entrando na Vilarejo Glathriel"
+
+[LevelSummary]
+; EN: Title="Glathriel Village"
+Title="Vilarejo Glathriel"
+; EN: LevelEntryText="Entering the Glathriel Village"
+LevelEntryText="Entrando na Vilarejo Glathriel"
+
+[TranslatorEvent0]
+; EN: Message="I saw another spider in the basement today. They squeeze through the crack in the wall and take away whatever they want. I know I will have to close the crack, but how can I do it safely when any moment a spider could appear and threaten my life?"
+Message="Eu vi outra aranha no porão hoje. Elas se espremem pela rachadura na parede e levam embora o que elas quiserem. Sei que devo tampar a rachadura, mas como eu poderia fazer isso com segurança se a qualquer momento uma aranha poderia sair e por a minha vida em risco?"
+
+[TranslatorEvent3]
+; EN: Message="The Nightstalkers came again last night. We did what we always do - lock the doors, douse the lights and pray that they don't find us. But they forced their way into even more houses. I fear the night when one when of those screams will be my own. "
+Message="Os perseguidores noturnos vieram novamente na última noite. Fizemos o que sempre fazemos - trancamos as portas, apagamos as luzes e rezamos para eles não nos encontrem. Mas eles abriram caminho em ainda mais casas. Temo que um dos gritos da noite seja o meu."
+
+[TranslatorEvent4]
+; EN: Message="Maybe I should try to get into the hideout. I don't care if it's already too crowded and can barely support the sick - at least I'll die a peaceful death there."
+Message="Talves eu devesse entrar no esconderijo. Não me importo se já estiver muito cheio e eu mal puder ajudar os doentes - ao menos poderei morrer em paz ali."

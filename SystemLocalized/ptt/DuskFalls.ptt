@@ -1,0 +1,55 @@
+﻿[LevelInfo2]
+; EN: Title="Edge of Na Pali"
+Title="Borda de Na Pali"
+
+[LevelSummary]
+; EN: Title="Edge of Na Pali"
+Title="Borda de Na Pali"
+
+[TranslatorEvent6]
+; EN: Message="LOG: M. Worch: My head hasn't stop spinning since the crash. Who keeps moving the ground down there? Oh God, I'm going to be sick again..."
+Message="Registro: M. Worch: A minha cabeça ainda não parou de girar desde a queda. Quem esta fazendo o chão se mover lá embaixo? Oh Deus, vou ficar enjoado de novo..."
+
+[TranslatorEvent5]
+; EN: Message="LOG: K. Divad: Our mission to locate the Vortex Rikers is a failure. The UMS Chantilly was pulled into the atmosphere of this god-forsaken planet and we crashed into a mountain. Only Pilot Worch and myself survived. They don't pay me enough for this."
+Message="Registro: K. Divad: Nossa missão para localizar a Vortex Rikers fracassou. SMU Chantilly foi arrastada para a atmosfera deste planeta abandonado por deus e bateu numa montanha. Apenas o piloto Worch e eu sobrevivemos. Eles não me pagam o suficiente por isto."
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Parkman: On the Prometheus the crew behaved like a team. Here, they have turned on each other. Wish I didn't have to rely on them to survive. I think crewman Dalton deliberately led the brutes to crewman Marshall. Then he watched him die."
+Message="Registro: J. Parkman: Na Prometeu a tripulação agia como um time. Aqui, eles se viram uns contra os outros. Eu preferiria não ter que depender deles para sobreviver. Eu acho que o membro da tripulação Dalton deliberatamente levou os brutos para o membro da tripulação Marshall. Depois Dalton assistiu Marshall morrer."
+
+[TranslatorEvent4]
+; EN: Message="LOG: J. Airoldi: Had an encounter with a small reptilian creature this morning while scouting for food. It ran away, but came back with three more I think and they've been waiting outside all day. They're giving me the creeps."
+Message="Registro: J. Airoldi: Tive um encontro com uma pequena criatura reptiliana nesta manhã enquanto caçava comida. Ele fugiu, mas acho que voltou com mais três e eles estiveram esperando lá fora durante todo o dia. Eles estão me dando arrepios."
+
+[TranslatorEvent7]
+; EN: Message="Terra-Emi Mining Bunker"
+Message="Abrigo de Mineração Terra-Emi"
+
+[TranslatorEvent2]
+; EN: Message="LOG: W. Marshall: Hiked through the mountains and making good time. Should make it to Dahlgren's coordinates in a few hours. Finally found some water. Thought I was going to die of dehydration."
+Message="Registro: W. Marshall: Caminhei pelas montanhas num bom ritmo. Devo chegar às coordenatas de Dahlgren em poucas horas. Finalmente achei um pouco de água. Achei que fosse morrer de desidratação."
+
+[TranslatorEvent8]
+; EN: Message="Terra-Sun Mining Station (South)"
+Message="Estação de Mineração Terra-Sol (Sul)"
+
+[TranslatorEvent11]
+; EN: Message="Terra-Neo Mining Station"
+Message="Estação de Mineração Terra-Neo"
+
+[TranslatorEvent1]
+; EN: Message="LOG: G. Dahlgren: Still no reply from Dalton's team. It's been four days now and no sign of the others. I don't think we're going to survive. I heard someone actually made it off this planet. Hope they send a ship back for us..."
+Message="Registro: G. Dahlgren: Ainda sem resposta do tipo de Dalton. Já fazem quatro dias aagora e sem sinal dos outros. Acho que não sobreviveremos. Ouvi dizer que alguém conseguiu, realmente, sair deste planeta. Espero que eles enviem uma nave de volta para nós..."
+
+[TranslatorEvent9]
+; EN: Message="Terra-Sun Mining Station (North)"
+Message="Estação de Mineração Terra-Sol (Norte)"
+
+[TranslatorEvent10]
+; EN: Message="Terra-Mina Mining Facility"
+Message="Instalação de Mineração Terra-Mina"
+
+[TranslatorEvent3]
+; EN: Message="LOG: S. Dalton: Watched those brutes beat Marshall to a pulp last night. He never saw it coming. Probably better that way. I emptied an entire clip on one of them and he just kept coming. At least they haven't tried to get me up here..."
+Message="Registro: S. Dalton: Assisti aqueles brutos espancarem Marshall na última noite. Ele nunca os viu chegando. Deve ser melhor assim. Evaziei um cartucho inteiro em um deles, mas o bruto continou vindo. Pelo menos eles não tentaram subir aqui ainda..."

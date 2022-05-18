@@ -1,0 +1,63 @@
+﻿[LevelInfo0]
+; EN: Title="NyLeve's Falls"
+Title="Cascatas de NyLeve"
+; EN: LevelEntryText="Entering NyLeve's Falls"
+LevelEntryText="Entrando na Cascatas de NyLeve"
+
+[LevelSummary]
+; EN: Title="NyLeve's Falls"
+Title="Cascatas de NyLeve"
+; EN: LevelEntryText="Entering NyLeve's Falls"
+LevelEntryText="Entrando na Cascatas de NyLeve"
+
+[TranslatorEvent17]
+; EN: Message="My burden does not end. More minions have been cast down by the angry Gods. I will pray for their souls, but I fear my prayers are not heard. I must travel to the Temple of Chizra to seek balance."
+Message="Meu fardo não tem fim. Mais servos foram enviados para baixo pelos Deuses zangados. Eu irei orar pelas almas deles, mas eu temo que minhas orações não são ouvidas. Eu devo viajar para o Templo de Chizra para buscar equilíbrio."
+
+[TranslatorEvent1]
+; EN: Message="Log. P. v. Heel: I was attacked by a flying beast, it uses it's tail as a weapon! I was able to kill it, but not without taking a beating. I discovered the orange berries have a healing effect on me. I feel strong enough to proceed."
+Message="Diário. P. v. Heel: Eu fui atacado por uma besta voadora, ela usa a sua cauda como uma arma! Consegui matá-la, mas não sem antes receber um golpe. Descobri que as amoras laranjas tem um efeito curativo em mim. Sinto-me forte o bastante para prosseguir."
+; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
+Hint="Quando enfrentar brutos, certifique-se que você tem bastante espaço para deslizar para os lados para esquivar-se dos mísseis que eles disparam contra você."
+
+[TranslatorEvent3]
+; EN: Message="Log: Guard R. Bijl. The situation is critical, last night large, extremely powerful alien forces penetrated our camp. Fired small missiles from hand launchers. We lost 5 men."
+Message="Registro: Guarda. R. Bijl. A situação esta crítica, ontem a noite, tropas alienígenas enormes e tremendamente poderosas penetraram no nosso acampamento. Dispararam pequenos mísseis de lançadores portáteis. Perdemos 5 homens."
+; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"
+Hint="Certifique-se de pegar a automag que esta perto da casa logo ao lado da Vortex Rikers. Tome um refrescante banho enquanto estiver lá!"
+
+[TranslatorEvent20]
+; EN: Message="Log: I have no damn luck. First I'm locked up for two years for a murder I did not commit, then on my way to yet another prison colony we crash on this god forsaken ball of rock. This sucks!"
+Message="Diário: Eu não tenho um pingo de sorte. Primeiro eu fui preso por dois anos por um assassinato que eu não cometi, depois, no meu caminho para mais uma colônia de prisioneiros, nós caímos nesta montanha de pedras abandonada por deus. Isto é um saco!"
+; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
+Hint="Quando enfrentar brutos, certifique-se que você tem bastante espaço para deslizar para os lados para esquivar-se dos mísseis que eles disparam contra você."
+
+[TranslatorEvent10]
+; EN: Message="Log: N. Vos: Contact with members of ISV-KRAN! (Presumed lost in this area 3 months ago) They have seen a Skaarj vessel in operation. We may need to gain control of it to escape this system."
+Message="Diário: N. Vos: Contato com os membros de ISVKran! (premusi que estava perdido nesta área a 3 meses atrás) Eles viram uma embarcação Skaarj em operação. Nós talvez consigamos ganhar o controle dela para escapar deste sistema."
+; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"
+Hint="Certifique-se de pegar a automag que esta perto da casa logo ao lado da Vortex Rikers. Tome um refrescante banho enquanto estiver lá!"
+
+[TranslatorEvent14]
+; EN: Message="Log: Guard M. v. Wely: I should have stayed with the others, I think my leg is broken in several places. My brother went looking for help 8 hours ago."
+Message="Diário: Guard M. v Wely: Eu devia ter ficado junto com os outros, acho que a minha perna esta quebrada em vários lugares. Meu irmão foi buscar ajuda 8 horas atrás."
+
+[TranslatorEvent18]
+; EN: Message="Log: Guard B. v. Wely: I can't get past the "brutes" to go back and help my brother. My ammo is almost out. There are "brutes" patrolling around at all times."
+Message="Diário: Guard B. v.Wely: Eu não posso passar pelos 'brutos' para retornar e ajudar o meu irmão. Minha munição esta quase no fim. Há 'brutos' patrulhando aqui por perto o tempo todo."
+; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
+Hint="Quando enfrentar brutos, certifique-se que você tem bastante espaço para deslizar para os lados para esquivar-se dos mísseis que eles disparam contra você."
+
+[TranslatorEvent9]
+; EN: Message="Log: Cook J. Strang: No reply to distress signal. Vortex Rikers' hull is too unstable to use as shelter. We found an abandoned house to use as our base camp. Maybe the native population can help us."
+Message="Diário: Cook J. Strang: Sem resposta para o sinal de socorro. O casco da Vortex Rikers esta muito instável para usá-lo como abrigo. Nós encontramos uma casa abandonada para usar como nossa base de operações. Talvez a população nativa possa nos ajudar."
+; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"
+Hint="Certifique-se de pegar a automag que esta perto da casa logo ao lado da Vortex Rikers. Tome um refrescante banho enquanto estiver lá!"
+
+[TranslatorEvent21]
+; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
+Hint="Quando enfrentar brutos, certifique-se que você tem bastante espaço para deslizar para os lados para esquivar-se dos mísseis que eles disparam contra você."
+
+[TranslatorEvent22]
+; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"
+Hint="Certifique-se de pegar a Automag que esta perto da casa logo ao lado da Vortex Rikers. Tome um refrescante banho enquanto estiver lá!"

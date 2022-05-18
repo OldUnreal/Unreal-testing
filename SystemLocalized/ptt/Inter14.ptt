@@ -1,0 +1,15 @@
+﻿[LevelInfo1]
+; EN: Title="Intermission 14"
+Title="Intermissão 14"
+
+[LevelSummary]
+; EN: Title="Intermission 14"
+Title="Intermissão 14"
+
+[TransitionGenderEvent8]
+; Note: Make the text coincide with the equivalent in Sounds/ptt/Interm14.uax
+OutDelays[1]=40.500000
+; EN: MaleText[0]="At last! I've reached the shuttle and prepped her for take off. The last battle with the Warlord was grueling. And the Krall before that were no picnic. I barely made it to the ship. And after all that, I still have to deal with the Bodega Bay in orbit. A shuttle against a UMS Freeman Class Cruiser... what a joke. The odds aren't good. But my shuttle has a trans-light drive. If I'm very, very lucky, I can find some way to outsmart or out-fly the Bodega Bay. They sure as hell won't be expecting me. What's the alternative? Stay on the planet? I'll take my chances in space..."
+MaleText[0]="Finalmente! Cheguei na espaçonave e estou pronto para partir. A última batalha com o Senhor da Guerra foi extenuante. Os Krall de antes tambem não foram mamão com açúcar. Quase não cheguei na nave. Depois de tudo aquilo, ainda tinha que lidar com a Baía Bodega em órbita. Uma espaçonave contra um Cruzador Classe Freeman da SMU... que piada. As chances não eram boas. Mas a minha espaçonave tinha um módulo transluminal. Se eu for muito, muito sortudo, posso encontrar um modo de sobressair ou suplantar a Baía Bodega. Nem ferrando eles estão esperando por mim. Qual era a alternativa? Ficar no planeta? Vou apostar as minhas fichas no espaço..."
+; EN: FemaleText[0]="At last! I've reached the shuttle and prepped her for take off. The last battle with the Warlord was grueling. And the Krall before that were no picnic. I barely made it to the ship. And after all that, I still have to deal with the Bodega Bay in orbit. A shuttle against a UMS Freeman Class Cruiser... what a joke. The odds aren't good. But my shuttle has a trans-light drive. If I'm very, very lucky, I can find some way to outsmart or out-fly the Bodega Bay. They sure as hell won't be expecting me. What's the alternative? Stay on the planet? I'll take my chances in space..."
+FemaleText[0]="Finalmente! Cheguei na espaçonave e estou pronta para partir. A última batalha com o Senhor da Guerra foi extenuante. Os Krall de antes tambem não foram mamão com açúcar. Quase não cheguei na nave. Depois de tudo aquilo, ainda tinha que lidar com a Baía Bodega em órbita. Uma espaçonave contra um Cruzador Classe Freeman da SMU... que piada. As chances não eram boas. Mas a minha espaçonave tinha um módulo transluminal. Se eu for muito, muito sortuda, posso encontrar um modo de sobressair ou suplantar a Baía Bodega. Nem ferrando eles estão esperando por mim. Qual era a alternativa? Ficar no planeta? Vou apostar as minhas fichas no espaço..."

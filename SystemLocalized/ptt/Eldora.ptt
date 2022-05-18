@@ -1,0 +1,19 @@
+﻿[LevelInfo1]
+; EN: Title="The Eldora Well"
+Title="A Fonte de Eldora"
+; EN: LevelEntryText="Entering the Eldora Well"
+LevelEntryText="Entrando na Fonte de Eldora"
+
+[LevelSummary]
+; EN: Title="The Eldora Well"
+Title="A Fonte de Eldora"
+; EN: LevelEntryText="Entering the Eldora Well"
+LevelEntryText="Entrando na Fonte de Eldora"
+
+[TranslatorEvent1]
+; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."
+Message="Registro: S. Brown: As montanhas estão ficando cada vez mais difíceis de se caminhar. Estou ficando cansado. Acabei de descobrir uma fonte próxima, vou investigar. Ela é guardada por brutos, mas eu devo conseguir me esgueirar."
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Walden: No sign of anyone yet. It's getting dark again. Going to camp out near the well until morning. Well seems empty, there may be a way out. Maybe I'll find the others."
+Message="Registro: J. Walden: Sem sinais de alguém ainda. Está ficando escuro de novo. Vou acampar próximo da fonte até a de manhã. A fonte parece estar seca, pode haver um caminho para fora. Talves eu encontre outros."

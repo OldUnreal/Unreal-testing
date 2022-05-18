@@ -1,0 +1,255 @@
+﻿[Public]
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
+Object=(Name=UPak.UPakConsole,Class=Class,MetaClass=Engine.Console,Description="Unreal Gold")
+Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.CloakMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakCoopGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.DuskFallsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.CloakGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.MarineMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.GravityMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
+Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
+Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
+Preferences=(Caption="Terran Weapon Match",Parent="Game Types",Class=UPak.TerranWeaponMatch,Immediate=True)
+
+[TransitionNullHUD]
+; EN: Statheader="Kill Statistics: "
+Statheader="Estatísticas de mortes: "
+; EN: CARStat="Combat Assault Rifle"
+CARStat="Fuzil de Assalto"
+; EN: RLStat="UMS Rocket Launcher"
+RLStat="Lançafoguetes UMS"
+; EN: GLStat="UMS Grenade Launcher"
+GLStat="Lançagranadas UMS"
+; EN: ASMDStat="ASMD"
+ASMDStat="ASMD"
+; EN: AutomagStat="Automag"
+AutomagStat="Automag"
+; EN: DispersionStat="Dispersion Pistol"
+DispersionStat="Pistola de Dispersão"
+; EN: EightballStat="Eightball"
+EightballStat="Canhão 8"
+; EN: FlakCannonStat="Flak Cannon"
+FlakCannonStat="Lançaestilhaços"
+; EN: GESBioRifleStat="GES BioRifle"
+GESBioRifleStat="Lançalixo Tóxico GES"
+; EN: MinigunStat="Minigun"
+MinigunStat="Metralhadora"
+; EN: RazorjackStat="Razorjack"
+RazorjackStat="Lançalâminas"
+; EN: RifleStat="Sniper Rifle"
+RifleStat="Fuzil de Longo Alcance"
+; EN: StingerStat="Stinger"
+StingerStat="Perfurador"
+; EN: TotalStat="Total Kills"
+TotalStat="Total de mortes"
+; EN: LogEntryMsg="LOG ENTRY:"
+LogEntryMsg="REG. ENTRADA:"
+
+[GrenadeLauncher]
+; EN: DeathMessage="%k's grenade made %o blew up."
+DeathMessage="A granada de %k feita %o explodiu."
+FemDeathMessage="A granada de %k feita %o explodiu."
+FemKillMessage="A granada de %k feita %o explodiu."
+; EN: PickupMessage="You got the UMS Grenade Launcher"
+PickupMessage="Você pegou o Lançagranadas UMS"
+; EN: ItemName="UMS Grenade Launcher"
+ItemName="Lançagranadas UMS"
+
+[Cloak]
+; EN: ExpireMessage="disengaged."
+ExpireMessage="desengatilhado."
+; EN: PickupMessage="You got the Cloaking Device"
+PickupMessage="Você pegou o dispositivo de Camuflagem"
+; EN: ItemName="Cloaking Device"
+ItemName="Dispositivo de Camuflagem"
+; EN: M_Activated=" engaged"
+M_Activated=" engatilhado"
+; EN: M_Deactivated=" disengaged"
+M_Deactivated=" desengatilhado"
+
+[UPakHUD]
+; EN: MultWeapSlotMsg="Press the weapon select button to toggle weapons."
+MultWeapSlotMsg="Pressione o botão de seleção de arma para alternar entre armas."
+
+[UPakSinglePlayer]
+GameName="Unreal Mission Pack"
+
+[RocketLauncher]
+; EN: DeathMessage="%k's rocket turned %o's body into chunks."
+DeathMessage="O foguete de %k transformou o corpo de %o em pedaços."
+FemDeathMessage="O foguete de %k transformou o corpo de %o em pedaços."
+FemKillMessage="O foguete de %k transformou o corpo de %o em pedaços."
+; EN: PickupMessage="You got the UMS Rocket Launcher"
+PickupMessage="Você pegou o Lançafoguetes UMS"
+; EN: ItemName="UMS Rocket Launcher"
+ItemName="Lançafoguetes UMS"
+
+[UPakChooseGameMenu]
+MenuList[0]="Return to Na Pali"
+MenuList[1]="Unreal"
+
+[CloakMatch]
+; EN: GameName="Cloak Match"
+GameName="Partida de Jogadores Camuflados"
+
+[CARifle]
+; EN: DeathMessage="%k's %w turned %o into swiss cheese."
+DeathMessage="O %w de %k transformou o %o em queijo suíço."
+FemDeathMessage="O %w de %k transformou o %o em queijo suíço."
+FemKillMessage="O %w de %k transformou o %o em queijo suíço."
+; EN: PickupMessage="You got the Combat Assault Rifle"
+PickupMessage="Você pegou o Fuzil de Assalto"
+; EN: ItemName="Combat Assault Rifle"
+ItemName="Fuzil de Assalto"
+
+[UPakScubaGear]
+; EN: RechargedMessage="ScubaGear fully recharged."
+RechargedMessage="Tanque de Oxigênio Marine totalmente recarregado."
+; EN: LowOxygenMessage="Oxygen supply critically low"
+LowOxygenMessage="Fornecimento de oxigênio criticamente baixo"
+; EN: PickupMessage="You picked up the Marine SCUBA Gear"
+PickupMessage="Você pegou o Tanque de Oxigênio Marine"
+; EN: ItemName="Marine SCUBA Gear"
+ItemName="Tanque de Oxigênio Marine"
+; EN: M_Deactivated="deactivated... Recharging."
+M_Deactivated="desativado... Recarregando."
+
+[MarineMatch]
+; EN: GameName="Marine Match"
+GameName="Partida de Fuzileiros"
+
+[GravityMatch]
+; EN: GameName="Gravity Match"
+GameName="Partida de Baixa Gravidade"
+
+[UPakDebugger]
+; EN: ItemName="UPak Debugger"
+ItemName="Depurador do UPak"
+
+[UPakMaleOne]
+; EN: MenuName="Male 1"
+MenuName="Homem 1"
+
+[UPakFemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Mulher 1"
+
+[GLAmmo]
+; EN: PickupMessage="You picked up 10 UMS Grenades"
+PickupMessage="Você pegou 10 granadas UMS"
+; EN: ItemName="UMS Grenades"
+ItemName="Granadas UMS"
+
+[RLAmmo]
+; EN: PickupMessage="You got 10 UMS Rockets"
+PickupMessage="Você pegou 10 foguetes UMS"
+; EN: ItemName="UMS Rockets"
+ItemName="Foguetes UMS"
+
+[CARifleClip]
+; EN: PickupMessage="You got a 50 bullet CAR clip"
+PickupMessage="Você pegou um pente com 50 munições do Fuzil"
+; EN: ItemName="CAR Clip"
+ItemName="Pente com Munições do Fuzil"
+
+[UPakFemaleTwo]
+; EN: MenuName="Female 2"
+MenuName="Mulher 2"
+
+[UPakMaleThree]
+; EN: MenuName="Male 3"
+MenuName="Homem 3"
+
+[UPakMaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Homem 2"
+
+[TerranWeaponMatch]
+; EN: GameName="Terran Weapon Match"
+GameName="Partida de Armas Terráqueas"
+
+[CompTablet]
+; EN: PickupMessage="You got the Computer Tablet"
+PickupMessage="Você tem o Tablet do Computador"
+; EN: ItemName="Computer Tablet"
+ItemName="Tablet do Computador"
+
+[MarineArctic]
+; EN: MenuName="UMS Arctic Marine"
+MenuName="Marinho do Ártico UMS"
+
+[MarineDesert]
+; EN: MenuName="UMS Desert Marine"
+MenuName="Marinho do Deserto UMS"
+
+[MarineJungle]
+; EN: MenuName="UMS Jungle Marine"
+MenuName="Marinho da Selva UMS"
+
+[SpaceMarine]
+; EN: MenuName="UMS Space Marine"
+MenuName="Marinho do Espaço UMS"
+
+[TransitionBrute]
+; EN: NameArticle=" a "
+NameArticle=" um "
+; EN: MenuName="Brute"
+MenuName="Bruto"
+
+[TransitionCow]
+; EN: NameArticle=" a "
+NameArticle=" uma "
+; EN: MenuName="Nali Cow"
+MenuName="Vaca Nali"
+
+[NaliCopter]
+; EN: NameArticle=" a "
+NameArticle=" um "
+; EN: MenuName="NaliCopter"
+MenuName="Helicóptero Nali"
+
+[Predator]
+; EN: NameArticle=" a "
+NameArticle=" um "
+; EN: MenuName="Predator"
+MenuName="Predador"
+
+[TransitionPredator]
+; EN: NameArticle=" a "
+NameArticle=" um "
+; EN: MenuName="Predator"
+MenuName="Predador"
+
+[PackHunter]
+; EN: NameArticle=" a "
+NameArticle=" um "
+; EN: MenuName="Pack Hunter"
+MenuName="Caçador de Matilhas"
+
+[Spinner]
+; EN: NameArticle=" a "
+NameArticle=" uma "
+; EN: MenuName="Spinner"
+MenuName="Aranha"
+
+[PredatorPathUser]
+; EN: NameArticle=" a "
+NameArticle=" um "
+; EN: MenuName="Predator"
+MenuName="Predador"
+
+[UPakConsole]
+; EN: ClassCaption="Unreal Gold Console"
+ClassCaption="Console de Unreal Gold"
