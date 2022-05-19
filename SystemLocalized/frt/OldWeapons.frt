@@ -42,20 +42,22 @@ ItemName="Lanceur 8 Coups"
 [OldRifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k a tiré une balle dans le crâne de %o."
-FemDeathMessage="%k a tiré une balle dans le crâne de %o."
 ; EN: PickupMessage="You got the Rifle"
 PickupMessage="Vous avez trouvé le Fusil"
 ; EN: ItemName="Sniper Rifle"
 ItemName="Fusil de Précision"
+FemDeathMessage="%k a tiré une balle dans le crâne de %o."
+FemKillMessage="%k a tiré une balle dans le crâne de %o."
 
 [OldFlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o a été coupé en morceau par le %w de %k."
-FemDeathMessage="%o a été coupée en morceau par le %w de %k."
 ; EN: PickupMessage="You got the Flak Cannon"
 PickupMessage="Vous avez trouvé le Canon Flak"
 ; EN: ItemName="Flak Cannon"
 ItemName="Canon Flak"
+FemDeathMessage="%o a été coupée en morceau par le %w de %k."
+FemKillMessage="%o a été coupé en morceau par le %w de %k."
 
 [OldAutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
@@ -69,20 +71,22 @@ ItemName="Automag"
 [OldMinigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="%k a transformé %o en passoire avec son %w."
-FemDeathMessage="%k a transformée %o en passoire avec son %w."
 ; EN: PickupMessage="You got the Minigun"
 PickupMessage="Vous avez trouvé le Minigun"
 ; EN: ItemName="Minigun"
 ItemName="Minigun"
+FemDeathMessage="%k a transformée %o en passoire avec son %w."
+FemKillMessage="%k a transformé %o en passoire avec son %w."
 
 [OldGESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o a avalé le liquide vert de %k."
-FemDeathMessage="%o a avalé le liquide vert de %k."
 ; EN: PickupMessage="You got the GES BioRifle"
-PickupMessage="Vous avez trouvé le Fusil Bio GES"
+PickupMessage="Vous avez trouvé le Fusil Bio GES" 
 ; EN: ItemName="GES BioRifle"
 ItemName="Fusil Bio GES"
+FemDeathMessage="%o a avalé le liquide vert de %k."
+FemKillMessage="%o a avalé le liquide vert de %k."
 
 [OldAmplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
@@ -108,7 +112,7 @@ PickupMessage="Vous avez récupéré 50 balles"
 ItemName="Boîte de Balles"
 
 [OldRifleAmmo]
-; EN: PickupMessage="You got 8 Rifle rounds"
+; EN: PickupMessage="You got 8 Rifle Rounds"
 PickupMessage="Vous avez ramassé 8 Balles de Fusil"
 ; EN: ItemName="Rifle Rounds"
 ItemName="Balles de Fusil"
@@ -128,11 +132,12 @@ ItemName="Obus de Flak"
 [OldRazorjack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%k a découpé %o avec son %w."
-FemDeathMessage="%k a découpé %o avec son %w."
 ; EN: PickupMessage="You got the RazorJack"
 PickupMessage="Vous avez trouvé le Lance-lames"
-; EN: ItemName="RazorJack"
+; EN: ItemName="Razorjack"
 ItemName="Lance-lames"
+FemDeathMessage="%k a découpé %o avec son %w."
+FemKillMessage="%k a découpé %o avec son %w."
 
 [OldDefaultAmmo]
 ; EN: PickupMessage="You picked up some ammo"
@@ -153,15 +158,15 @@ PickupMessage="Vous avez récupéré 40 Éclats de Tarydium"
 ItemName="Éclats de Tarydium"
 
 [OldRazorAmmo]
-; EN: PickupMessage="You picked up some Razor Blades"
+; EN: PickupMessage="You picked up Razor Blades"
 PickupMessage="Vous avez ramassé des Lames de Rasoir"
 ; EN: ItemName="Razor Blades"
 ItemName="Lames de Rasoir"
 
 [OldSludge]
-; EN: PickupMessage="You picked up 25 Kilos of Tarydium sludge"
+; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
 PickupMessage="Vous avez ramassé 25 Kilos de Boue de Tarydium"
-; EN: ItemName="Tarydium Sludge"
+; EN: ItemName="Tarydium Biosludge"
 ItemName="Boue de Tarydium"
 
 [OldRocketCan]
@@ -183,7 +188,7 @@ PickupMessage="Vous avez ramassé une Balle de Fusil"
 ItemName="Balle de Fusil"
 
 [OldFlakShellAmmo]
-; EN: PickupMessage="You got a Flak shell"
+; EN: PickupMessage="You got a Flak Shell"
 PickupMessage="Vous avez ramassé un Obus Flak"
 ; EN: ItemName="Flak Shell"
 ItemName="Obus Flak"

@@ -16,7 +16,7 @@ Message="Der Nali-Wassergott Chizra und sein heiliger Tempel wurden von den Wass
 
 [TranslatorEvent11]
 ; EN: Message="Take the stick of 6 fires and go forth to the inner ceremonial chamber. There you shall find you way back to the place from whence you came and the metal chariot that fell from the stars."
-Message="Nimm den Stab der Sechs Flammen und begib dich zu den inneren Zeremonienkammern. Dort findest du den Weg zurück dorthin, woher du gekommen bist, sowie den metallenen Wagen, der von den Sternen fiel."
+Message="Nimm den Stock der Sechs Flammen und begib dich zu den inneren Zeremonienkammern. Dort findest du den Weg zurück dorthin, woher du gekommen bist, sowie den metallenen Wagen, der von den Sternen fiel."
 
 [TranslatorEvent20]
 ; EN: Message="Look into your own eyes. And when your courage is strongest your last step to the prize will be upheld by your faith."
@@ -24,11 +24,11 @@ Message="Blicke in deine eigenen Augen. Und wenn dein Mut am Stärksten ist, so 
 
 [TranslatorEvent8]
 ; EN: Message="The stick of 6 fires can only be reached by a warrior who has bathed in the pool of thunder, past the obelisk of the clouds."
-Message="Den Stab der Sechs Flammen erreicht nur ein Krieger, der im Donnernden Becken jenseits des Obelisks der Wolken gebadet ist."
+Message="Den Stock der Sechs Flammen erreicht nur ein Krieger, der im Donnernden Becken jenseits des Obelisks der Wolken gebadet ist."
 
 [TranslatorEvent9]
 ; EN: Message="The pyramid is the key to the chamber of death. Here you shall find more power for the stick of 6 fires."
-Message="Die Pyramide ist der Schlüssel zur Kammer des Todes. In jener sollst du weitere Stärkung für den Stab der Sechs Flammen finden."
+Message="Die Pyramide ist der Schlüssel zur Kammer des Todes. In jener sollst du weitere Stärkung für den Stock der Sechs Flammen finden."
 
 [Counter3]
 ; EN: CountMessage="Snap!"
@@ -50,11 +50,11 @@ Message="Die Dämonen kamen in einem metallenen Wagen von den Sternen herab, um 
 
 [TranslatorEvent5]
 ; EN: Message="Only a warrior who wields the stick of 6 fires may enter the inner ceremonial chambers. Once the stick of 6 fires is in your grasp the stone seal will rise."
-Message="Nur ein Krieger, der den Stab der Sechs Flammen bei sich trägt, darf die inneren Zeremonienkammern betreten. Sobald du den Stab der Sechs Flammen zu fassen bekommst, wird das Steinsiegel aufgehen."
+Message="Nur ein Krieger, der den Stock der Sechs Flammen bei sich trägt, darf die inneren Zeremonienkammern betreten. Sobald du den Stock der Sechs Flammen zu fassen bekommst, wird das Steinsiegel aufgehen."
 
 [TranslatorEvent10]
 ; EN: Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY. TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
-Message="DER STAB DER SECHS FLAMMEN KAM VON DEM NALI-WASSERGOTT, ALS DER STERN VOM HIMMEL FIEL. UM DEN STERN ZU FINDEN, MUSS MAN DEN ZEREMONIENFLÜGEL DURCHQUEREN."
+Message="DER STOCK DER SECHS FLAMMEN KAM VON DEM NALI-WASSERGOTT, ALS DER STERN VOM HIMMEL FIEL. UM DEN STERN ZU FINDEN, MUSS MAN DEN ZEREMONIENFLÜGEL DURCHQUEREN."
 
 [TranslatorEvent13]
 ; EN: Message="The pyramid's center is the focal point of Chizra the Nali water god's power."
@@ -82,7 +82,7 @@ Message="Um das Donnernde Becken zu erreichen muss man die losen Steine hinaufkl
 
 [TranslatorEvent15]
 ; EN: Message="1400 hours Commander Mac Harrison: SITREP: These local natives have a 6 barreled rocket launcher on an altar but it is heavily guarded by those Salamander things. "The Stick of 6 fires" is what the Nali keep calling it. I'll try to sneak in tonight."
-Message="14:00 - Capt. Mac Harrison: LAGEBERICHT: Diese Einheimischen bewahren einen sechsläufigen Raketenwerfer auf ihrem Altar auf, dieser ist jedoch unter schwerer Aufsicht dieser Salamanderkreaturen. Die Nali sagen dazu ständig "Stab der Sechs Flammen". Heute Nacht versuche ich, mich hinzuschleichen."
+Message="14:00 - Kommandant Mac Harrison: LAGEBERICHT: Diese Einheimischen bewahren einen sechsläufigen Raketenwerfer auf ihrem Altar auf, jedoch ist er unter schwerer Aufsicht dieser Salamanderkreaturen. Die Nali sagen dazu ständig "Stock der Sechs Flammen". Heute Nacht versuche ich mich hinzuschleichen."
 
 [TranslatorEvent2]
 ; EN: Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder."

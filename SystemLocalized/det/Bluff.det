@@ -68,7 +68,7 @@ Message="Sicherheitsoffizier Sergai Dubrov: ISV-KRAN: LOGBUCHEINTRAG: Wir sind d
 
 [TranslatorEvent12]
 ; EN: Message="I have discovered a secret! Last night I snuck out of my hiding place and swam through the pipes to the prison. They have captured a Girl! The Krall sergeant took two boots in the mouth when he approached her. Haha! I can only laugh at their stupidity."
-Message="Eine Offenbarung! Gestern Nacht verließ ich mein Versteck und schwamm durch die Rohre ins Gefängnis. Sie haben ein Mädchen geschnappt! Ein Soldat bekam ihren Stiefel ins Gesicht als er versuchte, sich an sie ranzumachen. Haha! Geschieht ihm recht."
+Message="Eine Offenbarung! Gestern Nacht verließ ich mein Versteck und schwamm durch die Rohre ins Gefängnis. Sie haben ein Mädchen geschnappt! Der Krallwächter bekam ihren Stiefel ins Gesicht als er versuchte, sich an sie ranzumachen. Haha! Geschieht ihm recht."
 
 [TranslatorEvent22]
 ; EN: Message="Son of Ne'Lin Garas 380-390"
@@ -98,7 +98,7 @@ AltMessage="HYDROLASER-KONTROLLSTATION: LASER DEAKTIVIERT - ZUGANG ZUM HYDROELEK
 
 [TranslatorEvent3]
 ; EN: Message="My brother Kriin is in the cell below me. My other brother Kruun escaped through the water tunnel under the stairs. They sacrificed my best friend Jaara for Kruun's escape."
-Message="Mein Bruder Kriin ist in der Zelle unter mir. Kruun, mein anderer Bruder, ist durch den Wassertunnel unter der Treppe entkommen. Mein bester Freund Jaara hat sich geopfert, um Kruun den Ausbruch zu ermöglichen."
+Message="Mein Bruder Kriin ist in der Zelle unter mir. Kruun, mein anderer Bruder, ist durch den Wassertunnel unter der Treppe entkommen. Sie haben meinen besten Freund Jaara in den Tod geschickt, um Kruun den Ausbruch zu ermöglichen."
 
 [TranslatorEvent15]
 ; EN: Message="Vault of the Dead - Herein lies the last resting place of the High Priest of Bluff Eversmoking and the artifacts used by the Messiah."
@@ -108,7 +108,7 @@ Hint="Suche nach einem geheimen Hebel im Friedhof."
 
 [TranslatorEvent2]
 ; EN: Message="Science Officer Kira Argmanov: Separated from my crewmates from ISV-KRAN, I've only been able to stay alive by holding up in this bell tower. A native Nali help me escape the prison cell the Skaarj put me in. Hopefully the Skaarj won't find me here."
-Message="Unteroffizierin Kira Argmanov: Nach der Trennung von meinen Kameraden von der ISV-Kran hält mich nur meine Position hier im Glockenturm am Leben. Ein einheimischer Nali half mir, dem Gefängnis der Skaarj zu entkommen. Hoffentlich finden sie mich hier nicht."
+Message="Forschungsoffizierin Kira Argmanov: Nach der Trennung von meinen Kameraden von der ISV-Kran hält mich nur meine Position hier im Glockenturm am Leben. Ein einheimischer Nali half mir, dem Gefängnis der Skaarj zu entkommen. Hoffentlich finden sie mich hier nicht."
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."
@@ -124,7 +124,7 @@ Message="Versand-Log: Grorq vom Stamm der Roten Hände. Zum nächsten Vollmond e
 
 [TranslatorEvent25]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: we have captured a Terran girl. Some of my soldiers want to try and take liberties with her. I guess that's OK as long as they watch those boots! She kicked me in the Hrangos last time."
-Message="Wärter Hrang vom Stamm der Roten Hände: Wir haben ein Weib vom Planeten Terra gefangengenommen. Einige meiner Soldaten wollen sich ein bisschen mit ihr begnügen. Müsste passen, solang sie sich vor diesen Stiefeln in Acht nehmen!. Letztes Mal hat sie mich am kleinen Hrango erwischt."
+Message="Wärter Hrang vom Stamm der Roten Hände: Wir haben ein Weib vom Planeten Terra gefangengenommen. Einige meiner Soldaten wollen sich ein bisschen mit ihr vergnügen. Müsste passen, solang sie sich vor diesen Stiefeln in Acht nehmen! Letztes Mal hat sie mich genau in die Hrangos erwischt."
 
 [TranslatorEvent27]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: Dorro owes me 25,000 gold Paaras when we get home! He truly sucks at death bones. Hustling him is like taking candy from a Terran baby. Speaking of which I think it's time to go beat on that ugly Terran girl some more!"
@@ -132,11 +132,11 @@ Message="Wärter Hrang vom Stamm der Roten Hände: Dorro schuldet mir 25.000 Gol
 
 [TranslatorEvent28]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: I can't believe it!!! That Terran girl escaped! One of those worthless Nali Monks must have tunneled her out. I am in DEEP SHIT! If Captain DUK'CHOROTH comes and finds out I let her escape I'll be de-hrangod for sure!"
-Message="Wärter Hrang vom Stamm der Roten Hände: Nicht zu fassen! Das Weib ist entkommen! Einer von diesen nichtsnützigen Nali-Mönchen muss sie durch einen Tunnel geschleust haben. So eine Scheiße! Wenn Captain DUK'CHOROTH das rausfindet, war's das mit meinem kleinen Hrango!"
+Message="Wärter Hrang vom Stamm der Roten Hände: Nicht zu fassen! Das Weib ist entkommen! Einer dieser nichtsnützigen Nali-Mönche muss sie durch einen Tunnel geschleust haben. So eine Scheiße! Wenn Kommandant DUK'CHOROTH das rausfindet, reißt er mir die Hrangos ab!"
 
 [TranslatorEvent29]
 ; EN: Message="Kruun's personal diary: I have to be careful how many times I sneak into the monastery through the tunnels. I've marked the tunnel that leads to the inner monastery with a cross, the other leads to the prison where my brother is still being held."
-Message="Kruuns Tagebuch: Ich darf nicht mehr zu oft durch die Höhlen ins Kloster. Ich habe den quadratischen Tunnel, der ins Kloster führt, mit einem Kreuz gekennzeichnet. Der andere Tunnel führt zum Gefängnis, wo sie immer noch meinen Bruder fest halten."
+Message="Kruuns Tagebuch: Ich darf nicht mehr zu oft durch die Höhlen ins Kloster. Ich habe den Tunnel, der ins Klosterinnere führt, mit einem Kreuz gekennzeichnet. Der andere Tunnel führt zum Gefängnis, wo sie immer noch meinen Bruder fest halten."
 
 [TranslatorEvent30]
 ; EN: Message="MAIN GATE GUARD TOWER"

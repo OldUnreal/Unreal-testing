@@ -63,17 +63,17 @@ DeathMessage="Die Granate von %k ließ %o explodieren."
 FemDeathMessage="Die Granate von %k ließ %o explodieren."
 FemKillMessage="Die Granate von %k ließ %o explodieren."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
-PickupMessage="Du hast den UMS Granatwerfer"
+PickupMessage="UMS-Granatwerfer erhalten"
 ; EN: ItemName="UMS Granatenwerfer"
-ItemName="UMS Granatwerfer"
+ItemName="UMS-Granatwerfer"
 
 [Cloak]
 ; EN: ExpireMessage="disengaged."
 ExpireMessage="deaktiviert."
 ; EN: PickupMessage="You got the Cloaking Device"
-PickupMessage="Du hast die Tarneinrichtung"
+PickupMessage="Tarnkappengerät erhalten"
 ; EN: ItemName="Cloaking Device"
-ItemName="Tarneinrichtung"
+ItemName="Tarnkappengerät"
 ; EN: M_Activated=" engaged"
 M_Activated=" aktiviert"
 ; EN: M_Deactivated=" disengaged"
@@ -93,9 +93,9 @@ DeathMessage="Die Rakete von %k verwandelte den Körper von %o in Stücke."
 FemDeathMessage="Die Rakete von %k verwandelte den Körper von %o in Stücke."
 FemKillMessage="Die Rakete von %k verwandelte den Körper von %o in Stücke."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
-PickupMessage="Du hast den UMS Raketenwerfer"
-; EN: ItemName="UMS Rocket Launcher"
-ItemName="UMS Raketenwerfer"
+PickupMessage="UMS-Raketenwerfer erhalten"
+; EN: ItemName="UMS-Raketenwerfer erhalten"
+ItemName="UMS-Raketenwerfer"
 
 [UPakChooseGameMenu]
 MenuList[0]="Return to Na Pali"
@@ -111,21 +111,21 @@ DeathMessage="Das %w von %k verwandelte %o in Schweizer Käse."
 FemDeathMessage="Das %w von %k verwandelte %o in Schweizer Käse."
 FemKillMessage="Das %w von %k verwandelte %o in Schweizer Käse."
 ; EN: PickupMessage="You got the Combat Assault Rifle"
-PickupMessage="Du hast das Sturmgewehr"
+PickupMessage="Sturmgewehr erhalten"
 ; EN: ItemName="Combat Assault Rifle"
 ItemName="Sturmgewehr"
 
 [UPakScubaGear]
 ; EN: RechargedMessage="Marine SCUBA Gear fully recharged."
-RechargedMessage="Tauchausrüstung vollständig aufgeladen."
+RechargedMessage="Tauchausrüstung vollständig gefüllt."
 ; EN: LowOxygenMessage="Oxygen supply critically low"
-LowOxygenMessage="Sauerstoffversorgung kritisch niedrig"
+LowOxygenMessage="Sauerstoffversorgung kritisch"
 ; EN: PickupMessage="You picked up the Marine SCUBA Gear"
-PickupMessage="Du hast das Tauchgerät aufgenommen"
+PickupMessage="Marine-Tauchausrüstung erhalten"
 ; EN: ItemName="Marine SCUBA Gear"
-ItemName="Tauchausrüstung"
+ItemName="Marine-Tauchausrüstung"
 ; EN: M_Deactivated="deactivated... Recharging."
-M_Deactivated="deaktiviert... Lade auf."
+M_Deactivated="deaktiviert... Füllt auf."
 
 [MarineMatch]
 ; EN: GameName="Marine Match"
@@ -149,21 +149,21 @@ MenuName="Frau 1"
 
 [GLAmmo]
 ; EN: PickupMessage="You picked up 10 UMS Grenades"
-PickupMessage="Du hast 10 UMS Granaten gefunden"
+PickupMessage="10 UMS-Granaten erhalten"
 ; EN: ItemName="UMS Grenades"
-ItemName="UMS Granaten"
+ItemName="UMS-Granaten"
 
 [RLAmmo]
 ; EN: PickupMessage="You got 10 UMS Rockets"
-PickupMessage="Du hast 10 UMS Raketen"
+PickupMessage="10 UMS-Raketen erhalten"
 ; EN: ItemName="UMS Rockets"
-ItemName="UMS Raketen"
+ItemName="UMS-Raketen"
 
 [CARifleClip]
 ; EN: PickupMessage="You got a 50 bullet CAR clip"
-PickupMessage="Du hast ein 50-Kugel-Sturmgewehr Magazin"
+PickupMessage="Sturmgewehrmagazin mit 50 Kugeln erhalten"
 ; EN: ItemName="CAR Clip"
-ItemName="Sturmgewehr Magazin"
+ItemName="Sturmgewehrmagazin"
 
 [UPakFemaleTwo]
 ; EN: MenuName="Female 2"
@@ -183,9 +183,9 @@ GameName="Terran-Waffen-Match"
 
 [CompTablet]
 ; EN: PickupMessage="You got the Computer Tablet"
-PickupMessage="Du hast das Comp-Tablett"
+PickupMessage="Computer-Tablet erhalten"
 ; EN: ItemName="Computer Tablet"
-ItemName="Comp-Tablett"
+ItemName="Computer-Tablet"
 
 [MarineArctic]
 ; EN: MenuName="UMS Arctic Marine"
@@ -207,13 +207,13 @@ MenuName="Space Marine UMS"
 ; EN: NameArticle=" a "
 NameArticle=" ein "
 ; EN: MenuName="Brute"
-MenuName="Rohling"
+MenuName="Untier"
 
 [TransitionCow]
 ; EN: NameArticle=" a "
 NameArticle=" eine "
 ; EN: MenuName="Nali Cow"
-MenuName="Nali-Kuh"
+MenuName="Nalikuh"
 
 [NaliCopter]
 ; EN: NameArticle=" a "
@@ -225,25 +225,25 @@ MenuName="Nalikopter"
 ; EN: NameArticle=" a "
 NameArticle=" ein "
 ; EN: MenuName="Predator"
-MenuName="Raubtier"
+MenuName="Räuber"
 
 [TransitionPredator]
 ; EN: NameArticle=" a "
 NameArticle=" ein "
 ; EN: MenuName="Predator"
-MenuName="Raubtier"
+MenuName="Räuber"
 
 [PackHunter]
 ; EN: NameArticle=" a "
 NameArticle=" ein "
 ; EN: MenuName="Pack Hunter"
-MenuName="Gruppenjäger"
+MenuName="Rudeljäger"
 
 [Spinner]
 ; EN: NameArticle=" a "
 NameArticle=" eine "
 ; EN: MenuName="Spinner"
-MenuName="Spinne"
+MenuName="Weber"
 
 [UPakConsole]
 ; EN: ClassCaption="Unreal Gold Console"

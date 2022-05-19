@@ -42,35 +42,179 @@ NameArticle=" "
 ; EN: MenuName="Queen"
 MenuName="Королева"
 
+[SkaarjPlayer]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Солдат Скаарджа"
+
+[SkaarjPlayerBot]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Солдат Скаарджа"
+
+[WarLord]
+; EN: NameArticle=" the "
+NameArticle=" "
+; EN: MenuName="WarLord"
+MenuName="Военачальник"
+
+[SearchLight]
+; EN: ExpireMessage="The Search Light batteries have died."
+ExpireMessage="Батарейки Поискового Фонаря кончились."
+; EN: PickupMessage="You picked up the Search Light"
+PickupMessage="Вы подобрали Поисковый Фонарь"
+; EN: ItemName="Search Light"
+ItemName="Поисковый Фонарь"
+
+[RazorAmmo]
+; EN: PickupMessage="You picked up Razor Blades"
+PickupMessage="Вы подобрали немного Лезвий Для Резака"
+; EN: ItemName="Razor Blades"
+ItemName="Лезвий Для Резака"
+
+[FlakBox]
+; EN: PickupMessage="You picked up 10 Flak Shells"
+PickupMessage="Вы подобрали 10 Зарядов Для Флака"
+; EN: ItemName="Flak Shells"
+ItemName="Зарядов Для Флака"
+
+[MaleOne]
+; EN: MenuName="Male 1"
+MenuName="Мужчина 1"
+
+[MaleOneBot]
+; EN: MenuName="Male 1"
+MenuName="Мужчина 1"
+
+[RifleAmmo]
+; EN: PickupMessage="You got 8 Rifle Rounds"
+PickupMessage="Вы получили 8 Патронов К Винтовке"
+; EN: ItemName="Rifle Rounds"
+ItemName="Патронов К Винтовке"
+
+[Seeds]
+; EN: PickupMessage="You got the Nali Fruit Seeds"
+PickupMessage="Вы получили Семечко Фрукта Нали"
+; EN: ItemName="Nali Fruit Seeds"
+ItemName="Семечко Фрукта Нали"
+
+[JumpBoots]
+; EN: ExpireMessage="The Jump Boots have drained."
+ExpireMessage="Прыгсандали кончились."
+; EN: PickupMessage="You picked up the Jump Boots"
+PickupMessage="Вы подобрали Прыгсандали"
+; EN: ItemName="Jump Boots"
+ItemName="Прыгсандали"
+
+[ForceField]
+; EN: M_NoRoom="No room to activate the Force Field."
+M_NoRoom="Не хватает места для активации Силового Поля."
+; EN: PickupMessage="You picked up the Force Field"
+PickupMessage="Вы подобрали Силовое Поле"
+; EN: ItemName="Force Field"
+ItemName="Силовое Поле"
+
+[FemaleTwo]
+; EN: MenuName="Female 2"
+MenuName="Женщина 2"
+
+[FemaleTwoBot]
+; EN: MenuName="Female 2"
+MenuName="Женщина 2"
+
+[MaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Мужчина 2"
+
+[MaleTwoBot]
+; EN: MenuName="Male 2"
+MenuName="Мужчина 2"
+
+[Sludge]
+; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
+PickupMessage="Вы подобрали 25 килограмм Таридиумных Соплей"
+; EN: ItemName="Tarydium Biosludge"
+ItemName="Таридиумных Соплей"
+
+[Invisibility]
+; EN: ExpireMessage="Invisibility has worn off."
+ExpireMessage="Невидимость кончилась."
+; EN: PickupMessage="You have Invisibility"
+PickupMessage="У вас есть Невидимость"
+; EN: ItemName="Invisibility"
+ItemName="Невидимость"
+
+[DarkMatch]
+; EN: ClassCaption="DarkMatch"
+ClassCaption="Даркматч"
+; EN: GameName="DarkMatch"
+GameName="Даркматч"
+
+[FlakShellAmmo]
+; EN: PickupMessage="You got a Flak Shell"
+PickupMessage="Вы получили Заряд Для Флака"
+; EN: ItemName="Flak Shell"
+ItemName="Заряд Для Флака"
+
+[AsbestosSuit]
+; EN: PickupMessage="You picked up the Asbestos Suit"
+PickupMessage="Вы подобрали Асбестовый Костюм"
+; EN: ItemName="Asbestos Suit"
+ItemName="Асбестовый Костюм"
+
+[Dampener]
+; EN: ExpireMessage="Acoustic dampener has run out."
+ExpireMessage="Глушитель вышел из строя."
+; EN: PickupMessage="You got the Acoustic Dampener"
+PickupMessage="Вы получили Глушитель"
+; EN: ItemName="Acoustic Dampener"
+ItemName="Глушитель"
+
+[ToxinSuit]
+; EN: PickupMessage="You picked up the Toxin Suit"
+PickupMessage="Вы подобрали Костюм Химзащиты"
+; EN: ItemName="Toxin Suit"
+ItemName="Костюм Химзащиты"
+
+[PowerShield]
+; EN: PickupMessage="You got the Power Shield"
+PickupMessage="Вы подобрали Силовой Щит"
+; EN: ItemName="Power Shield"
+ItemName="Силовой Щит"
+
+[RifleRound]
+; EN: PickupMessage="You got a Rifle Round"
+PickupMessage="Вы получили Патрон Для Винтовки"
+; EN: ItemName="Rifle Round"
+ItemName="Патрон Для Винтовки"
+
 [Behemoth]
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Behemoth"
-MenuName="гигант"
+MenuName="Гигант"
 
 [Blob]
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Blob"
-MenuName="капля"
+MenuName="Капля"
 
 [Bloblet]
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Bloblet"
-MenuName="маленькая капля"
+MenuName="Маленькая Капля"
 
 [Gasbag]
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Gasbag"
-MenuName="газовый мешок"
+MenuName="Газовый Мешок"
 
 [GiantGasbag]
 ; EN: NameArticle=" the "
 NameArticle=" "
 ; EN: MenuName="Giant Gasbag"
-MenuName="гигантский газовый мешок"
+MenuName="Гигантский Газовый Мешок"
 
 [GiantManta]
 ; EN: NameArticle=" the "
@@ -78,17 +222,23 @@ NameArticle=" "
 ; EN: MenuName="Giant Manta"
 MenuName="Гигантская Манта"
 
+[IceSkaarj]
+; EN: NameArticle=" an "
+NameArticle=" "
+; EN: MenuName="Ice Skaarj"
+MenuName="Ледяной Скаардж"
+
 [Krall]
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Krall"
-MenuName="кралл"
+MenuName="Кралл"
 
 [KrallElite]
 ; EN: NameArticle=" an "
 NameArticle=" "
 ; EN: MenuName="Elite Krall"
-MenuName="элитный кралл"
+MenuName="Элитный Кралл"
 
 [LeglessKrall]
 ; EN: NameArticle=" a "
@@ -100,19 +250,19 @@ MenuName="Безногий Кралл"
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Mercenary"
-MenuName="наемник"
+MenuName="Наемник"
 
 [MercenaryElite]
 ; EN: NameArticle=" an "
 NameArticle=" "
 ; EN: MenuName="Elite Mercenary"
-MenuName="элитный наемник"
+MenuName="Элитный Наемник"
 
 [Pupae]
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Pupae"
-MenuName="куколка"
+MenuName="Куколка"
 
 [SkaarjAssassin]
 ; EN: NameArticle=" a "
@@ -136,7 +286,7 @@ MenuName="Стрелок Скаарджа"
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Skaarj Infantry"
-MenuName="пехота Скаардж"
+MenuName="Пехота Скаардж"
 
 [SkaarjLord]
 ; EN: NameArticle=" the "
@@ -148,7 +298,7 @@ MenuName="Повелитель Скаарджа"
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Skaarj Officer"
-MenuName="офицер Скаарджа"
+MenuName="Офицер Скаарджа"
 
 [SkaarjSniper]
 ; EN: NameArticle=" a "
@@ -166,206 +316,13 @@ MenuName="Солдат Скаарджа"
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Titan"
-MenuName="титан"
+MenuName="Титан"
 
 [StoneTitan]
 ; EN: NameArticle=" the "
 NameArticle=" "
 ; EN: MenuName="Stone Titan"
 MenuName="Каменный Титан"
-
-[SkaarjPlayer]
-; EN: MenuName="Skaarj Trooper"
-MenuName="Солдат Скаарджа"
-
-[SkaarjPlayerBot]
-; EN: MenuName="Skaarj Trooper"
-MenuName="Солдат Скаарджа"
-
-[WarLord]
-; EN: NameArticle=" the "
-NameArticle=" "
-; EN: MenuName="WarLord"
-MenuName="военачальник"
-
-[SearchLight]
-; EN: ExpireMessage="The Search Light batteries have died."
-ExpireMessage="Батарейки поискового фонаря кончились."
-; EN: PickupMessage="You picked up the Search Light"
-PickupMessage="Вы подобрали поисковый фонарь"
-; EN: ItemName="Search Light"
-ItemName="поисковый фонарь"
-
-[RazorAmmo]
-; EN: PickupMessage="You picked up Razor Blades"
-PickupMessage="Вы подобрали немного лезвий для резака"
-; EN: ItemName="Razor Blades"
-ItemName="лезвий для резака"
-
-[DarkMatch]
-; EN: ClassCaption="DarkMatch"
-ClassCaption="Даркматч"
-; EN: GameName="DarkMatch"
-GameName="Даркматч"
-
-[FlakBox]
-; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Вы подобрали 10 зарядов для Флака"
-; EN: ItemName="Flak Shells"
-ItemName="зарядов для Флака"
-
-[MaleOne]
-; EN: MenuName="Male 1"
-MenuName="Мужчина 1"
-
-[MaleOneBot]
-; EN: MenuName="Male 1"
-MenuName="Мужчина 1"
-
-[RifleAmmo]
-; EN: PickupMessage="You got 8 Rifle Rounds"
-PickupMessage="Вы получили 8 патронов к винтовке"
-; EN: ItemName="Rifle Rounds"
-ItemName="патронов к винтовке"
-
-[Seeds]
-; EN: PickupMessage="You got the Nali Fruit Seeds"
-PickupMessage="Вы получили семечко фрукта Нали"
-; EN: ItemName="Nali Fruit Seeds"
-ItemName="семечко фрукта Нали"
-
-[JumpBoots]
-; EN: ExpireMessage="The Jump Boots have drained."
-ExpireMessage="Прыгсандали кончились."
-; EN: PickupMessage="You picked up the Jump Boots"
-PickupMessage="Вы подобрали прыгсандали"
-; EN: ItemName="Jump Boots"
-ItemName="Прыгсандали"
-
-[ForceField]
-; EN: M_NoRoom="No room to activate the Force Field."
-M_NoRoom="Не хватает места для активации силового поля."
-; EN: PickupMessage="You picked up the Force Field"
-PickupMessage="Вы подобрали силовое поле"
-; EN: ItemName="Force Field"
-ItemName="силовое поле"
-
-[FemaleTwo]
-; EN: MenuName="Female 2"
-MenuName="Женщина 2"
-
-[FemaleTwoBot]
-; EN: MenuName="Female 2"
-MenuName="Женщина 2"
-
-[MaleTwo]
-; EN: MenuName="Male 2"
-MenuName="Мужчина 2"
-
-[MaleTwoBot]
-; EN: MenuName="Male 2"
-MenuName="Мужчина 2"
-
-[Sludge]
-; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
-PickupMessage="Вы подобрали 25 килограмм таридиумных соплей"
-; EN: ItemName="Tarydium Biosludge"
-ItemName="таридиумных соплей"
-
-[Invisibility]
-; EN: ExpireMessage="Invisibility has worn off."
-ExpireMessage="Невидимость кончилась."
-; EN: PickupMessage="You have Invisibility"
-PickupMessage="У вас есть невидимость"
-; EN: ItemName="Invisibility"
-ItemName="невидимость"
-
-[AsbestosSuit]
-; EN: PickupMessage="You picked up the Asbestos Suit"
-PickupMessage="Вы подобрали асбестовый костюм"
-; EN: ItemName="Asbestos Suit"
-ItemName="асбестовый костюм"
-
-[fell]
-; EN: Name="fell"
-Name="пал в бою"
-; EN: AltName="fell"
-AltName="пал в бою"
-
-[FlakShellAmmo]
-; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Вы получили заряд для Флака"
-; EN: ItemName="Flak Shell"
-ItemName="заряд для Флака"
-
-[drowned]
-; EN: Name="drowned"
-Name="утонул"
-; EN: AltName="drowned"
-AltName="утонул"
-
-[Decapitated]
-; EN: Name="beheaded"
-Name="обезглавлен"
-; EN: AltName="decapitated"
-AltName="обезглавлен"
-
-[Dampener]
-; EN: ExpireMessage="Acoustic dampener has run out."
-ExpireMessage="Глушитель вышел из строя."
-; EN: PickupMessage="You got the Acoustic Dampener"
-PickupMessage="Вы получили глушитель"
-; EN: ItemName="Acoustic Dampener"
-ItemName="Глушитель"
-
-[Corroded]
-; EN: Name="corroded"
-Name="растворился в кислоте"
-; EN: AltName="slimed"
-AltName="растворился в кислоте"
-
-[ToxinSuit]
-; EN: PickupMessage="You picked up the Toxin Suit"
-PickupMessage="Вы подобрали костюм химзащиты"
-; EN: ItemName="Toxin Suit"
-ItemName="костюм химзащиты"
-
-[Burned]
-; EN: Name="burned"
-Name="сгорел"
-; EN: AltName="flame-broiled"
-AltName="сгорел"
-
-[PowerShield]
-; EN: PickupMessage="You got the Power Shield"
-PickupMessage="Вы подобрали силовой щит"
-; EN: ItemName="Power Shield"
-ItemName="силовой щит"
-
-[RifleRound]
-; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Вы получили патрон для винтовки"
-; EN: ItemName="Rifle Round"
-ItemName="патрон для винтовки"
-
-[ParentBlob]
-; EN: BlobKillMessage="was corroded by a Blob"
-BlobKillMessage="был разъеден каплей"
-FemBlobKillMessage="была разъедена каплей"
-; EN: NameArticle=" a "
-NameArticle=" "
-; EN: MenuName="Blob"
-MenuName="Капля"
-
-[IceSkaarj]
-; EN: NameArticle=" an "
-NameArticle=" "
-; EN: MenuName="Ice Skaarj"
-MenuName="ледяной Скаардж"
-
-[NaliPlayer]
-; EN: MenuName="Nali"
-MenuName="Нали"
 
 [EndgameHud]
 ; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely. Yet, it's fuel reserve has been depleted, and you drift aimlessly."
@@ -385,55 +342,132 @@ Message7="Нажмите [Огонь] для перезапуска."
 
 [KingOfTheHill]
 ; EN: ClassCaption="King of the Hill"
-ClassCaption="Царь горы"
+ClassCaption="Царь Горы"
 ; EN: KingMessage=" is the new king of the hill!"
 KingMessage=" новый король горы!"
+; EN: GameName="King of the Hill"
+GameName="Царь Горы"
 ; EN: NewKingMessage="%k is the new king of the hill!"
 NewKingMessage="%k новый король горы!"
 ; EN: NewQueenMessage="%k is the new queen of the hill!"
 NewQueenMessage="%k новая королева горы!"
-; EN: GameName="King of the Hill"
-GameName="Царь горы"
+
+[ParentBlob]
+; EN: BlobKillMessage="was corroded by a Blob"
+BlobKillMessage="был разъеден каплей"
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Blob"
+MenuName="Капля"
+FemBlobKillMessage="была разъедена каплей"
 
 [FlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%k разорвал %o в клочья из %wа."
-FemDeathMessage="%k разорвала %o в клочья из %wа."
-FemKillMessage="%k порвала в клочья %o из зенитной пушки."
 ; EN: PickupMessage="You got the Flak Cannon"
 PickupMessage="Вы получили Зенитная пушка"
 ; EN: ItemName="Flak Cannon"
 ItemName="Зенитная пушка"
+FemDeathMessage="%k разорвала %o в клочья из %wа."
+FemKillMessage="%k порвала в клочья %o из зенитной пушки."
 
 [Rifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k положил пулю в голову %o."
-FemDeathMessage="%k положила пулю в голову %o."
-FemKillMessage="%k засадила пулю в голову %o."
 ; EN: PickupMessage="You got the Rifle"
 PickupMessage="Вы получили ружьё"
 ; EN: ItemName="Sniper Rifle"
 ItemName="Снайперское Ружьё"
+FemDeathMessage="%k положила пулю в голову %o."
+FemKillMessage="%k засадила пулю в голову %o."
 
 [Minigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="%w %k превратил %o в дырявый кусок мяса."
-FemDeathMessage="%w %k превратила %o в дырявый кусок мяса."
-FemKillMessage="%k изрешетила %o из минигана."
 ; EN: PickupMessage="You got the Minigun"
 PickupMessage="Вы получили Миниган"
 ; EN: ItemName="Minigun"
 ItemName="Миниган"
+FemDeathMessage="%w %k превратила %o в дырявый кусок мяса."
+FemKillMessage="%k изрешетила %o из минигана."
 
 [GESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o выпил стакан капающей зелёной жижи %k."
-FemDeathMessage="%o выпила стакан капающей зелёной жижи %k."
-FemKillMessage="%o выпила стаканчик зелёной гадости от %k."
 ; EN: PickupMessage="You got the GES BioRifle"
 PickupMessage="Вы получили биовинтовку GES"
 ; EN: ItemName="GES Bio Rifle"
 ItemName="Биовинтовка GES"
+FemDeathMessage="%o выпила стакан капающей зелёной жижи %k."
+FemKillMessage="%o выпила стаканчик зелёной гадости от %k."
+
+[RazorJack]
+; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
+DeathMessage="%k вырвал кровавый кусок из %o %wом."
+; EN: PickupMessage="You got the RazorJack"
+PickupMessage="Вы получили резак"
+; EN: ItemName="Razorjack"
+ItemName="Резак"
+FemDeathMessage="%k вырвала кровавый кусок из %o %wом."
+FemKillMessage="%k вырвал кровавый кусок из %o %wом."
+
+[Fell]
+; EN: Name="fell"
+Name="пал в бою"
+FemName="пала в бою"
+; EN: AltName="fell"
+AltName="пал в бою"
+FemAltName="пала в бою"
+
+[Drowned]
+; EN: Name="drowned"
+Name="утонул"
+FemName="утонула"
+; EN: AltName="drowned"
+AltName="утонул"
+FemAltName="утонула"
+
+[Decapitated]
+; EN: Name="beheaded"
+Name="обезглавлен"
+FemName="обезглавлена"
+; EN: AltName="decapitated"
+AltName="обезглавлен"
+FemAltName="обезглавлена"
+
+[Corroded]
+; EN: Name="corroded"
+Name="растворился в кислоте"
+FemName="растворена в кислоте"
+; EN: AltName="slimed"
+AltName="растворился в кислоте"
+FemAltName="растворена в кислоте"
+
+[Burned]
+; EN: Name="burned"
+Name="сгорел"
+FemName="сгорела"
+; EN: AltName="flame-broiled"
+AltName="сгорел"
+FemAltName="сгорела"
+
+[QuadShot]
+; EN: DeathMessage="%o was blasted to bits by %k's %w."
+DeathMessage="%o был разорван на кусочки %k из %wа."
+; EN: PickupMessage="You got the Quad-Barreled Shotgun"
+PickupMessage="Вы получили четырёхствольный дробовик"
+; EN: ItemName="Quad-Barreled Shotgun"
+ItemName="Квадшот"
+FemDeathMessage="%o была разорвана на кусочки %k из %wа."
+FemKillMessage="%o был разорван на кусочки %k из %wа."
+
+[NaliPlayer]
+; EN: MenuName="Nali"
+MenuName="Нали"
+
+[NaliPlayerBot]
+; EN: MenuName="Nali"
+MenuName="Нали"
 
 [Squid]
 ; EN: NameArticle=" a "
@@ -447,26 +481,6 @@ NameArticle=" "
 ; EN: MenuName="Chameleon"
 MenuName="хамелеон"
 
-[RazorJack]
-; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
-DeathMessage="%k вырвал кровавый кусок из %o %wом."
-FemDeathMessage="%k вырвала кровавый кусок из %o %wом."
-FemKillMessage="%k вырвал кровавый кусок из %o %wом."
-; EN: PickupMessage="You got the RazorJack"
-PickupMessage="Вы получили резак"
-; EN: ItemName="Razorjack"
-ItemName="Резак"
-
-[QuadShot]
-; EN: DeathMessage="%o was blasted to bits by %k's %w."
-DeathMessage="%o был разорван на кусочки %k из %wа."
-FemDeathMessage="%o была разорвана на кусочки %k из %wа."
-FemKillMessage="%o был разорван на кусочки %k из %wа."
-; EN: PickupMessage="You got the Quad-Barreled Shotgun"
-PickupMessage="Вы получили четырёхствольный дробовик"
-; EN: ItemName="Quad-Barreled Shotgun"
-ItemName="Квадшот"
-
 [PeaceMaker]
 ; EN: DeathMessage="One of %k's %w missiles blew up %o."
 DeathMessage="Одна из ракет %w %k поразила %o."
@@ -476,6 +490,12 @@ FemKillMessage="Одна из ракет %w %k поразила %o."
 PickupMessage="Вы получили Миротворец"
 ; EN: ItemName="Peacemaker"
 ItemName="Миротворец"
+
+[PeaceAmmo]
+; EN: PickupMessage="You got ammo for the Peacemaker"
+PickupMessage="У вас есть боеприпасы для Миротворец"
+; EN: ItemName="Peacemaker Ammo"
+ItemName="Боеприпасы Миротворец"
 
 [WoodruffSeeds]
 ; EN: PickupMessage="You got the Woodruff Seeds"

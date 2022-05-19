@@ -45,22 +45,22 @@ ItemName="Восьмой мяч"
 [OldRifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k положил пулю в голову %o."
-FemDeathMessage="%k положила пулю в голову %o."
-FemKillMessage="%k засадила пулю в голову %o."
 ; EN: PickupMessage="You got the Rifle"
 PickupMessage="Вы получили ружьё"
 ; EN: ItemName="Sniper Rifle"
 ItemName="Снайперское Ружьё"
+FemDeathMessage="%k положила пулю в голову %o."
+FemKillMessage="%k засадила пулю в голову %o."
 
 [OldFlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%k разорвал %o в клочья из %wа."
-FemDeathMessage="%k разорвала %o в клочья из %wа."
-FemKillMessage="%k порвала в клочья %o из зенитной пушки."
 ; EN: PickupMessage="You got the Flak Cannon"
 PickupMessage="Вы получили Зенитная пушка"
 ; EN: ItemName="Flak Cannon"
 ItemName="Зенитная пушка"
+FemDeathMessage="%k разорвала %o в клочья из %wа."
+FemKillMessage="%k порвала в клочья %o из зенитной пушки."
 
 [OldAutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
@@ -75,22 +75,22 @@ ItemName="Пистолет"
 [OldMinigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="%w %k превратил %o в дырявый кусок мяса."
-FemDeathMessage="%w %k превратила %o в дырявый кусок мяса."
-FemKillMessage="%k изрешетила %o из минигана."
 ; EN: PickupMessage="You got the Minigun"
 PickupMessage="Вы получили Миниган"
 ; EN: ItemName="Minigun"
 ItemName="Миниган"
+FemDeathMessage="%w %k превратила %o в дырявый кусок мяса."
+FemKillMessage="%k изрешетила %o из минигана."
 
 [OldGESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o выпил стакан капающей зелёной жижи %k."
-FemDeathMessage="%o выпила стакан капающей зелёной жижи %k."
-FemKillMessage="%o выпила стаканчик зелёной гадости от %k."
 ; EN: PickupMessage="You got the GES BioRifle"
 PickupMessage="Вы получили биовинтовку GES"
 ; EN: ItemName="GES Bio Rifle"
 ItemName="Биовинтовка GES"
+FemDeathMessage="%o выпила стакан капающей зелёной жижи %k."
+FemKillMessage="%o выпила стаканчик зелёной гадости от %k."
 
 [OldAmplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
@@ -121,9 +121,9 @@ ItemName="пуль"
 
 [OldRifleAmmo]
 ; EN: PickupMessage="You got 8 Rifle Rounds"
-PickupMessage="Вы получили 8 патронов к винтовке"
+PickupMessage="Вы получили 8 Патронов К Винтовке"
 ; EN: ItemName="Rifle Rounds"
-ItemName="патронов к винтовке"
+ItemName="Патронов К Винтовке"
 
 [OldWeaponPowerUp]
 ; EN: PickupMessage="You got the Dispersion Pistol Powerup"
@@ -133,19 +133,19 @@ ItemName="улучшитель дисперсионного пистолета"
 
 [OldFlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Вы подобрали 10 зарядов для Флака"
+PickupMessage="Вы подобрали 10 Зарядов Для Флака"
 ; EN: ItemName="Flak Shells"
-ItemName="зарядов для Флака"
+ItemName="Зарядов Для Флака"
 
 [OldRazorjack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%k вырвал кровавый кусок из %o %wом."
-FemDeathMessage="%k вырвала кровавый кусок из %o %wом."
-FemKillMessage="%k вырвал кровавый кусок из %o %wом."
 ; EN: PickupMessage="You got the RazorJack"
 PickupMessage="Вы получили резак"
 ; EN: ItemName="Razorjack"
 ItemName="Резак"
+FemDeathMessage="%k вырвала кровавый кусок из %o %wом."
+FemKillMessage="%k вырвал кровавый кусок из %o %wом."
 
 [OldDefaultAmmo]
 ; EN: PickupMessage="You picked up some ammo"
@@ -167,15 +167,15 @@ ItemName="кристаллов таридиума"
 
 [OldRazorAmmo]
 ; EN: PickupMessage="You picked up Razor Blades"
-PickupMessage="Вы подобрали немного лезвий для резака"
+PickupMessage="Вы подобрали немного Лезвий Для Резака"
 ; EN: ItemName="Razor Blades"
-ItemName="лезвий для резака"
+ItemName="Лезвий Для Резака"
 
 [OldSludge]
 ; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
-PickupMessage="Вы подобрали 25 килограмм таридиумных соплей"
+PickupMessage="Вы подобрали 25 килограмм Таридиумных Соплей"
 ; EN: ItemName="Tarydium Biosludge"
-ItemName="таридиумных соплей"
+ItemName="Таридиумных Соплей"
 
 [OldRocketCan]
 ; EN: PickupMessage="You picked up 12 Eightballs"
@@ -191,12 +191,12 @@ ItemName="обойму"
 
 [OldRifleRound]
 ; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Вы получили патрон для винтовки"
+PickupMessage="Вы получили Патрон Для Винтовки"
 ; EN: ItemName="Rifle Round"
-ItemName="патрон для винтовки"
+ItemName="Патрон Для Винтовки"
 
 [OldFlakShellAmmo]
 ; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Вы получили заряд для Флака"
+PickupMessage="Вы получили Заряд Для Флака"
 ; EN: ItemName="Flak Shell"
-ItemName="заряд для Флака"
+ItemName="Заряд Для Флака"

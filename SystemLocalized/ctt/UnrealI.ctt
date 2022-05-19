@@ -1,11 +1,11 @@
 ﻿[Public]
-Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.KingOfTheHill,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon)
 ; EN: Object=(Name=UnrealI.FemaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 2")
@@ -42,6 +42,150 @@ NameArticle=" la "
 ; EN: MenuName="Queen"
 MenuName="Reina"
 
+[SkaarjPlayer]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Soldat Skaarj"
+
+[SkaarjPlayerBot]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Soldat Skaarj"
+
+[WarLord]
+; EN: NameArticle=" the "
+NameArticle=" el "
+; EN: MenuName="WarLord"
+MenuName="Cap Guerrer"
+
+[SearchLight]
+; EN: ExpireMessage="The Search Light batteries have died."
+ExpireMessage="Les bateries de la Llanterna de Recerca s'han esgotat."
+; EN: PickupMessage="You picked up the Search Light"
+PickupMessage="Has recollit la Llanterna de Recerca"
+; EN: ItemName="Search Light"
+ItemName="Llanterna de Recerca"
+
+[RazorAmmo]
+; EN: PickupMessage="You picked up some Razor blades"
+PickupMessage="Has recollit algunes Fulles Filoses"
+; EN: ItemName="Razor Blades"
+ItemName="Fulles Filoses"
+
+[FlakBox]
+; EN: PickupMessage="You picked up 10 Flak Shells"
+PickupMessage="Has recollit 10 Projectils de Metralla"
+; EN: ItemName="Flak Shells"
+ItemName="Projectils de Metralla"
+
+[MaleOne]
+; EN: MenuName="Male 1"
+MenuName="Home 1"
+
+[MaleOneBot]
+; EN: MenuName="Male 1"
+MenuName="Home 1"
+
+[RifleAmmo]
+; EN: PickupMessage="You got 8 Rifle rounds"
+PickupMessage="Has recollit 8 Cartutxos de Fusell"
+; EN: ItemName="Rifle Rounds"
+ItemName="Cartutxos de Fusell"
+
+[Seeds]
+; EN: PickupMessage="You got the Nali Fruit Seeds"
+PickupMessage="Has recollit les Llavors de Planta Nali"
+; EN: ItemName="Nali Fruit Seeds"
+ItemName="Llavors de Planta Nali"
+
+[JumpBoots]
+; EN: ExpireMessage="The Jump Boots have drained"
+ExpireMessage="Les Botes de Salt s'han esgotat"
+; EN: PickupMessage="You picked up the Jump Boots"
+PickupMessage="Has recollit les Botes de Salt"
+; EN: ItemName="Jump Boots"
+ItemName="Botes de Salt"
+
+[ForceField]
+; EN: M_NoRoom="No room to activate Force Field."
+M_NoRoom="No hi ha espai per activar el Camp de Força Portàtil."
+; EN: PickupMessage="You picked up the Force Field"
+PickupMessage="Has recollit el Camp de Força Portàtil"
+; EN: ItemName="Force Field"
+ItemName="Camp de Força Portàtil"
+
+[FemaleTwo]
+; EN: MenuName="Female 2"
+MenuName="Dona 2"
+
+[FemaleTwoBot]
+; EN: MenuName="Female 2"
+MenuName="Dona 2"
+
+[MaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Home 2"
+
+[MaleTwoBot]
+; EN: MenuName="Male 2"
+MenuName="Home 2"
+
+[Sludge]
+; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
+PickupMessage="Has recollit 25 quilos de Residus de Taridio"
+; EN: ItemName="Tarydium Biosludge"
+ItemName="Residus de Taridio"
+
+[Invisibility]
+; EN: ExpireMessage="Invisibility has worn off."
+ExpireMessage="La Invisibilitat s’ha esgotat."
+; EN: PickupMessage="You have Invisibility"
+PickupMessage="Tens Invisibilitat"
+; EN: ItemName="Invisibility"
+ItemName="Invisibilitat"
+
+[DarkMatch]
+; EN: ClassCaption="Darkmatch"
+ClassCaption="Partit Fosc"
+; EN: GameName="Darkmatch"
+GameName="Partit Fosc"
+
+[FlakShellAmmo]
+; EN: PickupMessage="You got a Flak Shell"
+PickupMessage="Tens un Projectil de Metralla"
+; EN: ItemName="Flak Shell"
+ItemName="Projectil de Metralla"
+
+[AsbestosSuit]
+; EN: PickupMessage="You picked up the Asbestos Suit"
+PickupMessage="Heu recollit el Vestit d’Amiant"
+; EN: ItemName="Asbestos Suit"
+ItemName="Vestit d'Amiant"
+
+[Dampener]
+; EN: ExpireMessage="Acoustic dampener has run out."
+ExpireMessage="L’Silenciador Acústic s’ha esgotat."
+; EN: PickupMessage="You got the Acoustic Dampener"
+PickupMessage="Tens l’Silenciador Acústic"
+; EN: ItemName="Acoustic Dampener"
+ItemName="Silenciador Acústic"
+
+[ToxinSuit]
+; EN: PickupMessage="You picked up the Toxin Suit"
+PickupMessage="Has recollit el Vestit Antitòxic"
+; EN: ItemName="Toxin Suit"
+ItemName="Vestit Antitòxic"
+
+[PowerShield]
+; EN: PickupMessage="You got the Power Shield"
+PickupMessage="Has recollit el Escut Energètic"
+; EN: ItemName="Power Shield"
+ItemName="Escut Energètic"
+
+[RifleRound]
+; EN: PickupMessage="You got a Rifle Round"
+PickupMessage="Tens un Cartutxo de Fusell"
+; EN: ItemName="Rifle Round"
+ItemName="Cartutxo de Fusell"
+
 [Behemoth]
 ; EN: NameArticle=" a "
 NameArticle=" un "
@@ -77,6 +221,12 @@ MenuName="Bossa Gasosa Gigant"
 NameArticle=" el "
 ; EN: MenuName="Giant Manta"
 MenuName="Manta Gegant"
+
+[IceSkaarj]
+; EN: NameArticle=" an "
+NameArticle=" un "
+; EN: MenuName="Ice Skaarj"
+MenuName="Skaarj Gèlid"
 
 [Krall]
 ; EN: NameArticle=" a "
@@ -174,209 +324,6 @@ NameArticle=" el "
 ; EN: MenuName="Stone Titan"
 MenuName="Tità de Pedra"
 
-[SkaarjPlayer]
-; EN: MenuName="Skaarj Trooper"
-MenuName="Soldat Skaarj"
-
-[SkaarjPlayerBot]
-; EN: MenuName="Skaarj Trooper"
-MenuName="Soldat Skaarj"
-
-[NaliPlayer]
-; EN: MenuName="Nali"
-MenuName="Nali"
-
-[WarLord]
-; EN: NameArticle=" the "
-NameArticle=" el "
-; EN: MenuName="WarLord"
-MenuName="Cap Guerrer"
-
-[SearchLight]
-; EN: ExpireMessage="The Search Light batteries have died."
-ExpireMessage="Les bateries de Search Light s'han esgotat."
-; EN: PickupMessage="You picked up the Search Light"
-PickupMessage="Has recollit la Llanterna de recerca"
-; EN: ItemName="Search Light"
-ItemName="Llanterna de recerca"
-
-[RazorAmmo]
-; EN: PickupMessage="You picked up some Razor blades"
-PickupMessage="Has recollit algunes Fulles Filoses"
-; EN: ItemName="Razor Blades"
-ItemName="Fulles Filoses"
-
-[DarkMatch]
-; EN: ClassCaption="Darkmatch"
-ClassCaption="Partit Fosc"
-; EN: GameName="Darkmatch"
-GameName="Partit Fosc"
-
-[FlakBox]
-; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Has recollit 10 Projectils de Metralla"
-; EN: ItemName="Flak Shells"
-ItemName="Projectils de Metralla"
-
-[MaleOne]
-; EN: MenuName="Male 1"
-MenuName="Home 1"
-
-[MaleOneBot]
-; EN: MenuName="Male 1"
-MenuName="Home 1"
-
-[RifleAmmo]
-; EN: PickupMessage="You got 8 Rifle rounds"
-PickupMessage="Has recollit 8 Cartutxos de Fusell"
-; EN: ItemName="Rifle Rounds"
-ItemName="Cartutxos de Fusell"
-
-[Seeds]
-; EN: PickupMessage="You got the Nali Fruit Seeds"
-PickupMessage="Has recollit les llavors de planta Nali"
-; EN: ItemName="Nali Fruit Seeds"
-ItemName="Llavors de planta Nali"
-
-[JumpBoots]
-; EN: ExpireMessage="The Jump Boots have drained"
-ExpireMessage="Les botes de salt s'han esgotat"
-; EN: PickupMessage="You picked up the Jump Boots"
-PickupMessage="Has recollit les Botes de Salt"
-; EN: ItemName="Jump Boots"
-ItemName="Botes de Salt"
-
-[ForceField]
-; EN: M_NoRoom="No room to activate Force Field."
-M_NoRoom="No hi ha espai per activar el camp de força."
-; EN: PickupMessage="You picked up the Force Field"
-PickupMessage="Has recollit el Camp de Força Portàtil"
-; EN: ItemName="Force Field"
-ItemName="Camp de Força Portàtil"
-
-[FemaleTwo]
-; EN: MenuName="Female 2"
-MenuName="Dona 2"
-
-[FemaleTwoBot]
-; EN: MenuName="Female 2"
-MenuName="Dona 2"
-
-[MaleTwo]
-; EN: MenuName="Male 2"
-MenuName="Home 2"
-
-[MaleTwoBot]
-; EN: MenuName="Male 2"
-MenuName="Home 2"
-
-[Sludge]
-; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
-PickupMessage="Has recollit 25 quilos de Residus de Taridio"
-; EN: ItemName="Tarydium Biosludge"
-ItemName="Residus de Taridio"
-
-[Invisibility]
-; EN: ExpireMessage="Invisibility has worn off."
-ExpireMessage="La invisibilitat s’ha esgotat."
-; EN: PickupMessage="You have Invisibility"
-PickupMessage="Tens Invisibilitat"
-; EN: ItemName="Invisibility"
-ItemName="Invisibilitat"
-
-[AsbestosSuit]
-; EN: PickupMessage="You picked up the Asbestos Suit"
-PickupMessage="Heu recollit el Vestit d’Amiant"
-; EN: ItemName="Asbestos Suit"
-ItemName="Vestit d'Amiant"
-
-[fell]
-; EN: Name="fell"
-Name="caigut"
-FemName="caiguda"
-; EN: AltName="fell"
-AltName="caigut"
-FemAltName="caiguda"
-
-[FlakShellAmmo]
-; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Tens un Projectil de Metralla"
-; EN: ItemName="Flak Shell"
-ItemName="Projectil de Metralla"
-
-[drowned]
-; EN: Name="drowned"
-Name="ofegat"
-FemName="ofegada"
-; EN: AltName="drowned"
-AltName="ofegat"
-FemAltName="ofegada"
-
-[Decapitated]
-; EN: Name="beheaded"
-Name="decapitat"
-FemName="decapitada"
-; EN: AltName="decapitated"
-AltName="escapçat"
-FemAltName="escapçada"
-
-[Dampener]
-; EN: ExpireMessage="Acoustic dampener has run out."
-ExpireMessage="L’Silenciador Acústic s’ha esgotat."
-; EN: PickupMessage="You got the Acoustic Dampener"
-PickupMessage="Tens l’Silenciador Acústic"
-; EN: ItemName="Acoustic Dampener"
-ItemName="Silenciador Acústic"
-
-[Corroded]
-; EN: Name="corroded"
-Name="corroït"
-FemName="corroïda"
-; EN: AltName="slimed"
-AltName="aprimat"
-FemAltName="aprimada"
-
-[ToxinSuit]
-; EN: PickupMessage="You picked up the Toxin Suit"
-PickupMessage="Has recollit el Vestit Antitòxic"
-; EN: ItemName="Toxin Suit"
-ItemName="Vestit Antitòxic"
-
-[Burned]
-; EN: Name="burned"
-Name="cremat"
-FemName="cremada"
-; EN: AltName="flame-broiled"
-AltName="cuit"
-FemAltName="cuita"
-
-[PowerShield]
-; EN: PickupMessage="You got the Power Shield"
-PickupMessage="Has recollit el Escut Energètic"
-; EN: ItemName="Power Shield"
-ItemName="Escut Energètic"
-
-[RifleRound]
-; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Tens un Cartutxo de Fusell"
-; EN: ItemName="Rifle Round"
-ItemName="Cartutxo de Fusell"
-
-[ParentBlob]
-; EN: BlobKillMessage="was corroded by a Blob"
-BlobKillMessage="ha estat corroït per una Gota"
-FemBlobKillMessage="ha estat corroïda per una Gota"
-; EN: NameArticle=" a "
-NameArticle=" una "
-; EN: MenuName="Blob"
-MenuName="Gota"
-
-[IceSkaarj]
-; EN: NameArticle=" an "
-NameArticle=" un "
-; EN: MenuName="Ice Skaarj"
-MenuName="Skaarj Gèlid"
-
 [EndgameHud]
 ; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely.  Yet it's fuel has depleted and you drift aimlessly."
 Message1="La vaina d’escapament Skaarj s’ha alliberat de l’atracció gravitacional del planeta ... amb prou feines. Tot i així, el combustible s’ha esgotat i es deriva sense rumb."
@@ -398,62 +345,129 @@ Message7="Premeu el disparador per reiniciar"
 ClassCaption="El Rei del Turó"
 ; EN: KingMessage=" is the new king of the hill!"
 KingMessage=" és el nou rei del turó!"
+; EN: GameName="King of the Hill"
+GameName="Rei del Turó"
 ; EN: NewKingMessage="%s is the new king of the hill!"
 NewKingMessage="%s és el nou rei del turó!"
 ; EN: NewQueenMessage="%s is the new queen of the hill!"
 NewQueenMessage="%s és la nova reina del turó!"
-; EN: GameName="King of the Hill"
-GameName="Rei del Turó"
+
+[ParentBlob]
+; EN: BlobKillMessage="was corroded by a Blob"
+BlobKillMessage="ha estat corroït per una Gota"
+; EN: NameArticle=" a "
+NameArticle=" una "
+; EN: MenuName="Blob"
+MenuName="Gota"
+FemBlobKillMessage="ha estat corroïda per una Gota"
 
 [FlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o ha estat destrossat per l'%w de %k."
-FemDeathMessage="%o ha estat destrossada per l'%w de %k."
-FemKillMessage="%o ha estat destrossat per l'%w de %k."
 ; EN: PickupMessage="You got the Flak Cannon"
 PickupMessage="Tens el Canó de Metralla"
 ; EN: ItemName="Flak Cannon"
 ItemName="Canó de Metralla"
+FemDeathMessage="%o ha estat destrossada per l'%w de %k."
+FemKillMessage="%o ha estat destrossat per l'%w de %k."
 
 [Rifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k ha posat una bala al cap de %o."
-FemDeathMessage="%k ha posat una bala al cap de %o."
-FemKillMessage="%k ha posat una bala al cap de %o."
 ; EN: PickupMessage="You got the Rifle"
 PickupMessage="Tens el Fusell"
 ; EN: ItemName="Sniper Rifle"
 ItemName="Fusell de Franctirador"
+FemDeathMessage="%k ha posat una bala al cap de %o."
+FemKillMessage="%k ha posat una bala al cap de %o."
 
 [Minigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
-FemDeathMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
-FemKillMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
 ; EN: PickupMessage="You got the Minigun"
 PickupMessage="Tens el Minigun"
 ; EN: ItemName="Minigun"
 ItemName="Minigun"
+FemDeathMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
+FemKillMessage="El %w de %k ha convertit %o en un tros de carn sagnant."
 
 [GESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o ha begut un got de la regalima càrrega verda de %k."
-FemDeathMessage="%o ha begut un got de la regalima càrrega verda de %k."
-FemKillMessage="%o ha begut un got de la regalima càrrega verda de %k."
 ; EN: PickupMessage="You got the GES BioRifle"
 PickupMessage="Tens el Rifle Bio GES"
 ; EN: ItemName="GES BioRifle"
 ItemName="Rifle Bio GES"
+FemDeathMessage="%o ha begut un got de la regalima càrrega verda de %k."
+FemKillMessage="%o ha begut un got de la regalima càrrega verda de %k."
 
 [RazorJack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%k li ha tret un tros de carn a %o amb el %w."
-FemDeathMessage="%k li ha tret un tros de carn a %o amb el %w."
-FemKillMessage="%k li ha tret un tros de carn a %o amb el %w."
 ; EN: PickupMessage="You got the RazorJack"
 PickupMessage="Tens el Llançador de Fulles"
 ; EN: ItemName="RazorJack"
 ItemName="Llançador de Fulles"
+FemDeathMessage="%k li ha tret un tros de carn a %o amb el %w."
+FemKillMessage="%k li ha tret un tros de carn a %o amb el %w."
+
+[Fell]
+; EN: Name="fell"
+Name="caigut"
+FemName="caiguda"
+; EN: AltName="fell"
+AltName="caigut"
+FemAltName="caiguda"
+
+[Drowned]
+; EN: Name="drowned"
+Name="ofegat"
+FemName="ofegada"
+; EN: AltName="drowned"
+AltName="ofegat"
+FemAltName="ofegada"
+
+[Decapitated]
+; EN: Name="beheaded"
+Name="decapitat"
+FemName="decapitada"
+; EN: AltName="decapitated"
+AltName="escapçat"
+FemAltName="escapçada"
+
+[Corroded]
+; EN: Name="corroded"
+Name="corroït"
+FemName="corroïda"
+; EN: AltName="slimed"
+AltName="aprimat"
+FemAltName="aprimada"
+
+[Burned]
+; EN: Name="burned"
+Name="cremat"
+FemName="cremada"
+; EN: AltName="flame-broiled"
+AltName="cuit"
+FemAltName="cuita"
+
+[QuadShot]
+; EN: DeathMessage="%o was blasted to bits by %k's %w."
+DeathMessage="%o s'ha convertit en peces per %w de %k."
+; EN: PickupMessage="You got the Quad-Barreled Shotgun"
+PickupMessage="Tens l’Escopeta Quàdruple"
+; EN: ItemName="Quad-Barreled Shotgun"
+ItemName="Escopeta Quàdruple"
+FemDeathMessage="%o s'ha convertida en peces per %w de %k." 
+FemKillMessage="%o s'ha convertit en peces per %w de %k."
+
+[NaliPlayer]
+; EN: MenuName="Nali"
+MenuName="Nali"
+
+[NaliPlayerBot]
+; EN: MenuName="Nali"
+MenuName="Nali"
 
 [Squid]
 ; EN: NameArticle=" a "
@@ -467,16 +481,6 @@ NameArticle=" un "
 ; EN: MenuName="Chameleon"
 MenuName="Camaleó"
 
-[QuadShot]
-; EN: DeathMessage="%o was blasted to bits by %k's %w."
-DeathMessage="%o s'ha convertit en peces per %w de %k."
-FemDeathMessage="%o s'ha convertida en peces per %w de %k." 
-FemKillMessage="%o s'ha convertit en peces per %w de %k."
-; EN: PickupMessage="You got the Quad-Barreled Shotgun"
-PickupMessage="Tens l’Escopeta Quàdruple"
-; EN: ItemName="Quad-Barreled Shotgun"
-ItemName="Escopeta Quàdruple"
-
 [PeaceMaker]
 ; EN: DeathMessage="One of %k's %w missiles blew up %o."
 DeathMessage="Un dels míssils del %w de %k ha arribat a %o."
@@ -486,6 +490,12 @@ FemKillMessage="Un dels míssils del %w de %k ha arribat a %o."
 PickupMessage="Tens el Pacificador"
 ; EN: ItemName="Peacemaker"
 ItemName="Pacificador"
+
+[PeaceAmmo]
+; EN: PickupMessage="You got ammo for the Peacemaker"
+PickupMessage="Tens munició per al Pacificador"
+; EN: ItemName="Peacemaker Ammo"
+ItemName="Munició per al Pacificador"
 
 [WoodruffSeeds]
 ; EN: PickupMessage="You got the Woodruff Seeds"
