@@ -1493,7 +1493,7 @@ PlayerMenuHelp="Einstellungen die deinen Spieler im Netzwerk und Botmatch betref
 ; EN: AdvancedOptionsName="&Advanced Options"
 AdvancedOptionsName="&Erweiterte Optionen"
 ; EN: AdvancedOptionsHelp="Bring up the Advanced Options menu, where you can configure most of the custom mods."
-AdvancedOptionsHelp="Startet die erweiterten Optionen, in denen die meisten Modifikationen von Drittherstellern eingestellt werden können."
+AdvancedOptionsHelp="Startet die Erweiterten Optionen, in denen die meisten Modifikationen von Drittherstellern eingestellt werden können."
 
 [UMenuGameMenu]
 ; EN: LoadName="&Load"

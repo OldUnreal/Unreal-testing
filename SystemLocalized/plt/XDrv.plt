@@ -23,7 +23,7 @@ Color16="&16 bitów"
 ; EN: Color32="&32-bit color"
 Color32="&32 bity"
 ; EN: AdvancedOptions="Advanced Options"
-AdvancedOptions="Opcje zaawansowane"
+AdvancedOptions="Opcje Zaawansowane"
 
 [XClient]
 ; EN: ClassCaption="Standard XDrv Linux Manager"
