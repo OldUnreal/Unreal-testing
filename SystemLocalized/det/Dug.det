@@ -20,11 +20,11 @@ Message="Craig ist Großmeister Blödmann."
 
 [TranslatorEvent16]
 ; EN: Message="Canada is really cold. I like Dos Equis beer. My cats are fuzzy."
-Message="Canada ist richtig kalt. Mir schmeckt Dos Equis Bier. Meine Katzen sind wuschelig."
+Message="Canada ist richtig kalt. Mir schmeckt Dos Equis-Bier. Meine Katzen sind wuschelig."
 
 [TranslatorEvent3]
 ; EN: Message="Secondary Tarydium transport cart activation unit."
-Message="Sekundäre Aktivierungseinheit für Tarydium Transportkarren."
+Message="Sekundäre Aktivierungseinheit für Tarydium-Transportkarren."
 
 [TranslatorEvent12]
 ; EN: Message="Gas Re-Routing Station Status: Doors are pressurized and locked."
@@ -34,4 +34,4 @@ AltMessage="Schleusen dekomprimiert. Zutritt gestattet."
 
 [TranslatorEvent2]
 ; EN: Message="Primary Tarydium transport cart activation unit."
-Message="Primäre Aktivierungseinheit für Tarydium Transportkarren."
+Message="Primäre Aktivierungseinheit für Tarydium-Transportkarren."

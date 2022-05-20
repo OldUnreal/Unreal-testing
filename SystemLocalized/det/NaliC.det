@@ -2,17 +2,17 @@
 ; EN: Title="Nali Castle"
 Title="Burg der Nali"
 ; EN: LevelEntryText="Entering the Nali Castle"
-LevelEntryText="Eingang der Burg der Nali"
+LevelEntryText="Betrete die Burg der Nali"
 
 [LevelSummary]
 ; EN: Title="Nali Castle"
 Title="Burg der Nali"
 ; EN: LevelEntryText="Entering the Nali Castle"
-LevelEntryText="Eingang der Burg der Nali"
+LevelEntryText="Betrete die Burg der Nali"
 
 [TranslatorEvent0]
 ; EN: Message="The path to be followed is long and harrowing, but the strong of heart and purpose will prevail against the challenges."
-Message="Der Pfad, dem gefolgt werden muß ist lang und schrecklich, aber wer kräftigen Herzens und voller Entschlossenheit ist, wird sich den Herausforderungen gewachsen zeigen."
+Message="Der Pfad, dem gefolgt werden muss ist lang und schrecklich, aber wer kräftigen Herzens und voller Entschlossenheit ist, wird sich den Herausforderungen gewachsen zeigen."
 ; EN: Hint="Thy path is now clear."
 Hint="Dein Weg ist jetzt klar."
 

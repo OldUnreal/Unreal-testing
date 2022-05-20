@@ -2,13 +2,13 @@
 ; EN: Title="Dark Arena"
 Title="Dunkle Arena"
 ; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Eingang von Dunkle Arena"
+LevelEntryText="Betrete die Dunkle Arena"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Dunkle Arena"
 ; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Eingang von Dunkle Arena"
+LevelEntryText="Betrete die Dunkle Arena"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."
@@ -16,24 +16,24 @@ Message="Die Schwachen sollen durch durch die Hand der Bestie niedergeschlagen w
 
 [TranslatorEvent2]
 ; EN: Message="I escaped from my cell but can't find the strength to go on. Remember me to my family..."
-Message="Ich bin aus meiner Zelle entkommen, aber ich habe nicht die Kraft, weiterzugehen. Grüßt meine Familie in meinem Namen..."
+Message="Ich bin aus meiner Zelle entkommen, aber ich habe nicht die Kraft, um weiterzugehen. Grüßt meine Familie in meinem Namen..."
 
 [TranslatorEvent3]
 ; EN: Message="I wish I had died when the Vortex Rikers crashed. I do not know what is to become of me. I am scared."
-Message="Wäre ich nur gestorben als die Vortex Rikers abstürzte. Ich weiß nicht, was aus mir werden soll. Ich habe Angst."
+Message="Wäre ich doch nur beim Absturz der Vortex Rikers gestorben. Ich weiß nicht, was aus mir werden soll. Ich habe Angst."
 
 [TranslatorEvent4]
 ; EN: Message="I'm so hungry. I hope that the others in the scouting party from the ISV-KRAN will find me. This is the only hope that keeps me going from day to day. Without that to cling to I'd be insane by now. I can't stand the screams of pain much longer."
-Message="Hoffentlich findet mich eine Spähtrupp der ISV-KRAN. Nur dieser Gedanke hält mich am Leben. Wenn ich mich nicht an diese Hoffnung klammern könnte, wäre ich inzwischen verrückt. Ich kann die Schmerzensschreie nicht mehr lange ertragen."
+Message="Hoffentlich findet mich die anderen Späher von der ISV-KRAN. Das ist der einzige Funke, der mich am Leben hält. Wenn ich mich nicht daran klammern könnte, wäre ich inzwischen verrückt. Ich kann die Schmerzensschreie nicht mehr lange ertragen."
 
 [TranslatorEvent5]
 ; EN: Message="If I am to die here in this place, it pleases my mind that some of my former captors are here with me. Tomorrow I will find my own peace in death knowing that they have all suffered before me."
-Message="Wenn ich schon an diesem Ort sterben muß, bereitet es mir doch Genugtuung zu wissen, daß einige meiner früheren Wärter auch hier sind. Morgen werde ich im Tod meinen Frieden finden, im Wissen, daß sie alle vor mir gelitten haben."
+Message="Wenn ich schon an diesem Ort sterben muss, bereitet es mir doch Genugtuung zu wissen, dass einige meiner früheren Wärter auch hier sind. Morgen werde ich im Tod meinen Frieden finden, im Wissen, dass sie alle vor mir gelitten haben."
 
 [TranslatorEvent6]
 ; EN: Message="I must try to find a way out of this place. The lizard men in charge here are strangely barbaric given the technological advancement implied by their weapons. It may be harder to fool them than I first thought, but I must make the attempt."
-Message="Ich muß hier raus. Diese Kreaturen sind auf seltsame Weise primitiv, angesichts des technologischen Fortschritts, auf den ihre Waffen schließen lassen. Es wird schwierig sein, sie zu überlisten aber ich muß es versuchen."
+Message="Ich muss hier raus. Diese Kreaturen sind auf seltsame Weise primitiv, angesichts des technologischen Fortschritts, auf den ihre Waffen schließen lassen. Es wird schwierig sein, sie zu überlisten, aber ich muss es versuchen."
 
 [TranslatorEvent7]
 ; EN: Message="The Skaarj have brought in a new batch of the two armed softskins from another of their raids. I fear that one of them is the Messiah, come down from the heavens, but I must pray that I am mistaken and not give up hope for the freedom of my people."
-Message="Die Skaarj nahmen bei einem Überraschungsangriff eine Gruppe dieser zweiarmigen Weichhäuter gefangen. Ich fürchte, der Messias ist darunter. Ich bete, daß ich mich irre. Die Hoffnung auf Freiheit für mein Volk darf nicht sterben."
+Message="Die Skaarj nahmen bei einem Überraschungsangriff eine Gruppe dieser zweiarmigen Weichhäuter gefangen. Ich fürchte, der Messias ist darunter. Ich bete, dass ich mich irre. Die Hoffnung auf Freiheit für mein Volk darf nicht sterben."

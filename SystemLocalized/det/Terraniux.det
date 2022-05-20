@@ -38,7 +38,7 @@ Message="Sektion A: Status voll. Biomüll Umleitung nach Sektion B aktiv."
 
 [TranslatorEvent8]
 ; EN: Message="Access Denied. Control Room authorization must be granted to access Noork's Elbow."
-Message="Zutritt verweigert. Zugangsgenehmigung für Kontrollraum muß erteilt werden, um Zutritt in Noork Ellbogen zu bekommen."
+Message="Zutritt verweigert. Zugangsgenehmigung für Kontrollraum muss erteilt werden, um Zutritt in Noork Ellbogen zu bekommen."
 ; EN: AltMessage="Access granted."
 AltMessage="Zutritt erteilt."
 ; EN: Hint="If you swim down in the BioWaste you can access the Control Room."
@@ -50,7 +50,7 @@ Message="Sektion C: Status leer, dieses Auffangbecken ist defekt. Bitte keinen B
 
 [TranslatorEvent6]
 ; EN: Message="Lift 1: Security Lock, Access denied. Containment room pumps must be active for entrance to hydroponic greenhouses."
-Message="Lift 1: Sicherheitsschloß, Zutritt verweigert. Pumpen des Auffangbeckens müssen vor Eintritt in die Hydroponik-Gewächshäuser in Betrieb sein."
+Message="Lift 1: Sicherheitsschloss, Zutritt verweigert. Pumpen des Auffangbeckens müssen vor Eintritt in die Hydroponik-Gewächshäuser in Betrieb sein."
 ; EN: AltMessage="Lift 1: Status working. Access to hydroponic gardens permitted."
 AltMessage="Lift 1: Status im Betrieb. Zutritt zu den Hydroponik-Gewächshäusern gestattet."
 
@@ -68,7 +68,7 @@ Hint="Der Biomüll wird im Kontrollraum gefiltert."
 
 [TranslatorEvent11]
 ; EN: Message="Greenhouse B: The Karkilys Zegnus need more fertilizer. Please dispatch a group of guards to inspect the Nali homes in the Noork's Elbow. Disembarkment authorization must be granted in the Control Room."
-Message="Gewächshaus B: Die Karkilys Zegnus brauchen mehr Nahrungslösung. Bitte eine Wachmannschaft entsenden, um die Häuser der Nali im Noork Ellbogen zu kontrollieren. Die Genehmigung zur Ausschiffung muß im Kontrollraum geholt werden."
+Message="Gewächshaus B: Die Karkilys Zegnus brauchen mehr Nahrungslösung. Bitte eine Wachmannschaft entsenden, um die Häuser der Nali im Noork Ellbogen zu kontrollieren. Die Genehmigung zur Ausschiffung muss im Kontrollraum geholt werden."
 
 [TranslatorEvent12]
 ; EN: Message="Greenhouse C: The night is coming soon, please maintain careful control of the hygrometric level and air temperature. Constant monitoring is necessary to keep them within appropriate levels."
@@ -78,11 +78,11 @@ Message="Gewächshaus B: Bitte prüfen, ob der Biomüll durch die Filter im Kont
 ; EN: Message="Control Room, ACCESS DENIED."
 Message="Kontrollraum, ZUTRITT VERWEIGERT."
 ; EN: Hint="You must find another way to go in this room."
-Hint="Du mußt einen anderen Weg finden, um in diesen Raum zu gelangen."
+Hint="Du musst einen anderen Weg finden, um in diesen Raum zu gelangen."
 
 [TranslatorEvent14]
 ; EN: Message="Access Denied. Control Room authorization must be granted to access Noork Elbow."
-Message="Zutritt verweigert. Zugangsgenehmigung für Kontrollraum muß erteilt werden, um Zutritt in Noork Ellbogen zu bekommen."
+Message="Zutritt verweigert. Zugangsgenehmigung für Kontrollraum muss erteilt werden, um Zutritt in Noork Ellbogen zu bekommen."
 
 [Trigger46]
 ; EN: Message="Access Room security locks disengaged."

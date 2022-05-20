@@ -1,0 +1,11 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 11"
+Title="Pauze 11"
+
+[TransitionGenderEvent5]
+; Note: Make the text coincide with the equivalent in Sounds/nlt/Interm11.uax
+OutDelays[1]=23.500000
+; EN: MaleText[0]="It took everything I had to get through the rest of that miserable Tarydium plant. At least I killed a whole bunch of Skaarj and left the place a real mess. The Skaarj won't be using that place for a while. I thought I had made it when I saw that small alien ship in the middle of that seemingly endless plant... I thought I could use it to get off-planet. But it's busted. The shuttle is the only escape."
+MaleText[0]="Het kostte alles wat ik had om de rest van die ellendige Tarydium-plant te doorstaan. Ik heb tenminste een heleboel Skaarj gedood en de plaats een echte puinhoop achtergelaten. De Skaarj zal die plek een tijdje niet gebruiken. Ik dacht dat ik het had gehaald toen ik dat kleine buitenaardse schip in het midden van die schijnbaar eindeloze plant zag ... Ik dacht dat ik het kon gebruiken om van de planeet af te komen. Maar het is kapot. De shuttle is de enige ontsnapping."
+; EN: FemaleText[0]="It took everything I had to get through the rest of that miserable Tarydium plant. At least I killed a whole bunch of Skaarj and left the place a real mess. The Skaarj won't be using that place for a while. I thought I had made it when I saw that small alien ship in the middle of that seemingly endless plant... I thought I could use it to get off-planet. But it's busted. The shuttle is the only escape."
+FemaleText[0]="Het kostte alles wat ik had om de rest van die ellendige Tarydium-plant te doorstaan. Ik heb tenminste een heleboel Skaarj gedood en de plaats een echte puinhoop achtergelaten. De Skaarj zal die plek een tijdje niet gebruiken. Ik dacht dat ik het had gehaald toen ik dat kleine buitenaardse schip in het midden van die schijnbaar eindeloze plant zag ... Ik dacht dat ik het kon gebruiken om van de planeet af te komen. Maar het is kapot. De shuttle is de enige ontsnapping."

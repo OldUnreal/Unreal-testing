@@ -4,7 +4,7 @@ Preferences=(Caption="OldOpenGL Support",Parent="Rendering",Class=OldOpenGLDrv.O
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OldOpenGL Support"
-ClassCaption="OldOpenGL Unterstützung"
+ClassCaption="OldOpenGL-Unterstützung"
 ; EN: AskInstalled="Do you have a OldOpenGL compatible 3D accelerator installed?"
 AskInstalled="Hast du eine OldOpenGL kompatible 3D Grafikkarte installiert?"
 ; EN: AskUse="Do you want Unreal to use your OldOpenGL accelerator?"

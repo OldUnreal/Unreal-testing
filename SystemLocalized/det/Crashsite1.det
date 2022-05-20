@@ -1,24 +1,24 @@
 ﻿[LevelInfo2]
 Title="UMS Prometheus"
 ; EN: LevelEntryText="Entering the UMS Prometheus"
-LevelEntryText="Eingabe der UMS Prometheus"
+LevelEntryText="Betrete die UMS Prometheus"
 
 [LevelSummary]
 Title="UMS Prometheus"
 ; EN: LevelEntryText="Entering the UMS Prometheus"
-LevelEntryText="Eingabe der UMS Prometheus"
+LevelEntryText="Betrete die UMS Prometheus"
 
 [TranslatorEvent4]
 ; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 2"
-Message="UMS Prometheus - Stromkreise: Warnung: Stromkreisüberlastung in Netzwerk 2 entdeckt"
+Message="UMS Prometheus - Stromkreise: Warnung: Stromkreis in Netzwerk 2 überlastet"
 
 [TranslatorEvent11]
 ; EN: Message="Log Oliver F. Russel, Scientific Assistant: I know that we got something in the water tanks again. Peter saw some kind of slimeball through the pipe controls again. Looks like another long night of water analysis. God, I hate space vermin..."
-Message="Log. von Oliver F. Russel, Wissenschaftlicher Assistent: Ich weiß, daß wir schon wieder etwas in die Wassertanks bekommen haben. Peter hat wieder eine Art Schleimball durch die Rohrkontrollen gesehen. Das sieht mir ganz nach einer weiteren langen Nacht mit Wasseranalysen aus. Gott, wie ich diese Weltraum-Parasiten hasse..."
+Message="Logeintrag von Oliver F. Russel, Wissenschaftlicher Assistent: Ich weiß, dass wir schon wieder etwas in die Wassertanks bekommen haben. Peter hat wieder eine Art Schleimkugel durch die Rohrkontrollen schleusen gesehen. Das sieht mir ganz nach einer weiteren langen Nacht mit Wasseranalysen aus. Gott, wie ich diese Weltraum-Parasiten hasse..."
 
 [TranslatorEvent10]
 ; EN: Message="Log Andrew G. Jackson, Medical Officer: This has been a smooth ride, no major incidents for almost 2 weeks. And I'm still getting full payment. I think work doesn't get much better than this."
-Message="Log. von Andrew G. Jackson, Medizinischer Offizier: Das war eine gemütliche Tour, keine besonderen Zwischenfälle seit fast 2 Wochen; und ich bekomme immer noch mein volles Gehalt. Ich glaube, Arbeit kann kaum besser sein."
+Message="Logeintrag von Andrew G. Jackson, Medizinischer Offizier: Das war eine gemütliche Tour. Es gab keine besonderen Zwischenfälle seit fast 2 Wochen, und ich bekomme immer noch mein volles Gehalt. Die Arbeit könnte kaum besser laufen."
 
 [TranslatorEvent8]
 ; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
@@ -26,7 +26,7 @@ Message="UMS Prometheus - Info-Terminal: --- Informationsnetzwerk offline ---"
 
 [TranslatorEvent3]
 ; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 1"
-Message="UMS Prometheus - Stromkreise: Warnung: Stromkreisüberlastung in Netzwerk 1 entdeckt"
+Message="UMS Prometheus - Stromkreise: Warnung: Stromkreis in Netzwerk 1 überlastet"
 
 [TranslatorEvent5]
 ; EN: Message="UMS Prometheus - Power Circuits: Status: Network 3 normal"

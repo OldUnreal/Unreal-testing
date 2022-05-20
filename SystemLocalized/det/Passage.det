@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Sacred Passage"
-Title="Geheimgang"
+Title="Geheiligter Durchgang"
 ; EN: LevelEntryText="Entering the Sacred Passage"
-LevelEntryText="Eingang Geheimgang"
+LevelEntryText="Betrete den Geheiligten Durchgang"
 
 [LevelSummary]
 ; EN: Title="Sacred Passage"
-Title="Geheimgang"
+Title="Geheiligter Durchgang"
 ; EN: LevelEntryText="Entering the Sacred Passage"
-LevelEntryText="Eingang Geheimgang"
+LevelEntryText="Betrete den Geheiligten Geheimgang"
 
 [TranslatorEvent1]
 ; EN: Hint="Go for a swim and look for a secret passage."
@@ -22,13 +22,13 @@ Hint="Betätige den Hebel, um das Wasser laufen zu lassen."
 
 [TranslatorEvent13]
 ; EN: Message="You must have a keen eye, so that you may bathe in the sacred waters."
-Message="Du mußt ein scharfes Auge haben, um in den heiligen Gewässern zu baden."
+Message="Du musst ein scharfes Auge haben, um in den heiligen Gewässern zu baden."
 ; EN: Hint="Look at each face."
 Hint="Sieh dir jedes Gesicht an."
 
 [TranslatorEvent11]
 ; EN: Message=""Wood must break free...""
-Message=""Holz muß ausbrechen...""
+Message=""Holz muss ausbrechen...""
 ; EN: Hint="Activate the lever to let the water run."
 Hint="Betätige den Hebel, um das Wasser laufen zu lassen."
 

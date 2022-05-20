@@ -2,9 +2,9 @@
 Credits1="GT INTERACTIVE"
 Credits2="LEGEND ENTERTAINMENT"
 ; EN: Credits3="AND EPIC GAMES"
-Credits3="UND EPIC GAMES"
+Credits3="und EPIC GAMES"
 ; EN: Credits4="PRESENT"
-Credits4="VORHANDEN"
+Credits4="präsentieren"
 GameTitle="UNREAL: RETURN TO NA PALI"
 
 [CSFemaleOne]
@@ -33,4 +33,4 @@ MenuName="Skaarj"
 
 [CSSkaarjTrooper]
 ; EN: MenuName="Skaarj Trooper"
-MenuName="Soldat Skaarj"
+MenuName="Skaarj Soldat"

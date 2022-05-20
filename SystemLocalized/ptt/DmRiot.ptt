@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Riot!"
+Title="Rebelião!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Rebelião!"
+
+[LevelSummary]
+; EN: Title="Riot!"
+Title="Rebelião!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Rebelião!"
+
+[TranslatorEvent0]
+; EN: Message="Started 18/04/10. Abandoned 05/10. Started over on 10/03/11. Layout finished on 14/06/11. Makeover done 20/06/11. Building finished on 21/06/11. Version 1.1 on 22/06/11."
+Message="Iniciado em 18/04/10. Abandonado em 05/10. Recomeçou em 03/10/11. Layout concluído em 14/06/11. Reforma feita em 20/06/11. Prédio concluído em 21/06/11. Versão 1.1 em 22/06/11."
+; EN: Hint="Check your clipped BSP in notepad: vertices might snap off the grid for some reason."
+Hint="Verifique seu BSP recortado no bloco de notas: os vértices podem se desprender da grade por algum motivo."
+; EN: M_HintMessage="LOOK ABOVE FOR MEGA HINT"
+M_HintMessage="OLHE ACIMA PARA OBTER MEGA DICA"

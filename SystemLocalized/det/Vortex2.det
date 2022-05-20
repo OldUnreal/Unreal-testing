@@ -14,7 +14,7 @@ Hint="Gehe zum Lüftungschacht, um auszubrechen."
 
 [TranslatorEvent1]
 ; EN: Message="First Officer's Log: Vortex Rikers. The prisoners have become more and more restless as we get closer to the prison moon. Security says they have the prisoners under control but several have had to be taken to Med Lab for treatment."
-Message="Logbuch 1.Offizier Vortex Rikers. Die Gefangenen werden immer unruhiger, je mehr wir uns dem Gefängnismond nähern. Die Sicherheit meint, sie hätte die Gefangenen im Griff, aber einige mußten zur Behandlung ins medizinische Labor."
+Message="Logbuch 1.Offizier Vortex Rikers. Die Gefangenen werden immer unruhiger, je mehr wir uns dem Gefängnismond nähern. Die Sicherheit meint, sie hätte die Gefangenen im Griff, aber einige mussten zur Behandlung ins medizinische Labor."
 
 [TranslatorEvent0]
 ; EN: Message="Navigator's Log: Vortex Rikers. We are on route to the prison moon. Long range sensors are detecting uncharted magnetic masses in Gamma Sector 83H. The captain has ordered a change in course."
@@ -52,7 +52,7 @@ Message="Tagebuch von J. Gershwin, Tag 204: Heute war wieder eine Kakerlake in m
 
 [TranslatorEvent9]
 ; EN: Message="Benjamin Nathaniel's Diary, day 93: Today is my birthday. I will celebrate by attempting to start another prison riot."
-Message="Tagebuch von Benjamin Nathaniel, Tag 93: Heute habe ich Geburtstag. Ich werde ihn dadurch feiern, daß ich versuche, wieder einen Aufruhr unter den Gefangenen anzuzetteln."
+Message="Tagebuch von Benjamin Nathaniel, Tag 93: Heute habe ich Geburtstag. Ich werde ihn dadurch feiern, dass ich versuche, wieder einen Aufruhr unter den Gefangenen anzuzetteln."
 
 [TranslatorEvent12]
 ; EN: Message="Prisoner 853, James Cavanaugh ready for electrocution."

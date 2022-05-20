@@ -74,14 +74,8 @@ DeathMessage="%o - %k zabija cię %w."
 PickupMessage="Podnosisz broń"
 ; EN: ItemName="Weapon"
 ItemName="Broń"
-; EN: DeathMessage[0]="%o was killed by %k's %w."
-DeathMessage[0]=%o - %k zabija cię %w.
-; EN: DeathMessage[1]="%o was killed by %k's %w
-DeathMessage[1]=%o - %k zabija cię %w.
-; EN: DeathMessage[2]="%o was killed by %k's %w."
-DeathMessage[2]=%o - %k zabija cię %w.
-; EN: DeathMessage[3]="%o was killed by %k's %w."
-DeathMessage[3]=%o - %k zabija cię %w.
+FemDeathMessage="%o - %k zabija cię %w."
+FemKillMessage="%o - %k zabija cię %w."
 
 [Ammo]
 ; EN: PickupMessage="You picked up some ammo"
@@ -339,3 +333,7 @@ HelpUsage="shaupdate <NazwaPliku>"
 HelpParm[0]="<NazwaPliku>"
 ; EN: HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
 HelpDesc[0]="Plik do obliczenia sumy kontrolnej SHA256 do późniejszego przechowywania. "
+
+[AutosaveTrigger]
+; EN: AutoSaveString="Auto Saving"
+AutoSaveString="Autozapisywanie"

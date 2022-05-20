@@ -333,7 +333,7 @@ HelpUsage="Merges new high-res textures into an existing package or adds additio
 HelpOneLiner="texturemerger [packagename]"
 HelpDesc[0]="[packagename]"
 HelpParm[0]="An optional parameter, it's the package where the textures will be saved to."
-HelpDesc[0]=" "
+HelpDesc[1]=" "
 HelpParm[1]="If no PackageName is specified, the TextureMerge directory is used in order to locate the names of all subfolders in searching for corresponding packages."
 
 [FontExporter]

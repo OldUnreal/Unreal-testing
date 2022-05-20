@@ -1,13 +1,13 @@
 ﻿[LevelInfo0]
 ; EN: Title="Blood Letting"
-Title="Blutlassen"
+Title="Blutvergießen"
 IdealPlayerCount="2-5"
 ; EN: LevelEnterText="Entering the Blood Letting"
-LevelEnterText="Eingabe des Blutvergießens"
+LevelEnterText="Betrete das Blutvergießen"
 
 [LevelSummary]
 ; EN: Title="Blood Letting"
-Title="Blutlassen"
+Title="Blutvergießen"
 IdealPlayerCount="2-5"
 ; EN: LevelEnterText="Entering the Blood Letting"
-LevelEnterText="Eingabe des Blutvergießens"
+LevelEnterText="Betrete das Blutvergießen"

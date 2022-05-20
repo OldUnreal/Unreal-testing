@@ -14,7 +14,7 @@ CompleteMessage="Pumpen zerstört! Notausgänge offen."
 
 [TranslatorEvent2]
 ; EN: Message="Crane controls must be activated in lower control room."
-Message="Die Kransteuerung muß im unteren Kontrollraum aktiviert werden."
+Message="Die Kransteuerung muss im unteren Kontrollraum aktiviert werden."
 
 [TranslatorEvent6]
 ; EN: Message="Warning: Simultaneous activation of both pumps might result in explosion due to pressure level!"

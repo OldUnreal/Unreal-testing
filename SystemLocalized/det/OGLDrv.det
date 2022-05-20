@@ -4,7 +4,7 @@ Preferences=(Caption="OGLDrv Support",Parent="Rendering",Class=OGLDrv.OpenGLRend
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OGLDrv Support"
-ClassCaption="OGLDrv Unterstützung"
+ClassCaption="OGLDrv-Unterstützung"
 ; EN: AskInstalled="Do you have a OGLDrv compatible 3D accelerator installed?"
 AskInstalled="Hast du eine OGLDrv kompatible 3D Grafikkarte installiert?"
 ; EN: AskUse="Do you want Unreal to use your OGLDrv accelerator?"

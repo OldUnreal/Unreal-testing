@@ -465,7 +465,7 @@ HelpOneLiner="texturemerger [имяпакета]"
 HelpDesc[0]="[имяпакета]"
 ; EN: HelpParm[0]="An optional parameter, it's the package where the textures will be saved to."
 HelpParm[0]="Необязательный параметр, это пакет, в который будут сохраняться текстуры."
-HelpDesc[0]=" "
+HelpDesc[1]=" "
 ; EN: HelpParm[1]="If no PackageName is specified, the TextureMerge directory is used in order to locate the names of all subfolders in searching for corresponding packages."
 HelpParm[1]="Если не указано имяпакета, каталог «TextureMerge» используется для поиска имен всех подпапок при поиске соответствующих пакетов."
 

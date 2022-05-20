@@ -1,18 +1,18 @@
 ﻿[LevelInfo2]
 ; EN: Title="Outpost 3J"
-Title="Bergfestung 3J"
+Title="Stützpunkt 3J"
 ; EN: LevelEntryText="Entering the Outpost 3J"
-LevelEntryText="Eingang Bergfestung 3J"
+LevelEntryText="Betrete Stützpunkt 3J"
 
 [LevelSummary]
 ; EN: Title="Outpost 3J"
-Title="Bergfestung 3J"
+Title="Stützpunkt 3J"
 ; EN: LevelEntryText="Entering the Outpost 3J"
-LevelEntryText="Eingang Bergfestung 3J"
+LevelEntryText="Betrete Stützpunkt 3J"
 
 [TranslatorEvent0]
 ; EN: Message="Security Log: Outpost 3J Base Commander Ssja'Rath 10th Talon of Ssa'Rath. To maintain order and security we have been keeping a constant watch on the Nali in the town. Vigilance is the Guardian of Honor."
-Message="Sicherheit Logbuch: Außenposten 3J, Basiskommandant Ssja'Rath, 10te Kralle von Ssa'Rath. Um die Ordnung und Sicherheit zu bewahren werden die Nali in der Stadt ständig von uns bewacht. Wachsamkeit ist der Hüter der Ehre."
+Message="Sicherheit Logbuch: Stützpunkt 3J, Basiskommandant Ssja'Rath, 10te Kralle von Ssa'Rath. Um die Ordnung und Sicherheit zu bewahren werden die Nali in der Stadt ständig von uns bewacht. Wachsamkeit ist der Hüter der Ehre."
 
 [TranslatorEvent7]
 ; EN: Message="Teleporter Controls"

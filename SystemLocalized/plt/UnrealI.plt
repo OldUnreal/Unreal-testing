@@ -43,6 +43,174 @@ NameArticle=" "
 MenuName="Królowa"
 MenuNameDative="Królową"
 
+[SkaarjPlayer]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Szturmowiec Skaarj"
+
+[SkaarjPlayerBot]
+; EN: MenuName="Skaarj Trooper"
+MenuName="Szturmowiec Skaarj"
+
+[WarLord]
+; EN: NameArticle=" the "
+NameArticle=" "
+; EN: MenuName="WarLord"
+MenuName="Władca"
+MenuNameDative="Władcę"
+
+[SearchLight]
+; EN: ExpireMessage="The Search Light batteries have died."
+ExpireMessage="Baterie Reflektora wyczerpane."
+; EN: PickupMessage="You picked up the Search Light"
+PickupMessage="Podnosisz Reflektor"
+; EN: ItemName="Search Light"
+ItemName="Reflektor"
+ItemArticle=" "
+M_Activated=" włączony."
+M_Deactivated=" wyłączony."
+M_Selected=" gotowy do użycia."
+
+[RazorAmmo]
+; EN: PickupMessage="You picked up Razor Blades"
+PickupMessage="Podnosisz Paczkę Ostrzy"
+; EN: ItemName="Razor Blades"
+ItemName="Paczkę Ostrzy"
+
+[FlakBox]
+; EN: PickupMessage="You picked up 10 Flak Shells"
+PickupMessage="Podnosisz 10 Ładunków do Garłacza"
+; EN: ItemName="Flak Shells"
+ItemName="Ładunków do Garłacza"
+
+[MaleOne]
+; EN: MenuName="Male 1"
+MenuName="Mężczyzna 1"
+
+[MaleOneBot]
+; EN: MenuName="Male 1"
+MenuName="Mężczyzna 1"
+
+[RifleAmmo]
+; EN: PickupMessage="You got 8 Rifle Rounds"
+PickupMessage="Podnosisz 8 Nabojów do Karabinu Snajperskiego"
+; EN: ItemName="Rifle Rounds"
+ItemName="Nabojów do Karabinu Snajperskiego"
+
+[Seeds]
+; EN: PickupMessage="You got the Nali Fruit Seeds"
+PickupMessage="Podnosisz Nasiono Owocu Nali"
+; EN: ItemName="Nali Fruit Seeds"
+ItemName="Nasiono Owocu Nali"
+ItemArticle=" "
+M_Activated=" zostało posiane."
+M_Selected=" jest gotowe do posiania."
+
+[JumpBoots]
+; EN: ExpireMessage="The Jump Boots have drained."
+ExpireMessage="Buty Antygrawitacyjne wyczerpane."
+; EN: PickupMessage="You picked up the Jump Boots"
+PickupMessage="Podnosisz Buty Antygrawitacyjne"
+; EN: ItemName="Jump Boots"
+ItemName="Buty Antygrawitacyjne"
+ItemArticle=" "
+M_Activated=" włączone."
+M_Deactivated=" wyłączone."
+M_Selected=" gotowe do użycia."
+
+[ForceField]
+; EN: M_NoRoom="No room to activate the Force Field."
+M_NoRoom="Brak miejsca na pole siłowe. Rozstawienie pola niemożliwe."
+; EN: PickupMessage="You picked up the Force Field"
+PickupMessage="Podnosisz Generator Pola Siłowego"
+; EN: ItemName="Force Field"
+ItemName="Generator Pola Siłowego"
+ItemArticle=" "
+M_Activated=" włączony. Pole siłowe zostało rozstawione."
+M_Deactivated=" wyłączony."
+M_Selected=" gotowy do użycia."
+
+[FemaleTwo]
+; EN: MenuName="Female 2"
+MenuName="Kobieta 2"
+
+[FemaleTwoBot]
+; EN: MenuName="Female 2"
+MenuName="Kobieta 2"
+
+[MaleTwo]
+; EN: MenuName="Male 2"
+MenuName="Mężczyzna 2"
+
+[MaleTwoBot]
+; EN: MenuName="Male 2"
+MenuName="Mężczyzna 2"
+
+[Sludge]
+; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
+PickupMessage="Podnosisz 25kg Odpadów Tarydowych"
+; EN: ItemName="Tarydium Biosludge"
+ItemName="Odpadów Tarydowych"
+
+[Invisibility]
+; EN: ExpireMessage="Invisibility has worn off."
+ExpireMessage="Kamuflaż wyczerpany."
+; EN: PickupMessage="You have Invisibility"
+PickupMessage="Podnosisz kamuflaż"
+; EN: ItemName="Invisibility"
+ItemName="Kamuflaż"
+ItemArticle=" "
+M_Activated=" włączony."
+M_Deactivated=" wyłączony."
+M_Selected=" gotowy do użycia."
+
+[DarkMatch]
+; EN: ClassCaption="DarkMatch"
+ClassCaption="DarkMatch"
+; EN: GameName="DarkMatch"
+GameName="DarkMatch"
+
+[FlakShellAmmo]
+; EN: PickupMessage="You got a Flak Shell"
+PickupMessage="Podnosisz Ładunek do Garłacza"
+; EN: ItemName="Flak Shell"
+ItemName="Ładunek do Garłacza"
+
+[AsbestosSuit]
+; EN: PickupMessage="You picked up the Asbestos Suit"
+PickupMessage="Podnosisz kombinezon azbestowy"
+; EN: ItemName="Asbestos Suit"
+ItemName="Kombinezon azbestowy"
+
+[Dampener]
+; EN: ExpireMessage="Acoustic dampener has run out."
+ExpireMessage="Tłumik wyczerpany."
+; EN: PickupMessage="You got the Acoustic Dampener"
+PickupMessage="Podnosisz Tłumik"
+; EN: ItemName="Acoustic Dampener"
+ItemName="Tłumik"
+ItemArticle=" "
+M_Activated=" włączony."
+M_Deactivated=" wyłączony."
+M_Selected=" gotowy do użycia."
+
+[ToxinSuit]
+; EN: PickupMessage="You picked up the Toxin Suit"
+PickupMessage="Podnosisz Kombinezon Antytoksynowy"
+; EN: ItemName="Toxin Suit"
+ItemName="Kombinezon Antytoksynowy"
+
+[PowerShield]
+; EN: PickupMessage="You got the Power Shield"
+PickupMessage="Podnosisz Pas Pola Siłowego"
+; EN: ItemName="Power Shield"
+ItemName="Pas Pola Siłowego"
+
+[RifleRound]
+; EN: PickupMessage="You got a Rifle Round"
+PickupMessage="Podnosisz Nabój do Karabinu Snajperskiego"
+; EN: ItemName="Rifle Round"
+ItemName="Nabój do Karabinu Snajperskiego"
+
 [Behemoth]
 ; EN: NameArticle=" a "
 NameArticle=" "
@@ -85,6 +253,13 @@ NameArticle=" "
 ; EN: MenuName="Giant Manta"
 MenuName="Manta olbrzymia"
 MenuNameDative="Mantę olbrzymią"
+
+[IceSkaarj]
+; EN: NameArticle=" an "
+NameArticle=" "
+; EN: MenuName="Ice Skaarj"
+MenuName="Wojownik arktyczny Skaarj"
+MenuNameDative="Wojownika arktycznego Skaarj"
 
 [Krall]
 ; EN: NameArticle=" a "
@@ -195,241 +370,8 @@ MenuNameDative="Tytana"
 ; EN: NameArticle=" the "
 NameArticle=" "
 ; EN: MenuName="Stone Titan"
-MenuName="Kamienny tytan"
-MenuNameDative="Kamiennego tytana"
-
-[SkaarjPlayer]
-; EN: MenuName="Skaarj Trooper"
-MenuName="Szturmowiec Skaarj"
-
-[SkaarjPlayerBot]
-; EN: MenuName="Skaarj Trooper"
-MenuName="Szturmowiec Skaarj"
-
-[WarLord]
-; EN: NameArticle=" the "
-NameArticle=" "
-; EN: MenuName="WarLord"
-MenuName="Władca"
-MenuNameDative="Władcę"
-
-[SearchLight]
-; EN: ExpireMessage="The Search Light batteries have died."
-ExpireMessage="Baterie Reflektora wyczerpane."
-; EN: PickupMessage="You picked up the Search Light"
-PickupMessage="Podnosisz Reflektor"
-; EN: ItemName="Search Light"
-ItemName="Reflektor"
-ItemArticle=" "
-M_Activated=" włączony."
-M_Deactivated=" wyłączony."
-M_Selected=" gotowy do użycia."
-
-[RazorAmmo]
-; EN: PickupMessage="You picked up Razor Blades"
-PickupMessage="Podnosisz Paczkę Ostrzy"
-; EN: ItemName="Razor Blades"
-ItemName="Paczkę Ostrzy"
-
-[DarkMatch]
-; EN: ClassCaption="DarkMatch"
-ClassCaption="DarkMatch"
-; EN: GameName="DarkMatch"
-GameName="DarkMatch"
-
-[FlakBox]
-; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Podnosisz 10 Ładunków do Garłacza"
-; EN: ItemName="Flak Shells"
-ItemName="Ładunków do Garłacza"
-
-[MaleOne]
-; EN: MenuName="Male 1"
-MenuName="Mężczyzna 1"
-
-[MaleOneBot]
-; EN: MenuName="Male 1"
-MenuName="Mężczyzna 1"
-
-[RifleAmmo]
-; EN: PickupMessage="You got 8 Rifle Rounds"
-PickupMessage="Podnosisz 8 Nabojów do Karabinu Snajperskiego"
-; EN: ItemName="Rifle Rounds"
-ItemName="Nabojów do Karabinu Snajperskiego"
-
-[Seeds]
-; EN: PickupMessage="You got the Nali Fruit Seeds"
-PickupMessage="Podnosisz Nasiono Owocu Nali"
-; EN: ItemName="Nali Fruit Seeds"
-ItemName="Nasiono Owocu Nali"
-ItemArticle=" "
-M_Activated=" zostało posiane."
-M_Selected=" jest gotowe do posiania."
-
-[JumpBoots]
-; EN: ExpireMessage="The Jump Boots have drained."
-ExpireMessage="Buty Antygrawitacyjne wyczerpane."
-; EN: PickupMessage="You picked up the Jump Boots"
-PickupMessage="Podnosisz Buty Antygrawitacyjne"
-; EN: ItemName="Jump Boots"
-ItemName="Buty Antygrawitacyjne"
-ItemArticle=" "
-M_Activated=" włączone."
-M_Deactivated=" wyłączone."
-M_Selected=" gotowe do użycia."
-
-[ForceField]
-; EN: M_NoRoom="No room to activate the Force Field."
-M_NoRoom="Brak miejsca na pole siłowe. Rozstawienie pola niemożliwe."
-; EN: PickupMessage="You picked up the Force Field"
-PickupMessage="Podnosisz Generator Pola Siłowego"
-; EN: ItemName="Force Field"
-ItemName="Generator Pola Siłowego"
-ItemArticle=" "
-M_Activated=" włączony. Pole siłowe zostało rozstawione."
-M_Deactivated=" wyłączony."
-M_Selected=" gotowy do użycia."
-
-[FemaleTwo]
-; EN: MenuName="Female 2"
-MenuName="Kobieta 2"
-
-[FemaleTwoBot]
-; EN: MenuName="Female 2"
-MenuName="Kobieta 2"
-
-[MaleTwo]
-; EN: MenuName="Male 2"
-MenuName="Mężczyzna 2"
-
-[MaleTwoBot]
-; EN: MenuName="Male 2"
-MenuName="Mężczyzna 2"
-
-[Sludge]
-; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
-PickupMessage="Podnosisz 25kg Odpadów Tarydowych"
-; EN: ItemName="Tarydium Biosludge"
-ItemName="Odpadów Tarydowych"
-
-[Invisibility]
-; EN: ExpireMessage="Invisibility has worn off."
-ExpireMessage="Kamuflaż wyczerpany."
-; EN: PickupMessage="You have Invisibility"
-PickupMessage="Podnosisz kamuflaż"
-; EN: ItemName="Invisibility"
-ItemName="Kamuflaż"
-ItemArticle=" "
-M_Activated=" włączony."
-M_Deactivated=" wyłączony."
-M_Selected=" gotowy do użycia."
-
-[AsbestosSuit]
-; EN: PickupMessage="You picked up the Asbestos Suit"
-PickupMessage="Podnosisz kombinezon azbestowy"
-; EN: ItemName="Asbestos Suit"
-ItemName="Kombinezon azbestowy"
-
-[fell]
-; EN: Name="fell"
-Name="spadł"
-FemName="spadła"
-; EN: AltName="fell"
-AltName="spadł"
-FemAltName="spadła"
-
-[FlakShellAmmo]
-; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Podnosisz Ładunek do Garłacza"
-; EN: ItemName="Flak Shell"
-ItemName="Ładunek do Garłacza"
-
-[drowned]
-; EN: Name="drowned"
-Name="utonął"
-FemName="utonęła"
-; EN: AltName="drowned"
-AltName="utonął"
-FemAltName="utonęła"
-
-[Decapitated]
-; EN: Name="beheaded"
-Name="stracił głowę"
-FemName="straciła głowę"
-; EN: AltName="decapitated"
-AltName="stracił głowę"
-FemAltName="straciła głowę"
-
-[Dampener]
-; EN: ExpireMessage="Acoustic dampener has run out."
-ExpireMessage="Tłumik wyczerpany."
-; EN: PickupMessage="You got the Acoustic Dampener"
-PickupMessage="Podnosisz Tłumik"
-; EN: ItemName="Acoustic Dampener"
-ItemName="Tłumik"
-ItemArticle=" "
-M_Activated=" włączony."
-M_Deactivated=" wyłączony."
-M_Selected=" gotowy do użycia."
-
-[Corroded]
-; EN: Name="corroded"
-Name="rozpuszczony"
-FemName="rozpuszczona"
-; EN: AltName="slimed"
-AltName="rozpuszczony"
-FemAltName="rozpuszczona"
-
-[ToxinSuit]
-; EN: PickupMessage="You picked up the Toxin Suit"
-PickupMessage="Podnosisz Kombinezon Antytoksynowy"
-; EN: ItemName="Toxin Suit"
-ItemName="Kombinezon Antytoksynowy"
-
-[Burned]
-; EN: Name="burned"
-Name="przypieczony"
-FemName="przypieczona"
-; EN: AltName="flame-broiled"
-AltName="przypieczony"
-FemAltName="przypieczona"
-
-[PowerShield]
-; EN: PickupMessage="You got the Power Shield"
-PickupMessage="Podnosisz Pas Pola Siłowego"
-; EN: ItemName="Power Shield"
-ItemName="Pas Pola Siłowego"
-
-[RifleRound]
-; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Podnosisz Nabój do Karabinu Snajperskiego"
-; EN: ItemName="Rifle Round"
-ItemName="Nabój do Karabinu Snajperskiego"
-
-[ParentBlob]
-; EN: BlobKillMessage="was corroded by a Blob"
-BlobKillMessage="został rozpuszczony przez bańkę"
-FemBlobKillMessage="została rozpuszczona przez bańkę"
-; EN: NameArticle=" a "
-NameArticle=" "
-; EN: MenuName="Blob"
-MenuName="Bańka"
-MenuNameDative="Bańkę"
-
-[IceSkaarj]
-; EN: NameArticle=" an "
-NameArticle=" "
-; EN: MenuName="Ice Skaarj"
-MenuName="Wojownik arktyczny Skaarj"
-MenuNameDative="Wojownika arktycznego Skaarj"
-
-[NaliPlayer]
-; EN: MenuName="Nali"
-MenuName="Nali"
-
-[NaliPlayerBot]
-; EN: MenuName="Nali"
-MenuName="Nali"
+MenuName="Kamienny Tytan"
+MenuNameDative="Kamiennego Tytana"
 
 [EndgameHud]
 ; EN: Message1="The Skaarj escape pod has broken free from the planet's gravitational pull... barely. Yet, it's fuel reserve has been depleted, and you drift aimlessly."
@@ -452,62 +394,130 @@ Message7="Naciśnij klawisz [Strzał], aby rozpocząć od nowa."
 ClassCaption="Król na Wzgórzu"
 ; EN: KingMessage=" is the new king of the hill!"
 KingMessage=" zostaje Królem!"
+; EN: GameName="King of the Hill"
+GameName="Król na Wzgórzu"
 ; EN: NewKingMessage="%k is the new king of the hill!"
 NewKingMessage="%k zostaje Królem!"
 ; EN: NewQueenMessage="%k is the new queen of the hill!"
 NewQueenMessage="%k jest nową królową wzgórza!"
-; EN: GameName="King of the Hill"
-GameName="Król na Wzgórzu"
+
+[ParentBlob]
+; EN: BlobKillMessage="was corroded by a Blob"
+BlobKillMessage="został rozpuszczony przez bańkę"
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Blob"
+MenuName="Bańka"
+FemBlobKillMessage="została rozpuszczona przez bańkę"
+MenuNameDative="Bańkę"
 
 [FlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o - %k rozrywa cię na strzępy Garłaczem."
-FemDeathMessage="%o - %k rozrywa cię na strzępy Garłaczem."
-FemKillMessage="%o - %k rozrywa cię na strzępy Garłaczem."
 ; EN: PickupMessage="You got the Flak Cannon"
 PickupMessage="Podnosisz Garłacza"
 ; EN: ItemName="Flak Cannon"
 ItemName="Garłacz"
+FemDeathMessage="%o - %k rozrywa cię na strzępy Garłaczem."
+FemKillMessage="%o - %k rozrywa cię na strzępy Garłaczem."
 
 [Rifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%o - %k posłał ci kulkę w sam łeb."
-FemDeathMessage="%o - %k posłał ci kulkę w sam łeb."
-FemKillMessage="%o - %k posłał ci kulkę w sam łeb."
 ; EN: PickupMessage="You got the Rifle"
 PickupMessage="Podnosisz Karabin Snajperski"
 ; EN: ItemName="Sniper Rifle"
 ItemName="Karabin Snajperski"
+FemDeathMessage="%o - %k posłał ci kulkę w sam łeb."
+FemKillMessage="%o - %k posłał ci kulkę w sam łeb."
 
 [Minigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="%o - %k zamienia cię w krwawy durszlak mięsny serią z miniguna."
-FemDeathMessage="%o - %k zamienia cię w krwawy durszlak mięsny serią z miniguna."
-FemKillMessage="%o - %k zamienia cię w krwawy durszlak mięsny serią z miniguna."
 ; EN: PickupMessage="You got the Minigun"
-PickupMessage="Podnosisz minigun"
+PickupMessage="Podnosisz Minigun"
 ; EN: ItemName="Minigun"
 ItemName="Minigun"
+FemDeathMessage="%o - %k zamienia cię w krwawy durszlak mięsny serią z miniguna."
+FemKillMessage="%o - %k zamienia cię w krwawy durszlak mięsny serią z miniguna."
 
 [GESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o - %k właśnie spuścił ci do gardła cały ładunek ścieków."
-FemDeathMessage="%o - %k właśnie spuścił ci do gardła cały ładunek ścieków."
-FemKillMessage="%o - %k właśnie spuścił ci do gardła cały ładunek ścieków."
 ; EN: PickupMessage="You got the GES BioRifle"
 PickupMessage="Podnosisz Karabin Odpadowy GES"
 ; EN: ItemName="GES Bio Rifle"
 ItemName="Karabin Odpadowy GES"
+FemDeathMessage="%o - %k właśnie spuścił ci do gardła cały ładunek ścieków."
+FemKillMessage="%o - %k właśnie spuścił ci do gardła cały ładunek ścieków."
 
 [RazorJack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%o daje ciała %k za sprawą Rozpruwacza."
-FemDeathMessage="%o daje ciała %k za sprawą Rozpruwacza."
-FemKillMessage="%o daje ciała %k za sprawą Rozpruwacza."
 ; EN: PickupMessage="You got the RazorJack"
 PickupMessage="Podnosisz Rozpruwacza"
 ; EN: ItemName="Razorjack"
 ItemName="Rozpruwacz"
+FemDeathMessage="%o daje ciała %k za sprawą Rozpruwacza."
+FemKillMessage="%o daje ciała %k za sprawą Rozpruwacza."
+
+[Fell]
+; EN: Name="fell"
+Name="spadł"
+FemName="spadła"
+; EN: AltName="fell"
+AltName="spadł"
+FemAltName="spadła"
+
+[Drowned]
+; EN: Name="drowned"
+Name="utonął"
+FemName="utonęła"
+; EN: AltName="drowned"
+AltName="utonął"
+FemAltName="utonęła"
+
+[Decapitated]
+; EN: Name="beheaded"
+Name="stracił głowę"
+FemName="straciła głowę"
+; EN: AltName="decapitated"
+AltName="stracił głowę"
+FemAltName="straciła głowę"
+
+[Corroded]
+; EN: Name="corroded"
+Name="rozpuszczony"
+FemName="rozpuszczona"
+; EN: AltName="slimed"
+AltName="rozpuszczony"
+FemAltName="rozpuszczona"
+
+[Burned]
+; EN: Name="burned"
+Name="przypieczony"
+FemName="przypieczona"
+; EN: AltName="flame-broiled"
+AltName="przypieczony"
+FemAltName="przypieczona"
+
+[QuadShot]
+; EN: DeathMessage="%o was blasted to bits by %k's %w."
+DeathMessage="%o - %k rozrywa cię na części pierwsze czterolufowym obrzynem."
+; EN: PickupMessage="You got the Quad-Barreled Shotgun"
+PickupMessage="Podnosisz Czterolufowego Obrzyna"
+; EN: ItemName="Quad-Barreled Shotgun"
+ItemName="Czterolufowego Obrzyn"
+FemDeathMessage="="%o - %k rozrywa cię na części pierwsze czterolufowym obrzynem."
+FemKillMessage="="%o - %k rozrywa cię na części pierwsze czterolufowym obrzynem."
+
+[NaliPlayer]
+; EN: MenuName="Nali"
+MenuName="Nali"
+
+[NaliPlayerBot]
+; EN: MenuName="Nali"
+MenuName="Nali"
 
 [Squid]
 ; EN: NameArticle=" a "
@@ -523,16 +533,6 @@ NameArticle=" "
 MenuName="Kameleon"
 MenuNameDative="Kameleona"
 
-[QuadShot]
-; EN: DeathMessage="%o was blasted to bits by %k's %w."
-DeathMessage="%o - %k rozrywa cię na części pierwsze czterolufowym obrzynem."
-FemDeathMessage="="%o - %k rozrywa cię na części pierwsze czterolufowym obrzynem."
-FemKillMessage="="%o - %k rozrywa cię na części pierwsze czterolufowym obrzynem."
-; EN: PickupMessage="You got the Quad-Barreled Shotgun"
-PickupMessage="Podnosisz Czterolufowego Obrzyna"
-; EN: ItemName="Quad-Barreled Shotgun"
-ItemName="Czterolufowego Obrzyn"
-
 [PeaceMaker]
 ; EN: DeathMessage="One of %k's %w missiles blew up %o."
 DeathMessage="%o - usypiacz %k właśnie zrobił z ciebie sito."
@@ -543,14 +543,14 @@ PickupMessage="Podnosisz Usypiacza"
 ; EN: ItemName="Peacemaker"
 ItemName="Usypiacz"
 
-[WoodruffSeeds]
-; EN: PickupMessage="You got the Woodruff seeds"
-PickupMessage="Masz Nasiona Marzankia"
-; EN: ItemName="Woodruff seeds"
-ItemName="Nasiona Marzanki"
-
 [PeaceAmmo]
 ; EN: PickupMessage="You got Peacemaker ammo"
 PickupMessage="Podnosisz Amunicję do Usypiacza"
 ; EN: ItemName="Peacemaker ammo"
 ItemName="Amunicję do Usypiacz"
+
+[WoodruffSeeds]
+; EN: PickupMessage="You got the Woodruff seeds"
+PickupMessage="Masz Nasiona Marzankia"
+; EN: ItemName="Woodruff seeds"
+ItemName="Nasiona Marzanki"

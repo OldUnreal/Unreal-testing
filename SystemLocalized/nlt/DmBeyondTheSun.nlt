@@ -1,0 +1,37 @@
+﻿[LevelInfo0]
+; EN: Title="Beyond The Sun"
+Title="Voorbij de Zon"
+IdealPlayerCount="4-8"
+
+[LevelSummary]
+; EN: Title="Beyond The Sun"
+Title="Voorbij de Zon"
+IdealPlayerCount="4-8"
+
+[ZoneInfo0]
+; EN: ZoneName="East Island, Inside"
+ZoneName="Oost-eiland, binnen"
+
+[ZoneInfo1]
+; EN: ZoneName="East Island, Lower Corridor"
+ZoneName="Oost-eiland, onderste gang"
+
+[ZoneInfo2]
+; EN: ZoneName="South Island"
+ZoneName="Zuidereiland"
+
+[ZoneInfo3]
+; EN: ZoneName="Inner Corridors, West Wing"
+ZoneName="Binnenste gangen, westelijke vleugel"
+
+[ZoneInfo4]
+; EN: ZoneName="Outside"
+ZoneName="Buiten"
+
+[ZoneInfo5]
+; EN: ZoneName="Inner Corridors, Center"
+ZoneName="Binnenste gangen, midden"
+
+[ZoneInfo6]
+; EN: ZoneName="Inner Corridors, East Wing"
+ZoneName="Binnenste Gangen, Oostvleugel"

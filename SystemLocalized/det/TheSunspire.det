@@ -2,19 +2,19 @@
 ; EN: Title="The Sunspire"
 Title="Der Sonnenturm"
 ; EN: LevelEntryText="Entering The Sunspire"
-LevelEntryText="Eingang Der Sonnenturm"
+LevelEntryText="Betrete den Sonnenturm"
 
 [LevelSummary]
 ; EN: Title="The Sunspire"
 Title="Der Sonnenturm"
 ; EN: LevelEntryText="Entering The Sunspire"
-LevelEntryText="Eingang Der Sonnenturm"
+LevelEntryText="Betrete den Sonnenturm"
 
 [TranslatorEvent17]
 ; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."
-Message="Ich werde heute nicht zum Sonnenturm zurückkehren. Heute morgen hätte mich der Himmelsdämon beinahe getötet, und ich fürchte um unsere Brüder, die noch nicht entkommen sind. Ich spüre, daß wir sie in diesem Leben nicht mehr sehen werden."
+Message="Ich werde heute nicht zum Sonnenturm zurückkehren. Heute morgen hätte mich der Himmelsdämon beinahe getötet, und ich fürchte um unsere Brüder, die noch nicht entkommen sind. Ich spüre, dass wir sie in diesem Leben nicht mehr sehen werden."
 ; EN: Hint="Watch out on the ledge. If you fall, you will fall to your death."
-Hint="Paß auf den Vorsprung auf. Wenn du abstürzt, stürzt du in den Tod."
+Hint="Pass auf den Vorsprung auf. Wenn du abstürzt, stürzt du in den Tod."
 
 [TranslatorEvent1]
 ; EN: Message="Chambers of Honour"
@@ -60,7 +60,7 @@ Message="Erste Auffahrt"
 ; EN: Message="Chamber of Crystals"
 Message="Kristallkammer"
 ; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
-Hint="Aktiviere den Kristall, dann gehe ins Freie und warte darauf, daß der Himmelslift nach unten kommt. Steige ein und genieße die Fahrt."
+Hint="Aktiviere den Kristall, dann gehe ins Freie und warte darauf, dass der Himmelslift nach unten kommt. Steige ein und genieße die Fahrt."
 
 [TranslatorEvent15]
 ; EN: Message="Feast Hall"
@@ -96,7 +96,7 @@ Hint="Mit größter Vorsicht vorgehen. Finde den Weg nach oben."
 ; EN: Message="Prepare to Embark"
 Message="Bereitmachen zum Einsteigen"
 ; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
-Hint="Aktiviere den Kristall, dann gehe ins Freie und warte darauf, daß der Himmelslift nach unten kommt. Steige ein und genieße die Fahrt."
+Hint="Aktiviere den Kristall, dann gehe ins Freie und warte darauf, dass der Himmelslift nach unten kommt. Steige ein und genieße die Fahrt."
 
 [TranslatorEvent16]
 ; EN: Message="Primary Ascension"
@@ -110,7 +110,7 @@ Hint="Finde den Weg nach oben zum Raum des Kristalls. Von dort aus kannst du den
 
 [TranslatorEvent24]
 ; EN: Message="Log: Petty Officer N. Onalopov: We split up so we would have a better chance of finding Kira. Those bastards are going to pay for taking her. I love you Kira. I swear I'll find you."
-Message="Logbuch: Unteroffizier N. Onalopov: Wir haben uns aufgeteilt, um die Chance zu verbessern, Kira zu finden. Diese Mistkerle werden dafür zahlen, daß sie sie mitgenommen haben. Ich liebe dich, Kira. Ich werde dich finden, ich schwöre es."
+Message="Logbuch: Unteroffizier N. Onalopov: Wir haben uns aufgeteilt, um die Chance zu verbessern, Kira zu finden. Diese Mistkerle werden dafür zahlen, dass sie sie mitgenommen haben. Ich liebe dich, Kira. Ich werde dich finden, ich schwöre es."
 ; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
 Hint="Finde den Weg nach oben zum Raum des Kristalls. Von dort aus kannst du den Himmelslift rufen."
 

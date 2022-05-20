@@ -1,0 +1,41 @@
+﻿[LevelInfo0]
+; EN: Title="Terraniux Underground"
+Title="Subterrâneo de Terraniux"
+; EN: LevelEntryText="Entering Terraniux Underground"
+LevelEntryText="Entrando no Subterrâneo de Terraniux"
+
+[LevelSummary]
+; EN: Title="Terraniux Underground"
+Title="Subterrâneo de Terraniux"
+; EN: LevelEntryText="Entering Terraniux Underground"
+LevelEntryText="Entrando no Subterrâneo de Terraniux"
+
+[SpecialEvent0]
+; EN: Message="ALERT"
+Message="ALERTA"
+
+[TranslatorEvent0]
+; EN: Message="Biowaste Flow Control: the Biowaste flow is constant. Monitor it for dangerous fluctuations in viscosity or pressure. The alarm still seems to have problems, in case of malfunction activate the two override controls."
+Message="Controle de fluxo do resíduo tóxico: o fluxo do resíduo tóxico é constante. Monitore para flutuações perigosas na viscosidade ou pressão. O alarme aparentemente ainda tem problemas, em caso de mal funcionamento ative os dois controles de sobreescrita."
+; EN: AltMessage="Lift activated. All personnel are reminded to complete assigned tasks."
+AltMessage="Elevador ativado. Todos os funcionários são relembrados para que completem os respectivos trabalhos designados."
+
+[TranslatorEvent5]
+; EN: Message="Drainage Status: Biowaste flow is at nominal levels. All pumps operational. Section C empty and available for any Biowaster overflow. Please be sure that the regular pipe maintenance is handled."
+Message="Estado da drenagem: Fluxo de resíduo tóxido nos níveis nominais. Todas as bombas operacionais. Seção C vazia e disponível para qualquer sobrefluxo do resíduo tóxico. Por favor certifique-se que a manutenção rotineira dos canos esteja em ordem."
+
+[TranslatorEvent4]
+; EN: Message="Security Status: Intruder detected at entrance. Activating security screens on Scientific Research Lab and Hydroponics Section. All security elements deploy around access points in Sections A, B and C to deny intruder access to Lift 1."
+Message="Estado da Segurança: Intruso detectado na entrada. Ativando telas de segurança no Laboratório de Pesquisa Científica e na Seção de Hidroponia. Todos os agentes de segurança posicionem-se ao redor dos pontos nas seções A, B e C e neguem acesso ao Elevador 1."
+; EN: Hint="Find the Containment rooms A, B and C and activate the buttons to access the Lift 1."
+Hint="Encontre as Salas de contenção A, B e C e ative os botões para ativar o Elevador 1."
+
+[TranslatorEvent3]
+; EN: Message="Control Room Status: Pressurized and locked. Do not access except in case of emergency situation."
+Message="Estado da Sala de Controle: Pressurizada e travada. Não acesse-a exceto em caso de situação de emergência."
+
+[TranslatorEvent1]
+; EN: Message="Pumping station has been activated, expected storage capacity after operation: 32%."
+Message="Estação de bombeamento foi ativada, capacidade de estoque esperada depois da operação: 32%."
+; EN: AltMessage="Section D: 54% of full capacity reached."
+AltMessage="Seção D: 54% da capacidade alcançada."

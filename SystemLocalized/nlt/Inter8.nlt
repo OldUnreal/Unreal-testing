@@ -1,0 +1,11 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 8"
+Title="Pauze 8"
+
+[TransitionGenderEvent2]
+; Note: Make the text coincide with the equivalent in Sounds/nlt/Interm8.uax
+OutDelays[1]=20.500000
+; EN: MaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
+MaleText[0]="Ik ben blij dat ik daar weg ben. Ik ben eraan gewend gebeten, gehackt, neergeschoten, gestoken of opgeblazen te worden. Maar daarin zou ik kunnen zijn geplet, in plakjes gesneden, in blokjes gesneden, verbrand of aan een spies kunnen worden gestoken. Degene die die plek heeft gebouwd, moet een echte sadist zijn geweest. Ik ben nog steeds aan het ploeteren. Dit is een marathon, geen sprint."
+; EN: FemaleText[0]="I'm glad I made it out of there. I'm used to being bitten, hacked, shot, stabbed, or blown up. But in there I coulda been crushed, sliced, diced, burned, or skewered. Whoever built that place musta been a real sadist. I'm still slogging along. This is a marathon, not a sprint."
+FemaleText[0]="Ik ben blij dat ik daar weg ben. Ik ben eraan gewend gebeten, gehackt, neergeschoten, gestoken of opgeblazen te worden. Maar daarin zou ik kunnen zijn geplet, in plakjes gesneden, in blokjes gesneden, verbrand of aan een spies kunnen worden gestoken. Degene die die plek heeft gebouwd, moet een echte sadist zijn geweest. Ik ben nog steeds aan het ploeteren. Dit is een marathon, geen sprint."

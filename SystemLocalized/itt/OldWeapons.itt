@@ -45,22 +45,22 @@ ItemName="Lancia 8-ball"
 [OldRifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
 DeathMessage="%k ha fatto passare un proiettile attraverso la testa di %o."
+; EN: PickupMessage="You got the Rifle"
+PickupMessage="Hai preso il Fucile"
+; EN: ItemName="Sniper Rifle"
+ItemName="Fucile Cecchino"
 FemDeathMessage="%k ha fatto passare un proiettile attraverso la testa di %o."
 FemKillMessage="%k ha fatto passare un proiettile attraverso la testa di %o."
-; EN: PickupMessage="You got the Rifle"
-PickupMessage="Hai raccolto il Fucile"
-; EN: ItemName="Sniper Rifle"
-ItemName="Fucile di Precisione"
 
 [OldFlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o è stato squartato da %w di %k."
+; EN: PickupMessage="You got the Flak Cannon"
+PickupMessage="Hai preso il Cannone Flak"
+; EN: ItemName="Flak Cannon"
+ItemName="Cannone Flak"
 FemDeathMessage="%o è stata squartata da %w di %k."
 FemKillMessage="%o è stato squartato da %w di %k."
-; EN: PickupMessage="You got the Flak Cannon"
-PickupMessage="Hai raccolto il Cannone Contraereo"
-; EN: ItemName="Flak Cannon"
-ItemName="Cannone Contraereo"
 
 [OldAutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
@@ -75,22 +75,22 @@ ItemName="Automag"
 [OldMinigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
 DeathMessage="%w di %k ha fatto %o a polpette."
+; EN: PickupMessage="You got the Minigun"
+PickupMessage="Hai preso il Minifucile"
+; EN: ItemName="Minigun"
+ItemName="Minifucile"
 FemDeathMessage="%w di %k ha fatto %o a polpette."
 FemKillMessage="%w di %k ha fatto %o a polpette."
-; EN: PickupMessage="You got the Minigun"
-PickupMessage="Hai raccolto il Mini-Cannone"
-; EN: ItemName="Minigun"
-ItemName="Mini-Cannone"
 
 [OldGESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o ha bevuto un bicchiere della sostanza verde sgocciolante di %k."
+; EN: PickupMessage="You got the GES BioRifle"
+PickupMessage="Hai preso il BioFucile GES"
+; EN: ItemName="GES Bio Rifle"
+ItemName="BioFucile GES"
 FemDeathMessage="%o ha bevuto un bicchiere della sostanza verde sgocciolante di %k."
 FemKillMessage="%o ha bevuto un bicchiere della sostanza verde sgocciolante di %k."
-; EN: PickupMessage="You got the GES BioRifle"
-PickupMessage="Hai raccolto il BioFucile GES"
-; EN: ItemName="GES BioRifle"
-ItemName="BioFucile GES"
 
 [OldAmplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
@@ -117,7 +117,7 @@ PickupMessage="Hai raccolto 50 Proiettili"
 ItemName="Proiettili"
 
 [OldRifleAmmo]
-; EN: PickupMessage="You got 8 Rifle rounds"
+; EN: PickupMessage="You got 8 Rifle Rounds"
 PickupMessage="Hai raccolto 8 Cartucce del Fucile"
 ; EN: ItemName="Rifle Rounds"
 ItemName="Cartucce del Fucile"
@@ -130,19 +130,19 @@ ItemName="Aggiornamento per Pistola Dissolvente"
 
 [OldFlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Hai raccolto 10 Cariche Contraeree"
+PickupMessage="Hai raccolto 10 Cariche per il Flak"
 ; EN: ItemName="Flak Shells"
-ItemName="Cariche Contraeree"
+ItemName="Cariche per il Flak"
 
 [OldRazorjack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%k ha preso un pezzo sanguinante di %o con %w."
+; EN: PickupMessage="You got the RazorJack"
+PickupMessage="Hai preso il RazorJack"
+; EN: ItemName="Razorjack"
+ItemName="RazorJack"
 FemDeathMessage="%k ha preso un pezzo sanguinante di %o con %w."
 FemKillMessage="%k ha preso un pezzo sanguinante di %o con %w."
-; EN: PickupMessage="You got the RazorJack"
-PickupMessage="Hai raccolto il RazorJack"
-; EN: ItemName="RazorJack"
-ItemName="Razorjack"
 
 [OldDefaultAmmo]
 ; EN: PickupMessage="You picked up some ammo"
@@ -164,7 +164,7 @@ ItemName="Schegge di Tarydium"
 
 [OldRazorAmmo]
 ; EN: PickupMessage="You picked up Razor Blades"
-PickupMessage="Hai raccolto delle Lame di Rasoio"
+PickupMessage="Hai raccolto le Lame di Rasoio"
 ; EN: ItemName="Razor Blades"
 ItemName="Lame di Rasoio"
 
@@ -188,13 +188,13 @@ ItemName="Ricaricatore"
 
 [OldRifleRound]
 ; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Hai raccolto una Cartuccia di Fucile"
+PickupMessage="Hai preso una Cartuccia di Fucile"
 ; EN: ItemName="Rifle Round"
 ItemName="Cartuccia di Fucile"
 
 [OldFlakShellAmmo]
 ; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Hai raccolto una Ricarica per il Flak"
+PickupMessage="Hai preso una Ricarica per il Flak"
 ; EN: ItemName="Flak Shell"
 ItemName="Ricarica per il Flak"
 

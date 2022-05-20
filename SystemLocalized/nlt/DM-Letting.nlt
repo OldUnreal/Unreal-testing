@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="Blood Letting"
+Title="Bloedafname"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Betreden van de bloedafname"
+
+[LevelSummary]
+; EN: Title="Blood Letting"
+Title="Bloedafname"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Betreden van de bloedafname"

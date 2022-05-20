@@ -1,21 +1,21 @@
 ﻿[LevelInfo0]
 ; EN: Title="Cybrosis Central"
-Title="Zentrale Zybrose"
+Title="Cybrosis Central"
 IdealPlayerCount="3-8"
 ; EN: LevelEnterText="Now entering Cybrosis Central"
-LevelEnterText="Betreten Sie jetzt Zentrale Zybrose"
+LevelEnterText="Betrete Cybrosis Central"
 
 [LevelSummary]
 ; EN: Title="Cybrosis Central"
 Title="Zentrale Zybrose"
 IdealPlayerCount="3-8"
 ; EN: LevelEnterText="Now entering Cybrosis Central"
-LevelEnterText="Betreten Sie jetzt Zentrale Zybrose"
+LevelEnterText="Betrete Cybrosis Central"
 
 [SpecialEvent4]
 ; EN: Message="Auxiliary weapons storage closing. Please exit."
-Message="Schließung des Hilfswaffenspeichers. Bitte verlassen Sie."
+Message="Sekundärer Waffenspeicher wird geschlossen. Bitte verlassen."
 
 [SpecialEvent3]
 ; EN: Message="Auxiliary weapons storage now available."
-Message="Hilfswaffenspeicher jetzt verfügbar."
+Message="Sekundärer Waffenspeicher jetzt verfügbar."

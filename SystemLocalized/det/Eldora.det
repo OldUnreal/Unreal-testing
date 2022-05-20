@@ -2,13 +2,13 @@
 ; EN: Title="The Eldora Well"
 Title="Der Brunnen von Eldora"
 ; EN: LevelEntryText="Entering the Eldora Well"
-LevelEntryText="Eingang der Brunnen von Eldora"
+LevelEntryText="Betrete den Brunnen von Eldora"
 
 [LevelSummary]
 ; EN: Title="The Eldora Well"
 Title="Der Brunnen von Eldora"
 ; EN: LevelEntryText="Entering the Eldora Well"
-LevelEntryText="Eingang der Brunnen von Eldora"
+LevelEntryText="Betrete den Brunnen von Eldora"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."

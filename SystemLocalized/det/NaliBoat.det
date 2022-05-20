@@ -1,14 +1,14 @@
 ﻿[LevelInfo3]
 ; EN: Title="Serpent Canyon"
-Title="Schlucht der Schlangen"
+Title="Schlangenschlucht"
 ; EN: LevelEntryText="Entering the Serpent Canyon"
-LevelEntryText="Eingang des Schlucht der Schlangen"
+LevelEntryText="Betrete die Schlangenschlucht"
 
 [LevelSummary]
 ; EN: Title="Serpent Canyon"
-Title="Schlucht der Schlangen"
+Title="Schlangenschlucht"
 ; EN: LevelEntryText="Entering the Serpent Canyon"
-LevelEntryText="Eingang des Schlucht der Schlangen"
+LevelEntryText="Betrete die Schlangenschlucht"
 
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."

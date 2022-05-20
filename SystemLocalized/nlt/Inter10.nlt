@@ -1,0 +1,11 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 10"
+Title="Pauze 10"
+
+[TransitionGenderEvent4]
+; Note: Make the text coincide with the equivalent in Sounds/nlt/Interm10.uax
+OutDelays[1]=19.000000
+; EN: MaleText[0]="A tarydium processing plant... operated by the Skaarj. They must have another colony around. There are Skaarj everywhere. But this time, I'm hunting them. They didn't seem to know I was coming. I figure I'm about halfway to the shuttle."
+MaleText[0]="Een tarydiumverwerkingsfabriek ... geëxploiteerd door de Skaarj. Ze hebben vast nog een kolonie in de buurt. Overal zijn Skaarj. Maar deze keer jaag ik op ze. Ze wisten niet dat ik zou komen. Ik denk dat ik ongeveer halverwege de shuttle ben."
+; EN: FemaleText[0]="A tarydium processing plant... operated by the Skaarj. They must have another colony around. There are Skaarj everywhere. But this time, I'm hunting them. They didn't seem to know I was coming. I figure I'm about halfway to the shuttle."
+FemaleText[0]="Een tarydiumverwerkingsfabriek ... geëxploiteerd door de Skaarj. Ze hebben vast nog een kolonie in de buurt. Overal zijn Skaarj. Maar deze keer jaag ik op ze. Ze wisten niet dat ik zou komen. Ik denk dat ik ongeveer halverwege de shuttle ben."
