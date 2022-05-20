@@ -1,13 +1,20 @@
 ﻿[Public]
 Object=(Name=UnrealI.KingOfTheHill,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon)
+; EN: Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Flak Cannon")
+Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Flak")
+; EN: Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon,Description="Sniper Rifle")
+Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon,Description="Kampfgewehr")
+; EN: Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon,Description="Minigun")
+Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon,Description="Minigun")
+; EN: Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="GES BioRifle")
+Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="GES-Biogewehr")
+; EN: Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="RazorJack")
+Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="Razorjack")
+; EN: Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon,Description="Quad-Barreled Shotgun")
+Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon,Description="Vierfach-Schrotflinte")
+; EN: Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon,Description="Peacemaker")
+Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon,Description="Peacemaker")
 ; EN: Object=(Name=UnrealI.FemaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 2")
 Object=(Name=Unreali.FemaleTwo,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Frau 2")
 ; EN: Object=(Name=UnrealI.MaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 1")
@@ -496,12 +503,6 @@ ItemName="Peacemaker"
 PickupMessage="Munition für den Peacemaker erhalten"
 ; EN: ItemName="Peacemaker Ammo"
 ItemName="Peacemaker-Munition"
-
-[PeaceAmmo]
-; EN: PickupMessage="You got ammo for the Peacemaker"
-PickupMessage="Du hast Munition für den Friedensstifter erhalten"
-; EN: ItemName="Peacemaker Ammo"
-ItemName="Friedensstiftermunition"
 
 [WoodruffSeeds]
 ; EN: PickupMessage="You got the Woodruff Seeds"
