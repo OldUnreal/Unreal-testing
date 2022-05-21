@@ -6,12 +6,18 @@ Object=(Name=UnrealShare.VRikersGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.EntryGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon)
+; EN: Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon,Description="Dispersion Pistol")
+Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon,Description="Pistola de Dispersió")
+; EN: Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon,Description="ASMD")
+Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon,Description="ASMD")
+; EN: Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon,Description="Eightball")
+Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon,Description="Llançacoets Eightball")
+; EN: Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon,Description="Automag")
+Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon,Description="Autopistola")
+; EN: Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon,Description="Stinger")
+Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon,Description="Canó Perforador")
+; EN: Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon,Description="Translocator")
+Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon,Description="Translocador")
 ; EN: Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 1")
 Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Dona 1")
 ; EN: Object=(Name=UnrealShare.MaleThree,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 3")
@@ -343,7 +349,7 @@ TeamName[3]="Equip Daurat: "
 ; EN: MenuTitle="MULTIPLAYER"
 MenuTitle="MULTIJUGADOR"
 ; EN: BotTitle="BOTMATCH"
-BotTitle="PARTIDA CONTRA BOTS"
+BotTitle="PARTIDA AMB BOTS"
 ; EN: MenuList[1]="Select Game"
 MenuList[1]="Seleccioneu Joc"
 ; EN: HelpMessage[1]="Choose Game Type."
@@ -437,7 +443,7 @@ MenuTitle="CARREGAR JOC"
 ; EN: MenuList[1]="GAME"
 MenuList[1]="JOC"
 ; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
-HelpMessage[1]="Feu clic a Intro per modificar les opcions del joc, incloses la càrrega i desat de jocs, el canvi de nivell de dificultat i l'inici d'una Partida contra Bots."
+HelpMessage[1]="Feu clic a Intro per modificar les opcions del joc, incloses la càrrega i desat de jocs, el canvi de nivell de dificultat i l'inici d'una Partida amb Bots."
 ; EN: MenuList[2]="MULTIPLAYER"
 MenuList[2]="MULTIJUGADOR"
 ; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
@@ -477,7 +483,7 @@ MenuList[4]="OPCIONS DE JOC"
 ; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
 HelpMessage[4]="Feu clic a Intro per modificar les opcions del joc. Tingueu en compte que no podeu fer-ho si esteu jugant en un joc multijugador."
 ; EN: MenuList[5]="BOTMATCH"
-MenuList[5]="PARTIDA CONTRA BOTS"
+MenuList[5]="PARTIDA AMB BOTS"
 ; EN: HelpMessage[5]="DeathMatch against Bots."
 HelpMessage[5]="Partida a Mort contra Bots."
 

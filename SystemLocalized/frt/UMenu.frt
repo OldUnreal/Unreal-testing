@@ -1491,9 +1491,9 @@ PlayerMenuName="Con&figuration joueur"
 ; EN: PlayerMenuHelp="Configure your player setup for multiplayer and botmatch gaming."
 PlayerMenuHelp="Configurer votre apparence de joueur pour les matchs en réseau ou contre les bots."
 ; EN: AdvancedOptionsName="&Advanced Options"
-AdvancedOptionsName="Opt&ions avancées"
+AdvancedOptionsName="Opt&ions Avancées"
 ; EN: AdvancedOptionsHelp="Bring up the Advanced Options menu, where you can configure most of the custom mods."
-AdvancedOptionsHelp="Ouvre le menu d'options avancées, où vous pouvez paramétrer la plupart des mods."
+AdvancedOptionsHelp="Ouvre le menu d'Options Avancées, où vous pouvez paramétrer la plupart des mods."
 
 [UMenuGameMenu]
 ; EN: LoadName="&Load"

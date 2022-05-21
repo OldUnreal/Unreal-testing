@@ -25,7 +25,7 @@ Color16="&16 bity"
 ; EN: Color32="&32-bit color"
 Color32="&32 bity"
 ; EN: AdvancedOptions="Advanced Options"
-AdvancedOptions="Opcje zaawansowane"
+AdvancedOptions="Opcje Zaawansowane"
 
 [WindowsClient]
 ; EN: ClassCaption="Standard Windows Manager"

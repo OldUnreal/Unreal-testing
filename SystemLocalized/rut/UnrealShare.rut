@@ -6,12 +6,18 @@ Object=(Name=UnrealShare.VRikersGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealShare.EntryGameInfo,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon)
+; EN: Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon,Description="Dispersion Pistol")
+Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon,Description="Дисперсионный пистолет")
+; EN: Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon,Description="ASMD")
+Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon,Description="ASMD")
+; EN: Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon,Description="Eightball")
+Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon,Description="Восьмой мяч")
+; EN: Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon,Description="Automag")
+Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon,Description="Пистолет")
+; EN: Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon,Description="Stinger")
+Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon,Description="Стингер")
+; EN: Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon,Description="Translocator")
+Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon,Description="Транслокатор")
 ; EN: Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 1")
 Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Женщина 1")
 ; EN: Object=(Name=UnrealShare.MaleThree,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 3")
@@ -221,7 +227,7 @@ MenuList[2]="Коррекция насилия"
 ; EN: HelpMessage[2]="If true, reduces the gore in the game."
 HelpMessage[2]="Если включено, уменьшится количество крови."
 ; EN: AdvancedString="Advanced Options"
-AdvancedString="Дополнительные настройки"
+AdvancedString="Дополнительные Опции"
 ; EN: AdvancedHelp="Edit advanced game configuration options."
 AdvancedHelp="Изменить дополнительные настройки игры."
 
@@ -1304,7 +1310,7 @@ MenuList[19]="Консоль"
 ; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
 HelpMessage[19]="Данная настройка задаёт тип консоли и внешний вид меню. Нажмите Enter для перезапуска игры и применения изменений."
 ; EN: MenuList[20]="Advanced Options"
-MenuList[20]="Дополнительно"
+MenuList[20]="Дополнительные Опции"
 ; EN: HelpMessage[20]="Open advanced preferences configuration menu."
 HelpMessage[20]="Открыть меню конфигурации дополнительных настроек."
 

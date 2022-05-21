@@ -4,4 +4,4 @@ Preferences=(Caption="SwFModEx Audio Support",Parent="Audio",Class=SwFMOD.SwFMOD
 
 [SwFMOD]
 ; EN: ClassCaption="SwFModEx Audio Support"
-ClassCaption="Soporte de Sonido SwFModEx"
+ClassCaption="Sonido SwFModEx"

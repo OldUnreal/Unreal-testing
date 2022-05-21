@@ -1490,9 +1490,9 @@ PlayerMenuName="&Konfiguracja gracza"
 ; EN: PlayerMenuHelp="Configure your player setup for multiplayer and botmatch gaming."
 PlayerMenuHelp="Skonfiguruj ustawienia gracza do gier wieloosobowych i gier typu botmatch."
 ; EN: AdvancedOptionsName="&Advanced Options"
-AdvancedOptionsName="&Zaawansowane opcje"
+AdvancedOptionsName="&Opcje Zaawansowane"
 ; EN: AdvancedOptionsHelp="Bring up the Advanced Options menu, where you can configure most of the custom mods."
-AdvancedOptionsHelp="Otwórz menu Opcje zaawansowane, w którym możesz skonfigurować większość niestandardowych modów."
+AdvancedOptionsHelp="Otwórz menu Opcje Zaawansowane, w którym możesz skonfigurować większość niestandardowych modów."
 
 [UMenuGameMenu]
 ; EN: LoadName="&Load"
