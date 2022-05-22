@@ -48,6 +48,12 @@ var localized string SomeoneName;
 
 var() localized string VersionMessage;
 
+// Level Enter Text
+var localized string GameTypeStr;
+var localized string MapTitleStr;
+var localized string AuthorStr;
+var localized string IdealPlayerCountStr;
+
 var localized string TeamName[4];
 var() color TeamColor[4];
 var() color AltTeamColor[4];
@@ -987,14 +993,14 @@ simulated function DrawMOTD(Canvas Canvas)
 			Canvas.DrawColor.B = MOTDFadeOutTime;
 
 			Canvas.SetPos(0.0, 32 + YL);
-			Canvas.DrawText("Game Type: "$PP.GameReplicationInfo.GameName, true);
+			Canvas.DrawText(GameTypeStr $ PP.GameReplicationInfo.GameName, true);
 			Canvas.SetPos(0.0, 32 + 2*YL);
-			Canvas.DrawText("Map Title: "$Level.Title, true);
+			Canvas.DrawText(MapTitleStr $ Level.Title, true);
 			Canvas.SetPos(0.0, 32 + 3*YL);
-			Canvas.DrawText("Author: "$Level.Author, true);
+			Canvas.DrawText(AuthorStr $ Level.Author, true);
 			Canvas.SetPos(0.0, 32 + 4*YL);
 			if (Level.IdealPlayerCount != "")
-				Canvas.DrawText("Ideal Player Load:"$Level.IdealPlayerCount, true);
+				Canvas.DrawText(IdealPlayerCountStr $ Level.IdealPlayerCount, true);
 
 			Canvas.DrawColor.R = 0;
 			Canvas.DrawColor.G = MOTDFadeOutTime / 2;
@@ -1145,4 +1151,8 @@ defaultproperties
 	SomeoneName="Someone"
 	DemoPlaybackProg="Demo: %f %"
 	DemoRecInfo="[REC]"
+	GameTypeStr="Game Type: "
+	MapTitleStr="Map Title: "
+	AuthorStr="Author: "
+	IdealPlayerCountStr="Ideal Player Load: "
 }
