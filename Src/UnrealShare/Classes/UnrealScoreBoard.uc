@@ -12,6 +12,12 @@ var int Pings[16];
 var GameReplicationInfo CachedGRI;
 var localized string DeadStr,SpectatorStr;
 
+// Level Enter Text
+var localized string GameTypeStr;
+var localized string MapTitleStr;
+var localized string AuthorStr;
+var localized string IdealPlayerCountStr;
+
 function DrawHeader( canvas Canvas )
 {
 	local float XL, YL;
@@ -32,14 +38,14 @@ function DrawHeader( canvas Canvas )
 		if (Level.Netmode != NM_StandAlone)
 			Canvas.DrawText(CachedGRI.ServerName);
 		Canvas.SetPos(0.0, 32 + YL);
-		Canvas.DrawText("Game Type: "$CachedGRI.GameName, true);
+		Canvas.DrawText(GameTypeStr $ CachedGRI.GameName, true);
 		Canvas.SetPos(0.0, 32 + 2*YL);
-		Canvas.DrawText("Map Title: "$Level.Title, true);
+		Canvas.DrawText(MapTitleStr $ Level.Title, true);
 		Canvas.SetPos(0.0, 32 + 3*YL);
-		Canvas.DrawText("Author: "$Level.Author, true);
+		Canvas.DrawText(AuthorStr $ Level.Author, true);
 		Canvas.SetPos(0.0, 32 + 4*YL);
 		if (Level.IdealPlayerCount != "")
-			Canvas.DrawText("Ideal Player Load:"$Level.IdealPlayerCount, true);
+			Canvas.DrawText(IdealPlayerCountStr $ Level.IdealPlayerCount, true);
 
 		Canvas.bCenter = false;
 	}
@@ -268,4 +274,8 @@ defaultproperties
 	RegFont=Font'WhiteFont'
 	DeadStr="You are dead.  Hit [Fire] to respawn!"
 	SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
+	GameTypeStr="Game Type: "
+	MapTitleStr="Map Title: "
+	AuthorStr="Author: "
+	IdealPlayerCountStr="Ideal Player Load: "
 }
