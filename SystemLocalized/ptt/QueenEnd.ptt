@@ -1,0 +1,28 @@
+﻿[LevelInfo2]
+; EN: Title="The Source"
+Title="A Origem"
+; EN: LevelEntryText="Entering The Source"
+LevelEntryText="Entrando na Origem"
+
+[LevelSummary]
+; EN: Title="The Source"
+Title="A Origem"
+; EN: LevelEntryText="Entering The Source"
+LevelEntryText="Entrando na Origem"
+
+[JumpBoots0]
+; EN: ItemName="Super Jump Boots"
+ItemName="Super Botas de Pulo"
+; EN: PickupMessage="You picked up Super Jump Boots."
+PickupMessage="Você pegou as Super Botas de Pulo"
+; EN: ExpireMessage="The Super Jump Boots have drained."
+ExpireMessage="As Super Botas de Pulo estão esgotadas"
+ItemArticle=" a "
+M_Activated=" ativadas"
+M_Deactivated=" desativadas"
+M_Selected=" selecionadas"
+
+[SpecialEvent18]
+; EN: DamageString="vaporized"
+DamageString="vaporizado"
+FemDamageString="vaporizada"

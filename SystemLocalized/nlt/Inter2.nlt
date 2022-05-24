@@ -1,0 +1,11 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 2"
+Title="Pauze 2"
+
+[TransitionGenderEvent2]
+; Note: Make the text coincide with the equivalent in Sounds/nlt/Interm2.uax
+OutDelays[1]=26.500000
+; EN: MaleText[0]="After a leap of faith, I'm pausing to record a log entry. I'm still shaken up after running into the Skaarj and their filthy minions. I guess I thought I saw the last of them when I killed the Skaarj Queen on the mother ship... it seems like an eternity ago. Is there another colony nearby? Where are they coming from? This is like a recurring nightmare. Still no sign of the Prometheus. Time to move on."
+MaleText[0]="Na een sprong in het diepe, pauzeer ik om een ​​logboekinvoer op te nemen. Ik ben nog steeds geschrokken nadat ik de Skaarj en hun smerige handlangers tegenkwam. Ik denk dat ik dacht dat ik de laatste van hen zag toen ik de Skaarj Queen op het moederschip doodde ... het lijkt een eeuwigheid geleden. Is er nog een kolonie in de buurt? Waar komen ze vandaan? Dit is als een terugkerende nachtmerrie. Nog steeds geen teken van de Prometheus. Tijd om verder te gaan."
+; EN: FemaleText[0]="After a leap of faith, I'm pausing to record a log entry. I'm still shaken up after running into the Skaarj and their filthy minions. I guess I thought I saw the last of them when I killed the Skaarj Queen on the mother ship... it seems like an eternity ago. Is there another colony nearby? Where are they coming from? This is like a recurring nightmare. Still no sign of the Prometheus. Time to move on."
+FemaleText[0]="Na een sprong in het diepe, pauzeer ik om een ​​logboekinvoer op te nemen. Ik ben nog steeds geschrokken nadat ik de Skaarj en hun smerige handlangers tegenkwam. Ik denk dat ik dacht dat ik de laatste van hen zag toen ik de Skaarj Queen op het moederschip doodde ... het lijkt een eeuwigheid geleden. Is er nog een kolonie in de buurt? Waar komen ze vandaan? Dit is als een terugkerende nachtmerrie. Nog steeds geen teken van de Prometheus. Tijd om verder te gaan."

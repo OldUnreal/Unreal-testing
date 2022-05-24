@@ -10,16 +10,16 @@ Title="Замок Нали"
 ; Note: Make the text coincide with the respective audio entry in Sounds/rut/EndSnd.rut. If there isn't one, CREATE IT!
 OutDelays[1]=3.000000
 ; EN: CommonText[0]="Bodega Bay to shuttle craft. Please authenticate."
-CommonText[0]="Залив Бодега для челночных судов. Пожалуйста, подтвердите подлинность."
+CommonText[0]="Вызываем шаттл. Пожалуйста, назовите себя."
 
 [TransitionGenderEvent2]
 ; Note: Make the text coincide with the respective audio entry in Sounds/rut/EndSnd.rut. If there isn't one, CREATE IT!
 OutDelays[1]=3.000000
 ; EN: CommonText[0]="Authenticate immediately or we will open fire."
-CommonText[0]="Пройдите аутентификацию немедленно, иначе мы откроем огонь."
+CommonText[0]="Немедленно остановитесь или мы будем стрелять."
 
 [TransitionGenderEvent1]
 ; Note: Make the text coincide with the respective audio entry in Sounds/rut/EndSnd.rut. If there isn't one, CREATE IT!
 OutDelays[1]=3.000000
 ; EN: CommonText[0]="You were warned. We are opening fire."
-CommonText[0]="Вас предупредили. Мы открываем огонь."
+CommonText[0]="Мы вас предупредили. Мы открываем огонь."

@@ -2,13 +2,13 @@
 ; EN: Title="Foundry Tarydium Plant"
 Title="Tarydium-Gießerei"
 ; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
-LevelEntryText="Eingang der Tarydium-Gießerei"
+LevelEntryText="Betrete die Tarydium-Gießerei"
 
 [LevelSummary]
 ; EN: Title="Foundry Tarydium Plant"
 Title="Tarydium-Gießerei"
 ; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
-LevelEntryText="Eingang der Tarydium-Gießerei"
+LevelEntryText="Betrete die Tarydium-Gießerei"
 
 [TranslatorEvent1]
 ; EN: Message="Barrier to higher lift controls intact. All systems normal."

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<title>Unreal PlayerListWindow</title>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<style>
+body {
+    color: #00FF00;
+}
+.MessageBlock {
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+td {
+    word-wrap: break-word;
+}
+th, td, tr{
+text-align: center;
+border: 1px ridge;
+border-color: #00FF00;
+color: #00FF00;
+}
+</style>
+</head>
+
+<body>
+<!-- PlayerListWindow -->
+<form method="post" action="PlayerList?UWebAdmin.PlayersListDebug">%Content:UWebAdmin.PlayersListDebug%</form>
+</body>

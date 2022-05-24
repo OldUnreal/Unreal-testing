@@ -1,0 +1,37 @@
+﻿[LevelInfo0]
+; EN: Title="Spire Village"
+Title="Vilarejo do Campanário"
+; EN: LevelEntryText="Entering the Spire Village"
+LevelEntryText="Entrando no Vilarejo do Campanário"
+
+[LevelSummary]
+; EN: Title="Spire Village"
+Title="Vilarejo do Campanário"
+; EN: LevelEntryText="Entering the Spire Village"
+LevelEntryText="Entrando no Vilarejo do Campanário"
+
+[TranslatorEvent19]
+; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"
+Message="Nosso Paraíso, o grande Campanário Solar, dada a nós pelos Deuses das Boas Crenças, foi corrompida pelos Demônios do Céu. Nossa única esperança é agora o mais horrendo dos terrores. Os Demônios do Céu estão mais fortes do que nunca. Eu tive uma visão da morte, de imensas bestas vagando a terra"
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Procure cuidadosamente nas casas e siga o vale para o portão. Cuidado com os Titans!"
+
+[TranslatorEvent2]
+; EN: Message="Safe haven for those who seek peace, welcome."
+Message="Paraíso seguro para aquele que procura paz, bem vindo."
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Procure cuidadosamente nas casas e siga o vale para o portão. Cuidado com os Titans!"
+
+[TranslatorEvent18]
+; EN: Message="The minions of our Gods are cast to the ground to do battle. We are put to the test. Our world is weakening, it spews forth terrible creatures. We will pray again tonight. Oh, hear our plea! Send our messiah!"
+Message="Os servos dos nossos Deuses foram mandados para o solo para combater. Nós fomos postos a prova. Nosso mundo esta enfraquecendo, ele expele terríveis criaturas. Nós iremos orar novamente esta noite. Oh, escutem nossa súplica! Envie o nosso messias!"
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Procure cuidadosamente nas casas e siga o vale para o portão. Cuidado com os Titans!"
+
+[TranslatorEvent22]
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Procure cuidadosamente nas casas e siga o vale para o portão. Cuidado com os Titans!"
+
+[TranslatorEvent21]
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Procure cuidadosamente nas casas e siga o vale para o portão. Cuidado com os Titans!"

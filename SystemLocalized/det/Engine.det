@@ -4,16 +4,26 @@ Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 ; Main roots
-Preferences=(Caption="Advanced",Parent="Advanced Options")
-Preferences=(Caption="Rendering",Parent="Advanced Options")
-Preferences=(Caption="Audio",Parent="Advanced Options")
-Preferences=(Caption="Networking",Parent="Advanced Options")
-Preferences=(Caption="Game Types",Parent="Advanced Options")
-Preferences=(Caption="Display",Parent="Advanced Options")
-Preferences=(Caption="Joystick",Parent="Advanced Options")
-Preferences=(Caption="Drivers",Parent="Advanced Options",Class=Engine.Engine,Immediate=False,Category=Drivers)
-Preferences=(Caption="Game Settings",Parent="Advanced Options",Class=Engine.GameInfo,Immediate=True)
-Preferences=(Caption="Decals",Parent="Advanced Options")
+; EN: Preferences=(Caption="Advanced",Parent="Advanced Options")
+Preferences=(Caption="Advanced",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Rendering",Parent="Advanced Options")
+Preferences=(Caption="Rendering",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Audio",Parent="Advanced Options")
+Preferences=(Caption="Audio",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Networking",Parent="Advanced Options")
+Preferences=(Caption="Networking",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Game Types",Parent="Advanced Options")
+Preferences=(Caption="Game Types",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Display",Parent="Advanced Options")
+Preferences=(Caption="Display",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Joystick",Parent="Advanced Options")
+Preferences=(Caption="Joystick",Parent="Erweiterte Optionen")
+; EN: Preferences=(Caption="Drivers",Parent="Advanced Options",Class=Engine.Engine,Immediate=False,Category=Drivers)
+Preferences=(Caption="Drivers",Parent="Erweiterte Optionen",Class=Engine.Engine,Immediate=False,Category=Drivers)
+; EN: Preferences=(Caption="Game Settings",Parent="Advanced Options",Class=Engine.GameInfo,Immediate=True)
+Preferences=(Caption="Game Settings",Parent="Erweiterte Optionen",Class=Engine.GameInfo,Immediate=True)
+; EN: Preferences=(Caption="Decals",Parent="Advanced Options")
+Preferences=(Caption="Decals",Parent="Erweiterte Optionen")
 ; Advanced
 Preferences=(Caption="Game Engine Settings",Parent="Advanced",Class=Engine.GameEngine,Category=Settings,Immediate=True)
 Preferences=(Caption="Key Aliases",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=Aliases)
@@ -160,7 +170,7 @@ YesString="Ja"
 ; EN: NoString="No"
 NoString="Nein"
 ; EN: OnString="On"
-OnString="Auf"
+OnString="Ein"
 ; EN: OffString="Off"
 OffString="Aus"
 
@@ -185,13 +195,15 @@ GameName="Spiel"
 ; EN: MaxedOutMessage="Server is already at capacity."
 MaxedOutMessage="Serverkapazität erschöpft."
 ; EN: WrongPassword="The password you entered is incorrect."
-WrongPassword="Das eingegebene Paßwort ist ungültig."
+WrongPassword="Das eingegebene Passwort ist ungültig."
 ; EN: NeedPassword="You need to enter a password to join this game."
-NeedPassword="Du mußt ein Paßwort eingeben, um diesem Spiel beizutreten."
+NeedPassword="Du musst ein Passwort eingeben, um diesem Spiel beizutreten."
 ; EN: MaleGender="his"
 MaleGender="seine"
 ; EN: FemaleGender="her"
 FemaleGender="ihr"
+; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
+MaxedOutSpectatorsMsg="Max. Zuschauerzahl überschritten"
 
 [Weapon]
 ; EN: MessageNoAmmo=" has no ammo."
@@ -276,7 +288,7 @@ Kicked="Du wurdest gekickt"
 Upgrade="Um auf diesen Server zugreifen zu können, benötigen Sie das neueste kostenlose Update für Unreal, das auf der OldUnreals-Website verfügbar ist:"
 UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
 ; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
-UpgradeQuestion="Möchtest Du jetzt den Browser starten und das Update herunterladen?"
+UpgradeQuestion="Möchtest du jetzt den Browser starten und das Update herunterladen?"
 ; EN: Version="Version %i"
 Version="Version %i"
 

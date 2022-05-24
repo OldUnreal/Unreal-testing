@@ -8,7 +8,7 @@ ResFailed="Setzen der Auflösung fehlgeschlagen."
 
 [XMesaGLRenderDevice]
 ; EN: ClassCaption="Mesa 3D"
-ClassCaption="Mesa 3D Unterstützung"
+ClassCaption="Mesa 3D-Unterstützung"
 ; EN: AskInstalled="Do you have an OpenGL compatible 3D accelerator installed?"
 AskInstalled="Hast du einen OpenGL kompatiblen 3D Beschleuniger installiert?"
 ; EN: AskUse="Do you want Unreal to use your OpenGL accelerator?"

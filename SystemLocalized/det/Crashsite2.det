@@ -1,18 +1,18 @@
 ﻿[LevelInfo1]
 ; EN: Title="Inside UMS Prometheus"
-Title="Innerhalb UMS Prometheus"
+Title="Innerhalb der UMS Prometheus"
 ; EN: LevelEntryText="Inside UMS Prometheus"
-LevelEntryText="Innerhalb UMS Prometheus"
+LevelEntryText="Innerhalb der UMS Prometheus"
 
 [LevelSummary]
 ; EN: Title="Inside UMS Prometheus"
-Title="Innerhalb UMS Prometheus"
+Title="Innerhalb der UMS Prometheus"
 ; EN: LevelEntryText="Inside UMS Prometheus"
-LevelEntryText="Innerhalb UMS Prometheus"
+LevelEntryText="Innerhalb der UMS Prometheus"
 
 [CompTablet0]
 ; EN: PickupMessage="You found the weapon logs!"
-PickupMessage="Du hast das Waffenprotokolle gefunden!"
+PickupMessage="Du hast die Waffenprotokolle gefunden!"
 
 [TranslatorEvent3]
 ; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
@@ -28,7 +28,7 @@ Message="UMS Prometheus - Info-Terminal: --- Informationsnetzwerk offline ---"
 
 [TranslatorEvent12]
 ; EN: Message="Log Michael T. Williams, Scientific Officer: Research has been completed for a few days, and we still got over a week left to our destination. This would be a great time to relax - if we weren't trapped on this damn ship."
-Message="Log. von Michael T. Williams, Wissenschaftlicher Offizier: Die Untersuchungen sind vor einigen Tagen abgeschlossen worden, und wir haben immer noch eine Woche bis zu unserem Bestimmungsort. Das wäre doch wirklich eine prima Zeit sich auszuruhen -  wenn wir nicht auf diesem verdammten Schiff gefangen wären."
+Message="Logeintrag von Michael T. Williams, Wissenschaftlicher Offizier: Seit ein paar Tagen ist die Forschung abgeschlossen, und wir haben immer noch eine Woche bis zum Ziel. Das wäre doch wirklich eine prima Zeit sich auszuruhen - wenn wir nicht auf diesem verdammten Schiff gefangen wären."
 
 [TranslatorEvent1]
 ; EN: Message="UMS Prometheus - Navigation Network: Warning: Proximity Warning! Contact with planetary surface imminent!"
@@ -58,5 +58,5 @@ CommonText[4]="Bodega Bay, eine Sache noch, Operation 'Talon Hunter' hat Sicherh
 CommonText[5]="Definieren sie das, Starlight Base."
 CommonText[6]="Bodega Bay, sorgen sie dafür das Gefangener #849 nicht zurückkehrt; terminieren sie den Gefangenen sobald der Job erledigt wurde."
 CommonText[7]="Verstanden, Starlight Base. Wir kümmern uns um den Gefangenen #849 nach erfolgreichem Abschluss der Operation 'Talon Hunter'. Bodega Bay...Ende."
-MaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muß das jetzt durchziehen. Ich muß die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."
-FemaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muß das jetzt durchziehen. Ich muß die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."
+MaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muss das jetzt durchziehen. Ich muss die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."
+FemaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muss das jetzt durchziehen. Ich muss die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."

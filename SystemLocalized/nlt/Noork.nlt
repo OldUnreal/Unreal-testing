@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Noork's Elbow"
+Title="Noork's Elleboog"
+; EN: LevelEntryText="Entering Noork's Elbow"
+LevelEntryText="Noork's Elleboog binnengaan"
+
+[LevelSummary]
+; EN: Title="Noork's Elbow"
+Title="Noork's Elleboog"
+; EN: LevelEntryText="Entering Noork's Elbow"
+LevelEntryText="Noork's Elleboog binnengaan"
+
+[TranslatorEvent4]
+; EN: Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."
+Hint="Doorzoek alle huizen op weg naar de ruïnes. Pas op voor vijanden die onderweg op de loer liggen."
+
+[TranslatorEvent0]
+; EN: Message="Log: L. Goeranov: We've been stuck here for days. There are plenty of fish to eat but they taste kinda funny. I never liked fish."
+Message="Logboek: L. Goeranov: We zitten hier al dagen vast. Er is genoeg vis om te eten, maar ze smaken nogal raar. Ik heb nooit van vis gehouden."
+; EN: Hint="You might get a helping hand from a friendly individual at the ruins' drawbridge."
+Hint="Bij de ophaalbrug van de ruïnes kun je misschien een helpende hand krijgen van een vriendelijke persoon."

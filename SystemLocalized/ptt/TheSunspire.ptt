@@ -1,0 +1,119 @@
+﻿[LevelInfo0]
+; EN: Title="The Sunspire"
+Title="O Campanário Solar"
+; EN: LevelEntryText="Entering The Sunspire"
+LevelEntryText="Entrando no Campanário Solar"
+
+[LevelSummary]
+; EN: Title="The Sunspire"
+Title="O Campanário Solar"
+; EN: LevelEntryText="Entering The Sunspire"
+LevelEntryText="Entrando no Campanário Solar"
+
+[TranslatorEvent17]
+; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."
+Message="Eu não irei retornar ao Campanário Solar hoje. Eu quase fui assassinado pelo Demônio Alado esta manhã e temo que nossos irmãos que ainda não escaparam. Sinto que não irei mais ve-los nesta vida."
+; EN: Hint="Watch out on the ledge. If you fall, you will fall to your death."
+Hint="Cuidado com as beiradas. Se você cair, cairá para a morte."
+
+[TranslatorEvent1]
+; EN: Message="Chambers of Honour"
+Message="Câmaras da Honra"
+
+[TranslatorEvent3]
+; EN: Message="Chambers of Honour"
+Message="Câmaras da Honra"
+
+[TranslatorEvent20]
+; EN: Message="Log: Security Officer A. Connectof: We are running out of ammo fast. There's only one weapon left. We have to reach the top where we can activate the crystal that calls the Sky Elevator, according to the Nali at the gates."
+Message="Diário: Agente de segurança A.Connectof: Nós estamos ficando sem munição rapidamente. Sobrou apenas uma arma. Nós temos que alcançar o topo onde poderemos ativar o cristal e chamar o elevador aéreo, de acordo com o Nali nos portões."
+; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
+Hint="Encontre um caminho para a sala do cristal. A partir dali você pode chamar o elevador aéreo."
+
+[TranslatorEvent10]
+; EN: Message="Cistern"
+Message="Cisterna"
+; EN: Hint="There is a secret in the water. Make sure you bring your flashlight."
+Hint="Há um segredo na água. Certifique-se de trazer a sua lanterna."
+
+[TranslatorEvent14]
+; EN: Message="Sleeping Chambers"
+Message="Câmaras de Dormir"
+
+[TranslatorEvent9]
+; EN: Message="Primary Ascension"
+Message="Ascensão Primária"
+; EN: Hint="Proceed with great care. Find your way to the top."
+Hint="Prossiga com muito cuidado. Encontre um caminho para o topo."
+
+[TranslatorEvent0]
+; EN: Message="Great Hall."
+Message="Grande Salão."
+; EN: Hint="Find the switch on the wall in the great hall. It will show you a secret and you will be able to proceed upwards."
+Hint="Encontre o interruptor na parede no grande salão. Ele mostrará a você um segredo e você poderá prosseguir para cima."
+
+[TranslatorEvent5]
+; EN: Message="Primary Ascension"
+Message="Ascensão Primária"
+
+[TranslatorEvent7]
+; EN: Message="Chamber of Crystals"
+Message="Câmara dos Cristais"
+; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
+Hint="Ative o cristal e então vá para fora e espere para que o elevador aéreo desça. Suba nele e aproveite o passeio."
+
+[TranslatorEvent15]
+; EN: Message="Feast Hall"
+Message="Salão de Banquete"
+
+[TranslatorEvent6]
+; EN: Message="Kitchens"
+Message="Cozinhas"
+; EN: Hint="Sometimes the dark can lead you to the right way. Make sure you bring your flashlight."
+Hint="De vez em quando a escuridão pode levá-lo ao caminho certo. Certifique-se de trazer a sua lanterna."
+
+[TranslatorEvent11]
+; EN: Message="Sleeping Chambers"
+Message="Câmaras de Dormir"
+; EN: Hint="Sometimes the dark can lead you to the right way. Make sure you bring your flashlight."
+Hint="De vez em quando a escuridão pode levá-lo ao caminho certo. Certifique-se de trazer a sua lanterna."
+
+[TranslatorEvent13]
+; EN: Message="Feast Hall"
+Message="Salão de Banquete"
+
+[TranslatorEvent12]
+; EN: Message="Bathing Chambers"
+Message="Câmaras de Banho"
+
+[TranslatorEvent4]
+; EN: Message="Sunspire"
+Message="Campanário Solar"
+; EN: Hint="Proceed with great care. Find your way to the top."
+Hint="Prossiga com muito cuidado. Encontre um caminho para o topo."
+
+[TranslatorEvent8]
+; EN: Message="Prepare to Embark"
+Message="Prepara-se para Embarcar"
+; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
+Hint="Ative o cristal e então vá para fora e espere para que o elevador aéreo desça. Suba nele e aproveite o passeio."
+
+[TranslatorEvent16]
+; EN: Message="Primary Ascension"
+Message="Ascensão Primária"
+; EN: Hint="Proceed with great care. Find your way to the top."
+Hint="Prossiga com muito cuidado. Encontre um caminho para o topo."
+
+[TranslatorEvent25]
+; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
+Hint="Encontre um caminho para a sala do cristal. A partir dali você pode chamar o elevador aéreo."
+
+[TranslatorEvent24]
+; EN: Message="Log: Petty Officer N. Onalopov: We split up so we would have a better chance of finding Kira. Those bastards are going to pay for taking her. I love you Kira. I swear I'll find you."
+Message="Diário: Sargento N. Onalopov: Nós nos separamos para aumentarmos a chance de encontrar Kira. Aqueles cretinos pagarão por pegá-la. Eu te amo Kira. Eu juro que irei encontrá-la."
+; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
+Hint="Encontre um caminho para a sala do cristal. A partir dali você pode chamar o elevador aéreo."
+
+[TranslatorEvent23]
+; EN: Hint="You've made it so far, keep going..."
+Hint="Você foi tão longe, continue em frente..."

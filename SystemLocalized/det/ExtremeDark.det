@@ -8,7 +8,7 @@ Title="Die Verfinsterung"
 
 [TranslatorEvent10]
 ; EN: Message="The Source Antechamber, ACCESS DENIED."
-Message="Die Quelle, Vorzimmer, ZUTRITT VERWEIGERT."
+Message="Vestibül der Quelle, ZUTRITT VERWEIGERT."
 
 [TranslatorEvent0]
 ; EN: AltMessage="Authorization granted. Activate the Emergency Power Supply."

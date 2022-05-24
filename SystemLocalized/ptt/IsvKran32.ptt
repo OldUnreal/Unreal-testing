@@ -1,0 +1,124 @@
+﻿[LevelInfo2]
+; EN: Title="ISV-KRAN Decks 3 and 2"
+Title="ISV-KRAN Convéses 3 e 2"
+; EN: LevelEnterText="Entering ISV-KRAN Deck 3"
+LevelEnterText="Entrando no Convés 3 de ISV-KRAN"
+
+[LevelSummary]
+; EN: Title="ISV-KRAN Decks 3 and 2"
+Title="ISV-KRAN Convéses 3 e 2"
+; EN: LevelEnterText="Entering ISV-Kean Deck 3"
+LevelEnterText="Entrando no Convés 3 de ISV-KRAN"
+
+[TranslatorEvent8]
+; EN: Message="Main Shuttle Bay Door Override Controls"
+Message="Controles de sobreescrita das portas da baia principal da nave"
+; EN: AltMessage="Main Shuttle Bay Door Controls Fully Powered Now - Bypass Successful"
+AltMessage="Controles das portas da baia principal da nave inteiramente carregados agora-Contorno forçado feito com sucesso"
+
+[TranslatorEvent11]
+; EN: Message="PRIMARY TURBO LIFT REQUIRES FULL ENGINE POWER"
+Message="TURBO PRIMÁRIO-ELEVADOR REQUER ENERGIA TOTAL DO MOTOR"
+; EN: AltMessage="PRIMARY TURBO LIFT POWER RESTORED - WARNING A 2 SECOND SAFETY DELAY FOR LOADING IS IN EFFECT"
+AltMessage="ENERGIA DO ELEVADOR PRIMÁRIO DO TURBO RESTAURADA-AVISO UM ATRASO DE SEGURANÇA DE 2 SEGUNDOS PARA A CARGA SURTIR EFEITO"
+
+[TranslatorEvent31]
+; EN: Message="ISV-KRAN DECK 3 STATUS: ENGINE SYSTEMS ATTEMPTING TO BE RE-ROUTED BY UNKNOWN INTRUDERS. ENGINE POWER CAPACTITY AT 75%."
+Message="ESTADO DO CONVÉS 3 DE ISV-KRAN DECK: INTRUSOS DESCONHECIDOS TENTANDO REDIRECIONAR OS SISTEMAS DO MOTOR. CAPACIDADE DA ENERGIA DO MOTOR EM 75%."
+
+[TranslatorEvent32]
+; EN: Message="PLANET SCANNING STATION. ALIEN STARSHIP DETECTED ENTERING AND EXITING THE ATMOSPHERE. ALIEN MOTHERSHIP LANDED IN NORTHERN VALLEY NEAR ATMOSPHERIC ELECTRICAL STORMS."
+Message="ESTAÇÃO DE SONDAGEM DO PLANETA. ESPAÇONAVE ALIENÍGENA DETECTADA ENTRANDO E SAINDO DA ATMOSFERA. NAVEMÃE ALIENÍGENA POUSOU NO VALE DO NORTE PRÓXIMO A TEMPESTADES ELÉTRICAS NA ATMOSFERA."
+
+[TranslatorEvent5]
+; EN: Message="This panel requires bypass to activate."
+Message="Este painel precisa de um contorno forçado para ser ativado."
+
+[TranslatorEvent10]
+; EN: Message="The Skaarj have infiltrated the Dock area. We will retreat to Deck 1 and set up a makeshift high voltage barrier. We should be safe."
+Message="Os Skaarj infiltraram a area das docas. Nós recuaremos para o Convés 1 e armaremos um gerador de barreira de alta voltagem. Nós deveremos estar seguros."
+
+[TranslatorEvent24]
+; EN: Message="BIO SUIT CONTROL STATION: SYSTEM FAILURE: POWER IS BEING REROUTED BY INTRUDERS ON DECK 1."
+Message="ESTAÇÃO DE CONTROLE DO TRAJE ANTI TOXINA: FALHA NO SISTEMA: ENERGIA ESTA SENDO REDIRECIONADA PELOS INTRUSOS NO CONVÉS 1."
+
+[TranslatorEvent26]
+; EN: Message="SCANNING STATION 1: Short range surface scans indicate location of large Alien spacecraft on the planet surface that matches the description of the same ship viewed entering and leaving the planet's Tarydium field's prior to orbital decay."
+Message="ESTAÇÃO DE SONDAGEM 1: Sondagens de curto alcance na superfície indicam a localização de uma espaçonave alienígena grande na superfície do planeta que combina com a descrição da mesma nave vista entrando e saindo dos campos de Tarydium do planeta antes do decaimento da órbita."
+
+[TranslatorEvent27]
+; EN: Message="SCANNING STATION 2: Surface scan indicates indigenous primitive structures on the planet surface. A higher technology town detected on a rock suspended in the sky by some unknown force. Huge power sources emanating from an obelisk within this town."
+Message="ESTAÇÃO DE SONDAGEM 2: Sondagem da superfície indica estruturas primitivas autócnes na superfície do planeta. Uma cidade de tecnologia mais avançada foi detectada numa rocha suspensa nos céus por alguma força desconhecida. Fontes de energia imensas estão emanando de um obelisco dentro desta cidade."
+
+[TranslatorEvent34]
+; EN: Message="COOLING SYSTEM STATUS: COOLANT LEAKS IN CONTAINMENT CORE LOWER LEVEL. MANUAL INPUT BY UNAUTHORIZED PERSONNEL DENIED."
+Message="ESTADO DO SISTEMA DE REFRIGERAÇÃO: O LÍQUIDO REFRIGERANTE VAZA NA CONTENÇÃO DO NÍVEL INFERIOR DO NÚCLEO. ENTRADA MANUAL POR PESSOAL NÃO AUTORIZADO NEGADO."
+
+[TranslatorEvent17]
+; EN: Message="WARNING: ENGINE COOLANT OVERFLOW - COOLING SYSTEM EMERGENCY PUMP AND DRAIN VALVE MUST BE ACTIVATED PRIOR TO ENTERING THIS AREA"
+Message="AVISO: SOBRECARGA DE LÍQUIDO REFRIGERADOR DO MOTOR. BOMBA E DRENO DE EMERGÊNCIA DO SISTEMA DE RESFRIAMENTO DEVE SER ATIVADO ANTES DE ENTRAR NESTA ÁREA"
+; EN: AltMessage="ENGINE COOLANT EMERGENCY PUMPS ACTIVE - CONTAINMENT FIELD SYSTEMS BEING REROUTED BY ALIEN INTRUDERS"
+AltMessage="ENGINE COOLANT EMERGENCY PUMPS ACTIVE. CONTAINMENT FIELD SYSTEMS BEING REROUTED BY ALIEN INTRUDERS"
+
+[TranslatorEvent35]
+Hint=""
+; EN: Message="COOLING SYSTEM STATUS: SYNTAX ERROR? INCORRECT AUTHORIZATION"
+Message="ESTADO DO SISTEMA DE REFRIGERAÇÃO: ERRO DE SINTAXE? AUTORIZAÇÃO INCORRETA"
+
+[TranslatorEvent9]
+; EN: Message="Main Engineering Has Been Sealed With A Containment Field. Containment Field Generator Must Be Destroyed Prior To Accessing Engineering."
+Message="A engenharia principal foi selada com um campo de contenção. O gerador do campo de contenção deve ser destruído antes de tentar acessar a engenharia."
+
+[TranslatorEvent6]
+; EN: Message="The first wave of Skaarj have been isolated within DECK 4. I doubt they will be able to get through the ductwork and enter the Main Ship. We will retreat to Deck 1 and seal Engineering with a containment force field."
+Message="A primeira onda dos Skaarj foi isolada dentro do CONVÉS 4. Eu duvido que eles irão conseguir passar pelo sistema de dutos e entrar na Nave Principal. Nós recuaremos para o Convés 1 e selar a engenharia com um campo de força de contenção."
+
+[TranslatorEvent28]
+; EN: Message="CONTAINMENT FIELD GENERATOR ONLINE. GOLD POWER CORES UNSTABLE DUE TO EXCESS STRESS FROM SEALING ENGINEERING. MAIN ENGINEERING CONTAINMENT FORCE FIELDS MAY BE DISABLED BY DESTROYING GOLD CORES."
+Message="GERADOR DE CAMPO DE CONTENÇÃO NO AR. NÚCLEOS DE ENERGIA DOURADOS INSTÁVEIS DEVIDO AO EXCESSO DE ESFORÇO PARA SELAR A ENGENHARIA. OS CAMPOS DE CONTENÇÃO DA ENGENHARIA PRINCIPAL PODEM SER DESLIGADOS DESTRUINDO-SE OS NÚCLEOS DOURADOS."
+
+[TranslatorEvent29]
+; EN: Message="ISV-KRAN ENGINE STATUS-OFFLINE. DAMAGE REPORT MINIMAL. LIFE SUPPORT SYSTEMS ONLINE. DECK 1 POWER LEVELS FULL. SHIP'S HULL BREACHED AT OBSERVATION LOUNGE."
+Message="ISV-KRAN, ESTADO DE MOTORES-FUERA DE LÍNEA. INFORME DE DAÑOS: SISTEMAS DE SOPORTE VITAL MÍNIMO EN LÍNEA. MÁXIMOS NIVELES DE POTENCIA EN CUBIERTA 1. ROTURA CASCO DE NAVE EN SALA DE OBSERVACIÓN."
+
+[TranslatorEvent30]
+; EN: Message="MAIN ENGINE DIAGNOSTIC PANEL. 75% ENGINE POWER AVAILABLE. COOLANT LEAK IN CONTAINMENT CORE GENERATOR AREA LOCALIZED. LAST ATTEMPT TO REROUTE POWER UNSUCCESSFUL."
+Message="ESTADO DO MOTOR DE ISV-KRAN-FORA DO AR. NOTIFICAÇÃO DE DANO MÍNIMA. SISTEMAS DE SUPORTE À VIDA NO AR. NÍVEIS DE ENERGIA DO CONVÉS 1 NO MÁXIMO. CASCO DA NAVE ROMPIDO NA SALA DE OBSERVAÇÃO."
+
+[TranslatorEvent21]
+; EN: Message="WARNING CONTAINMENT CORE EXPOSED: THIS CORE IS HIGHLY EXPLOSIVE - STAND BACK BEFORE DISCHARGING WEAPONS"
+Message="AVISO NÚCLEO DE CONTENÇÃO EXPOSTO: ESTE NÚCLEO É ALTAMENTE EXPLOSIVO-MANTENHAM-SE AFASTADOS ANTES DE DISPARAR ARMAS"
+
+[TranslatorEvent14]
+; EN: Message="COOLING SYSTEM EMERGENCY DRAIN VALVE ACTIVATED"
+Message="SISTEMA DE REFRIGERAÇÃO DE EMERGÊNCIA DA VALVULA DE DRENAGEM ATIVADO"
+
+[TranslatorEvent18]
+; EN: Message="MAIN ENGINEERING: EMERGENCY CONTAINMENT FIELD ACTIVE. CONTAINMENT FIELD GENERATOR GOLD CORES MUST BE DESTROYED BEFORE THIS FIELD WILL DISENGAGE."
+Message="ENGENHARIA PRINCIPAL: CAMPO DE CONTENÇÃO DE EMERGÊNCIA ATIVO. O GERADOR DE CAMPO DE CONTENÇÃO DOS NÚCLEOS DOURADOS DEVEM SER DESTRUÍDOS ANTES QUE ESTE CAMPO DESLIGUE-SE."
+; EN: AltMessage="MAIN ENGINEERING: INTRUDERS DETECTED. PROCEED WITH CAUTION."
+AltMessage="ENGENHARIA PRINCIPAL: INTRUSOS DETECTADOS PROSSEGUIR COM CAUTELA."
+
+[TranslatorEvent20]
+; EN: Message="CONTAINMENT ENERGY CORES EXTREMELY VOLATILE: ALL WEAPONS MUST BE PLACED ON SAFETY."
+Message="ENERGIA DOS NÚCLEOS DE CONTENÇÃO EXTREMAMENTE VOLÁTEIS: TODAS AS ARMAS DEVEM SER GUARDADAS EM SEGURANÇA."
+
+[TranslatorEvent22]
+; EN: Message="WARNING CONTAINMENT CORE EXPOSED: THIS CORE IS HIGHLY EXPLOSIVE - STAND BACK BEFORE DISCHARGING WEAPONS."
+Message="AVISO NÚCLEO DE CONTENÇÃO EXPOSTO: ESTE NÚCLEO É ALTAMENTE EXPLOSIVO-MANTENHAM-SE AFASTADOS ANTES DE DISPARAR ARMAS."
+
+[TranslatorEvent23]
+; EN: Message="WARNING: ENGINE COOLANT LEAK ON LOWERMOST FLOOR OF THIS AREA."
+Message="AVISO: VAZAMENTO DE LÍQUIDO REFRIGERANTE DO MOTOR NO ANDAR MAIS BAIXO DESTA ÁREA."
+
+[TranslatorEvent3]
+; EN: Message="Primary Shuttle Bay: Log Entry by Dockmaster Ivan Romanov Second Officer ISV-KRAN. I have sealed the main Iris Hatch with a Laser welding team. No Alien Bastards are going to get into my shuttle bay."
+Message="Baia primária da nova: Entrada no diário pelo chefe das docas Segundo Tenente Ivan Romanov Second Officer de ISV-KRAN. Eu selei a escotilha principal com uma equipe de soldagem a laser. Nenhum alinígena cretino irá conseguir entrar na minha baia da nave."
+
+[TranslatorEvent4]
+; EN: Message="Primary Shuttle Bay: Log Entry by Dockmaster Ivan Romanov Second Officer ISV-KRAN. The dock doors control panel can be reactivated with the override in one of the Access tubes."
+Message="Baia primária da nave: Entrada no diário pelo chefe do convés Segundo Tenente Ivan Romanov de ISV-KRAN. O painel de controle das portas das docas pode ser reativado com a sobreescrita em um dos tubos de acesso."
+
+[TranslatorEvent16]
+; EN: Message="COOLING SYSTEM EMERGENCY PUMP ACTIVATED"
+Message="BOMBA DE EMERGÊNCIA DO SISTEMA DE REFRIGERAÇÃO ATIVADA"

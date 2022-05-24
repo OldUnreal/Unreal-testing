@@ -2,13 +2,13 @@
 ; EN: Title="Harobed Village"
 Title="Деревня Харобед"
 ; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Вход в деревню в Харобах"
+LevelEntryText="Вход в Деревня в Харобах"
 
 [LevelSummary]
 ; EN: Title="Harobed Village"
 Title="Деревня Харобед"
 ; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Вход в деревню в Харобах"
+LevelEntryText="Вход в Деревня в Харобах"
 
 [TranslatorEvent3]
 ; EN: Hint="Proceed to the crashed spaceship up ahead."
@@ -28,6 +28,6 @@ Hint="Найдите церковь на вершине холма, возмож
 
 [TranslatorEvent2]
 ; EN: Message="We shall pray before we set off for the Sunspire. We will find refuge there. Praise be to the God of the Good Lore for giving us sanctuary. The journey will be treacherous but we will prevail!"
-Message="Мы вознесем молитвы прежде чем отправимся в Санспайр. Мы найдем убежище там. Восхвалим Господа нашего за то что даровал нам это святилище. Путешествие будет не безопасным, но мы доберемся до священного Санспайра!"
+Message="Мы вознесём молитвы прежде чем отправимся в Санспайр. Мы найдем убежище там. Восхвалим Господа нашего за то что даровал нам это святилище. Путешествие будет не безопасным, но мы доберёмся до священного Санспайра!"
 ; EN: Hint="Look very closely along the walls."
 Hint="Прогуляйтесь вплотную у стен церкви и вдоль забора."

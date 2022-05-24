@@ -2,26 +2,6 @@
 Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
 Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
-[UBrowserServerListWindow]
-; EN: InfoName="Info"
-InfoName="Informació"
-; EN: PlayerCountName="Players"
-PlayerCountName="Jugadors"
-; EN: ServerCountName="Servers"
-ServerCountName="Servidors"
-; EN: QueryServerText="Querying Master Server (hit F5 if nothing happens)"
-QueryServerText="Consulta del servidor principal (premeu F5 si no passa res)"
-; EN: QueryFailedText="Master Server Failed: "
-QueryFailedText="Error del servidor principal: "
-; EN: PingingText="Pinging Servers"
-PingingText="Servidors de ping"
-; EN: CompleteText="Complete"
-CompleteText="Complet"
-
-[UBrowserMainWindow]
-; EN: WindowTitleString="Server Browser"
-WindowTitleString="Navegador de servidors"
-
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
 ResolveFailedError="No s'ha pogut resoldre el servidor mestre: "
@@ -50,6 +30,22 @@ RuleText="Regla"
 ; EN: ValueText="Value"
 ValueText="Valor"
 
+[UBrowserServerListWindow]
+; EN: InfoName="Info"
+InfoName="Informació"
+; EN: PlayerCountName="Players"
+PlayerCountName="Jugadors"
+; EN: ServerCountName="Servers"
+ServerCountName="Servidors"
+; EN: QueryServerText="Querying Master Server (hit F5 if nothing happens)"
+QueryServerText="Consulta del servidor principal (premeu F5 si no passa res)"
+; EN: QueryFailedText="Master Server Failed: "
+QueryFailedText="Error del servidor principal: "
+; EN: PingingText="Pinging Servers"
+PingingText="Servidors de ping"
+; EN: CompleteText="Complete"
+CompleteText="Complet"
+
 [UBrowserServerPing]
 ; EN: AdminEmailText="Admin Email"
 AdminEmailText="Correu electrònic d'administrador"
@@ -69,14 +65,14 @@ GameModeText="Mode de joc"
 GameTypeText="Tipus de joc"
 ; EN: GameVersionText="Game Version"
 GameVersionText="Versió del joc"
+; EN: GameSubVersionText="Game SubVersion"
+GameSubVersionText="Subversió del joc"
 ; EN: WorldLogText="ngStats World Stat-Logging"
 WorldLogText="Registre d'Estadístiques Mundials ngStats"
 ; EN: TrueString="Enabled"
 TrueString="Activat"
 ; EN: FalseString="Disabled"
 FalseString="Desactivat"
-; EN: GameSubVersionText="Game SubVersion"
-GameSubVersionText="Subversió del joc"
 ; EN: MapFileString="Map Filename"
 MapFileString="Nom del fitxer del mapa"
 ; EN: DLLString="C++ Library"
@@ -118,19 +114,23 @@ AttachName="&Adjuntar"
 ; EN: CloseName="&Close"
 CloseName="&Tanca"
 
+[UBrowserMainWindow]
+; EN: WindowTitleString="Unreal Server Browser"
+WindowTitleString="Navegador de servidors Unreal"
+
 [UBrowserRightClickMenu]
 ; EN: RefreshName="&Refresh All Servers"
 RefreshName="&Actualitza tots els servidors"
 ; EN: FavoritesName="Add to &Favorites"
 FavoritesName="Afegir a &preferits"
-; EN: RemoveFavoritesName="Remove from &Favorites"
-RemoveFavoritesName="Elimina de &Preferits"
 ; EN: RefreshServerName="&Ping This Server"
 RefreshServerName="&Ping a aquest servidor"
-; EN: PingAllName="Ping &All Servers"
-PingAllName="Ping &tots els servidors"
 ; EN: InfoName="&Server and Player Info"
 InfoName="&Informació del servidor i del jugador"
+; EN: PingAllName="Ping &All Servers"
+PingAllName="Ping &tots els servidors"
+; EN: RemoveFavoritesName="Remove from &Favorites"
+RemoveFavoritesName="Elimina de &Preferits"
 ; EN: JoinPasswordName="Join with &Password"
 JoinPasswordName="Uniu-vos a &Contrasenya"
 ; EN: JoinServerName="&Join server"
@@ -156,7 +156,17 @@ MeshText="Malla"
 ; EN: SkinText="Skin"
 SkinText="Pell"
 ; EN: IDText="ID"
-IDText="Identificació"
+IDText="ID"
+
+[UBrowserLibPageWindow]
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
+DLLTitleStr="No es pot connectar: ​​falta la biblioteca d'enllaços dinàmics "%ls"."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
+DLLVerTitleStr="No es pot connectar: ​​la versió de Dynamic Link Library no coincideix amb "%ls"."
+; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
+InfoText[0]="Per connectar aquest servidor necessitareu una biblioteca C++ addicional "%ls"."
+; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
+InfoText[1]="Per obtenir més informació, consulteu la informació externa des de sota (allotjada per %ls):"
 
 [UBrowserConsole]
 ; EN: ClassCaption="Unreal Browser Console"
@@ -171,16 +181,6 @@ OpenHelp="Introduïu un URL estàndard o seleccioneu-ne un a l'historial d'URL. 
 [UBrowserServerWebWin]
 ; EN: WindowTitle="Web Explorer"
 WindowTitle="Explorador web"
-
-[UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLTitleStr="No es pot connectar: ​​falta la biblioteca d'enllaços dinàmics "%ls"."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-DLLVerTitleStr="No es pot connectar: ​​la versió de Dynamic Link Library no coincideix amb "%ls"."
-; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[0]="Per connectar aquest servidor necessitareu una biblioteca C++ addicional "%ls"."
-; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
-InfoText[1]="Per obtenir més informació, consulteu la informació externa des de sota (allotjada per %ls):"
 
 [UBrowserServerWebCW]
 ; EN: RefreshString="Refresh page"

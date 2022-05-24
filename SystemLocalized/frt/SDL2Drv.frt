@@ -23,7 +23,7 @@ Color16="Couleurs &16 bits"
 ; EN: Color32="&32-bit color"
 Color32="Couleurs &32 bits"
 ; EN: AdvancedOptions="Advanced Options"
-AdvancedOptions="Options avancées"
+AdvancedOptions="Options Avancées"
 
 [SDL2Client]
 ; EN: ClassCaption="Standard SDL2 Linux Manager"

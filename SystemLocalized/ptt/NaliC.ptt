@@ -1,0 +1,47 @@
+﻿[LevelInfo3]
+; EN: Title="Nali Castle"
+Title="Castelo Nali"
+; EN: LevelEntryText="Entering the Nali Castle"
+LevelEntryText="Entrando no Castelo Nali"
+
+[LevelSummary]
+; EN: Title="Nali Castle"
+Title="Castelo Nali"
+; EN: LevelEntryText="Entering the Nali Castle"
+LevelEntryText="Entrando no Castelo Nali"
+
+[TranslatorEvent0]
+; EN: Message="The path to be followed is long and harrowing, but the strong of heart and purpose will prevail against the challenges."
+Message="O caminho a seguir é longo e torturante, mas aquele de coração forte e determinado conseguirá superar os desafios."
+; EN: Hint="Thy path is now clear."
+Hint="O caminho agora esta livre."
+
+[TranslatorEvent5]
+; EN: Message="Only the enlightened one who has read the Book of the Good Lore in the chapel shall be granted passage to the tower through these divine gates."
+Message="Somente o iluminado que ler o Livro das Boas Crenças na capela terá permitido o acesso à passagem para a torre atravéz destes portões divinos."
+; EN: Hint="Travel to the chapel and read the book to gain access."
+Hint="Viaje à capela para ler o livro e ganhar acesso."
+
+[TranslatorEvent4]
+; EN: Message="He who seeks knowledge would be well rewarded for perusing the tomes stored in the main feast hall."
+Message="Aquele que busca conhecimento será bem recompensado por perseguir os tomos guardados na sala de banquete principal."
+
+[TranslatorEvent1]
+; EN: Message="I sit here, waiting to die. Waiting... The wait is worse than death itself. My fears tear at my soul. I hear the wails of the others as they are taken to the bowels of the dungeon to be sacrificed to the winged Sky Daemon."
+Message="Eu fico aqui, esperando para morrer. Esperando... A espera é pior do que a própria morte. Meus medos rasgam na minha alma. Eu escuto os urros dos outros conforme eles são levados às profundezas das masmorras para serem sacrificados para os Demônios do Céu alados."
+
+[TranslatorEvent3]
+; EN: Message="Only the warrior who demonstrates his bravery by defeating the five eyed daemon in the tower shall be granted passage to the dungeon."
+Message="Somente o guerreiro que demonstrar a sua bravura derrotando os cinco demônios de olhos dentro da torre terá o acesso à passagem da masmorra garantida."
+; EN: Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon."
+Hint="Vá até a torre mais alta e assassine o demônio para ganhar acesso à masmorra."
+
+[TranslatorEvent2]
+; EN: Message="Only the warrior who demonstrates his bravery by defeating the five eyed daemon in the tower shall be granted passage to the dungeon."
+Message="Somente o guerreiro que demonstrar a sua bravura derrotando os cinco demônios de olhos dentro da torre terá o acesso à passagem da masmorra garantida."
+; EN: Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon."
+Hint="Vá até a torre mais alta e assassine o demônio para ganhar acesso à masmorra."
+
+[TranslatorEvent6]
+; EN: Message="What the HELL are you doing up here?"
+Message="O que DIABOS você está fazendo aqui?"

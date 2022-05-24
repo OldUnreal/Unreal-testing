@@ -1,5 +1,6 @@
 ﻿[Public]
 Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Intro1;UPak.Return;Return to Na Pali")
+Object=(Name=UPak.UPakConsole,Class=Class,MetaClass=Engine.Console,Description="Unreal Gold")
 Object=(Name=UPak.CrashSiteGame,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakSinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakTransitionInfo,Class=Class,MetaClass=Engine.GameInfo)
@@ -14,9 +15,12 @@ Object=(Name=UPak.TestGameInfo,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
-Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon)
-Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon)
+; EN: Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="UMS Grenade Launcher")
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Гранатомёт ОВС")
+; EN: Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="UMS Rocket Launcher")
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Ракетомёт ОВС")
+; EN: Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Combat Assault Rifle")
+Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Штурмовая винтовка")
 Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
 Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
 Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
@@ -28,23 +32,23 @@ Statheader="Статистика по убийствам: "
 ; EN: CARStat="Combat Assault Rifle"
 CARStat="Штурмовая винтовка"
 ; EN: RLStat="UMS Rocket Launcher"
-RLStat="Ракетная установка UMS"
+RLStat="Ракетомёт ОВС"
 ; EN: GLStat="UMS Grenade Launcher"
-GLStat="Гранатомет UMS"
+GLStat="Гранатомёт ОВС"
 ; EN: ASMDStat="ASMD"
 ASMDStat="ASMD"
 ; EN: AutomagStat="Automag"
-AutomagStat="Автомаг"
+AutomagStat="Пистолет"
 ; EN: DispersionStat="Dispersion Pistol"
 DispersionStat="Дисперсионный пистолет"
 ; EN: EightballStat="Eightball"
-EightballStat="Восьмой мяч"
+EightballStat="Eightball"
 ; EN: FlakCannonStat="Flak Cannon"
 FlakCannonStat="Зенитная пушка"
 ; EN: GESBioRifleStat="GES BioRifle"
 GESBioRifleStat="Биовинтовка GES"
 ; EN: MinigunStat="Minigun"
-MinigunStat="Миниган"
+MinigunStat="Пулемёт"
 ; EN: RazorjackStat="Razorjack"
 RazorjackStat="Резак"
 ; EN: RifleStat="Sniper Rifle"
@@ -59,10 +63,12 @@ LogEntryMsg="ЖУРНАЛ:"
 [GrenadeLauncher]
 ; EN: DeathMessage="%k's grenade made %o blew up."
 DeathMessage="Граната %k взорвалась %o."
+FemDeathMessage="Граната %k взорвалась %o."
+FemKillMessage="Граната %k взорвалась %o."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
-PickupMessage="Вы получили Гранатомет УМС"
+PickupMessage="Вы получили Гранатомет ОВС"
 ; EN: ItemName="UMS Grenade Launcher"
-ItemName="Гранатомет УМС"
+ItemName="Гранатомет ОВС"
 
 [Cloak]
 ; EN: ExpireMessage="disengaged."
@@ -86,10 +92,12 @@ GameName="Unreal Mission Pack"
 [RocketLauncher]
 ; EN: DeathMessage="%k's rocket turned %o's body into chunks."
 DeathMessage="Ракета %k превратила тело %o в куски."
+FemDeathMessage="Ракета %k превратила тело %o в куски."
+FemKillMessage="Ракета %k превратила тело %o в куски."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
-PickupMessage="У вас есть Ракетная установка UMS"
+PickupMessage="Вы получили Ракетомёт ОВС"
 ; EN: ItemName="UMS Rocket Launcher"
-ItemName="Ракетная установка UMS"
+ItemName="Ракетомёт ОВС"
 
 [UPakChooseGameMenu]
 MenuList[0]="Return to Na Pali"
@@ -102,22 +110,24 @@ GameName="Матч со скрытностью"
 [CARifle]
 ; EN: DeathMessage="%k's %w turned %o into swiss cheese."
 DeathMessage="%w %k превратил %o в швейцарский сыр."
+FemDeathMessage="%w %k превратил %o в швейцарский сыр."
+FemKillMessage="%w %k превратил %o в швейцарский сыр."
 ; EN: PickupMessage="You got the Combat Assault Rifle"
-PickupMessage="Вы получили штурмовую винтовку"
+PickupMessage="Вы получили Штурмовая винтовка"
 ; EN: ItemName="Combat Assault Rifle"
 ItemName="Штурмовая винтовка"
 
 [UPakScubaGear]
 ; EN: RechargedMessage="ScubaGear fully recharged."
-RechargedMessage="Акваланг перезаряжен."
+RechargedMessage="Акваланг полностью перезаряжен."
 ; EN: LowOxygenMessage="Oxygen supply critically low"
-LowOxygenMessage="Запас кислорода очень мал"
+LowOxygenMessage="Запас кислорода критически низкий"
 ; EN: PickupMessage="You picked up the Marine SCUBA Gear"
-PickupMessage="Вы подобрали армейский акваланг"
+PickupMessage="Вы подобрали Пехотный акваланг"
 ; EN: ItemName="Marine SCUBA Gear"
-ItemName="Армейский акваланг"
+ItemName="Пехотный акваланг"
 ; EN: M_Deactivated="deactivated... Recharging."
-M_Deactivated="деактивирован... перезаряжается."
+M_Deactivated="деактивирован... Заряжается."
 
 [MarineMatch]
 ; EN: GameName="Marine Match"
@@ -141,15 +151,15 @@ MenuName="Женщина 1"
 
 [GLAmmo]
 ; EN: PickupMessage="You picked up 10 UMS Grenades"
-PickupMessage="Вы подобрали 10 гранат UMS"
+PickupMessage="Вы подобрали 10 гранат ОВС"
 ; EN: ItemName="UMS Grenades"
-ItemName="гранат UMS"
+ItemName="гранат ОВС"
 
 [RLAmmo]
 ; EN: PickupMessage="You got 10 UMS Rockets"
-PickupMessage="Вы получили 10 ракет UMS"
+PickupMessage="Вы получили 10 ракет ОВС"
 ; EN: ItemName="UMS Rockets"
-ItemName="ракет UMS"
+ItemName="ракет ОВС"
 
 [CARifleClip]
 ; EN: PickupMessage="You got a 50 bullet CAR clip"
@@ -178,3 +188,65 @@ GameName="Матч с оружием пехоты"
 PickupMessage="Вы подобрали модуль с данными"
 ; EN: ItemName="Computer Tablet"
 ItemName="модуль с данными"
+
+[MarineArctic]
+; EN: MenuName="UMS Arctic Marine"
+MenuName="ОВС арктический морской"
+
+[MarineDesert]
+; EN: MenuName="UMS Desert Marine"
+MenuName="ОВС морской пустыни"
+
+[MarineJungle]
+; EN: MenuName="UMS Jungle Marine"
+MenuName="ОВС морской джунгли"
+
+[SpaceMarine]
+; EN: MenuName="UMS Space Marine"
+MenuName="ОВС космический десантник"
+
+[TransitionBrute]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Brute"
+MenuName="Брут"
+
+[TransitionCow]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Nali Cow"
+MenuName="корова Нали"
+
+[NaliCopter]
+; EN: NameArticle=" a "
+NameArticle=" un "
+; EN: MenuName="NaliCopter"
+MenuName="вертолет Нали"
+
+[Predator]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Predator"
+MenuName="Хищник"
+
+[TransitionPredator]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Predator"
+MenuName="Хищник"
+
+[PackHunter]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Pack Hunter"
+MenuName="охотник за стаями"
+
+[Spinner]
+; EN: NameArticle=" a "
+NameArticle=" "
+; EN: MenuName="Spinner"
+MenuName="Спиннер"
+
+[UPakConsole]
+; EN: ClassCaption="Unreal Gold Console"
+ClassCaption="Консоль из Unreal Gold"

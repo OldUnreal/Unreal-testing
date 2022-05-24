@@ -40,14 +40,14 @@ IDC_Prompt="Unreal is starting up for the first time.  If you experience any pro
 
 [IDDIALOG_ConfigPageRenderer]
 IDC_ConfigPageRenderer=" "
-IDC_RenderPrompt="Your computer supports the following 3D video devices. Chose the optimal one for your system."
+IDC_RenderPrompt="Your computer supports the following 3D video devices. Choose the optimal one for your system."
 IDC_RenderNote=" "
 IDC_Compatible="Show certified, compatible devices"
 IDC_All="Show all devices"
 
 [IDDIALOG_ConfigPageSound]
 IDC_ConfigPageSound=" "
-IDC_SoundPrompt="Your computer supports the following sound devices.  Chose the optimal one for your system."
+IDC_SoundPrompt="Your computer supports the following sound devices.  Choose the optimal one for your system."
 IDC_SoundNote=" "
 IDC_Compatible="Show certified, compatible devices"
 IDC_All="Show all devices"

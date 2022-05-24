@@ -5,5 +5,5 @@ Title="Pause 9"
 [TransitionGenderEvent3]
 ; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm9.uax
 OutDelays[1]=13.500000
-MaleText[0]="Ich bin von den vielen Rückschlägen schon ganz erschöpft. Immer, wenn ich irgendwie weiterkam, mußte ich wieder schwere Schläge einstecken. Ich weiß, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zurück."
-FemaleText[0]="Ich bin von den vielen Rückschlägen schon ganz erschöpft. Immer, wenn ich irgendwie weiterkam, mußte ich wieder schwere Schläge einstecken. Ich weiß, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zurück."
+MaleText[0]="Ich bin von den vielen Rückschlägen schon ganz erschöpft. Immer, wenn ich irgendwie weiterkam, musste ich wieder schwere Schläge einstecken. Ich weiß, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zurück."
+FemaleText[0]="Ich bin von den vielen Rückschlägen schon ganz erschöpft. Immer, wenn ich irgendwie weiterkam, musste ich wieder schwere Schläge einstecken. Ich weiß, ich schaffe das, aber es wird richtig hart. Zwei Schritt vor, einer zurück."
