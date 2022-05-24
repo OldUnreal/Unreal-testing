@@ -34,7 +34,7 @@ function bool AtCapacity( bool bSpectator, out string Error )
 		return false;
 	if( bSpectator && (Level.Game.NumSpectators>=Level.Game.MaxSpectators) )
 	{
-		Error = "Max spectators exceeded";
+		Error = Level.Game.MaxedOutSpectatorsMsg;
 		return true;
 	}
 	else if( !bSpectator && Level.Game.MaxPlayers>0 && (Level.Game.NumPlayers>=Level.Game.MaxPlayers) )
@@ -74,74 +74,72 @@ function GetConnections( optional PlayerPawn Executer )
 	local string ConString;
 	local byte ConState;
 	local int Port;
-	local int X,Y;
+	local int X;
 	local string FileName;
 	local int Sent;
 	local int TotalSize;
 	local array<FConnectionInfo> CacheInfo;
 	local float percent;
 	local string Output;
-	local bool bGotDownloaders,bDownloader;
+	local bool bGotDownloaders;
 
+	X = -1;
 	ForEach Level.AllConnections(CON)
 	{
-		IP=Level.GetConIP(CON,Port);
-		Options="?"$Level.GetConOpts(CON);
-
-		if (CON.Actor == None)
+		if ( !CON.Actor )
+		{
+			Options="?"$Level.GetConOpts(CON);
 			InName = Level.Game.ParseOption(Options,"Name");
+		}
 		else InName = CON.Actor.GetHumanName();
 
 		ConState = Level.GetConState(CON);
 
-		if (ConState < 2)
+		if (ConState <= USOC_Closed)
 			continue; //No need to broadcast..
-		else if (ConState == 2)
+		else if (ConState == USOC_Pending)
 			StateString = "Pending";
 		else StateString = "Open";
 
-		if (CON.Actor == None) //check for connections without actors(downloading or connecting)
+		if( !CON.Actor ) //check for connections without actors(downloading or connecting)
 		{
 			if (!bGotDownloaders)
 			{
 				// if we do this here, we iterate the list once, instead of how many times there are new connections.
+				X = 0;
 				ForEach Level.AllDownloaders(DLCON,FileName,Sent,TotalSize)
 				{
-					CacheInfo[Y].CON = DLCON;
-					CacheInfo[Y].DLFileName = Filename;
-					CacheInfo[Y].DLSent = Sent/1024;
-					CacheInfo[Y].DLTotalSize = TotalSize/1024;
-					++Y;
+					CacheInfo[X].CON = DLCON;
+					CacheInfo[X].DLFileName = Filename;
+					CacheInfo[X].DLSent = Sent/1024;
+					CacheInfo[X].DLTotalSize = TotalSize/1024;
+					++X;
 				}
 				bGotDownloaders=True;
 			}
-			for ( X=0; X<Y; X++ ) //X is used again to determine wich array index on this iteration with downloader.
-			{
-				if( CacheInfo[X].CON==CON )
-				{
-					ConString="(Downloading)";
-					bDownloader=True;
-					break;
-				}
-			}
-			if ( !bDownloader )
+			
+			X = CacheInfo.Find(CON,CON); // X is used again to determine wich array index on this iteration with downloader.
+			if ( X==-1 )
 				ConString="(Connecting)";//Always connecting, if not downloading.
+			else ConString="(Downloading)";
 		}
-		if (bDownloader)
+
+		IP = Level.GetConIP(CON,Port);
+		if ( X>=0 )
 		{
 			Percent = (float(CacheInfo[X].DLSent)/float(CacheInfo[X].DLTotalSize))*100;//convert to float to fix division errors
-			Output = "Conn #"$CON$":"@IP$":"$Port@InName@"Down:"@CacheInfo[X].DLFileName@CacheInfo[X].DLSent$"/"$CacheInfo[X].DLTotalSize$"kb"@percent$"%"@"State:"@StateString@ConString;
-			bDownloader = False;//reset
+			Output = "Conn #"$CON$": "$IP$":"$Port@InName$" Down: "$CacheInfo[X].DLFileName@CacheInfo[X].DLSent$"/"$CacheInfo[X].DLTotalSize$"kb "$percent$"% State: "$StateString@ConString;
+			X = -1; // reset
 		}
 		else
 		{
-			Output = "Conn #"$CON$":"@IP$":"$Port@InName@"State:"@StateString;
-			if( CON.Actor!=None && CON.Actor.bAdmin )
+			Output = "Conn #"$CON$": "$IP$":"$Port@InName$" State: "$StateString;
+			if( CON.Actor && CON.Actor.bAdmin )
 				Output = Output$"(Admin)";
 		}
-		Log(Output,Class.Name);
-		if( Executer!=None )
+		if( Executer )
 			Executer.ClientMessage(Output);
+		else Log(Output,Class.Name);
 	}
 }
 

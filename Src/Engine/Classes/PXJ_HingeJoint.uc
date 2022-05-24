@@ -17,7 +17,7 @@ var(Motor) float MotorMaxSpeed; // Maximum allowed motor speed.
 cpptext
 {
 	UPXJ_HingeJoint() {}
-	PX_JointObject* InitJoint( PX_PhysicsObject* A, PX_PhysicsObject* B, const FCoords* CA, const FCoords* CB );
+	UBOOL InitJoint( PX_JointObject& Joint, const FCoords& CA, const FCoords& CB );
 	void DrawLimitations( FSceneNode* Frame, const FCoords& C );
 }
 

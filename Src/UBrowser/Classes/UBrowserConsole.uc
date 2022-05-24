@@ -2,18 +2,15 @@ class UBrowserConsole expands WindowConsole;
 
 event bool KeyEvent( EInputKey Key, EInputAction Action, FLOAT Delta )
 {
-	local int j,l;
+	local UWinInteraction I;
 
 	if ( Key!=IK_Escape )
 		return Super.KeyEvent( Key, Action, Delta );
 	else
 	{
-		l = Array_Size(Interactions);
-		for ( j=0; j<l; j++ )
-		{
-			if ( Interactions[j].bRequestInput && Interactions[j].KeyEvent(Key,Action,Delta) )
+		foreach Interactions(I)
+			if ( I.bRequestInput && I.KeyEvent(Key,Action,Delta) )
 				Return True;
-		}
 		return Super(Console).KeyEvent( Key, Action, Delta );
 	}
 }

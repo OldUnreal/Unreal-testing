@@ -1,7 +1,8 @@
 //=============================================================================
 // DemoRecSpectator - spectator for demo recordings to replicate ClientMessages
 //=============================================================================
-class DemoRecSpectator extends Spectator;
+class DemoRecSpectator extends Spectator
+	transient;
 
 replication
 {
@@ -34,7 +35,7 @@ function PostBeginPlay()
 			RepClientSetHUD(Level.Game.HUDType, Level.Game.ScoreboardType);
 		else
 		{
-			P = Level.GetLocalPlayerPawn();
+			P = GetLocalPlayerPawn();
 			if( P!=None && P!=Self )
 				RepClientSetHUD(P.HUDType, P.ScoringType);
 		}
@@ -108,33 +109,33 @@ event PreRender( canvas Canvas )
 simulated function RepClientMessage( coerce string S, optional name Type, optional bool bBeep )
 {
 	if( Level.bIsDemoPlayback )
-		Level.GetLocalPlayerPawn().ClientMessage( S, Type, bBeep );
+		GetLocalPlayerPawn().ClientMessage( S, Type, bBeep );
 }
 
 simulated function RepClientPlaySound(sound ASound)
 {
 	if( Level.bIsDemoPlayback )
-		Level.GetLocalPlayerPawn().ClientPlaySound( ASound );
+		GetLocalPlayerPawn().ClientPlaySound( ASound );
 }
 
 simulated function RepTeamMessage( PlayerReplicationInfo PRI, coerce string S, name Type )
 {
 	if( Level.bIsDemoPlayback )
-		Level.GetLocalPlayerPawn().TeamMessage( PRI, S, Type );
+		GetLocalPlayerPawn().TeamMessage( PRI, S, Type );
 }
 
 simulated function RepClientVoiceMessage(PlayerReplicationInfo Sender, PlayerReplicationInfo Recipient, name messagetype, byte messageID)
 {
 	if( Level.bIsDemoPlayback )
-		Level.GetLocalPlayerPawn().ClientVoiceMessage(Sender, Recipient, messagetype, messageID);
+		GetLocalPlayerPawn().ClientVoiceMessage(Sender, Recipient, messagetype, messageID);
 }
 
 simulated function RepClientSetHUD( class<HUD> HudClass, class<Scoreboard> ScoreClass )
 {
 	if( Level.bIsDemoPlayback )
 	{
-		Level.GetLocalPlayerPawn().HUDType = HudClass;
-		Level.GetLocalPlayerPawn().ScoringType = ScoreClass;
+		GetLocalPlayerPawn().HUDType = HudClass;
+		GetLocalPlayerPawn().ScoringType = ScoreClass;
 	}
 }
 

@@ -16,13 +16,19 @@ var UWindowComboControl ResolutionCombo;
 var localized string ResolutionText;
 var localized string ResolutionHelp;
 
+var bool bFullScreen,bSupportsBorderless;
+
+// Show Decals
+var UWindowCheckbox BorderlessFSCheck;
+var localized string BorderlessFSText;
+var localized string BorderlessFSHelp;
+
 var string OldSettings;
 
 // Show Decals
 var UWindowCheckbox ShowWindowedCheck;
 var localized string ShowWindowedText;
 var localized string ShowWindowedHelp;
-var bool bFullScreen;
 
 // Color Depth
 var UWindowComboControl ColorDepthCombo;
@@ -218,6 +224,18 @@ function Created()
 	ShowWindowedCheck.Align = TA_Left;
 	ControlOffset += 25;
 
+	// Borderless fullscreen.
+	bSupportsBorderless = !(Left(GetLocalPlayerPawn().ConsoleCommand("get ini:Engine.Engine.ViewportManager UseDesktopFullScreen"),12)~="Unrecognized");
+	if( bSupportsBorderless )
+	{
+		BorderlessFSCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
+		BorderlessFSCheck.SetText(BorderlessFSText);
+		BorderlessFSCheck.SetHelpText(BorderlessFSHelp);
+		BorderlessFSCheck.SetFont(F_Normal);
+		BorderlessFSCheck.Align = TA_Left;
+		ControlOffset += 25;
+	}
+
 	// Resolution
 	ResolutionCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
 	ResolutionCombo.SetText(ResolutionText);
@@ -347,7 +365,7 @@ function Created()
 	DynamicLightsCheck.SetFont(F_Normal);
 	DynamicLightsCheck.Align = TA_Left;
 	ControlOffset += 25;
-	
+
 	// Show Decals
 	ShowSpecularCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
 	ShowSpecularCheck.SetText(ShowSpecularText);
@@ -381,7 +399,7 @@ function Created()
 	DecoShadowsCheck.SetFont(F_Normal);
 	DecoShadowsCheck.Align = TA_Left;
 	ControlOffset += 25;
-	
+
 	// Pawn shadow view distance
 	ShadowDistanceCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
 	ShadowDistanceCombo.SetText(ShadowDistanceText);
@@ -407,7 +425,7 @@ function Created()
 	CurvyMeshCheck.SetFont(F_Normal);
 	CurvyMeshCheck.Align = TA_Left;
 	ControlOffset += 25;
-	
+
 	// Skybox fog detail
 	SkyFogCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
 	SkyFogCombo.SetText(SkyFogText);
@@ -418,7 +436,7 @@ function Created()
 	SkyFogCombo.AddItem(Class'UnrealVideoMenu'.Default.SkyFogDetail[0], "FOGDETAIL_High");
 	SkyFogCombo.AddItem(Class'UnrealVideoMenu'.Default.SkyFogDetail[1], "FOGDETAIL_Low");
 	SkyFogCombo.AddItem(Class'UnrealVideoMenu'.Default.SkyFogDetail[2], "FOGDETAIL_None");
-	
+
 	// GUI Mouse speed
 	LightLODSlider = UWindowHSliderControl(CreateControl(class'UWindowHSliderControl', ControlLeft, ControlOffset, ControlWidth, 1));
 	LightLODSlider.bNoSlidingNotify = True;
@@ -515,6 +533,16 @@ function LoadAvailableSettings()
 			ResolutionCombo.AddItem(OptionStr);
 	}
 	ResolutionCombo.SetValue(P.ConsoleCommand("GetCurrentRes"));
+
+	if( bSupportsBorderless )
+	{
+		BorderlessFSCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager UseDesktopFullScreen"));
+		if( BorderlessFSCheck.bChecked )
+		{
+			ShowWindowedCheck.bDisabled = true;
+			ResolutionCombo.SetDisabled(true);
+		}
+	}
 
 	ParseString = P.ConsoleCommand("GetColorDepths");
 	for (
@@ -661,9 +689,9 @@ function LoadPawnShadowSettings()
 		PawnShadowCombo.EditBox.Value = PawnShadowList[5];
 		PawnShadowCombo.EditBox.Value2 = "5";
 	}
-	
+
 	DecoShadowsCheck.bChecked = class'GameInfo'.default.bDecoShadows;
-	
+
 	ShadowDistanceCombo.SetDisabled(!class'GameInfo'.default.bCastShadow && !class'GameInfo'.default.bDecoShadows);
 	if( Class'ObjectShadow'.Default.OcclusionDistance<=0.01f )
 		ShadowDistanceCombo.SetSelectedIndex(5);
@@ -939,6 +967,8 @@ function BeforePaint(Canvas C, float X, float Y)
 	LabelTextAreaWidth = 0;
 	VideoCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	ShowWindowedCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	if( BorderlessFSCheck )
+		BorderlessFSCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	ResolutionCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	FovAngleEdit.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	ColorDepthCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
@@ -982,6 +1012,12 @@ function BeforePaint(Canvas C, float X, float Y)
 
 	ShowWindowedCheck.SetSize(CheckboxWidth, 1);
 	ShowWindowedCheck.WinLeft = ControlLeft;
+
+	if( BorderlessFSCheck )
+	{
+		BorderlessFSCheck.SetSize(CheckboxWidth, 1);
+		BorderlessFSCheck.WinLeft = ControlLeft;
+	}
 
 	ResolutionCombo.SetSize(ControlWidth, 1);
 	ResolutionCombo.WinLeft = ControlLeft;
@@ -1029,11 +1065,11 @@ function BeforePaint(Canvas C, float X, float Y)
 
 	ShowDecalsCheck.SetSize(CheckboxWidth, 1);
 	ShowDecalsCheck.WinLeft = ControlLeft;
-	
+
 	ShadowDistanceCombo.SetSize(ControlWidth, 1);
 	ShadowDistanceCombo.WinLeft = ControlLeft;
 	ShadowDistanceCombo.EditBoxWidth = EditAreaWidth;
-	
+
 	ShowSpecularCheck.SetSize(CheckboxWidth, 1);
 	ShowSpecularCheck.WinLeft = ControlLeft;
 
@@ -1055,11 +1091,11 @@ function BeforePaint(Canvas C, float X, float Y)
 
 	CurvyMeshCheck.SetSize(CheckboxWidth, 1);
 	CurvyMeshCheck.WinLeft = ControlLeft;
-	
+
 	SkyFogCombo.SetSize(ControlWidth, 1);
 	SkyFogCombo.WinLeft = ControlLeft;
 	SkyFogCombo.EditBoxWidth = EditAreaWidth;
-	
+
 	LightLODSlider.SetSize(ControlWidth, 1);
 	LightLODSlider.SliderWidth = EditAreaWidth;
 	LightLODSlider.WinLeft = ControlLeft;
@@ -1175,6 +1211,10 @@ function Notify(UWindowDialogControl C, byte E)
 			break;
 		case ShowWindowedCheck:
 			ShowWindowedChanged();
+			break;
+		case BorderlessFSCheck:
+			if( BorderlessFSCheck )
+				ShowWindowedChanged();
 			break;
 		}
 		break;
@@ -1451,13 +1491,26 @@ function ShowWindowedChanged()
 
 	P = GetPlayerOwner();
 
+	if( bSupportsBorderless )
+	{
+		P.ConsoleCommand("SET INI:Engine.Engine.ViewportManager UseDesktopFullScreen " $ BorderlessFSCheck.bChecked);
+		if( BorderlessFSCheck.bChecked )
+		{
+			ShowWindowedCheck.bDisabled = true;
+			ResolutionCombo.SetDisabled(true);
+			return;
+		}
+		ShowWindowedCheck.bDisabled = false;
+		ResolutionCombo.SetDisabled(false);
+		return;
+	}
 	P.ConsoleCommand("ENDFULLSCREEN");
 	if (ShowWindowedCheck.bChecked)
 		P.ConsoleCommand("TOGGLEFULLSCREEN");
 
 	bFullScreen = ShowWindowedCheck.bChecked;
 
-	P.ConsoleCommand("SET INI:Engine.Engine.ViewportManager StartupFullscreen" @ ShowWindowedCheck.bChecked);
+	P.ConsoleCommand("SET INI:Engine.Engine.ViewportManager StartupFullscreen " $ ShowWindowedCheck.bChecked);
 	P.SaveConfig();
 }
 
@@ -1521,7 +1574,7 @@ function ShadowsChanged(byte Idx)
 		class'ObjectShadow'.static.UpdateAllShadows(GetLevel(), true);
 		break;
 	}
-	
+
 	ShadowDistanceCombo.SetDisabled(!class'GameInfo'.default.bCastShadow && !class'GameInfo'.default.bDecoShadows);
 }
 
@@ -1546,46 +1599,49 @@ function SaveConfigs()
 defaultproperties
 {
 	EditAreaWidth=110
-	
+
 	DriverText="Video Driver"
 	DriverHelp="This is the current video driver. Press the Restart button to apply changes."
-	
+
 	ShowWindowedText="Show Fullscreen"
 	ShowWindowedHelp="Whether Unreal should use fullscreen mode."
-	
+
+	BorderlessFSText="Fake Fullscreen"
+	BorderlessFSHelp="Unreal should run game in fake fullscreen (borderless windowed) mode."
+
 	ResolutionText="Resolution"
 	ResolutionHelp="Select a new screen resolution."
-	
+
 	ColorDepthText="Color Depth"
 	ColorDepthHelp="Select a new color depth."
 	BitsText="bit"
-	
+
 	TextureDetailText="World Texture Detail"
 	TextureDetailHelp="Change the texture detail of world geometry.  Use a lower texture detail to improve game performance."
 	Details(0)="High"
 	Details(1)="Medium"
 	Details(2)="Low"
-	
+
 	SkinDetailText="Skin Detail"
 	SkinDetailHelp="Change the detail of player skins.  Use a lower skin detail to improve game performance."
-	
+
 	BrightnessText="Brightness"
 	BrightnessHelp="Adjust display brightness."
-	
+
 	ScaleText="Font Size"
 	ScaleHelp="Adjust the size of elements in the User Interface."
 	ScaleSizes(0)="Normal"
 	ScaleSizes(1)="Double"
-	
+
 	HUDScaleText="HUD Scaling"
 	HUDScaleHelp="Adjust the size of the in-game Heads-up-Display."
-	
+
 	MouseText="GUI Mouse Speed"
 	MouseHelp="Adjust the speed of the mouse in the User Interface."
-	
+
 	GuiSkinText="GUI Skin"
 	GuiSkinHelp="Change the look of the User Interface windows to a custom skin."
-	
+
 	ConfirmSettingsTitle="Confirm Video Settings Change"
 	ConfirmSettingsText="Are you sure you wish to keep these new video settings?"
 	ConfirmSettingsCancelTitle="Video Settings Change"
@@ -1594,7 +1650,7 @@ defaultproperties
 	ConfirmTextureDetailText="Increasing texture detail above its default value may degrade performance on some machines."
 	ConfirmDriverTitle="Change Video Driver"
 	ConfirmDriverText="Do you want to restart Unreal with the selected video driver?"
-	
+
 	PawnShadowText="Pawn shadows"
 	PawnShadowHelp="Detail of shadows that pawns should cast on ground (changes will take effect after mapchange)."
 	PawnShadowList(0)="None"
@@ -1603,13 +1659,13 @@ defaultproperties
 	PawnShadowList(3)="Realtime Med Res"
 	PawnShadowList(4)="Realtime High Res"
 	PawnShadowList(5)="Realtime Ultra Res"
-	
+
 	ShowDecalsText="Show Decals"
 	ShowDecalsHelp="If checked, impact and gore decals will be used in game."
-	
+
 	ShowSpecularText="Enable Specular Lights"
 	ShowSpecularHelp="If checked, allow game render meshes old style lighting."
-	
+
 	ShadowDistanceText="Shadow draw distance"
 	ShadowDistanceHelp="Draw distance of pawn/decoration realtime shadows."
 	ShadowDistanceOpts(0)="Low (-50 %)"
@@ -1618,57 +1674,57 @@ defaultproperties
 	ShadowDistanceOpts(3)="High (4x)"
 	ShadowDistanceOpts(4)="Ultra (8x)"
 	ShadowDistanceOpts(5)="Unlimited"
-	
+
 	MinFramerateText="Min Desired Framerate"
 	MinFramerateHelp="If your framerate falls below this value, Unreal will reduce special effects to increase the framerate."
-	
+
 	DynamicLightsText="Use Dynamic Lighting"
 	DynamicLightsHelp="If checked, dynamic lighting will be used in game."
-	
+
 	WeaponFlashText="Weapon Flash"
 	WeaponFlashHelp="If checked, your screen will flash when you fire your weapon."
-	
+
 	FovAngleText="FOV Angle"
 	FovAngleHelp="Horizontal FOV (field of view) angle in degrees"
-	
+
 	DecoShadowsText="Decoration shadows"
 	DecoShadowsHelp="Whether decorations should cast shadows to the ground."
-	
+
 	FlatShadingText="Mesh flat shading"
 	FlatShadingHelp="Allow specific meshes render with flat shading lighting."
-	
+
 	CurvyMeshText="Curvy meshes"
 	CurvyMeshHelp="Allow specific meshes render with some curved surfaces."
-	
+
 	UsePrecacheText="Precache Content"
 	UsePrecacheHelp="Use this option for precaching map content (such as sounds and textures)."
-	
+
 	TrilinearFilteringText="Trilinear Filtering"
 	TrilinearFilteringHelp="Trilinear texture filtering."
-	
+
 	AnisotropicFilteringText="Anisotropic Filtering"
 	AnisotropicFilteringHelp="Anisotropic texture filtering."
 	AnisotropicFilteringModes(0)="Off"
 	AnisotropicFilteringModes(1)="%Nx"
-	
+
 	AntialiasingText="Antialiasing"
 	AntialiasingHelp="Antialiasing mode."
 	AntialiasingModes(0)="Off"
 	AntialiasingModes(1)="On"
 	AntialiasingModes(2)="%Nx"
-	
+
 	VSyncText="Vertical Synchronization"
 	VSyncHelp="Vertical synchronization"
 	VSyncModes(0)="Off"
 	VSyncModes(1)="On"
 	VSyncModes(2)="Adaptive"
-	
+
 	NotAvailableText="Not available"
 	ControlOffset=20.000000
-	
+
 	SkyFogText="Sky fog mode"
 	SkyFogHelp="Change how volumetric fog is being rendered on skybox."
-	
+
 	LightLODText="Lightmap LOD"
 	LightLODHelp="Change the lighting LOD aggressiveness on world (lower meaning it will cut down light framerate on complex scenes)."
 }

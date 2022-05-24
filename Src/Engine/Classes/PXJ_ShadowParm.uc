@@ -22,7 +22,7 @@ final function SetRotation( rotator R )
 cpptext
 {
 	UPXJ_ShadowParm() {}
-	PX_JointObject* InitJoint( PX_PhysicsObject* A, PX_PhysicsObject* B, const FCoords* CA, const FCoords* CB );
+	UBOOL InitJoint( PX_JointObject& Joint, const FCoords& CA, const FCoords& CB );
 	void UpdateCoords( UBOOL bOnlyWorld ) {}
 }
 

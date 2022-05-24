@@ -3,13 +3,14 @@ class EMITTER_API UBeamMesh : public UStaticMesh
 {
 	DECLARE_CLASS(UBeamMesh,UStaticMesh,CLASS_Transient,Emitter)
 
-	AXParticleEmitter* RenOwner;
+	AXBeamEmitter* RenOwner;
 	BYTE OldSegmentsCount;
 	FLOAT OldUV[4];
+	TArray<FLOAT> SegmentScales;
 
 	// UObject interface.
 	UBeamMesh()
-		: UStaticMesh(),OldSegmentsCount(255)
+		: UStaticMesh(), OldSegmentsCount(255)
 	{
 		bCurvyMesh = 0;
 		Textures.Empty();
@@ -134,13 +135,13 @@ void UBeamMesh::SetSegments( BYTE Count, FLOAT TexCrds[4], UTexture* Start, UTex
 }
 FBox UBeamMesh::GetRenderBoundingBox( const AActor* Owner, UBOOL Exact )
 {
-	return *(FBox*)&Owner->RotationRate; // Just use unused memory data for bounding box.
+	return reinterpret_cast<const xParticle*>(Owner)->BeamData->Bounds;
 }
 void UBeamMesh::GetFrame( FVector* Verts, INT Size, FCoords Coords, AActor* Owner, INT* LODFactor)
 {
-	RenOwner->GetBeamFrame(Verts,Size,Coords,Owner,FrameVerts);
+	RenOwner->GetBeamFrame(Verts, Size, Coords, reinterpret_cast<xParticle*>(Owner), FrameVerts);
 }
-static UBeamMesh* GetBeamingModel( AXParticleEmitter* RenderOwner )
+static UBeamMesh* GetBeamingModel(AXBeamEmitter* RenderOwner)
 {
 	UBeamMesh* NewBeam = FindObject<UBeamMesh>(RenderOwner,UBeamMesh::StaticClass()->GetName(),1);
 	if( !NewBeam )

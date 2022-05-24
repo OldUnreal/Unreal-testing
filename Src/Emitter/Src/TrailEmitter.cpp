@@ -2,81 +2,344 @@
 #include "EmitterPrivate.h"
 
 IMPLEMENT_CLASS(AXTrailEmitter);
-IMPLEMENT_CLASS(AXTrailParticle);
-IMPLEMENT_CLASS(UTrailEmitterRender);
 
-class EMITTER_API UTrailMesh : public UMesh
+struct FTrailOffsetPart
 {
-	DECLARE_CLASS(UTrailMesh, UMesh, CLASS_Transient, Emitter)
+	FVector Location,Velocity,Color,Accel,Z;
+	float LifeSpan[3],Scale,X;
+
+	inline FLOAT GetLifeSpanScale()
+	{
+		return (LifeSpan[0] / LifeSpan[1]);
+	}
+	inline FLOAT GetLifeSpanScaleNeq()
+	{
+		return 1.f - (LifeSpan[0] / LifeSpan[1]);
+	}
+	inline FLOAT GetEndTimeSpan()
+	{
+		return (LifeSpan[2] == 0 ? 1.f : LifeSpan[0] / LifeSpan[2]);
+	}
+	inline FLOAT GetEndTimeSpanReverse()
+	{
+		return (LifeSpan[2] == 0 ? 0.f : (1.f - LifeSpan[0] / LifeSpan[2]));
+	}
+};
+
+class AXTrailParticle : public AInfo
+{
+private:
+	AXTrailParticle() {}
+
+public:
+	DECLARE_CLASS(AXTrailParticle, AInfo, CLASS_Transient | CLASS_NoUserCreate, Emitter)
+
+	TArray<FTrailOffsetPart> Trail;
+	FVector OldTrailSpot;
+	UBOOL bSettingTrail, bFreshParticle;
+	FLOAT NextParticleTime, TexOffset;
+	AXTrailEmitter* Emitter;
+	FBox Bounds;
+
+	AXTrailParticle(AXTrailEmitter* E)
+		: bSettingTrail(FALSE), bFreshParticle(TRUE), NextParticleTime(0.f), TexOffset(0.f), Emitter(E)
+	{
+		XLevel = E->XLevel;
+		Level = E->Level;
+		HitActor = E;
+		Style = E->ParticleStyle;
+		DrawType = DT_Mesh;
+		DrawScale3D = FVector(1.f, 1.f, 1.f);
+		DrawScale = 1.f;
+		ScaleGlow = 1.f;
+		bHidden = FALSE;
+		NetTag = (INT)GFrameNumber;
+	}
+	bool OverrideMeshRender(struct FSceneNode* Frame);
+
+	inline FVector GetTrailZ() const
+	{
+		if (Emitter->SheetUpdir.IsZero())
+			return FVector(0, 0, 0);
+		if (Emitter->bSheetRelativeToRotation)
+			return Emitter->SheetUpdir.SafeNormal().TransformVectorBy(GMath.UnitCoords * Rotation);
+		else return Emitter->SheetUpdir.SafeNormal();
+	}
+
+	inline void BeginNewTrailSeg()
+	{
+		FTrailOffsetPart& T = Trail(Trail.Add());
+		T.Location = OldTrailSpot;
+		T.Velocity = Emitter->GetSpawnVelocity(OldTrailSpot - Location);
+		T.Color = Emitter->ParticleColor.GetValue();
+		T.Accel = Emitter->ParticleAcceleration.GetValue();
+		T.Z = GetTrailZ();
+		T.LifeSpan[1] = Emitter->LifetimeRange.GetValue();
+		T.LifeSpan[0] = T.LifeSpan[1];
+		T.LifeSpan[2] = 0;
+		if (Emitter->bTexContinous)
+		{
+			if (Trail.Num() == 1 && Emitter->ParticleTextures.Num() && Emitter->ParticleTextures(0))
+				TexOffset += Emitter->ParticleTextures(0)->USize * Emitter->ParticleTextures(0)->DrawScale * Emitter->TextureUV[3];
+			T.X = TexOffset;
+			if (Emitter->ParticleTextures.Num() && Emitter->ParticleTextures(0))
+				TexOffset += Emitter->ParticleTextures(0)->USize * Emitter->ParticleTextures(0)->DrawScale * (Emitter->TextureUV[1] + Emitter->TextureUV[3]);
+			else TexOffset += 256.f;
+		}
+		T.Scale = Emitter->StartingScale.GetValue() * 8.f;
+		bSettingTrail = TRUE;
+	}
+
+	UBOOL TickTrail(FLOAT DeltaTime)
+	{
+		// Update trail...
+		for (INT i = 0; i < Trail.Num(); ++i)
+		{
+			FTrailOffsetPart& T = Trail(i);
+			T.LifeSpan[0] -= DeltaTime;
+			T.Location += (T.Velocity * DeltaTime);
+			T.Velocity += (T.Accel * DeltaTime);
+		}
+		if (Trail.Num() && Trail(0).LifeSpan[0] > 0.f) // Make last trail orient in towards second last.
+		{
+			FTrailOffsetPart& T = Trail(0);
+			if (T.LifeSpan[2] == 0)
+				T.LifeSpan[2] = T.LifeSpan[0];
+			else
+			{
+				FLOAT Scale = (T.LifeSpan[0] / T.LifeSpan[2]);
+				FVector& Spot((Trail.Num() == 1) ? Location : Trail(1).Location);
+				T.Location = Spot * (1.f - Scale) + T.Location * Scale;
+			}
+		}
+		UBOOL bUpdating = (!Emitter->bDestruction && !Emitter->bDisabled && (((INT)GFrameNumber) - NetTag) < 4);
+		if (bUpdating)
+		{
+			if (bFreshParticle)
+			{
+				bFreshParticle = FALSE;
+				OldTrailSpot = Location;
+			}
+			if (!Emitter->bDynamicParticleCount)
+			{
+				if ((NextParticleTime -= DeltaTime) <= 0.f)
+				{
+					OldTrailSpot = Location;
+					BeginNewTrailSeg();
+					NextParticleTime = Emitter->SpawnInterval;
+				}
+			}
+			else if (Location != OldTrailSpot)
+			{
+				FVector Delta(OldTrailSpot - Location);
+				FLOAT DistSq(Delta.SizeSquared());
+				if (bSettingTrail && !Trail.Num())
+					bSettingTrail = FALSE;
+				if (bSettingTrail)
+				{
+					FTrailOffsetPart& LastT = Trail(Trail.Num() - 1);
+					if (DistSq > Square(Emitter->MaxTrailLength)) // End trail here.
+					{
+						OldTrailSpot = Location;
+						BeginNewTrailSeg();
+					}
+					else if (LastT.LifeSpan[0] <= 0)
+					{
+						if (DistSq < Square(Emitter->TrailTreshold))
+							bSettingTrail = 0;
+						else
+						{
+							OldTrailSpot = Location;
+							BeginNewTrailSeg();
+						}
+					}
+				}
+				else if (DistSq > Square(Emitter->TrailTreshold))
+				{
+					OldTrailSpot = Location;
+					BeginNewTrailSeg();
+				}
+			}
+		}
+		for (INT j = 0; j < Trail.Num(); ++j)
+			if (Trail(j).LifeSpan[0] <= 0.f)
+				Trail.Remove(j--);
+
+		if (!Trail.Num())
+		{
+			if (!bUpdating)
+				bHidden = TRUE;
+			return FALSE;
+		}
+
+		// Update render bounds
+		FBox Result(Location, Location);
+		for (INT i = 0; i < Trail.Num(); ++i)
+			Result += Trail(i).Location;
+		Bounds = Result.ExpandBy(Emitter->StartingScale.Max * 10.f);
+		return TRUE;
+	}
+
+	inline void Flush()
+	{
+		Trail.Empty();
+		bHidden = FALSE;
+		ScaleGlow = 1.f;
+		bSettingTrail = FALSE;
+		bFreshParticle = TRUE;
+		NetTag = (INT)GFrameNumber;
+	}
+};
+IMPLEMENT_CLASS(AXTrailParticle);
+
+class UTrailMesh : public UMesh
+{
+	DECLARE_CLASS(UTrailMesh, UMesh, CLASS_Transient | CLASS_NoUserCreate, Emitter)
 
 	UTrailMesh()
 		: UMesh()
 	{}
 	FBox GetRenderBoundingBox( const AActor* Owner, UBOOL Exact )
 	{
-		return BoundingBox;
+		return reinterpret_cast<const AXTrailParticle*>(Owner)->Bounds;
 	}
 };
-
 IMPLEMENT_CLASS(UTrailMesh);
 
-AActor* UTrailEmitterRender::GetActors()
+class FTrailParticle : public FParticlesDataBase
 {
-	guard(UTrailEmitterRender::GetActors);
-	if( !Owner )
-	{
-		guard(InitTrailEmitter);
-		Owner = CastChecked<AXTrailEmitter>(GetOuter());
-		Particle = new(Owner,AXTrailParticle::StaticClass()->GetFName()) AXTrailParticle();
-		Particle->XLevel = Owner->XLevel;
-		Particle->Level = Owner->Level;
-		Particle->HitActor = Owner;
-		Particle->Style = Owner->ParticleStyle;
-		Particle->Mesh = new(Owner)UTrailMesh();
-		Owner->ParticleData = Particle;
-		Owner->InitTrailEmitter();
-		unguard;
-	}
-	Particle->Location = Owner->Location;
+public:
+	TArray<AXTrailParticle*> Particles;
+	UTrailMesh* TrailMesh;
 
-	AActor* Result = Particle;
-	if (Observer->ShowFlags & SHOW_InGameMode)
-		Result->Target = NULL;
-	else
+	FTrailParticle(AXTrailEmitter* E)
+		: FParticlesDataBase(E)
+		, TrailMesh(NULL)
 	{
-		Result->Target = Owner;
-		Owner->Target = NULL;
 	}
-	return Result;
-	unguard;
-}
-void UTrailEmitterRender::Destroy()
-{
-	if( Particle && !GIsRequestingExit )
+	~FTrailParticle()
 	{
-		if( Owner )
-			Owner->ParticleData = NULL;
-		delete Particle;
-		Particle = NULL;
+		if (!GIsCollectingGarbage)
+		{
+			for (INT i = 0; i < Particles.Num(); ++i)
+			{
+				Particles(i)->ConditionalDestroy();
+				delete Particles(i);
+			}
+			Particles.Empty();
+			if (TrailMesh)
+			{
+				TrailMesh->ConditionalDestroy();
+				delete TrailMesh;
+				TrailMesh = nullptr;
+			}
+		}
 	}
-	Super::Destroy();
-}
-void AXTrailParticle::Destroy()
-{
-	if( Mesh && !GIsRequestingExit )
+	UBOOL HasAliveParticles() const
 	{
-		delete Mesh;
-		Mesh = NULL;
+		for (INT i = 0; i < Particles.Num(); ++i)
+			if (!Particles(i)->bHidden)
+				return TRUE;
+		return FALSE;
 	}
-	Super::Destroy();
-}
+	void HideAllParts()
+	{
+		for (INT i = 0; i < Particles.Num(); ++i)
+		{
+			Particles(i)->bHidden = TRUE;
+			Particles(i)->Trail.Empty();
+		}
+	}
+	void SetLen(INT GoalLen)
+	{
+	}
+	void Serialize(FArchive& Ar)
+	{
+		Ar << Particles << TrailMesh;
+	}
+	AXTrailParticle* GetFreeTrail(const FVector& Pos, const FRotator& Rot)
+	{
+		for (INT i = 0; i < Particles.Num(); ++i)
+		{
+			if (Particles(i)->bHidden)
+			{
+				Particles(i)->Flush();
+				Particles(i)->OldTrailSpot = Pos;
+				Particles(i)->Location = Pos;
+				Particles(i)->Rotation = Rot;
+				return Particles(i);
+			}
+		}
+		if (Particles.Num() >= reinterpret_cast<AXTrailEmitter*>(Owner)->MaxParticles)
+			return nullptr;
+
+		if (!TrailMesh)
+			TrailMesh = new UTrailMesh();
+		AXTrailParticle* Result = new AXTrailParticle(reinterpret_cast<AXTrailEmitter*>(Owner));
+		Result->Mesh = TrailMesh;
+		Result->OldTrailSpot = Pos;
+		Result->Location = Pos;
+		Result->Rotation = Rot;
+		Particles.AddItem(Result);
+		return Result;
+	}
+	AActor* GetRenderList(AActor* Last)
+	{
+		guardSlow(FTrailParticle::GetRenderList);
+		for (INT i = 0; i < Particles.Num(); ++i)
+		{
+			if (!Particles(i)->bHidden)
+			{
+				Particles(i)->Target = Last;
+				Last = Particles(i);
+			}
+		}
+		return Last;
+		unguardSlow;
+	}
+	void TickTrails(FLOAT DeltaTime)
+	{
+		guardSlow(FTrailParticle::TickTrails);
+		AXTrailParticle* A;
+		if (reinterpret_cast<AXTrailEmitter*>(Owner)->bSpawnInitParticles)
+		{
+			if (!Particles.Num())
+				GetFreeTrail(Owner->Location, Owner->Rotation); // Must have valid first trail.
+			A = Particles(0);
+			A->bHidden = FALSE;
+			A->ScaleGlow = Owner->ScaleGlow;
+			A->NetTag = (INT)GFrameNumber;
+			A->Location = Owner->Location;
+			A->Rotation = Owner->Rotation;
+			A->TickTrail(DeltaTime);
+
+			// Update any children.
+			for (INT i = (Particles.Num() - 1); i > 0; --i)
+			{
+				A = Particles(i);
+				if (!A->bHidden)
+					A->TickTrail(DeltaTime);
+			}
+		}
+		else
+		{
+			// Update any children.
+			for (INT i = (Particles.Num() - 1); i >= 0; --i)
+			{
+				A = Particles(i);
+				if (!A->bHidden)
+					A->TickTrail(DeltaTime);
+			}
+		}
+		unguardSlow;
+	}
+};
 
 bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 {
 	guard(AXTrailParticle::OverrideMeshRender);
-	AXTrailEmitter* E = (AXTrailEmitter*)GetOuter();
 	URenderDevice* R = Frame->Viewport->RenDev;
-	if (!E->trail.Num() || !E->ParticleTextures.Num())
+	if (!Trail.Num() || !Emitter->ParticleTextures.Num())
 		return true; // Can't render.
 
 	static FTransTexture TrailEmitterList[MAX_FULLPOLYLIST];
@@ -95,28 +358,28 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 	}
 
 	{
-		UTexture* T = E->ParticleTextures(0);
+		UTexture* T = Emitter->ParticleTextures(0);
 		if (!T)
 			T = Level->DefaultTexture;
 		Info = T->GetTexture(INDEX_NONE, R);
 	}
-	FLOAT UScale=(Info->UScale*Info->USize),VScale=(Info->VScale*Info->VSize);
-	FLOAT VScaler(VScale*(E->TextureUV[0]+E->TextureUV[2]));
-	RendParts[0].U = VScale*E->TextureUV[2];
-	RendParts[2].V = VScale*E->TextureUV[2];
+	FLOAT UScale = (Info->UScale * Info->USize), VScale = (Info->VScale * Info->VSize);
+	FLOAT VScaler = (VScale * (Emitter->TextureUV[0] + Emitter->TextureUV[2]));
+	RendParts[0].U = VScale * Emitter->TextureUV[2];
+	RendParts[2].V = VScale * Emitter->TextureUV[2];
 	RendParts[1].V = VScaler;
 	RendParts[3].V = VScaler;
 
-	INT Size = E->trail.Num();
+	INT Size = Trail.Num();
 	INT Final(Size-1);
 	static FVector Next[4],Dir;
 	FPlane Color;
-	FLOAT UOffset = E->TextureUV[3]*UScale;
-	FLOAT UScalar = UScale*(E->TextureUV[1]+E->TextureUV[3]);
-	if( !E->bTexContinous )
-		UScalar/=Size;
+	FLOAT UOffset = Emitter->TextureUV[3]*UScale;
+	FLOAT UScalar = UScale * (Emitter->TextureUV[1] + Emitter->TextureUV[3]);
+	if (!Emitter->bTexContinous)
+		UScalar /= Size;
 	DWORD DrawFlags=PF_TwoSided;
-	switch( E->ParticleStyle )
+	switch (Emitter->ParticleStyle)
 	{
 	case STY_Translucent:
 		DrawFlags |= PF_Translucent;
@@ -134,9 +397,9 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 
 	// Setup distance fog
 	bool bHardwareFogEnabled=false;
-	AZoneInfo* Z=((E->Region.Zone && E->Region.Zone->bZoneBasedFog) ? E->Region.Zone : Frame->Viewport->Actor->CameraRegion.Zone);
+	AZoneInfo* Z=((Emitter->Region.Zone && Emitter->Region.Zone->bZoneBasedFog) ? Emitter->Region.Zone : Frame->Viewport->Actor->CameraRegion.Zone);
 	FFogSurf FogSurface;
-	if( Z && Z->bDistanceFog && R->SupportsDistanceFog && E->ParticleStyle!=STY_Translucent )
+	if( Z && Z->bDistanceFog && R->SupportsDistanceFog && Emitter->ParticleStyle!=STY_Translucent )
 	{
 		FColor& DistCol(Z->FogColor);
 		FPlane DistanceFogColor(DistCol.B/255.f,DistCol.G/255.f,DistCol.R/255.f,1.f);
@@ -149,7 +412,7 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 		bHardwareFogEnabled = true;
 	}
 
-	if( E->TrailType==TRAIL_Sheet )
+	if (Emitter->TrailType == TRAIL_Sheet)
 	{
 		FCoords DirCoords(GMath.UnitCoords);
 		FVector OldAxis;
@@ -157,8 +420,8 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 		// Figure out first direction.
 		for( INT j=0; j<Size; ++j )
 		{
-			FTrailOffsetPart& T = E->trail(j);
-			const FVector& Desired(j==Final ? E->Location : E->trail(j+1).Location);
+			FTrailOffsetPart& T = Trail(j);
+			const FVector& Desired(j==Final ? Location : Trail(j+1).Location);
 			Dir = (Desired-T.Location);
 			if( Dir.SizeSquared()>0.2f )
 			{
@@ -174,14 +437,14 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 		FTransTexture* TL = TrailEmitterList;
 		for( INT i=0; i<Size; ++i )
 		{
-			FTrailOffsetPart& T = E->trail(i);
+			FTrailOffsetPart& T = Trail(i);
 			FLOAT Scale = T.Scale;
-			if (E->TimeScale.Num())
-				Scale *= GetScalerValue(T.GetLifeSpanScaleNeq(), 1.f, E->TimeScale.Num(), &E->TimeScale(0).Time, &E->TimeScale(0).DrawScaling, sizeof(FScaleRangeType));
-			const FVector& Desired(i==Final ? E->Location : E->trail(i+1).Location);
+			if (Emitter->TimeScale.Num())
+				Scale *= GetScalerValue(T.GetLifeSpanScaleNeq(), 1.f, Emitter->TimeScale.Num(), &Emitter->TimeScale(0).Time, &Emitter->TimeScale(0).DrawScaling, sizeof(FScaleRangeType));
+			const FVector& Desired(i==Final ? Location : Trail(i+1).Location);
 			if( !i )
 			{
-				if( E->bTexContinous )
+				if (Emitter->bTexContinous)
 					UOffset = T.X;
 				if( T.Z.IsZero() )
 				{
@@ -193,20 +456,20 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 					Next[0] = (T.Location+T.Z*Scale);
 					Next[1] = (T.Location-T.Z*Scale);
 				}
-				if( E->bSmoothEntryPoint )
+				if (Emitter->bSmoothEntryPoint)
 					Color = FPlane(0,0,0,0);
 				else
 				{
 					FLOAT LifeScale = T.GetLifeSpanScaleNeq();
 					FLOAT LightScale = LifeScale;
-					if( LightScale<E->FadeInTime )
-						LightScale = LightScale/E->FadeInTime;
-					else if( LightScale>E->FadeOutTime )
-						LightScale = 2.f-LightScale/E->FadeOutTime;
+					if (LightScale < Emitter->FadeInTime)
+						LightScale = LightScale / Emitter->FadeInTime;
+					else if (LightScale > Emitter->FadeOutTime)
+						LightScale = 2.f - LightScale / Emitter->FadeOutTime;
 					else LightScale = 1.f;
-					LightScale*=E->FadeInMaxAmount;
-					if (E->ParticleColorScale.Num())
-						Color = FPlane(T.Color * GetScalerValueColor(LifeScale, &E->ParticleColorScale(0), E->ParticleColorScale.Num()) * LightScale, LightScale);
+					LightScale = Clamp(LightScale * (Emitter->FadeInMaxAmount * ScaleGlow), 0.f, 1.f);
+					if (Emitter->ParticleColorScale.Num())
+						Color = FPlane(T.Color * GetScalerValueColor(LifeScale, &Emitter->ParticleColorScale(0), Emitter->ParticleColorScale.Num()) * LightScale, LightScale);
 					else Color = FPlane(T.Color * LightScale, LightScale);
 				}
 			}
@@ -218,21 +481,21 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 			RendParts[1].U = UOffset;
 			if( i!=Final )
 			{
-				FTrailOffsetPart& NT = E->trail(i+1);
+				FTrailOffsetPart& NT = Trail(i+1);
 				FLOAT LifeScale = NT.GetLifeSpanScaleNeq();
 				FLOAT LightScale = LifeScale;
-				if( LightScale<E->FadeInTime )
-					LightScale = LightScale/E->FadeInTime;
-				else if( LightScale>E->FadeOutTime )
-					LightScale = 2.f-LightScale/E->FadeOutTime;
+				if (LightScale < Emitter->FadeInTime)
+					LightScale = LightScale / Emitter->FadeInTime;
+				else if (LightScale > Emitter->FadeOutTime)
+					LightScale = 2.f - LightScale / Emitter->FadeOutTime;
 				else LightScale = 1.f;
-				LightScale*=E->FadeInMaxAmount;
-				if (E->ParticleColorScale.Num())
-					Color = FPlane(NT.Color * GetScalerValueColor(LifeScale, &E->ParticleColorScale(0), E->ParticleColorScale.Num()) * LightScale, LightScale);
+				LightScale = Clamp(LightScale * (Emitter->FadeInMaxAmount * ScaleGlow), 0.f, 1.f);
+				if (Emitter->ParticleColorScale.Num())
+					Color = FPlane(NT.Color * GetScalerValueColor(LifeScale, &Emitter->ParticleColorScale(0), Emitter->ParticleColorScale.Num()) * LightScale, LightScale);
 				else Color = FPlane(NT.Color * LightScale, LightScale);
 				if( i+1==Final )
-					Dir = (E->Location-NT.Location);
-				else Dir = (E->trail(i+2).Location-NT.Location);
+					Dir = (Location-NT.Location);
+				else Dir = (Trail(i+2).Location-NT.Location);
 				if( Dir.SizeSquared()>0.2f )
 				{
 					DirCoords = (GMath.UnitCoords/Dir.Rotation());
@@ -241,7 +504,7 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 					DirCoords.ZAxis = (DirCoords.YAxis+OldAxis).SafeNormal();
 					OldAxis = DirCoords.YAxis;
 				}
-				if( E->bTexContinous )
+				if (Emitter->bTexContinous)
 					UOffset = NT.X;
 				else UOffset+=UScalar;
 			}
@@ -293,33 +556,33 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 		FTransTexture* TL = TrailEmitterList;
 		for( INT i=0; i<Size; ++i )
 		{
-			FTrailOffsetPart& T = E->trail(i);
+			FTrailOffsetPart& T = Trail(i);
 			FLOAT Scale = T.Scale;
-			if (E->TimeScale.Num())
-				Scale *= GetScalerValue(T.GetLifeSpanScaleNeq(), 1.f, E->TimeScale.Num(), &E->TimeScale(0).Time, &E->TimeScale(0).DrawScaling, sizeof(FScaleRangeType));
-			const FVector& Desired(i==Final ? E->Location : E->trail(i+1).Location);
+			if (Emitter->TimeScale.Num())
+				Scale *= GetScalerValue(T.GetLifeSpanScaleNeq(), 1.f, Emitter->TimeScale.Num(), &Emitter->TimeScale(0).Time, &Emitter->TimeScale(0).DrawScaling, sizeof(FScaleRangeType));
+			const FVector& Desired(i==Final ? Location : Trail(i+1).Location);
 			if( !i )
 			{
-				if( E->bTexContinous )
+				if (Emitter->bTexContinous)
 					UOffset = T.X;
 				Next[0] = (T.Location+CD.YAxis*Scale);
 				Next[1] = (T.Location-CD.YAxis*Scale);
 				Next[2] = (T.Location+CD.XAxis*Scale);
 				Next[3] = (T.Location-CD.XAxis*Scale);
-				if( E->bSmoothEntryPoint )
-					Color = FPlane(0,0,0,0);
+				if (Emitter->bSmoothEntryPoint)
+					Color = FPlane(0, 0, 0, 0);
 				else
 				{
 					FLOAT LifeScale = T.GetLifeSpanScaleNeq();
 					FLOAT LightScale = LifeScale;
-					if( LightScale<E->FadeInTime )
-						LightScale = LightScale/E->FadeInTime;
-					else if( LightScale>E->FadeOutTime )
-						LightScale = 2.f-LightScale/E->FadeOutTime;
+					if (LightScale < Emitter->FadeInTime)
+						LightScale = LightScale / Emitter->FadeInTime;
+					else if (LightScale > Emitter->FadeOutTime)
+						LightScale = 2.f - LightScale / Emitter->FadeOutTime;
 					else LightScale = 1.f;
-					LightScale*=E->FadeInMaxAmount;
-					if(E->ParticleColorScale.Num())
-						Color = FPlane(T.Color * GetScalerValueColor(LifeScale, &E->ParticleColorScale(0), E->ParticleColorScale.Num()) * LightScale, LightScale);
+					LightScale *= (Emitter->FadeInMaxAmount * ScaleGlow);
+					if (Emitter->ParticleColorScale.Num())
+						Color = FPlane(T.Color * GetScalerValueColor(LifeScale, &Emitter->ParticleColorScale(0), Emitter->ParticleColorScale.Num()) * LightScale, LightScale);
 					else Color = FPlane(T.Color * LightScale, LightScale);
 				}
 			}
@@ -333,19 +596,19 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 			RendParts[1].U = UOffset;
 			if( i!=Final )
 			{
-				FTrailOffsetPart& NT = E->trail(i+1);
+				FTrailOffsetPart& NT = Trail(i+1);
 				FLOAT LifeScale = NT.GetLifeSpanScaleNeq();
 				FLOAT LightScale = LifeScale;
-				if( LightScale<E->FadeInTime )
-					LightScale = LightScale/E->FadeInTime;
-				else if( LightScale>E->FadeOutTime )
-					LightScale = 2.f-LightScale/E->FadeOutTime;
+				if (LightScale < Emitter->FadeInTime)
+					LightScale = LightScale / Emitter->FadeInTime;
+				else if (LightScale > Emitter->FadeOutTime)
+					LightScale = 2.f - LightScale / Emitter->FadeOutTime;
 				else LightScale = 1.f;
-				LightScale*=E->FadeInMaxAmount;
-				if(E->ParticleColorScale.Num())
-					Color = FPlane(NT.Color * GetScalerValueColor(LifeScale, &E->ParticleColorScale(0), E->ParticleColorScale.Num()) * LightScale, LightScale);
+				LightScale *= (Emitter->FadeInMaxAmount * ScaleGlow);
+				if(Emitter->ParticleColorScale.Num())
+					Color = FPlane(NT.Color * GetScalerValueColor(LifeScale, &Emitter->ParticleColorScale(0), Emitter->ParticleColorScale.Num()) * LightScale, LightScale);
 				else Color = FPlane(NT.Color * LightScale, LightScale);
-				if( E->bTexContinous )
+				if (Emitter->bTexContinous)
 					UOffset = NT.X;
 				else UOffset+=UScalar;
 			}
@@ -410,163 +673,87 @@ bool AXTrailParticle::OverrideMeshRender( FSceneNode* Frame )
 	unguard;
 }
 
-inline void AXTrailEmitter::BeginNewTrailSeg()
+FParticlesDataBase* AXTrailEmitter::GetParticleInterface()
 {
-	FTrailOffsetPart& T = trail(trail.Add());
-	T.Location = OldTrailSpot;
-	T.Velocity = GetSpawnVelocity(OldTrailSpot-Location);
-	T.Color = ParticleColor.GetValue();
-	T.Accel = ParticleAcceleration.GetValue();
-	T.Z = SheetUpdir.SafeNormal();
-	T.LifeSpan[1] = LifetimeRange.GetValue();
-	T.LifeSpan[0] = T.LifeSpan[1];
-	T.LifeSpan[2] = 0;
-	if( bTexContinous )
+	guardSlow(AXTrailEmitter::GetParticleInterface);
+	if (!PartPtr)
 	{
-		T.X = TexOffset;
-		if (ParticleTextures.Num() && ParticleTextures(0))
-			TexOffset += ParticleTextures(0)->USize * ParticleTextures(0)->DrawScale * (TextureUV[1] + TextureUV[3]);
-		else TexOffset += 256.f;
+		FTrailParticle* T = new FTrailParticle(this);
+		PartPtr = T;
 	}
-	T.Scale = StartingScale.GetValue() * 8.f;
-	bSettingTrail = 1;
+	return PartPtr;
+	unguardSlow;
 }
-UBOOL AXTrailEmitter::Tick( FLOAT DeltaTime, ELevelTick TickType )
-{
-	UBOOL bRes = Super::Tick(DeltaTime,TickType);
-	if( (!GIsEditor && TickType!=LEVELTICK_All) || !ParticleTextures.Num() )
-		return bRes;
 
-	guard(AXTrailEmitter::Tick);
-	// Update trail...
-	for( INT i=0; i<trail.Num(); ++i )
+void AXTrailEmitter::UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL bSkipChildren)
+{
+	guard(AXTrailEmitter::UpdateEmitter);
+	if (!PartPtr)
+		GetParticleInterface();
+	if (bAutoReset && ResetTimer > 0)
 	{
-		FTrailOffsetPart& T = trail(i);
-		T.LifeSpan[0]-=DeltaTime;
-		T.Location+=(T.Velocity*DeltaTime);
-		T.Velocity+=(T.Accel*DeltaTime);
+		ResetTimer -= DeltaTime;
+		if (ResetTimer <= 0)
+			ActiveCount = 0;
 	}
-	if( trail.Num() && trail(0).LifeSpan[0]>0.f ) // Make last trail orient in towards second last.
+	if (bAutoVisibilityBox)
 	{
-		FTrailOffsetPart& T = trail(0);
-		if( T.LifeSpan[2]==0 )
-			T.LifeSpan[2] = T.LifeSpan[0];
-		else
+		switch (SpawnPosType)
 		{
-			FLOAT Scale = (T.LifeSpan[0]/T.LifeSpan[2]);
-			FVector& Spot((trail.Num()==1) ? Location : trail(1).Location);
-			T.Location = Spot*(1.f-Scale)+T.Location*Scale;
+		case SP_Box:
+			RendBoundingBox.Min = FVector(BoxLocation.X.Min, BoxLocation.Y.Min, BoxLocation.Z.Min) + Location;
+			RendBoundingBox.Max = FVector(BoxLocation.X.Max, BoxLocation.Y.Max, BoxLocation.Z.Max) + Location;
+			break;
+		default:
+			RendBoundingBox.Min = FVector(SphereCylinderRange.Min, SphereCylinderRange.Min, SphereCylinderRange.Min) + Location;
+			RendBoundingBox.Max = RendBoundingBox.Min;
+			RendBoundingBox += Location + FVector(SphereCylinderRange.Max, SphereCylinderRange.Max, SphereCylinderRange.Max);
+			RendBoundingBox += Location - FVector(SphereCylinderRange.Max, SphereCylinderRange.Max, SphereCylinderRange.Max);
 		}
+		RendBoundingBox = RendBoundingBox.ExpandBy(8.f);
 	}
-	if( !bDestruction && !bDisabled )
-	{
-		if( bDynamicParticleCount && Location!=OldTrailSpot )
-		{
-			FVector Delta(OldTrailSpot-Location);
-			FLOAT DistSq(Delta.SizeSquared());
-			if( bSettingTrail && !trail.Num() )
-				bSettingTrail = 0;
-			if( bSettingTrail )
-			{
-				FTrailOffsetPart& LastT = trail(trail.Num()-1);
-				if( DistSq>Square(MaxTrailLength) ) // End trail here.
-				{
-					OldTrailSpot = Location;
-					BeginNewTrailSeg();
-				}
-				else if( LastT.LifeSpan[0]<=0 )
-				{
-					if( DistSq<Square(TrailTreshold) )
-						bSettingTrail = 0;
-					else
-					{
-						OldTrailSpot = Location;
-						BeginNewTrailSeg();
-					}
-				}
-			}
-			else if( DistSq>Square(TrailTreshold) )
-			{
-				OldTrailSpot = Location;
-				BeginNewTrailSeg();
-			}
-		}
-		else if( !bDynamicParticleCount )
-		{
-			if( (NextParticleTime-=DeltaTime)<=0.f )
-			{
-				OldTrailSpot = Location;
-				BeginNewTrailSeg();
-				NextParticleTime = SpawnInterval;
-			}
-		}
-	}
-	for( INT j=0; j<trail.Num(); ++j )
-		if( trail(j).LifeSpan[0]<=0.f )
-			trail.Remove(j--);
-	if( bDestruction && !trail.Num() && !bDeleteMe )
-	{
-		XLevel->DestroyActor(this);
-		return bDeleteMe;
-	}
+	reinterpret_cast<FTrailParticle*>(PartPtr)->TickTrails(DeltaTime);
+	if (!bSkipChildren)
+		UpdateChildren(DeltaTime, Render);
+	unguardobj;
+}
 
-	// Update render bounds
-	if( ParticleData && ParticleData->Mesh )
-	{
-		FBox Result(0);
-		if( !trail.Num() )
-			Result+=Location;
-		else
-		{
-			for( INT i=0; i<trail.Num(); ++i )
-				Result+=trail(i).Location;
-		}
-		ParticleData->Mesh->BoundingBox = Result.ExpandBy(StartingScale.Max*10.f);
-	}
-	unguard;
-	return bRes;
-}
-void AXTrailEmitter::KillEmitter()
-{
-	guard(AXTrailEmitter::KillEmitter);
-	if( bDeleteMe )
-		return;
-	if( GIsEditor )
-		XLevel->DestroyActor(this);
-	else
-	{
-		if( !trail.Num() )
-			XLevel->DestroyActor(this);
-		else bDestruction = 1;
-	}
-	unguard;
-}
-void AXTrailEmitter::TriggerEmitter()
-{
-	switch( TriggerAction )
-	{
-	case ETR_ToggleDisabled:
-		bDisabled = !bDisabled;
-		break;
-	case ETR_ResetEmitter:
-		trail.Empty();
-		break;
-	}
-}
 void AXTrailEmitter::InitTrailEmitter()
 {
+	guardSlow(AXTrailEmitter::InitTrailEmitter);
 	if( !bDynamicParticleCount )
 	{
 		if( ParticlesPerSec<=0 )
 			SpawnInterval = LifetimeRange.Max/MaxParticles;
 		else SpawnInterval = LifetimeRange.Max/ParticlesPerSec;
 	}
-	if (bTexContinous && ParticleTextures.Num() && ParticleTextures(0))
-		TexOffset += ParticleTextures(0)->USize * ParticleTextures(0)->DrawScale * TextureUV[3];
+	unguardSlow;
 }
 void AXTrailEmitter::ResetEmitter()
 {
+	guardSlow(AXTrailEmitter::ResetEmitter);
 	Super::ResetEmitter();
-	trail.Empty();
 	InitTrailEmitter();
+	unguardSlow;
+}
+void AXTrailEmitter::InitializeEmitter(AXParticleEmitter* Parent)
+{
+	guardSlow(AXTrailEmitter::InitializeEmitter);
+	Super::InitializeEmitter(Parent);
+	InitTrailEmitter();
+	unguardSlow;
+}
+AActor* AXTrailEmitter::GrabTrail(const FVector& Pos, const FRotator& Rot)
+{
+	guard(AXTrailEmitter::GrabTrail);
+	if (!PartPtr)
+		GetParticleInterface();
+	return reinterpret_cast<FTrailParticle*>(PartPtr)->GetFreeTrail(Pos, Rot);
+	unguard;
+}
+FLOAT AXTrailEmitter::GetMaxLifeTime() const
+{
+	guardSlow(AXTrailEmitter::GetMaxLifeTime);
+	return Max(LifetimeRange.Min, LifetimeRange.Max);
+	unguardSlow;
 }

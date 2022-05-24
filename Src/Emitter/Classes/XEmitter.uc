@@ -61,8 +61,18 @@ var transient Coords CacheRot;
 var transient vector OldSpawnPosition;
 var transient BoundingBox RendBoundingBox;
 
-var array<XEmitter> SpawnCombiners,LifeTimeCombiners,DestructCombiners,WallHitCombiners; // For editor to save list and implement in map.
 var transient array<XEmitter> TSpawnC,TLifeTimeC,TDestructC,TWallHitC; // For in game runtime to use.
+
+// Obsolete (but remains for backwards compatibility):
+var array<XEmitter> SpawnCombiners,LifeTimeCombiners,DestructCombiners,WallHitCombiners; // For editor to save list and implement in map.
+var array< class<XEmitter> > ParticleSpawnCClass; // Class definition for mod authors (for ready-to-use FX)
+var array< class<XEmitter> > ParticleKillCClass; // Class definition for mod authors (for ready-to-use FX)
+var array< class<XEmitter> > ParticleWallHitCClass; // Class definition for mod authors (for ready-to-use FX)
+var array< class<XEmitter> > ParticleLifeTimeCClass; // Class definition for mod authors (for ready-to-use FX)
+var(EmCombiner) name ParticleSpawnTag; // A second emitter to emit particle over spawn location of a new particle.
+var(EmCombiner) name ParticleKillTag; // A second emitter to emit particle over kill location of a particle.
+var(EmCombiner) name ParticleWallHitTag; // A second emitter to emit particle over wallhit location of a particle.
+var(EmCombiner) name ParticleLifeTimeTag; // Emit this particle every X amount of seconds of this particles lifetime.
 
 var(EmGeneral) const int MaxParticles; // Maximum particles of this emitter.
 var(EmGeneral) float ParticlesPerSec; // Number of particles that should spawn per second (0 = LifeSpan/MaxParticles).
@@ -77,16 +87,13 @@ var(EmRevolution) vector RevolutionOffsetUnAxis; // Revolution offset (per axis)
 var(EmVisuals) array<Texture> ParticleTextures; // Random particle textures (or animation).
 var(EmVisuals) ERenderStyle ParticleStyle; // Style of the particles.
 var(EmFade) ERenderStyle FadeStyle; // While particle is fading use this style (STY_None = ParticleStyle).
-var(EmCombiner) name ParticleSpawnTag; // A second emitter to emit particle over spawn location of a new particle.
-var array< class<XEmitter> > ParticleSpawnCClass; // Class definition for mod authors (for ready-to-use FX)
-var(EmCombiner) name ParticleKillTag; // A second emitter to emit particle over kill location of a particle.
-var array< class<XEmitter> > ParticleKillCClass; // Class definition for mod authors (for ready-to-use FX)
-var(EmCombiner) name ParticleWallHitTag; // A second emitter to emit particle over wallhit location of a particle.
-var array< class<XEmitter> > ParticleWallHitCClass; // Class definition for mod authors (for ready-to-use FX)
+var(EmCombiner) export editinline array<XEmitter> SpawnCombiner; // A second emitter to emit particle over spawn location of a new particle.
+var(EmCombiner) export editinline array<XEmitter> KillCombiner; // A second emitter to emit particle over kill location of a particle.
+var(EmCombiner) export editinline array<XEmitter> WallHitCombiner; // A second emitter to emit particle over wallhit location of a particle.
+var(EmCombiner) export editinline array<XEmitter> LifeTimeCombiner; // Emit this particle every X amount of seconds of this particles lifetime.
 var(EmCombiner) IntRange CombinedParticleCount; // When this Emitter actor is a combiner, spawn this amount of particles.
-var(EmCombiner) name ParticleLifeTimeTag; // Emit this particle every X amount of seconds of this particles lifetime.
-var array< class<XEmitter> > ParticleLifeTimeCClass; // Class definition for mod authors (for ready-to-use FX)
 var(EmCombiner) FloatRange ParticleLifeTimeSDelay; // Spawn delay for lifetime combiner.
+var(EmCombiner) export editinline XTrailEmitter ParticleTrail; // Trail that should appear for each particle.
 var(EmFade) float FadeInTime,FadeOutTime; // Scaling from 0 to 1 (in lifetime scale). For SpriteEmitters set bUnlit false to use alphablend fading.
 var(EmFade) float FadeInMaxAmount; // Max scaleglow when on full fade in.
 var(EmVisuals) FloatRange StartingScale; // Initial scaling of the particles.
@@ -154,8 +161,9 @@ ParticleAcceleration works as gravity value.
 Set PhysicsData PX_RigidBodyData for this actor for parameters.
 Do Note that Particle Forces do not work together with this other then kill force.*/
 
-var transient bool bHasLossVel,bHasAliveParticles;
-var const bool bDestruction,bRotationRequest,bNeedsTexture;
+var transient bool bHasLossVel,bAllParticlesSpawned;
+var transient private bool bInitCombiners;
+var const bool bRotationRequest,bNeedsTexture;
 var bool BACKUP_Disabled;
 
 native(1766) final function SpawnParticles( int Count );

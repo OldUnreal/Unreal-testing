@@ -28,7 +28,7 @@ bool AXParticleForces::UpdateForceOn( AActor* PartActor, const float& LifeTimeSc
 	return ((PartActor->Location-Location).SizeSquared()<Square(EffectingRadius));
 }
 
-void AVelocityForce::HandleForce( PartsType* Data, AActor* A, const float& Delta )
+void AVelocityForce::HandleForce(xParticle* A, FLOAT Delta)
 {
 	if( bChangeAcceleration )
 	{
@@ -41,14 +41,14 @@ void AVelocityForce::HandleForce( PartsType* Data, AActor* A, const float& Delta
 	else A->Velocity+=VelocityToAdd*Delta;
 }
 
-void AKillParticleForce::HandleForce( PartsType* Data, AActor* A, const float& Delta )
+void AKillParticleForce::HandleForce(xParticle* A, FLOAT Delta)
 {
-	Data->LiftTime-=(LifeTimeDrainAmount*Delta);
+	A->LifeTime-=(LifeTimeDrainAmount*Delta);
 }
 
-void AParticleConcentrateForce::HandleForce( PartsType* Data, AActor* A, const float& Delta )
+void AParticleConcentrateForce::HandleForce(xParticle* A, FLOAT Delta)
 {
-	FVector Dir=(Location+CenterPointOffset-A->Location);
+	FVector Dir = (Location + CenterPointOffset - A->Location);
 	if( bSetsAcceleration )
 	{
 		if( bActorDistanceSuckIn )
@@ -76,7 +76,7 @@ void AXParticleForces::Modify()
 	guard(AXParticleForces::Modify);
 	OldTagName = Tag;
 	INT i,j;
-	for( TObjectIterator<AXEmitter> It; It; ++It )
+	for( TActorIterator<AXEmitter> It(XLevel); It; ++It )
 	{
 		AXEmitter* EM = *It;
 		if( EM->IsPendingKill() )
@@ -137,7 +137,7 @@ void AXParticleForces::PostScriptDestroyed()
 	{
 		guard(AXParticleForces::PostScriptDestroyed);
 		INT i,j;
-		for( TObjectIterator<AXEmitter> It; It; ++It )
+		for (TActorIterator<AXEmitter> It(XLevel); It; ++It)
 		{
 			AXEmitter* EM = *It;
 			if( EM->IsPendingKill() )

@@ -2,25 +2,51 @@
 #include "EmitterPrivate.h"
 
 IMPLEMENT_CLASS(UEmitterRendering);
-IMPLEMENT_CLASS(UScriptPostRenderRI);
 IMPLEMENT_CLASS(AEmitterGarbageCollector);
 
 // Garbage collection
+void AEmitterGarbageCollector::MarkGCParticles(ULevel* Map, FParticlesDataBase* Ptr)
+{
+	guard(AEmitterGarbageCollector::MarkGCParticles);
+	if (GIsCollectingGarbage || GIsEditor)
+		delete Ptr;
+	else
+	{
+		if (Map->ParentLevel)
+			Map = Map->ParentLevel;
+		AEmitterGarbageCollector* GA = NULL;
+		for (TActorIterator<AEmitterGarbageCollector> It(Map); It; ++It)
+		{
+			GA = *It;
+			break;
+		}
+		if (!GA)
+		{
+			GA = reinterpret_cast<AEmitterGarbageCollector*>(Map->SpawnActor(AEmitterGarbageCollector::StaticClass()));
+			if (GA)
+				GA->bNoDelete = TRUE;
+		}
+		if (GA)
+			GA->AddGarbage(Ptr);
+		else delete Ptr;
+	}
+	unguard;
+}
+
 UBOOL AEmitterGarbageCollector::Tick( FLOAT DeltaTime, enum ELevelTick TickType )
 {
-	if (GarbagePtr && Level->TimeSeconds > CleanUpTime)
-		CleanUpGarbage();
+	if (GarbagePtr && --CleanUpTime<=0)
+	{
+		for (INT i = (GarbagePtr->Num() - 1); i >= 0; --i)
+			delete (*GarbagePtr)(i);
+		delete GarbagePtr;
+		GarbagePtr = NULL;
+	}
 	return 1;
 }
 void AEmitterGarbageCollector::Destroy()
 {
-	CleanUpGarbage();
-	Super::Destroy();
-}
-
-void AEmitterGarbageCollector::CleanUpGarbage()
-{
-	guard(AEmitterGarbageCollector::CleanUpGarbage);
+	guard(AEmitterGarbageCollector::Destroy);
 	if (GarbagePtr)
 	{
 		for (INT i = (GarbagePtr->Num() - 1); i >= 0; --i)
@@ -28,23 +54,35 @@ void AEmitterGarbageCollector::CleanUpGarbage()
 		delete GarbagePtr;
 		GarbagePtr = NULL;
 	}
+	Super::Destroy();
 	unguard;
 }
 
-void AEmitterGarbageCollector::AddGarbage( ParticlesDataList* Ptr )
+void AEmitterGarbageCollector::AddGarbage(FParticlesDataBase* Ptr)
 {
 	guard(AEmitterGarbageCollector::AddGarbage);
-	CleanUpTime = Level->TimeSeconds+1.f;
+	CleanUpTime = 5;
 	if (!GarbagePtr)
-		GarbagePtr = new TArray<ParticlesDataList*>;
+		GarbagePtr = new TArray<FParticlesDataBase*>;
 	GarbagePtr->AddItem(Ptr);
+	unguard;
+}
+
+void AEmitterGarbageCollector::Serialize(FArchive& Ar)
+{
+	guard(AEmitterGarbageCollector::Serialize);
+	if (GarbagePtr && Ar.SerializeRefs())
+	{
+		for (INT i = (GarbagePtr->Num() - 1); i >= 0; --i)
+			(*GarbagePtr)(i)->Serialize(Ar);
+	}
+	Super::Serialize(Ar);
 	unguard;
 }
 
 FCoords UEmitterRendering::CamPos;
 
 UEmitterRendering::UEmitterRendering()
-	: PartPtr(new ParticlesDataList)
 {
 	guard(UEmitterRendering::UEmitterRendering);
 	AXParticleEmitter* A = CastChecked<AXParticleEmitter>(GetOuter());
@@ -52,74 +90,17 @@ UEmitterRendering::UEmitterRendering()
 	unguard;
 }
 
-void UEmitterRendering::SpawnDelayedPart(const FVector& Pos)
-{
-	if (PartPtr)
-	{
-		PartPtr->DelaySpawn.AddItem(Pos);
-		PartPtr->bHadDelaySpawn = 1;
-	}
-}
-
-inline AActor* UEmitterRendering::GetActorsInner(UBOOL bDrawSelf)
-{
-	guardSlow(UEmitterRendering::GetActorsInner);
-	// Local variables.
-	AXParticleEmitter* A = (AXParticleEmitter*)GetOuter();
-
-	// Draw self.
-	AActor* P, * Result = NULL;
-	int i;
-	int l = PartPtr->Len();
-
-	if (bDrawSelf)
-	{
-		Result = (AActor*)GetOuter();
-		Result->Target = NULL;
-	}
-	for (i = 0; i < l; i++)
-	{
-		P = PartPtr->GetA(i);
-		if (!P->bHidden && ((P->DrawType == DT_Mesh && P->Skin && P->Mesh) || P->Texture))
-		{
-			P->Target = Result;
-			Result = P;
-		}
-	}
-
-	// Draw combiners.
-	if (A->bHasSpecialParts)
-	{
-		l = A->PartCombiners.Num();
-		AXEmitter** PA = &A->PartCombiners(0);
-		for (i = 0; i < l; i++)
-			if (PA[i] && !PA[i]->bHurtEntry)
-			{
-				PA[i]->bHurtEntry = TRUE; // Using Actor.bHurtEntry to detect infinite loops within emitters.
-				P = ((UEmitterRendering*)PA[i]->RenderInterface)->GetActorsInner();
-				PA[i]->bHurtEntry = FALSE;
-				if (P)
-				{
-					P->Target = Result;
-					Result = P;
-				}
-			}
-	}
-	return Result;
-	unguardSlow;
-}
-
 AActor* UEmitterRendering::GetActors()
 {
 	guard(UEmitterRendering::GetActors);
 	STAT(++GStatEmitter.UpdEmitters.Calls);
 	STAT(FStatTimerScope Scope(GStatEmitter.UpdEmitTime));
-	AXParticleEmitter* A = (AXParticleEmitter*)GetOuter();
+	AXParticleEmitter* A = reinterpret_cast<AXParticleEmitter*>(GetOuter());
 
 	// Local variables.
-	if (!A || A->bKillNextTick || !A->ShouldUpdateEmitter(this))
+	if (!A || !A->ShouldUpdateEmitter(Frame))
 	{
-		LastUpdateTime = GFrameNumber;
+		A->LastUpdateTime = GFrameNumber;
 		return NULL;
 	}
 	if (A->bNotOnPortals && Frame->Recursion)
@@ -128,111 +109,32 @@ AActor* UEmitterRendering::GetActors()
 	if (!A->bHasInitialized)
 	{
 		A->bHasInitialized = 1;
-		A->InitializeEmitter(this, A);
-		LastUpdateTime = GFrameNumber;
+		A->InitializeEmitter(A);
+		A->LastUpdateTime = GFrameNumber;
 	}
 
-	if ((LastUpdateTime != GFrameNumber) &&
+	if ((A->LastUpdateTime != GFrameNumber) &&
 		(GIsEditor
 			? (Frame->Viewport && Frame->Viewport->IsRealtime())
 			: (!A->Level->Pauser.Len() && (A->bAlwaysTick || !A->Level->bPlayersOnly))
 			))
 	{
-		LastUpdateTime = GFrameNumber;
+		A->LastUpdateTime = GFrameNumber;
 		CamPos.Origin = Frame->Coords.Origin;
 		CamPos.XAxis = Frame->Coords.ZAxis;
 		CamPos.YAxis = Frame->Coords.XAxis;
 		CamPos.ZAxis = -Frame->Coords.YAxis;
 		const FLOAT DeltaTime = A->Level->LastDeltaTime;
-		A->UpdateEmitter(DeltaTime, this);
+		A->UpdateEmitter(DeltaTime, this, FALSE);
 	}
 
-	if (!A->ShouldRenderEmitter(this))
+	if (!A->ShouldRenderEmitter(Frame))
 		return NULL;
 
-	AActor* Result = GetActorsInner(!(Observer->ShowFlags & SHOW_InGameMode));
-	STAT(unclockTimer(GStatEmitter.UpdEmitTime.Time));
+	AActor* Result = (Observer->ShowFlags & SHOW_InGameMode) ? nullptr : A;
+	Result = A->GetRenderList(Result);
+	A->Target = NULL; // Make sure owner emitter never references a particle (should always be on the end of list)!
 	return Result;
-	unguard;
-}
-
-void UEmitterRendering::ChangeParticleCount( int NewNum )
-{
-	guard(UEmitterRendering::ChangeParticleCount);
-	if( !PartPtr || !NewNum )
-		return;
-	if( NewNum==PartPtr->Len() )
-		return;
-
-	AActor* OwnerA = (AActor*)GetOuter();
-	AActor* HitA=(OwnerA->HitActor ? OwnerA->HitActor : OwnerA);
-	PartPtr->SetLen(NewNum);
-	AActor* A;
-	UTexture* T = AActor::StaticClass()->GetDefaultActor()->Texture;
-	for( INT i=0; i<NewNum; i++ )
-	{
-		A = PartPtr->GetA(i);
-		// Initilize the particles to have good default values.
-		A->DrawScale3D = OwnerA->DrawScale3D;
-		A->Owner = OwnerA;
-		A->bHidden = 1;
-		A->LifeSpan = 1.f;
-		A->HitActor = HitA;
-		A->SetClass(AEmitterRC::StaticClass());
-		A->XLevel = HitA->XLevel;
-		A->Region.iLeaf = INDEX_NONE;
-		A->AnimSequence = NAME_None;
-		A->LODBias = 1.f;
-		A->Texture = T;
-		A->Skin = T;
-		A->Region = OwnerA->Region;
-		A->NetTag = i;
-		for( INT j=0; j<8; j++ )
-			A->MultiSkins[j] = OwnerA->MultiSkins[j];
-	}
-	unguard;
-}
-bool UEmitterRendering::HasAliveParticles()
-{
-	guard(UEmitterRendering::HasAliveParticles);
-	if( !PartPtr )
-		return 0;
-	if( PartPtr->DelaySpawn.Num() )
-		return 1;
-	int l = PartPtr->Len();
-	int i;
-	for( i=0; i<l; i++ )
-		if( !PartPtr->GetA(i)->bHidden )
-			return 1;
-	AXParticleEmitter* PActor = (AXParticleEmitter*)GetOuter();
-	if( PActor->bHasSpecialParts )
-	{
-		l = PActor->PartCombiners.Num();
-		for( i=0; i<l; i++ )
-			if( PActor->PartCombiners(i) && PActor->PartCombiners(i)->bHasInitialized
-			 && Cast<UEmitterRendering>(PActor->PartCombiners(i)->RenderInterface)
-			 && ((UEmitterRendering*)PActor->PartCombiners(i)->RenderInterface)->HasAliveParticles() )
-				return 1;
-	}
-	return 0;
-	unguard;
-}
-void UEmitterRendering::HideAllParticles()
-{
-	guardSlow(UEmitterRendering::HideAllParticles);
-	if( PartPtr )
-		PartPtr->HideAllParts();
-	unguardSlow;
-}
-void UEmitterRendering::Destroy()
-{
-	guard(UEmitterRendering::Destroy);
-	Super::Destroy();
-	if( PartPtr )
-	{
-		delete PartPtr;
-		PartPtr = NULL;
-	}
 	unguard;
 }
 

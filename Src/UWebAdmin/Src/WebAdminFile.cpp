@@ -269,7 +269,7 @@ void UWebQuery::execSaveFileUpload(FFrame& Stack, RESULT_DECL)
 		FBitArchive DeCompAr(DeCompData,1);
 		if( ZLibDeCompressData(BitAr,DeCompAr)==ZCOM_Success )
 		{
-			ExchangeArray(Data,DeCompData); // Fastest way to do it is to swap pointers.
+			Data.ExchangeArray(&DeCompData); // Fastest way to do it is to swap pointers.
 			BitAr.Seek(0);
 			Stack.Logf(NAME_Log,TEXT("SaveFileUpload: Decompressed '%ls' (%ls) %i kb -> %i kb."),*UpFileName,*ZL.OriginalFileName,(DeCompData.Num() >> 10),(Data.Num() >> 10));
 

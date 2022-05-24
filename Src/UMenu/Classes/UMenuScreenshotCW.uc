@@ -27,9 +27,13 @@ function SetMap(string MapName)
 	}
 	else
 	{
-		MapTitle = "";
-		MapAuthor = "";
-		IdealPlayerCount = "";
+		MapTitle = Localize("LevelInfo0","Title",MapName,MapName);
+		MapAuthor = Localize("LevelInfo0","Author",MapName," ");
+		if( MapAuthor==" " )
+			MapAuthor = "";
+		IdealPlayerCount = Localize("LevelInfo0","IdealPlayerCount",MapName," ");
+		if( IdealPlayerCount==" " )
+			IdealPlayerCount = "";
 	}
 }
 

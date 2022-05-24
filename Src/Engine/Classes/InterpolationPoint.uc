@@ -18,7 +18,7 @@ var() float  ScreenFlashScale;
 var() vector ScreenFlashFog;
 
 // Other points in this interpolation path.
-var InterpolationPoint Prev, Next;
+var noedsave InterpolationPoint Prev, Next;
 
 //
 // At start of gameplay, link all matching interpolation points together.
@@ -27,22 +27,28 @@ simulated function BeginPlay()
 {
 	Super.BeginPlay();
 
+	LinkInterpolation();
+}
+
+// Called on editor aswell when you preview path.
+simulated event LinkInterpolation()
+{
 	// Try to find previous.
 	foreach AllActors( class 'InterpolationPoint', Prev, Tag )
 		if ( Prev.Position == Position-1 )
 			break;
-	if ( Prev != None )
+	if( Prev )
 		Prev.Next = Self;
 
 	// Try to find next.
 	foreach AllActors( class 'InterpolationPoint', Next, Tag )
 		if ( Next.Position == Position+1 )
 			break;
-	if ( Next == None )
+	if( !Next )
 		foreach AllActors( class 'InterpolationPoint', Next, Tag )
 			if ( Next.Position == 0 )
 				break;
-	if ( Next != None )
+	if( Next )
 		Next.Prev = Self;
 }
 

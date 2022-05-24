@@ -44,8 +44,8 @@ cpptext
 	virtual void CreateMeshShape(const FShapeProperties& Props, PX_MeshShape* Mesh, const FVector& Scale=FVector(1,1,1)) {}
 	
 	// Joints.
-	virtual PX_JointObject* CreateJointFixed( const FJointBaseProps& Props ) { return NULL; }
-	virtual PX_JointObject* CreateJointHinge( const FJointHingeProps& Props ) { return NULL; }
-	virtual PX_JointObject* CreateJointSocket( const FJointSocketProps& Props ) { return NULL; }
-	virtual PX_JointObject* CreateConstriant( const FJointConstProps& Props ) { return NULL; }
+	virtual UBOOL CreateJointFixed( const FJointBaseProps& Props ) { return FALSE; }
+	virtual UBOOL CreateJointHinge( const FJointHingeProps& Props ) { return FALSE; }
+	virtual UBOOL CreateJointSocket( const FJointSocketProps& Props ) { return FALSE; }
+	virtual UBOOL CreateConstriant( const FJointConstProps& Props ) { return FALSE; }
 }

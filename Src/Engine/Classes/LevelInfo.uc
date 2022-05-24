@@ -58,25 +58,33 @@ var           string LockedGroups;		    // List of the group names which were lo
 //-----------------------------------------------------------------------------
 // Flags affecting the level.
 
-var() bool			bLonePlayer;     // No multiplayer coordination, i.e. for entranceways.
-var noedsave bool	bBegunPlay;      // Whether gameplay has begun.
-var bool			bPlayersOnly;    // Only update players.
-var bool			bHighDetailMode; // Client high-detail mode.
-var bool			bDropDetail;	  // frame rate is below DesiredFrameRate, so drop high detail actors
-var bool			bAggressiveLOD;  // frame rate is well below DesiredFrameRate, so make LOD more aggressive
-var bool			bStartup;        // Starting gameplay.
-var() bool			bHumansOnly;	  // Only allow "human" player pawns in this level
+var() bool			bLonePlayer;			// No multiplayer coordination, i.e. for entranceways.
+var noedsave bool	bBegunPlay;				// Whether gameplay has begun.
+var bool			bPlayersOnly;			// Only update players.
+var bool			bHighDetailMode;		// Client high-detail mode.
+var transient bool	bDropDetail;			// frame rate is below DesiredFrameRate, so drop high detail actors
+var transient bool	bAggressiveLOD;			// frame rate is well below DesiredFrameRate, so make LOD more aggressive
+var bool			bStartup;				// Starting gameplay.
+var() bool			bHumansOnly;			// Only allow "human" player pawns in this level
 var bool			bNoCheating;
 var bool			bAllowFOV;
-var() bool			bSupportsRealCrouching; // Support crouching f.e. through tunnels with half player height
-var() bool			bSupportsCrouchJump; // Enable crouch-jumping like in some other games
-var() bool			bEnhancedIcePhysics; // Fixes crouch/walking speed on ice.
-var() bool			bSpecularLight;		/* Enables specular lighting effect, which causes meshes to be lit improperly.
-										 Unfortunately old maps rely on this often, so need to keep it for these.
-										 For proper lighting disable it in new maps. */
-var config bool		bDisableSpeclarLight; // Override and disable specular lighting mode.
-var bool			bNetworkTimeSeconds; // Should network NetTimeSeconds (you should use function EnableNetTimeSeconds to enable this).
+
+// 227 flags:
+var() bool			bSupportsRealCrouching;	// 227: Support crouching f.e. through tunnels with half player height
+var() bool			bSupportsCrouchJump;	// 227j: Enable crouch-jumping like in some other games
+var() bool			bEnhancedIcePhysics;	// 227j: Fixes crouch/walking speed on ice.
+var() bool			bSpecularLight;			/* 227j: Enables specular lighting effect, which causes meshes to be lit improperly.
+											 Unfortunately old maps rely on this often, so need to keep it for these.
+											 For proper lighting disable it in new maps. */
+var config bool		bDisableSpeclarLight;	// Override and disable specular lighting mode.
+var bool			bNetworkTimeSeconds;	// Should network NetTimeSeconds (you should use function EnableNetTimeSeconds to enable this).
 var noedsave const editconst bool bMirrorMode; // 227j: Level is running with mirror mode enabled.
+var() const bool	bDisableRbPhysics;		// 227j: This level should not enable RigidBody physics at all (level optimization).
+var() const bool	bDisableSubLevelRbPhys;	// 227j: All sub-levels of this level shouldn't have RigidBody physics enabled (level optimization).
+var bool			bPauseRigidBodies;		// 227j: Pause rigidbodies in this level (same as bPlayersOnly enabled).
+var() const bool	bRequireHighChannels;	// 227j: This level requires quadruple the network channels count.
+var() bool			bShouldStasisLevel;		// 227j: Level should stop ticking if no more player activity left in the level.
+var() bool			bShouldChangeMusicTrack;// 227j: This sub-level should change player music track upon entry?
 
 //-----------------------------------------------------------------------------
 // Audio properties.
@@ -157,8 +165,8 @@ var() bool bUTZoneVelocity; // 227j: If disabled, ZoneVelocity works as an accel
 // 227 variables:
 var SpawnNotify SpawnNotify; // Spawn notification list
 
-var() class<FootStepManager> FootprintManager;
-var() class<RealCrouchInfo> RealCrouchInfoClass; // Is used to initialize PlayerPawn's RealCrouchInfo when bSupportsRealCrouching is true
+var() class<FootStepManager> FootprintManager;		// 227: Current footstep effect manager.
+var() class<RealCrouchInfo> RealCrouchInfoClass;	// 227j: Is used to initialize PlayerPawn's RealCrouchInfo when bSupportsRealCrouching is true
 
 var float DemoTimeDilation; // Time dilation of demo playback.
 
@@ -187,27 +195,22 @@ var ETravelType ServerTravelType; // Pending ServerTravel mode.
 var const editconst LevelInfo	ChildLevel, // Next sub-level
 								ParentLevel; // If we are a sub-level, then ParentLevel is set to the top level.
 
-var() private array<name> SubLevels; // List of sub-levels attached to this level (level name i.e: 'NyLeve').
-
-var() bool		bShouldStasisLevel, // Level should stop ticking if no more player activity left in the level.
-				bShouldChangeMusicTrack; // This sub-level should change player music track upon entry?
+var() private array<name> SubLevels;		// 227j: List of sub-levels attached to this level (level name i.e: 'NyLeve').
 
 var const transient bool bIsDemoPlayback; // We are currently playing in demo recording.
 var const transient bool bIsDemoRecording; // We are currently recording a demo.
 var transient bool bPauseDemo; // Should pause demo playback.
 
 // Pathbuilder - these settings are for advanced pathing or usage of UED2.1 for other UEngineGames. Changing these settings can cause extremely weird behavior, Don't mess with it if you don't know what you are doing.
-var(PathBuilder) int MaxCommonRadius;	//	max radius to consider in building paths, default 70
-var(PathBuilder) int MaxCommonHeight;	//	max typical height for non-human intelligent creatures, default 70
-var(PathBuilder) int MinCommonHeight;	//  min typical height for non-human intelligent creatures, default 40
-var(PathBuilder) int MinCommonRadius;	//  min typical radius for non-human intelligent creatures, default 24
-var(PathBuilder) int CommonRadius;		//  max typical radius of intelligent creatures, default 52
-var(PathBuilder) int HumanRadius;		//  normal player pawn radius, default 18
-var(PathBuilder) int HumanHeight;		//	normal playerpawn height, default 39
+var(PathBuilder) int MaxCommonRadius;	// 227j: max radius to consider in building paths, default 70
+var(PathBuilder) int MaxCommonHeight;	// 227j: max typical height for non-human intelligent creatures, default 70
+var(PathBuilder) int MinCommonHeight;	// 227j: min typical height for non-human intelligent creatures, default 40
+var(PathBuilder) int MinCommonRadius;	// 227j: min typical radius for non-human intelligent creatures, default 24
+var(PathBuilder) int CommonRadius;		// 227j: max typical radius of intelligent creatures, default 52
+var(PathBuilder) int HumanRadius;		// 227j: normal player pawn radius, default 18
+var(PathBuilder) int HumanHeight;		// 227j: normal playerpawn height, default 39
 
-var() byte MaxPortalDepth;				// Maximum portal render depth (higher values will affect performance and may even crash with stack overflow).
-
-var() bool bRequireHighChannels;		// This level requires quadruple the network channels count.
+var() byte MaxPortalDepth;				// 227j: Maximum portal render depth (higher values will affect performance and may even crash with stack overflow).
 
 /* Example values
 
@@ -283,15 +286,6 @@ HUMANRADIUS     17
 HUMANHEIGHT     46
 */
 
-/* State of a connection.
-enum EConState
-{
-	USOC_Invalid = 0  Connection is invalid, possibly uninitialized.
-	USOC_Closed = 1  Connection permanently closed.
-	USOC_Pending = 2  Connection is awaiting connection.
-	USOC_Open = 3  Connection is open.
-}; */
-
 var private transient float ReplicatedTimeSeconds; // Using as final replicated variable to prevent desync with pre-227 clients!
 
 //-----------------------------------------------------------------------------
@@ -344,8 +338,14 @@ event ServerTravel( string URL, bool bItems )
 native(666) final function bool KickConnection( NetConnection Other, optional string Reason /*="Kicked"*/ );
 
 /* Very Fast:
-Return the connection state of given connection (look at "EConState" above for results information). */
+Return the connection state of given connection (look at connection states below for results information). */
 static native(1703) final function byte GetConState( NetConnection Other );
+
+// State of a connection.
+const noexport USOC_Invalid	= 0; // Connection is invalid, possibly uninitialized.
+const noexport USOC_Closed	= 1; // Connection permanently closed.
+const noexport USOC_Pending	= 2; // Connection is awaiting connection.
+const noexport USOC_Open	= 3; // Connection is open.
 
 /* Very fast:
 Return the dotted IP-address aswell as port of given connection */
@@ -386,6 +386,12 @@ static native(1743) final function GetConIdentity( NetConnection Other, out stri
 // UnrealEd only, grab currently selected resource.
 // Supports: Level, LevelInfo, Brush, Sound, Music, Class, Texture, Mesh
 static native final function Object GetSelectedObject( Class ObjType );
+
+// If this is a sub-level force to wake up from stasis (by updating LastActivityTime to most recent TimeSeconds).
+native final function WakeUpLevel();
+
+// Return true if this level has RigidBodies enabled (either bDisableRbPhysics true, or no physics engine set).
+native final function bool RigidBodiesEnabled();
 
 //-----------------------------------------------------------------------------
 // Network replication.

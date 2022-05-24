@@ -23,13 +23,21 @@ class UnrealHUD extends HUD
 #exec TEXTURE IMPORT NAME=Crosshair6 FILE=Textures\Hud\chair6.pcx GROUP="Icons" FLAGS=2 MIPS=OFF
 #exec TEXTURE IMPORT NAME=Crosshair7 FILE=Textures\Hud\chair7.pcx GROUP="Icons" FLAGS=2 MIPS=OFF
 
-#exec Texture Import File=Textures\HD_Fonts\HD_WhiteFont.dds Name=HD_WhiteFont Group="HD" Mips=Off Flags=131074
+#exec Texture Import File=Textures\HD_Fonts\WhiteMedFont-Masked.bmp Name=HD_WhiteFont Group="HD" Mips=Off Flags=2
+//#exec Texture Import File=Textures\HD_Fonts\TINYFONT-Red-Masked.bmp Name=HD_TinyRedFont Group="HD" Mips=Off Flags=2
+//#exec Texture Import File=Textures\HD_Fonts\TINYFONT-White-Masked.bmp Name=HD_TinyWhiteFont Group="HD" Mips=Off Flags=2
+//#exec Texture Import File=Textures\HD_Fonts\TINYFONT-Grey-Masked.bmp Name=HD_TinyFont Group="HD" Mips=Off Flags=2
+#exec Texture Import File=Textures\HD_Fonts\LRGRED-AlphaBlend.dds Name=HD_LargeRedFont Group="HD" Mips=Off Flags=131074
 
-#exec Font Import File=Textures\Lrgred.pcx Name=LargeRedFont //HD=HD_LargeRedFont
-#exec Font Import File=..\Engine\Textures\LargeFont_New.pcx Name=LargeGreenFont //HD=HD_LargeGreenFont // for non-localized text
-#exec Font Import File=Textures\TinyFont.pcx Name=TinyFont //HD=HD_TinyFont
-#exec Font Import File=Textures\TinyFon3.pcx Name=TinyWhiteFont //HD=HD_TinyWhiteFont
-#exec Font Import File=Textures\TinyFon2.pcx Name=TinyRedFont //HD=HD_TinyRedFont
+#exec Texture Import File=Textures\HD_Fonts\HD_TinyFont.dds Name=HD_TinyFont Group="HD" Mips=Off Flags=131074
+#exec Texture Import File=Textures\HD_Fonts\HD_TinyRedFont.dds Name=HD_TinyRedFont Group="HD" Mips=Off Flags=131074
+#exec Texture Import File=Textures\HD_Fonts\HD_TinyWhiteFont.dds Name=HD_TinyWhiteFont Group="HD" Mips=Off Flags=131074
+
+#exec Font Import File=Textures\Lrgred.pcx Name=LargeRedFont HD=HD_LargeRedFont
+#exec Font Import File=..\Engine\Textures\LargeFont_New.pcx Name=LargeGreenFont HD=HD_LargeFont // for non-localized text
+#exec Font Import File=Textures\TinyFont.pcx Name=TinyFont HD=HD_TinyFont
+#exec Font Import File=Textures\TinyFon3.pcx Name=TinyWhiteFont HD=HD_TinyWhiteFont
+#exec Font Import File=Textures\TinyFon2.pcx Name=TinyRedFont HD=HD_TinyRedFont
 #exec Font Import File=Textures\MedFont3.pcx Name=WhiteFont HD=HD_WhiteFont
 
 var int TranslatorTimer;
@@ -987,14 +995,14 @@ simulated function DrawMOTD(Canvas Canvas)
 			Canvas.DrawColor.B = MOTDFadeOutTime;
 
 			Canvas.SetPos(0.0, 32 + YL);
-			Canvas.DrawText("Game Type: "$PP.GameReplicationInfo.GameName, true);
+			Canvas.DrawText(Class'UnrealScoreBoard'.Default.GameType$PP.GameReplicationInfo.GameName, true);
 			Canvas.SetPos(0.0, 32 + 2*YL);
-			Canvas.DrawText("Map Title: "$Level.Title, true);
+			Canvas.DrawText(Class'UnrealScoreBoard'.Default.MapTitle$Level.Title, true);
 			Canvas.SetPos(0.0, 32 + 3*YL);
-			Canvas.DrawText("Author: "$Level.Author, true);
+			Canvas.DrawText(Class'UnrealScoreBoard'.Default.Author$Level.Author, true);
 			Canvas.SetPos(0.0, 32 + 4*YL);
 			if (Level.IdealPlayerCount != "")
-				Canvas.DrawText("Ideal Player Load:"$Level.IdealPlayerCount, true);
+				Canvas.DrawText(Class'UnrealScoreBoard'.Default.IdealPlayerCount$Level.IdealPlayerCount, true);
 
 			Canvas.DrawColor.R = 0;
 			Canvas.DrawColor.G = MOTDFadeOutTime / 2;

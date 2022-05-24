@@ -423,7 +423,8 @@ native(257) static final function bool LoadPackageContents( string PackageName, 
 // Logging.
 native(231) final static function Log( coerce string S, optional name Tag );
 native(232) final static function Warn( coerce string S );
-native static function string Localize( string SectionName, string KeyName, string PackageName );
+// 227j @ DefaultStr - If non-empty, it will return that as fallback if not found, and not throw error on log.
+native static function string Localize( string SectionName, string KeyName, string PackageName, optional string DefaultStr );
 
 // Goto state and label.
 native(113) final function GotoState( optional name NewState, optional name Label );

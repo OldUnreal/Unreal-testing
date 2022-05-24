@@ -3,7 +3,7 @@
 
 IMPLEMENT_CLASS(AXSpriteEmitter);
 
-void AXSpriteEmitter::ModifyParticle( AActor* A, PartsType* Data )
+void AXSpriteEmitter::ModifyParticle(xParticle* A)
 {
 	A->Mesh = SheetModel;
 	A->LODBias = 1.f;
@@ -14,9 +14,9 @@ void AXSpriteEmitter::ModifyParticle( AActor* A, PartsType* Data )
 	A->bParticles = 0;
 	A->bRandomFrame = 0;
 	FVector V = InitialRot.GetValue() * 65536.f;
-	Data->PRot = (GMath.UnitCoords / FRotator(appFloor(V.X),appFloor(V.Y),appFloor(V.Z)));
-	Data->RotSp = RotationsPerSec.GetValue() * 65536.f;
-	Data->bDoRot = (Data->RotSp!=FVector(0,0,0));
+	A->PRot = (GMath.UnitCoords / FRotator(appFloor(V.X),appFloor(V.Y),appFloor(V.Z)));
+	A->RotSp = RotationsPerSec.GetValue() * 65536.f;
+	A->bDoRot = (A->RotSp != FVector(0, 0, 0));
 	A->bUnlit = bUnlit;
 	A->AmbientGlow = AmbientGlow;
 	A->AnimSequence = NAME_None;
@@ -24,19 +24,19 @@ void AXSpriteEmitter::ModifyParticle( AActor* A, PartsType* Data )
 	A->DrawType = DT_Mesh;
 	A->bTextureAnimOnce = (SpriteAnimationType != SAN_LoopAnim);
 }
-FRotator AXSpriteEmitter::GetParticleRot( AActor* A, PartsType* Data, const float &Dlt, FVector &Mvd, UEmitterRendering* Render )
+FRotator AXSpriteEmitter::GetParticleRot(xParticle* A, const FLOAT Dlt, FVector& Mvd, UEmitterRendering* Render)
 {
-	if( A->bMovable && Data->bDoRot )
+	if (A->bMovable && A->bDoRot)
 	{
-		FLOAT DMulti = (RotateByVelocityScale>0.f ? (A->Velocity.Size()*0.01f*RotateByVelocityScale*Dlt) : Dlt);
-		Data->PRot/=FRotator(appFloor(Data->RotSp.X*DMulti),appFloor(Data->RotSp.Y*DMulti),appFloor(Data->RotSp.Z*DMulti));
+		FLOAT DMulti = (RotateByVelocityScale > 0.f ? (A->Velocity.Size() * 0.01f * RotateByVelocityScale * Dlt) : Dlt);
+		A->PRot /= FRotator(appFloor(A->RotSp.X * DMulti), appFloor(A->RotSp.Y * DMulti), appFloor(A->RotSp.Z * DMulti));
 	}
-	FVector Vel(A->bMovable ? A->Velocity : (A->OldLocation-Mvd));
+	FVector Vel(A->bMovable ? A->Velocity : (A->OldLocation - Mvd));
 	FCoords CR;
-	switch( ParticleRotation )
+	switch (ParticleRotation)
 	{
 	case SPR_DesiredRot:
-		CR=FCoords(FVector(0,0,0),Render->Frame->Coords.ZAxis,Render->Frame->Coords.XAxis,-Render->Frame->Coords.YAxis);
+		CR = FCoords(FVector(0, 0, 0), Render->Frame->Coords.ZAxis, Render->Frame->Coords.XAxis, -Render->Frame->Coords.YAxis);
 		break;
 
 	case SPR_RelFacingVelocity:
@@ -48,7 +48,7 @@ FRotator AXSpriteEmitter::GetParticleRot( AActor* A, PartsType* Data, const floa
 		break;
 
 	case SPR_AbsFacingVelocity:
-		GetFaceCoords(A->Location,Render->Frame->Coords.Origin,Vel.SafeNormal(),CR);
+		GetFaceCoords(A->Location, Render->Frame->Coords.Origin, Vel.SafeNormal(), CR);
 		break;
 
 	case SPR_RelFacingNormal:
@@ -60,7 +60,7 @@ FRotator AXSpriteEmitter::GetParticleRot( AActor* A, PartsType* Data, const floa
 		break;
 
 	default:
-		GetFaceCoords(A->Location,Render->Frame->Coords.Origin,RotNormal.SafeNormal(),CR);
+		GetFaceCoords(A->Location, Render->Frame->Coords.Origin, RotNormal.SafeNormal(), CR);
 	}
-	return (Data->PRot/CR.OrthoRotation()).OrthoRotation();
+	return (A->PRot / CR.OrthoRotation()).OrthoRotation();
 }

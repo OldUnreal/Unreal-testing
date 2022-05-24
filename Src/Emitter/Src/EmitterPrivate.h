@@ -13,23 +13,36 @@ enum EParticleSpawnFlags
 };
 
 class UEmitterRendering;
-struct PartsType;
+class xParticle;
 struct FRainAreaTree;
 
 #include "EmitterClasses.h"
 
 #include "UnEmitterRendering.h"
 
+#if 1 // DEBUG
+#undef guardSlow
+#define guardSlow guard
+#undef unguardSlow
+#define unguardSlow unguard
+#undef unguardobjSlow
+#define unguardobjSlow unguardobj
+#endif
+
 // Local functions ===================================================
 
+#if DO_GUARD_SLOW
+#define VERIFY_PARTICLES reinterpret_cast<ParticlesDataList*>(PartPtr)->VerifyParticleLoop()
+#else
+#define VERIFY_PARTICLES
+#endif
+
 #define BEGIN_PARTICLE_ITERATOR \
-{ \
-	AActor* A; \
-	for( INT ip=0; (ip<ActiveCount && !bDeleteMe); ip++ ) { \
-		A = Sender->PartPtr->GetA(ip); \
-		if( A->bHidden ) continue; \
-		PartsType& D = Sender->PartPtr->Get(ip);
-#define END_PARTICLE_ITERATOR }}
+	guardSlow(ParticleIterator); VERIFY_PARTICLES; \
+	for (xParticle* A = reinterpret_cast<ParticlesDataList*>(PartPtr)->GetFirstAlive(); A; A = A->GetNext()) \
+	{ \
+		if( A->bHidden ) continue;
+#define END_PARTICLE_ITERATOR } unguardSlow;
 
 #define GetRandomVal(MaxVal) (MaxVal==1 ? 0 : (appRand() % MaxVal))
 #define InvertedCoords FCoords(FVector(0,0,0),FVector(-1,0,0),FVector(0,-1,0),FVector(0,0,-1))
@@ -189,28 +202,52 @@ inline void GetFaceCoords( const FVector& Spot, const FVector& Cam, const FVecto
 	else TransformForCoords(DeltaDir.TransformVectorBy(GetFacingCoords(Up)).Rotation().Yaw,Up,Result);
 }
 
-inline void AXParticleEmitter::UpdateChildren(float Delta, UEmitterRendering* Render)
+inline void AXParticleEmitter::UpdateChildren(FLOAT Delta, UEmitterRendering* Render)
 {
 	guardSlow(AXParticleEmitter::UpdateChildren);
 	// Update combiners.
-	if (bHasSpecialParts)
+	if (CombinerList)
 	{
-		INT i;
-		INT l = PartCombiners.Num();
-		AXEmitter** PA = &PartCombiners(0);
-		UEmitterRendering* R;
-		for (i = 0; i < l; i++)
-			if (PA[i] && !PA[i]->bHurtEntry)
-			{
-				PA[i]->Location = Location;
-				PA[i]->Rotation = Rotation;
-				R = (UEmitterRendering*)PA[i]->RenderInterface;
-				R->Frame = Render->Frame;
-				R->Observer = Render->Observer;
-				PA[i]->bHurtEntry = TRUE;
-				PA[i]->UpdateEmitter(Delta, R);
-				PA[i]->bHurtEntry = FALSE;
-			}
+		for (AXParticleEmitter* P = CombinerList; P; P = P->CombinerList)
+		{
+			P->Location = Location;
+			P->Rotation = Rotation;
+			P->Level = Level;
+			P->XLevel = XLevel;
+			P->UpdateEmitter(Delta, Render, TRUE);
+		}
 	}
+	unguardobjSlow;
+}
+inline AActor* AXParticleEmitter::GetRenderList(AActor* LastDrawn)
+{
+	guardSlow(AXParticleEmitter::GetRenderList);
+	if (PartPtr)
+		LastDrawn = PartPtr->GetRenderList(LastDrawn);
+
+	// Draw combiners.
+	if (CombinerList)
+	{
+		for(AXParticleEmitter* P= CombinerList; P; P=P->CombinerList)
+			if(P->PartPtr)
+				LastDrawn = P->PartPtr->GetRenderList(LastDrawn);
+	}
+	return LastDrawn;
 	unguardSlow;
+}
+inline UBOOL AXParticleEmitter::HasAliveParticles()
+{
+	guardSlow(AXParticleEmitter::HasAliveParticles);
+	if (PartPtr && PartPtr->HasAliveParticles())
+		return TRUE;
+	
+	// Check combiners.
+	if (CombinerList)
+	{
+		for (AXParticleEmitter* P = CombinerList; P; P = P->CombinerList)
+			if (P->PartPtr && P->PartPtr->HasAliveParticles())
+				return TRUE;
+	}
+	return FALSE;
+	unguardobjSlow;
 }

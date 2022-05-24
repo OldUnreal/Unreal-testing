@@ -775,11 +775,11 @@ state MenuTyping
 {
 	function bool KeyType( EInputKey Key )
 	{
-		if ( Key>=0x20 && Key<0x80 && Key!=Asc("~") && Key!=Asc("`") && Key!=Asc(" ") )
+		if ( LastInputKey>=0x20 && LastInputKey!=0x7F )
 		{
-			TypedStr = TypedStr $ Chr(Key);
+			TypedStr = TypedStr $ Chr(LastInputKey);
 			Scrollback=0;
-			if ( (Viewport.Actor.myHUD != None) && (Viewport.Actor.myHUD.MainMenu != None) )
+			if ( Viewport.Actor.myHUD && Viewport.Actor.myHUD.MainMenu )
 				Viewport.Actor.myHUD.MainMenu.ProcessMenuUpdate( TypedStr );
 			return true;
 		}
@@ -791,7 +791,7 @@ state MenuTyping
 		if ( Action != IST_Press )
 			return false;
 
-		if ( Viewport.Actor.myHUD==None || Viewport.Actor.myHUD.MainMenu==None )
+		if ( !Viewport.Actor.myHUD || !Viewport.Actor.myHUD.MainMenu )
 			return false;
 
 		PlayerMenu = Viewport.Actor.myHUD.MainMenu;
@@ -815,6 +815,7 @@ state MenuTyping
 			{
 				if ( TypedStr!="" )
 					PlayerMenu.ProcessMenuInput( TypedStr );
+				else PlayerMenu.ProcessMenuEscape();
 				TypedStr="";
 				GotoState( 'Menuing' );
 				Scrollback = 0;
@@ -850,13 +851,15 @@ state KeyMenuing
 {
 	function bool KeyType( EInputKey Key )
 	{
-		if ( !bValidKeyEvent )
-			Return False;
-		ConsoleDest=0.0;
-		if ( Viewport.Actor.myHUD!=None && Viewport.Actor.myHUD.MainMenu!=None )
-			Viewport.Actor.myHUD.MainMenu.ProcessMenuKey( Key, Chr(Key) );
-		Scrollback=0;
-		GotoState( 'Menuing' );
+		if ( bValidKeyEvent )
+		{
+			ConsoleDest=0.0;
+			if ( Viewport.Actor.myHUD!=None && Viewport.Actor.myHUD.MainMenu!=None )
+				Viewport.Actor.myHUD.MainMenu.ProcessMenuKey( Key, Chr(LastInputKey) );
+			Scrollback=0;
+			GotoState( 'Menuing' );
+		}
+		Return False;
 	}
 	function bool KeyEvent( EInputKey Key, EInputAction Action, FLOAT Delta )
 	{
@@ -869,6 +872,7 @@ state KeyMenuing
 			GotoState( 'Menuing' );
 			return true;
 		}
+		Return False;
 	}
 	function Tick( float Delta )
 	{

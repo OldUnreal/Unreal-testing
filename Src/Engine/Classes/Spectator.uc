@@ -241,4 +241,5 @@ defaultproperties
 	Menuname="Spectator"
 	Health=0
 	bOnlyOwnerRelevant=true
+	bIsSpectatorClass=true
 }

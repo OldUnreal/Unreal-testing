@@ -28,11 +28,12 @@ var(EmBeam) array<float> BeamPointScaling; // Beam scaling list (starting from s
 var(EmBeam) Texture StartTexture,EndTexture; // Final and First segment texture (optional)
 
 // Internal data
-var transient private Mesh RenderDataModel;
-var transient const array<float> SegmentScales;
+var pointer<class UBeamMesh*> RenderDataModel;
 
 // Bitmask
-var(EmBeam) bool bDynamicNoise,bDoBeamNoise;
+var(EmBeam) bool bDynamicNoise; // With BeamNoise, dymaically swap between positions at NoiseSwapTime interval.
+var(EmBeam) bool bDoBeamNoise; // Beam should make noise with NoiseRange scale.
+var(EmBeam) bool bEndPointFixed; // The endpoint should always be locked on to exact position.
 
 simulated function OnMirrorMode()
 {

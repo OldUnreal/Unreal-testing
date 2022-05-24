@@ -494,21 +494,19 @@ function TeamBroadcast( coerce string Msg)
 	if ( Left(Msg, 1) ~= "." )
 		Msg = "."$VoicePitch$Msg;
 
-	if ( bGlobal || !Level.Game.bTeamGame )
-	{
-		if ( Level.Game.AllowsBroadcast(self, Len(Msg)) )
-		{
-			foreach AllActors(class'Pawn',P,'Player')
-				P.TeamMessage( PlayerReplicationInfo, Msg, 'Say' );
-		}
-		return;
-	}
-
 	if ( Level.Game.AllowsBroadcast(self, Len(Msg)) )
 	{
-		foreach AllActors(class'Pawn',P,'Player')
-			if ( P.PlayerReplicationInfo.Team == PlayerReplicationInfo.Team )
-				P.TeamMessage( PlayerReplicationInfo, Msg, 'TeamSay' );
+		if ( bGlobal || !Level.Game.bTeamGame )
+		{
+				foreach AllActors(class'Pawn',P,'Player')
+					P.TeamMessage( PlayerReplicationInfo, Msg, 'Say' );
+		}
+		else
+		{
+			foreach AllActors(class'Pawn',P,'Player')
+				if ( P.PlayerReplicationInfo.Team == PlayerReplicationInfo.Team )
+					P.TeamMessage( PlayerReplicationInfo, Msg, 'TeamSay' );
+		}
 	}
 }
 
@@ -527,7 +525,7 @@ function SendVoiceMessage(PlayerReplicationInfo Sender, PlayerReplicationInfo Re
 
 	foreach AllActors(class'Pawn',P)
 	{
-		if( P.PlayerReplicationInfo==None )
+		if( !P.PlayerReplicationInfo )
 			continue;
 
 		if ( P.bIsPlayerPawn )
@@ -812,6 +810,7 @@ function gibbedBy(actor Other)
 	}
 }
 
+// Note: Unused!
 event PlayerTimeOut()
 {
 	if (Health > 0)
@@ -867,6 +866,7 @@ singular event BaseChange()
 	}
 }
 
+// Called by Engine when WaitForLanding latent action has been waiting for 2.5 seconds.
 event LongFall();
 
 //=============================================================================

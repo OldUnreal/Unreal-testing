@@ -3,7 +3,7 @@
 
 IMPLEMENT_CLASS(AXMeshEmitter);
 
-void AXMeshEmitter::ModifyParticle( AActor* A, PartsType* Data )
+void AXMeshEmitter::ModifyParticle(xParticle* A)
 {
 	A->Mesh = ParticleMesh;
 	A->LODBias = LODBias;
@@ -12,9 +12,9 @@ void AXMeshEmitter::ModifyParticle( AActor* A, PartsType* Data )
 	A->bParticles = bRenderParticles;
 	A->bRandomFrame = bParticlesRandFrame;
 	FVector V = InitialRot.GetValue() * 65536.f;
-	Data->PRot = (GMath.UnitCoords / FRotator(appFloor(V.X),appFloor(V.Y),appFloor(V.Z)));
-	Data->RotSp = RotationsPerSec.GetValue() * 65536.f;
-	Data->bDoRot = (Data->RotSp!=FVector(0,0,0));
+	A->PRot = (GMath.UnitCoords / FRotator(appFloor(V.X),appFloor(V.Y),appFloor(V.Z)));
+	A->RotSp = RotationsPerSec.GetValue() * 65536.f;
+	A->bDoRot = !A->RotSp.IsZero();
 	A->AmbientGlow = AmbientGlow;
 	A->DrawType = DT_Mesh;
 	A->bMeshEnviroMap = bMeshEnviromentMapping;
@@ -49,43 +49,44 @@ void AXMeshEmitter::ModifyParticle( AActor* A, PartsType* Data )
 		}
 	}
 }
-FRotator AXMeshEmitter::GetParticleRot( AActor* A, PartsType* Data, const float &Dlt, FVector &Mvd, UEmitterRendering* Render )
+FRotator AXMeshEmitter::GetParticleRot(xParticle* A, const FLOAT Dlt, FVector& Mvd, UEmitterRendering* Render)
 {
 	if (bUsePhysXRotation && A->RbPhysicsData)
 		return A->Rotation;
 
-	if( bAnimateParticles )
+	if (bAnimateParticles)
 	{
-		if( AnimateByActor )
+		if (AnimateByActor)
 		{
 			A->AnimFrame = AnimateByActor->AnimFrame;
 			A->AnimSequence = AnimateByActor->AnimSequence;
 			A->SkelAnim = AnimateByActor->SkelAnim;
+			A->bAnimLoop = AnimateByActor->bAnimLoop;
 		}
-		else if( A->bAnimLoop )
+		else if (A->bAnimLoop)
 		{
-			A->AnimFrame+=A->AnimRate*Dlt;
-			if( A->AnimFrame>=1 )
-				A->AnimFrame-=1.f;
+			A->AnimFrame += A->AnimRate * Dlt;
+			if (A->AnimFrame >= 1)
+				A->AnimFrame -= 1.f;
 		}
-		else if( A->AnimFrame<A->AnimLast )
-			A->AnimFrame = Min(A->AnimFrame+A->AnimRate*Dlt,A->AnimLast);
+		else if (A->AnimFrame < A->AnimLast)
+			A->AnimFrame = Min(A->AnimFrame + A->AnimRate * Dlt, A->AnimLast);
 	}
-	if( Data->bDoRot && A->bMovable )
-		Data->PRot/=FRotator(appFloor(Data->RotSp.X*Dlt),appFloor(Data->RotSp.Y*Dlt),appFloor(Data->RotSp.Z*Dlt));
-	FCoords CR=Data->PRot;
-	if( bRelativeToMoveDir )
-		CR/=(Mvd-A->OldLocation).Rotation();
-	if( ParticleRotation==MEP_FacingCamera )
-		CR/=(UEmitterRendering::CamPos.Origin-Mvd).Rotation();
-	else if( ParticleRotation==MEP_YawingToCamera )
+	if (A->bDoRot && A->bMovable)
+		A->PRot /= FRotator(appFloor(A->RotSp.X * Dlt), appFloor(A->RotSp.Y * Dlt), appFloor(A->RotSp.Z * Dlt));
+	FCoords CR = A->PRot;
+	if (bRelativeToMoveDir)
+		CR /= (Mvd - A->OldLocation).Rotation();
+	if (ParticleRotation == MEP_FacingCamera)
+		CR /= (UEmitterRendering::CamPos.Origin - Mvd).Rotation();
+	else if (ParticleRotation == MEP_YawingToCamera)
 	{
-		if( CR.ZAxis.Z==1.f )
-			CR/=FRotator(0,(UEmitterRendering::CamPos.Origin-Mvd).Rotation().Yaw,0);
+		if (CR.ZAxis.Z == 1.f)
+			CR /= FRotator(0, (UEmitterRendering::CamPos.Origin - Mvd).Rotation().Yaw, 0);
 		else
 		{
-			FVector AimP = (UEmitterRendering::CamPos.Origin-Data->Pos).TransformVectorBy(GetFacingCoords(CR.ZAxis));
-			CR/=TransformForRot(AimP.Rotation().Yaw,CR.ZAxis);
+			FVector AimP = (UEmitterRendering::CamPos.Origin - A->Pos).TransformVectorBy(GetFacingCoords(CR.ZAxis));
+			CR /= TransformForRot(AimP.Rotation().Yaw, CR.ZAxis);
 		}
 	}
 	return CR.OrthoRotation();

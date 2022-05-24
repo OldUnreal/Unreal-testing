@@ -2,7 +2,7 @@ class UMenuPlayerSetupClient extends UMenuDialogClientWindow;
 
 var() int ControlOffset;
 
-var class<Pawn> NewPlayerClass;
+var class<PlayerPawn> NewPlayerClass;
 var string MeshName;
 var bool Initialized;
 var UMenuPlayerMeshClient MeshWindow;
@@ -47,6 +47,8 @@ var UWindowCheckbox SpectatorCheck;
 var localized string SpectatorText;
 var localized string SpectatorHelp;
 
+var UnrealUserManager Manager;
+
 function Created()
 {
 	local int ControlWidth, ControlLeft, ControlRight;
@@ -54,6 +56,7 @@ function Created()
 	local int I;
 
 	MeshWindow = UMenuPlayerMeshClient(UMenuPlayerClientWindow(ParentWindow.ParentWindow.ParentWindow).Splitter.RightClientWindow);
+	Manager = Class'UnrealUserManager'.Static.GetManager();
 
 	Super.Created();
 
@@ -125,6 +128,8 @@ function AfterCreate()
 	DesiredWidth = 220;
 	DesiredHeight = ControlOffset + 25;
 
+	Manager.Refresh();
+	
 	LoadClasses();
 	LoadCurrent();
 	UseSelected();
@@ -136,6 +141,8 @@ function WindowShown()
 {
 	super.WindowShown();
 
+	Manager.Refresh();
+	
 	Initialized = false;
 	LoadClasses();
 	LoadCurrent();
@@ -144,73 +151,44 @@ function WindowShown()
 
 function LoadClasses()
 {
-	local string NextPlayer, NextDesc;
-	local int SortWeight;
+	local int i;
 	local PlayerClassManager M;
-	local Class<PlayerPawn> P;
 	
-	ClassCombo.Clear();
-	foreach GetPlayerOwner().IntDescIterator(PlayerBaseClass,NextPlayer,NextDesc,true)
-	{
-		if( Len(NextDesc)==0 )
-			NextDesc = NextPlayer;
-		if ( !(NextPlayer~=string(Class'Spectator')) && !(NextPlayer~=string(Class'UnrealSpectator')) )
-			ClassCombo.AddItem(NextDesc, NextPlayer, SortWeight);
-	}
-	
-	++SortWeight;
 	Managers.Empty();
 	foreach GetPlayerOwner().AllActors(Class'PlayerClassManager',M)
-	{
 		Managers.Add(M);
-		if ( !M.bEnabled )
-			Continue;
-		foreach M.AdditionalClasses(P)
-		{
-			if ( !P || ClassCombo.FindItemIndex2(string(P))>=0 )
-				Continue;
-			if ( P.Default.MenuName!="" )
-				ClassCombo.AddItem(P.Default.MenuName, string(P), SortWeight);
-			else ClassCombo.AddItem(string(P.Name), string(P), SortWeight);
-		}
-	}
+	
+	ClassCombo.Clear();
+	Manager.GetMeshList(Managers);
+	for( i=0; i<Manager.FirstCustomMesh; ++i )
+		ClassCombo.AddItem(Manager.MeshList[i].Desc, Manager.MeshList[i].Value, 0);
+	for( ; i<Manager.MeshList.Size(); ++i )
+		ClassCombo.AddItem(Manager.MeshList[i].Desc, Manager.MeshList[i].Value, 1);
 	ClassCombo.Sort();
 }
 
 function LoadCurrent()
 {
-	local string Options;
 	local int i;
 	local PlayerPawn P;
-	local string NameStr;
+	local string S;
 	local mesh PlayerMesh;
 
 	P = GetPlayerOwner();
-	Options = P.Level.GetLocalURL();
 	NewPlayerClass = none;
 
-	NameEdit.SetValue(PickOption("NAME", Options));
+	NameEdit.SetValue(Manager.InitName);
 
 	// Player class
-	if (Len(class'UnrealPlayerMenu'.default.ClassString) > 0)
-	{
-		i = ClassCombo.FindItemIndex2(class'UnrealPlayerMenu'.default.ClassString, true);
-		if (i >= 0)
-		{
-			ClassCombo.SetSelectedIndex(i);
-			NewPlayerClass = class<Pawn>(DynamicLoadObject(ClassCombo.GetValue2(), class'class', true));
-		}
-		else
-		{
-			NewPlayerClass = class<Pawn>(DynamicLoadObject(class'UnrealPlayerMenu'.default.ClassString, class'class', true));
-			if (NewPlayerClass != none)
-			{
-				NameStr = P.GetItemName(class'UnrealPlayerMenu'.default.ClassString);
-				ClassCombo.SetValue(NameStr, class'UnrealPlayerMenu'.default.ClassString);
-			}
-		}
-	}
-	if (NewPlayerClass != none)
+	S = Manager.GetCurrentClass();
+	NewPlayerClass = class<PlayerPawn>(DynamicLoadObject(S, class'class', true));
+	i = ClassCombo.FindItemIndex2(S, true);
+	if (i >= 0)
+		ClassCombo.SetSelectedIndex(i);
+	else if( NewPlayerClass )
+		ClassCombo.SetValue(string(NewPlayerClass.Name), string(NewPlayerClass));
+	
+	if( NewPlayerClass )
 	{
 		PlayerMesh = NewPlayerClass.default.Mesh;
 		MeshName = string(PlayerMesh.Name);
@@ -224,77 +202,36 @@ function LoadCurrent()
 
 	// Player skin
 	IterateSkins();
-	if (Len(class'UnrealPlayerMenu'.default.PreferredSkin) > 0)
-	{
-		i = SkinCombo.FindItemIndex2(class'UnrealPlayerMenu'.default.PreferredSkin, true);
-		if (i >= 0)
-			SkinCombo.SetSelectedIndex(i);
-		else
-		{
-			NameStr = P.GetItemName(class'UnrealPlayerMenu'.default.PreferredSkin);
-			SkinCombo.SetValue(NameStr, class'UnrealPlayerMenu'.default.PreferredSkin);
-		}
-	}
-	else
-		SkinCombo.SetSelectedIndex(0);
+	S = Manager.GetCurrentSkin();
+	SkinCombo.SetSelectedIndex((Len(S)>0) ? Max(SkinCombo.FindItemIndex2(S, true),0) : 0);
 
 	// Player face
 	IterateFaces(SkinCombo.GetValue2());
-	if (Len(class'UnrealPlayerMenu'.default.PreferredFace) > 0)
-	{
-		i = FaceCombo.FindItemIndex2(class'UnrealPlayerMenu'.default.PreferredFace, true);
-		if (i >= 0)
-			FaceCombo.SetSelectedIndex(i);
-		else
-		{
-			NameStr = P.GetItemName(class'UnrealPlayerMenu'.default.PreferredFace);
-			FaceCombo.SetValue(NameStr, class'UnrealPlayerMenu'.default.PreferredFace);
-		}
-	}
-	else
-		FaceCombo.SetSelectedIndex(0);
+	S = Manager.GetCurrentFace();
+	FaceCombo.SetSelectedIndex((Len(S)>0) ? Max(FaceCombo.FindItemIndex2(S, true),0) : 0);
 
-	TeamCombo.SetSelectedIndex(Max(TeamCombo.FindItemIndex2(PickOption("TEAM", Options), true), 0));
-	SpectatorCheck.bChecked = Class'UnrealPlayerMenu'.Default.bPlayingSpectate;
+	TeamCombo.SetSelectedIndex(Max(TeamCombo.FindItemIndex2(string(Manager.InitTeam), true), 0));
+	SpectatorCheck.bChecked = Manager.bIsSpectator;
 
 	UpdateMeshWindow(PlayerMesh, SkinCombo.GetValue2(), FaceCombo.GetValue2(), int(TeamCombo.GetValue2()));
-}
-
-final function string PickOption( string Option, string Options )
-{
-	local int i;
-
-	i = InStr(Caps(Options),"?"$Option$"=");
-	if ( i>-1 )
-	{
-		Options = Mid(Options,i+2+Len(Option));
-		i = InStr(Options,"?");
-		if ( i>-1 )
-			Options = Left(Options,i);
-		Return Options;
-	}
-	Return "";
 }
 
 function SaveConfigs()
 {
 	Super.SaveConfigs();
-	GetPlayerOwner().SaveConfig();
-	GetPlayerOwner().PlayerReplicationInfo.SaveConfig();
+	// Marco: Makes no sense to save all config here...
+	//GetPlayerOwner().SaveConfig();
+	//GetPlayerOwner().PlayerReplicationInfo.SaveConfig();
+	Manager.Save(NameEdit.GetValue(), ClassCombo.GetValue2(), SkinCombo.GetValue2(), FaceCombo.GetValue2(), byte(TeamCombo.GetValue2()), SpectatorCheck.bChecked);
 }
 
 function IterateSkins()
 {
-	local string SkinName, SkinDesc, TestName, Temp;
-	local bool bNewFormat;
-	local int i,j;
-	local PlayerClassManager M;
-	local array<Texture> Tex;
-	local Texture T;
+	local int i;
 
 	SkinCombo.Clear();
 
-	if ( ClassIsChildOf(NewPlayerClass, class'Spectator') )
+	if( NewPlayerClass.Default.bIsSpectatorClass )
 	{
 		SkinCombo.HideWindow();
 		return;
@@ -302,67 +239,15 @@ function IterateSkins()
 	else
 		SkinCombo.ShowWindow();
 
-	bNewFormat = NewPlayerClass.default.bIsMultiSkinned;
-
-	SkinName = "None";
-	TestName = "";
-	while ( True )
-	{
-		GetPlayerOwner().GetNextSkin(MeshName, SkinName, 1, SkinName, SkinDesc);
-
-		if ( SkinName == TestName )
-			break;
-
-		if ( TestName == "" )
-			TestName = SkinName;
-
-		if ( !bNewFormat )
-		{
-			Temp = GetPlayerOwner().GetItemName(SkinName);
-			if ( SkinDesc=="" )
-				SkinCombo.AddItem(Temp, SkinName);
-			else SkinCombo.AddItem(SkinDesc, SkinName);
-		}
-		else
-		{
-			// Multiskin format
-			if ( SkinDesc != "")
-			{
-				Temp = GetPlayerOwner().GetItemName(SkinName);
-				if (Mid(Temp, 5, 64) == "")
-					// This is a skin
-					SkinCombo.AddItem(SkinDesc, Left(SkinName, Len(SkinName) - Len(Temp)) $ Left(Temp, 4));
-			}
-		}
-	}
-	SkinName = "";
-	// Add special UnrealI/UnrealShare skins.
-	while ( i<250 )
-	{
-		GetPlayerOwner().GetNextIntDesc("Engine.Texture",(i++),SkinName,SkinDesc);
-		if ( SkinName=="" )
-			break;
-		j = InStr(SkinDesc,";");
-		if ( SkinDesc=="" || j==-1 )
-			continue;
-		if ( Left(SkinDesc,j)~=MeshName )
-			SkinCombo.AddItem(Mid(SkinDesc,j+1), SkinName);
-	}
-	foreach Managers(M)
-	{
-		if ( !M || M.bDeleteMe || !M.bEnabled )
-			continue;
-		M.GetMeshSkins(Tex,MeshName);
-		foreach Tex(T)
-			SkinCombo.AddItem(string(T.Name), string(T));
-		Tex.Empty();
-	}
+	Manager.GetMeshSkins(NewPlayerClass,Managers);
+	for( i=(Manager.SkinList.Size()-1); i>=0; --i )
+		SkinCombo.AddItem(Manager.SkinList[i].Desc, Manager.SkinList[i].Value);
 	SkinCombo.Sort();
 }
 
 function IterateFaces(string InSkinName)
 {
-	local string SkinName, SkinDesc, TestName, Temp;
+	local int i;
 
 	FaceCombo.Clear();
 
@@ -375,27 +260,9 @@ function IterateFaces(string InSkinName)
 	else
 		FaceCombo.ShowWindow();
 
-
-	SkinName = "None";
-	TestName = "";
-	while ( True )
-	{
-		GetPlayerOwner().GetNextSkin(MeshName, SkinName, 1, SkinName, SkinDesc);
-
-		if ( SkinName == TestName )
-			break;
-
-		if ( TestName == "" )
-			TestName = SkinName;
-
-		// Multiskin format
-		if ( SkinDesc != "")
-		{
-			Temp = GetPlayerOwner().GetItemName(SkinName);
-			if (Mid(Temp, 5) != "" && Left(Temp, 4) == GetPlayerOwner().GetItemName(InSkinName))
-				FaceCombo.AddItem(SkinDesc, Left(SkinName, Len(SkinName) - Len(Temp)) $ Mid(Temp, 5));
-		}
-	}
+	Manager.GetMeshFaces(NewPlayerClass,InSkinName,Managers);
+	for( i=(Manager.FaceList.Size()-1); i>=0; --i )
+		FaceCombo.AddItem(Manager.FaceList[i].Desc, Manager.FaceList[i].Value);
 	FaceCombo.Sort();
 }
 
@@ -497,15 +364,14 @@ function Notify(UWindowDialogControl C, byte E)
 function NameChanged()
 {
 	local string N;
+	
 	if (Initialized)
 	{
 		Initialized = False;
 		N = ReplaceStr(NameEdit.GetValue()," ","_");
+		SanitizeString(N);
 		NameEdit.SetValue(N);
 		Initialized = True;
-
-		GetPlayerOwner().ChangeName(NameEdit.GetValue());
-		GetPlayerOwner().UpdateURL("Name", NameEdit.GetValue(), True);
 	}
 }
 
@@ -546,13 +412,13 @@ function FaceChanged()
 function ClassChanged()
 {
 	local bool OldInitialized;
-	local class<Pawn> LoadedPlayerClass;
+	local class<PlayerPawn> LoadedPlayerClass;
 
 	// Get the class.
-	LoadedPlayerClass = class<Pawn>(DynamicLoadObject(ClassCombo.GetValue2(), class'class', true));
+	LoadedPlayerClass = class<PlayerPawn>(DynamicLoadObject(ClassCombo.GetValue2(), class'class', true));
 	if (LoadedPlayerClass == none)
 	{
-		Log(self @ "failed to load player class '" $ ClassCombo.GetValue2() $ "' when trying to set a new class");
+		Warn(self @ "failed to load player class '" $ ClassCombo.GetValue2() $ "' when trying to set a new class");
 		return;
 	}
 	NewPlayerClass = LoadedPlayerClass;
@@ -588,44 +454,8 @@ function UpdateMeshWindow(mesh PlayerMesh, string Skin, string Face, int Team)
 
 function UseSelected()
 {
-	local int NewTeam;
-
-	if (Initialized)
-	{
-		if ( SpectatorCheck.bChecked )
-		{
-			GetPlayerOwner().UpdateURL("Class", string(Class'UnrealSpectator'), True);
-			GetPlayerOwner().UpdateURL("Skin", "", True);
-			GetPlayerOwner().UpdateURL("Face", "", True);
-			GetPlayerOwner().UpdateURL("Team", "", True);
-		}
-		else
-		{
-			GetPlayerOwner().UpdateURL("Class", ClassCombo.GetValue2(), True);
-			GetPlayerOwner().UpdateURL("Skin", SkinCombo.GetValue2(), True);
-			GetPlayerOwner().UpdateURL("Face", FaceCombo.GetValue2(), True);
-			GetPlayerOwner().UpdateURL("Team", TeamCombo.GetValue2(), True);
-		}
-
-		NewTeam = Int(TeamCombo.GetValue2());
-
-		// if the same class as current class, change skin
-		if ( ClassCombo.GetValue2() ~= String( GetPlayerOwner().Class ))
-			GetPlayerOwner().ServerChangeSkin(SkinCombo.GetValue2(), FaceCombo.GetValue2(), NewTeam);
-
-		if ( GetPlayerOwner().PlayerReplicationInfo.Team!=NewTeam )
-			GetPlayerOwner().ChangeTeam(NewTeam);
-	}
-
 	// MeshWindow.SetMeshString(NewPlayerClass.Default.SelectionMesh); // UGold - Smirftsch
 	UpdateMeshWindow(NewPlayerClass.default.Mesh, SkinCombo.GetValue2(), FaceCombo.GetValue2(), int(TeamCombo.GetValue2()));
-
-	// Save configures
-	Class'UnrealPlayerMenu'.Default.ClassString = ClassCombo.GetValue2();
-	Class'UnrealPlayerMenu'.Default.PreferredSkin = SkinCombo.GetValue2();
-	Class'UnrealPlayerMenu'.Default.PreferredFace = FaceCombo.GetValue2();
-	Class'UnrealPlayerMenu'.Default.bPlayingSpectate = SpectatorCheck.bChecked;
-	Class'UnrealPlayerMenu'.Static.StaticSaveConfig();
 }
 
 function NotifyBeforeLevelChange()

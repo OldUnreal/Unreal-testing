@@ -122,7 +122,7 @@ private:
 			InitChildren();
 
 			TArray<AXRainRestrictionVolume*> TempArray(0);
-			ExchangeArray(TempArray, Volume);
+			Volume.ExchangeArray(&TempArray);
 
 			for (INT i = 0; i < TempArray.Num(); ++i)
 				AddVolume(TempArray(i));
@@ -189,18 +189,10 @@ struct FRainAreaTree
 	}
 };
 
-void AXWeatherEmitter::InitView()
-{
-	guardSlow(AXWeatherEmitter::InitView);
-	bFilterByVolume = ((AppearAreaType != EWA_Zone) && !GIsEditor && PartStyle!=STY_AlphaBlend);
-	if( bFilterByVolume )
-		Style = PartStyle;
-	unguardSlow;
-}
-bool AXWeatherEmitter::ShouldUpdateEmitter( UEmitterRendering* Sender )
+UBOOL AXWeatherEmitter::ShouldUpdateEmitter(FSceneNode* Frame)
 {
 	return (bIsEnabled && (GIsEditor || bUseAreaSpawns
-		|| (XLevel->TimeSeconds - XLevel->Model->Zones[Region.ZoneNumber].LastRenderTime).GetFloat()<1) );
+		|| (XLevel->TimeSeconds - XLevel->Model->Zones[Region.ZoneNumber].LastRenderTime).GetFloat() < 1));
 }
 
 static void RecurseBSP(UModel* M, INT iNode, INT iZone, FBox& Result)
@@ -239,14 +231,13 @@ inline void InitSpawnArea(AXWeatherEmitter* W)
 		{
 			if (W->RainVolumeTag != NAME_None)
 			{
-				TTransArray<AActor*>& AR = W->XLevel->Actors;
 				AActor* A;
-				for (INT i = 0; i < AR.Num(); ++i)
+				for (FActorIterator It(W->XLevel); It; ++It)
 				{
-					A = AR(i);
+					A = *It;
 					if (A && A->Tag == W->RainVolumeTag && !A->bDeleteMe && A->IsA(AVolume::StaticClass()) && A->Brush)
 					{
-						W->RainVolume = (AVolume*)A;
+						W->RainVolume = reinterpret_cast<AVolume*>(A);
 						break;
 					}
 				}
@@ -254,7 +245,7 @@ inline void InitSpawnArea(AXWeatherEmitter* W)
 		}
 		if (W->RainVolume && W->RainVolume->Brush)
 		{
-			FBox B = W->RainVolume->Brush->GetCollisionBoundingBox(W);
+			FBox B = W->RainVolume->Brush->GetCollisionBoundingBox(W->RainVolume);
 			W->VecArea[0] = B.Min;
 			W->VecArea[1] = B.Max;
 		}
@@ -268,8 +259,8 @@ inline void InitSpawnArea(AXWeatherEmitter* W)
 			if (M->RootOutside && (iZone == 1)) // Additive map
 			{
 				// All world space.
-				W->VecArea[0] = GMath.WorldMin;
-				W->VecArea[1] = GMath.WorldMax;
+				W->VecArea[0] = FVector(-65536.f, -65536.f, -65536.f);
+				W->VecArea[1] = FVector(65536.f, 65536.f, 65536.f);
 			}
 			else
 			{
@@ -287,12 +278,37 @@ inline void InitSpawnArea(AXWeatherEmitter* W)
 		|| W->ParticlesColor.Y.Min || W->ParticlesColor.Y.Max
 		|| W->ParticlesColor.Z.Min || W->ParticlesColor.Z.Max);
 }
-void AXWeatherEmitter::InitializeEmitter(UEmitterRendering* Render, AXParticleEmitter* EmitterOuter)
+FParticlesDataBase* AXWeatherEmitter::GetParticleInterface()
+{
+	guardSlow(AXWeatherEmitter::GetParticleInterface);
+	if (!PartPtr)
+	{
+		ParticlesDataList* L = new ParticlesDataList(this);
+		L->SetLen(ParticleCount);
+		PartPtr = L;
+	}
+	return PartPtr;
+	unguardSlow;
+}
+void AXWeatherEmitter::InitView()
+{
+	guardSlow(AXWeatherEmitter::InitView);
+	bFilterByVolume = (!GIsEditor && PartStyle != STY_AlphaBlend);
+	if (bFilterByVolume)
+		Style = PartStyle;
+	VecArea[0] = FVector(-65536.f, -65536.f, -65536.f);
+	VecArea[1] = FVector(65536.f, 65536.f, 65536.f);
+	unguardSlow;
+}
+void AXWeatherEmitter::InitializeEmitter(AXParticleEmitter* Parent)
 {
 	guard(AXWeatherEmitter::InitializeEmitter);
-	Render->ChangeParticleCount(ParticleCount); // Allocate the emitter on startup.
+	Super::InitializeEmitter(Parent);
+	if (!PartPtr)
+		GetParticleInterface();
+	ParticlesDataList* Render = reinterpret_cast<ParticlesDataList*>(PartPtr);
 	NextParticleTime = 0.1;
-	LastCamPosition = Render->Frame->Coords.Origin;
+	LastCamPosition = UEmitterRendering::CamPos.Origin;
 	InitSpawnArea(this);
 	if (!GIsEditor)
 	{
@@ -300,10 +316,10 @@ void AXWeatherEmitter::InitializeEmitter(UEmitterRendering* Render, AXParticleEm
 		PartTextures.Shrink();
 	}
 
-	AActor* A;
+	xParticle* A;
 	for( INT j=0; j<ParticleCount; j++ )
 	{
-		A = Render->PartPtr->GetA(j);
+		A = Render->GetA(j);
 		if( WeatherType==EWF_Rain )
 		{
 			A->Mesh = SheetModel;
@@ -317,7 +333,7 @@ void AXWeatherEmitter::InitializeEmitter(UEmitterRendering* Render, AXParticleEm
 			A->Skin = PartTextures(GetRandomVal(PartTextures.Num()));
 		else A->Skin = NULL;
 		if (GIsEditor && !A->Skin)
-			A->Skin = AActor::StaticClass()->GetDefaultActor()->Texture;
+			A->Skin = GetDefault<AActor>()->Texture;
 		A->Texture = A->Skin;
 		A->DrawScale = Size.GetValue();
 	}
@@ -345,7 +361,7 @@ void AXWeatherEmitter::PostScriptDestroyed()
 			NoRainBounds(i)->Emitters.RemoveItem(this);
 	unguard;
 }
-void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* Sender )
+void AXWeatherEmitter::UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL bSkipChildren)
 {
 	guardSlow (AXWeatherEmitter::UpdateEmitter);
 	if (!RainTree || bBoundsDirty)
@@ -368,47 +384,48 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 	}
 	if (PCount && RainTree->RainVisible(CamDelta))
 	{
-		FRotator Rt = FCoords(FVector(0,0,0),Sender->Frame->Coords.ZAxis,Sender->Frame->Coords.XAxis,-Sender->Frame->Coords.YAxis).OrthoRotation();
+		FRotator Rt = UEmitterRendering::CamPos.OrthoRotation();
 		Rt.Pitch = 0;
 		Rt.Roll = 0;
 		TransfrmCoords = (GMath.UnitCoords * Rt);
 		NextParticleTime = Max<FLOAT>(NextParticleTime,0.f);
 		while( PCount>0 )
 		{
-			SpawnParticle(Sender,CamDelta);
+			SpawnParticle(Render, CamDelta);
 			PCount--;
 		}
 	}
 	LastCamPosition = CamPos;
 	FPointRegion Reg;
 
-	BEGIN_PARTICLE_ITERATOR
+	BEGIN_PARTICLE_ITERATOR;
+
 		// Particle died
-		if( (D.LiftTime-=DeltaTime)<=0 )
+		if ((A->LifeTime -= DeltaTime) <= 0)
 		{
-			D.DestroyParticle();
+			A->DestroyParticle();
 			continue;
 		}
 
 		// Update location
-		float Sc=(1.f-D.LiftTime*D.LiftStartTime);
+		float Sc = (1.f - A->LifeTime * A->LifeStartTime);
 		if( A->bMovable )
 		{
-			switch( WeatherType )
+			switch (WeatherType)
 			{
 			case EWF_Snow:
-				if( D.Scale<=0 )
+				if (A->Scale <= 0)
 				{
-					A->Velocity = D.RevSp+VRand()*(D.RevSp.Size()/5);
-					D.Scale+=appFrand()*0.5+0.1;
+					A->Velocity = A->RevSp + VRand() * (A->RevSp.Size() / 5);
+					A->Scale += appFrand() * 0.5 + 0.1;
 				}
-				else D.Scale-=DeltaTime;
+				else A->Scale -= DeltaTime;
 				break;
 			case EWF_Dust:
-				A->Velocity*=(1.f-DeltaTime*2.f);
+				A->Velocity *= (1.f - DeltaTime * 2.f);
 				break;
 			}
-			D.Pos+=A->Velocity*DeltaTime;
+			A->Pos += A->Velocity * DeltaTime;
 			if (WallHitEvent || WallHitEmitters.Num())
 			{
 				if( WallHitEvent==HIT_Destroy || WallHitEvent==HIT_StopMovement )
@@ -416,52 +433,52 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 					if (WallHitEmitters.Num())
 					{
 						FCheckResult Hit;
-						if (!XLevel->SingleLineCheck(Hit, this, D.Pos, A->Location, TRACE_VisBlocking | TRACE_SingleResult))
+						if (!XLevel->SingleLineCheck(Hit, this, A->Pos, A->Location, TRACE_VisBlocking | TRACE_SingleResult))
 						{
 							if (WallHitEmitters.Num() && WallHitMinZ < Hit.Normal.Z)
 								SpawnChildPart(Hit.Location + Hit.Normal, WallHitEmitters);
 							if (WallHitEvent == HIT_Destroy)
 							{
-								D.DestroyParticle();
+								A->DestroyParticle();
 								continue;
 							}
 							else
 							{
 								A->bMovable = 0;
-								D.Pos = Hit.Location + Hit.Normal;
+								A->Pos = Hit.Location + Hit.Normal;
 							}
 						}
 					}
-					else if (!XLevel->FastLineCheck(A->Location, D.Pos, TRACE_VisBlocking, this))
+					else if (!XLevel->FastLineCheck(A->Location, A->Pos, TRACE_VisBlocking, this))
 					{
 						if( WallHitEvent==HIT_Destroy )
 						{
-							D.DestroyParticle();
+							A->DestroyParticle();
 							continue;
 						}
 						else
 						{
 							A->bMovable = 0;
-							D.Pos-=(A->Velocity*DeltaTime*0.5f);
+							A->Pos-=(A->Velocity*DeltaTime*0.5f);
 						}
 					}
 				}
 				else
 				{
 					FCheckResult Hit;
-					if (!XLevel->SingleLineCheck(Hit, this, D.Pos, A->Location, TRACE_VisBlocking | TRACE_SingleResult))
+					if (!XLevel->SingleLineCheck(Hit, this, A->Pos, A->Location, TRACE_VisBlocking | TRACE_SingleResult))
 					{
-						if( WallHitEmitters.Num() && WallHitMinZ<Hit.Normal.Z )
-							SpawnChildPart(Hit.Location+Hit.Normal,WallHitEmitters);
+						if (WallHitEmitters.Num() && WallHitMinZ < Hit.Normal.Z)
+							SpawnChildPart(Hit.Location + Hit.Normal, WallHitEmitters);
 						if( WallHitEvent==HIT_Bounce )
 						{
-							D.Pos = Hit.Location+Hit.Normal;
+							A->Pos = Hit.Location+Hit.Normal;
 							A->Velocity = A->Velocity.MirrorByVector(Hit.Normal);
 						}
 						else
 						{
-							D.Pos = Hit.Location;
-							eventParticleWallHit(A,Hit.Normal,D.Pos);
+							A->Pos = Hit.Location;
+							eventParticleWallHit(A, Hit.Normal, A->Pos);
 							if( A->bHidden )
 								continue;
 						}
@@ -469,25 +486,25 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 				}
 			}
 
-			A->Location = D.Pos;
+			A->Location = A->Pos;
 			if( WeatherType==EWF_Rain )
 				A->Rotation = GetFaceRotation(A->Location,LastCamPosition,A->Velocity.SafeNormal());
 
-			XLevel->Model->GetPointRegion(Level, D.Pos, Reg);
+			XLevel->Model->GetPointRegion(Level, A->Pos, Reg);
 			if (!Reg.ZoneNumber) // Fell out of world, kill it.
 			{
-				D.DestroyParticle();
+				A->DestroyParticle();
 				continue;
 			}
 			if (WaterHitEvent && Reg.Zone != Region.Zone && Reg.Zone != A->Region.Zone)
 			{
-				if( WaterHitEmitters.Num() && Reg.Zone->bWaterZone )
-					SpawnChildPart(A->Location-A->Velocity*DeltaTime,WaterHitEmitters);
+				if (WaterHitEmitters.Num() && Reg.Zone->bWaterZone)
+					SpawnChildPart(A->Location - A->Velocity * DeltaTime, WaterHitEmitters);
 				switch( WaterHitEvent )
 				{
 				case HIT_Destroy:
 					if( Reg.Zone->bWaterZone )
-						D.DestroyParticle();
+						A->DestroyParticle();
 					break;
 				case HIT_StopMovement:
 					if( Reg.Zone->bWaterZone )
@@ -498,7 +515,7 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 					{
 						A->Velocity.Z*=-1;
 						A->Location.Z+=A->Velocity.Z*DeltaTime;
-						D.Pos = A->Location;
+						A->Pos = A->Location;
 					}
 					break;
 				default:
@@ -511,32 +528,32 @@ void AXWeatherEmitter::UpdateEmitter( const float DeltaTime, UEmitterRendering* 
 		}
 
 		// Update scale glowing
-		if( Sc<0.4 )
-			Sc/=0.4;
-		else if( Sc<0.6 )
+		if (Sc < 0.4)
+			Sc /= 0.4;
+		else if (Sc < 0.6)
 			Sc = 1;
-		else Sc = 1.f-(Sc-0.6)/0.4;
-		if( FadeOutDistance.Max>0 )
+		else Sc = 1.f - (Sc - 0.6) / 0.4;
+		if (FadeOutDistance.Max > 0)
 		{
-			FLOAT Dis=(LastCamPosition-D.Pos).SizeSquared();
-			if( Dis>=Square(FadeOutDistance.Max) )
+			FLOAT Dis = (LastCamPosition - A->Pos).SizeSquared();
+			if (Dis >= Square(FadeOutDistance.Max))
 				Sc = 0.f;
-			else if( Dis>Square(FadeOutDistance.Min) )
+			else if (Dis > Square(FadeOutDistance.Min))
 			{
 				FLOAT fD = FadeOutDistance.Max - FadeOutDistance.Min;
 				Sc *= Clamp<FLOAT>((fD - (appSqrt(Dis) - FadeOutDistance.Min)) / fD, 0.f, 1.f);
 			}
 		}
-		A->ScaleGlow = Clamp(float(Sc*ScaleGlow),0.f,1.f);
-	END_PARTICLE_ITERATOR
+		A->ScaleGlow = Clamp(float(Sc * ScaleGlow), 0.f, 1.f);
+
+	END_PARTICLE_ITERATOR;
 
 	unguardSlow;
 }
 
-BYTE AXWeatherEmitter::SpawnParticle( UEmitterRendering* Render, const FVector &CDelta )
+UBOOL AXWeatherEmitter::SpawnParticle(UEmitterRendering* Render, const FVector& CDelta)
 {
 	guard(AXWeatherEmitter::SpawnParticle);
-
 	if (!RainTree || bBoundsDirty)
 	{
 		if (RainTree)
@@ -545,85 +562,63 @@ BYTE AXWeatherEmitter::SpawnParticle( UEmitterRendering* Render, const FVector &
 		bBoundsDirty = FALSE;
 	}
 
-	int Act=-1;
-	AActor* A=NULL;
 	// Check if free particles
-	int i;
-	for( i=0; i<ActiveCount; i++ )
-	{
-		A = Render->PartPtr->GetA(i);
-		if( A->bHidden )
-		{
-			Act = i;
-			break;
-		}
-	}
-	if( Act==-1 )
-	{
-		if( ActiveCount>=Render->PartPtr->Len() )
-			return 0;
-		else
-		{
-			Act = ActiveCount++;
-			A = Render->PartPtr->GetA(Act);
-		}
-	}
-	if( !A || !A->Texture )
-		return 0;
+	xParticle* A = reinterpret_cast<ParticlesDataList*>(PartPtr)->GrabDeadParticle();
+	if (!A)
+		return FALSE;
 
+	A->bHidden = TRUE;
 	FVector SpP = Position.GetValue().TransformVectorBy(TransfrmCoords)+CDelta;
+
 	// Validate spawn area.
 	if( bUseAreaSpawns )
 	{
 		if (SpP.X<VecArea[0].X || SpP.Y<VecArea[0].Y || SpP.Z<VecArea[0].Z
 			|| SpP.X>VecArea[1].X || SpP.Y>VecArea[1].Y || SpP.Z>VecArea[1].Z
 			|| (RainVolume && !RainVolume->Encompasses(SpP)))
-			return 0;
+			return FALSE;
 	}
 	else
 	{
 		if( !XLevel || !XLevel->Model )
-			return 0;
+			return FALSE;
 		FPointRegion RG;
 		XLevel->Model->GetPointRegion(Level, SpP, RG);
 		if (RG.ZoneNumber != Region.ZoneNumber)
-			return 0;
+			return FALSE;
 	}
 
 	// Check with the volumes
 	if (RainTree->IsBlocked(SpP))
 		return FALSE;
 
-	PartsType& D = Render->PartPtr->Get(Act);
-	A->bHidden = 0;
+	A->bHidden = FALSE;
 	A->Location = SpP;
 	A->bMovable = 1;
 	A->Region = Render->Frame->Viewport->Actor->CameraRegion;
 	if (A->LightDataPtr)
 		A->LightDataPtr->UpdateFrame = GFrameNumber - 500; // Force to recompute lighting rather then fade from previous particle.
-	D.Pos = SpP;
+	A->Pos = SpP;
 	A->Velocity = Rotation.Vector() * speed.GetValue();
 	if( bUSModifyParticles )
 	{
-		eventGetParticleProps(A,D.Pos,A->Velocity,A->Rotation);
-		A->Location = D.Pos;
+		eventGetParticleProps(A, A->Pos, A->Velocity, A->Rotation);
+		A->Location = A->Pos;
 	}
-	D.RevSp = A->Velocity;
-	D.LiftTime = Lifetime.GetValue();
-	D.LiftStartTime = 1.f/D.LiftTime;
-	if( bParticleColorEnabled )
+	A->RevSp = A->Velocity;
+	A->LifeTime = Lifetime.GetValue();
+	A->LifeStartTime = 1.f / A->LifeTime;
+	if (bParticleColorEnabled)
 	{
 		FVector Col = ParticlesColor.GetValue();
-		A->ActorRenderColor = FColor(BYTE(Col.X*255.f),BYTE(Col.Y*255.f),BYTE(Col.Z*255.f),255);
+		A->ActorRenderColor = FColor(Col);
 		A->ActorGUnlitColor = A->ActorRenderColor;
 	}
 	A->bUnlit = bUnlit;
-#if ENGINE_SUBVERSION>8
 	A->bUseLitSprite = bUseLitSprite;
-#endif
 	if( bUSNotifyParticles )
 		eventNotifyNewParticle(A);
-	return 1;
+	return TRUE;
 	unguard;
 }
 
@@ -631,17 +626,17 @@ void AXWeatherEmitter::ResetEmitter()
 {
 	guard(AXEmitter::ResetEmitter);
 	AXParticleEmitter::ResetEmitter();
-	UEmitterRendering* Render = (UEmitterRendering*)RenderInterface;
+	ParticlesDataList* Render = reinterpret_cast<ParticlesDataList*>(PartPtr);
 	if( Render )
 	{
-		Render->ChangeParticleCount(ParticleCount);
-		Render->HideAllParticles();
+		Render->SetLen(ParticleCount);
+		Render->HideAllParts();
 		LastCamPosition = UEmitterRendering::CamPos.Origin;
 		AActor* A;
-		for( INT j=0; j<ParticleCount; j++ )
+		for (INT j = 0; j < ParticleCount; j++)
 		{
-			A = Render->PartPtr->GetA(j);
-			if( WeatherType==EWF_Rain )
+			A = Render->GetA(j);
+			if (WeatherType == EWF_Rain)
 			{
 				A->Mesh = SheetModel;
 				A->DrawType = DT_Mesh;
@@ -715,11 +710,7 @@ void AXWeatherEmitter::RenderSelectInfo(FSceneNode* Frame)
 FBox AXWeatherEmitter::GetVisibilityBox()
 {
 	guardSlow(AXWeatherEmitter::GetVisibilityBox);
-	if (bUseAreaSpawns)
-		return FBox(VecArea[0], VecArea[1]);
-	else if ((Level->TimeSeconds - XLevel->Model->Zones[Region.ZoneNumber].LastRenderTime) < 1.f)
-		return FBox(FVector(-65536.f, -65536.f, -65536.f), FVector(65536.f, 65536.f, 65536.f)); // Cover the entire world.
-	else return FBox(Location, Location);
+	return FBox(VecArea[0], VecArea[1]);
 	unguardSlow;
 }
 

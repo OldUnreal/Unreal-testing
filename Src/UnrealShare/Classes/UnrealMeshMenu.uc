@@ -2,72 +2,129 @@
 // UnrealMeshMenu
 //=============================================================================
 class UnrealMeshMenu extends UnrealPlayerMenu
-			config;
+	config;
 
-var class<PlayerPawn> PlayerClass;
-var array<string> PlayerClasses;
 var int PlayerClassNum;
 var string StartMap;
 var bool SinglePlayerOnly;
 var string GamePassword;
+var config bool bUseMutators;
+
+// Obsolete:
+var transient const class<PlayerPawn> PlayerClass;
+var transient const array<string> PlayerClasses;
 
 function PostBeginPlay()
 {
-	local string NextPlayer;
-	local int lc;
-	local PlayerClassManager M;
-	local class<PlayerPawn> P;
-
 	Super.PostBeginPlay();
-	NextPlayer = GetNextInt("UnrealIPlayer", 0);
-	while ( NextPlayer != "" )
+	Manager.GetMeshList(Managers);
+	PlayerClassNum = Max(Manager.MeshList.Find(Value,string(CurPlayerClass)),0);
+	
+	// Swap places with localizations.
+	HelpMessage[7] = Default.HelpMessage[8];
+	HelpMessage[8] = Default.HelpMessage[9];
+	HelpMessage[9] = Default.HelpMessage[7];
+}
+
+function FindSkin(int Dir)
+{
+	local int i;
+	local bool bOldFace;
+	
+	bOldFace = bEnableFaceSelection;
+	Super.FindSkin(Dir);
+	if( bOldFace!=bEnableFaceSelection )
 	{
-		if ( !(NextPlayer~="UnrealShare.UnrealSpectator") )
-			PlayerClasses.Add(NextPlayer);
-		NextPlayer = GetNextInt("UnrealIPlayer", ++lc);
+		if( bEnableFaceSelection )
+		{
+			if( selection>=4 )
+				++selection;
+			HelpMessage[4] = Class'UnrealPlayerMenu'.Default.HelpMessage[4];
+			for( i=5; i<7; ++i )
+				HelpMessage[i] = Default.HelpMessage[i-1];
+			
+			// Swap places with localizations.
+			HelpMessage[8] = Default.HelpMessage[8];
+			HelpMessage[9] = Default.HelpMessage[9];
+			HelpMessage[10] = Default.HelpMessage[7];
+		}
+		else
+		{
+			if( selection>=4 )
+				--selection;
+			for( i=4; i<7; ++i )
+				HelpMessage[i] = Default.HelpMessage[i];
+			
+			// Swap places with localizations.
+			HelpMessage[7] = Default.HelpMessage[8];
+			HelpMessage[8] = Default.HelpMessage[9];
+			HelpMessage[9] = Default.HelpMessage[7];
+		}
 	}
-	foreach Managers(M)
-	{
-		if ( !M || M.bDeleteMe || !M.bEnabled )
-			continue;
-		
-		foreach M.AdditionalClasses(P)
-			PlayerClasses.Add(string(P));
-	}
+}
+
+function SelectPlayerClass( int Dir )
+{
+	local int n;
+	
+	if( !Manager.MeshList.Size() )
+		return;
+Repeat:
+	PlayerClassNum+=Dir;
+	if( PlayerClassNum<0 )
+		PlayerClassNum = Manager.MeshList.Size()-1;
+	else if( PlayerClassNum>=Manager.MeshList.Size() )
+		PlayerClassNum = 0;
+	
+	CurPlayerClass = class<PlayerPawn>(DynamicLoadObject(Manager.MeshList[PlayerClassNum].Value, class'class', true));
+	if ( SinglePlayerOnly && !CurPlayerClass.Default.bSinglePlayer && Dir!=0 && n++<10 )
+		goto 'Repeat';
+	
+	FindSkin(0);
+	RefreshSkin();
 }
 
 function UpdatePlayerClass( string NewClass, int Offset )
 {
-	PlayerClasses[Offset] = NewClass;
+	//PlayerClasses[Offset] = NewClass;
 }
 
 function ProcessMenuInput( coerce string InputString )
 {
-	InputString = Left(InputString, 20);
-
-	if ( selection == 1 )
-	{
-		PlayerOwner.ChangeName(InputString);
-		PlayerName = PlayerOwner.PlayerReplicationInfo.PlayerName;
-		PlayerOwner.UpdateURL("Name",InputString, true);
-	}
+	Super.ProcessMenuInput(InputString);
 }
 
 function ProcessMenuUpdate( coerce string InputString )
 {
-	InputString = Left(InputString, 20);
+	Super.ProcessMenuUpdate(InputString);
+}
 
-	if ( selection == 1 )
-		PlayerName = (InputString$"_");
+function SaveConfigs()
+{
+	Super.SaveConfigs();
+	SaveConfig();
 }
 
 function bool ProcessSelection()
 {
+	local int i;
 	local string Cl;
+	local Menu ChildMenu;
 
-	if ( selection == 6 )
+	i = selection;
+	if( bEnableFaceSelection && i>=4 )
+		--i;
+
+	if ( i==6 || i==7 )
 		ProcessLeft();
-	else if ( selection == 7 )
+	else if ( i == 8 )
+	{
+		ChildMenu = spawn(class'UnrealMutatorMenu', RealOwner);
+		HUD(RealOwner).MainMenu = ChildMenu;
+		ChildMenu.ParentMenu = self;
+		ChildMenu.PlayerOwner = PlayerOwner;
+	}
+	else if ( i == 9 )
 	{
 		SetOwner(RealOwner);
 		bExitAllMenus = true;
@@ -76,65 +133,99 @@ function bool ProcessSelection()
 
 		if ( bPlayingSpectate )
 			Cl = string(Class'UnrealSpectator');
-		else Cl = ClassString;
+		else Cl = string(CurPlayerClass);
 		StartMap = StartMap
 				   $"?Class="$Cl
-				   $"?Skin="$Skin
-				   $"?Name="$PlayerOwner.PlayerReplicationInfo.PlayerName
-				   $"?Team="$PlayerOwner.PlayerReplicationInfo.Team
-				   $"?Rate="$PlayerOwner.NetSpeed;
+				   $"?Name="$Manager.InitName
+				   $"?Team="$string(Manager.InitTeam);
+		
+		if( !bPlayingSpectate )
+			StartMap = StartMap$"?Skin="$GetSelectedSkin();
+		if( bEnableFaceSelection )
+			StartMap = StartMap$"?Face="$GetSelectedFace();
+		if( bUseMutators && Len(Class'UnrealMutatorMenu'.Default.UsedMutators) )
+			StartMap = StartMap$"?Mutator="$Class'UnrealMutatorMenu'.Default.UsedMutators;
 
 		if ( GamePassword != "" )
 			StartMap = StartMap$"?Password="$GamePassword;
 
 		PlayerOwner.ClientTravel(StartMap, TRAVEL_Absolute, false);
 	}
-	else Super.ProcessSelection();
+	else return Super.ProcessSelection();
 	return true;
 }
 
 function bool ProcessLeft()
 {
-	if ( selection == 4 )
-	{
-		PlayerClassNum++;
-		if ( PlayerClassNum == PlayerClasses.Size() )
-			PlayerClassNum = 0;
-		PlayerClass = ChangeMesh();
-		if ( SinglePlayerOnly && !PlayerClass.Default.bSinglePlayer )
-			ProcessLeft();
-	}
-	else if ( selection==6 )
-		bPlayingSpectate = !bPlayingSpectate;
-	else Super.ProcessLeft();
+	local int i;
 
+	i = selection;
+	if( bEnableFaceSelection && i>=4 )
+	{
+		if( i==4 )
+		{
+			i = 5;
+			SelectFace(-1);
+		}
+		else --i;
+	}
+	switch( i )
+	{
+	case 4:
+		SelectPlayerClass(-1);
+		break;
+	case 5:
+		break;
+	case 6:
+		bPlayingSpectate = !bPlayingSpectate;
+		break;
+	case 7:
+		bUseMutators = !bUseMutators;
+		bConfigChanged = true;
+		break;
+	default:
+		return Super.ProcessLeft();
+	}
 	return true;
 }
 
 function bool ProcessRight()
 {
-	if ( selection == 4 )
-	{
-		PlayerClassNum--;
-		if ( PlayerClassNum < 0 )
-			PlayerClassNum = PlayerClasses.Size() - 1;
-		PlayerClass = ChangeMesh();
-		if ( SinglePlayerOnly && !PlayerClass.Default.bSinglePlayer )
-		{
-			ProcessRight();
-			return true;
-		}
-	}
-	else if ( selection==6 )
-		ProcessLeft();
-	else Super.ProcessRight();
+	local int i;
 
+	i = selection;
+	if( bEnableFaceSelection && i>=4 )
+	{
+		if( i==4 )
+		{
+			i = 5;
+			SelectFace(1);
+		}
+		else --i;
+	}
+	switch( i )
+	{
+	case 4:
+		SelectPlayerClass(1);
+		break;
+	case 5:
+		break;
+	case 6:
+		bPlayingSpectate = !bPlayingSpectate;
+		break;
+	case 7:
+		bUseMutators = !bUseMutators;
+		bConfigChanged = true;
+		break;
+	default:
+		return Super.ProcessRight();
+	}
 	return true;
 }
 
 function class<PlayerPawn> ChangeMesh()
 {
-	local class<playerpawn> NewPlayerClass;
+	/*local class<playerpawn> NewPlayerClass;
 
 	NewPlayerClass = class<playerpawn>(DynamicLoadObject(PlayerClasses[PlayerClassNum], class'Class'));
 
@@ -150,26 +241,27 @@ function class<PlayerPawn> ChangeMesh()
 		DrawType = NewPlayerClass.Default.DrawType;
 		FindSkin(0);
 	}
-	return NewPlayerClass;
+	return NewPlayerClass;*/
+	return None;
 }
 
 function LoadAllMeshes()
 {
-	local string S;
+	/*local string S;
 
 	foreach PlayerClasses(S)
-		DynamicLoadObject(S, class'Class');
+		DynamicLoadObject(S, class'Class');*/
 }
 
 function SetUpDisplay()
 {
-	local int i;
+	/*local int i;
 	local texture NewSkin;
-	local string MeshName;
+	local string MeshName;*/
 
 	Super.SetUpDisplay();
 
-	if ( ClassString == "" )
+	/*if ( ClassString == "" )
 		ClassString = string(PlayerOwner.Class);
 
 	for ( i=0; i<PlayerClasses.Size(); i++ )
@@ -188,7 +280,7 @@ function SetUpDisplay()
 		NewSkin = texture(DynamicLoadObject(PreferredSkin, class'Texture'));
 		if ( NewSkin != None )
 			Skin = NewSkin;
-	}
+	}*/
 }
 
 function DrawMenu(canvas Canvas)
@@ -201,18 +293,21 @@ function DrawMenu(canvas Canvas)
 	if (!bSetup)
 		SetUpDisplay();
 
-	// Set menu location.
-	Co = Canvas.GetCameraCoords();
-	PlayerOwner.ViewRotation.Pitch = 0;
-	PlayerOwner.ViewRotation.Roll = 0;
-	DrawRot = OrthoRotation(Co.XAxis,Co.YAxis,Co.ZAxis);
-	DrawLoc = Co.Origin;
+	if( Mesh )
+	{
+		// Set menu location.
+		Co = Canvas.GetCameraCoords();
+		PlayerOwner.ViewRotation.Pitch = 0;
+		PlayerOwner.ViewRotation.Roll = 0;
+		DrawRot = OrthoRotation(Co.XAxis,Co.YAxis,Co.ZAxis);
+		DrawLoc = Co.Origin;
 
-	DrawOffset = (vect(10.0,-5.0,0.0)) >> DrawRot;
-	NewRot = DrawRot;
-	NewRot.Yaw = Rotation.Yaw;
-	SetLocation(DrawLoc + DrawOffset, NewRot);
-	Canvas.DrawActor(Self, false);
+		DrawOffset = (vect(10.0,-5.0,0.0)) >> DrawRot;
+		NewRot = DrawRot;
+		NewRot.Yaw = Rotation.Yaw;
+		SetLocation(DrawLoc + DrawOffset, NewRot);
+		Canvas.DrawActor(Self, false);
+	}
 
 	// Draw title.
 	DrawFadeTitle(Canvas);
@@ -221,32 +316,48 @@ function DrawMenu(canvas Canvas)
 	StartX = Canvas.ClipX/2;
 	StartY = Max(40, 0.5 * (Canvas.ClipY - MenuLength * Spacing - 128));
 
-	for ( i=1; i<8; i++ )
-		MenuList[i] = Default.MenuList[i];
+	if( bEnableFaceSelection )
+	{
+		for ( i=1; i<4; i++ )
+			MenuList[i] = Default.MenuList[i];
+		MenuList[4] = Class'UnrealPlayerMenu'.Default.MenuList[4];
+		for ( i=5; i<8; i++ )
+			MenuList[i] = Default.MenuList[i-1];
+
+		// Swap places with localizations.
+		MenuList[8] = Default.MenuList[8];
+		MenuList[9] = Default.MenuList[9];
+		MenuList[10] = Default.MenuList[7];
+	}
+	else
+	{
+		for ( i=1; i<7; i++ )
+			MenuList[i] = Default.MenuList[i];
+		// Swap places with localizations.
+		MenuList[7] = Default.MenuList[8];
+		MenuList[8] = Default.MenuList[9];
+		MenuList[9] = Default.MenuList[7];
+	}
 	DrawFadeList(Canvas, Spacing, StartX, StartY);
 
-	if ( !PlayerOwner.Player.Console.IsInState('MenuTyping') )
-		PlayerName = PlayerOwner.PlayerReplicationInfo.PlayerName;
-	MenuList[1] = PlayerName;
-	if ( CurrentTeam == 255 )
-		MenuList[2] = "None";
-	else
-		MenuList[2] = Teams[CurrentTeam];
+	i = 1;
+	MenuList[i++] = PlayerName;
+	MenuList[i++] = Teams[CurrentTeam];
 
-	if ( Skin!=None )
-		MenuList[3] = string(Skin.Name);
-	else
-		MenuList[3] = "None";
-	if ( PlayerClass==None )
-		MenuList[4] = "None";
-	else if ( PlayerClass.Default.MenuName=="" )
-		MenuList[4] = string(PlayerClass.Name);
-	else MenuList[4] = PlayerClass.Default.MenuName;
-	MenuList[5] = GamePassword;
-	if ( bPlayingSpectate )
-		MenuList[6] = YesString;
-	else MenuList[6] = NoString;
-	MenuList[7] = "";
+	if( CurPlayerClass && Manager.SkinList.Size() )
+	{
+		MenuList[i++] = Manager.SkinList[SelectionOffset].Desc;
+		if( bEnableFaceSelection )
+			MenuList[i++] = Manager.FaceList[FaceSelectionOffset].Desc;
+	}
+	else MenuList[i++] = "None";
+	
+	MenuList[i++] = Manager.MeshList.Size() ? Manager.MeshList[PlayerClassNum].Desc : "None";
+	MenuList[i++] = "";
+	MenuList[i++] = bPlayingSpectate ? YesString : NoString;
+	MenuList[i++] = bUseMutators ? YesString : NoString;
+	MenuList[i++] = "";
+	MenuList[i++] = "";
 	DrawFadeList(Canvas, Spacing, StartX + 80, StartY);
 
 	// Draw help panel.
@@ -258,14 +369,18 @@ function DrawMenu(canvas Canvas)
 
 defaultproperties
 {
-	Selection=7
-	MenuLength=7
+	Selection=9
+	MenuLength=9
 	HelpMessage(4)="Change your class using the left and right arrow keys."
 	HelpMessage(5)="To enter with an adminpassword or gamepassword, launch the server Browser, right click a server and select 'Join with password'."
 	HelpMessage(6)="Should spectate the match instead of playing."
 	HelpMessage(7)="Press enter to start game."
+	HelpMessage(8)="Should use mutators with this game?"
+	HelpMessage(9)="Select which mutators to use with this game."
 	MenuList(4)="Class:"
 	MenuList(5)="Passwords are now entered from the Unreal Server browser."
 	MenuList(6)="Spectate:"
 	MenuList(7)="Start Game"
+	MenuList(8)="Mutators:"
+	MenuList(9)="Select Mutators"
 }

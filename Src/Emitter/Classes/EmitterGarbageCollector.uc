@@ -3,9 +3,8 @@ class EmitterGarbageCollector extends Info
 	Native
 	Transient;
 
-var pointer<TArray<class ParticlesDataList*>*> GarbagePtr;
-var const bool bCleanUp;
-var const float CleanUpTime;
+var pointer<TArray<class FParticlesDataBase*>*> GarbagePtr;
+var const uint CleanUpTime;
 
 defaultproperties
 {

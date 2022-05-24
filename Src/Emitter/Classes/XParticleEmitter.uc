@@ -79,8 +79,12 @@ enum EHitEventType
 
 // Natively updated variables, do not touch.
 var transient const int ActiveCount;
-var transient const editconst bool bHasInitialized,bKillNextTick,bHasSpecialParts,bWasPostDestroyed,bHasInitView;
-var transient const editconst array<XEmitter> PartCombiners; // List of combiner particle emitters (temporarily generated)
+var transient const editconst bool bHasInitialized,bIsTransientEmitter,bIsInternalEmitter;
+var const noedsave bool bDestruction; // Emitter is about to be killed!
+
+var transient const editconst XParticleEmitter ParentEmitter,CombinerList,TransientEmitters;  // List of combiner particle emitters
+var pointer<class FParticlesDataBase*> PartPtr;
+var transient const uint LastUpdateTime;
 
 var bool bUSNotifyParticles; // Call NotifyNewParticle whenever a particle has been spawned.
 var bool bNotifyNetReceive; // Call PostNetNotify when a new packet has been received.

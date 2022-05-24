@@ -81,7 +81,7 @@ var localized string			FailedTeamMessage;
 var localized string			NameChangedMessage;
 var localized string			EnteredMessage, FemEnteredMessage;
 var localized string			GameName;
-var localized string			MaxedOutMessage;
+var localized string			MaxedOutMessage, MaxedOutSpectatorsMsg;
 var localized string			WrongPassword;
 var localized string			NeedPassword;
 
@@ -920,7 +920,7 @@ event playerpawn Login
 	}
 
 	// Make sure there is capacity. (This might have changed since the PreLogin call).
-	if ( GetAccessManager().AtCapacity(ClassIsChildOf(SpawnClass,class'Spectator'),Error) )
+	if ( GetAccessManager().AtCapacity(SpawnClass.Default.bIsSpectatorClass,Error) )
 		return None;
 
 	// Get URL options.
@@ -960,8 +960,7 @@ event playerpawn Login
 	// If not found, spawn a new player.
 
 	// Make sure this kind of player is allowed.
-	if ( (bHumansOnly || Level.bHumansOnly) && !SpawnClass.Default.bIsHuman
-			&& !ClassIsChildOf(SpawnClass, class'Spectator') )
+	if ( (bHumansOnly || Level.bHumansOnly) && !SpawnClass.Default.bIsHuman && !SpawnClass.Default.bIsSpectatorClass )
 		SpawnClass = DefaultPlayerClass;
 
 	NewPlayer = StartSpot.Spawn(SpawnClass,,,StartSpot.Location,StartSpot.Rotation,None);
@@ -984,7 +983,7 @@ event playerpawn Login
 		return None;
 	}
 
-	if ( NewPlayer.IsA('Spectator') && (Level.NetMode == NM_DedicatedServer) )
+	if ( NewPlayer.bIsSpectatorClass && (Level.NetMode == NM_DedicatedServer) )
 		NumSpectators++;
 
 	// Init player's administrative privileges
@@ -1024,7 +1023,7 @@ event playerpawn Login
 	if ( WorldLog != None )
 		WorldLog.LogPlayerConnect(NewPlayer);
 
-	if ( !NewPlayer.IsA('Spectator') )
+	if ( !NewPlayer.bIsSpectatorClass )
 		NumPlayers++;
 	return newPlayer;
 }
@@ -1129,12 +1128,12 @@ function Logout( pawn Exiting )
 	{
 		GetAccessManager().AdminLogout(PlayerPawn(Exiting));
 		
-		if( !Exiting.IsA('Spectator') )
+		if( !PlayerPawn(Exiting).bIsSpectatorClass )
 			NumPlayers--;
 		else if ( Level.NetMode!=NM_StandAlone )
 			NumSpectators--;
 	}
-	if ( (Level.NetMode==NM_DedicatedServer || Level.NetMode==NM_ListenServer) && !Exiting.IsA('Spectator') )
+	if ( (Level.NetMode==NM_DedicatedServer || Level.NetMode==NM_ListenServer) && (!Exiting.bIsPlayerPawn || !PlayerPawn(Exiting).bIsSpectatorClass) )
 	{
 		if( Exiting.bIsPlayerPawn )
 		{
@@ -1147,9 +1146,9 @@ function Logout( pawn Exiting )
 		else BroadcastMessage(Exiting.PlayerReplicationInfo.PlayerName $ LeftMessage, false);
 	}
 
-	if ( LocalLog != None )
+	if ( LocalLog )
 		LocalLog.LogPlayerDisconnect(Exiting);
-	if ( WorldLog != None )
+	if ( WorldLog )
 		WorldLog.LogPlayerDisconnect(Exiting);
 }
 
@@ -1178,7 +1177,7 @@ event AcceptInventory(pawn PlayerPawn)
 //
 function AddDefaultInventory(Pawn Player)
 {
-	if (Player.IsA('Spectator'))
+	if( Player.bIsPlayerPawn && PlayerPawn(Player).bIsSpectatorClass )
 		return;
 	Player.JumpZ = Player.default.JumpZ * PlayerJumpZScaling();
 	AddPlayerDefaultWeapon(Player);
@@ -1782,6 +1781,7 @@ defaultproperties
 	EnteredMessage=" entered the game."
 	GameName="Game"
 	MaxedOutMessage="Server is already at capacity."
+	MaxedOutSpectatorsMsg="Max spectators exceeded"
 	WrongPassword="The password you entered is incorrect."
 	NeedPassword="You need to enter a password to join this game."
 	MaxPlayers=16

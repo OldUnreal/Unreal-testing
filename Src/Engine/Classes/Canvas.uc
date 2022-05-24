@@ -28,16 +28,15 @@ struct export CanvasPoly
 };
 
 // Objects.
-//#exec Texture Import File=Textures\HD_Font\HD_SmallFont.pcx Name=HD_SmallFont Group="HD" Mips=Off Flags=2
-#exec Texture Import File=Textures\HD_Font\HD_MedFont.dds Name=HD_MedFont Group="HD" Mips=Off Flags=131074
-//#exec Texture Import File=Textures\HD_Font\HD_LargeFont.pcx Name=HD_LargeFont Group="HD" Mips=Off Flags=2
-//#exec Texture Import File=Textures\HD_Font\HD_BigFont.pcx Name=HD_BigFont Group="HD" Mips=Off Flags=2
-//#exec Texture Import File=Textures\HD_Font\BigFontWIP2NoMip.dds Name=HD_LargeFont Group="HD" Mips=Off Flags=131074
+#exec Texture Import File=Textures\HD_Font\SmallFont0.bmp Name=HD_SmallFont Group="HD" Mips=Off Flags=2
+#exec Texture Import File=Textures\HD_Font\MedFont-Masked.bmp Name=HD_MedFont Group="HD" Mips=Off Flags=2
+#exec Texture Import File=Textures\HD_Font\LargeFont-AlphaBlend.dds Name=HD_LargeFont Group="HD" Mips=Off Flags=131074
+#exec Texture Import File=Textures\HD_Font\BigFontNew-AlphaBlend.dds Name=HD_BigFont Group="HD" Mips=Off Flags=131074
 
-#exec Font Import File=Textures\SmallFont.bmp Name=SmallFont //HD=HD_SmallFont
+#exec Font Import File=Textures\SmallFont.bmp Name=SmallFont HD=HD_SmallFont
 #exec Font Import File=Textures\MedFont.pcx   Name=MedFont HD=HD_MedFont
-#exec Font Import File=Textures\LargeFont_New.pcx Name=LargeFont //HD=HD_LargeFont
-#exec Font Import File=Textures\BigFontNew.pcx   Name=BigFont //HD=HD_BigFont
+#exec Font Import File=Textures\LargeFont_New.pcx Name=LargeFont HD=HD_LargeFont
+#exec Font Import File=Textures\BigFontNew.pcx   Name=BigFont HD=HD_BigFont
 
 // Modifiable properties.
 var font    Font;            // Font for DrawText.

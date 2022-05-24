@@ -2,7 +2,7 @@
 #include "UWebAdminPrivate.h"
 
 #define NAMES_ONLY
-#define AUTOGENERATE_NAME(name) extern UWEBADMIN_API FName UWEBADMIN_##name=FName(TEXT(#name),FNAME_Intrinsic);
+#define AUTOGENERATE_NAME(name) UWEBADMIN_API FName UWEBADMIN_##name=FName(TEXT(#name),FNAME_Intrinsic);
 #define AUTOGENERATE_FUNCTION(cls,idx,name) IMPLEMENT_FUNCTION (cls, idx, name)
 #include "UWebAdminClasses.h"
 #undef NAMES_ONLY
@@ -798,7 +798,7 @@ void UWebQuery::AddHeader()
 	// Temporarly move existing data off the sending list to allow header go in front.
 	INT DataSize = PendingSend.Num();
 	TArray<BYTE> DupeAr;
-	ExchangeArray(DupeAr,PendingSend);
+	PendingSend.ExchangeArray(&DupeAr);
 
 	AddSendString(TEXT("HTTP/1.1 200 OK"),1);
 	AddSendString(TEXT("Server: UnrealEngine UWeb Web Server"),1);
@@ -809,7 +809,7 @@ void UWebQuery::AddHeader()
 	bHeaderAtached = 1;
 
 	// Now move data to beginning of sending list.
-	ExchangeArray(DupeAr,PendingSend);
+	PendingSend.ExchangeArray(&DupeAr);
 	PendingSend.Insert(0,DupeAr.Num());
 	appMemcpy(&PendingSend(0),&DupeAr(0),DupeAr.Num());
 	unguard;

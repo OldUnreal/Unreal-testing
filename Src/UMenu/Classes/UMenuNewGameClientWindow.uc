@@ -35,6 +35,10 @@ var UWindowCheckbox UseClassicCheck;
 var localized string UseClassicText;
 var localized string UseClassicHelp;
 
+var UWindowCheckbox MirrorModeCheck;
+var localized string MirrorModeText;
+var localized string MirrorModeHelp;
+
 var UWindowSmallButton OKButton;
 var UWindowSmallButton MutatorButton;
 var UWindowSmallButton AdvancedButton;
@@ -47,10 +51,27 @@ var config bool bMutatorsSelected, bClassicChecked;
 
 function WindowShown()
 {
-	if( UseClassicCheck )
-		UseClassicCheck.bChecked = bClassicChecked;
+	UseClassicCheck.bChecked = bClassicChecked;
 	UseMutatorsCheck.bChecked = bMutatorsSelected;
+	CheckMirrorEnable();
 	Super.WindowShown();
+}
+
+// Easter egg: You must stare at a mirror BSP surface in order for Mirror mode to show up!
+final function CheckMirrorEnable()
+{
+	local PlayerPawn P;
+	local vector HL,HN;
+	local int HF;
+	
+	MirrorModeCheck.bChecked = false;
+	
+	P = GetLocalPlayerPawn();
+	
+	// Perform 2 traces, first one to trace through the invisible collision hull at Entry's window, second time to check its BSP flags!
+	if( P.Trace(HL,HN,P.CalcCameraLocation + vector(P.CalcCameraRotation)*(P.CollisionRadius+86.f),P.CalcCameraLocation,false,,,NF_NotVisBlocking) && P.TraceSurfHitInfo(HL+HN,HL-HN,,,,HF,,,{TRACE_Level | TRACE_Movers}) && (HF & PF_Mirrored) )
+		ShowChildWindow(MirrorModeCheck);
+	else HideChildWindow(MirrorModeCheck);
 }
 
 function Created()
@@ -128,6 +149,14 @@ function Created()
 	UseClassicCheck.SetFont(F_Normal);
 	UseClassicCheck.bChecked = bClassicChecked;
 	UseClassicCheck.Align = TA_Left;
+	
+	// Mirror mode
+	MirrorModeCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', CenterPos, 116, 190, 1));
+	MirrorModeCheck.SetText(MirrorModeText);
+	MirrorModeCheck.SetHelpText(MirrorModeHelp);
+	MirrorModeCheck.SetFont(F_Normal);
+	MirrorModeCheck.Align = TA_Left;
+	CheckMirrorEnable();
 
 	// Mutators
 	MutatorButton = UWindowSmallButton(CreateControl(class'UWindowSmallButton', CenterPos, 98, 64, 32));
@@ -183,11 +212,11 @@ function BeforePaint(Canvas C, float X, float Y)
 	UseMutatorsCheck.AutoWidth(C);
 	UseMutatorsCheck.WinLeft = ControlRight - UseMutatorsCheck.WinWidth + 3;
 	
-	if( UseClassicCheck )
-	{
-		UseClassicCheck.AutoWidth(C);
-		UseClassicCheck.WinLeft = ControlRight - UseClassicCheck.WinWidth + 3;
-	}
+	UseClassicCheck.AutoWidth(C);
+	UseClassicCheck.WinLeft = ControlRight - UseClassicCheck.WinWidth + 3;
+	
+	MirrorModeCheck.AutoWidth(C);
+	MirrorModeCheck.WinLeft = ControlRight - MirrorModeCheck.WinWidth + 3;
 
 	MutatorButton.AutoWidthBy(C, ButtonWidth);
 	MutatorButton.WinLeft = ControlRight - MutatorButton.WinWidth;
@@ -216,11 +245,8 @@ function Notify(UWindowDialogControl C, byte E)
 			SaveConfig();
 			break;
 		case UseClassicCheck:
-			if( UseClassicCheck )
-			{
-				bClassicChecked = UseClassicCheck.bChecked;
-				SaveConfig();
-			}
+			bClassicChecked = UseClassicCheck.bChecked;
+			SaveConfig();
 			break;
 		case GameCombo:
 			OnCampignChange();
@@ -258,6 +284,9 @@ function OKClicked()
 		S $= "?Mutator="$class'UMenuMutatorCW'.default.MutatorList;
 	
 	S $= "?ClassicMode="$string(bClassicChecked);
+	
+	if( MirrorModeCheck.bWindowVisible && MirrorModeCheck.bChecked )
+		S $= "?MirrorMode=1";
 
 	if( LastSelectedSkill>3 && MessageBox(HighSkillTitle, HighSkillWarning, MB_YesNo, MR_No, MR_Yes) )
 		PendingURL = S;
@@ -364,4 +393,6 @@ defaultproperties
 	AdvancedText="Advanced..."
 	HighSkillTitle="WARNING!"
 	HighSkillWarning="This skill level is outside of standard difficulty settings, it will brutalize you in singleplayer. Are you sure you want to proceed?"
+	MirrorModeText="Mirror Mode"
+	MirrorModeHelp="The world is not what it seams..."
 }

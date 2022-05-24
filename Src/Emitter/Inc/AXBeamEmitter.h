@@ -2,14 +2,15 @@
 	AXBeamEmitter.h.
 =============================================================================*/
 	AXBeamEmitter() {}
-	void InitializeEmitter(UEmitterRendering* Render, AXParticleEmitter* EmitterOuter);
+	void InitializeEmitter(AXParticleEmitter* Parent);
 	void ResetEmitter();
 	void PostScriptDestroyed();
-	void GetBeamFrame( FVector* Verts, INT Size, FCoords& Coords, AActor* Particle, INT FrameVerts );
+	void GetBeamFrame( FVector* Verts, INT Size, FCoords& Coords, xParticle* Particle, INT FrameVerts );
 	void ResetVars();
-	void UpdateParticles( float Delta, UEmitterRendering* Render );
-	void ModifyParticle( AActor* A, PartsType* Data );
+	void UpdateParticles(FLOAT Delta, UEmitterRendering* Render);
+	void ModifyParticle(xParticle* A);
 	void CalcSegmentScales();
+	void Serialize(FArchive& Ar);
 /*-----------------------------------------------------------------------------
 	The End.
 -----------------------------------------------------------------------------*/

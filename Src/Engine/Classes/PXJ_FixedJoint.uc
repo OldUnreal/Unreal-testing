@@ -7,7 +7,7 @@ Class PXJ_FixedJoint extends PXJ_BaseJoint
 cpptext
 {
 	UPXJ_FixedJoint() {}
-	PX_JointObject* InitJoint( PX_PhysicsObject* A, PX_PhysicsObject* B, const FCoords* CA, const FCoords* CB );
+	UBOOL InitJoint( PX_JointObject& Joint, const FCoords& CA, const FCoords& CB );
 }
 
 defaultproperties

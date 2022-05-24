@@ -15,14 +15,13 @@ var FGameEntry GameList[19];
 function PostBeginPlay()
 {
 	local string Ent,Des;
-	local int i,j;
+	local int j;
 
 	Super.PostBeginPlay();
 	MenuLength = 0;
-	GetNextIntDesc("UnrealShare.SinglePlayer",i++,Ent,Des);
-	while ( (Ent!= "") && (MenuLength < 20) )
+	foreach IntDescIterator(string(Class'SinglePlayer'),Ent,Des)
 	{
-		if ( Des!="" )
+		if ( Len(Des) )
 		{
 			j = InStr(Des,";");
 			if ( j!=-1 )
@@ -41,23 +40,25 @@ function PostBeginPlay()
 				MenuLength++;
 				if( MenuLength>1 )
 					HelpMessage[MenuLength] = Default.HelpMessage[1];
+				if( MenuLength>=20 )
+					break;
 			}
 		}
-		GetNextIntDesc("UnrealShare.SinglePlayer",i++,Ent,Des);
 	}
 }
 
 function bool ProcessSelection()
 {
 	local Menu ChildMenu;
+	local string S;
 
 	ChildMenu = spawn(class'UnrealNewGameMenu', owner);
 	HUD(Owner).MainMenu = ChildMenu;
 	ChildMenu.PlayerOwner = PlayerOwner;
-	if ( GameList[Selection-1].GameClass=="Game.Game" )
-		PlayerOwner.UpdateURL("Game","", false);
-	else PlayerOwner.UpdateURL("Game",GameList[Selection-1].GameClass, false);
-	UnrealNewGameMenu(ChildMenu).StartMap = GameList[Selection-1].StartMap;
+	S = GameList[Selection-1].StartMap;
+	if ( !(GameList[Selection-1].GameClass~="Game.Game") )
+		S = S$"?Game="$GameList[Selection-1].GameClass;
+	UnrealNewGameMenu(ChildMenu).StartMap = S;
 
 	if ( MenuLength == 1 )
 	{

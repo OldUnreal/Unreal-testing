@@ -226,7 +226,7 @@ var pointer<struct FTreeActor*>		OctreeNode;
 var noedsave const	array<Actor>	RealTouching;		// The actual touchlist in 227, can be accessed with TouchingActors iterator.
 var pointer<TArray<AActor*>*>		RealBasedActors;	// Actual list of actors based on this actor.
 var pointer<TArray<AActor*>*>		RealChildActors;	// Actual list of actors owned by this actor.
-var pointer<TArray<UPXJ_BaseJoint*>*> JoinedActorsPtr;	// List of jointed actors to this.
+var pointer<TArray<struct PX_JointObject*>*> JoinedActorsPtr;	// List of jointed actors to this.
 var pointer<struct FNetworkData*>	NetworkChannels;	// Currently opened ActorChannels for this Actor.
 
 struct export MultiTimerType
@@ -415,7 +415,7 @@ var const export model  Brush;           // Brush if DrawType=DT_Brush.
 var(Display) norepnotify float DrawScale;// Scaling factor, 1.0=normal size.
 var(Display) norepnotify vector PrePivot;// Offset from box center for drawing.
 var(Display) norepnotify float ScaleGlow;// Multiplies lighting scale.
-var(Display)  float     VisibilityRadius;// Actor is drawn if viewer is within its visibility radius. Zero=infinite visibility. Negative=hidden if within radius.
+var(Display)  float     VisibilityRadius;// Actor is drawn if viewer is within its visibility radius. Zero=infinite visibility. Negative=hidden if within radius. In AmbientSound it can be used to set the factor how much the sound can be occluded (by obstacles).
 var float VisibilityHeight;				 // unused since 227j.
 var(Display) norepnotify byte AmbientGlow;// Ambient brightness, or 255=pulsing.
 var(Display) norepnotify byte Fatness;   // Fatness in UU (mesh distortion), 128 = default.
@@ -1007,7 +1007,9 @@ function InterpolationEnded(); // Reached end-of-path for interpolation.
 
 simulated event FellOutOfWorld()
 {
-	Destroy();
+	if( bNoDelete )
+		SetPhysics(PHYS_None);
+	else Destroy();
 }
 
 //
@@ -1266,14 +1268,14 @@ event BeginPlay();
 // Disk access.
 
 // Find files.
-native(539) final function string GetMapName( string NameEnding, string MapName, int Dir );
-native(545) final function GetNextSkin( string Prefix, string CurrentSkin, int Dir, out string SkinName, out string SkinDesc );
-native(547) final function string GetURLMap();
-native final function string GetNextInt( string ClassName, int Num );
-native final function GetNextIntDesc( string ClassName, int Num, out string Entry, out string Description );
+static native(539) final function string GetMapName( string NameEnding, string MapName, int Dir );
+static native(545) final function GetNextSkin( string Prefix, string CurrentSkin, int Dir, out string SkinName, out string SkinDesc );
+static native(547) final function string GetURLMap();
+static native final function string GetNextInt( string ClassName, int Num );
+static native final function GetNextIntDesc( string ClassName, int Num, out string Entry, out string Description );
 // 227: Same as GetNextIntDesc, but a lot faster and has some extra features.
 // @ bSingleNames - Same name entries may only outcome once.
-native(313) final iterator function IntDescIterator( string ClassName, optional out string EntryName, optional out string Desc, optional bool bSingleNames );
+static native(313) final iterator function IntDescIterator( string ClassName, optional out string EntryName, optional out string Desc, optional bool bSingleNames );
 
 // Iterate a list of Dynamic Link Libaries.
 // @ Flags:

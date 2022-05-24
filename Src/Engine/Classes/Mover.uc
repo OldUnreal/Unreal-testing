@@ -99,8 +99,9 @@ var vector       BasePos, OldPos, OldPrePivot, SavedPos;
 var rotator      BaseRot, OldRot, SavedRot;
 var transient const array<int> NotifyLightMaps;
 var StaticLightData StaticLightD;
-var transient private Mover FlushNext;
+var transient private Mover DynBspNext, FlushNext;
 var Actor StuckedActor; // Mover will ignore this actor and attempt to push it out.
+var transient private bool bDynBSPDirty;
 
 // AI related
 var       NavigationPoint  myMarker;
@@ -1334,4 +1335,5 @@ defaultproperties
 	bUseGoodCollision=True
 	CollisionFlag=COLLISIONFLAG_Movers
 	NetUpdateFrequency=2
+	bNotifyPositionUpdate=true
 }

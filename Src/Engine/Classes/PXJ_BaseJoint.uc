@@ -54,7 +54,7 @@ cpptext
 	void SetJoinedActor( AActor* Other );
 	void DrawPreview( FSceneNode* Frame );
 	
-	virtual PX_JointObject* InitJoint( PX_PhysicsObject* A, PX_PhysicsObject* B, const FCoords* CA, const FCoords* CB ) { return NULL; }
+	virtual UBOOL InitJoint( PX_JointObject& Joint, const FCoords& CA, const FCoords& CB ) { return FALSE; }
 	virtual void DrawLimitations( FSceneNode* Frame, const FCoords& C );
 }
 

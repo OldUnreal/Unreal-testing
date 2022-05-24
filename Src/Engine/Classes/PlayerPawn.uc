@@ -191,6 +191,7 @@ var transient bool bSaveClientPlayerState;	// Whether the current client-side st
 var transient bool bDistanceFogEnabled,		// Client render distance fog now.
 		bBlendingDistanceFog;
 var transient bool bConsoleCommandMessage;	// When calling PlayerPawn.ConsoleCommand, all engine commands will output in clientmessages.
+var const bool bIsSpectatorClass;			// This player is a spectator only class.
 
 replication
 {
@@ -244,9 +245,10 @@ replication
 //
 native event ClientTravel( string URL, ETravelType TravelType, bool bItems );
 native(544) final function ResetKeyboard();
-native(546) final function UpdateURL(string NewOption, string NewValue, bool bSaveDefault);
+static native(546) final function UpdateURL(string NewOption, string NewValue, bool bSaveDefault); // Set to last URL and update to INI.
+static native final function string GetDefaultURL( string Option, optional string DefaultValue ); // 227j: Get from last URL.
 native(549) final function bool IsPressing( byte KeyNum ); // Returns true if player is holding down key.
-native final function LevelInfo GetEntryLevel();
+static native final function LevelInfo GetEntryLevel();
 native final function int GetClientSubVersion(); // Return the client version.
 static native final function string GetCompileTime(); // Return the time and date when this version was built.
 

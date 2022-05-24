@@ -5,7 +5,7 @@
 #include "EmitterPrivate.h"
 
 #define NAMES_ONLY
-#define AUTOGENERATE_NAME(name) extern EMITTER_API FName EMITTER_##name=FName(TEXT(#name),FNAME_Intrinsic);
+#define AUTOGENERATE_NAME(name) EMITTER_API FName EMITTER_##name=FName(TEXT(#name),FNAME_Intrinsic);
 #define AUTOGENERATE_FUNCTION(cls,idx,name) IMPLEMENT_FUNCTION (cls, idx, name)
 #include "EmitterClasses.h"
 #undef DECLARE_NAME
@@ -15,17 +15,6 @@ IMPLEMENT_PACKAGE(Emitter)
 
 IMPLEMENT_CLASS(ADistantLightActor);
 IMPLEMENT_CLASS(UActorFaceCameraRI);
-
-inline bool CheckHitRootSelected( AActor* A )
-{
-	while( A )
-	{
-		if( A->bSelected )
-			return true;
-		A = A->HitActor;
-	}
-	return false;
-}
 
 /*
 ParticleEmitter base class functions ===================================================
@@ -37,20 +26,9 @@ void AXParticleEmitter::execSetParticlesProps (FFrame& Stack, RESULT_DECL)
 	P_GET_FLOAT_OPTX(Speed,1.f)
 	P_GET_FLOAT_OPTX(Scale,1.f)
 	P_FINISH;
-	UEmitterRendering* Render = (UEmitterRendering*)RenderInterface;
-	if( !Render )
-		return;
-	int l=Render->PartPtr->Len();
-	for( int i=0; i<l; i++ )
-	{
-		AActor* A=Render->PartPtr->GetA(i);
-		if( A->bHidden )
-			continue;
-		A->Velocity*=Speed;
-		A->Acceleration*=Speed;
-		A->DrawScale*=Scale;
-		Render->PartPtr->Get(i).Scale*=Scale;
-	}
+
+	if (PartPtr)
+		PartPtr->ScaleParticles(Speed, Scale);
 	unguardexec;
 }
 void AXParticleEmitter::execAllParticles (FFrame& Stack, RESULT_DECL)
@@ -59,23 +37,11 @@ void AXParticleEmitter::execAllParticles (FFrame& Stack, RESULT_DECL)
 	P_GET_ACTOR_REF(ResActor)
 	P_FINISH;
 
-	UEmitterRendering* Render = (UEmitterRendering*)RenderInterface;
-
 	StartIterator;
-
-	if( Render && Render->PartPtr )
+	for (AActor* A = GetRenderList(nullptr); A; A = A->Target)
 	{
-		// Loop for UScript
-		int l=Render->PartPtr->Len();
-		AActor* A;
-		for( int i=0; i<l; i++ )
-		{
-			A = Render->PartPtr->GetA(i);
-			if( A->bHidden )
-				continue;
-			*ResActor = A;
-			LoopIterator(return);
-		}
+		*ResActor = A;
+		LoopIterator(return);
 	}
 	EndIterator;
 
@@ -100,11 +66,7 @@ void AXParticleEmitter::ResetVars()
 {
 	guard(AXParticleEmitter::ResetVars);
 	bHasInitialized = 0;
-	bKillNextTick = 0;
-	bHasSpecialParts = 0;
-	bWasPostDestroyed = 0;
 	ActiveCount = 0;
-	PartCombiners.Empty();
 	unguard;
 }
 
@@ -117,57 +79,181 @@ void AXParticleEmitter::PostNetReceive()
 
 UBOOL AXParticleEmitter::Tick( FLOAT DeltaTime, enum ELevelTick TickType )
 {
-	if (bKillNextTick && (bHasSpecialParts || !GIsEditor) && !bNoDelete)
+	guardSlow(AXParticleEmitter::Tick);
+	if (bDestruction && !GIsEditor && !bNoDelete && !HasAliveParticles())
 	{
-		UBOOL bReady = TRUE;
-		if( bHasSpecialParts )
-		{
-			for( INT i=0; i<PartCombiners.Num(); i++ )
-				if( PartCombiners(i) && PartCombiners(i)->bHasInitialized
-				 && PartCombiners(i)->RenderInterface
-				 && ((UEmitterRendering*) PartCombiners(i)->RenderInterface)->HasAliveParticles() )
-				{
-					PartCombiners(i)->bDestruction = 1;
-					bReady = FALSE;
-				}
-		}
-		if (bReady)
-		{
-			XLevel->DestroyActor(this);
-			return 1;
-		}
+		eventExpired();
+		XLevel->DestroyActor(this);
+		return 1;
 	}
 	return Super::Tick(DeltaTime,TickType);
+	unguardSlow;
 }
 void AXParticleEmitter::PostScriptDestroyed()
 {
-	UEmitterRendering* UR = Cast<UEmitterRendering>(RenderInterface);
-	if (UR && UR->PartPtr && !GIsEditor)
+	guardSlow(AXParticleEmitter::PostScriptDestroyed);
+	if (PartPtr && !GIsEditor)
 	{
-		TTransArray<AActor*>& Actors(XLevel->Actors);
-		AEmitterGarbageCollector* GA = NULL;
-		for (INT i = 0; i < Actors.Num(); i++)
-		{
-			GA = Cast<AEmitterGarbageCollector>(Actors(i));
-			if (GA)
-				break;
-		}
-		if (!GA)
-			GA = (AEmitterGarbageCollector*)XLevel->SpawnActor(AEmitterGarbageCollector::StaticClass());
-		if (GA)
-			GA->AddGarbage(UR->PartPtr);
-		UR->PartPtr = NULL;
+		AEmitterGarbageCollector::MarkGCParticles(XLevel, PartPtr);
+		PartPtr = NULL;
 	}
-
-	for (INT i = 0; i < PartCombiners.Num(); i++)
-		if (PartCombiners(i))
-		{
-			PartCombiners(i)->bWasPostDestroyed = 1;
-			PartCombiners(i)->PostScriptDestroyed();
-			delete PartCombiners(i);
-		}
-	PartCombiners.Empty();
+	if (!GIsEditor) // Skip if in editor so it doesn't crash if you undo emitter deletion.
+		DestroyCombiners();
 	Super::PostScriptDestroyed();
+	unguardSlow;
+}
+
+void AXParticleEmitter::Serialize(FArchive& Ar)
+{
+	guardSlow(AXParticleEmitter::Serialize);
+	if (Ar.IsSaving() && bIsInternalEmitter)
+	{
+		// Skip saving some variables that aren't needed.
+		Location = FVector(0, 0, 0);
+		Rotation = FRotator(0, 0, 0);
+		Level = NULL;
+		XLevel = NULL;
+		HitActor = NULL;
+		Super::Serialize(Ar);
+		if (ParentEmitter)
+		{
+			Level = ParentEmitter->Level;
+			XLevel = ParentEmitter->XLevel;
+			HitActor = ParentEmitter;
+		}
+	}
+	else
+	{
+		Super::Serialize(Ar);
+
+		if (Ar.SerializeRefs() && PartPtr)
+			PartPtr->Serialize(Ar);
+	}
+	unguardSlow;
+}
+
+UBOOL AXParticleEmitter::ShouldExportProperty(UProperty* Property) const
+{
+	guardSlow(AXParticleEmitter::ShouldExportProperty);
+	if (bIsInternalEmitter && Property->GetOuter() == AActor::StaticClass())
+	{
+		const TCHAR* Type = Property->GetName();
+		if (!appStricmp(Type, TEXT("Location"))
+			|| !appStricmp(Type, TEXT("HitActor"))
+			|| !appStricmp(Type, TEXT("bDeleteMe"))
+			|| !appStricmp(Type, TEXT("Rotation")))
+		{
+			return FALSE;
+		}
+	}
+	return Super::ShouldExportProperty(Property);
+	unguardSlow;
+}
+
+FParticlesDataBase* AXParticleEmitter::GetParticleInterface()
+{
+	guardSlow(AXParticleEmitter::GetParticleInterface);
+	return PartPtr;
+	unguardSlow;
+}
+
+void AXParticleEmitter::SpawnChildPart(const FVector& Pos, TArray<AXEmitter*>& PartIdx)
+{
+	guardSlow(AXParticleEmitter::SpawnChildPart);
+	AXEmitter** F = &PartIdx(0);
+	for (INT i = (PartIdx.Num() - 1); i >= 0; --i)
+		if (F[i])
+			F[i]->RemoteSpawnParticle(Pos);
+	unguardSlow;
+}
+
+void AXParticleEmitter::KillEmitter()
+{
+	guardSlow(AXParticleEmitter::KillEmitter);
+	if (bDeleteMe || bStatic || bNoDelete)
+		return;
+	if (GIsEditor || !HasAliveParticles())
+		XLevel->DestroyActor(this);
+	else
+	{
+		LifeSpan = Max(GetMaxLifeTime(), 0.01f); // To ensure emitter is destroyed even if bHidden.
+		bDestruction = TRUE;
+		for (AXParticleEmitter* P = CombinerList; P; P = P->CombinerList)
+			P->bDestruction = TRUE;
+	}
+	unguardSlow;
+}
+
+FLOAT AXParticleEmitter::GetMaxLifeTime() const
+{
+	guardSlow(AXParticleEmitter::GetMaxLifeTime);
+	return 0.1f;
+	unguardSlow;
+}
+
+void AXParticleEmitter::Destroy()
+{
+	guard(AXParticleEmitter::Destroy);
+	if (PartPtr)
+	{
+		if (GUglyHackFlags & HACKFLAGS_AllowAutoDestruct) // Make sure we are doing this at a safe time!
+			AEmitterGarbageCollector::MarkGCParticles(XLevel, PartPtr);
+		else delete PartPtr;
+		PartPtr = NULL;
+	}
+	Super::Destroy();
+	unguard;
+}
+
+void AXParticleEmitter::DestroyCombiners()
+{
+	guard(AXParticleEmitter::DestroyCombiners);
+	if (TransientEmitters)
+	{
+		AXParticleEmitter* NP;
+		for (AXParticleEmitter* P = TransientEmitters; P; P = NP)
+		{
+			NP = P->TransientEmitters;
+			P->DestroyCombiners();
+			P->ConditionalDestroy();
+			delete P;
+		}
+		TransientEmitters = NULL;
+	}
+	CombinerList = NULL;
+	unguardobj;
+}
+
+void AXParticleEmitter::InitializeEmitter(AXParticleEmitter* Parent)
+{
+	guardSlow(AXParticleEmitter::InitializeEmitter);
+	bHasInitialized = TRUE;
+	ParentEmitter = Parent;
+	if (Parent != this)
+	{
+		Location = Parent->Location;
+		Rotation = Parent->Rotation;
+		Level = Parent->Level;
+		XLevel = Parent->XLevel;
+		Region = Parent->Region;
+		HitActor = Parent;
+	}
+	unguardSlow;
+}
+
+void AXParticleEmitter::RelinkChildEmitters()
+{
+	guardSlow(AXParticleEmitter::RelinkChildEmitters);
+	if (ParentEmitter == this)
+	{
+		CombinerList = NULL;
+		for (AXParticleEmitter* P = TransientEmitters; P; P = P->TransientEmitters)
+		{
+			P->CombinerList = CombinerList;
+			CombinerList = P;
+		}
+	}
+	unguardSlow;
 }
 
 void FParticleSndType::PlaySoundEffect(const FVector& Location, ULevel* Level) const

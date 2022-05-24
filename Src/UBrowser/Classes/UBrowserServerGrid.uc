@@ -257,7 +257,6 @@ function int GetSelectedRow()
 function DoubleClickRow(int Row)
 {
 	local UBrowserServerList Server;
-	local string Cl;
 
 	Server = GetServerUnderRow(Row);
 
@@ -268,11 +267,8 @@ function DoubleClickRow(int Row)
 		if( !Server.ValidateClientDLLs(Self) )
 			return;
 		AddRecentServer(Server);
-		if ( Class'UnrealPlayerMenu'.Default.bPlayingSpectate )
-			Cl = "?Class="$string(Class'UnrealSpectator');
-		else Cl = "?Class="$Class'UnrealPlayerMenu'.Default.ClassString;
-		if ( !Class'UBrowserJoinPWD'.Static.MakeClientJoinWithP(Server.IP$":"$Server.GamePort,GetPlayerOwner(),Cl) )
-			GetPlayerOwner().ClientTravel("unreal://"$Server.IP$":"$Server.GamePort$UBrowserServerListWindow(GetParent(Class'UBrowserServerListWindow')).URLAppend$"?Password="$Rand(1000)$Cl, TRAVEL_Absolute, false);
+		if ( !Class'UBrowserJoinPWD'.Static.MakeClientJoinWithP(Server.IP$":"$Server.GamePort,GetPlayerOwner(),"") )
+			GetPlayerOwner().ClientTravel("unreal://"$Server.IP$":"$Server.GamePort$UBrowserServerListWindow(GetParent(Class'UBrowserServerListWindow')).URLAppend$"?Password="$Rand(1000), TRAVEL_Absolute, false);
 
 		GetParent(class'UWindowFramedWindow').Close();
 		Root.Console.CloseUWindow();
@@ -281,12 +277,8 @@ function DoubleClickRow(int Row)
 function JoinWithPassword( string ServerAddress, string Pass )
 {
 	local UBrowserJoinPW W;
-	local string Cl;
 
-	if ( Class'UnrealPlayerMenu'.Default.bPlayingSpectate )
-		Cl = "?Class="$string(Class'UnrealSpectator');
-	else Cl = "?Class="$Class'UnrealPlayerMenu'.Default.ClassString;
-	GetPlayerOwner().ClientTravel("unreal://"$ServerAddress$"?Password="$Pass$Cl, TRAVEL_Absolute, false);
+	GetPlayerOwner().ClientTravel("unreal://"$ServerAddress$"?Password="$Pass, TRAVEL_Absolute, false);
 	W = UBrowserJoinPW(GetParent(class'UBrowserJoinPW'));
 	if ( W!=None )
 		W.Close();
