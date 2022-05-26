@@ -150,3 +150,18 @@ None="Geen"
 Yes="Ja"
 ; EN: No="No"
 No="Nee"
+
+[HelloWorldCommandlet]
+HelpCmd=HelloWorld
+; EN: HelpOneLiner="Sample 'hello world' commandlet"
+HelpOneLiner="Sample 'hello world' commandlet"
+; EN: HelpUsage="HelloWorld (no parameters)"
+HelpUsage="HelloWorld (no parameters)"
+; EN: HelpParm[0]="IntParm"
+HelpParm[0]="IntParm"
+; EN: HelpParm[1]="StrParm"
+HelpParm[1]="StrParm"
+; EN: HelpDesc[0]="An integer parameter"
+HelpDesc[0]="An integer parameter"
+; EN: HelpDesc[1]="A string parameter"
+HelpDesc[1]="A string parameter"

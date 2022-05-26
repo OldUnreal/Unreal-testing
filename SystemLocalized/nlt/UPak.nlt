@@ -256,3 +256,9 @@ MenuName="Roofdier"
 [UPakConsole]
 ; EN: ClassCaption="Unreal Gold Console"
 ClassCaption="Console van Unreal Gold"
+
+[MarineInterestPoint]
+PickupMessage=""
+M_Activated=""
+M_Selected=""
+M_Deactivated=""

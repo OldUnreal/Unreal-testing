@@ -597,6 +597,10 @@ TeamName[3]="Gold Team: "
 SomeoneName="Someone"
 DemoPlaybackProg="Demo: %f %"
 DemoRecInfo="[REC]"
+GameTypeStr="Game Type: "
+MapTitleStr="Map Title: "
+AuthorStr="Author: "
+IdealPlayerCountStr="Ideal Player Load: "
 
 [DispersionPistol]
 DeathMessage="%o was killed by %k's %w.  What a loser!"

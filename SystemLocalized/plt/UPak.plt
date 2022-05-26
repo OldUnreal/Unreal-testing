@@ -278,3 +278,9 @@ MenuNameDative="jaszczurkę"
 [UPakConsole]
 ; EN: ClassCaption="Unreal Gold Console"
 ClassCaption="Konsola z Unreal Gold"
+
+[MarineInterestPoint]
+PickupMessage=""
+M_Activated=""
+M_Selected=""
+M_Deactivated=""

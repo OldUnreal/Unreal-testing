@@ -83,3 +83,12 @@ False="False"
 None="None"
 Yes="Yes"
 No="No"
+
+[HelloWorldCommandlet]
+HelpCmd=HelloWorld
+HelpOneLiner="Sample 'hello world' commandlet"
+HelpUsage="HelloWorld (no parameters)"
+HelpParm[0]="IntParm"
+HelpParm[1]="StrParm"
+HelpDesc[0]="An integer parameter"
+HelpDesc[1]="A string parameter"
