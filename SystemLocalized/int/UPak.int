@@ -174,3 +174,9 @@ MenuName="Spinner"
 
 [UPakConsole]
 ClassCaption="Unreal Gold Console"
+
+[MarineInterestPoint]
+PickupMessage=""
+M_Activated=""
+M_Selected=""
+M_Deactivated=""

@@ -251,3 +251,9 @@ MenuName="Aranya"
 [UPakConsole]
 ; EN: ClassCaption="Unreal Gold Console"
 ClassCaption="Consola d'Unreal Gold"
+
+[MarineInterestPoint]
+PickupMessage=""
+M_Activated=""
+M_Selected=""
+M_Deactivated=""

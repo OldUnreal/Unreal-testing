@@ -250,3 +250,9 @@ MenuName="Спиннер"
 [UPakConsole]
 ; EN: ClassCaption="Unreal Gold Console"
 ClassCaption="Консоль из Unreal Gold"
+
+[MarineInterestPoint]
+PickupMessage=""
+M_Activated=""
+M_Selected=""
+M_Deactivated=""
