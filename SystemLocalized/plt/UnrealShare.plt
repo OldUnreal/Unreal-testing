@@ -164,6 +164,8 @@ Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Rozgry
 Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Odtwarzacz")
 ; EN: Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Admin menu")
 Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Panel Admina")
+; EN: Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Game,Windowed mode")
+Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Tryb Okienkowy")
 ; EN: Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
 Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Anuluj Połączenie")
 ; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
@@ -1020,14 +1022,6 @@ SomeoneName="Ktoś"
 DemoPlaybackProg="Demo: %f %"
 ; EN: DemoRecInfo="[REC]"
 DemoRecInfo="[NAG]"
-; EN: GameTypeStr="Game Type: "
-GameTypeStr="Typ Gry: "
-; EN: MapTitleStr="Map Title: "
-MapTitleStr="Tytuł Mapy: "
-; EN: AuthorStr="Author: "
-AuthorStr="Autor: "
-; EN: IdealPlayerCountStr="Ideal Player Load: "
-IdealPlayerCountStr="Idealna Liczba Graczy: "
 
 [DispersionPistol]
 ; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
