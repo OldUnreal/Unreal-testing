@@ -164,6 +164,8 @@ Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Spiel,
 Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Spiel,Musikmenü")
 ; EN: Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Admin menu")
 Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Spiel,Adminmenü")
+; EN: Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Game,Windowed mode")
+Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Spiel,Fenstermodus")
 ; EN: Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
 Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Verbindung abbrechen")
 ; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
