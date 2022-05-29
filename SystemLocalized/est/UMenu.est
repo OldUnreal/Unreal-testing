@@ -113,7 +113,7 @@ BIMHelp="Si se activa, los Bots estarán presentes en las partidas para multijug
 
 [UMenuHUDConfigCW]
 ; EN: HUDConfigText="HUD Layout"
-HUDConfigText="Disposición de HUD"
+HUDConfigText="Disp. de Mon. Frontal"
 ; EN: HUDConfigHelp="Use the left and right arrow keys to select a Heads Up Display configuration."
 HUDConfigHelp="Utilice las teclas izquierda y derecha para seleccionar una configuración de monitor frontal (HUD)."
 ; EN: CrosshairText="Crosshair Style"
@@ -329,7 +329,7 @@ ScaleSizes[0]="Normal"
 ; EN: ScaleSizes[1]="Double"
 ScaleSizes[1]="Doble"
 ; EN: HUDScaleText="HUD Scaling"
-HUDScaleText="Escala HUD"
+HUDScaleText="Escala Mon. Frontal"
 ; EN: HUDScaleHelp="Adjust the size of the in-game Heads-up-Display."
 HUDScaleHelp="Ajusta el tamaño del Monitor Frontal (HUD) cuando éste se utiliza en el juego."
 ; EN: ConfirmTextureDetailText="Increasing texture detail above its default value may degrade performance on some machines."
