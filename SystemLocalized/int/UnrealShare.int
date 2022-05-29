@@ -86,6 +86,7 @@ Object=(Name="Shot",Class=Class,MetaClass=Engine.Input,Description="Game,Screens
 Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Game,Change Brightness")
 Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Music menu")
 Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Admin menu")
+Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Game,Windowed mode")
 Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
 Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
 Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
