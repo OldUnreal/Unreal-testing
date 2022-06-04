@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Harobed Village"
-LevelEntryText="Entering the Harobed Village"
+LevelEnterText="Entering the Harobed Village"
 
 [LevelSummary]
 Title="Harobed Village"
-LevelEntryText="Entering the Harobed Village"
+LevelEnterText="Entering the Harobed Village"
 
 [TranslatorEvent3]
 Hint="Proceed to the crashed spaceship up ahead."

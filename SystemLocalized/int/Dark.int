@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Dark Arena"
-LevelEntryText="Entering the Dark Arena"
+LevelEnterText="Entering the Dark Arena"
 
 [LevelSummary]
 Title="Dark Arena"
-LevelEntryText="Entering the Dark Arena"
+LevelEnterText="Entering the Dark Arena"
 
 [TranslatorEvent0]
 Message="The weak shall be struck down by the hand of the beast."

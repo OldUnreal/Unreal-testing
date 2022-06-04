@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Kern des Mutterschiffs"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Betrete den Kern des Mutterschiffs"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Betrete den Kern des Mutterschiffs"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Kern des Mutterschiffs"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Betrete den Kern des Mutterschiffs"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Betrete den Kern des Mutterschiffs"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

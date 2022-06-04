@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Lab"
 Title="Laboratório da Navemãe"
-; EN: LevelEntryText="Entering the MotherShip Lab"
-LevelEntryText="Entrando no Laboratório da Navemãe"
+; EN: LevelEnterText="Entering the MotherShip Lab"
+LevelEnterText="Entrando no Laboratório da Navemãe"
 
 [LevelSummary]
 ; EN: Title="MotherShip Lab"
 Title="Laboratório da Navemãe"
-; EN: LevelEntryText="Entering the MotherShip Lab"
-LevelEntryText="Entrando no Laboratório da Navemãe"
+; EN: LevelEnterText="Entering the MotherShip Lab"
+LevelEnterText="Entrando no Laboratório da Navemãe"
 
 [TranslatorEvent0]
 ; EN: AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."

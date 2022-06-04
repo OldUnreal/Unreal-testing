@@ -1,11 +1,11 @@
 ﻿[LevelInfo0]
 ; EN: Title="Velora Pass"
 Title="Gebirgspass von Velora"
-; EN: LevelEntryText="Entering Velora Pass"
-LevelEntryText="Betrete den Gebirgspass von Velora"
+; EN: LevelEnterText="Entering Velora Pass"
+LevelEnterText="Betrete den Gebirgspass von Velora"
 
 [LevelSummary]
 ; EN: Title="Velora Pass"
 Title="Gebirgspass von Velora"
-; EN: LevelEntryText="Entering Velora Pass"
-LevelEntryText="Betrete den Gebirgspass von Velora"
+; EN: LevelEnterText="Entering Velora Pass"
+LevelEnterText="Betrete den Gebirgspass von Velora"

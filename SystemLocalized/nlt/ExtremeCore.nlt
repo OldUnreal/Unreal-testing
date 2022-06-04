@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Moederschip Kern"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Moederschip Kern betreden"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Moederschip Kern betreden"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Moederschip Kern"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Moederschip Kern betreden"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Moederschip Kern betreden"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

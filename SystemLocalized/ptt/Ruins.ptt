@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Temple of Vandora"
 Title="Templo de Vandora"
-; EN: LevelEntryText="Entering the Temple of Vandora"
-LevelEntryText="Entrando no Templo de Vandora"
+; EN: LevelEnterText="Entering the Temple of Vandora"
+LevelEnterText="Entrando no Templo de Vandora"
 
 [LevelSummary]
 ; EN: Title="Temple of Vandora"
 Title="Templo de Vandora"
-; EN: LevelEntryText="Entering the Temple of Vandora"
-LevelEntryText="Entrando no Templo de Vandora"
+; EN: LevelEnterText="Entering the Temple of Vandora"
+LevelEnterText="Entrando no Templo de Vandora"
 
 [TranslatorEvent0]
 ; EN: Message="And Vandora came forth, with fire from the Sky upon her lips, and sanctified the sacred fountain with her kiss. Thus, she said, he who follows me shall cast off the bonds of flesh and become as elusive as the mist."

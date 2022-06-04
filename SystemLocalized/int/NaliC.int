@@ -1,10 +1,10 @@
 ﻿[LevelInfo3]
 Title="Nali Castle"
-LevelEntryText="Entering the Nali Castle"
+LevelEnterText="Entering the Nali Castle"
 
 [LevelSummary]
 Title="Nali Castle"
-LevelEntryText="Entering the Nali Castle"
+LevelEnterText="Entering the Nali Castle"
 
 [TranslatorEvent0]
 Message="The path to be followed is long and harrowing, but the strong of heart and purpose will prevail against the challenges."

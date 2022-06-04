@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Spire Village"
 Title="Village de l'aiguille"
-; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Arrivée à village de l'aiguille"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Arrivée à village de l'aiguille"
 
 [LevelSummary]
 ; EN: Title="Spire Village"
 Title="Village de l'aiguille"
-; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Arrivée à village de l'aiguille"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Arrivée à village de l'aiguille"
 
 [TranslatorEvent19]
 ; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"

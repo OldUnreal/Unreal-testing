@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="Foundry Tarydium Plant"
 Title="Zakład odlewni tarydu"
-; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
-LevelEntryText="Wejście do Zakład odlewni tarydu"
+; EN: LevelEnterText="Entering the Foundry Tarydium Plant"
+LevelEnterText="Wejście do Zakład odlewni tarydu"
 
 [LevelSummary]
 ; EN: Title="Foundry Tarydium Plant"
 Title="Zakład odlewni tarydu"
-; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
-LevelEntryText="Wejście do Zakład odlewni tarydu"
+; EN: LevelEnterText="Entering the Foundry Tarydium Plant"
+LevelEnterText="Wejście do Zakład odlewni tarydu"
 
 [TranslatorEvent1]
 ; EN: Message="Barrier to higher lift controls intact. All systems normal."

@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Rrajigar Mine"
 Title="Mina Rrajigar"
-; EN: LevelEntryText="Entering the Rrajigar Mine"
-LevelEntryText="Entrando na Mina Rrajigar"
+; EN: LevelEnterText="Entering the Rrajigar Mine"
+LevelEnterText="Entrando na Mina Rrajigar"
 
 [LevelSummary]
 ; EN: Title="Rrajigar Mine"
 Title="Mina Rrajigar"
-; EN: LevelEntryText="Entering the Rrajigar Mine"
-LevelEntryText="Entrando na Mina Rrajigar"
+; EN: LevelEnterText="Entering the Rrajigar Mine"
+LevelEnterText="Entrando na Mina Rrajigar"
 
 [TranslatorEvent11]
 ; EN: Message="WARNING: Intruder detected in Sections C-6 and D-8. All personnel are responsible for patrolling their local area."

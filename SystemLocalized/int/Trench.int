@@ -1,10 +1,10 @@
 ﻿[LevelInfo2]
 Title="The Trench"
-LevelEntryText="Entering The Trench"
+LevelEnterText="Entering The Trench"
 
 [LevelSummary]
 Title="The Trench"
-LevelEntryText="Entering The Trench"
+LevelEnterText="Entering The Trench"
 
 [TranslatorEvent38]
 Message="Corporeal Pelli Onsov: If you're reading my log entry I am probably dead and our ship has been overrun by aliens called "

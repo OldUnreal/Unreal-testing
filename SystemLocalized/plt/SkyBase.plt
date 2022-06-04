@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="Outpost 3J"
 Title="Posterunek 3J"
-; EN: LevelEntryText="Entering the Outpost 3J"
-LevelEntryText="Wejście do Posterunku 3J"
+; EN: LevelEnterText="Entering the Outpost 3J"
+LevelEnterText="Wejście do Posterunku 3J"
 
 [LevelSummary]
 ; EN: Title="Outpost 3J"
 Title="Posterunek 3J"
-; EN: LevelEntryText="Entering the Outpost 3J"
-LevelEntryText="Wejście do Posterunku 3J"
+; EN: LevelEnterText="Entering the Outpost 3J"
+LevelEnterText="Wejście do Posterunku 3J"
 
 [TranslatorEvent0]
 ; EN: Message="Security Log: Outpost 3J Base Commander Ssja'Rath 10th Talon of Ssa'Rath. To maintain order and security we have been keeping a constant watch on the Nali in the town. Vigilance is the Guardian of Honor."

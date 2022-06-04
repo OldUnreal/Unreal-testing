@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="The Source"
 Title="Источник"
-; EN: LevelEntryText="Entering The Source"
-LevelEntryText="Вход в Источник"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="Вход в Источник"
 
 [LevelSummary]
 ; EN: Title="The Source"
 Title="Источник"
-; EN: LevelEntryText="Entering The Source"
-LevelEntryText="Вход в Источник"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="Вход в Источник"
 
 [JumpBoots0]
 ; EN: ItemName="Super Jump Boots"

@@ -1,11 +1,11 @@
 ﻿[LevelInfo8]
 ; EN: Title="Demonlord's Lair"
 Title="Versteck des Dämonenlords"
-; EN: LevelEntryText="Entering the Demonlord's Lair"
-LevelEntryText="Betrete das Versteck des Dämonenlords"
+; EN: LevelEnterText="Entering the Demonlord's Lair"
+LevelEnterText="Betrete das Versteck des Dämonenlords"
 
 [LevelSummary]
 ; EN: Title="Demonlord's Lair"
 Title="Versteck des Dämonenlords"
-; EN: LevelEntryText="Entering the Demonlord's Lair"
-LevelEntryText="Betrete das Versteck des Dämonenlords"
+; EN: LevelEnterText="Entering the Demonlord's Lair"
+LevelEnterText="Betrete das Versteck des Dämonenlords"

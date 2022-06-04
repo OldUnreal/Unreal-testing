@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Dark Arena"
 Title="Estadio Siniestro"
-; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Entrando al Estadio Siniestro"
+; EN: LevelEnterText="Entering the Dark Arena"
+LevelEnterText="Entrando al Estadio Siniestro"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Estadio Siniestro"
-; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Entrando al Estadio Siniestro"
+; EN: LevelEnterText="Entering the Dark Arena"
+LevelEnterText="Entrando al Estadio Siniestro"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."

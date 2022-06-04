@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="The Trench"
 Title="A Trincheira"
-; EN: LevelEntryText="Entering The Trench"
-LevelEntryText="Entrando na Trincheira"
+; EN: LevelEnterText="Entering The Trench"
+LevelEnterText="Entrando na Trincheira"
 
 [LevelSummary]
 ; EN: Title="The Trench"
 Title="A Trincheira"
-; EN: LevelEntryText="Entering The Trench"
-LevelEntryText="Entrando na Trincheira"
+; EN: LevelEnterText="Entering The Trench"
+LevelEnterText="Entrando na Trincheira"
 
 [TranslatorEvent38]
 ; EN: Message="Corporeal Pelli Onsov: If you're reading my log entry I am probably dead and our ship has been overrun by aliens called "

@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Terraniux Underground"
 Title="Subterrâneo de Terraniux"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Entrando no Subterrâneo de Terraniux"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Entrando no Subterrâneo de Terraniux"
 
 [LevelSummary]
 ; EN: Title="Terraniux Underground"
 Title="Subterrâneo de Terraniux"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Entrando no Subterrâneo de Terraniux"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Entrando no Subterrâneo de Terraniux"
 
 [SpecialEvent0]
 ; EN: Message="ALERT"

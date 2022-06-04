@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="Neve's Crossing"
 Title="Przełęcz Neve"
-; EN: LevelEntryText="Entering Neve's Crossing"
-LevelEntryText="Wejście na Przełęcz Neve"
+; EN: LevelEnterText="Entering Neve's Crossing"
+LevelEnterText="Wejście na Przełęcz Neve"
 
 [LevelSummary]
 ; EN: Title="Neve's Crossing"
 Title="Przełęcz Neve"
-; EN: LevelEntryText="Entering Neve's Crossing"
-LevelEntryText="Wejście na Przełęcz Neve"
+; EN: LevelEnterText="Entering Neve's Crossing"
+LevelEnterText="Wejście na Przełęcz Neve"
 
 [TranslatorEvent15]
 ; EN: Message="Terra-Neo Mining Station (North)"

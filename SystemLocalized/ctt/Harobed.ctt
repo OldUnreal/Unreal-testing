@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Harobed Village"
 Title="Poble Harobed"
-; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Entrant al Poble Harobed"
+; EN: LevelEnterText="Entering the Harobed Village"
+LevelEnterText="Entrant al Poble Harobed"
 
 [LevelSummary]
 ; EN: Title="Harobed Village"
 Title="Poble Harobed"
-; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Entrant al Poble Harobed"
+; EN: LevelEnterText="Entering the Harobed Village"
+LevelEnterText="Entrant al Poble Harobed"
 
 [TranslatorEvent3]
 ; EN: Hint="Proceed to the crashed spaceship up ahead."

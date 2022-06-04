@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="Spire Valley"
 Title="Spits vallei"
-; EN: LevelEntryText="Entering the Spire Valley"
-LevelEntryText="De Spits-vallei binnengaan"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="De Spits-vallei binnengaan"
 
 [LevelSummary]
 ; EN: Title="Spire Valley"
 Title="Spits vallei"
-; EN: LevelEntryText="Entering the Spire Valley"
-LevelEntryText="De Spits-vallei binnengaan"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="De Spits-vallei binnengaan"
 
 [TranslatorEvent7]
 ; EN: Message="Land of Nagomi"

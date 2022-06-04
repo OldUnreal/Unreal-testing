@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Terraniux Underground"
-LevelEntryText="Entering Terraniux Underground"
+LevelEnterText="Entering Terraniux Underground"
 
 [LevelSummary]
 Title="Terraniux Underground"
-LevelEntryText="Entering Terraniux Underground"
+LevelEnterText="Entering Terraniux Underground"
 
 [SpecialEvent0]
 Message="ALERT"

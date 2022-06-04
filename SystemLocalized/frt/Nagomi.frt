@@ -1,14 +1,14 @@
 ﻿[LevelInfo3]
 ; EN: Title="Nagomi Passage"
 Title="Passage de Nagomi"
-; EN: LevelEntryText="Entering the Nagomi Passage"
-LevelEntryText="Arrivée à l'passage de Nagomi"
+; EN: LevelEnterText="Entering the Nagomi Passage"
+LevelEnterText="Arrivée à l'passage de Nagomi"
 
 [LevelSummary]
 ; EN: Title="Nagomi Passage"
 Title="Passage de Nagomi"
-; EN: LevelEntryText="Entering the Nagomi Passage"
-LevelEntryText="Arrivée à l'passage de Nagomi"
+; EN: LevelEnterText="Entering the Nagomi Passage"
+LevelEnterText="Arrivée à l'passage de Nagomi"
 
 [TranslatorEvent0]
 ; EN: Message="LOG: M. Poesch: Located a mining facility, but the front gates won't open. A large Behemoth seems to control it, but he went back inside. I'll wait for him here. I got 2 clips here with his name on it."

@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="The Eldora Well"
 Title="Le puits d'Eldora"
-; EN: LevelEntryText="Entering the Eldora Well"
-LevelEntryText="Arrivée à le puits d'Eldora"
+; EN: LevelEnterText="Entering the Eldora Well"
+LevelEnterText="Arrivée à le puits d'Eldora"
 
 [LevelSummary]
 ; EN: Title="The Eldora Well"
 Title="Le puits d'Eldora"
-; EN: LevelEntryText="Entering the Eldora Well"
-LevelEntryText="Arrivée à le puits d'Eldora"
+; EN: LevelEnterText="Entering the Eldora Well"
+LevelEnterText="Arrivée à le puits d'Eldora"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."

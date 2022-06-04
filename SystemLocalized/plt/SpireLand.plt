@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="Spire Valley"
 Title="Dolina Iglicy"
-; EN: LevelEntryText="Entering the Spire Valley"
-LevelEntryText="Wejście do Dolina Iglicy"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="Wejście do Dolina Iglicy"
 
 [LevelSummary]
 ; EN: Title="Spire Valley"
 Title="Dolina Iglicy"
-; EN: LevelEntryText="Entering the Spire Valley"
-LevelEntryText="Wejście do Dolina Iglicy"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="Wejście do Dolina Iglicy"
 
 [TranslatorEvent7]
 ; EN: Message="Land of Nagomi"

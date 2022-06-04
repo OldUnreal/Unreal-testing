@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Noork's Elbow"
 Title="Il Passaggio di Noork"
-; EN: LevelEntryText="Entering Noork's Elbow"
-LevelEntryText="Arrivo al Passaggio di Noork"
+; EN: LevelEnterText="Entering Noork's Elbow"
+LevelEnterText="Arrivo al Passaggio di Noork"
 
 [LevelSummary]
 ; EN: Title="Noork's Elbow"
 Title="Il Passaggio di Noork"
-; EN: LevelEntryText="Entering Noork's Elbow"
-LevelEntryText="Arrivo al Passaggio di Noork"
+; EN: LevelEnterText="Entering Noork's Elbow"
+LevelEnterText="Arrivo al Passaggio di Noork"
 
 [TranslatorEvent4]
 ; EN: Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."

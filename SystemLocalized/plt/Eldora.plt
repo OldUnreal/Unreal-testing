@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="The Eldora Well"
 Title="Studnia Eldory"
-; EN: LevelEntryText="Entering the Eldora Well"
-LevelEntryText="Wejście do Studnia Eldory"
+; EN: LevelEnterText="Entering the Eldora Well"
+LevelEnterText="Wejście do Studnia Eldory"
 
 [LevelSummary]
 ; EN: Title="The Eldora Well"
 Title="Studnia Eldory"
-; EN: LevelEntryText="Entering the Eldora Well"
-LevelEntryText="Wejście do Studnia Eldory"
+; EN: LevelEnterText="Entering the Eldora Well"
+LevelEnterText="Wejście do Studnia Eldory"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."

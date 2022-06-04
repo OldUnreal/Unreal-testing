@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="The Source"
 Title="De Bron"
-; EN: LevelEntryText="Entering The Source"
-LevelEntryText="De Bron binnengaan"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="De Bron binnengaan"
 
 [LevelSummary]
 ; EN: Title="The Source"
 Title="De Bron"
-; EN: LevelEntryText="Entering The Source"
-LevelEntryText="De Bron binnengaan"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="De Bron binnengaan"
 
 [JumpBoots0]
 ; EN: ItemName="Super Jump Boots"

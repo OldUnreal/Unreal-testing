@@ -1,11 +1,11 @@
 ﻿[LevelInfo2]
 ; EN: Title="Cellars at Dasa Pass"
 Title="Kelders bij Dasa Pass"
-; EN: LevelEntryText="Entering the Cellars at Dasa Pass"
-LevelEntryText="Het betreden van de Kelders bij Dasa Pass"
+; EN: LevelEnterText="Entering the Cellars at Dasa Pass"
+LevelEnterText="Het betreden van de Kelders bij Dasa Pass"
 
 [LevelSummary]
 ; EN: Title="Cellars at Dasa Pass"
 Title="Kelders bij Dasa Pass"
-; EN: LevelEntryText="Entering the Cellars at Dasa Pass"
-LevelEntryText="Het betreden van de Kelders bij Dasa Pass"
+; EN: LevelEnterText="Entering the Cellars at Dasa Pass"
+LevelEnterText="Het betreden van de Kelders bij Dasa Pass"

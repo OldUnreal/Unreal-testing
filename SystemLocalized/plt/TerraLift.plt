@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Terraniux Underground"
 Title="Terraniux: Podziemia"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Wjazd do metra Terraniux"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Wjazd do metra Terraniux"
 
 [LevelSummary]
 ; EN: Title="Terraniux Underground"
 Title="Terraniux: Podziemia"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Wjazd do metra Terraniux"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Wjazd do metra Terraniux"
 
 [SpecialEvent0]
 ; EN: Message="ALERT"

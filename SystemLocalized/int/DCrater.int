@@ -1,10 +1,10 @@
 ﻿[LevelInfo2]
 Title="Demon Crater"
-LevelEntryText="Entering the Demon Crater"
+LevelEnterText="Entering the Demon Crater"
 
 [LevelSummary]
 Title="Demon Crater"
-LevelEntryText="Entering the Demon Crater"
+LevelEnterText="Entering the Demon Crater"
 
 [TranslatorEvent1]
 Message="Generator Control Panel. Generator is operational. Power output nominal."

@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Nucli de la Nau Nodrissa"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Entrant al Nucli de la Nau Nodrissa"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Entrant al Nucli de la Nau Nodrissa"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Nucli de la Nau Nodrissa"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Entrant al Nucli de la Nau Nodrissa"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Entrant al Nucli de la Nau Nodrissa"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

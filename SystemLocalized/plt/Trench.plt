@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="The Trench"
 Title="Rów"
-; EN: LevelEntryText="Entering The Trench"
-LevelEntryText="Wejście do Rowu"
+; EN: LevelEnterText="Entering The Trench"
+LevelEnterText="Wejście do Rowu"
 
 [LevelSummary]
 ; EN: Title="The Trench"
 Title="Rów"
-; EN: LevelEntryText="Entering The Trench"
-LevelEntryText="Wejście do Rowu"
+; EN: LevelEnterText="Entering The Trench"
+LevelEnterText="Wejście do Rowu"
 
 [TranslatorEvent38]
 ; EN: Message="Corporeal Pelli Onsov: If you're reading my log entry I am probably dead and our ship has been overrun by aliens called "

@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Terraniux Underground"
 Title="Подземелье Терраниукс"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Вход в Подземелье Терраниукс"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Вход в Подземелье Терраниукс"
 
 [LevelSummary]
 ; EN: Title="Terraniux Underground"
 Title="Подземелье Терраниукс"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Вход в Подземелье Терраниукс"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Вход в Подземелье Терраниукс"
 
 [SpecialEvent0]
 ; EN: Message="ALERT"

@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Sacred Passage"
 Title="Geheiligter Durchgang"
-; EN: LevelEntryText="Entering the Sacred Passage"
-LevelEntryText="Betrete den Geheiligten Durchgang"
+; EN: LevelEnterText="Entering the Sacred Passage"
+LevelEnterText="Betrete den Geheiligten Durchgang"
 
 [LevelSummary]
 ; EN: Title="Sacred Passage"
 Title="Geheiligter Durchgang"
-; EN: LevelEntryText="Entering the Sacred Passage"
-LevelEntryText="Betrete den Geheiligten Geheimgang"
+; EN: LevelEnterText="Entering the Sacred Passage"
+LevelEnterText="Betrete den Geheiligten Geheimgang"
 
 [TranslatorEvent1]
 ; EN: Hint="Go for a swim and look for a secret passage."

@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="MotherShip Lab"
-LevelEntryText="Entering the MotherShip Lab"
+LevelEnterText="Entering the MotherShip Lab"
 
 [LevelSummary]
 Title="MotherShip Lab"
-LevelEntryText="Entering the MotherShip Lab"
+LevelEnterText="Entering the MotherShip Lab"
 
 [TranslatorEvent0]
 AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."

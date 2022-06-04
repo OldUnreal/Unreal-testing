@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Sacred Passage"
-LevelEntryText="Entering the Sacred Passage"
+LevelEnterText="Entering the Sacred Passage"
 
 [LevelSummary]
 Title="Sacred Passage"
-LevelEntryText="Entering the Sacred Passage"
+LevelEnterText="Entering the Sacred Passage"
 
 [TranslatorEvent1]
 Hint="Go for a swim and look for a secret passage."

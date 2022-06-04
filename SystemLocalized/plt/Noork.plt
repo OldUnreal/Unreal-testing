@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Noork's Elbow"
 Title="Zakręt Noorka"
-; EN: LevelEntryText="Entering Noork's Elbow"
-LevelEntryText="Wchodzenie w Łokieć Noorka"
+; EN: LevelEnterText="Entering Noork's Elbow"
+LevelEnterText="Wchodzenie w Łokieć Noorka"
 
 [LevelSummary]
 ; EN: Title="Noork's Elbow"
 Title="Zakręt Noorka"
-; EN: LevelEntryText="Entering Noork's Elbow"
-LevelEntryText="Wchodzenie w Łokieć Noorka"
+; EN: LevelEnterText="Entering Noork's Elbow"
+LevelEnterText="Wchodzenie w Łokieć Noorka"
 
 [TranslatorEvent4]
 ; EN: Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."

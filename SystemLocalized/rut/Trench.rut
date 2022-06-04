@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="The Trench"
 Title="Траншея"
-; EN: LevelEntryText="Entering The Trench"
-LevelEntryText="Вход в Траншея"
+; EN: LevelEnterText="Entering The Trench"
+LevelEnterText="Вход в Траншея"
 
 [LevelSummary]
 ; EN: Title="The Trench"
 Title="Траншея"
-; EN: LevelEntryText="Entering The Trench"
-LevelEntryText="Вход в Траншея"
+; EN: LevelEnterText="Entering The Trench"
+LevelEnterText="Вход в Траншея"
 
 [TranslatorEvent38]
 ; EN: Message="Corporeal Pelli Onsov: If you're reading my log entry I am probably dead and our ship has been overrun by aliens called "

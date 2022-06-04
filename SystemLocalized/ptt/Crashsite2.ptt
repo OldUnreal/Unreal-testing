@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="Inside UMS Prometheus"
 Title="Dentro da SMU Prometeu"
-; EN: LevelEntryText="Inside UMS Prometheus"
-LevelEntryText="Dentro da SMU Prometeu"
+; EN: LevelEnterText="Inside UMS Prometheus"
+LevelEnterText="Dentro da SMU Prometeu"
 
 [LevelSummary]
 ; EN: Title="Inside UMS Prometheus"
 Title="Dentro da SMU Prometeu"
-; EN: LevelEntryText="Inside UMS Prometheus"
-LevelEntryText="Dentro da SMU Prometeu"
+; EN: LevelEnterText="Inside UMS Prometheus"
+LevelEnterText="Dentro da SMU Prometeu"
 
 [CompTablet0]
 ; EN: PickupMessage="You found the weapon logs!"

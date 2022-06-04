@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Spire Village"
 Title="Wieś u stóp Iglicy"
-; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Wejście do wioski u stóp Iglicy"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Wejście do wioski u stóp Iglicy"
 
 [LevelSummary]
 ; EN: Title="Spire Village"
 Title="Wieś u stóp Iglicy"
-; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Wejście do wioski u stóp Iglicy"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Wejście do wioski u stóp Iglicy"
 
 [TranslatorEvent19]
 ; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"

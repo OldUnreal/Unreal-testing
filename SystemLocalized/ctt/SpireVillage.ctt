@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Spire Village"
 Title="Poble de l'Agulla"
-; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Entrant al Poble de l'Agulla"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Entrant al Poble de l'Agulla"
 
 [LevelSummary]
 ; EN: Title="Spire Village"
 Title="Poble de l'Agulla"
-; EN: LevelEntryText="Entering the Spire Village"
-LevelEntryText="Entrant al Poble de l'Agulla"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Entrant al Poble de l'Agulla"
 
 [TranslatorEvent19]
 ; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"

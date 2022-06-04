@@ -1,10 +1,10 @@
 ﻿[LevelInfo1]
 Title="Inside UMS Prometheus"
-LevelEntryText="Inside UMS Prometheus"
+LevelEnterText="Inside UMS Prometheus"
 
 [LevelSummary]
 Title="Inside UMS Prometheus"
-LevelEntryText="Inside UMS Prometheus"
+LevelEnterText="Inside UMS Prometheus"
 
 [CompTablet0]
 PickupMessage="You found the weapon logs!"

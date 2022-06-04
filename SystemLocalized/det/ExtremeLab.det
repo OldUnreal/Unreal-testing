@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Lab"
 Title="Labor des Mutterschiffs"
-; EN: LevelEntryText="Entering the MotherShip Lab"
-LevelEntryText="Betrete das Labor des Mutterschiffs"
+; EN: LevelEnterText="Entering the MotherShip Lab"
+LevelEnterText="Betrete das Labor des Mutterschiffs"
 
 [LevelSummary]
 ; EN: Title="MotherShip Lab"
 Title="Labor des Mutterschiffs"
-; EN: LevelEntryText="Entering the MotherShip Lab"
-LevelEntryText="Betrete das Labor des Mutterschiffs"
+; EN: LevelEnterText="Entering the MotherShip Lab"
+LevelEnterText="Betrete das Labor des Mutterschiffs"
 
 [TranslatorEvent0]
 ; EN: AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."

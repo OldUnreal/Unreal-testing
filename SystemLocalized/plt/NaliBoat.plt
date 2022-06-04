@@ -1,14 +1,14 @@
 ﻿[LevelInfo3]
 ; EN: Title="Serpent Canyon"
 Title="Kanion Węży"
-; EN: LevelEntryText="Entering the Serpent Canyon"
-LevelEntryText="Wejście do Kanion Węży"
+; EN: LevelEnterText="Entering the Serpent Canyon"
+LevelEnterText="Wejście do Kanion Węży"
 
 [LevelSummary]
 ; EN: Title="Serpent Canyon"
 Title="Kanion Węży"
-; EN: LevelEntryText="Entering the Serpent Canyon"
-LevelEntryText="Wejście do Kanion Węży"
+; EN: LevelEnterText="Entering the Serpent Canyon"
+LevelEnterText="Wejście do Kanion Węży"
 
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."
