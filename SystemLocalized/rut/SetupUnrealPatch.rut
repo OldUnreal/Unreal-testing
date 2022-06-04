@@ -6,7 +6,7 @@ ReadMe="Help\227ReleaseNotes.pdf"
 SetupWindowTitle="Установка Unreal Gold/Unreal Anthology"
 ; EN: AutoplayWindowTitle="Unreal Gold/Unreal Anthology Options"
 AutoplayWindowTitle="Опции Unreal Gold/Unreal Anthology"
-ProductURL="http://www.unrealengine.com/"
+ProductURL="http://www.oldunreal.com/"
 VersionURL="http://www.oldunreal.com"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
 Developer="Epic Games, Inc. - 227 от Oldunreal"
@@ -23,8 +23,8 @@ DeveloperURL="http://www.epicgames.com/"
 [LinuxGroup]
 ; EN: Caption="Linux native files"
 Caption="Нативные файлы Linux"
-; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.7z in the Help folder which should contain all the necessary files."
-Description="Копии всех файлов необходимых для запуска игры в Линукс. Тут еще нет дополнительного меню опций, но все настройки указаны в UnrealLinux.ini и могут быть изменены. Редактор UnrealEd 2.1 не доступен для Линукс. Если вы испытываете проблемы с запуском игры вы можете получить дополнительную информацию из FAQ в документации к релизу в Help директории. Если в вашей системе отсутствуют необходимые библиотеки, вы можете воспользоваться этим архивом lin_convenience_libs.7z, расположенным в Help директории."
+; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
+Description="Копии всех файлов необходимых для запуска игры в Линукс. Тут еще нет дополнительного меню опций, но все настройки указаны в UnrealLinux.ini и могут быть изменены. Редактор UnrealEd 2.1 не доступен для Линукс. Если вы испытываете проблемы с запуском игры вы можете получить дополнительную информацию из FAQ в документации к релизу в Help директории. Если в вашей системе отсутствуют необходимые библиотеки, вы можете воспользоваться этим архивом lin_convenience_libs.tar.bz2, расположенным в Help директории."
 
 [OldWeaponsGroup]
 ; EN: Caption="Old Weapons"
@@ -37,3 +37,15 @@ Description="Копирует файлы мутатора Old Weapons. Эти ф
 Caption="Исправление для режима кооператива в Return to Na Pali"
 ; EN: Description="Copies the UPakFix mutator files. These files allow you to play Unreal: Return to Na Pali in cooperative multiplayer mode without the usual errors."
 Description="Копирует файлы мутатора UPakFix. Эти файлы позволяют вам играть в Unreal: Return to Na Pali в кооперативном многопользовательском режиме без обычных ошибок."
+
+[LinuxARMGroup]
+Caption="Linux ARM (64bit) version files"
+Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+
+[Linux64Group]
+Caption="Linux 64bit version files"
+Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+
+[Windows64BitGroup]
+Caption="Windows 64bit version files"
+Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."

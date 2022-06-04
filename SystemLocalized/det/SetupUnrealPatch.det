@@ -6,7 +6,7 @@ ReadMe="Help\227ReleaseNotes.pdf"
 SetupWindowTitle="Unreal Gold/Unreal Anthology Setup"
 ; EN: AutoplayWindowTitle="Unreal Gold/Unreal Anthology Options"
 AutoplayWindowTitle="Unreal Gold/Unreal Anthology Optionen"
-ProductURL="http://www.unrealengine.com/"
+ProductURL="http://www.oldunreal.com/"
 VersionURL="http://www.oldunreal.com"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
 Developer="Epic Games, Inc. - 227 von Oldunreal"
@@ -23,8 +23,8 @@ DeveloperURL="http://www.epicgames.com/"
 [LinuxGroup]
 ; EN: Caption="Linux native files"
 Caption="Native Linux-Dateien"
-; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.7z in the Help folder which should contain all the necessary files."
-Description="Kopiert alle Dateien, die erforderlich sind, um Unreal nativ unter Linux auszuführen und abzuspielen. Es gibt noch kein Menü für Erweiterte Optionen, aber alle Einstellungen werden notiert und können in der Datei UnrealLinux.ini im Ordner System bearbeitet werden. Der Level-Editor UnrealED 2.1 ist unter Linux noch nicht verfügbar. Wenn Sie Probleme beim Starten des Spiels haben, finden Sie weitere Informationen und häufig gestellte Fragen in den ReleaseNotes im Hilfeverzeichnis. Wenn Ihr System nicht alle Bibliotheken bereitstellt, befindet sich im Hilfeordner ein Paket mit dem Namen lin_convenience_libs.7z, das alle erforderlichen Dateien enthalten sollte."
+; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
+Description="Kopiert alle Dateien, die erforderlich sind, um Unreal nativ unter Linux auszuführen und abzuspielen. Es gibt noch kein Menü für Erweiterte Optionen, aber alle Einstellungen werden notiert und können in der Datei UnrealLinux.ini im Ordner System bearbeitet werden. Der Level-Editor UnrealED 2.1 ist unter Linux noch nicht verfügbar. Wenn Sie Probleme beim Starten des Spiels haben, finden Sie weitere Informationen und häufig gestellte Fragen in den ReleaseNotes im Hilfeverzeichnis. Wenn Ihr System nicht alle Bibliotheken bereitstellt, befindet sich im Hilfeordner ein Paket mit dem Namen lin_convenience_libs.tar.bz2, das alle erforderlichen Dateien enthalten sollte."
 
 [OldWeaponsGroup]
 ; EN: Caption="Old Weapons"
@@ -32,8 +32,18 @@ Caption="Alte Waffen"
 ; EN: Description="Copies the Old Weapons mutator files. These files allow you to play with the weapons of Unreal version 200. Details can be found in the OldWeaponsReadme.txt in the help folder."
 Description="Kopiert die Mutator-Dateien für alte Waffen. Mit diesen Dateien können Sie mit den Waffen der Unreal-Version 200 spielen. Details finden Sie in der Datei OldWeaponsReadme.txt im Hilfeordner."
 
-[UPakFixGroup]
-; EN: Caption="Return to Na Pali Coop Fix"
-Caption="Fix für kooperativen in Return to Na Pali"
-; EN: Description="Copies the UPakFix mutator files. These files allow you to play Unreal: Return to Na Pali in cooperative multiplayer mode without the usual errors."
-Description="Kopiert die UPakFix-Mutator-Dateien. Mit diesen Dateien können Sie Unreal: Return to Na Pali im kooperativen Mehrspielermodus ohne die üblichen Fehler spielen."
+[LinuxARMGroup]
+Caption="Linux ARM (64bit) Version der Dateien"
+Description="64bit Linux ARM version des Spiels (Cortex-A72 CPU und kompatibele). Die Dateien werden in den Unreal/SystemARM Ordner installiert."
+
+[Linux64Group]
+; EN: Caption="Linux 64bit version files"
+Caption="Linux 64bit Version der Dateien"
+; EN: Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+Description="64bit Linux Version des Spiels. Die Dateien werden in den Unreal/System64 Ordner installiert."
+
+[Windows64BitGroup]
+; EN: Caption="Windows 64bit version files"
+Caption="Windows 64bit Version der Dateien"
+; EN: Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
+Description="64bit Windows Version des Spiels. Die Dateien werden in den Unreal/System64 Ordner installiert."
