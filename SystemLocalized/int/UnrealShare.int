@@ -907,6 +907,10 @@ ItemName="Shells"
 [UnrealScoreBoard]
 DeadStr="You are dead.  Hit [Fire] to respawn!"
 SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
+GameType="Game Type: "
+MapTitle="Map Title: "
+Author="Author: "
+IdealPlayerCount="Ideal Player Load: "
 
 [TazerProj]
 ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"

@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=OldOpenGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="OldOpenGL Support",Parent="Rendering",Class=OldOpenGLDrv.OpenGLRenderDevice,Immediate=True)
+Preferences=(Caption="OldOpenGL Support",Parent="Rendering",LangCaption="Obsługa OldOpenGL",Class=OldOpenGLDrv.OpenGLRenderDevice,Immediate=True)
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OldOpenGL Support"

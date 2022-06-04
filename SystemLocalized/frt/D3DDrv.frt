@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=D3DDrv.D3DRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=d3d7.dll,Compat="Win32,Win64")
-Preferences=(Caption="Direct3D 7 Support",Parent="Rendering",Class=D3DDrv.D3DRenderDevice,Immediate=True)
+Preferences=(Caption="Direct3D 7 Support",Parent="Rendering",LangCaption="Support Direct3D 7",Class=D3DDrv.D3DRenderDevice,Immediate=True)
 
 [D3DRenderDevice]
 ; EN: ClassCaption="Direct3D 7 Support"

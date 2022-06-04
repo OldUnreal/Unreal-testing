@@ -178,16 +178,16 @@ Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Кон
 Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Консоль,Символ консоли")
 ; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
 Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Консоль,Упрощённая консоль")
-Preferences=(Caption="Coop Play",Parent="Game Types",Class=UnrealShare.CoopGame,Immediate=True)
-Preferences=(Caption="Deathmatch",Parent="Game Types",Class=UnrealShare.DeathmatchGame,Immediate=True)
-Preferences=(Caption="Team Play",Parent="Game Types",Class=UnrealShare.TeamGame,Immediate=True)
-Preferences=(Caption="Config",Parent="Decals",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
-Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
-Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
+Preferences=(Caption="Coop Play",Parent="Game Types",LangCaption="Кооперативная Игра",Class=UnrealShare.CoopGame,Immediate=True)
+Preferences=(Caption="Deathmatch",Parent="Game Types",LangCaption="Бой На Смерть",Class=UnrealShare.DeathmatchGame,Immediate=True)
+Preferences=(Caption="Team Play",Parent="Game Types",LangCaption="Командная Игра",Class=UnrealShare.TeamGame,Immediate=True)
+Preferences=(Caption="Config",Parent="Decals",LangCaption="Конфиг",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
+Preferences=(Caption="Client",Parent="Blood",LangCaption="Клиент",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
+Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",LangCaption="Карты Бой На Смерть",Class=UnrealShare.DmMapList,Immediate=True)
 
 [DeathMatchGame]
 ; EN: ClassCaption="Deathmatch"
-ClassCaption="Бой на смерть"
+ClassCaption="Бой На Смерть"
 ; EN: GlobalNameChange=" changed name to "
 GlobalNameChange=" сменил(а) имя на "
 ; EN: NoNameChange=" is already in use"
@@ -215,7 +215,7 @@ TimeMessage[11]="1..."
 ; EN: TimeMessage[12]="Time Up!"
 TimeMessage[12]="Время вышло!"
 ; EN: GameName="DeathMatch"
-GameName="Бой на смерть"
+GameName="Бой На Смерть"
 
 [UnrealGameOptionsMenu]
 ; EN: MenuTitle="GAME OPTIONS"
@@ -376,7 +376,7 @@ HelpMessage[5]="Запустить выделенный сервер на это
 
 [TeamGame]
 ; EN: ClassCaption="Team Play"
-ClassCaption="Командная игра"
+ClassCaption="Командная Игра"
 ; EN: NewTeamMessage=" is now on "
 NewTeamMessage=" играет в команде "
 ; EN: TeamColor[0]="Red"
@@ -388,7 +388,7 @@ TeamColor[2]="Зелёные"
 ; EN: TeamColor[3]="Gold"
 TeamColor[3]="Золотые"
 ; EN: GameName="Team Game"
-GameName="Командная игра"
+GameName="Командная Игра"
 
 [UnrealWeaponMenu]
 ; EN: MenuTitle="PRIORITIES"
@@ -578,9 +578,9 @@ M_Deactivated=" деактивирован."
 
 [CoopGame]
 ; EN: ClassCaption="Coop Game"
-ClassCaption="Кооперативная игра"
+ClassCaption="Кооперативная Игра"
 ; EN: GameName="Coop Game"
-GameName="Кооперативная игра"
+GameName="Кооперативная Игра"
 
 [UnrealHelpMenu]
 ; EN: HelpMessage[1]="Open the troubleshooting document."
@@ -1569,6 +1569,14 @@ ItemName="Патронов"
 DeadStr="Вы мертвы. Нажмите [Огонь], чтобы возродиться!"
 ; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
 SpectatorStr="Вы зритель. Нажмите [Огонь], чтобы смотреть другого игрока!"
+; EN: GameType="Game Type: "
+GameType="Тип Игры: "
+; EN: MapTitle="Map Title: "
+MapTitle="Название Карты: "
+; EN: Author="Author: "
+Author="Автор: "
+; EN: IdealPlayerCount="Ideal Player Load: "
+IdealPlayerCount="Идеальное Количество Игроков: "
 
 [TazerProj]
 ; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"

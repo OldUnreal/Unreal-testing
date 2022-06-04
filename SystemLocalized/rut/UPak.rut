@@ -21,10 +21,10 @@ Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Descriptio
 Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Ракетомёт ОВС")
 ; EN: Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Combat Assault Rifle")
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Штурмовая винтовка")
-Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
-Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
-Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
-Preferences=(Caption="Terran Weapon Match",Parent="Game Types",Class=UPak.TerranWeaponMatch,Immediate=True)
+Preferences=(Caption="Cloak Match",Parent="Game Types",LangCaption="Матч Со Скрытностью",Class=UPak.CloakMatch,Immediate=True)
+Preferences=(Caption="Gravity Match",Parent="Game Types",LangCaption="Гравитационный Матч",Class=UPak.GravityMatch,Immediate=True)
+Preferences=(Caption="Marine Match",Parent="Game Types",LangCaption="Матч Пехоты",Class=UPak.MarineMatch,Immediate=True)
+Preferences=(Caption="Terran Weapon Match",Parent="Game Types",LangCaption="Матч С Оружием Пехоты",Class=UPak.TerranWeaponMatch,Immediate=True)
 
 [TransitionNullHUD]
 ; EN: Statheader="Kill Statistics: "
@@ -105,7 +105,7 @@ MenuList[1]="Unreal"
 
 [CloakMatch]
 ; EN: GameName="Cloak Match"
-GameName="Матч со скрытностью"
+GameName="Матч Со Скрытностью"
 
 [CARifle]
 ; EN: DeathMessage="%k's %w turned %o into swiss cheese."
@@ -181,7 +181,7 @@ MenuName="Мужчина 2"
 
 [TerranWeaponMatch]
 ; EN: GameName="Terran Weapon Match"
-GameName="Матч с оружием пехоты"
+GameName="Матч С Оружием Пехоты"
 
 [CompTablet]
 ; EN: PickupMessage="You got the Computer Tablet"

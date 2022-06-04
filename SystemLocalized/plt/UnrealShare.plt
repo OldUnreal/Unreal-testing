@@ -178,12 +178,12 @@ Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Consol
 Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Konsola Postać")
 ; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
 Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Szybka Konsola")
-Preferences=(Caption="Coop Play",Parent="Game Types",Class=UnrealShare.CoopGame,Immediate=True)
-Preferences=(Caption="Deathmatch",Parent="Game Types",Class=UnrealShare.DeathmatchGame,Immediate=True)
-Preferences=(Caption="Team Play",Parent="Game Types",Class=UnrealShare.TeamGame,Immediate=True)
-Preferences=(Caption="Config",Parent="Decals",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
-Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
-Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
+Preferences=(Caption="Coop Play",Parent="Game Types",LangCaption="Współpraca",Class=UnrealShare.CoopGame,Immediate=True)
+Preferences=(Caption="Deathmatch",Parent="Game Types",LangCaption="Deathmatch",Class=UnrealShare.DeathmatchGame,Immediate=True)
+Preferences=(Caption="Team Play",Parent="Game Types",LangCaption="Drużynowy DM",Class=UnrealShare.TeamGame,Immediate=True)
+Preferences=(Caption="Config",Parent="Decals",LangCaption="Konfiguracja",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
+Preferences=(Caption="Client",Parent="Blood",LangCaption="Klient",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
+Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",LangCaption="Mapy Deathmatch",Class=UnrealShare.DmMapList,Immediate=True)
 
 [DeathMatchGame]
 ; EN: ClassCaption="Deathmatch"
@@ -1599,6 +1599,14 @@ ItemName="Naboi do Obrzyna"
 DeadStr="Nie żyjesz. Wciśnij klawisz strzału, aby się odrodzić!"
 ; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
 SpectatorStr="Znajdujesz się w trybie widza. Wciśnij klawisz strzału, aby przełączyć widok na innego gracza!"
+; EN: GameType="Game Type: "
+GameType="Typ Gry: "
+; EN: MapTitle="Map Title: "
+MapTitle="Tytuł Mapy: "
+; EN: Author="Author: "
+Author="Autor: "
+; EN: IdealPlayerCount="Ideal Player Load: "
+IdealPlayerCount="Idealna Liczba Graczy: "
 
 [TazerProj]
 ; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"

@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=OldOpenGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="OldOpenGL Support",Parent="Rendering",Class=OldOpenGLDrv.OpenGLRenderDevice,Immediate=True)
+Preferences=(Caption="OldOpenGL Support",Parent="Rendering",Langcaption="Video OldOpenGL",Class=OldOpenGLDrv.OpenGLRenderDevice,Immediate=True)
 
 [Errors]
 ; EN: NoFindGL="Can't find OldOpenGL driver %ls"
@@ -12,7 +12,7 @@ ResFailed="No se ha podido ajustar la resolución."
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OldOpenGL Support"
-ClassCaption="Soporte para OldOpenGL"
+ClassCaption="Video OldOpenGL"
 ; EN: AskInstalled="Do you have a OldOpenGL compatible 3D accelerator installed?"
 AskInstalled="¿Tienes instalada una tarjeta compatible OldOpenGL aceleradora de gráficos en 3D?"
 ; EN: AskUse="Do you want Unreal to use your OldOpenGL accelerator?"
