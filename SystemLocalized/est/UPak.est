@@ -21,10 +21,10 @@ Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Descriptio
 Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lanzacohetes UMS")
 ; EN: Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Combat Assault Rifle")
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Rifle de Asalto de Combate")
-Preferences=(Caption="Cloak Match",Parent="Game Types",Class=UPak.CloakMatch,Immediate=True)
-Preferences=(Caption="Gravity Match",Parent="Game Types",Class=UPak.GravityMatch,Immediate=True)
-Preferences=(Caption="Marine Match",Parent="Game Types",Class=UPak.MarineMatch,Immediate=True)
-Preferences=(Caption="Terran Weapon Match",Parent="Game Types",Class=UPak.TerranWeaponMatch,Immediate=True)
+Preferences=(Caption="Cloak Match",Parent="Game Types",Langcaption="Partida de Camuflaje",Class=UPak.CloakMatch,Immediate=True)
+Preferences=(Caption="Gravity Match",Parent="Game Types",Langcaption="Partida de Gravedad",Class=UPak.GravityMatch,Immediate=True)
+Preferences=(Caption="Marine Match",Parent="Game Types",Langcaption="Partida de Marines",Class=UPak.MarineMatch,Immediate=True)
+Preferences=(Caption="Terran Weapon Match",Parent="Game Types",Langcaption="Partida de Armas Terrestres",Class=UPak.TerranWeaponMatch,Immediate=True)
 
 [TransitionNullHUD]
 ; EN: Statheader="Kill Statistics: "

@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=GlideDrv.GlideRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=Glide2X.dll)
-Preferences=(Caption="3dfx Glide Support",Parent="Rendering",Class=GlideDrv.GlideRenderDevice,Immediate=True)
+Preferences=(Caption="3dfx Glide Support",Parent="Rendering",LangCaption="3dfx Glide-Video",Class=GlideDrv.GlideRenderDevice,Immediate=True)
 
 [GlideRenderDevice]
 ; EN: ClassCaption="3dfx Glide Support"

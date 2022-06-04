@@ -178,12 +178,12 @@ Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Consol
 Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Charactère Console")
 ; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
 Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Console Rapide")
-Preferences=(Caption="Coop Play",Parent="Game Types",Class=UnrealShare.CoopGame,Immediate=True)
-Preferences=(Caption="Deathmatch",Parent="Game Types",Class=UnrealShare.DeathmatchGame,Immediate=True)
-Preferences=(Caption="Team Play",Parent="Game Types",Class=UnrealShare.TeamGame,Immediate=True)
-Preferences=(Caption="Config",Parent="Decals",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
-Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
-Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
+Preferences=(Caption="Coop Play",Parent="Game Types",LangCaption="Coopératif",Class=UnrealShare.CoopGame,Immediate=True)
+Preferences=(Caption="Deathmatch",Parent="Game Types",LangCaption="Combat à Mort",Class=UnrealShare.DeathmatchGame,Immediate=True)
+Preferences=(Caption="Team Play",Parent="Game Types",LangCaption="Jeu en Équipe",Class=UnrealShare.TeamGame,Immediate=True)
+Preferences=(Caption="Config",Parent="Decals",LangCaption="Config",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
+Preferences=(Caption="Client",Parent="Blood",LangCaption="Client",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
+Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",LangCaption="Maps Combat à Mort",Class=UnrealShare.DmMapList,Immediate=True)
 
 [DeathMatchGame]
 ; EN: ClassCaption="Deathmatch"
@@ -1553,6 +1553,14 @@ ItemName="Boîte d'Obus"
 DeadStr="Vous êtes morts. [Tire] pour retourner au combat!"
 ; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
 SpectatorStr="Vous êtes spectateur. [Tire] pour observer un autre joueur!"
+; EN: GameType="Game Type: "
+GameType="Type de Jeu: "
+; EN: MapTitle="Map Title: "
+MapTitle="Titre de la Carte: "
+; EN: Author="Author: "
+Author="Auteur: "
+; EN: IdealPlayerCount="Ideal Player Load: "
+IdealPlayerCount="Nombre Idéal de Joueurs: "
 
 [TazerProj]
 ; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"

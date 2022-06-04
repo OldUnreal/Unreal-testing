@@ -1,10 +1,10 @@
 ﻿[Public]
 Object=(Name=OGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="OGLDrv Support",Parent="Rendering",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
+Preferences=(Caption="OGLDrv Support",Parent="Rendering",LangCaption="Suport per al vídeo OGLDrv",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OGLDrv Support"
-ClassCaption="Suport per al vídeo OGL"
+ClassCaption="Suport per al vídeo OGLDrv"
 ; EN: AskInstalled="Do you have a OGLDrv compatible 3D accelerator installed?"
 AskInstalled="Tens una acceleradora 3D compatible amb OGLDrv instal·lada?"
 ; EN: AskUse="Do you want Unreal to use your OGLDrv accelerator?"

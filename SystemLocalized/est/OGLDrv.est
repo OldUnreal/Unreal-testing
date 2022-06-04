@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=OGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="OGLDrv Support",Parent="Rendering",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
+Preferences=(Caption="OGLDrv Support",Parent="Rendering",Langcaption="Video OGLDrv",Class=OGLDrv.OpenGLRenderDevice,Immediate=True)
 
 [Errors]
 ; EN: NoFindGL="Can't find OGLDrv driver %ls"
@@ -12,7 +12,7 @@ ResFailed="No se ha podido ajustar la resolución."
 
 [OpenGLRenderDevice]
 ; EN: ClassCaption="OGLDrv Support"
-ClassCaption="Soporte para OGLDrv"
+ClassCaption="Video OGLDrv"
 ; EN: AskInstalled="Do you have a OGLDrv compatible 3D accelerator installed?"
 AskInstalled="¿Tienes instalada una tarjeta compatible OGLDrv aceleradora de gráficos en 3D?"
 ; EN: AskUse="Do you want Unreal to use your OGLDrv accelerator?"

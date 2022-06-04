@@ -5,8 +5,8 @@ Object=(Name=IpDrv.CompressCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=IpDrv.DecompressCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=IpDrv.TcpNetDriver,Class=Class,MetaClass=Engine.NetDriver)
 Object=(Name=IpDrv.UdpBeacon,Class=Class,MetaClass=Engine.Actor)
-Preferences=(Caption="TCP/IP Network Play",Parent="Networking",Class=IpDrv.TcpNetDriver)
-Preferences=(Caption="Server Beacon",Parent="Networking",Class=IpDrv.UdpBeacon,Immediate=True)
+Preferences=(Caption="TCP/IP Network Play",Parent="Networking",LangCaption="Jogo em Rede TCP/IP",Class=IpDrv.TcpNetDriver)
+Preferences=(Caption="Server Beacon",Parent="Networking",LangCaption="Sinalizador do Servidor",Class=IpDrv.UdpBeacon,Immediate=True)
 
 [UpdateServerCommandlet]
 HelpCmd=updateserver
@@ -56,8 +56,8 @@ HelpDesc[0]="O arquivo .uz a descompactar."
 
 [TcpNetDriver]
 ; EN: ClassCaption="TCP/IP Network Play"
-ClassCaption="Jogo em rede TCP/IP"
+ClassCaption="Jogo em Rede TCP/IP"
 
 [UdpBeacon]
 ; EN: ClassCaption="Server LAN Beacon"
-ClassCaption="Sinalizador do servidor de REDE"
+ClassCaption="Sinalizador do Servidor de REDE"
