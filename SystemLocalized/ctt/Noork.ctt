@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Noork's Elbow"
 Title="El Colze de Noork"
-; EN: LevelEntryText="Entering Noork's Elbow"
-LevelEntryText="Entrant al Colze de Noork"
+; EN: LevelEnterText="Entering Noork's Elbow"
+LevelEnterText="Entrant al Colze de Noork"
 
 [LevelSummary]
 ; EN: Title="Noork's Elbow"
 Title="El Colze de Noork"
-; EN: LevelEntryText="Entering Noork's Elbow"
-LevelEntryText="Entrant al Colze de Noork"
+; EN: LevelEnterText="Entering Noork's Elbow"
+LevelEnterText="Entrant al Colze de Noork"
 
 [TranslatorEvent4]
 ; EN: Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."

@@ -1,13 +1,13 @@
 ﻿[LevelInfo3]
 ; EN: Title="Nagomi Passage"
 Title="Nagomis Enge"
-; EN: LevelEntryText="Entering the Nagomi Passage"
+; EN: LevelEnterText="Entering the Nagomi Passage"
 LevelEnterText="Betrete Nagomis Enge"
 
 [LevelSummary]
 ; EN: Title="Nagomi Passage"
 Title="Nagomis Enge"
-; EN: LevelEntryText="Entering the Nagomi Passage"
+; EN: LevelEnterText="Entering the Nagomi Passage"
 LevelEnterText="Betrete Nagomis Enge"
 
 [TranslatorEvent0]

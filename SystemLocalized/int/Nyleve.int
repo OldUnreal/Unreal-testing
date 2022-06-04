@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="NyLeve's Falls"
-LevelEntryText="Entering NyLeve's Falls"
+LevelEnterText="Entering NyLeve's Falls"
 
 [LevelSummary]
 Title="NyLeve's Falls"
-LevelEntryText="Entering NyLeve's Falls"
+LevelEnterText="Entering NyLeve's Falls"
 
 [TranslatorEvent17]
 Message="My burden does not end. More minions have been cast down by the angry Gods. I will pray for their souls, but I fear my prayers are not heard. I must travel to the Temple of Chizra to seek balance."

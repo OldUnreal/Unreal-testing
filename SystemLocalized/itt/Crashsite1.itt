@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="UMS Prometheus"
 Title="UMS Prometheus"
-; EN: LevelEntryText="Entering The UMS Prometheus"
-LevelEntryText="Arrivo alla'UMS Prometheus"
+; EN: LevelEnterText="Entering The UMS Prometheus"
+LevelEnterText="Arrivo alla'UMS Prometheus"
 
 [LevelSummary]
 ; EN: Title="UMS Prometheus"
 Title="UMS Prometheus"
-; EN: LevelEntryText="Entering The UMS Prometheus"
-LevelEntryText="Arrivo alla'UMS Prometheus"
+; EN: LevelEnterText="Entering The UMS Prometheus"
+LevelEnterText="Arrivo alla'UMS Prometheus"
 
 [TranslatorEvent4]
 ; EN: Message="UMS Prometheus - Power Circuits: Warning: Circuit overload detected in Network 2"

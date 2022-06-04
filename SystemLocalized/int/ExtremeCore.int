@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="MotherShip Core"
-LevelEntryText="Entering the MotherShip Core"
+LevelEnterText="Entering the MotherShip Core"
 
 [LevelSummary]
 Title="MotherShip Core"
-LevelEntryText="Entering the MotherShip Core"
+LevelEnterText="Entering the MotherShip Core"
 
 [TranslatorEvent10]
 AltMessage="Access to the Security Post granted."

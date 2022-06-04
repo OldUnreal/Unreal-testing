@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Nucleo dell'Astronave Madre"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Arrivo al Nucleo dell'Astronave Madre"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Arrivo al Nucleo dell'Astronave Madre"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Nucleo dell'Astronave Madre"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Arrivo al Nucleo dell'Astronave Madre"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Arrivo al Nucleo dell'Astronave Madre"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

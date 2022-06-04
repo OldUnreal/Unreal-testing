@@ -1,10 +1,10 @@
 ﻿[LevelInfo3]
 Title="Nagomi Passage"
-LevelEntryText="Entering the Nagomi Passage"
+LevelEnterText="Entering the Nagomi Passage"
 
 [LevelSummary]
 Title="Nagomi Passage"
-LevelEntryText="Entering the Nagomi Passage"
+LevelEnterText="Entering the Nagomi Passage"
 
 [TranslatorEvent0]
 Message="LOG: M. Poesch: Located a mining facility, but the front gates won't open. A large Behemoth seems to control it, but he went back inside. I'll wait for him here. I got 2 clips here with his name on it."

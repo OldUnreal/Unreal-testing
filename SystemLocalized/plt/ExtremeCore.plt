@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Statek-matka: pokład główny"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Wejście do Statek-matka: pokład główny"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Wejście do Statek-matka: pokład główny"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Statek-matka: pokład główny"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Wejście do Statek-matka: pokład główny"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Wejście do Statek-matka: pokład główny"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

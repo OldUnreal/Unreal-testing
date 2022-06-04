@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Harobed Village"
 Title="Harobed Havendorp"
-; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Harobed Havendorp binnenkomen"
+; EN: LevelEnterText="Entering the Harobed Village"
+LevelEnterText="Harobed Havendorp binnenkomen"
 
 [LevelSummary]
 ; EN: Title="Harobed Village"
 Title="Harobed Havendorp"
-; EN: LevelEntryText="Entering the Harobed Havendorp"
-LevelEntryText="Harobed Havendorp binnenkomen"
+; EN: LevelEnterText="Entering the Harobed Havendorp"
+LevelEnterText="Harobed Havendorp binnenkomen"
 
 [TranslatorEvent3]
 ; EN: Hint="Proceed to the crashed spaceship up ahead."

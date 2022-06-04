@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Spire Village"
-LevelEntryText="Entering the Spire Village"
+LevelEnterText="Entering the Spire Village"
 
 [LevelSummary]
 Title="Spire Village"
-LevelEntryText="Entering the Spire Village"
+LevelEnterText="Entering the Spire Village"
 
 [TranslatorEvent19]
 Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"

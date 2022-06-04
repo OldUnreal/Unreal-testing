@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="Neve's Crossing"
 Title="Neve's Crossing"
-; EN: LevelEntryText="Entering Neve's Crossing"
-LevelEntryText="Neve's Crossing binnengaan"
+; EN: LevelEnterText="Entering Neve's Crossing"
+LevelEnterText="Neve's Crossing binnengaan"
 
 [LevelSummary]
 ; EN: Title="Neve's Crossing"
 Title="Neve's Crossing"
-; EN: LevelEntryText="Entering Neve's Crossing"
-LevelEntryText="Neve's Crossing binnengaan"
+; EN: LevelEnterText="Entering Neve's Crossing"
+LevelEnterText="Neve's Crossing binnengaan"
 
 [TranslatorEvent15]
 ; EN: Message="Terra-Neo Mining Station (North)"

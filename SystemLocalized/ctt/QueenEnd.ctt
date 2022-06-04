@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="The Source"
 Title="La font"
-; EN: LevelEntryText="Entering The Source"
-LevelEntryText="Entrant a la font"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="Entrant a la font"
 
 [LevelSummary]
 ; EN: Title="The Source"
 Title="La font"
-; EN: LevelEntryText="Entering The Source"
-LevelEntryText="Entrant a la font"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="Entrant a la font"
 
 [JumpBoots0]
 ; EN: ItemName="Super Jump Boots"

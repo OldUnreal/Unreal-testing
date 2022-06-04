@@ -1,14 +1,14 @@
 ﻿[LevelInfo3]
 ; EN: Title="Nali Castle"
 Title="Burg der Nali"
-; EN: LevelEntryText="Entering the Nali Castle"
-LevelEntryText="Betrete die Burg der Nali"
+; EN: LevelEnterText="Entering the Nali Castle"
+LevelEnterText="Betrete die Burg der Nali"
 
 [LevelSummary]
 ; EN: Title="Nali Castle"
 Title="Burg der Nali"
-; EN: LevelEntryText="Entering the Nali Castle"
-LevelEntryText="Betrete die Burg der Nali"
+; EN: LevelEnterText="Entering the Nali Castle"
+LevelEnterText="Betrete die Burg der Nali"
 
 [TranslatorEvent0]
 ; EN: Message="The path to be followed is long and harrowing, but the strong of heart and purpose will prevail against the challenges."

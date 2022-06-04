@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Sacred Passage"
 Title="Paso Sagrado"
-; EN: LevelEntryText="Entering the Sacred Passage"
-LevelEntryText="Entrando al Paso Sagrado"
+; EN: LevelEnterText="Entering the Sacred Passage"
+LevelEnterText="Entrando al Paso Sagrado"
 
 [LevelSummary]
 ; EN: Title="Sacred Passage"
 Title="Paso Sagrado"
-; EN: LevelEntryText="Entering the Sacred Passage"
-LevelEntryText="Entrando al Paso Sagrado"
+; EN: LevelEnterText="Entering the Sacred Passage"
+LevelEnterText="Entrando al Paso Sagrado"
 
 [TranslatorEvent1]
 ; EN: Hint="Go for a swim and look for a secret passage."

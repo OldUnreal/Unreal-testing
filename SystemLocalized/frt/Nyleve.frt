@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="NyLeve's Falls"
 Title="Les Chutes de NyLeve"
-; EN: LevelEntryText="Entering NyLeve's Falls"
-LevelEntryText="Arrivée à les Chutes de NyLeve"
+; EN: LevelEnterText="Entering NyLeve's Falls"
+LevelEnterText="Arrivée à les Chutes de NyLeve"
 
 [LevelSummary]
 ; EN: Title="NyLeve's Falls"
 Title="Les Chutes de NyLeve"
-; EN: LevelEntryText="Entering NyLeve's Falls"
-LevelEntryText="Arrivée à les Chutes de NyLeve"
+; EN: LevelEnterText="Entering NyLeve's Falls"
+LevelEnterText="Arrivée à les Chutes de NyLeve"
 
 [TranslatorEvent17]
 ; EN: Message="My burden does not end. More minions have been cast down by the angry Gods. I will pray for their souls, but I fear my prayers are not heard. I must travel to the Temple of Chizra to seek balance."

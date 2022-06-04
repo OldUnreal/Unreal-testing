@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Glathriel Village"
 Title="Wieś Glathriel"
-; EN: LevelEntryText="Entering the Glathriel Village"
-LevelEntryText="Wejście do Wieś Glathriel"
+; EN: LevelEnterText="Entering the Glathriel Village"
+LevelEnterText="Wejście do Wieś Glathriel"
 
 [LevelSummary]
 ; EN: Title="Glathriel Village"
 Title="Wieś Glathriel"
-; EN: LevelEntryText="Entering the Glathriel Village"
-LevelEntryText="Wejście do Wieś Glathriel"
+; EN: LevelEnterText="Entering the Glathriel Village"
+LevelEnterText="Wejście do Wieś Glathriel"
 
 [TranslatorEvent0]
 ; EN: Message="I saw another spider in the basement today. They squeeze through the crack in the wall and take away whatever they want. I know I will have to close the crack, but how can I do it safely when any moment a spider could appear and threaten my life?"

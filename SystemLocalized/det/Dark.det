@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Dark Arena"
 Title="Dunkle Arena"
-; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Betrete die Dunkle Arena"
+; EN: LevelEnterText="Entering the Dark Arena"
+LevelEnterText="Betrete die Dunkle Arena"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Dunkle Arena"
-; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Betrete die Dunkle Arena"
+; EN: LevelEnterText="Entering the Dark Arena"
+LevelEnterText="Betrete die Dunkle Arena"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."

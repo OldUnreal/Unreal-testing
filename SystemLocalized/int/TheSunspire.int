@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="The Sunspire"
-LevelEntryText="Entering The Sunspire"
+LevelEnterText="Entering The Sunspire"
 
 [LevelSummary]
 Title="The Sunspire"
-LevelEntryText="Entering The Sunspire"
+LevelEnterText="Entering The Sunspire"
 
 [TranslatorEvent17]
 Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."

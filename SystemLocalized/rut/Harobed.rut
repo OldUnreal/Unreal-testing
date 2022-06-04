@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Harobed Village"
 Title="Деревня Харобед"
-; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Вход в Деревня в Харобах"
+; EN: LevelEnterText="Entering the Harobed Village"
+LevelEnterText="Вход в Деревня в Харобах"
 
 [LevelSummary]
 ; EN: Title="Harobed Village"
 Title="Деревня Харобед"
-; EN: LevelEntryText="Entering the Harobed Village"
-LevelEntryText="Вход в Деревня в Харобах"
+; EN: LevelEnterText="Entering the Harobed Village"
+LevelEnterText="Вход в Деревня в Харобах"
 
 [TranslatorEvent3]
 ; EN: Hint="Proceed to the crashed spaceship up ahead."

@@ -1,10 +1,10 @@
 ﻿[LevelInfo2]
 Title="Spire Valley"
-LevelEntryText="Entering the Spire Valley"
+LevelEnterText="Entering the Spire Valley"
 
 [LevelSummary]
 Title="Spire Valley"
-LevelEntryText="Entering the Spire Valley"
+LevelEnterText="Entering the Spire Valley"
 
 [TranslatorEvent7]
 Message="Land of Nagomi"

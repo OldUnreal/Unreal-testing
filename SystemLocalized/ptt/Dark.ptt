@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Dark Arena"
 Title="Arena Sombria"
-; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Entrando na Arena Sombria"
+; EN: LevelEnterText="Entering the Dark Arena"
+LevelEnterText="Entrando na Arena Sombria"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Arena Sombria"
-; EN: LevelEntryText="Entering the Dark Arena"
-LevelEntryText="Entrando na Arena Sombria"
+; EN: LevelEnterText="Entering the Dark Arena"
+LevelEnterText="Entrando na Arena Sombria"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."

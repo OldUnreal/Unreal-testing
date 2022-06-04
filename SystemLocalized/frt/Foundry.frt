@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="Foundry Tarydium Plant"
 Title="Fonderie de Tarydium"
-; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
-LevelEntryText="Arrivée à Fonderie de Tarydium"
+; EN: LevelEnterText="Entering the Foundry Tarydium Plant"
+LevelEnterText="Arrivée à Fonderie de Tarydium"
 
 [LevelSummary]
 ; EN: Title="Foundry Tarydium Plant"
 Title="Fonderie de Tarydium"
-; EN: LevelEntryText="Entering the Foundry Tarydium Plant"
-LevelEntryText="Arrivée à Fonderie de Tarydium"
+; EN: LevelEnterText="Entering the Foundry Tarydium Plant"
+LevelEnterText="Arrivée à Fonderie de Tarydium"
 
 [TranslatorEvent1]
 ; EN: Message="Barrier to higher lift controls intact. All systems normal."

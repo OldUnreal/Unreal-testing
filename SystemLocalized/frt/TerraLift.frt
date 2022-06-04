@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Terraniux Underground"
 Title="Sous-sol de Terraniux"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Arrivée à sous-sol de Terraniux"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Arrivée à sous-sol de Terraniux"
 
 [LevelSummary]
 ; EN: Title="Terraniux Underground"
 Title="Sous-sol de Terraniux"
-; EN: LevelEntryText="Entering Terraniux Underground"
-LevelEntryText="Arrivée à sous-sol de Terraniux"
+; EN: LevelEnterText="Entering Terraniux Underground"
+LevelEnterText="Arrivée à sous-sol de Terraniux"
 
 [SpecialEvent0]
 ; EN: Message="ALERT"

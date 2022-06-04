@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="ISV-KRAN Deck 1"
 Title="ИСВ-Кран Палуба 1"
-; EN: LevelEntryText="Entering the ISV-KRAN Deck 1"
-LevelEntryText="Вход на ИСВ-Кран Палуба 1"
+; EN: LevelEnterText="Entering the ISV-KRAN Deck 1"
+LevelEnterText="Вход на ИСВ-Кран Палуба 1"
 
 [LevelSummary]
 ; EN: Title="ISV-KRAN Deck 1"
 Title="ИСВ-Кран Палуба 1"
-; EN: LevelEntryText="Entering the ISV-KRAN Deck 1"
-LevelEntryText="Вход на ИСВ-Кран Палуба 1"
+; EN: LevelEnterText="Entering the ISV-KRAN Deck 1"
+LevelEnterText="Вход на ИСВ-Кран Палуба 1"
 
 [TranslatorEvent12]
 ; EN: Message="EMERGENCY TRANSPORTER INSTRUCTIONS: STEP ONTO OCTAGONAL TRANSPORTER PAD - SYSTEM WILL ACTIVATE AUTOMATICALLY"

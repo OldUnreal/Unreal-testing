@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="ISV-KRAN Deck 1"
 Title="ISV-KRAN Convés 1"
-; EN: LevelEntryText="Entering the ISV-KRAN Deck 1"
-LevelEntryText="Entrando no Convés 1 do ISV-KRAN"
+; EN: LevelEnterText="Entering the ISV-KRAN Deck 1"
+LevelEnterText="Entrando no Convés 1 do ISV-KRAN"
 
 [LevelSummary]
 ; EN: Title="ISV-KRAN Deck 1"
 Title="ISV-KRAN Convés 1"
-; EN: LevelEntryText="Entering the ISV-KRAN Deck 1"
-LevelEntryText="Entrando no Convés 1 do ISV-KRAN"
+; EN: LevelEnterText="Entering the ISV-KRAN Deck 1"
+LevelEnterText="Entrando no Convés 1 do ISV-KRAN"
 
 [TranslatorEvent12]
 ; EN: Message="EMERGENCY TRANSPORTER INSTRUCTIONS: STEP ONTO OCTAGONAL TRANSPORTER PAD - SYSTEM WILL ACTIVATE AUTOMATICALLY"

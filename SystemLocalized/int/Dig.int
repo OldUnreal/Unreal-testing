@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Rrajigar Mine"
-LevelEntryText="Entering the Rrajigar Mine"
+LevelEnterText="Entering the Rrajigar Mine"
 
 [LevelSummary]
 Title="Rrajigar Mine"
-LevelEntryText="Entering the Rrajigar Mine"
+LevelEnterText="Entering the Rrajigar Mine"
 
 [TranslatorEvent11]
 Message="WARNING: Intruder detected in Sections C-6 and D-8. All personnel are responsible for patrolling their local area."

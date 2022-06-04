@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Coeur du Vaisseau-Mère"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Arrivée à coeur du Vaisseau-Mère"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Arrivée à coeur du Vaisseau-Mère"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Coeur du Vaisseau-Mère"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Arrivée à coeur du Vaisseau-Mère"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Arrivée à coeur du Vaisseau-Mère"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

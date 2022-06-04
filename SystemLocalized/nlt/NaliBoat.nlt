@@ -1,14 +1,14 @@
 ﻿[LevelInfo3]
 ; EN: Title="Serpent Canyon"
 Title="Slang Canyon"
-; EN: LevelEntryText="Entering the Serpent Canyon"
-LevelEntryText="Slang Canyon binnen"
+; EN: LevelEnterText="Entering the Serpent Canyon"
+LevelEnterText="Slang Canyon binnen"
 
 [LevelSummary]
 ; EN: Title="Serpent Canyon"
 Title="Slang Canyon"
-; EN: LevelEntryText="Entering the Serpent Canyon"
-LevelEntryText="Slang Canyon binnen"
+; EN: LevelEnterText="Entering the Serpent Canyon"
+LevelEnterText="Slang Canyon binnen"
 
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."

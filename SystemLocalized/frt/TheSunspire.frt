@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="The Sunspire"
 Title="L'aiguille"
-; EN: LevelEntryText="Entering The Sunspire"
-LevelEntryText="Arrivée à l'aiguille"
+; EN: LevelEnterText="Entering The Sunspire"
+LevelEnterText="Arrivée à l'aiguille"
 
 [LevelSummary]
 ; EN: Title="The Sunspire"
 Title="L'aiguille"
-; EN: LevelEntryText="Entering The Sunspire"
-LevelEntryText="Arrivée à l'aiguille"
+; EN: LevelEnterText="Entering The Sunspire"
+LevelEnterText="Arrivée à l'aiguille"
 
 [TranslatorEvent17]
 ; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."

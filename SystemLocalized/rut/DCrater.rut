@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="Demon Crater"
 Title="Кратер Демона"
-; EN: LevelEntryText="Entering the Demon Crater"
-LevelEntryText="Вход в Кратер Демона"
+; EN: LevelEnterText="Entering the Demon Crater"
+LevelEnterText="Вход в Кратер Демона"
 
 [LevelSummary]
 ; EN: Title="Demon Crater"
 Title="Кратер Демона"
-; EN: LevelEntryText="Entering the Demon Crater"
-LevelEntryText="Вход в Кратер Демона"
+; EN: LevelEnterText="Entering the Demon Crater"
+LevelEnterText="Вход в Кратер Демона"
 
 [TranslatorEvent1]
 ; EN: Message="Generator Control Panel. Generator is operational. Power output nominal."

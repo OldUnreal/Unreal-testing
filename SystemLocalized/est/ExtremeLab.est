@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Lab"
 Title="Laboratorio de la Nave Nodriza"
-; EN: LevelEntryText="Entering the MotherShip Lab"
-LevelEntryText="Entrando al Laboratorio de la Nave Nodriza"
+; EN: LevelEnterText="Entering the MotherShip Lab"
+LevelEnterText="Entrando al Laboratorio de la Nave Nodriza"
 
 [LevelSummary]
 ; EN: Title="MotherShip Lab"
 Title="Laboratorio de la Nave Nodriza"
-; EN: LevelEntryText="Entering the MotherShip Lab"
-LevelEntryText="Entrando al Laboratorio de la Nave Nodriza"
+; EN: LevelEnterText="Entering the MotherShip Lab"
+LevelEnterText="Entrando al Laboratorio de la Nave Nodriza"
 
 [TranslatorEvent0]
 ; EN: AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."

@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="Spire Valley"
 Title="Vallée de l'aiguille"
-; EN: LevelEntryText="Entering the Spire Valley"
-LevelEntryText="Arrivée à vallée de l'aiguille"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="Arrivée à vallée de l'aiguille"
 
 [LevelSummary]
 ; EN: Title="Spire Valley"
 Title="Vallée de l'aiguille"
-; EN: LevelEntryText="Entering the Spire Valley"
-LevelEntryText="Arrivée à vallée de l'aiguille"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="Arrivée à vallée de l'aiguille"
 
 [TranslatorEvent7]
 ; EN: Message="Land of Nagomi"

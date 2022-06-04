@@ -1,14 +1,14 @@
 ﻿[LevelInfo2]
 ; EN: Title="Na Pali Haven"
 Title="Refugio Na Pali"
-; EN: LevelEntryText="Entering Na Pali Haven"
-LevelEntryText="Entrando en Na Pali Haven"
+; EN: LevelEnterText="Entering Na Pali Haven"
+LevelEnterText="Entrando en Na Pali Haven"
 
 [LevelSummary]
 ; EN: Title="Na Pali Haven"
 Title="Refugio Na Pali"
-; EN: LevelEntryText="Entering Na Pali Haven"
-LevelEntryText="Entrando en Na Pali Haven"
+; EN: LevelEnterText="Entering Na Pali Haven"
+LevelEnterText="Entrando en Na Pali Haven"
 
 [TranslatorEvent0]
 ; EN: Message="I have gathered all of these strange artifacts in the hope that the Messiah shall make use of them in the quest to free us from the Sky Demons. I know not what their uses are but the signs were clear, the stars foretold the need."

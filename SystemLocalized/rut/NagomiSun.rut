@@ -1,11 +1,11 @@
 ﻿[LevelInfo3]
 ; EN: Title="Nagomi Passage"
 Title="Земли Нагоми (День)"
-; EN: LevelEntryText="Returning to Nagomi Passage"
-LevelEntryText="Возвращение в Нагоми День"
+; EN: LevelEnterText="Returning to Nagomi Passage"
+LevelEnterText="Возвращение в Нагоми День"
 
 [LevelSummary]
 ; EN: Title="Nagomi Passage"
 Title="Земли Нагоми (День)"
-; EN: LevelEntryText="Returning to Nagomi Passage"
-LevelEntryText="Возвращение в Нагоми День"
+; EN: LevelEnterText="Returning to Nagomi Passage"
+LevelEnterText="Возвращение в Нагоми День"

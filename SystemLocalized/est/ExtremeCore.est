@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
 Title="Núcleo de la Nave Nodriza"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Entrando al Núcleo de la Nave Nodriza"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Entrando al Núcleo de la Nave Nodriza"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Núcleo de la Nave Nodriza"
-; EN: LevelEntryText="Entering the MotherShip Core"
-LevelEntryText="Entrando al Núcleo de la Nave Nodriza"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Entrando al Núcleo de la Nave Nodriza"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

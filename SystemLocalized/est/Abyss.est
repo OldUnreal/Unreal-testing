@@ -1,14 +1,14 @@
 ﻿[LevelInfo5]
 ; EN: Title="Gala's Peak"
 Title="El Pico de Gala"
-; EN: LevelEntryText="Entering Gala's Peak"
-LevelEntryText="Entrando al Pico de Gala"
+; EN: LevelEnterText="Entering Gala's Peak"
+LevelEnterText="Entrando al Pico de Gala"
 
 [LevelSummary]
 ; EN: Title="Gala's Peak"
 Title="El Pico de Gala"
-; EN: LevelEntryText="Entering Gala's Peak"
-LevelEntryText="Entrando al Pico de Gala"
+; EN: LevelEnterText="Entering Gala's Peak"
+LevelEnterText="Entrando al Pico de Gala"
 
 [TranslatorEvent2]
 ; EN: Message="LOG: R. Wisnewski: Damn, it's cold. The walkway outside is impassable. I almost fell off twice, and it's a long way down. I'll try again later. I have a feeling it's going to be worth the effort to reach that structure up ahead."

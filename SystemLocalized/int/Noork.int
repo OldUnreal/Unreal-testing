@@ -1,10 +1,10 @@
 ﻿[LevelInfo0]
 Title="Noork's Elbow"
-LevelEntryText="Entering Noork's Elbow"
+LevelEnterText="Entering Noork's Elbow"
 
 [LevelSummary]
 Title="Noork's Elbow"
-LevelEntryText="Entering Noork's Elbow"
+LevelEnterText="Entering Noork's Elbow"
 
 [TranslatorEvent4]
 Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."

@@ -1,10 +1,10 @@
 ﻿[LevelInfo2]
 Title="The Source"
-LevelEntryText="Entering The Source"
+LevelEnterText="Entering The Source"
 
 [LevelSummary]
 Title="The Source"
-LevelEntryText="Entering The Source"
+LevelEnterText="Entering The Source"
 
 [JumpBoots0]
 ItemName="Super Jump Boots"
