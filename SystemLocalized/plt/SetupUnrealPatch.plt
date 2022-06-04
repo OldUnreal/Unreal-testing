@@ -17,7 +17,8 @@ Logo="Help\Logo.bmp"
 LocalProduct="Unreal Gold/Unreal Anthology"
 ProductURL="http://www.unreal.com/"
 VersionURL="http://www.epicgames.com/"
-Developer="Epic Games, Inc. - 227 by Oldunreal"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 autorstwa Oldunreal"
 DeveloperURL="http://www.oldunreal.com/"
 
 [LinuxGroup]
@@ -33,13 +34,19 @@ Caption="Klasyczny oręż"
 Description="Zawiera mutator "Klasyczny oręż", który przywraca broń z kompilacji 200 gry. Więcej informacji zawarto w pliku OldWeaponsReadme.txt w folderze Help."
 
 [LinuxARMGroup]
-Caption="Linux ARM (64bit) version files"
-Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+; EN: Caption="Linux ARM (64bit) version files"
+Caption="Pliki dla 64-bitowej wersji Linux ARM"
+; EN: Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+Description="Pliki gry dla 64-bitowej wersji systemu Linux ARM (procesor Cortex-A72 i kompatybilny). Pliki zostaną zainstalowane w folderze Unreal/SystemARM."
 
 [Linux64Group]
-Caption="Linux 64bit version files"
-Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+; EN: Caption="Linux 64bit version files"
+Caption="Pliki dla 64-bitowej wersji Linuksa"
+; EN: Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+Description="Pliki gry dla 64-bitowej wersji systemu Linux. Pliki zostaną zainstalowane w folderze Unreal/System64."
 
 [Windows64BitGroup]
-Caption="Windows 64bit version files"
-Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
+; EN: Caption="Windows 64bit version files"
+Caption="Pliki dla 64-bitowej wersji Windows"
+; EN: Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
+Description="Pliki gry dla 64-bitowej wersji systemu Windows. Pliki zostaną zainstalowane w folderze Unreal/System64."

@@ -14,8 +14,8 @@ Logo="Help\Logo.bmp"
 LocalProduct="Unreal Gold/Unreal Anthology"
 ProductURL="http://www.unreal.com/"
 VersionURL="http://www.epicgames.com/"
-Developer="Epic Games, Inc."
-DeveloperURL="http://www.epicgames.com/"
+Developer="Epic Games, Inc. - 227 by Oldunreal"
+DeveloperURL="http://www.oldunreal.com/"
 
 [LinuxGroup]
 Caption="Linux native files"
@@ -36,5 +36,3 @@ Description="64bit Linux version of the game. The files will be installed in the
 [Windows64BitGroup]
 Caption="Windows 64bit version files"
 Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
-
-
