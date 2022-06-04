@@ -17,8 +17,9 @@ Logo="Help\Logo.bmp"
 LocalProduct="Unreal Gold/Unreal Anthology"
 ProductURL="http://www.unreal.com/"
 VersionURL="http://www.epicgames.com/"
-Developer="Epic Games, Inc."
-DeveloperURL="http://www.epicgames.com/"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 von Oldunreal"
+DeveloperURL="http://www.oldunreal.com/"
 
 [LinuxGroup]
 ; EN: Caption="Linux native files"
@@ -33,7 +34,9 @@ Caption="Alte Waffen"
 Description="Kopiert die Mutator-Dateien für alte Waffen. Mit diesen Dateien können Sie mit den Waffen der Unreal-Version 200 spielen. Details finden Sie in der Datei OldWeaponsReadme.txt im Hilfeordner."
 
 [LinuxARMGroup]
+; EN: Caption="Linux ARM (64bit) version files"
 Caption="Linux ARM (64bit) Version der Dateien"
+; EN: Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
 Description="64bit Linux ARM version des Spiels (Cortex-A72 CPU und kompatibele). Die Dateien werden in den Unreal/SystemARM Ordner installiert."
 
 [Linux64Group]

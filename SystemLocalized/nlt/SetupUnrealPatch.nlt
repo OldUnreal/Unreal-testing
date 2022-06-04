@@ -17,8 +17,9 @@ Logo="Help\Logo.bmp"
 LocalProduct="Unreal Gold/Unreal Anthology"
 ProductURL="http://www.unreal.com/"
 VersionURL="http://www.epicgames.com/"
-Developer="Epic Games, Inc."
-DeveloperURL="http://www.epicgames.com/"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 van Oldunreal"
+DeveloperURL="http://www.oldunreal.com/"
 
 [LinuxGroup]
 ; EN: Caption="Linux native files"
@@ -33,13 +34,19 @@ Caption="Oude Wapens"
 Description="Kopieert de Old Weapons-mutatorbestanden. Met deze bestanden kun je spelen met de wapens van Unreal versie 200. Details zijn te vinden in het OldWeaponsReadme.txt in de help-map."
 
 [LinuxARMGroup]
-Caption="Linux ARM (64bit) version files"
-Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+; EN: Caption="Linux ARM (64bit) version files"
+Caption="Bestanden voor de 64-bits versie van Linux ARM"
+; EN: Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+Description="Spelbestanden voor de 64-bits versie van Linux ARM (Cortex-A72-processor en compatibel). De bestanden worden geïnstalleerd in de map Unreal/SystemARM."
 
 [Linux64Group]
-Caption="Linux 64bit version files"
-Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+; EN: Caption="Linux 64bit version files"
+Caption="Bestanden voor de 64-bits versie van Linux"
+; EN: Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+Description="Spelbestanden voor de 64-bits versie van Linux. De bestanden worden geïnstalleerd in de map Unreal/System64."
 
 [Windows64BitGroup]
-Caption="Windows 64bit version files"
-Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
+; EN: Caption="Windows 64bit version files"
+Caption="Bestanden voor de 64-bits versie van Windows"
+; EN: Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
+Description="Spelbestanden voor 64-bits versie van Windows. De bestanden worden geïnstalleerd in de map Unreal/System64."
