@@ -159,12 +159,12 @@ SkinText="Huid"
 IDText="ID"
 
 [UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLTitleStr="Kan geen verbinding maken: Dynamic Link Library "%ls" ontbreekt."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-DLLVerTitleStr="Kan geen verbinding maken: Dynamic Link Library-versie komt niet overeen met "%ls"."
-; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[0]="Om verbinding te maken met deze server heb je een extra C ++ bibliotheek "%ls" nodig."
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLTitleStr="Kan geen verbinding maken: Dynamic Link Library %ls ontbreekt."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+DLLVerTitleStr="Kan geen verbinding maken: Dynamic Link Library-versie komt niet overeen met %ls."
+; EN: InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[0]="Om verbinding te maken met deze server heb je een extra C ++ bibliotheek %ls nodig."
 ; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
 InfoText[1]="Bekijk voor meer info de externe info van onderen (gehost door %ls):"
 
