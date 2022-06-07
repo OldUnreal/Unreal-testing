@@ -159,12 +159,12 @@ SkinText="Pell"
 IDText="ID"
 
 [UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
-DLLTitleStr="No es pot connectar: ​​falta la biblioteca d'enllaços dinàmics "%ls"."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
-DLLVerTitleStr="No es pot connectar: ​​la versió de Dynamic Link Library no coincideix amb "%ls"."
-; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
-InfoText[0]="Per connectar aquest servidor necessitareu una biblioteca C++ addicional "%ls"."
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLTitleStr="No es pot connectar: ​​falta la biblioteca d'enllaços dinàmics %ls."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+DLLVerTitleStr="No es pot connectar: ​​la versió de Dynamic Link Library no coincideix amb %ls."
+; EN: InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[0]="Per connectar aquest servidor necessitareu una biblioteca C++ addicional %ls."
 ; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
 InfoText[1]="Per obtenir més informació, consulteu la informació externa des de sota (allotjada per %ls):"
 
