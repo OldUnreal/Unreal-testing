@@ -12,11 +12,11 @@ LevelEnterText="De Nagomi Passage binnengaan"
 
 [TranslatorEvent0]
 ; EN: Message="LOG: M. Poesch: Located a mining facility, but the front gates won't open. A large Behemoth seems to control it, but he went back inside. I'll wait for him here. I got 2 clips here with his name on it."
-Message="LOG: M. Poesch: Bevindt een mijnbouwfaciliteit, maar de poorten aan de voorkant gaan niet open. Een grote Behemoth lijkt het te beheersen, maar hij ging weer naar binnen. Ik wacht hier op hem. Ik heb hier 2 clips met zijn naam erop."
+Message="LOG: M. Poesch: Een mijnbouwfaciliteit gelocaliseert, maar de poorten aan de voorkant gaan niet open. Een grote Behemoth lijkt het te bewaken, maar hij ging weer naar binnen. Ik wacht hier op hem. Ik heb hier 2 clips met zijn naam erop."
 
 [TranslatorEvent10]
 ; EN: Message="LOG: A. Leiby: Been running from a Skaarj for the past 2 hours. Think I lost him behind a crate. If I can just make it down below I can slip back into the temple. It's darker so it's easier to hide. Wait... I hear someth >>>ERROR<<<"
-Message="LOG: A. Leiby: Rende de afgelopen 2 uur voor een Skaarj. Ik denk dat ik hem ben kwijtgeraakt achter een krat. Als ik het maar naar beneden kan halen, kan ik terug de tempel in glippen. Het is donkerder, dus het is gemakkelijker te verbergen. Wacht ... ik hoor iets >>> FOUT <<<"
+Message="LOG: A. Leiby: de afgelopen 2 uur gevlucht voor een Skaarj. Ik denk dat ik hem ben kwijtgeraakt achter een krat. Als ik de weg naar beneden kan halen, kan ik terug de tempel in glippen. Het is donkerder, dus het is gemakkelijker me te verbergen. Wacht ... ik hoor iets >>> FOUT <<<"
 
 [TranslatorEvent9]
 ; EN: Message="Entering Land of Nagomi"

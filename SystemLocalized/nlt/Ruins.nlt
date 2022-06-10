@@ -12,15 +12,15 @@ LevelEnterText="De tempel van Vandora binnengaan"
 
 [TranslatorEvent0]
 ; EN: Message="And Vandora came forth, with fire from the Sky upon her lips, and sanctified the sacred fountain with her kiss. Thus, she said, he who follows me shall cast off the bonds of flesh and become as elusive as the mist."
-Message="En Vandora kwam tevoorschijn, met vuur uit de lucht op haar lippen, en heiligde de heilige fontein met haar kus. Dus, zei ze, hij die mij volgt, zal de banden van vlees afwerpen en zo ongrijpbaar worden als de mist."
+Message="En Vandora kwam tevoorschijn, met vuur uit de lucht op haar lippen, en zegende de heilige fontein met haar kus. Dus, zei ze, hij die mij volgt, zal de banden met vlees afwerpen en zo ongrijpbaar worden als de mist."
 ; EN: Hint="Sanctify the sacred fountain with fire and become as elusive as the mist."
-Hint="Heilig de heilige fontein met vuur en word zo ongrijpbaar als de mist."
+Hint="Zegen de gezegende fontein met vuur en word zo ongrijpbaar als de mist."
 
 [TranslatorEvent1]
 ; EN: Message="The Way is filled with darkness. The Torch of Tranquility must light the path of the worthy. Spiritual progression is achieved by those who set the Torch of Tranquility aflame."
-Message="De weg is gevuld met duisternis. De Torch of Tranquility moet het pad van de waardigen verlichten. Spirituele vooruitgang wordt bereikt door degenen die de Torch of Tranquility in vuur en vlam zetten."
+Message="De weg is gevuld met duisternis. De Vlam van Rust moet het pad van de waardigen verlichten. Spirituele vooruitgang wordt bereikt door degenen die de Vlam van Rust in vuur en vlam zetten."
 ; EN: Hint="Set the Torch of Thunder aflame to gain access."
-Hint="Zet de Torch of Thunder in brand om toegang te krijgen."
+Hint="Zet de Vlam van Donder in brand om toegang te krijgen."
 
 [TranslatorEvent3]
 ; EN: Message="Vandora, Goddess of Lightning."
@@ -28,4 +28,4 @@ Message="Vandora, godin van de bliksem."
 
 [TranslatorEvent2]
 ; EN: Message="Torch of Tranquility"
-Message="Fakkel van rust"
+Message="Vlam van Rust"

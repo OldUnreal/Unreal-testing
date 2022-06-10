@@ -4,7 +4,7 @@ Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class
 
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
-ResolveFailedError="De masterserver kan niet worden opgelost: "
+ResolveFailedError="De masterserver kan niet worden gevonden: "
 ; EN: TimeOutError="Timeout talking to the master server"
 TimeOutError="Time-out tijdens het praten met de masterserver"
 ; EN: CouldNotConnectError="Connecting to the master server timed out: "
@@ -12,7 +12,7 @@ CouldNotConnectError="Er is een time-out opgetreden bij het verbinden met de mas
 
 [UBrowserHTTPLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
-ResolveFailedError="De masterserver kan niet worden opgelost: "
+ResolveFailedError="De masterserver kan niet worden gevonden: "
 ; EN: TimeOutError="Timeout talking to the master server"
 TimeOutError="Time-out tijdens het praten met de masterserver"
 ; EN: CouldNotConnectError="Connecting to the master server timed out: "
@@ -72,7 +72,7 @@ WorldLogText="ngStats World Stat-Logging"
 ; EN: TrueString="Enabled"
 TrueString="Ingeschakeld"
 ; EN: FalseString="Disabled"
-FalseString="Gehandicapt"
+FalseString="Uitgeschakeld"
 ; EN: MapFileString="Map Filename"
 MapFileString="Map bestandsnaam"
 ; EN: DLLString="C++ Library"
@@ -90,7 +90,7 @@ GameClassString="Spelklasse"
 ; EN: FavoritesName="Favorites"
 FavoritesName="Favorieten"
 ; EN: NewsName="Community News"
-NewsName="Community nieuws"
+NewsName="Community Nieuws"
 ; EN: RecentName="Recent servers"
 RecentName="Recente servers"
 
@@ -116,7 +116,7 @@ CloseName="&Venster sluiten"
 
 [UBrowserMainWindow]
 ; EN: WindowTitleString="Unreal Server Browser"
-WindowTitleString="Unreal Server browser"
+WindowTitleString="Unreal Server Browser"
 
 [UBrowserRightClickMenu]
 ; EN: RefreshName="&Refresh All Servers"
@@ -154,19 +154,19 @@ TeamText="Team"
 ; EN: MeshText="Mesh"
 MeshText="Mesh"
 ; EN: SkinText="Skin"
-SkinText="Huid"
+SkinText="Model"
 ; EN: IDText="ID"
 IDText="ID"
 
 [UBrowserLibPageWindow]
-; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
-DLLTitleStr="Kan geen verbinding maken: Dynamic Link Library %ls ontbreekt."
-; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
-DLLVerTitleStr="Kan geen verbinding maken: Dynamic Link Library-versie komt niet overeen met %ls."
-; EN: InfoText[0]="To connect this server you will need additional C++ library %ls."
-InfoText[0]="Om verbinding te maken met deze server heb je een extra C ++ bibliotheek %ls nodig."
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library "%ls"."
+DLLTitleStr="Kan geen verbinding maken: Dynamic Link Library "%ls" ontbreekt."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched "%ls"."
+DLLVerTitleStr="Kan geen verbinding maken: Dynamic Link Library-versie komt niet overeen met "%ls"."
+; EN: InfoText[0]="To connect this server you will need additional C++ library "%ls"."
+InfoText[0]="Om verbinding te maken met deze server heb je een extra C ++ bibliotheek "%ls" nodig."
 ; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
-InfoText[1]="Bekijk voor meer info de externe info van onderen (gehost door %ls):"
+InfoText[1]="Bekijk voor meer informatie de externe informatie onderaan (gehost door %ls):"
 
 [UBrowserConsole]
 ; EN: ClassCaption="Unreal Browser Console"
@@ -180,7 +180,7 @@ OpenHelp="Voer een standaard-URL in of selecteer er een uit de URL-geschiedenis.
 
 [UBrowserServerWebWin]
 ; EN: WindowTitle="Unreal Web Explorer"
-WindowTitle="Unreal Webverkenner"
+WindowTitle="Unreal Web-Verkenner"
 
 [UBrowserServerWebCW]
 ; EN: RefreshString="Refresh page"

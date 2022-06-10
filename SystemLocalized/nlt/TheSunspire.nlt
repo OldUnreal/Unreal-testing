@@ -1,20 +1,20 @@
 ﻿[LevelInfo0]
 ; EN: Title="The Sunspire"
-Title="De Zonnespits"
+Title="De Zon Torenspits"
 ; EN: LevelEnterText="Entering The Sunspire"
-LevelEnterText="De Sunspire binnenkomen"
+LevelEnterText="De Zon Torenspits binnenkomen"
 
 [LevelSummary]
 ; EN: Title="The Sunspire"
-Title="De Zonnespits"
+Title="De Zon Torenspits"
 ; EN: LevelEnterText="Entering The Sunspire"
-LevelEnterText="De Sunspire binnenkomen"
+LevelEnterText="De Zon Torenspits binnenkomen"
 
 [TranslatorEvent17]
 ; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."
-Message="Ik ga vandaag niet terug naar de Zonnespits. Ik werd vanmorgen bijna gedood door de Sky Demon en ik vrees voor onze broers die nog niet zijn ontsnapt. Ik heb het gevoel dat we ze in dit leven niet meer zullen zien."
+Message="Ik ga vandaag niet terug naar de Zon torenspits. Ik werd vanmorgen bijna gedood door de Ruimte Demon en ik vrees voor onze broers die nog niet zijn ontsnapt. Ik heb het gevoel dat we ze in dit leven niet meer zullen terug zien."
 ; EN: Hint="Watch out on the ledge. If you fall, you will fall to your death."
-Hint="Kijk uit op de richel. Als je valt, val je dood."
+Hint="Kijk uit op de richel. Als je valt, val ben je dood."
 
 [TranslatorEvent1]
 ; EN: Message="Chambers of Honour"
@@ -26,9 +26,9 @@ Message="Erekamers"
 
 [TranslatorEvent20]
 ; EN: Message="Log: Security Officer A. Connectof: We are running out of ammo fast. There's only one weapon left. We have to reach the top where we can activate the crystal that calls the Sky Elevator, according to the Nali at the gates."
-Message="Logboek: Beveiligingsmedewerker A. Connectof: Onze munitie raakt snel op. Er is nog maar één wapen over. We moeten de top bereiken waar we het kristal kunnen activeren dat de Sky Elevator roept, volgens de Nali bij de poorten."
+Message="Logboek: Beveiligingsmedewerker A. Connectof: Onze munitie raakt snel op. Er is nog maar één wapen over. We moeten de top bereiken waar we het kristal kunnen activeren dat de RuimteLift roept, volgens de Nali dichtbij de poorten."
 ; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
-Hint="Vind je weg naar de kristallen kamer. Vanaf daar kun je de skyelevator bellen."
+Hint="Vind je weg naar de kristallen kamer. Vanaf daar kun je de RuimteLift oproepen."
 
 [TranslatorEvent10]
 ; EN: Message="Cistern"
@@ -44,23 +44,23 @@ Message="Slaapkamers"
 ; EN: Message="Primary Ascension"
 Message="Primaire hemelvaart"
 ; EN: Hint="Proceed with great care. Find your way to the top."
-Hint="Ga voorzichtig te werk. Vind je weg naar de top."
+Hint="Ga voorzichtig te werk. Zoek je weg naar de top."
 
 [TranslatorEvent0]
 ; EN: Message="Great Hall."
 Message="Grote Zaal."
 ; EN: Hint="Find the switch on the wall in the great hall. It will show you a secret and you will be able to proceed upwards."
-Hint="Vind de schakelaar aan de muur in de grote hal. Het zal je een geheim laten zien en je kunt verder gaan."
+Hint="Vind de schakelaar aan de muur in de grote hal. Het zal je het geheim laten zien om verder te gaan."
 
 [TranslatorEvent5]
 ; EN: Message="Primary Ascension"
-Message="Primaire hemelvaart"
+Message="Primaire hemeltocht"
 
 [TranslatorEvent7]
 ; EN: Message="Chamber of Crystals"
 Message="Kamer van kristallen"
 ; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
-Hint="Activeer het kristal en ga naar buiten en wacht tot de Skyelevator naar beneden komt. Stap aan boord en geniet van de rit."
+Hint="Activeer het kristal en ga naar buiten en wacht tot de RuimteLift naar beneden komt. Stap aan boord en geniet van de rit."
 
 [TranslatorEvent15]
 ; EN: Message="Feast Hall"
@@ -90,29 +90,29 @@ Message="Badkamers"
 ; EN: Message="Sunspire"
 Message="Zonnespits"
 ; EN: Hint="Proceed with great care. Find your way to the top."
-Hint="Ga voorzichtig te werk. Vind je weg naar de top."
+Hint="Ga voorzichtig te werk. Zoek je weg naar de top."
 
 [TranslatorEvent8]
 ; EN: Message="Prepare to Embark"
 Message="Bereid je voor om aan boord te gaan"
 ; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
-Hint="Activeer het kristal en ga naar buiten en wacht tot de Skyelevator naar beneden komt. Stap aan boord en geniet van de rit."
+Hint="Activeer het kristal en ga naar buiten en wacht tot de RuimteLift naar beneden komt. Stap aan boord en geniet van de rit."
 
 [TranslatorEvent16]
 ; EN: Message="Primary Ascension"
-Message="Primaire hemelvaart"
+Message="Primaire hemeltocht"
 ; EN: Hint="Proceed with great care. Find your way to the top."
-Hint="Ga voorzichtig te werk. Vind je weg naar de top."
+Hint="Ga voorzichtig te werk. Zoek je weg naar de top."
 
 [TranslatorEvent25]
 ; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
-Hint="Vind je weg naar de kristallen kamer. Vanaf daar kun je de skyelevator bellen."
+Hint="Zoek je weg naar de kristallen kamer. Vanaf daar kun je de RuimteLift oproepen."
 
 [TranslatorEvent24]
 ; EN: Message="Log: Petty Officer N. Onalopov: We split up so we would have a better chance of finding Kira. Those bastards are going to pay for taking her. I love you Kira. I swear I'll find you."
-Message="Logboek: Onderofficier N. Onalopov: We zijn uit elkaar gegaan zodat we een betere kans hebben om Kira te vinden. Die klootzakken gaan betalen voor het nemen van haar. Ik hou van je Kira. Ik zweer dat ik je zal vinden."
+Message="Logboek: Onderofficier N. Onalopov: We zijn uit elkaar gegaan zodat we een betere kans hebben om Kira te vinden. Die klootzakken gaan betalen voor het kidnappen van haar. Ik hou van je Kira. Ik zweer dat ik je zal vinden."
 ; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
-Hint="Vind je weg naar de kristallen kamer. Vanaf daar kun je de skyelevator bellen."
+Hint="Zoek je weg naar de kristallen kamer. Vanaf daar kun je de RuimteLift oproepen."
 
 [TranslatorEvent23]
 ; EN: Hint="You've made it so far, keep going..."

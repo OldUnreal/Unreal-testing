@@ -207,9 +207,9 @@ AltName="vlam geroosterd"
 
 [ToxinSuit]
 ; EN: PickupMessage="You picked up the Toxin Suit"
-PickupMessage="Je hebt het Antitoxinepak"
+PickupMessage="Je hebt het Gifpak"
 ; EN: ItemName="Toxin Suit"
-ItemName="Antitoxinepak"
+ItemName="Gifpak"
 
 [PowerShield]
 ; EN: PickupMessage="You got the Power Shield"
@@ -382,10 +382,10 @@ Message7="Druk op vuur om opnieuw te starten"
 ClassCaption="Koning van de Heuvel"
 ; EN: KingMessage=" is the new king of the hill!"
 KingMessage=" is de nieuwe koning van de heuvel!"
-; EN: NewKingMessage="%ls is the new king of the hill!"
-NewKingMessage="%ls is de nieuwe koning van de heuvel!"
-; EN: NewQueenMessage="%ls is the new queen of the hill!"
-NewQueenMessage="%ls is de nieuwe koningin van de heuvel!"
+; EN: NewKingMessage="%s is the new king of the hill!"
+NewKingMessage="%s is de nieuwe koning van de heuvel!"
+; EN: NewQueenMessage="%s is the new queen of the hill!"
+NewQueenMessage="%s is de nieuwe koningin van de heuvel!"
 ; EN: GameName="King of the Hill"
 GameName="Koning van de Heuvel"
 

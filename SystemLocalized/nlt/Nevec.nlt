@@ -1,14 +1,14 @@
 ﻿[LevelInfo1]
 ; EN: Title="Neve's Crossing"
-Title="Neve's Crossing"
+Title="Neve's Kruispunt"
 ; EN: LevelEnterText="Entering Neve's Crossing"
-LevelEnterText="Neve's Crossing binnengaan"
+LevelEnterText="Neve's Kruispunt binnengaan"
 
 [LevelSummary]
 ; EN: Title="Neve's Crossing"
-Title="Neve's Crossing"
+Title="Neve's Kruispunt"
 ; EN: LevelEnterText="Entering Neve's Crossing"
-LevelEnterText="Neve's Crossing binnengaan"
+LevelEnterText="Neve's Kruispunt binnengaan"
 
 [TranslatorEvent15]
 ; EN: Message="Terra-Neo Mining Station (North)"
@@ -16,7 +16,7 @@ Message="Terra-Neo Mining Station (Noord)"
 
 [TranslatorEvent6]
 ; EN: Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
-Message="LOG: B. Bates: Mock met de afbeelding naar beneden gevonden in een nabijgelegen meer. Het lijkt erop dat hij is verdronken. Arme klootzak. Vraag me af of hij de UMS-kratten uit de lucht zag vallen. Hoop dat het team van Dalton het goed heeft gemaakt. Het lijkt erop dat we misschien toch worden gered."
+Message="LOG: B. Bates: Ik heb Mock met het hoofd naar beneden in een nabijgelegen meer gevonden. Het lijkt erop dat hij is verdronken. Arme klootzak. Vraag me af of hij de UMS-kratten uit de lucht zag vallen. Hoop dat het team van Dalton het goed heeft gemaakt. Het lijkt erop dat we misschien toch worden gered."
 
 [TranslatorEvent5]
 ; EN: Message="LOG: P. Mock: Last saw Dalton and the rest two days ago. I'm lost. There are crates dropping down from the sky with UMS markings. Maybe whoever made it off this rock brought back help. I'm going to attempt to slip by the Skaarj through the lake."
@@ -28,4 +28,4 @@ Message="Terra-Neo Mining Station (Noord)"
 
 [TranslatorEvent0]
 ; EN: Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."
-Message="Ik vrees dat onze strijd nog niet voorbij is. De Sky Demons hebben de bron van Eldora ontdekt en gebruiken deze tegen ons. Ik had het geluk om met mijn leven te ontsnappen. Ik wacht hier in de hoop dat ze ons snel zullen verlaten ..."
+Message="Ik vrees dat onze strijd nog niet voorbij is. De Ruimte Demonen hebben de bron van Eldora ontdekt en gebruiken deze tegen ons. Ik had het geluk om levent te ontsnappen. Ik wacht hier in de hoop dat ze ons snel zullen verlaten ..."

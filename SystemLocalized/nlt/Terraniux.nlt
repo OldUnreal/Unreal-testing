@@ -12,13 +12,13 @@ Message="Status controlekamer: onder druk en vergrendeld. Geen toegang behalve i
 
 [TranslatorEvent4]
 ; EN: Message="Security Status: Intruder detected at entrance. Activating security screens on Scientific Research Lab and Hydroponics Section. All security elements deploy around access points in Sections A, B and C to deny intruder access to Lift 1."
-Message="Beveiligingsstatus: indringer gedetecteerd bij ingang. Beveiligingsschermen activeren op Scientific Research Lab and Hydroponics Section. Alle beveiligingselementen worden ingezet rond toegangspunten in secties A, B en C om indringers de toegang tot lift 1 te ontzeggen."
+Message="Beveiligingsstatus: indringer gedetecteerd bij ingang. Beveiligingsschermen activeren op Wetenschappelijk onderzoekslabo en Hydrocultuur Sector. Alle beveiligingselementen worden ingezet rond toegangspunten in secties A, B en C om indringers de toegang tot lift 1 te ontzeggen."
 ; EN: Hint="Find the Containment rooms A, B and C and activate the buttons to access the Lift 1."
 Hint="Zoek de insluitingsruimten A, B en C en activeer de knoppen om toegang te krijgen tot de lift 1."
 
 [TranslatorEvent5]
 ; EN: Message="Drainage Status: Biowaste flow is at nominal levels. All pumps operational. Section C empty and available for any Biowaster overflow. Please be sure that the regular pipe maintenance is handled."
-Message="Drainagestatus: de stroom van bioafval bevindt zich op nominaal niveau. Alle pompen zijn operationeel. Sectie C is leeg en beschikbaar voor elke overloop van Biowaster. Zorg ervoor dat het reguliere leidingonderhoud wordt afgehandeld."
+Message="Drainagestatus: de stroom van biometrischafval bevindt zich op nominaal niveau. Alle pompen zijn operationeel. Sectie C is leeg en beschikbaar voor elke overloop van biometrisch afval verwerker. Zorg ervoor dat het reguliere leidingonderhoud wordt afgehandeld."
 
 [TranslatorEvent0]
 ; EN: Message="Section B: Status 48% full."
@@ -26,7 +26,7 @@ Message="Sectie B: Status 48% vol."
 
 [TranslatorEvent10]
 ; EN: Message="Greenhouse B: Please verify that the Biowaste is being pumped through the Control Room filters and that no foreign objects are blocking the flow."
-Message="Kas B: Controleer of het bioafval door de filters van de controlekamer wordt gepompt en of er geen vreemde voorwerpen de stroming blokkeren."
+Message="Kas B: Controleer of het biometrischafval door de filters van de controlekamer wordt gepompt en of er geen vreemde voorwerpen de stroming blokkeren."
 
 [Trigger32]
 ; EN: Message="Lift to Noork's Elbow activated"
@@ -34,23 +34,23 @@ Message="Lift naar Noork's Elleboog geactiveerd"
 
 [TranslatorEvent1]
 ; EN: Message="Section A: Status full. Biowaste redirect to Section B active."
-Message="Sectie A: Status vol. Bioafval doorverwijzing naar sectie B actief."
+Message="Sectie A: Status vol. biometrischafval doorverwijzing naar sectie B actief."
 
 [TranslatorEvent8]
 ; EN: Message="Access Denied. Control Room authorization must be granted to access Noork's Elbow."
-Message="Toegang geweigerd. Om toegang te krijgen tot Noork's Elleboog moet autorisatie voor de controlekamer worden verleend."
+Message="Toegang geweigerd. Om toegang te krijgen tot Noork's Elleboog er moet autorisatie voor de controlekamer worden verleend."
 ; EN: AltMessage="Access granted."
 AltMessage="Toegang verleend."
 ; EN: Hint="If you swim down in the BioWaste you can access the Control Room."
-Hint="Als je naar beneden zwemt in de Bioafval kun je naar de Controle Kamer."
+Hint="Als je naar beneden zwemt in de biometrischafval kun je naar de Controle Kamer."
 
 [TranslatorEvent2]
 ; EN: Message="Section C: Status Empty, this Containment Room is damaged, please avoid sending BioWaste here until we can fix it."
-Message="Sectie C: Status leeg, deze insluitkamer is beschadigd. Vermijd het verzenden van Bioafval hierheen totdat we het kunnen repareren."
+Message="Sectie C: Status leeg, deze isoleerkamer is beschadigd. Vermijd het verzenden van biometrischafval hierheen totdat we het kunnen repareren."
 
 [TranslatorEvent6]
 ; EN: Message="Lift 1: Security Lock, Access denied. Containment room pumps must be active for entrance to hydroponic greenhouses."
-Message="Lift 1: veiligheidsslot, toegang geweigerd. Inperkingsruimtepompen moeten actief zijn voor toegang tot hydrocultuurkassen."
+Message="Lift 1: veiligheidsslot, toegang geweigerd. Isolatieruimtepompen moeten actief zijn voor toegang tot hydrocultuurkassen."
 ; EN: AltMessage="Lift 1: Status working. Access to hydroponic gardens permitted."
 AltMessage="Lift 1: Status in werking. Toegang tot hydrocultuurtuinen toegestaan."
 
@@ -62,9 +62,9 @@ Hint="Deze lift is kapot, maar controleer de leidingen, er kan iets interessants
 
 [TranslatorEvent9]
 ; EN: Message="Greenhouse A: Section A is full. Biowaste flow must be redirected from the Control Room. Section B of the waste facility has free capacity. Please be sure to monitor the water supply for impurities."
-Message="Kas A: Vak A is vol. De bioafvalstroom moet worden omgeleid vanuit de meldkamer. Sectie B van de afvalvoorziening heeft vrije capaciteit. Zorg ervoor dat u de watertoevoer controleert op onzuiverheden."
+Message="Kas A: Vak A is vol. De biometrischafval-stroom moet worden omgeleid vanuit de meldkamer. Sectie B van de afvalvoorziening heeft vrije capaciteit. Zorg ervoor dat u de watertoevoer controleert op onzuiverheden."
 ; EN: Hint="The Biowaste is filtered in the Control Room."
-Hint="Het bioafval wordt gefilterd in de controlekamer."
+Hint="Het biometrischafval wordt gefilterd in de controlekamer."
 
 [TranslatorEvent11]
 ; EN: Message="Greenhouse B: The Karkilys Zegnus need more fertilizer. Please dispatch a group of guards to inspect the Nali homes in the Noork's Elbow. Disembarkment authorization must be granted in the Control Room."
@@ -82,12 +82,12 @@ Hint="Je moet een andere manier vinden om deze kamer binnen te gaan."
 
 [TranslatorEvent14]
 ; EN: Message="Access Denied. Control Room authorization must be granted to access Noork Elbow."
-Message="Toegang geweigerd. Om toegang te krijgen tot Noork's Elleboog moet autorisatie voor de controlekamer worden verleend."
+Message="Toegang geweigerd. Om toegang te krijgen tot Noork's Elleboog moet er autorisatie voor de controlekamer worden verleend."
 
 [Trigger46]
 ; EN: Message="Access Room security locks disengaged."
-Message="Access Room-veiligheidssloten zijn uitgeschakeld."
+Message="Toegangs Kamer-veiligheidssloten zijn uitgeschakeld."
 
 [TranslatorEvent15]
 ; EN: Message="Pump activated, Biowaste transferred in section B."
-Message="Pomp geactiveerd, bioafval overgebracht in sectie B."
+Message="Pomp geactiveerd, biometrischafval overgebracht in sectie B."

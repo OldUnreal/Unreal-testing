@@ -12,13 +12,13 @@ LevelEnterText="Torenspits Dorp binnenkomen"
 
 [TranslatorEvent19]
 ; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"
-Message="Onze Haven, de grote Zonnespits, aan ons gegeven door de Goden van de Goede Overlevering, is gecorrumpeerd door de Sky Demons. Onze eens hoop is nu de slechtste van de verschrikkingen. De Sky Demons zijn sterker dan ooit. Ik had een visioen van de dood, van immense beesten die door het land zwierven"
+Message="Onze Thuis, de grote Zonnespits, aan ons gegeven door de Goden van de Goede Overlevering, is gecorrumpeerd door de Ruimte Demonen. Onze eerste hoop is nu de slechtste van de verschrikkingen. De Ruimte Demonen zijn sterker dan ooit. Ik had een visioen van de dood, van immense beesten die door het land zwierven"
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
 Hint="Doorzoek de huizen grondig en volg de vallei tot aan de poort. Pas op voor die Titans!"
 
 [TranslatorEvent2]
 ; EN: Message="Safe haven for those who seek peace, welcome."
-Message="Veilige haven voor degenen die rust zoeken, welkom."
+Message="Veilige Thuis voor degenen die rust zoeken, welkom."
 ; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
 Hint="Doorzoek de huizen grondig en volg de vallei tot aan de poort. Pas op voor die Titans!"
 
