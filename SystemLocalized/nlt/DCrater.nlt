@@ -16,9 +16,9 @@ Message="Generator bedieningspaneel. Generator is operationeel. Nominaal vermoge
 
 [TranslatorEvent0]
 ; EN: Message="Portal Gate: Warning: not enough power to establish portal link. Activate the Generator."
-Message="Portal Gate: Waarschuwing: niet genoeg stroom om een ​​portaalverbinding tot stand te brengen. Activeer de generator."
+Message="Portaalingang: Waarschuwing: niet genoeg stroom om een ​​portaalverbinding tot stand te brengen. Activeer de generator."
 ; EN: AltMessage="Portal Gate: Link Established. Enter transport field."
-AltMessage="Portal Gate: verbinding tot stand gebracht. Voer het transportveld in."
+AltMessage="Portaalingang: verbinding tot stand gebracht. Voer het transportveld in."
 ; EN: Hint="Activate the Generator that powers the portal to the ship."
 Hint="Activeer de generator die het portaal naar het schip aandrijft."
 

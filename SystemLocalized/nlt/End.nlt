@@ -10,13 +10,13 @@ Title="Einde"
 ; Note: Make the text coincide with the respective audio entry in Sounds/nlt/EndSnd.nlt. If there isn't one, CREATE IT!
 OutDelays[1]=3.000000
 ; EN: CommonText[0]="Bodega Bay to shuttle craft. Please authenticate."
-CommonText[0]="Bodega Bay om vaartuigen te vervoeren. Verifieer a.u.b.."
+CommonText[0]="Bodega Bay aan pendelvaartuig. authenticeer uzelf a.u.b.."
 
 [TransitionGenderEvent2]
 ; Note: Make the text coincide with the respective audio entry in Sounds/nlt/EndSnd.nlt. If there isn't one, CREATE IT!
 OutDelays[1]=3.000000
 ; EN: CommonText[0]="Authenticate immediately or we will open fire."
-CommonText[0]="Verifieer onmiddellijk of we openen het vuur."
+CommonText[0]="authenticeer uzelf onmiddellijk of we openen het vuur."
 
 [TransitionGenderEvent1]
 ; Note: Make the text coincide with the respective audio entry in Sounds/nlt/EndSnd.nlt. If there isn't one, CREATE IT!

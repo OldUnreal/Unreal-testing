@@ -1,26 +1,26 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Lab"
-Title="Moederschip Lab"
+Title="Moederschip Labo"
 ; EN: LevelEnterText="Entering the MotherShip Lab"
-LevelEnterText="Moederschip Lab betreden"
+LevelEnterText="Moederschip Labo betreden"
 
 [LevelSummary]
 ; EN: Title="MotherShip Lab"
-Title="Moederschip Lab"
+Title="Moederschip Labo"
 ; EN: LevelEnterText="Entering the MotherShip Lab"
-LevelEnterText="Moederschip Lab betreden"
+LevelEnterText="Moederschip Labo betreden"
 
 [TranslatorEvent0]
 ; EN: AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."
-AltMessage="De primaire voeding werkt met maximale efficiëntie. Hulpvoeding operationeel op 80% output. Het activeren van de alternatieve stroomvoorziening voor de Security Force Fields is absoluut noodzakelijk. Zwakte wordt gestraft."
+AltMessage="De primaire voeding werkt met maximale efficiëntie. Hulpvoeding operationeel op 80% output. Het activeren van de alternatieve stroomvoorziening voor de Beveiliging van de  Krachtvelden is absoluut noodzakelijk. Zwakte wordt gestraft."
 
 [TranslatorEvent3]
 ; EN: Message="Intruder detected. Protect the Source at any cost. Intruder must be halted before penetrating the Source's defensive perimeter."
-Message="Indringer gedetecteerd. Bescherm de bron koste wat het kost. De indringer moet worden gestopt voordat hij de verdedigingsperimeter van de Bron binnendringt."
+Message="Indringer gedetecteerd. Bescherm de bron kost wat het kost. De indringer moet worden gestopt voordat hij de verdedigingsperimeter van de Bron binnendringt."
 
 [TranslatorEvent2]
 ; EN: Message="Security personnel report to deployment zones around the Detention Block until APS back online. All detainees must be contained."
-Message="Beveiligingspersoneel meldt zich bij inzetzones rond het Detentieblok totdat APS weer online is. Alle gedetineerden moeten worden ingesloten."
+Message="Beveiligingspersoneel meldt U bij ontwikkelingszones rond het Detentieblok tot dat APS weer online is. Alle gedetineerden moeten worden ingesloten."
 
 [TranslatorEvent19]
 ; EN: Message="Research Center"
@@ -36,9 +36,9 @@ AltMessage="Cryo Pods Status: temperatuur op 269 graden Kelvin, druk op 748 mill
 
 [TranslatorEvent26]
 ; EN: Message="Power Reserve at 100%, Shielding effect at 0.0025%. EEG/EKG readings are normal, physiological state is cryogenised."
-Message="Gangreserve op 100%, afschermingseffect op 0,0025%. EEG / EKG-metingen zijn normaal, de fysiologische toestand is gecryogeniseerd."
+Message="Kracht reserve op 100%, afschermingseffect op 0,0025%. EEG / EKG-metingen zijn normaal, de fysiologische toestand is gecryogeniseerd."
 ; EN: AltMessage="Power Reserve at 80%, Shielding effect at 5.64%, EEG/EKG readings showing massive disturbances, physiological state is active and endorphin/adrenal systems are producing hormonal overloads."
-AltMessage="Gangreserve op 80%, afschermend effect op 5,64%, EEG / ECG-metingen die enorme verstoringen laten zien, fysiologische toestand is actief en endorfine / bijniersystemen produceren hormonale overbelastingen."
+AltMessage="Kracht reserve op 80%, afschermingseffect op 5,64%, EEG / ECG-metingen die enorme verstoringen laten zien, fysiologische toestand is actief en endorfine / bijnier systemen produceren hormonale overbelastingen."
 
 [TranslatorEvent25]
 ; EN: AltMessage="All the test subjects have been placed in the Detention Area. The force fields are keeping them confined and unshielded. All subjects continue to exhibit extremely aggressive behaviour when not in carefully tuned magnetic fields."
@@ -68,19 +68,19 @@ Message="Genetische afdeling"
 
 [TranslatorEvent14]
 ; EN: AltMessage="Security Orders: Intruder detected in MotherShip, all experiments are suspended on orders of Chakti'Nrrj 2nd Great Talon of Ssa'Nrrj until further notice. Power Reserves must be at 100% for optimal security system operation."
-AltMessage="Beveiligingsbevelen: Indringer gedetecteerd in Moederschip, alle experimenten worden tot nader order opgeschort op bevel van Chakti'Nrrj 2nd Great Talon of Ssa'Nrrj. Stroomreserves moeten 100% zijn voor een optimale werking van het beveiligingssysteem."
+AltMessage="Beveiligingsbevelen: Indringer gedetecteerd in Moederschip, alle experimenten worden tot nader order opgeschort op bevel van Chakti'Nrrj 2e Grote Klauw of Ssa'Nrrj. Stroomreserves moeten 100% zijn voor een optimale werking van het beveiligingssysteem."
 
 [TranslatorEvent15]
 ; EN: AltMessage="Report 187: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. Despite the failure in our previous tests on the shielding effect, the test subjects' cells are showing some residual effects. Very interesting..."
-AltMessage="Rapport 187: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji rapportage. Ondanks de mislukking in onze eerdere tests op het afschermende effect, vertonen de cellen van de proefpersonen enkele resteffecten. Heel interessant..."
+AltMessage="Rapport 187: Shrk'Tajji 2e kleine oog van Ess'Tajji rapportage. Ondanks de mislukking in onze eerdere tests op het afschermende effect, vertonen de cellen van de proefpersonen enkele resteffecten. Heel interessant..."
 
 [TranslatorEvent16]
 ; EN: AltMessage="Report 189: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. After cross-analysis of the test results on all subects, we've reached the conclusion that the Core Generator's magnetic field is probably the cause of the failures."
-AltMessage="Verslag 189: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji rapportage. Na kruisanalyse van de testresultaten op alle onderdelen, zijn we tot de conclusie gekomen dat het magnetische veld van de Kern Generator waarschijnlijk de oorzaak is van de storingen."
+AltMessage="Verslag 189: Shrk'Tajji 2e kleine oog van Ess'Tajji rapportage. Na kruisanalyse van de testresultaten op alle onderdelen, zijn we tot de conclusie gekomen dat het magnetische veld van de Kern Generator waarschijnlijk de oorzaak is van de storingen."
 
 [TranslatorEvent17]
 ; EN: AltMessage="Report 188: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. Studies on the test subjects' cells are showing persistent shielding, with minor fluctuations in reflectivity. Strangely these are all perfectly synchronized."
-AltMessage="Rapport 188: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji rapportage. Studies aan de cellen van de proefpersonen laten aanhoudende afscherming zien, met kleine fluctuaties in reflectievermogen. Vreemd genoeg zijn deze allemaal perfect gesynchroniseerd."
+AltMessage="Rapport 188: Shrk'Tajji 2e kleine oog van Ess'Tajji rapportage. Studies aan de cellen van de proefpersonen laten aanhoudende afscherming zien, met kleine fluctuaties in reflectievermogen. Vreemd genoeg zijn deze allemaal perfect gesynchroniseerd."
 
 [TranslatorEvent23]
 ; EN: AltMessage="If the experiment is successful we'll look into moving the Research Center to Site B where we'll be shielded from the magnetic field of the Core Generator. If we're successful we'll reach the green level or even blue."
@@ -92,7 +92,7 @@ Message="TOEGANG GEWEIGERD"
 
 [TranslatorEvent5]
 ; EN: Message="Experimentation Facility"
-Message="Experimenteerfaciliteit"
+Message="Experimenteer-Faciliteit"
 
 [TranslatorEvent4]
 ; EN: AltMessage="Report 190: We're ready for the next experiment, the subject is positionned properly and the Primary Generator Power will be reduced to 80%. The subject should barely be affected, the expected energy level is characterised by an orange color."

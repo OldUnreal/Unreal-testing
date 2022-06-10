@@ -1,8 +1,8 @@
 ﻿[General]
 ; EN: Start="Unreal (Starting)"
-Start="Unreal (Startend)"
+Start="Unreal (OpStarten)"
 ; EN: Exit="Unreal (Exiting)"
-Exit="Unreal (Spannend)"
+Exit="Unreal (Verlaten)"
 ; EN: Run="Unreal (Running)"
-Run="Unreal (Hardlopen)"
+Run="Unreal (Draait)"
 Product="Unreal"

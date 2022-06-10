@@ -14,7 +14,7 @@ LevelEnterText="De Bron binnengaan"
 ; EN: ItemName="Super Jump Boots"
 ItemName="Super Springlaarzen"
 ; EN: PickupMessage="You picked up Super Jump Boots."
-PickupMessage="Je hebt Super Springlaarzen."
+PickupMessage="Je hebt Super Springlaarzen gevonden."
 ; EN: ExpireMessage="The Super Jump Boots have drained."
 ExpireMessage="De Super Springlaarzen zijn leeggelopen."
 

@@ -5,7 +5,7 @@ Object=(Name=IpDrv.CompressCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=IpDrv.DecompressCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=IpDrv.TcpNetDriver,Class=Class,MetaClass=Engine.NetDriver)
 Object=(Name=IpDrv.UdpBeacon,Class=Class,MetaClass=Engine.Actor)
-Preferences=(Caption="TCP/IP Network Play",Parent="Networking",LangCaption="TCP/IP-Netwerk Afspelen",Class=IpDrv.TcpNetDriver)
+Preferences=(Caption="TCP/IP Network Play",Parent="Networking",LangCaption="TCP/IP-Netwerk Spelen",Class=IpDrv.TcpNetDriver)
 Preferences=(Caption="Server Beacon",Parent="Networking",LangCaption="Serverbaken",Class=IpDrv.UdpBeacon,Immediate=True)
 
 [UpdateServerCommandlet]
@@ -36,7 +36,7 @@ HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
 ; EN: HelpOneLiner="Compress an Unreal package for auto-downloading. A file with extension .uz will be created."
 HelpOneLiner="Comprimeer een Unreal-pakket om het automatisch te downloaden. Er wordt een bestand met de extensie .uz gemaakt."
 ; EN: HelpUsage="compress File1 [File2 [File3 ...]]"
-HelpUsage="compress Bestande1 [Bestande2 [Bestande3 ...]]"
+HelpUsage="compress Bestand1 [Bestand2 [Bestand3 ...]]"
 ; EN: HelpParm[0]="Files"
 HelpParm[0]="Bestanden"
 ; EN: HelpDesc[0]="The wildcard or file names to compress."
@@ -56,7 +56,7 @@ HelpDesc[0]="Het .uz-bestand dat moet worden uitgepakt."
 
 [TcpNetDriver]
 ; EN: ClassCaption="TCP/IP Network Play"
-ClassCaption="TCP/IP-Netwerk Afspelen"
+ClassCaption="TCP/IP-Netwerk Spelen"
 
 [UdpBeacon]
 ; EN: ClassCaption="Server LAN Beacon"

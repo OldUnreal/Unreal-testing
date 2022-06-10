@@ -2,14 +2,14 @@
 ; EN: Title="Gateway To Na Pali"
 Title="Poort naar Na Pali"
 ; EN: LevelEnterText="Entering Na Pali Haven Underground"
-LevelEnterText="Na Pali Haven Underground binnenkomen"
+LevelEnterText="Na Pali Haven Ondergrond binnenkomen"
 
 [LevelSummary]
 ; EN: Title="Gateway To Na Pali"
 Title="Poort naar Na Pali"
 ; EN: LevelEnterText="Entering Na Pali Haven Underground"
-LevelEnterText="Na Pali Haven Underground binnenkomen"
+LevelEnterText="Na Pali Haven Ondergrond binnenkomen"
 
 [TranslatorEvent0]
 ; EN: Message="I'm the only one left. I've managed to find shelter here and I will rest before I make my final stand tomorrow morning. I am so tired. The day has been long and I have lost all. I only hope they don't discover me sleeping here tonight."
-Message="Ik ben de enige die nog over is. Het is me gelukt om hier onderdak te vinden en ik zal rusten voordat ik morgenochtend mijn laatste standpunt zal innemen. Ik ben zo moe. De dag is lang geleden en ik heb alles verloren. Ik hoop alleen dat ze me niet ontdekken dat ik hier vannacht slaap."
+Message="Ik ben de enige die nog over is. Het is me gelukt om hier onderdak te vinden en ik zal rusten voordat ik morgenochtend mijn laatste standpunt zal innemen. Ik ben zo moe. De dag is lang geweest en ik heb alles verloren. Ik hoop alleen dat ze me niet ontdekken als ik hier vannacht slaap."

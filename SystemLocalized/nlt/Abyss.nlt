@@ -16,8 +16,8 @@ Message="LOG: R. Wisnewski: Verdomme, het is koud. De loopbrug buiten is onbegaa
 
 [TranslatorEvent1]
 ; EN: Message="System: Teleporter Online."
-Message="Systeem: Teleporter Online."
+Message="Systeem: Teleporter Actief."
 
 [TranslatorEvent0]
 ; EN: Message="System: Teleporter Offline. Activation required via underground control unit."
-Message="Systeem: Teleporter offline. Activering vereist via ondergrondse besturingseenheid."
+Message="Systeem: Teleporter Niet Actief. Activering vereist via ondergrondse besturingsModule."

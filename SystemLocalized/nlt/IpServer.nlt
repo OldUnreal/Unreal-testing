@@ -4,8 +4,8 @@ Preferences=(Caption="Master Server Uplink",Parent="Networking",LangCaption="Mas
 
 [ServerUplink]
 ; EN: ClassCaption="Master Server Uplink"
-ClassCaption="Master Server-Uplink"
+ClassCaption="Hoofd Server-Uplink"
 
 [ServerQuery]
 ; EN: ClassCaption="Game Server Query"
-ClassCaption="Game Server-vraag"
+ClassCaption="Game Server Opvragen"

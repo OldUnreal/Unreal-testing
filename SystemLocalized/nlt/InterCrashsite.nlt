@@ -1,19 +1,19 @@
 ﻿[LevelInfo1]
 ; EN: Title="Auf der Reeperbahn nachts um halb 2..."
-Title="Auf der Reeperbahn nachts um halb 2 ..."
+Title="Om half twee 's nachts in de bommeltrein ..."
 ; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
-LevelEnterText="Boah, ich brauch nen neuen Job ..."
+LevelEnterText="Wauw, ik heb een nieuwe baan nodig ..."
 
 [LevelSummary]
 ; EN: Title="Auf der Reeperbahn nachts um halb 2..."
-Title="Auf der Reeperbahn nachts um halb 2 ..."
+Title="Om half twee 's nachts in de bommeltrein ..."
 ; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
-LevelEnterText="Boah, ich brauch nen neuen Job ..."
+LevelEnterText="Wauw, ik heb een nieuwe baan nodig ..."
 
 [TransitionGenderEvent0]
 ; Note: Make the text coincide with the equivalent in Sounds/nlt/Interm5.uax.
 OutDelays[1]=29.500000
 ; EN: MaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
-MaleText[0]="De Prometheus kwam hard neer in een vallei en liet puin vallen toen ze uit de lucht viel. Overal lagen lijken. Ik moet aannemen dat de hele bemanning is weggevaagd. 150 zielen ... God, ik haat deze planeet. Het schip is een nachtmerrie ... de romp is op verschillende plaatsen gebroken, een van de motorkernen is omgesmolten en de gangen zijn geteisterd door huurlingen. Maar ik ben bijna klaar ... ik moet alleen de datacores vinden en dan de ELT op de brug activeren."
+MaleText[0]="De Prometheus kwam hard neer in een vallei en liet puin vallen toen ze uit de lucht viel. Overal lagen lijken. Ik moet aannemen dat de hele bemanning is weggevaagd. 150 zielen ... God, ik haat deze planeet. Het schip is een nachtmerrie ... de romp is op verschillende plaatsen gebroken, een van de motorkernen is gesmolten en de gangen zijn geteisterd door huurlingen. Maar ik ben bijna klaar ... ik moet alleen de datacores vinden en dan de ELT op de brug activeren."
 ; EN: FemaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
-FemaleText[0]="De Prometheus kwam hard neer in een vallei en liet puin vallen toen ze uit de lucht viel. Overal lagen lijken. Ik moet aannemen dat de hele bemanning is weggevaagd. 150 zielen ... God, ik haat deze planeet. Het schip is een nachtmerrie ... de romp is op verschillende plaatsen gebroken, een van de motorkernen is omgesmolten en de gangen zijn geteisterd door huurlingen. Maar ik ben bijna klaar ... ik moet alleen de datacores vinden en dan de ELT op de brug activeren."
+FemaleText[0]="De Prometheus kwam hard neer in een vallei en liet puin vallen toen ze uit de lucht viel. Overal lagen lijken. Ik moet aannemen dat de hele bemanning is weggevaagd. 150 zielen ... God, ik haat deze planeet. Het schip is een nachtmerrie ... de romp is op verschillende plaatsen gebroken, een van de motorkernen is gesmolten en de gangen zijn geteisterd door huurlingen. Maar ik ben bijna klaar ... ik moet alleen de datacores vinden en dan de ELT op de brug activeren."

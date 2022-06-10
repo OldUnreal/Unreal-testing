@@ -2,13 +2,13 @@
 ; EN: Title="Dark Arena"
 Title="Donkere Arena"
 ; EN: LevelEnterText="Entering the Dark Arena"
-LevelEnterText="Het betreden van de Donkere Arena"
+LevelEnterText="Het ingaan van de Donkere Arena"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Donkere Arena"
 ; EN: LevelEnterText="Entering the Dark Arena"
-LevelEnterText="Het betreden van de Donkere Arena"
+LevelEnterText="Het ingaan van de Donkere Arena"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."
@@ -20,11 +20,11 @@ Message="Ik ben ontsnapt uit mijn cel maar kan de kracht niet vinden om verder t
 
 [TranslatorEvent3]
 ; EN: Message="I wish I had died when the Vortex Rikers crashed. I do not know what is to become of me. I am scared."
-Message="Ik wou dat ik was gestorven toen de Vortex Rikers neerstortten. Ik weet niet wat er van mij zal worden. Ik ben bang."
+Message="Ik wou dat ik was gestorven toen de Vortex Rikers neerstortte. Ik weet niet wat er van mij zal worden. Ik ben bang."
 
 [TranslatorEvent4]
 ; EN: Message="I'm so hungry. I hope that the others in the scouting party from the ISV-KRAN will find me. This is the only hope that keeps me going from day to day. Without that to cling to I'd be insane by now. I can't stand the screams of pain much longer."
-Message="Ik heb zo'n honger. Ik hoop dat de anderen in de scoutinggroep van de ISV-KRAN mij zullen vinden. Dit is de enige hoop die me van dag tot dag op de been houdt. Zonder dat om me aan vast te klampen zou ik nu al gek zijn. Ik kan het geschreeuw van pijn niet veel langer verdragen."
+Message="Ik heb zo'n honger. Ik hoop dat de anderen in de verkenningsgroep van de ISV-KRAN mij zullen vinden. Dit is de enige hoop die me van dag tot dag op de been houdt. Zonder dat om me aan vast te klampen zou ik nu al gek zijn. Ik kan het geschreeuw van pijn niet veel langer verdragen."
 
 [TranslatorEvent5]
 ; EN: Message="If I am to die here in this place, it pleases my mind that some of my former captors are here with me. Tomorrow I will find my own peace in death knowing that they have all suffered before me."
@@ -36,4 +36,4 @@ Message="Ik moet proberen een uitweg te vinden uit deze plek. De hagedismannen d
 
 [TranslatorEvent7]
 ; EN: Message="The Skaarj have brought in a new batch of the two armed softskins from another of their raids. I fear that one of them is the Messiah, come down from the heavens, but I must pray that I am mistaken and not give up hope for the freedom of my people."
-Message="De Skaarj hebben een nieuwe batch van de twee gewapende softskins meegenomen uit een van hun andere invallen. Ik ben bang dat een van hen de Messias is, die uit de hemelen is neergedaald, maar ik moet bidden dat ik me vergis en de hoop op de vrijheid van mijn volk niet moet opgeven."
+Message="De Skaarj hebben een nieuwe batch van de twee gewapende zachthuiden meegenomen uit een van hun andere invallen. Ik ben bang dat een van hen de Messias is, die uit de hemelen is neergedaald, maar ik moet bidden dat ik me vergis en de hoop van de vrijheid van mijn volk niet moet opgeven."

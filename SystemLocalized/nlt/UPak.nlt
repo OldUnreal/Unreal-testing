@@ -62,9 +62,9 @@ LogEntryMsg="LOGINVOER:"
 
 [GrenadeLauncher]
 ; EN: DeathMessage="%k's grenade made %o blew up."
-DeathMessage="De granaat van %k gemaakt %o is opgeblazen."
-FemDeathMessage="De granaat van %k gemaakt %o is opgeblazen."
-FemKillMessage="De granaat van %k gemaakt %o is opgeblazen."
+DeathMessage="De granaat van %k deed %o ontploffen."
+FemDeathMessage="De granaat van %k deed %o ontploffen."
+FemKillMessage="De granaat van %k deed %o ontploffen."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
 PickupMessage="Je hebt de UMS-granaatwerper"
 ; EN: ItemName="UMS Grenade Launcher"
@@ -74,11 +74,11 @@ ItemName="UMS-granaatwerper"
 ; EN: ExpireMessage="disengaged."
 ExpireMessage="ontkoppeld."
 ; EN: PickupMessage="You got the Cloaking Device"
-PickupMessage="Je hebt het verhul apparaat"
+PickupMessage="Je hebt het Mantel apparaat"
 ; EN: ItemName="Cloaking Device"
-ItemName="Cloaking-apparaat"
+ItemName="Mantel-apparaat"
 ; EN: M_Activated=" engaged"
-M_Activated=" verloofd"
+M_Activated=" gekoppeld"
 ; EN: M_Deactivated=" disengaged"
 M_Deactivated=" ontkoppeld"
 
@@ -95,7 +95,7 @@ DeathMessage="De raket van %k veranderde het lichaam van %o in brokken."
 FemDeathMessage="De raket van %k veranderde het lichaam van %o in brokken."
 FemKillMessage="De raket van %k veranderde het lichaam van %o in brokken."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
-PickupMessage="Du har UMS-raketwerper"
+PickupMessage="U hebt een UMS-raketwerper"
 ; EN: ItemName="UMS Rocket Launcher"
 ItemName="UMS-raketwerper"
 
@@ -113,19 +113,19 @@ DeathMessage="De %w van %k veranderde %o in Zwitserse kaas."
 FemDeathMessage="De %w van %k veranderde %o in Zwitserse kaas."
 FemKillMessage="De %w van %k veranderde %o in Zwitserse kaas."
 ; EN: PickupMessage="You got the Combat Assault Rifle"
-PickupMessage="Je hebt het Gevecht AanvalGeweer"
+PickupMessage="Je hebt het Gevechts AanvalsGeweer"
 ; EN: ItemName="Combat Assault Rifle"
-ItemName="Gevecht AanvalGeweer"
+ItemName="Gevechts AanvalsGeweer"
 
 [UPakScubaGear]
 ; EN: RechargedMessage="ScubaGear fully recharged."
-RechargedMessage="ScubaGear volledig opgeladen."
+RechargedMessage="Duikuitrusting volledig opgeladen."
 ; EN: LowOxygenMessage="Oxygen supply critically low"
 LowOxygenMessage="Zuurstoftoevoer kritiek laag"
 ; EN: PickupMessage="You picked up the Marine SCUBA Gear"
-PickupMessage="Je hebt de Marine SCUBA-uitrusting opgehaald"
+PickupMessage="Je hebt de Marine Duikuitrusting opgehaald"
 ; EN: ItemName="Marine SCUBA Gear"
-ItemName="Marine SCUBA-uitrusting"
+ItemName="Marine Duikuitrusting"
 ; EN: M_Deactivated="deactivated... Recharging."
 M_Deactivated="gedeactiveerd ... Bezig met opladen."
 
@@ -157,9 +157,9 @@ ItemName="UMS-granaten"
 
 [RLAmmo]
 ; EN: PickupMessage="You got 10 UMS Rockets"
-PickupMessage="Je hebt 10 UMS Rockets"
+PickupMessage="Je hebt 10 UMS Raketten"
 ; EN: ItemName="UMS Rockets"
-ItemName="UMS-raketten"
+ItemName="UMS-Raketten"
 
 [CARifleClip]
 ; EN: PickupMessage="You got a 50 bullet CAR clip"
@@ -173,11 +173,11 @@ MenuName="Vrouw 2"
 
 [UPakMaleThree]
 ; EN: MenuName="Male 3"
-MenuName="Mannetje 3"
+MenuName="Man 3"
 
 [UPakMaleTwo]
 ; EN: MenuName="Male 2"
-MenuName="Mannetje 2"
+MenuName="Man 2"
 
 [TerranWeaponMatch]
 ; EN: GameName="Terran Weapon Match"
@@ -195,11 +195,11 @@ MenuName="UMS Arctische Soldaat"
 
 [MarineDesert]
 ; EN: MenuName="UMS Desert Marine"
-MenuName="UMS Woestijnsoldaat"
+MenuName="UMS Woestijn Soldaat"
 
 [MarineJungle]
 ; EN: MenuName="UMS Jungle Marine"
-MenuName="UMS Jungle Soldaat"
+MenuName="UMS Jungel Soldaat"
 
 [SpaceMarine]
 ; EN: MenuName="UMS Space Marine"

@@ -1,10 +1,10 @@
 ﻿[LevelInfo2]
 ; EN: Title="Bounds of Foundry"
-Title="Bounds of Foundry"
+Title="Grens Van De Gieterij"
 
 [LevelSummary]
 ; EN: Title="Bounds of Foundry"
-Title="Bounds of Foundry"
+Title="De Grenzen Van De Gieterij"
 
 [Counter0]
 ; EN: CountMessage="%i more to go..."
@@ -22,10 +22,10 @@ Message="Waarschuwing: gelijktijdige activering van beide pompen kan leiden tot 
 
 [TranslatorEvent3]
 ; EN: Message="WARNING: Toxic fume buildup exceeds regulation limits. Exercise caution with weaponry near Tarydium byproducts."
-Message="WAARSCHUWING: Opbouw van giftige dampen overschrijdt de voorgeschreven limieten. Wees voorzichtig met wapens in de buurt van bijproducten van Tarydium."
+Message="WAARSCHUWING: Opbouw van giftige dampen overschrijdt de voorgeschreven limieten. Wees voorzichtig met wapens in de buurt van Tarydium bijproducten."
 
 [TranslatorEvent5]
 ; EN: Message="WARNING: Remain clear of Tarydium Byproducts unless properly outfitted with Toxin Suit."
-Message="WAARSCHUWING: Blijf uit de buurt van Tarydium-bijproducten tenzij correct uitgerust met Toxin Suit."
+Message="WAARSCHUWING: Blijf uit de buurt van Tarydium-bijproducten tenzij correct uitgerust met gifpak."
 ; EN: AltMessage="Test!"
 AltMessage="Test!"

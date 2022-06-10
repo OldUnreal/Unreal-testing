@@ -2,26 +2,26 @@
 ; EN: Title="Dasa Mountain Pass"
 Title="Dasa-bergpas"
 ; EN: LevelEnterText="Entering Dasa Mouantain Pass"
-LevelEnterText="Dasa-bergpas binnenrijden"
+LevelEnterText="Dasa-bergpas betreden"
 
 [LevelSummary]
 ; EN: Title="Dasa Mountain Pass"
 Title="Dasa-bergpas"
 ; EN: LevelEnterText="Entering Dasa Mouantain Pass"
-LevelEnterText="Dasa-bergpas binnenrijden"
+LevelEnterText="Dasa-bergpas betreden"
 
 [TranslatorEvent3]
 ; EN: Message="Diary: Grok Vhul'rath: I ordered repairs to the Drawbridge again! This is getting really old. I'm sick of dealing with the Behemoths. They constantly break things and they're slobs like Aldarian Pigs. I'm anxious to get back to my homeworld."
-Message="Dagboek: Grok Vhul'rath: Ik heb weer reparaties aan de ophaalbrug besteld! Dit wordt echt oud. Ik ben het zat om met de Behemoths om te gaan. Ze maken constant dingen kapot en het zijn klodders zoals Aldarian Pigs. Ik wil graag terug naar mijn thuiswereld."
+Message="Dagboek: Grok Vhul'rath: Ik heb weer reparaties aan de ophaalbrug aangevraagd! Dit wordt echt oud. Ik ben het zat om met de Behemoths om te gaan. Ze maken constant dingen kapot en het zijn klodders zoals Aldariaanse zwijnen. Ik wil graag terug naar mijn thuiswereld."
 
 [TranslatorEvent4]
 ; EN: Message="Bridge Foreman Khan Vhranna: I've about had it with Grok Vhul'rath. He's such a pompous son-of-a Bulrach. If he makes us fix the drawbridge one more time in the rain, I'm going to bust his face in."
-Message="Bridge Foreman Khan Vhranna: Ik heb het ongeveer gehad met Grok Vhul'rath. Hij is zo'n pompeuze Bulrach-zoon. Als hij ons dwingt de ophaalbrug nog een keer in de regen te repareren, ga ik zijn gezicht erin slaan."
+Message="Bridge Foreman Khan Vhranna: Ik heb het ongeveer gehad met Grok Vhul'rath. Hij is zo'n pompeuze Bulrach-zoon. Als hij ons dwingt de ophaalbrug nog een keer in de regen te repareren, ga ik er zijn gezicht in slaan."
 
 [TranslatorEvent2]
 ; EN: Message="SHIPPING LOG: Dasa Pass Mountain Station: Grok Vhul'rath: We've decided to ditch using the Nali as slaves here. The word is they all believe their "savior" has come from the stars to kill us. We decided to execute them for refusing to work anyways."
-Message="VERZENDLOGBOEK: Bergstation Dasa Pass: Grok Vhul'rath: We hebben besloten om de Nali hier als slaven te gebruiken. Het woord is dat ze allemaal geloven dat hun "redder" van de sterren is gekomen om ons te doden. We besloten om ze te executeren omdat ze toch weigerden te werken."
+Message="VERZENDLOGBOEK: Bergstation Dasa Pass: Grok Vhul'rath: We hebben besloten om de Nali's hier als slaven te gebruiken. Het woord is dat ze allemaal geloven dat hun "redder" van de sterren is gekomen om ons te doden. We hebben besloten om ze te executeren omdat ze toch weigerden te werken."
 
 [TranslatorEvent0]
 ; EN: Message="SHIPPING LOG: Dasa Pass Mountain Station: Grok Vhul'rath: This past week we've received over 45 cases of high tech equipment from the crashed human spacecraft ISV-KRAN. I've decided to store them in the cellars before we ship to the Warlord."
-Message="VERZENDLOGBOEK: Bergstation Dasa Pass: Grok Vhul'rath: De afgelopen week hebben we meer dan 45 kisten met high-tech apparatuur ontvangen van het neergestorte menselijke ruimtevaartuig ISV-KRAN. Ik heb besloten ze in de kelders op te slaan voordat we naar de Krijgsheer verschepen."
+Message="VERZENDLOGBOEK: Bergstation Dasa Pass: Grok Vhul'rath: De afgelopen week hebben we meer dan 45 kisten met hoog-technologische apparatuur ontvangen van het neergestort menselijke ruimtevaartuig ISV-KRAN. Ik heb besloten het in de kelders op te slaan voordat we naar de Krijgsheer verschepen."

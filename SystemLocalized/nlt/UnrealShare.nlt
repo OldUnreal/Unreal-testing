@@ -30,7 +30,7 @@ Object=(Name=UnrealShare.FemaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Des
 Object=(Name=UnrealShare.MaleThreeBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Mannetje 3")
 Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=UnrealShare.SinglePlayer)
 ; EN: Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Decals")
-Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Stickers")
+Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Raakvlak")
 ; EN: Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Blood Settings")
 Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Bloedinstellingen")
 ; EN: Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali")
@@ -69,21 +69,21 @@ Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Verplaat
 ; EN: Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Right")
 Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Sla Rechtsaf")
 ; EN: Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Left")
-Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Scroll Naar Links")
+Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Links")
 ; EN: Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Right")
-Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Scroll Naar Rechts")
+Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Rechts")
 ; EN: Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Movement,Jump/Up")
-Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Spring/Ga Omhoog")
+Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Spring")
 ; EN: Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Movement,Crouch/Down")
-Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Crouch/Ga Naar Beneden")
+Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Bukken")
 ; EN: Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Movement,Walk")
-Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Lopen")
+Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Stappen")
 ; EN: Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe")
-Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Zijwaarts Scrollen")
+Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Zijwaarts")
 ; EN: Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Movement,Feign Death")
-Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Dood Veinzen")
+Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Verplaatsing,Dood Lijken")
 ; EN: Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="View,Mouse Look")
-Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="Uitzicht,Kijk Met de Muis")
+Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="Uitzicht,Rondkijken met de Muis")
 ; EN: Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="View,Look Up")
 Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="Uitzicht,Kijk Omhoog")
 ; EN: Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="View,Look Down")
@@ -93,9 +93,9 @@ Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="Uitzic
 ; EN: Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="View,Toggle Behindview")
 Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="Uitzicht,3e Persoonsaanzicht")
 ; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
-Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Wapens,Vuur")
+Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Wapen,Vuur")
 ; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
-Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Wapens,Afwisselend Vuur")
+Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Wapens,Afwisselend Vuren")
 ; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
 Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Wapens,Volgende Wapen")
 ; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
@@ -665,7 +665,7 @@ ItemName="Tarydium-scherven"
 ; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
 HelpMessage[10]="Percentage schade dat wordt opgelopen als het wordt geraakt door eigen vuur. Merk op dat je altijd volledige schade oploopt door je eigen wapens."
 ; EN: MenuList[10]="Friendly Fire Scale"
-MenuList[10]="Vriendelijke vuurschaal"
+MenuList[10]="Vriendelijke vuurwaarde"
 
 [SuperHealth]
 ; EN: PickupMessage="You picked up the Super Health Pack"
@@ -1061,7 +1061,7 @@ HelpMessage[13]="Indien ingeschakeld, kunnen sommige specifieke meshes gebogen o
 ; EN: MenuList[14]="Cast Shadows"
 MenuList[14]="Werp Schaduwen"
 ; EN: HelpMessage[14]="If enabled, pawns cast shadows. Changes to this setting will take effect on the next level change."
-HelpMessage[14]="Indien ingeschakeld, werpen pionnen schaduwen. Wijzigingen in deze instelling worden van kracht bij de volgende niveauwijziging."
+HelpMessage[14]="Indien ingeschakeld, Toont de Speler schaduwen. Wijzigingen in deze instelling worden van kracht bij de volgende niveauwijziging."
 ; EN: MenuList[15]="Deco Shadows"
 MenuList[15]="Deco Schaduw"
 ; EN: HelpMessage[15]="If enabled, decoration cast shadows. Changes to this setting will take effect on the next level change."
@@ -1324,7 +1324,7 @@ MenuTitle="BEDIENING"
 OrString=" of "
 HelpMessage[1]=""
 ; EN: MenuList[1]="Fire"
-MenuList[1]="Brand"
+MenuList[1]="Vuren"
 ; EN: MenuList[2]="Alternate Fire"
 MenuList[2]="Afwisselend vuur"
 ; EN: MenuList[3]="Move Forward"
@@ -1526,10 +1526,10 @@ MenuList[5]="Wapens blijven"
 ; EN: HelpMessage[5]="If enabled, weapons respawn instantly, but can only be picked up once by a given player."
 HelpMessage[5]="Indien ingeschakeld, reageren wapens onmiddellijk, maar kunnen ze maar één keer door een bepaalde speler worden opgepakt."
 ; EN: MenuList[6]="Instant Weapon Respawn"
-MenuList[6]="Onmiddellijke wapenrespawn"
+MenuList[6]="Onmiddellijke Wapen Respawn"
 ; EN: HelpMessage[6]="If enabled, weapons will be respawned instantly."
 HelpMessage[6]="Indien ingeschakeld, worden wapens onmiddellijk respawnen."
-; EN: MenuList[7]="Instant Item Respawn"
+; EN: MenuList[7]="Onmiddellijke Item Respawn"
 MenuList[7]="Instant item respawn"
 ; EN: HelpMessage[7]="If enabled, items will be respawned instantly."
 HelpMessage[7]="Indien ingeschakeld, worden items onmiddellijk opnieuw weergegeven."
@@ -1540,13 +1540,13 @@ MenuList[1]="Je hebt een nieuwere versie van Unreal nodig om op deze server te s
 
 [Shells]
 ; EN: PickupMessage="You picked up 12 shells"
-PickupMessage="Je hebt 12 Shellen"
+PickupMessage="Je hebt 12 Kogels"
 ; EN: ItemName="Shells"
-ItemName="Shellen"
+ItemName="Kogels"
 
 [UnrealScoreBoard]
 ; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
-DeadStr="Je bent dood. Druk op [Vuur] om te respawnen!"
+DeadStr="Je bent dood. Druk op [Vuur] om te Herleven!"
 ; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
 SpectatorStr="Je bent aan het toeschouwen. Druk op [Vuur] om te bekijken vanaf een andere speler!"
 ; EN: GameType="Game Type: "
@@ -1577,9 +1577,9 @@ MenuName="Havik"
 DeathMessage="%o is telefragged door %k."
 FemDeathMessage="%o is telefragged door %k."
 ; EN: PickupMessage="You got the Translocator Source Module"
-PickupMessage="Je hebt de Translocator-Bronmodule"
+PickupMessage="Je hebt de LocatieTransporter-Bronmodule"
 ; EN: ItemName="Translocator"
-ItemName="Translocator"
+ItemName="LocatieTransporter"
 ; EN: ItemArticle=" the "
 ItemArticle=" de "
 

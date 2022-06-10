@@ -13,7 +13,7 @@ Preferences=(Caption="Display",Parent="Advanced Options",LangCaption="Weergave")
 Preferences=(Caption="Joystick",Parent="Advanced Options",LangCaption="Joystick")
 Preferences=(Caption="Drivers",Parent="Advanced Options",LangCaption="Drivers",Class=Engine.Engine,Immediate=False,Category=Drivers)
 Preferences=(Caption="Game Settings",Parent="Advanced Options",LangCaption="Spelinstellingen",Class=Engine.GameInfo,Immediate=True)
-Preferences=(Caption="Decals",Parent="Advanced Options",LangCaption="Stickers")
+Preferences=(Caption="Decals",Parent="Advanced Options",LangCaption="Raakvlak")
 ; Advanced
 Preferences=(Caption="Game Engine Settings",Parent="Advanced",LangCaption="Game Engine-instellingen",Class=Engine.GameEngine,Category=Settings,Immediate=True)
 Preferences=(Caption="Key Aliases",Parent="Advanced",LangCaption="Sleutelaliassen",Class=Engine.Input,Immediate=True,Category=Aliases)
@@ -25,7 +25,7 @@ Preferences=(Caption="Connection Notifications",Parent="Networking",LangCaption=
 Preferences=(Caption="Map Lists",Parent="Networking",LangCaption="KaartLijsten")
 ; Decals
 Preferences=(Caption="Blood",Parent="Decals",LangCaption="Bloed")
-Preferences=(Caption="Pawn Shadow",Parent="Decals",LangCaption="Pion Schaduw",Class=Engine.PawnShadow,Immediate=True)
+Preferences=(Caption="Pawn Shadow",Parent="Decals",LangCaption="Speler Schaduw",Class=Engine.PawnShadow,Immediate=True)
 Preferences=(Caption="Decoration Shadow",Parent="Decals",LangCaption="Decoratie Schaduw",Class=Engine.DecoShadow,Immediate=True)
 Preferences=(Caption="Projectile Shadow",Parent="Decals",LangCaption="Projectiel Schaduw",Class=Engine.ProjectileShadow,Immediate=True)
 ; Blood

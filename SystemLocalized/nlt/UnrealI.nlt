@@ -207,9 +207,9 @@ AltName="vlam geroosterd"
 
 [ToxinSuit]
 ; EN: PickupMessage="You picked up the Toxin Suit"
-PickupMessage="Je hebt het Antitoxinepak"
+PickupMessage="Je hebt het Gifpak"
 ; EN: ItemName="Toxin Suit"
-ItemName="Antitoxinepak"
+ItemName="Gifpak"
 
 [PowerShield]
 ; EN: PickupMessage="You got the Power Shield"

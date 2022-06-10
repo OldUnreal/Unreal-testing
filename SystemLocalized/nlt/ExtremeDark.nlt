@@ -8,7 +8,7 @@ Title="De verduistering"
 
 [TranslatorEvent10]
 ; EN: Message="The Source Antechamber, ACCESS DENIED."
-Message="De Bron Antichambre, TOEGANG GEWEIGERD."
+Message="Voorkamer De Bron, TOEGANG GEWEIGERD."
 
 [TranslatorEvent0]
 ; EN: AltMessage="Authorization granted. Activate the Emergency Power Supply."

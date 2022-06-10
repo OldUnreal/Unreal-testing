@@ -17,7 +17,7 @@ WindowTitle="Systeemconsole"
 
 [UWindowSmallCloseButton]
 ; EN: CloseText="Close"
-CloseText="Dichtbij"
+CloseText="Sluiten"
 
 [UWindowSmallCancelButton]
 ; EN: CancelText="Cancel"
@@ -43,13 +43,13 @@ PlayerName="Naam speler"
 ; EN: PlayerIP="IP Address"
 PlayerIP="IP Adres"
 ; EN: PlayerClientID="Client ID"
-PlayerClientID="klant identificatie"
+PlayerClientID="Speler identificatie"
 ; EN: MaxLengthExceeded="Maximum player list length exceeded %i"
 MaxLengthExceeded="Maximale lengte van spelerslijst overschreden %i"
 ; EN: IDMismatchedStr="Response ID mismatched: %i/%j"
 IDMismatchedStr="Reactie-ID komt niet overeen: %i/%j"
 ; EN: ClientReceivedStr="Received client %ls."
-ClientReceivedStr="Klant %ls ontvangen."
+ClientReceivedStr="Speler %ls ontvangen."
 ; EN: GettingInfoStr="Getting player list from server, if nothing happens you may not be logged in as admin."
 GettingInfoStr="Spelerslijst ophalen van de server, als er niets gebeurt, bent u mogelijk niet ingelogd als admin."
 
@@ -61,7 +61,7 @@ ResponseMismatch="Reactie-ID komt niet overeen: %i/%j"
 ; EN: ReceiveBanText="Received ban %ls."
 ReceiveBanText="Ban %ls ontvangen."
 ; EN: GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
-GettingBanListText="Banlist ophalen van de server, als er niets gebeurt, ben je misschien niet ingelogd als admin (of zijn er geen bans op de server)."
+GettingBanListText="Banlijst ophalen van de server, als er niets gebeurt, ben je misschien niet ingelogd als admin (of zijn er geen bans op de server)."
 
 [MMMusicListGrid]
 ; EN: MusicNameStr="Music name"
@@ -97,15 +97,15 @@ BadIndexStr="Verwijderen mislukt: slechte verwijderingsindex."
 
 [AdminGUIClientWindow]
 ; EN: PlayersListTxt="Clients List"
-PlayersListTxt="Klantenlijst"
+PlayersListTxt="Spelerslijst"
 ; EN: BanListTxt="Banned Clients"
-BanListTxt="Verbannen klanten"
+BanListTxt="Verbannen Spelers"
 ; EN: TempBanListTxt="Session Banned Clients"
-TempBanListTxt="Sessie verbannen klanten"
+TempBanListTxt="Sessie verbannen Spelers"
 
 [AdminGUIManBanClientW]
 ; EN: PlayerNameTxt="Client name (for banlisting purposes only):"
-PlayerNameTxt="Klantnaam (alleen voor banlistingsdoeleinden):"
+PlayerNameTxt="Spelersnaam (alleen voor banlistingsdoeleinden):"
 ; EN: PlayerIpTxt="Client IP address (or IP range if desired):"
 PlayerIpTxt="Client IP-adres (of IP-bereik indien gewenst):"
 ; EN: InsertBanTxt="Insert ban"
