@@ -1,11 +1,11 @@
 ﻿[LevelInfo2]
 ; EN: Title="MotherShip Basement"
-Title="Moederschip Kelder"
+Title="Moederschip OnderGrond"
 ; EN: LevelEnterText="Entering the MotherShip Basement"
-LevelEnterText="Moederschip Kelder binnengaan"
+LevelEnterText="Moederschip OnderGrond binnengaan"
 
 [LevelSummary]
 ; EN: Title="MotherShip Basement"
-Title="Moederschip Kelder"
+Title="Moederschip OnderGrond"
 ; EN: LevelEnterText="Entering the MotherShip Basement"
-LevelEnterText="Moederschip Kelder binnengaan"
+LevelEnterText="Moederschip OnderGrond binnengaan"

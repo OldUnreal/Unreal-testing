@@ -2,13 +2,13 @@
 ; EN: Title="Chizra - Nali Water God"
 Title="Chizra - Nali Water God"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
-LevelEnterText="Chizra - De Nali Water God-tempel binnengaan"
+LevelEnterText="Chizra - De Nali WaterGod-tempel binnengaan"
 
 [LevelSummary]
 ; EN: Title="Chizra - Nali Water God"
-Title="Chizra - Nali Water God"
+Title="Chizra - Nali WaterGod"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
-LevelEnterText="Chizra - De Nali Water God-tempel binnengaan"
+LevelEnterText="Chizra - De Nali WaterGod-tempel binnengaan"
 
 [TranslatorEvent7]
 ; EN: Message="The Nali Water God Chizra and his holy temple has been overrun by the water serpents and the demons who came from the stars. Only the messiah can purify the temple now."
@@ -24,11 +24,11 @@ Message="Kijk in je eigen ogen. En wanneer uw moed het sterkst is, zal uw laatst
 
 [TranslatorEvent8]
 ; EN: Message="The stick of 6 fires can only be reached by a warrior who has bathed in the pool of thunder, past the obelisk of the clouds."
-Message="De stok van 6 vuren kan alleen worden bereikt door een krijger die zich heeft gebaad in de poel van donder, voorbij de obelisk van de wolken."
+Message="De stok van 6 vuren kan alleen worden bereikt door een krijger die zich heeft gebaad in de poel van de donder, voorbij de obelisk van de wolken."
 
 [TranslatorEvent9]
 ; EN: Message="The pyramid is the key to the chamber of death. Here you shall find more power for the stick of 6 fires."
-Message="De piramide is de sleutel tot de dodenkamer. Hier vind je meer power voor de stick van 6 vuren."
+Message="De piramide is de sleutel tot de dodenkamer. Hier vind je meer kracht voor de stok van 6 vuren."
 
 [Counter3]
 ; EN: CountMessage="Snap!"
@@ -42,23 +42,23 @@ Message="Voorbij dit stenen zegel liggen de binnenste ceremoniële kamers van de
 
 [TranslatorEvent18]
 ; EN: Message="Beyond this golden door lies the holy altar of the stick of 6 fires. Only by touching the outset stones of the lightning fire pillars may one enter."
-Message="Voorbij deze gouden deur ligt het heilige altaar van de stok van 6 vuren. Alleen door de beginstenen van de bliksemvuurzuilen aan te raken, mag men binnenkomen."
+Message="Voorbij deze gouden deur ligt het heilige altaar van de stok van 6 vuren. Alleen door de vloersteen van de bliksemvuurzuilen aan te raken, mag men binnenkomen."
 
 [TranslatorEvent14]
 ; EN: Message="The demons came down from the stars in a metal chariot as punishment for the sins of The Nali."
-Message="De demonen kwamen van de sterren af ​​in een metalen wagen als straf voor de zonden van The Nali."
+Message="De demonen kwamen van de sterren af ​​in een metalen wagen als straf voor de zonden van de Nali."
 
 [TranslatorEvent5]
 ; EN: Message="Only a warrior who wields the stick of 6 fires may enter the inner ceremonial chambers. Once the stick of 6 fires is in your grasp the stone seal will rise."
-Message="Alleen een krijger die de stok van 6 vuren hanteert, mag de binnenste ceremoniële kamers binnengaan. Zodra de stok van 6 vuren in je greep is, zal de stenen zegel opstaan."
+Message="Alleen een krijger die de stok van 6 vuren hanteert, mag de binnenste ceremoniële kamers binnengaan. Zodra de stok van 6 vuren in je greep is, zal de stenen zegel bewegen."
 
 [TranslatorEvent10]
 ; EN: Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY. TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
-Message="DE STOK VAN 6 BRANDEN KWAM UIT DE NALI WATERGOD TOEN DE STER UIT DE HEMEL VALLEN. OM DE STER TE VINDEN MOET JE DOOR DE CEREMONIALE VLEUGEL GAAN."
+Message="DE STOK VAN 6 VUREN KWAM UIT DE NALI WATERGOD TOEN DE STER UIT DE HEMEL KWAM VALLEN. OM DE STER TE VINDEN MOET JE DOOR DE CEREMONIALE VLEUGEL GAAN."
 
 [TranslatorEvent13]
 ; EN: Message="The pyramid's center is the focal point of Chizra the Nali water god's power."
-Message="Het centrum van de piramide is het brandpunt van Chizra, de kracht van de Nali-watergod."
+Message="Het centrum van de piramide is het brandpunt van Chizra, de Nali-watergods kracht."
 
 [TranslatorEvent19]
 ; EN: Message="Climb the loose stones to reach the lagoon of lightning fire. Beware the demon who came from the stars lurks in the shadows. A fool shall surely perish."
@@ -66,15 +66,15 @@ Message="Beklim de losse stenen om de lagune van bliksemvuur te bereiken. Pas op
 
 [TranslatorEvent1]
 ; EN: Message="Powerful strength comes from those who let the waterfall wash over them at the pool of thunder."
-Message="Krachtige kracht komt van degenen die de waterval over hen heen lieten spoelen bij de donderpoel."
+Message="Krachtige kracht komt van degenen die de waterval over hen heen lieten spoelen bij de poel van de donder."
 
 [TranslatorEvent12]
 ; EN: Message="This is the pool of thunder. Impure souls who bathe in the water shall face the demon that came from the stars"
-Message="Dit is de poel van donder. Onreine zielen die in het water baden, zullen de demon onder ogen zien die van de sterren kwam"
+Message="Dit is de poel van de donder. Onreine zielen die in het water baden, zullen de demon onder ogen zien die van de sterren kwam"
 
 [TranslatorEvent4]
 ; EN: Message="Only a warrior who has touched the face of the water god idol may enter this temple."
-Message="Alleen een krijger die het gezicht van de water god idool heeft aangeraakt, mag deze tempel binnengaan."
+Message="Alleen een krijger die het gezicht van de Watergod afGod heeft aangeraakt, mag deze tempel binnengaan."
 
 [TranslatorEvent3]
 ; EN: Message="To reach the pool of thunder one must climb the loose stones."
@@ -82,7 +82,7 @@ Message="Om de donderpoel te bereiken moet men de losse stenen beklimmen."
 
 [TranslatorEvent15]
 ; EN: Message="1400 hours Commander Mac Harrison: SITREP: These local natives have a 6 barreled rocket launcher on an altar but it is heavily guarded by those Salamander things. "The Stick of 6 fires" is what the Nali keep calling it. I'll try to sneak in tonight."
-Message="1400 uur Commandant Mac Harrison: SITREP: Deze lokale inboorlingen hebben een 6-loops raketwerper op een altaar, maar deze wordt zwaar bewaakt door die Salamanderdingen. "The Stick of 6 fires" noemen de Nali het steeds. Ik zal vanavond proberen binnen te sluipen."
+Message="1400 uur Commandant Mac Harrison: SITREP: Deze lokale inboorlingen hebben een 6-loops raketwerper op een altaar, maar deze wordt zwaar bewaakt door die Salamanderdingen. "De Stok van 6 Vuren" noemen de Nali het steeds. Ik zal vanavond proberen binnen te sluipen."
 
 [TranslatorEvent2]
 ; EN: Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder."
