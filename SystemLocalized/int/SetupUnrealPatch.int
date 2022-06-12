@@ -1,21 +1,21 @@
 ﻿[Setup]
-LocalProduct="Unreal Gold/Unreal Anthology"
-DefaultFolder="C:\Program Files\Unreal Gold"
+LocalProduct="Unreal Gold"
+DefaultFolder="C:\Program Files (x86)\UnrealGold"
 ReadMe="Help\227ReleaseNotes.pdf"
 SetupWindowTitle="Unreal Gold/Unreal Anthology Setup"
 AutoplayWindowTitle="Unreal Gold/Unreal Anthology Options"
-ProductURL="http://www.oldunreal.com/"
-VersionURL="http://www.oldunreal.com"
+ProductURL="https://www.oldunreal.com/"
+VersionURL="https://www.oldunreal.com"
 Developer="Epic Games, Inc. - 227 by Oldunreal"
 DeveloperURL="http://www.oldunreal.com/"
 Logo="Help\Logo.bmp"
 
 [UnrealRequirement]
 LocalProduct="Unreal Gold/Unreal Anthology"
-ProductURL="http://www.unreal.com/"
-VersionURL="http://www.epicgames.com/"
+ProductURL="https://www.epicgames.com/"
+VersionURL="https://www.epicgames.com/"
 Developer="Epic Games, Inc. - 227 by Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 
 [LinuxGroup]
 Caption="Linux native files"
@@ -31,8 +31,30 @@ Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible)
 
 [Linux64Group]
 Caption="Linux 64bit version files"
-Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
+Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder. The 64Bit version will not take over any ini settings from the 32Bit version"
 
-[Windows64BitGroup]
+[Windows64Group]
 Caption="Windows 64bit version files"
-Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
+Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder. The 64Bit version will not take over any ini settings from the 32Bit version"
+
+[GameGroup]
+Caption="Unreal Game"
+Description="Unreal game. Installation is required."
+
+[EditorGroup]
+Caption="Unreal Editor"
+Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+
+[Editor64Group]
+Caption="Unreal Editor (64Bit)"
+Description="Unreal world editor (64Bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
+
+[PlayShortcut]
+Caption="Play Unreal"
+
+[Play64Shortcut]
+Caption="Play Unreal (64Bit)"
+
+[FactoryResetGroup]
+Caption="Reset all settings"
+Description="Recommended! Reset all ini settings back to default. Keeping your old ini settings may cause problems with this version; this setting is optional."
