@@ -1,25 +1,25 @@
 ﻿[Setup]
-LocalProduct="Unreal Gold/Unreal Anthology"
-DefaultFolder="C:\Program Files\Unreal Gold"
+LocalProduct="Unreal Gold"
+DefaultFolder="C:\Program Files (x86)\UnrealGold"
 ReadMe="Help\227ReleaseNotes.pdf"
-; EN: SetupWindowTitle="Unreal Gold/Unreal Anthology Setup"
-SetupWindowTitle="Установка Unreal Gold/Unreal Anthology"
-; EN: AutoplayWindowTitle="Unreal Gold/Unreal Anthology Options"
-AutoplayWindowTitle="Опции Unreal Gold/Unreal Anthology"
-ProductURL="http://www.oldunreal.com/"
-VersionURL="http://www.oldunreal.com"
+; EN: SetupWindowTitle="Unreal Gold Setup"
+SetupWindowTitle="Установка Unreal Gold"
+; EN: AutoplayWindowTitle="Unreal Gold Options"
+AutoplayWindowTitle="Опции Unreal Gold"
+ProductURL="https://www.oldunreal.com/"
+VersionURL="https://www.oldunreal.com"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
 Developer="Epic Games, Inc. - 227 от Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 Logo="Help\Logo.bmp"
 
 [UnrealRequirement]
-LocalProduct="Unreal Gold/Unreal Anthology"
-ProductURL="http://www.unreal.com/"
-VersionURL="http://www.epicgames.com/"
+LocalProduct="Unreal Gold"
+ProductURL="https://www.epicgames.com/"
+VersionURL="https://www.epicgames.com/"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
 Developer="Epic Games, Inc. - 227 от Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 
 [LinuxGroup]
 ; EN: Caption="Linux native files"
@@ -34,19 +34,51 @@ Caption="Старое оружие"
 Description="Копирует файлы мутатора Old Weapons. Эти файлы позволяют вам играть с оружием Unreal версии 200. Подробности можно найти в OldWeaponsReadme.txt в папке справки."
 
 [LinuxARMGroup]
-; EN: Caption="Linux ARM (64bit) version files"
+; EN: Caption="Linux ARM (64-bit) version files"
 Caption="Файлы для 64-битной версии Linux ARM"
-; EN: Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+; EN: Description="64-bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
 Description="Игровые файлы для 64-битной версии Linux ARM (процессор Cortex-A72 и совместимый). Файлы будут установлены в папку Unreal/SystemARM."
 
 [Linux64Group]
-; EN: Caption="Linux 64bit version files"
+; EN: Caption="Linux 64-bit version files"
 Caption="Файлы для 64-битной версии Linux"
-; EN: Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
-Description="Игровые файлы для 64-битной версии Linux. Файлы будут установлены в папку Unreal/System64."
+; EN: Description="64-bit Linux version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not use any ini settings from the 32-bit version."
+Description="Игровые файлы для 64-битной версии Linux. Файлы будут установлены в папку Unreal/System64. 64-разрядная версия не будет использовать параметры ini из 32-разрядной версии."
 
-[Windows64BitGroup]
-; EN: Caption="Windows 64bit version files"
+[Windows64Group]
+; EN: Caption="Windows 64-bit version files"
 Caption="Файлы для 64-битной версии Windows"
-; EN: Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
-Description="Игровые файлы для 64-битной версии Windows. Файлы будут установлены в папку Unreal/System64."
+; EN: Description="64-bit Windows version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not use any ini settings from the 32-bit version."
+Description="Игровые файлы для 64-битной версии Windows. Файлы будут установлены в папку Unreal/System64. 64-разрядная версия не будет использовать параметры ini из 32-разрядной версии."
+
+[GameGroup]
+; EN: Caption="Unreal Game"
+Caption="Unreal Игра"
+; EN: Description="Unreal game. Installation is required."
+Description="Unreal Игра. Требуется установка."
+
+[EditorGroup]
+; EN: Caption="Unreal Editor"
+Caption="Редактор Unreal"
+; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Редактор уровней Unreal, чтобы иметь возможность создавать свои собственные Unreal 3D-окружения. Для опытных пользователей его установка необязательна."
+
+[Editor64Group]
+; EN: Caption="Unreal Editor (64-bit)"
+Caption="Редактор Unreal (64-разрядная версия)"
+; EN: Description="Unreal world editor (64-bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Редактор уровней Unreal (64-разрядная версия), чтобы иметь возможность создавать свои собственные Unreal 3D-окружения. Для опытных пользователей его установка необязательна."
+
+[PlayShortcut]
+; EN: Caption="Play Unreal"
+Caption="Играть Unreal"
+
+[Play64Shortcut]
+; EN: Caption="Play Unreal (64-bit)"
+Caption="Играть Unreal (64 бита)"
+
+[FactoryResetGroup]
+; EN: Caption="Reset all settings"
+Caption="Сбросить все настройки"
+; EN: Description="Recommended! Reset all ini settings back to default. Keeping your old ini settings may cause problems with this version; this setting is optional."
+Description="Рекомендуется! Установите для всех ваших личных настроек Unreal значения по умолчанию. Сохранение старых значений может вызвать проблемы с этой версией; этот параметр не является обязательным."

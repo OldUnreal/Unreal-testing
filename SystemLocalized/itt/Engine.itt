@@ -276,7 +276,7 @@ Kicked="Sei stato buttato fuori"
 [General]
 ; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
 Upgrade="Per accedere a questo server, hai bisogno di una versione piu' aggiornata di Unreal disponibile nella pagina Web di Oldunreal:"
-UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
+UpgradeURL="https://www.oldunreal.com/oldunrealpatches.html"
 ; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
 UpgradeQuestion="Desideri lanciare il tuo browser di rete e andare alla pagina di aggiornamento adesso?"
 ; EN: Version="Version %i"
