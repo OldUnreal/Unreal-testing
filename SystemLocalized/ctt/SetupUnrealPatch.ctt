@@ -1,25 +1,25 @@
 ﻿[Setup]
-LocalProduct="Unreal Gold/Unreal Anthology"
-DefaultFolder="C:\Program Files\Unreal Gold"
+LocalProduct="Unreal Gold"
+DefaultFolder="C:\Program Files (x86)\UnrealGold"
 ReadMe="Help\227ReleaseNotes.pdf"
-; EN: SetupWindowTitle="Unreal Gold/Unreal Anthology Setup"
-SetupWindowTitle="Instal·lació d'Unreal Gold/Unreal Anthology"
-; EN: AutoplayWindowTitle="Unreal Gold/Unreal Anthology Options"
-AutoplayWindowTitle="Opcions d'Unreal Gold/Unreal Anthology"
-ProductURL="http://www.oldunreal.com/"
-VersionURL="http://www.oldunreal.com"
+; EN: SetupWindowTitle="Unreal Gold Setup"
+SetupWindowTitle="Instal·lació d'Unreal Gold"
+; EN: AutoplayWindowTitle="Unreal Gold Options"
+AutoplayWindowTitle="Opcions d'Unreal Gold"
+ProductURL="https://www.oldunreal.com/"
+VersionURL="https://www.oldunreal.com"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
 Developer="Epic Games, Inc. - 227 per Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 Logo="Help\Logo.bmp"
 
 [UnrealRequirement]
-LocalProduct="Unreal Gold/Unreal Anthology"
-ProductURL="http://www.unreal.com/"
-VersionURL="http://www.epicgames.com/"
+LocalProduct="Unreal Gold"
+ProductURL="https://www.epicgames.com/"
+VersionURL="https://www.epicgames.com/"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
 Developer="Epic Games, Inc. - 227 per Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 
 [LinuxGroup]
 ; EN: Caption="Linux native files"
@@ -34,19 +34,51 @@ Caption="Armes antigues"
 Description="Copia els fitxers del mutador OldWeapons. Aquests fitxers et permeten jugar amb les armes de Unreal versió 200. Es poden trobar detalls en el fitxer OldWeaponsReadme.txt en la carpeta Help."
 
 [LinuxARMGroup]
-; EN: Caption="Linux ARM (64bit) version files"
+; EN: Caption="Linux ARM (64-bit) version files"
 Caption="Fitxers de versió de 64 bits de Linux ARM"
-; EN: Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+; EN: Description="64-bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder. "
 Description="Fitxers del joc per a la versió de 64 bits de Linux ARM (Processador Cortex-A72 i compatibles). Els fitxers seran instal·lats a la carpeta Unreal/SystemARM."
 
 [Linux64Group]
-; EN: Caption="Linux 64bit version files"
+; EN: Caption="Linux 64-bit version files"
 Caption="Fitxers de versió de 64 bits de Linux"
-; EN: Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder."
-Description="Fitxers del joc per a la versió de 64 bits de Linux. Els fitxers seran instal·lats a la carpeta Unreal/System64."
+; EN: Description="64-bit Linux version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not use any ini settings from the 32-bit version."
+Description="Fitxers del joc per a la versió de 64 bits de Linux. Els fitxers seran instal·lats a la carpeta Unreal/System64. La versió de 64 bits no utilitzarà cap configuració ini de la versió de 32 bits."
 
-[Windows64BitGroup]
-; EN: Caption="Windows 64bit version files"
+[Windows64Group]
+; EN: Caption="Windows 64-bit version files"
 Caption="Fitxers de versió de 64 bits de Windows"
-; EN: Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder."
-Description="Fitxers del joc per a la versió de 64 bits de windows. Els fitxers seran instal·lats a la carpeta Unreal/System64."
+; EN: Description="64-bit Windows version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not use any ini settings from the 32-bit version."
+Description="Fitxers del joc per a la versió de 64 bits de windows. Els fitxers seran instal·lats a la carpeta Unreal/System64. La versió de 64 bits no utilitzarà cap configuració ini de la versió de 32 bits."
+
+[GameGroup]
+; EN: Caption="Unreal Game"
+Caption="Joc d'Unreal"
+; EN: Description="Unreal game. Installation is required."
+Description="Joc d'Unreal. Cal instal·lar-lo."
+
+[EditorGroup]
+; EN: Caption="Unreal Editor"
+Caption="Editor d'Unreal"
+; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Editor de nivells Unreal, per poder crear els teus propis entorns 3D Unreal. Per a usuaris avançats; la seva instal·lació és opcional."
+
+[Editor64Group]
+; EN: Caption="Unreal Editor (64-bit)"
+Caption="Editor d'Unreal (64 bits)"
+; EN: Description="Unreal world editor (64-bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Editor de nivells Unreal (versió de 64 bits), per poder crear els teus propis entorns 3D Unreal. Per a usuaris avançats; la seva instal·lació és opcional."
+
+[PlayShortcut]
+; EN: Caption="Play Unreal"
+Caption="Jugar a Unreal"
+
+[Play64Shortcut]
+; EN: Caption="Play Unreal (64-bit)"
+Caption="Jugar a Unreal (64 bits)"
+
+[FactoryResetGroup]
+; EN: Caption="Reset all settings"
+Caption="Restab. Totes les Configs"
+; EN: Description="Recommended! Reset all ini settings back to default. Keeping your old ini settings may cause problems with this version; this setting is optional."
+Description="Recomanat! Estableix totes les teves configuracions personals d'Unreal als seus valors per defecte. Mantenir els valors vells pot causar problemes amb aquesta versió; aquesta opció és opcional."

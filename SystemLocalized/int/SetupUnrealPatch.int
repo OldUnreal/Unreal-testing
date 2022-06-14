@@ -2,16 +2,16 @@
 LocalProduct="Unreal Gold"
 DefaultFolder="C:\Program Files (x86)\UnrealGold"
 ReadMe="Help\227ReleaseNotes.pdf"
-SetupWindowTitle="Unreal Gold/Unreal Anthology Setup"
-AutoplayWindowTitle="Unreal Gold/Unreal Anthology Options"
+SetupWindowTitle="Unreal Gold Setup"
+AutoplayWindowTitle="Unreal Gold Options"
 ProductURL="https://www.oldunreal.com/"
 VersionURL="https://www.oldunreal.com"
 Developer="Epic Games, Inc. - 227 by Oldunreal"
-DeveloperURL="http://www.oldunreal.com/"
+DeveloperURL="https://www.oldunreal.com/"
 Logo="Help\Logo.bmp"
 
 [UnrealRequirement]
-LocalProduct="Unreal Gold/Unreal Anthology"
+LocalProduct="Unreal Gold"
 ProductURL="https://www.epicgames.com/"
 VersionURL="https://www.epicgames.com/"
 Developer="Epic Games, Inc. - 227 by Oldunreal"
@@ -26,16 +26,16 @@ Caption="Old Weapons"
 Description="Copies the Old Weapons mutator files. These files allow you to play with the weapons of Unreal version 200. Details can be found in the OldWeaponsReadme.txt in the help folder."
 
 [LinuxARMGroup]
-Caption="Linux ARM (64bit) version files"
-Description="64bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+Caption="Linux ARM (64-bit) version files"
+Description="64-bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
 
 [Linux64Group]
-Caption="Linux 64bit version files"
-Description="64bit Linux version of the game. The files will be installed in the Unreal/System64 folder. The 64Bit version will not take over any ini settings from the 32Bit version"
+Caption="Linux 64-bit version files"
+Description="64-bit Linux version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not take over any ini settings from the 32-bit version."
 
 [Windows64Group]
-Caption="Windows 64bit version files"
-Description="64bit Windows version of the game. The files will be installed in the Unreal/System64 folder. The 64Bit version will not take over any ini settings from the 32Bit version"
+Caption="Windows 64-bit version files"
+Description="64-bit Windows version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not take over any ini settings from the 32-bit version."
 
 [GameGroup]
 Caption="Unreal Game"
@@ -46,14 +46,14 @@ Caption="Unreal Editor"
 Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
 
 [Editor64Group]
-Caption="Unreal Editor (64Bit)"
-Description="Unreal world editor (64Bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Caption="Unreal Editor (64-bit)"
+Description="Unreal world editor (64-bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
 
 [PlayShortcut]
 Caption="Play Unreal"
 
 [Play64Shortcut]
-Caption="Play Unreal (64Bit)"
+Caption="Play Unreal (64-bit)"
 
 [FactoryResetGroup]
 Caption="Reset all settings"

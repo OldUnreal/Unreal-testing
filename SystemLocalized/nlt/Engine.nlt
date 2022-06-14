@@ -291,7 +291,7 @@ Kicked="Je bent geschopt"
 [General]
 ; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
 Upgrade="Om toegang te krijgen tot deze server, heb je de laatste gratis update voor Unreal nodig die beschikbaar is op de website van OldUnreals:"
-UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
+UpgradeURL="https://www.oldunreal.com/oldunrealpatches.html"
 ; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
 UpgradeQuestion="Wilt u uw webbrowser starten en nu naar de upgradepagina gaan?"
 ; EN: Version="Version %i"

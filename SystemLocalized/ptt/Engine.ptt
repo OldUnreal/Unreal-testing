@@ -289,7 +289,7 @@ Kicked="Você foi expulso"
 [General]
 ; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
 Upgrade="Para entrar neste servidor você precisa da última atualização gratuita para o Unreal, disponível no site do Oldunreal:"
-UpgradeURL="http://www.oldunreal.com/oldunrealpatches.html"
+UpgradeURL="https://www.oldunreal.com/oldunrealpatches.html"
 ; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
 UpgradeQuestion="Você deseja iniciar o seu navegador web e ir até a página de upgrade agora?"
 ; EN: Version="Version %i"
