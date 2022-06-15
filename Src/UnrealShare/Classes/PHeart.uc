@@ -13,12 +13,13 @@ class PHeart extends PlayerChunks;
 
 auto state Dying
 {
-
 Begin:
-	LoopAnim('Beat', 0.2);
+	if( Mesh && HasAnim('Beat') )
+		LoopAnim('Beat', 0.2);
 	Sleep(0.1);
 	GotoState('Dead');
 }
+
 defaultproperties
 {
 	Mesh=PHeartM

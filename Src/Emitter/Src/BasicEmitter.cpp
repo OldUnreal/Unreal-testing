@@ -104,6 +104,7 @@ FParticlesDataBase* AXEmitter::GetParticleInterface()
 	return PartPtr;
 	unguardSlow;
 }
+
 void AXEmitter::RenderSelectInfo( FSceneNode* Frame )
 {
 	Super::RenderSelectInfo(Frame);
@@ -133,6 +134,50 @@ void AXEmitter::RenderSelectInfo( FSceneNode* Frame )
 		if( ForcesList(i) )
 			Frame->Viewport->RenDev->Draw3DLine(Frame,Col,0,Location,ForcesList(i)->Location);
 }
+
+#define HANDLE_COMBINERS(clist) \
+	for(i=(clist.Num()-1); i>=0; --i) \
+		if (clist(i)) \
+			clist(i)->TagPersistentActors();
+
+void AXEmitter::TagPersistentActors()
+{
+	guard(AXEmitter::TagPersistentActors);
+	Super::TagPersistentActors();
+	bDeleteMe = FALSE;
+	ClearFlags(RF_PendingDelete);
+
+	if (GIsClient)
+	{
+		if (ParticleTrail)
+			ParticleTrail->TagPersistentActors();
+		INT i;
+		HANDLE_COMBINERS(SpawnCombiner);
+		HANDLE_COMBINERS(KillCombiner);
+		HANDLE_COMBINERS(WallHitCombiner);
+		HANDLE_COMBINERS(LifeTimeCombiner);
+	}
+	unguardobj;
+}
+void AXEmitter::PostLoad()
+{
+	guard(AXEmitter::PostLoad);
+	Super::PostLoad();
+
+	if (GIsClient || GIsEditor)
+	{
+		if (ParticleTrail)
+			ParticleTrail->TagPersistentActors();
+		INT i;
+		HANDLE_COMBINERS(SpawnCombiner);
+		HANDLE_COMBINERS(KillCombiner);
+		HANDLE_COMBINERS(WallHitCombiner);
+		HANDLE_COMBINERS(LifeTimeCombiner);
+	}
+	unguard;
+}
+#undef HANDLE_COMBINERS
+
 void AXEmitter::UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL bSkipChildren)
 {
 	guard(AXEmitter::UpdateEmitter);
@@ -569,7 +614,8 @@ UBOOL AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVec
 	if (ParticleTrail)
 	{
 		A->LatentActor = ParticleTrail->GrabTrail(A->Location, A->Rotation);
-		A->LatentActor->bAnimByOwner = (ParticleTrail->bFadeByOwnerParticle != 0);
+		if (A->LatentActor)
+			A->LatentActor->bAnimByOwner = (ParticleTrail->bFadeByOwnerParticle != 0);
 #if 0
 		if (A->LatentActor)
 		{

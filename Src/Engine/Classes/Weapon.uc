@@ -413,32 +413,35 @@ function inventory SpawnCopy( pawn Other )
 function SetSwitchPriority(pawn Other)
 {
 	local int i;
-	local name temp, carried;
+	//local name temp, carried;
+	local PlayerPawn P;
 
-	if ( PlayerPawn(Other) != None )
+	P = PlayerPawn(Other);
+	if ( P )
 	{
-		for ( i=0; i<ArrayCount(PlayerPawn(Other).WeaponPriority); i++ )
-			if ( PlayerPawn(Other).WeaponPriority[i] == class.name )
+		for ( i=0; i<ArrayCount(P.WeaponPriority); i++ )
+			if ( P.WeaponPriority[i] == class.name )
 			{
 				AutoSwitchPriority = i;
 				return;
 			}
 		// else, register this weapon
-		carried = class.name;
-		for ( i=AutoSwitchPriority; i<ArrayCount(PlayerPawn(Other).WeaponPriority); i++ )
+		// Marco: why register? it makes custom mod weapons always have higher priority than stock weapons.
+		/*carried = class.name;
+		for ( i=AutoSwitchPriority; i<ArrayCount(P.WeaponPriority); i++ )
 		{
-			if ( PlayerPawn(Other).WeaponPriority[i] == '' )
+			if ( P.WeaponPriority[i] == '' )
 			{
-				PlayerPawn(Other).WeaponPriority[i] = carried;
+				P.WeaponPriority[i] = carried;
 				return;
 			}
-			else if ( i<ArrayCount(PlayerPawn(Other).WeaponPriority)-1 )
+			else if ( i<ArrayCount(P.WeaponPriority)-1 )
 			{
-				temp = PlayerPawn(Other).WeaponPriority[i];
-				PlayerPawn(Other).WeaponPriority[i] = carried;
+				temp = P.WeaponPriority[i];
+				P.WeaponPriority[i] = carried;
 				carried = temp;
 			}
-		}
+		}*/
 	}
 }
 

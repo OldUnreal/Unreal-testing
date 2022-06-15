@@ -442,6 +442,9 @@ native(118) final function Disable( name ProbeFunc );
 // Properties.
 native final function string GetPropertyText( string PropName ); // don't use on arrays, only designed to work with structs!
 native final function SetPropertyText( string PropName, string PropValue ); // don't use on arrays, only designed to work with structs!
+native static final function string ExportFullProperties( optional bool bDelta /*=true*/ ); // Export a full list of properties (skipping 'private' variables and doesn't export 'export' objects), properties seperated by \r\n linebreaks.
+																							// bDelta = if true, only export modified properties from superclass/class defaults.
+native static final function ImportFullProperties( string S ); // Import a full list of properties (skipping 'private' and 'const' variables).
 native static final function name GetEnum( object E, int i );
 native static final function object DynamicLoadObject( string ObjectName, class ObjectClass, optional bool MayFail );
 

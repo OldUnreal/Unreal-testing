@@ -445,7 +445,7 @@ function SetupFonts()
 {
 	local bool bCustomLoader;
 
-	bCustomLoader = (Left(Localize("FontStyle","SmallFont","UWindow"),1)!="<");
+	bCustomLoader = (Localize("FontStyle","SmallFont","UWindow","")!="");
 	if (GUIScale == 2)
 	{
 		if ( bCustomLoader )

@@ -197,9 +197,10 @@ var const editconst LevelInfo	ChildLevel, // Next sub-level
 
 var() private array<name> SubLevels;		// 227j: List of sub-levels attached to this level (level name i.e: 'NyLeve').
 
-var const transient bool bIsDemoPlayback; // We are currently playing in demo recording.
-var const transient bool bIsDemoRecording; // We are currently recording a demo.
-var transient bool bPauseDemo; // Should pause demo playback.
+var const transient bool bIsDemoPlayback;	// We are currently playing in demo recording.
+var const transient bool bIsDemoRecording;	// We are currently recording a demo.
+var transient bool bPauseDemo;				// Should pause demo playback.
+var bool bPlayerSpawnTrigger;				// Triggers overlapping player on spawn should instantly fire.
 
 // Pathbuilder - these settings are for advanced pathing or usage of UED2.1 for other UEngineGames. Changing these settings can cause extremely weird behavior, Don't mess with it if you don't know what you are doing.
 var(PathBuilder) int MaxCommonRadius;	// 227j: max radius to consider in building paths, default 70
@@ -507,4 +508,5 @@ defaultproperties
 	DemoTimeDilation=1
 	ServerTravelType=TRAVEL_Relative
 	MaxPortalDepth=3
+	bPlayerSpawnTrigger=true
 }

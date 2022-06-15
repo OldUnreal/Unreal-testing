@@ -62,7 +62,6 @@ var localized string ScaleHelp;
 var localized string ScaleSizes[2];
 
 // HUD Scale
-var UWindowEditControl HUDScaleEditBox;
 var localized string HUDScaleText;
 var localized string HUDScaleHelp;
 
@@ -314,16 +313,6 @@ function Created()
 	ScaleCombo.AddItem(ScaleSizes[1], "20");
 	ControlOffset += 25;
 
-	// Translator Scale
-	HUDScaleEditBox = UWindowEditControl(CreateControl(class'UWindowEditControl', ControlLeft, ControlOffset, ControlWidth, 1));
-	HUDScaleEditBox.SetText(HUDScaleText);
-	HUDScaleEditBox.SetHelpText(HUDScaleHelp);
-	HUDScaleEditBox.SetFont(F_Normal);
-	HUDScaleEditBox.SetNumericOnly(true);
-	HUDScaleEditBox.SetNumericFloat(true);
-	HUDScaleEditBox.Align = TA_Left;
-	ControlOffset += 25;
-
 	GuiSkinCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
 	GuiSkinCombo.SetText(GuiSkinText);
 	GuiSkinCombo.SetHelpText(GuiSkinHelp);
@@ -572,7 +561,6 @@ function LoadAvailableSettings()
 	BrightnessSlider.SetValue(Brightness);
 	MouseSlider.SetValue(Root.Console.MouseScale * 100);
 	ScaleCombo.SetSelectedIndex(Max(ScaleCombo.FindItemIndex2(string(int(Root.GUIScale*10))), 0));
-	HUDScaleEditBox.SetValue(string(Class'HUD'.Default.HudScaler));
 	MinFramerateEdit.EditBox.Value = string(int(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager MinDesiredFrameRate")));
 	ShowDecalsCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager Decals"));
 	ShowSpecularCheck.bChecked = !P.Level.bDisableSpeclarLight;
@@ -976,7 +964,6 @@ function BeforePaint(Canvas C, float X, float Y)
 	SkinDetailCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	BrightnessSlider.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	ScaleCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
-	HUDScaleEditBox.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	MouseSlider.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	GuiSkinCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	PawnShadowCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
@@ -1046,10 +1033,6 @@ function BeforePaint(Canvas C, float X, float Y)
 	ScaleCombo.SetSize(ControlWidth, 1);
 	ScaleCombo.WinLeft = ControlLeft;
 	ScaleCombo.EditBoxWidth = EditAreaWidth;
-
-	HUDScaleEditBox.SetSize(ControlWidth, 1);
-	HUDScaleEditBox.WinLeft = ControlLeft;
-	HUDScaleEditBox.EditBoxWidth = EditAreaWidth;
 
 	MouseSlider.SetSize(ControlWidth, 1);
 	MouseSlider.SliderWidth = EditAreaWidth;
@@ -1148,9 +1131,6 @@ function Notify(UWindowDialogControl C, byte E)
 			break;
 		case ScaleCombo:
 			ScaleChanged();
-			break;
-		case HUDScaleEditBox:
-			HUDScaleChanged();
 			break;
 		case MouseSlider:
 			MouseChanged();
@@ -1329,17 +1309,6 @@ function ScaleChanged()
 	{
 		Root.SetScale(float(ScaleCombo.GetValue2())/10);
 		Root.SaveConfig();
-	}
-}
-
-function HUDScaleChanged()
-{
-	if (bInitialized && HUDScaleEditBox.GetValue()!="")
-	{
-		Class'HUD'.Default.HudScaler = FClamp(float(HUDScaleEditBox.GetValue()), 1.f, 16.f);
-		if( GetPlayerOwner().MyHUD!=None )
-			GetPlayerOwner().MyHUD.HudScaler = Class'HUD'.Default.HudScaler;
-		Class'HUD'.Static.StaticSaveConfig();
 	}
 }
 

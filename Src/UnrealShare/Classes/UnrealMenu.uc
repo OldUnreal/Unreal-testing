@@ -13,15 +13,18 @@ class UnrealMenu extends Menu;
 #exec Font Import File=Textures\TinyFon3.pcx Name=TinyWhiteFont
 #exec Font Import File=Textures\TinyFon2.pcx Name=TinyRedFont
 
-#exec Texture Import File=Textures\dot.pcx Name=Dot MIPS=OFF
-#exec Texture Import File=Textures\Slide1.pcx Name=Slide1 MIPS=OFF
-#exec Texture Import File=Textures\Slide2.pcx Name=Slide2 MIPS=OFF
-#exec Texture Import File=Textures\Slide3.pcx Name=Slide3 MIPS=OFF
-#exec Texture Import File=Textures\Slide4.pcx Name=Slide4 MIPS=OFF
-#exec Texture Import File=Textures\ex.pcx Name=ex MIPS=OFF
-#exec Texture Import File=Textures\check.pcx Name=Check MIPS=OFF
+#exec Texture Import File=Textures\dot.pcx Name=Dot MIPS=OFF FLAGS=2
+#exec Texture Import File=Textures\Slide1.pcx Name=Slide1 MIPS=OFF VClampMode=VClamp UClampMode=UClamp FLAGS=2
+#exec Texture Import File=Textures\Slide2.pcx Name=Slide2 MIPS=OFF VClampMode=VClamp
+#exec Texture Import File=Textures\Slide3.pcx Name=Slide3 MIPS=OFF VClampMode=VClamp UClampMode=UClamp FLAGS=2
+#exec Texture Import File=Textures\Slide4.pcx Name=Slide4 MIPS=OFF VClampMode=VClamp
+#exec Texture Import File=Textures\ex.pcx Name=ex MIPS=OFF FLAGS=2
+#exec Texture Import File=Textures\check.pcx Name=Check MIPS=OFF FLAGS=2
 
 #exec OBJ LOAD FILE=Textures\menugr.utx PACKAGE=UnrealShare.MenuGfx
+
+#exec Texture Import File=Textures\HD_Icons\HDlogo2.dds Name=HDlogo2 Group="HD" Mips=Off Flags=131074
+#exec TEXTURE IMPORT NAME=logo2 FILE=Textures\Hud\logo2.pcx GROUP="MenuGfx" FLAGS=2 MIPS=OFF HD=HDlogo2
 
 #exec AUDIO IMPORT FILE="Sounds\Menu\Select4.wav" NAME="Select4" GROUP="Menu"
 #exec AUDIO IMPORT FILE="Sounds\Menu\updown3.wav" NAME="Updown3" GROUP="Menu"
@@ -85,30 +88,18 @@ function DrawList(canvas Canvas, bool bLargeFont, int Spacing, int StartX, int S
 
 function DrawSlider( canvas Canvas, int StartX, int StartY, int Value, int sMin, int StepSize )
 {
-	local bool bFoundValue;
 	local int i;
 
-	Canvas.SetPos( StartX, StartY );
+	Canvas.Style = ERenderStyle.STY_Normal;
+	Canvas.SetPos(StartX, StartY);
 	Canvas.DrawIcon(Texture'Slide1',1.0);
-	Canvas.Style = 2;
-	bFoundValue = false;
-	For ( i=1; i<8; i++ )
-	{
-		if ( !bFoundValue && ( StepSize * i + sMin > Value) )
-		{
-			bFoundValue = true;
-			Canvas.DrawIcon(Texture'Slide2',1.0);
-		}
-		else
-			Canvas.DrawIcon(Texture'Slide4',1.0);
-	}
-	if ( bFoundValue )
-		Canvas.DrawIcon(Texture'Slide4',1.0);
-	else
-		Canvas.DrawIcon(Texture'Slide2',1.0);
-
+	Canvas.SetPos(StartX+8, StartY);
+	Canvas.DrawRect(Texture'Slide4',64.f,8.f);
+	Canvas.SetPos(StartX+64.f+8.f, StartY);
 	Canvas.DrawIcon(Texture'Slide3',1.0);
-	Canvas.Style = 1;
+	i = int(FClamp(float(Value-sMin) / (StepSize*8.f),0.f,1.f) * (5.f + 64.f - 6.f));
+	Canvas.SetPos(StartX+5+i, StartY);
+	Canvas.DrawIcon(Texture'Dot',1.0);
 }
 
 defaultproperties

@@ -139,8 +139,8 @@ class UESimulatedCallback : public physx::PxSimulationEventCallback
 				FLOAT Force = Abs(Points[j].separation) / SimDeltaTime;
 				if (!bDidHit || Force > BestForce)
 				{
-					BestLocation = NX3vToVect(Points[j].position);
-					BestNormal = NX3vToVect(Points[j].normal);
+					BestLocation = PXVectorToUE(Points[j].position);
+					BestNormal = PXNormalToUE(Points[j].normal);
 					BestForce = Force;
 					bDidHit = TRUE;
 				}
@@ -149,6 +149,7 @@ class UESimulatedCallback : public physx::PxSimulationEventCallback
 
 		if (bDidHit)
 		{
+			BestForce *= PXScaleToUE;
 			if (A && !A->OnContact(B, BestLocation, BestNormal, BestForce) && B)
 				B->OnContact(A, BestLocation, BestNormal, BestForce);
 		}
@@ -195,8 +196,8 @@ void UPhysXPhysics::InitEngine()
 	GLog->Logf(NAME_PhysX, TEXT("Initializing PhysX physics engine (ver %i.%i.%i)!"), PX_PHYSICS_VERSION_MAJOR, PX_PHYSICS_VERSION_MINOR, PX_PHYSICS_VERSION_BUGFIX);
 
 	physx::PxTolerancesScale TolScale;
-	TolScale.length = 25;
-	TolScale.speed = 900;
+	TolScale.length = 1;
+	TolScale.speed = 800;
 	static UEAllocator phyAlloc;
 	static UEErrorNotify ErrNotify;
 	physx::PxFoundation* Fund = PxCreateFoundation(PX_PHYSICS_VERSION, phyAlloc, ErrNotify);

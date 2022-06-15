@@ -2,6 +2,16 @@
 	AXEmitter.h.
 =============================================================================*/
 	AXEmitter() {}
+
+	// UObject interface
+	void Modify();
+
+	// AActor interface
+	void TagPersistentActors();
+	void PostScriptDestroyed();
+	void RenderSelectInfo(FSceneNode* Frame);
+	void PostLoad();
+
 	void InitView();
 	void OnCreateObjectNew(UObject* ParentObject);
 	virtual void SpawnMoreParticles( int Count );
@@ -25,9 +35,6 @@
 	UBOOL ShouldUpdateEmitter(FSceneNode* Frame);
 	void GenerateChildEmitter(UClass* EmitClass, TArray<AXEmitter*>& AppendArray);
 	UBOOL IsVisible(FSceneNode* Frame);
-	void Modify();
-	void PostScriptDestroyed();
-	void RenderSelectInfo( FSceneNode* Frame );
 	void CleanUpRefs( AXEmitter* X );
 	void DrawCorona( struct FSceneNode* Frame, FLOAT Delta );
 	void DrawPartCoronas(FSceneNode* Frame, FLOAT Delta, AXParticleEmitter* Parent);

@@ -1,6 +1,6 @@
 class UMenuWeaponPriorityCW extends UMenuDialogClientWindow;
 
-var localized int ListAreaWidth;
+var int ListAreaWidth;
 var string ListAreaClass;
 var UWindowHSplitter HSplitter;
 
@@ -13,10 +13,10 @@ function Created()
 	HSplitter.RightClientWindow = HSplitter.CreateWindow(class'UMenuWeaponPriorityMesh', 0, 0, 100, 100);
 	HSplitter.LeftClientWindow = HSplitter.CreateWindow(class<UWindowWindow>(DynamicLoadObject(ListAreaClass, class'Class')), 0, 0, 100, 100, OwnerWindow);
 
-	ListAreaWidth = Max(140, ListAreaWidth);
+	ListAreaWidth = Min(700, Root.WinWidth - 50) * 0.28;
 	HSplitter.bRightGrow = True;
 	HSplitter.SplitPos = ListAreaWidth;
-	HSplitter.MinWinWidth = ListAreaWidth;
+	HSplitter.MinWinWidth = Default.ListAreaWidth;
 }
 
 function Resized()
@@ -28,5 +28,5 @@ function Resized()
 defaultproperties
 {
 	ListAreaClass="UMenu.UMenuWeaponPriorityListArea"
-	ListAreaWidth=150
+	ListAreaWidth=140
 }

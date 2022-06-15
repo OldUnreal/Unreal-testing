@@ -108,8 +108,8 @@ function UseSelected()
 
 function SaveConfigs()
 {
-	Super.SaveConfigs();
-	if (BotInfo != None)
+	Super(UMenuDialogClientWindow).SaveConfigs();
+	if( BotInfo )
 		BotInfo.SaveConfig();
 }
 

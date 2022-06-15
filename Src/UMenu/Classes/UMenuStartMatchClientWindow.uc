@@ -271,8 +271,7 @@ function GameChanged()
 
 	InGameChanged = true;
 
-	if (BotmatchParent.GameClass != none)
-		BotmatchParent.GameClass.static.StaticSaveConfig();
+	BotmatchParent.PreGameChanged();
 
 	if (GameCombo.HasValue2())
 		BotmatchParent.GameType = GameCombo.GetValue2();
@@ -285,8 +284,8 @@ function GameChanged()
 		IterateMaps(BotmatchParent.Map);
 	BotmatchParent.GameChanged();
 	InGameChanged = false;
-	if (MapListButton != none)
-		MapListButton.bDisabled = BotmatchParent.GameClass.default.MapListType == none;
+	if (MapListButton)
+		MapListButton.bDisabled = BotmatchParent.GameClass==None || BotmatchParent.GameClass.default.MapListType == none;
 }
 
 function MapChanged()

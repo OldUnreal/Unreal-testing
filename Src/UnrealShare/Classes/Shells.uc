@@ -15,8 +15,8 @@ class Shells extends Ammo;
 #exec MESHMAP SCALE MESHMAP=ShellsM X=0.013125 Y=0.013125 Z=0.02625
 #exec MESHMAP SETTEXTURE MESHMAP=ShellsM NUM=1 TEXTURE=JShells1
 
-
-#exec TEXTURE IMPORT NAME=I_ShotShell FILE=Models\I_ShotShell.pcx GROUP="Icons" MIPS=Off
+#exec Texture Import File=Textures\HD_Icons\I_HD_ShotShell.bmp Name=I_HD_ShotShell Group="HD" Mips=Off
+#exec TEXTURE IMPORT NAME=I_ShotShell FILE=Models\I_ShotShell.pcx GROUP="Icons" MIPS=Off HD=I_HD_ShotShell
 
 defaultproperties
 {

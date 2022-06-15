@@ -34,10 +34,8 @@ void FPhysXJoint::UpdateCoords(const FCoords& A, const FCoords& B)
 	if (JointObj)
 	{
 		FINISH_PHYSX_THREAD;
-		physx::PxTransform T = NXCoordsToMatrix(A);
-		JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR0, T);
-		T = NXCoordsToMatrix(B);
-		JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR1, T);
+		JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR0, UECoordsToPX(A));
+		JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR1, UECoordsToPX(B));
 	}
 	unguard;
 }
@@ -55,8 +53,8 @@ static UBOOL GetBaseProperties(const FJointBaseProps& P, physx::PxRigidActor*& A
 	A = GetRigidActor(P.Owner->GetActorA());
 	B = GetRigidActor(P.Owner->GetActorB());
 
-	TA = NXCoordsToMatrix(*P.AxisA);
-	TB = NXCoordsToMatrix(*P.AxisB);
+	TA = UECoordsToPX(*P.AxisA);
+	TB = UECoordsToPX(*P.AxisB);
 	return TRUE;
 }
 
@@ -175,12 +173,9 @@ struct FPhysD6Joint : public FPhysXJoint
 		if (JointObj)
 		{
 			FINISH_PHYSX_THREAD;
-			physx::PxTransform T = NXCoordsToMatrix(A);
-			JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR0, T);
-			T = NXCoordsToMatrix(B);
-			JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR1, T);
-			T = physx::PxTransform(physx::PxIDENTITY::PxIdentity);
-			((physx::PxD6Joint*)JointObj)->setDrivePosition(T);
+			JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR0, UECoordsToPX(A));
+			JointObj->setLocalPose(physx::PxJointActorIndex::eACTOR1, UECoordsToPX(B));
+			reinterpret_cast<physx::PxD6Joint*>(JointObj)->setDrivePosition(physx::PxTransform(physx::PxIDENTITY::PxIdentity));
 		}
 	}
 };
@@ -203,7 +198,7 @@ UBOOL UPhysXPhysics::CreateConstriant(const FJointConstProps& Props)
 			if (Props.XAxis->Limit == MOTION_Limited)
 			{
 				J->setMotion(physx::PxD6Axis::eX, physx::PxD6Motion::eLIMITED);
-				J->setLinearLimit(physx::PxD6Axis::eX, physx::PxJointLinearLimitPair(UPhysXPhysics::physXScene->getTolerancesScale(), Props.XAxis->Limit1, Props.XAxis->Limit2));
+				J->setLinearLimit(physx::PxD6Axis::eX, physx::PxJointLinearLimitPair(UPhysXPhysics::physXScene->getTolerancesScale(), Props.XAxis->Limit1 * UEScaleToPX, Props.XAxis->Limit2 * UEScaleToPX));
 			}
 			else J->setMotion(physx::PxD6Axis::eX, physx::PxD6Motion::eFREE);
 		}
@@ -213,7 +208,7 @@ UBOOL UPhysXPhysics::CreateConstriant(const FJointConstProps& Props)
 			if (Props.YAxis->Limit == MOTION_Limited)
 			{
 				J->setMotion(physx::PxD6Axis::eY, physx::PxD6Motion::eLIMITED);
-				J->setLinearLimit(physx::PxD6Axis::eY, physx::PxJointLinearLimitPair(UPhysXPhysics::physXScene->getTolerancesScale(), Props.YAxis->Limit1, Props.YAxis->Limit2));
+				J->setLinearLimit(physx::PxD6Axis::eY, physx::PxJointLinearLimitPair(UPhysXPhysics::physXScene->getTolerancesScale(), Props.YAxis->Limit1 * UEScaleToPX, Props.YAxis->Limit2 * UEScaleToPX));
 			}
 			else J->setMotion(physx::PxD6Axis::eY, physx::PxD6Motion::eFREE);
 		}
@@ -223,7 +218,7 @@ UBOOL UPhysXPhysics::CreateConstriant(const FJointConstProps& Props)
 			if (Props.ZAxis->Limit == MOTION_Limited)
 			{
 				J->setMotion(physx::PxD6Axis::eZ, physx::PxD6Motion::eLIMITED);
-				J->setLinearLimit(physx::PxD6Axis::eZ, physx::PxJointLinearLimitPair(UPhysXPhysics::physXScene->getTolerancesScale(), Props.ZAxis->Limit1, Props.ZAxis->Limit2));
+				J->setLinearLimit(physx::PxD6Axis::eZ, physx::PxJointLinearLimitPair(UPhysXPhysics::physXScene->getTolerancesScale(), Props.ZAxis->Limit1 * UEScaleToPX, Props.ZAxis->Limit2 * UEScaleToPX));
 			}
 			else J->setMotion(physx::PxD6Axis::eZ, physx::PxD6Motion::eFREE);
 		}
@@ -253,7 +248,7 @@ UBOOL UPhysXPhysics::CreateConstriant(const FJointConstProps& Props)
 			else J->setMotion(physx::PxD6Axis::eTWIST, physx::PxD6Motion::eFREE);
 		}
 		if (Props.DistanceLimit && Props.DistanceLimit->bLimitDistance)
-			J->setDistanceLimit(physx::PxJointLinearLimit(UPhysXPhysics::physXScene->getTolerancesScale(), Props.DistanceLimit->MaxDistance));
+			J->setDistanceLimit(physx::PxJointLinearLimit(UPhysXPhysics::physXScene->getTolerancesScale(), Props.DistanceLimit->MaxDistance * UEScaleToPX));
 		CONSTRUCT_JOINT(FPhysD6Joint);
 	}
 	GWarn->Log(TEXT("CreateConstriant FAILED!"));
