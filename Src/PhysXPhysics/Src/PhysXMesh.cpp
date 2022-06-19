@@ -3,9 +3,9 @@
 
 inline void AppendPoint(TArray<physx::PxVec3>& List, const FVector& P)
 {
-	physx::PxVec3 NewPoint = VectToNX3v(P);
+	physx::PxVec3 NewPoint = UEVectorToPX(P);
 	for (INT i = 0; i < List.Num(); ++i)
-		if ((List(i) - NewPoint).magnitudeSquared() < 1.f)
+		if ((List(i) - NewPoint).magnitudeSquared() < (UEScaleToPX * 0.1f))
 			return;
 	List.AddItem(NewPoint);
 }
@@ -16,7 +16,7 @@ PX_MeshShape* UPhysXPhysics::CreateConvexMesh(FVector* Ptr, INT NumPts, UBOOL bM
 	FINISH_PHYSX_THREAD;
 	TArray<physx::PxVec3> Pts(NumPts);
 	for (INT i = 0; i < NumPts; i++)
-		Pts(i) = VectToNX3v(Ptr[i]);
+		Pts(i) = UEVectorToPX(Ptr[i]);
 
 	physx::PxConvexMeshDesc MeshDesc;
 	MeshDesc.points.stride = sizeof(physx::PxVec3);
@@ -115,7 +115,7 @@ PX_MeshShape* UPhysXPhysics::CreateTrisMesh(FVector* Ptr, INT NumPts, DWORD* Tri
 	FINISH_PHYSX_THREAD;
 	TArray<physx::PxVec3> Pts(NumPts);
 	for (INT i = 0; i < NumPts; i++)
-		Pts(i) = VectToNX3v(Ptr[i]);
+		Pts(i) = UEVectorToPX(Ptr[i]);
 
 	physx::PxTriangleMeshDesc MeshDesc;
 	MeshDesc.flags = (physx::PxMeshFlag::Enum) NULL; // physx::PxMeshFlag::e16_BIT_INDICES;

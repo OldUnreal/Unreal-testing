@@ -45,9 +45,9 @@ struct FPhysXActorRigidBody : public PX_PhysicsObject, public FListedPhysXActor
 
 	inline physx::PxVec3 GetDesiredZoneSpeed(FLOAT MaxDelta, physx::PxRigidDynamic* rb) const
 	{
-		FLOAT CurSpeed = (NX3vToVect(rb->getLinearVelocity()) | ZoneVelocity);
+		FLOAT CurSpeed = (PXVectorToUE(rb->getLinearVelocity()) | ZoneVelocity);
 		if (CurSpeed < ZoneSpeed)
-			return VectToNX3v(ZoneVelocity * Min(MaxDelta, ZoneSpeed - CurSpeed));
+			return UEVectorToPX(ZoneVelocity * Min(MaxDelta, ZoneSpeed - CurSpeed));
 		return physx::PxVec3(physx::PxZero);
 	}
 
@@ -173,18 +173,18 @@ FPhysXActorRigidBody::FPhysXActorRigidBody(const FRigidBodyProperties& Parms, FP
 	{
 		FINISH_PHYSX_THREAD;
 		// Init physics
-		dyn = UPhysXPhysics::physXScene->createRigidDynamic(NXCoordsToMatrix(Pos, Rot));
+		dyn = UPhysXPhysics::physXScene->createRigidDynamic(UECoordsToPX(Pos, Rot));
 		if (!dyn)
 			return;
 
 		STAT(++GPhysXStats.RigidObjCount.Count);
 
-		dyn->setLinearVelocity(VectToNX3v(Parms.LinearVelocity));
-		dyn->setAngularVelocity(VectToNX3v(Parms.AngularVelocity));
-		dyn->setContactReportThreshold(Parms.MinImpactThreshold);
-		dyn->setSolverIterationCounts(8, 6);
-		dyn->setSleepThreshold(5.f);
-		dyn->setMass(Parms.Mass);
+		dyn->setLinearVelocity(UEVectorToPX(Parms.LinearVelocity));
+		dyn->setAngularVelocity(UENormalToPX(Parms.AngularVelocity));
+		dyn->setContactReportThreshold(Parms.MinImpactThreshold * UEScaleToPX);
+		dyn->setSolverIterationCounts(8, 4);
+		dyn->setSleepThreshold(2.f);
+		dyn->setMass(Parms.Mass * UEMassToPX);
 		dyn->setActorFlags(physx::PxActorFlag::eDISABLE_GRAVITY);
 		dyn->userData = &UserData;
 		rbActor = dyn;
@@ -194,8 +194,8 @@ FPhysXActorRigidBody::FPhysXActorRigidBody(const FRigidBodyProperties& Parms, FP
 
 	FINISH_PHYSX_THREAD;
 	// Init mass
-	physx::PxVec3 COM = VectToNX3v(Parms.COMOffset);
-	physx::PxRigidBodyExt::updateMassAndInertia(*dyn, Parms.Mass, &COM);
+	physx::PxVec3 COM = UEVectorToPX(Parms.COMOffset);
+	physx::PxRigidBodyExt::updateMassAndInertia(*dyn, Parms.Mass * UEMassToPX, &COM);
 
 	S->pxScene->addActor(*dyn);
 }
@@ -225,7 +225,7 @@ void FPhysXActorRigidBody::PhysicsTick(FLOAT DeltaTime)
 	if (Actor->RealBasedActors)
 	{
 		physx::PxTransform T = dyn->getCMassLocalPose() * dyn->getGlobalPose();
-		FVector ComCenter = NX3vToVect(T.p);
+		FVector ComCenter = PXVectorToUE(T.p);
 		AActor* B;
 		for (INT i = (Actor->RealBasedActors->Num() - 1); i >= 0; --i)
 		{
@@ -235,7 +235,7 @@ void FPhysXActorRigidBody::PhysicsTick(FLOAT DeltaTime)
 				// Check if pawn radius encapsules center of mass.
 				if ((ComCenter - B->Location).SizeSquared2D() < Square(B->CollisionRadius + 50.f))
 				{
-					physx::PxVec3 Vel = VectToNX3v((B->Velocity + B->Region.Zone->ZoneGravity) * Min(B->Mass / Actor->Mass, 5.f) * DeltaTime);
+					physx::PxVec3 Vel = UEVectorToPX((B->Velocity + B->Region.Zone->ZoneGravity) * Min(B->Mass / Actor->Mass, 5.f) * DeltaTime);
 					dyn->addForce(Vel, physx::PxForceMode::eVELOCITY_CHANGE);
 					dyn->wakeUp();
 				}
@@ -243,7 +243,7 @@ void FPhysXActorRigidBody::PhysicsTick(FLOAT DeltaTime)
 				{
 					physx::PxVec3 Vel, Ang;
 					FLOAT InvMass = (1.f / Actor->Mass);
-					physx::PxRigidBodyExt::computeLinearAngularImpulse(*dyn, dyn->getGlobalPose(), VectToNX3v(B->Location), VectToNX3v(((B->Velocity * 2.f) + B->Region.Zone->ZoneGravity) * Min(B->Mass, 1000.f) * DeltaTime), InvMass, InvMass * 0.00025f, Vel, Ang);
+					physx::PxRigidBodyExt::computeLinearAngularImpulse(*dyn, dyn->getGlobalPose(), UEVectorToPX(B->Location), UEVectorToPX(((B->Velocity * 2.f) + B->Region.Zone->ZoneGravity) * Min(B->Mass, 1000.f) * DeltaTime), InvMass, InvMass * 0.00025f, Vel, Ang);
 					dyn->addForce(Vel, physx::PxForceMode::eVELOCITY_CHANGE);
 					dyn->addTorque(Ang, physx::PxForceMode::eVELOCITY_CHANGE);
 					dyn->wakeUp();
@@ -259,7 +259,7 @@ void FPhysXActorRigidBody::PhysicsTick(FLOAT DeltaTime)
 		return;
 
 	if (bHasGravity)
-		dyn->addForce(VectToNX3v(Gravity * DeltaTime), physx::PxForceMode::eVELOCITY_CHANGE, false);
+		dyn->addForce(UEVectorToPX(Gravity * DeltaTime), physx::PxForceMode::eVELOCITY_CHANGE, false);
 
 	if (bHasZoneVelocity)
 		dyn->addForce(GetDesiredZoneSpeed(ZoneSpeed * 5.f * DeltaTime, dyn), physx::PxForceMode::eVELOCITY_CHANGE, false);
@@ -271,7 +271,7 @@ FVector FPhysXActorRigidBody::GetLinearVelocity()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		return NX3vToVect(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getLinearVelocity());
+		return PXVectorToUE(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getLinearVelocity());
 	}
 	return FVector(0, 0, 0);
 }
@@ -280,7 +280,7 @@ void FPhysXActorRigidBody::SetLinearVelocity(const FVector& NewVel)
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setLinearVelocity(VectToNX3v(NewVel));
+		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setLinearVelocity(UEVectorToPX(NewVel));
 	}
 }
 FVector FPhysXActorRigidBody::GetAngularVelocity()
@@ -288,7 +288,7 @@ FVector FPhysXActorRigidBody::GetAngularVelocity()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		return NX3vToVect(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getAngularVelocity());
+		return PXNormalToUE(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getAngularVelocity());
 	}
 	return FVector(0, 0, 0);
 }
@@ -297,7 +297,7 @@ void FPhysXActorRigidBody::SetAngularVelocity(const FVector& NewVel)
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setAngularVelocity(VectToNX3v(NewVel));
+		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setAngularVelocity(UENormalToPX(NewVel));
 	}
 }
 void FPhysXActorRigidBody::GetPosition(FVector* Pos, FRotator* Rot)
@@ -306,7 +306,7 @@ void FPhysXActorRigidBody::GetPosition(FVector* Pos, FRotator* Rot)
 	{
 		FINISH_PHYSX_THREAD;
 		physx::PxTransform T = reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getGlobalPose();
-		FCoords C = NXMatrixToCoords(T);
+		FCoords C = PXCoordsToUE(T);
 		if (Pos)
 			*Pos = C.Origin;
 		if (Rot)
@@ -323,8 +323,7 @@ FQuat FPhysXActorRigidBody::GetRotation()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		physx::PxTransform T = reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getGlobalPose();
-		return FQuat(T.q.x, T.q.y, T.q.z, T.q.w);
+		return PXCoordsToUEQuat(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getGlobalPose());
 	}
 	return FQuat(1.f, 0.f, 0.f, 0.f);
 }
@@ -359,11 +358,11 @@ void FPhysXActorRigidBody::Impulse(const FVector& Force, const FVector* Pos, UBO
 			physx::PxVec3 Vel, Ang;
 			physx::PxRigidDynamic* dyn = reinterpret_cast<physx::PxRigidDynamic*>(rbActor);
 			FLOAT InvMass = bCheckMass ? (1.f / Actor->Mass) : 1.f;
-			physx::PxRigidBodyExt::computeLinearAngularImpulse(*dyn, dyn->getGlobalPose(), VectToNX3v(*Pos), VectToNX3v(Force), InvMass, InvMass * 0.00025f, Vel, Ang);
+			physx::PxRigidBodyExt::computeLinearAngularImpulse(*dyn, dyn->getGlobalPose(), UEVectorToPX(*Pos), UEVectorToPX(Force), InvMass, InvMass * 0.00025f, Vel, Ang);
 			dyn->addForce(Vel, physx::PxForceMode::eVELOCITY_CHANGE);
 			dyn->addTorque(Ang, physx::PxForceMode::eVELOCITY_CHANGE);
 		}
-		else reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->addForce(VectToNX3v(bCheckMass ? (Force / Actor->Mass) : Force), physx::PxForceMode::eVELOCITY_CHANGE);
+		else reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->addForce(UEVectorToPX(bCheckMass ? (Force / Actor->Mass) : Force), physx::PxForceMode::eVELOCITY_CHANGE);
 	}
 }
 void FPhysXActorRigidBody::SetGravity(const FVector& NewGrav)
@@ -388,7 +387,7 @@ void FPhysXActorRigidBody::SetMass(FLOAT NewMass)
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setMass(NewMass);
+		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setMass(NewMass * UEMassToPX);
 	}
 }
 void FPhysXActorRigidBody::SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel)
@@ -397,7 +396,7 @@ void FPhysXActorRigidBody::SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel)
 	{
 		FINISH_PHYSX_THREAD;
 		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setMaxAngularVelocity(MaxAngVel);
-		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setMaxLinearVelocity(MaxLinVel);
+		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setMaxLinearVelocity(MaxLinVel * UEScaleToPX);
 	}
 }
 void FPhysXActorRigidBody::SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp)
@@ -437,7 +436,7 @@ UBOOL FPhysXActorRigidBody::ProcessCallbacks(FActorRBPhysicsBase* Obj)
 		if (UserData.NumContants && rbActor)
 		{
 			AActor* Other;
-			FVector v = NX3vToVect(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getLinearVelocity());
+			FVector v = PXVectorToUE(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getLinearVelocity());
 			for (INT i = 0; i < UserData.NumContants; ++i)
 			{
 				Other = UserData.PendingContants[i].Other;
@@ -492,7 +491,7 @@ UBOOL FRigidBodyUserData::OnContact(FPhysXUserDataBase* Other, const FVector& Po
 	{
 		AActor* A = Other ? Other->GetActorOwner() : Owner->GetActor()->Level;
 		if (A)
-			PendingContants[NumContants++].Set(A, Position, Normal, NX3vToVect(reinterpret_cast<physx::PxRigidDynamic*>(Owner->GetRbActor())->getLinearVelocity()));
+			PendingContants[NumContants++].Set(A, Position, Normal, PXVectorToUE(reinterpret_cast<physx::PxRigidDynamic*>(Owner->GetRbActor())->getLinearVelocity()));
 	}
 	return FALSE;
 }
@@ -515,7 +514,10 @@ FPhysXStaticBody::FPhysXStaticBody(AActor* A, FPhysXScene* S, const FVector& Pos
 	guard(FPhysXStaticBody::FPhysXStaticBody);
 	// Init physics
 	FINISH_PHYSX_THREAD;
-	physx::PxRigidStatic* st = UPhysXPhysics::physXScene->createRigidStatic(NXCoordsToMatrix(Pos, Rot));
+	physx::PxRigidStatic* st = UPhysXPhysics::physXScene->createRigidStatic(UECoordsToPX(Pos, Rot));
+	if (!st)
+		return;
+
 	st->userData = &UserData;
 	reinterpret_cast<FPhysXScene*>(S)->pxScene->addActor(*st);
 	rbActor = st;
@@ -540,7 +542,7 @@ void FPhysXStaticBody::GetPosition(FVector* Pos, FRotator* Rot)
 	{
 		FINISH_PHYSX_THREAD;
 		physx::PxTransform T = reinterpret_cast<physx::PxRigidStatic*>(rbActor)->getGlobalPose();
-		FCoords C = NXMatrixToCoords(T);
+		FCoords C = PXCoordsToUE(T);
 		if (Pos)
 			*Pos = C.Origin;
 		if (Rot)
@@ -557,8 +559,7 @@ FQuat FPhysXStaticBody::GetRotation()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		physx::PxTransform T = reinterpret_cast<physx::PxRigidStatic*>(rbActor)->getGlobalPose();
-		return FQuat(T.q.x, T.q.y, T.q.z, T.q.w);
+		return PXCoordsToUEQuat(reinterpret_cast<physx::PxRigidStatic*>(rbActor)->getGlobalPose());
 	}
 	return FQuat(1.f, 0.f, 0.f, 0.f);
 }
@@ -585,8 +586,8 @@ FPhysXPlatformBody::FPhysXPlatformBody(AActor* A, FPhysXScene* S, const FVector&
 {
 	// Init physics
 	FINISH_PHYSX_THREAD;
-	physx::PxRigidDynamic* dyn = UPhysXPhysics::physXScene->createRigidDynamic(NXCoordsToMatrix(Pos, Rot));
-	if (!rbActor)
+	physx::PxRigidDynamic* dyn = UPhysXPhysics::physXScene->createRigidDynamic(UECoordsToPX(Pos, Rot));
+	if (!dyn)
 		return;
 
 	//rbActor->userData = new FRigidBodyUserData(this);
@@ -617,7 +618,7 @@ void FPhysXPlatformBody::GetPosition(FVector* Pos, FRotator* Rot)
 	{
 		FINISH_PHYSX_THREAD;
 		physx::PxTransform T = reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getGlobalPose();
-		FCoords C = NXMatrixToCoords(T);
+		FCoords C = PXCoordsToUE(T);
 		if (Pos)
 			*Pos = C.Origin;
 		if (Rot)
@@ -631,17 +632,17 @@ void FPhysXPlatformBody::SetPosition(const FVector* NewPos, const FRotator* NewR
 		FINISH_PHYSX_THREAD;
 		physx::PxRigidDynamic* k = reinterpret_cast<physx::PxRigidDynamic*>(rbActor);
 		if (NewPos && NewRot)
-			k->setKinematicTarget(NXCoordsToMatrix(*NewPos, *NewRot));
+			k->setKinematicTarget(UECoordsToPX(*NewPos, *NewRot));
 		else if (NewPos)
 		{
 			physx::PxTransform T = k->getGlobalPose();
-			T.p = VectToNX3v(*NewPos);
+			T.p = UEVectorToPX(*NewPos);
 			k->setKinematicTarget(T);
 		}
 		else if (NewRot)
 		{
 			physx::PxTransform T = k->getGlobalPose();
-			T.q = FRotatorToNXQuat(*NewRot);
+			T.q = UERotatorToPX(*NewRot);
 			k->setKinematicTarget(T);
 		}
 	}
@@ -651,8 +652,7 @@ FQuat FPhysXPlatformBody::GetRotation()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		physx::PxTransform T = reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getGlobalPose();
-		return FQuat(T.q.x, T.q.y, T.q.z, T.q.w);
+		return PXCoordsToUEQuat(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getGlobalPose());
 	}
 	return FQuat(1.f, 0.f, 0.f, 0.f);
 }

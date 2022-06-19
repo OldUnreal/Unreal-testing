@@ -2,7 +2,7 @@ class UMenuPlayerSetupClient extends UMenuDialogClientWindow;
 
 var() int ControlOffset;
 
-var class<PlayerPawn> NewPlayerClass;
+var class<Pawn> NewPlayerClass;
 var string MeshName;
 var bool Initialized;
 var UMenuPlayerMeshClient MeshWindow;
@@ -231,7 +231,7 @@ function IterateSkins()
 
 	SkinCombo.Clear();
 
-	if( NewPlayerClass.Default.bIsSpectatorClass )
+	if( NewPlayerClass.Default.bIsPlayerPawn && Class<PlayerPawn>(NewPlayerClass).Default.bIsSpectatorClass )
 	{
 		SkinCombo.HideWindow();
 		return;
@@ -412,10 +412,10 @@ function FaceChanged()
 function ClassChanged()
 {
 	local bool OldInitialized;
-	local class<PlayerPawn> LoadedPlayerClass;
+	local class<Pawn> LoadedPlayerClass;
 
 	// Get the class.
-	LoadedPlayerClass = class<PlayerPawn>(DynamicLoadObject(ClassCombo.GetValue2(), class'class', true));
+	LoadedPlayerClass = class<Pawn>(DynamicLoadObject(ClassCombo.GetValue2(), class'class', true));
 	if (LoadedPlayerClass == none)
 	{
 		Warn(self @ "failed to load player class '" $ ClassCombo.GetValue2() $ "' when trying to set a new class");

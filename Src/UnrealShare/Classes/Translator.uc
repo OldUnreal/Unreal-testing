@@ -14,7 +14,8 @@ class Translator extends Pickup;
 #exec MESH LODPARAMS MESH=TranslatorMesh STRENGTH=0.1 MINVERTS=28 MORPH=0.0 ZDISP=4000.0
 #exec MESH ORIGIN MESH=TranslatorMesh X=5 Y=0 Z=0 YAW=0
 #exec MESH SEQUENCE MESH=TranslatorMesh SEQ=All    STARTFRAME=0  NUMFRAMES=1
-#exec TEXTURE IMPORT NAME=JTranslator1 FILE=Models\tran.pcx GROUP="Skins"
+#exec TEXTURE IMPORT NAME=JTranslator1HD FILE=Models\tran.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=JTranslator1 FILE=Models\tran_old.pcx GROUP="Skins" HD=JTranslator1HD
 #exec MESHMAP SCALE MESHMAP=TranslatorMesh X=0.04 Y=0.04 Z=0.08
 #exec MESHMAP SETTEXTURE MESHMAP=TranslatorMesh NUM=1 TEXTURE=JTranslator1 TLOD=10
 

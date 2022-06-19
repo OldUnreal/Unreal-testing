@@ -172,6 +172,9 @@ public:
 		SMTris.SetSize(DblSeg);
 		{
 			FStaticMeshTri* T = &SMTris(0);
+			FLOAT UMap = 0.f;
+			const FLOAT UInc = RopeOwner->TexVertScaling;
+			FLOAT UEnd = UInc;
 			for (i = 0; i < DblSeg; ++i)
 			{
 				T[i].GroupIndex = 0;
@@ -180,18 +183,20 @@ public:
 					T[i].iVertex[0] = i;
 					T[i].iVertex[1] = i + 2;
 					T[i].iVertex[2] = i + 1;
-					T[i].Tex[0].Set(0.f, 1.f);
-					T[i].Tex[1].Set(1.f, 1.f);
-					T[i].Tex[2].Set(1.f, 0.f);
+					T[i].Tex[0].Set(UMap, 1.f);
+					T[i].Tex[1].Set(UEnd, 1.f);
+					T[i].Tex[2].Set(UEnd, 0.f);
+					UMap = UEnd;
+					UEnd += UInc;
 				}
 				else
 				{
 					T[i].iVertex[0] = i;
 					T[i].iVertex[1] = i + 1;
 					T[i].iVertex[2] = i + 2;
-					T[i].Tex[0].Set(0.f, 0.f);
-					T[i].Tex[1].Set(0.f, 1.f);
-					T[i].Tex[2].Set(1.f, 0.f);
+					T[i].Tex[0].Set(UMap, 0.f);
+					T[i].Tex[1].Set(UMap, 1.f);
+					T[i].Tex[2].Set(UEnd, 0.f);
 				}
 			}
 		}
@@ -407,7 +412,7 @@ void AXRopeDeco::onPropertyChange(UProperty* Property, UProperty* OuterProperty)
 {
 	guard(AXRopeDeco::onPropertyChange);
 	Super::onPropertyChange(Property, OuterProperty);
-	if (GIsEditor && !appStricmp(Property->GetName(), TEXT("NumSegments")))
+	if (GIsEditor && (!appStricmp(Property->GetName(), TEXT("NumSegments")) || !appStricmp(Property->GetName(), TEXT("TexVertScaling"))))
 	{
 		if (RopeMeshPtr)
 			RopeMeshPtr->Update();
@@ -561,7 +566,7 @@ struct FRopeRBPhysics : public FActorRBPhysicsBase
 		OldPos = A->Location;
 		InitRot = A->Rotation;
 	}
-	~FRopeRBPhysics()
+	~FRopeRBPhysics() noexcept(false)
 	{
 		guard(FRopeRBPhysics::~FRopeRBPhysics);
 		if (Object)
@@ -740,7 +745,7 @@ void FRopeRBPhysics::PostInitJoints()
 		if (!RopeDeco->bHasLooseStart)
 		{
 			Segments->Object->GetPosition(&RopePos, &RopeRot);
-			WorldCoords = GMath.UnitCoords * FVector(SegmentDist, 0, 0) / RopeRot / RopePos;
+			WorldCoords = GMath.UnitCoords * FVector(SegmentDist*1.1, 0, 0) / RopeRot / RopePos;
 			CoordsA = WorldCoords * RopePos * RopeRot;
 
 			if (RopeDeco->RopeStartActor && RopeDeco->RopeStartActor->RbPhysicsData && (D = RopeDeco->RopeStartActor->RbPhysicsData->GetRbObject()) != NULL)
@@ -762,7 +767,7 @@ void FRopeRBPhysics::PostInitJoints()
 				Last = Last->Next;
 
 			Last->Object->GetPosition(&RopePos, &RopeRot);
-			WorldCoords = GMath.UnitCoords / FVector(SegmentDist, 0, 0) / RopeRot / RopePos;
+			WorldCoords = GMath.UnitCoords / FVector(SegmentDist*1.1, 0, 0) / RopeRot / RopePos;
 			CoordsA = WorldCoords * RopePos * RopeRot;
 
 			if (RopeDeco->RopeEndActor && RopeDeco->RopeEndActor->RbPhysicsData && (D = RopeDeco->RopeEndActor->RbPhysicsData->GetRbObject()) != NULL)
@@ -865,8 +870,8 @@ void AXRopeDeco::InitRbPhysics()
 				FRotator rDir;
 				FRopeSegment* nPrev = NULL;
 
-				FCoords CoordsA = GMath.UnitCoords * FVector(SegmentDist, 0, 0);
-				FCoords CoordsB = GMath.UnitCoords / FVector(SegmentDist, 0, 0);
+				FCoords CoordsA = GMath.UnitCoords * FVector(SegmentDist*1.1, 0, 0);
+				FCoords CoordsB = GMath.UnitCoords / FVector(SegmentDist*1.1, 0, 0);
 				
 				for (INT i = 0; i < NumSeg; ++i)
 				{
@@ -874,8 +879,8 @@ void AXRopeDeco::InitRbPhysics()
 					rPos = V[i] + (Dir * 0.5f);
 					rDir = Dir.Rotation();
 					Dir.Normalize();
-					new FDebugLineData(rPos, rPos + Dir * 8.f, FPlane(1, 1, 0, 1), 1);
-					new FDebugLineData(rPos, rPos - Dir * 8.f, FPlane(1, 0, 1, 1), 1);
+					//new FDebugLineData(rPos, rPos + Dir * 8.f, FPlane(1, 1, 0, 1), 1);
+					//new FDebugLineData(rPos, rPos - Dir * 8.f, FPlane(1, 0, 1, 1), 1);
 					Velocity = VRand() * 75.f;
 					PX->AngularVelocity = VRand();
 					PX_ArticulationLink* P = A->CreateArticulationLink(RbParms, rPos, rDir);

@@ -18,11 +18,14 @@ var() sound ImpactSound; // Physics impact sound.
 var const PXJ_ShadowParm GrabConstraint;
 var PXJ_ShadowParm ActiveConstraint;
 var ERenderStyle BackupStyle;
+var Pawn CurrentCarrier;
 
 const MIN_DOWN_ANGLE = -0.77f;
 
 function Destroyed()
 {
+	if( CurrentCarrier && CurrentCarrier.CarriedDecoration==Self )
+		CurrentCarrier.DropDecoration();
 	ActiveConstraint = None; // Important! Don't keep this ref or gc could crash.
 	Super.Destroyed();
 }
@@ -125,8 +128,11 @@ final function float GetBaseMomentumModifier()
 
 function TakeDamage( int Damage, Pawn instigatedBy, vector hitlocation, vector momentum, name damageType)
 {
+	if( CurrentCarrier && CurrentCarrier.CarriedDecoration==Self )
+		CurrentCarrier.DropDecoration();
+
 	Instigator = InstigatedBy;
-	if ( Instigator != None )
+	if ( Instigator )
 		MakeNoise(1.0);
 	bBobbing = false;
 	
@@ -187,7 +193,7 @@ function GrabbedBy( Pawn Other )
 {
 	if( Other.CarriedDecoration==Self )
 	{
-		if( ActiveConstraint!=None && PhysicsData!=None )
+		if( ActiveConstraint && PhysicsData )
 			PhysicsData.DeleteJoint(ActiveConstraint);
 		ActiveConstraint = None;
 		
@@ -200,10 +206,11 @@ function GrabbedBy( Pawn Other )
 		Velocity = Other.Velocity + 10 * VRand();
 		Instigator = Other;
 		Other.CarriedDecoration = None;
+		CurrentCarrier = None;
 	}
 	else if( (Other.Weapon==None || Other.Weapon.Mass<20) && bPushable && bCanCarryProp && StandingCount==0 )
 	{
-		if( PhysicsData!=None )
+		if( PhysicsData )
 		{
 			ActiveConstraint = PXJ_ShadowParm(PhysicsData.CreateJoint(class'PXJ_ShadowParm', GrabConstraint));
 			IsStillCarrying(Other);
@@ -216,6 +223,7 @@ function GrabbedBy( Pawn Other )
 		bBlockActors = false;
 		bBlockPlayers = false;
 		Other.CarriedDecoration = Self;
+		CurrentCarrier = Other;
 	}
 }
 
@@ -227,7 +235,7 @@ function bool IsStillCarrying( Pawn Other )
 	local vector V;
 	
 	V = GetCarryOffset(Other);
-	if( ActiveConstraint!=None )
+	if( ActiveConstraint )
 		ActiveConstraint.SetLocation(V, Other.Rotation);
 	return VSize(Location-V)<100.f;
 }

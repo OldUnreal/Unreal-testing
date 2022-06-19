@@ -10,45 +10,48 @@ var ThingFactory factory;
 
 function bool Create()
 {
-	local pawn newcreature;
+	local Pawn newcreature;
 	local CreatureFactory pawnFactory;
-	local actor temp;
+	local Actor temp;
 	local rotator newRot;
 
 	if ( factory.bCovert && PlayerCanSeeMe() ) //make sure no player can see this
 		return false;
 
-	newRot.yaw = rotation.yaw;
+	if ( factory.prototype.Default.bIsProjectile )
+		newRot = Rotation;
+	else newRot.Yaw = Rotation.Yaw;
+	
 	temp = Spawn(factory.prototype,,factory.itemtag,,newRot);
-	if (temp == None)
+	if ( !temp )
 		return false;
-	temp.event = factory.tag;
-	newcreature = pawn(temp);
+	temp.Event = factory.Tag;
 
 	TriggerEvent(Event,Self,Instigator);
 
 	if ( factory.bFalling )
 		temp.SetPhysics(PHYS_Falling);
-	if (newcreature == None)
+	if ( !temp.bIsPawn )
 		return true;
 
 	pawnFactory = CreatureFactory(factory);
-	if (pawnFactory == None)
+	if ( !pawnFactory )
 	{
-		log("Error - use creature factory to spawn pawns");
+		Log("Error - use creature factory to spawn pawns at "$Self$" with "$factory);
 		return true;
 	}
-	if (ScriptedPawn(newcreature) != None)
+	newcreature = Pawn(temp);
+	if ( ScriptedPawn(newcreature) )
 	{
 		ScriptedPawn(newcreature).Orders = pawnFactory.Orders;
 		ScriptedPawn(newcreature).OrderTag = pawnFactory.OrderTag;
-		ScriptedPawn(newcreature).SetEnemy(pawnFactory.enemy);
+		ScriptedPawn(newcreature).SetEnemy(pawnFactory.Enemy);
 		ScriptedPawn(newcreature).Alarmtag = pawnFactory.AlarmTag;
 	}
 	else
-		newcreature.enemy = pawnFactory.enemy;
-	if (newcreature.enemy != None)
-		newcreature.lastseenpos = newcreature.enemy.location;
+		newcreature.Enemy = pawnFactory.Enemy;
+	if ( newcreature.Enemy )
+		newcreature.lastseenpos = newcreature.Enemy.Location;
 	newcreature.SetMovementPhysics();
 	if ( newcreature.Physics == PHYS_Walking)
 		newcreature.SetPhysics(PHYS_Falling);

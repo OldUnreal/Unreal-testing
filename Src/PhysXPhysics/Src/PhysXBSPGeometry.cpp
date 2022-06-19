@@ -114,7 +114,7 @@ physx::PxTriangleMesh* FPhysXScene::CreateBSPModel(UModel* Model)
 
 	TArray<physx::PxVec3> Pts(Model->Points.Num());
 	for (INT i = 0; i < Model->Points.Num(); i++)
-		Pts(i) = VectToNX3v(Model->Points(i));
+		Pts(i) = UEVectorToPX(Model->Points(i));
 
 	physx::PxTriangleMeshDesc BSPDesc;
 	BSPDesc.materialIndices.data = &BSP.Materials(0);

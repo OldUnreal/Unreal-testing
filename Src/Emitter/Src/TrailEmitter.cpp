@@ -57,6 +57,14 @@ public:
 	}
 	bool OverrideMeshRender(struct FSceneNode* Frame);
 
+	void Serialize(FArchive& Ar)
+	{
+		guard(AXTrailParticle::Serialize);
+		FName N = GetFName();
+		Ar << N;
+		unguard;
+	}
+
 	inline FVector GetTrailZ() const
 	{
 		if (Emitter->SheetUpdir.IsZero())
@@ -203,6 +211,13 @@ class UTrailMesh : public UMesh
 	{
 		return reinterpret_cast<const AXTrailParticle*>(Owner)->Bounds;
 	}
+	void Serialize(FArchive& Ar)
+	{
+		guard(AXTrailParticle::Serialize);
+		FName N = GetFName();
+		Ar << N;
+		unguard;
+	}
 };
 IMPLEMENT_CLASS(UTrailMesh);
 
@@ -255,6 +270,10 @@ public:
 	}
 	void Serialize(FArchive& Ar)
 	{
+		UClass* C = AXTrailParticle::StaticClass();
+		Ar << C;
+		C = UTrailMesh::StaticClass();
+		Ar << C;
 		Ar << Particles << TrailMesh;
 	}
 	AXTrailParticle* GetFreeTrail(const FVector& Pos, const FRotator& Rot)
@@ -734,6 +753,8 @@ void AXTrailEmitter::ResetEmitter()
 	guardSlow(AXTrailEmitter::ResetEmitter);
 	Super::ResetEmitter();
 	InitTrailEmitter();
+	if (ParentEmitter)
+		ParentEmitter->ResetEmitter();
 	unguardSlow;
 }
 void AXTrailEmitter::InitializeEmitter(AXParticleEmitter* Parent)

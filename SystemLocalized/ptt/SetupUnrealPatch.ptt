@@ -82,3 +82,15 @@ Caption="Jogar Unreal (64 bits)"
 Caption="Redefinir todas as configurações"
 ; EN: Description="Recommended! Reset all ini settings back to default. Keeping your old ini settings may cause problems with this version; this setting is optional."
 Description="Recomendado! Defina todas as suas configurações pessoais do Unreal para seus valores padrão. Manter os valores antigos pode causar problemas com esta versão; esta opção é opcional."
+
+[ConsoleGroup]
+; EN: Caption="Classic Menu"
+Caption="Menu Clássico"
+; EN: Description="Use the classic UBrowser menu instead of UMenu. For the classic experience, this original menu is keyboard based and the standard console before UMenu was introduced in Unreal Gold/Unreal Tournament."
+Description="Use o menu UBrowser clássico em vez do UMenu para obter a experiência clássica. Este menu é baseado em teclado e costumava ser o menu padrão até a introdução do UMenu no Unreal Gold/Unreal Tournament."
+
+[RTNPGroup]
+; EN: Caption="Return to Na Pali Expansion Support"
+Caption="Suporte para a Expansão Return to Na Pali"
+; EN: Description="This installs support for the Return to Na Pali expansion pack. This pack was sold separately and later included in Unreal Gold and Unreal Anthology versions. Do not install if you have the classic version only (226f)."
+Description="Esta opção instala suporte para o pacote de expansão Return to Na Pali. Esta expansão costumava ser vendida separadamente e depois incluída nas versões Unreal Gold e Unreal Anthology. Não instale se você tiver apenas o jogo base instalado (226f)."

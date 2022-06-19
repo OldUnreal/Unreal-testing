@@ -18,6 +18,10 @@ struct FPhysXArticulationBody : public PX_ArticulationList, public FListedPhysXA
 	PX_ArticulationLink* CreateArticulationLink(const FArticulationProperties& Parms, const FVector& Pos, const FRotator& Rot);
 	void FinishArticulation();
 
+	void SetMass(FLOAT NewMass);
+	void SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel);
+	void SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp);
+
 	UBOOL IsSleeping();
 	void WakeUp();
 	void PutToSleep();
@@ -103,9 +107,11 @@ FPhysXArticulationBody::FPhysXArticulationBody(AActor* A, FPhysXScene* S, INT Nu
 	FINISH_PHYSX_THREAD;
 	PhysXArtBodyType* Articulation = UPhysXPhysics::physXScene->createArticulationReducedCoordinate();
 	rbActor = Articulation;
+	Articulation->setSleepThreshold(1.f);
+	Articulation->setSolverIterationCounts(8, 4);
 
 	// Stabilization can create artefacts on jointed objects so we just disable it
-	//Articulation->setStabilizationThreshold(0.0f);
+	Articulation->setStabilizationThreshold(1.0f);
 	//Articulation->setMaxProjectionIterations(NumIterations);
 	//Articulation->setSeparationTolerance(0.001f);
 
@@ -137,7 +143,7 @@ void FPhysXArticulationBody::PhysicsTick(FLOAT DeltaTime)
 			return;
 
 		for (PX_ArticulationLink* L = GetList(); L; L = L->GetListNext())
-			GET_LINK(L->GetRbActor())->addForce(VectToNX3v(Gravity * DeltaTime), physx::PxForceMode::eVELOCITY_CHANGE, false);
+			GET_LINK(L->GetRbActor())->addForce(UEVectorToPX(Gravity * DeltaTime), physx::PxForceMode::eVELOCITY_CHANGE, false);
 	}
 }
 UBOOL FPhysXArticulationBody::IsSleeping()
@@ -178,6 +184,40 @@ void FPhysXArticulationBody::SetCollisionFlags(DWORD Group, DWORD Flags)
 	unguard;
 }
 
+void FPhysXArticulationBody::SetMass(FLOAT NewMass)
+{
+	guard(FPhysXArticulationBody::SetMass);
+	if (rbActor)
+	{
+		for (PX_ArticulationLink* L = GetList(); L; L = L->GetListNext())
+			L->SetMass(NewMass);
+	}
+	unguard;
+}
+void FPhysXArticulationBody::SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel)
+{
+	guard(FPhysXArticulationBody::SetLimits);
+	if (rbActor)
+	{
+		for (PX_ArticulationLink* L = GetList(); L; L = L->GetListNext())
+			L->SetLimits(MaxAngVel, MaxLinVel);
+	}
+	unguard;
+}
+void FPhysXArticulationBody::SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp)
+{
+	guard(FPhysXArticulationBody::SetDampening);
+	if (rbActor)
+	{
+		for (PX_ArticulationLink* L = GetList(); L; L = L->GetListNext())
+			L->SetDampening(AngVelDamp, LinVelDamp);
+	}
+	unguard;
+}
+
+//==========================================================================================
+// Articulation link
+
 FPhysXArticulationLink::FPhysXArticulationLink(FPhysXArticulationBody* B, const FArticulationProperties& Parms, FPhysXScene* S, const FVector& Pos, const FRotator& Rot)
 	: PX_ArticulationLink(B, Parms.ParentLink, Parms.Actor, S)
 {
@@ -185,7 +225,7 @@ FPhysXArticulationLink::FPhysXArticulationLink(FPhysXArticulationBody* B, const 
 	if (B->GetRbActor())
 	{
 		FINISH_PHYSX_THREAD;
-		Link = GET_BODY(B->GetRbActor())->createLink(Parms.ParentLink ? GET_LINK(Parms.ParentLink->GetRbActor()) : nullptr, NXCoordsToMatrix(Pos, Rot));
+		Link = GET_BODY(B->GetRbActor())->createLink(Parms.ParentLink ? GET_LINK(Parms.ParentLink->GetRbActor()) : nullptr, UECoordsToPX(Pos, Rot));
 		rbActor = Link;
 	}
 	if (Link)
@@ -195,7 +235,8 @@ FPhysXArticulationLink::FPhysXArticulationLink(FPhysXArticulationBody* B, const 
 		// Init mass
 		FINISH_PHYSX_THREAD;
 		//physx::PxVec3 COM = VectToNX3v(Parms.COMOffset);
-		physx::PxRigidBodyExt::updateMassAndInertia(*Link, Parms.Mass);
+		//physx::PxRigidBodyExt::updateMassAndInertia(*Link, Parms.Mass * UEMassToPX);
+		Link->setMass(Parms.Mass * UEMassToPX);
 		Link->userData = NULL;
 
 		physx::PxArticulationJointReducedCoordinate* rcJoint = static_cast<physx::PxArticulationJointReducedCoordinate*>(Link->getInboundJoint());
@@ -226,7 +267,7 @@ void FPhysXArticulationLink::SetMass(FLOAT NewMass)
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		GET_LINK(rbActor)->setMass(NewMass);
+		GET_LINK(rbActor)->setMass(NewMass * UEMassToPX);
 	}
 }
 void FPhysXArticulationLink::SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel)
@@ -235,7 +276,7 @@ void FPhysXArticulationLink::SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel)
 	{
 		FINISH_PHYSX_THREAD;
 		GET_LINK(rbActor)->setMaxAngularVelocity(MaxAngVel);
-		GET_LINK(rbActor)->setMaxLinearVelocity(MaxLinVel);
+		GET_LINK(rbActor)->setMaxLinearVelocity(MaxLinVel * UEScaleToPX);
 	}
 }
 void FPhysXArticulationLink::SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp)
@@ -256,8 +297,8 @@ void FPhysXArticulationLink::SetJointCoords(const FCoords& A, const FCoords& B)
 		physx::PxArticulationJointBase* J = GET_LINK(rbActor)->getInboundJoint();
 		if (J)
 		{
-			J->setChildPose(NXCoordsToMatrix(A));
-			J->setParentPose(NXCoordsToMatrix(B));
+			J->setChildPose(UECoordsToPX(A));
+			J->setParentPose(UECoordsToPX(B));
 		}
 	}
 }
@@ -273,7 +314,7 @@ FVector FPhysXArticulationLink::GetLinearVelocity()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		return NX3vToVect(GET_LINK(rbActor)->getLinearVelocity());
+		return PXVectorToUE(GET_LINK(rbActor)->getLinearVelocity());
 	}
 	return FVector(0, 0, 0);
 }
@@ -282,7 +323,7 @@ void FPhysXArticulationLink::SetLinearVelocity(const FVector& NewVel)
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		GET_LINK(rbActor)->setLinearVelocity(VectToNX3v(NewVel));
+		GET_LINK(rbActor)->setLinearVelocity(UEVectorToPX(NewVel));
 	}
 }
 FVector FPhysXArticulationLink::GetAngularVelocity()
@@ -290,7 +331,7 @@ FVector FPhysXArticulationLink::GetAngularVelocity()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		return NX3vToVect(GET_LINK(rbActor)->getAngularVelocity());
+		return PXNormalToUE(GET_LINK(rbActor)->getAngularVelocity());
 	}
 	return FVector(0, 0, 0);
 }
@@ -299,7 +340,7 @@ void FPhysXArticulationLink::SetAngularVelocity(const FVector& NewVel)
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		GET_LINK(rbActor)->setAngularVelocity(VectToNX3v(NewVel));
+		GET_LINK(rbActor)->setAngularVelocity(UENormalToPX(NewVel));
 	}
 }
 void FPhysXArticulationLink::GetPosition(FVector* Pos, FRotator* Rot)
@@ -308,7 +349,7 @@ void FPhysXArticulationLink::GetPosition(FVector* Pos, FRotator* Rot)
 	{
 		FINISH_PHYSX_THREAD;
 		physx::PxTransform T = GET_LINK(rbActor)->getGlobalPose();
-		FCoords C = NXMatrixToCoords(T);
+		FCoords C = PXCoordsToUE(T);
 		if (Pos)
 			*Pos = C.Origin;
 		if (Rot)
@@ -325,8 +366,7 @@ FQuat FPhysXArticulationLink::GetRotation()
 	if (rbActor)
 	{
 		FINISH_PHYSX_THREAD;
-		physx::PxTransform T = GET_LINK(rbActor)->getGlobalPose();
-		return FQuat(T.q.x, T.q.y, T.q.z, T.q.w);
+		return PXCoordsToUEQuat(GET_LINK(rbActor)->getGlobalPose());
 	}
 	return FQuat(1.f, 0.f, 0.f, 0.f);
 }
@@ -340,11 +380,11 @@ void FPhysXArticulationLink::Impulse(const FVector& Force, const FVector* Pos, U
 			physx::PxVec3 Vel, Ang;
 			PhysXArtLinkType* dyn = GET_LINK(rbActor);
 			FLOAT InvMass = bCheckMass ? (1.f / Actor->Mass) : 1.f;
-			physx::PxRigidBodyExt::computeLinearAngularImpulse(*dyn, dyn->getGlobalPose(), VectToNX3v(*Pos), VectToNX3v(Force), InvMass, InvMass * 0.00025f, Vel, Ang);
+			physx::PxRigidBodyExt::computeLinearAngularImpulse(*dyn, dyn->getGlobalPose(), UEVectorToPX(*Pos), UEVectorToPX(Force), InvMass, InvMass * 0.00025f, Vel, Ang);
 			dyn->addForce(Vel, physx::PxForceMode::eVELOCITY_CHANGE);
 			dyn->addTorque(Ang, physx::PxForceMode::eVELOCITY_CHANGE);
 		}
-		else GET_LINK(rbActor)->addForce(VectToNX3v(bCheckMass ? (Force / Actor->Mass) : Force), physx::PxForceMode::eVELOCITY_CHANGE);
+		else GET_LINK(rbActor)->addForce(UEVectorToPX(bCheckMass ? (Force / Actor->Mass) : Force), physx::PxForceMode::eVELOCITY_CHANGE);
 	}
 }
 void FPhysXArticulationLink::SetCollisionFlags(DWORD Group, DWORD Flags)

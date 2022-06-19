@@ -25,6 +25,7 @@ class EditorEngine extends Engine extends FNotifyHook
 var const Level       Level;
 var const Model       TempModel,bspProcessModel;
 var const Texture     CurrentTexture;
+var const Font        CurrentFont;
 var const Class       CurrentClass;
 var pointer<class UTransactor*>			Trans;
 var pointer<class UTextBuffer*>			Results;

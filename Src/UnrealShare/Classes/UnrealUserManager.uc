@@ -103,7 +103,7 @@ final function string GetCurrentClass()
 }
 
 // Build a list of skins
-final function int GetMeshSkins( class<PlayerPawn> PlayerClass, out array<PlayerClassManager> Managers )
+final function int GetMeshSkins( class<Pawn> PlayerClass, out array<PlayerClassManager> Managers )
 {
 	local string Value,Desc,MeshName,MeshDotted;
 	local int i,Index,MeshLen;
@@ -166,7 +166,7 @@ final function string GetCurrentSkin()
 }
 
 // Build a list of faces
-final function int GetMeshFaces( class<PlayerPawn> PlayerClass, string PlayerSkin, out array<PlayerClassManager> Managers )
+final function int GetMeshFaces( class<Pawn> PlayerClass, string PlayerSkin, out array<PlayerClassManager> Managers )
 {
 	local string Value,Desc,MeshName,MeshDotted,S,SkinName;
 	local int Index,MeshLen;

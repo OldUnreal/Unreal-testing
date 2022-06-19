@@ -78,11 +78,11 @@ native(465) final function DrawText( coerce string Text, optional bool CR, optio
 // 227j: PolyFlags can be used to override any style while DrawTile ignores PF_Masked and sets PF_TwoSided.However, it is recommended to keep PF_TWoSided for HUD drawing.
 // WorldPos can be used to override draw position and draw sprite in world coordinates and scale.
 native(466) final function DrawTile( texture Tex, float XL, float YL, float U, float V, float UL, float VL, optional int PolyFlags, optional vector WorldPos );
-native(467) final function DrawActor( Actor A, optional bool WireFrame, optional bool ClearZ );
+native(467) final function DrawActor( Actor A, optional bool WireFrame, optional bool ClearZ, optional float FOV );
 native(468) final function DrawTileClipped( texture Tex, float XL, float YL, float U, float V, float UL, float VL, optional int PolyFlags );// PolyFlags can be used to override any style...
 native(469) final function DrawTextClipped( coerce string Text, optional bool bCheckHotKey, optional int PolyFlags );// PolyFlags can be used to override any style...
 native(470) final function TextSize( coerce string String, out float XL, out float YL );
-native(471) final function DrawClippedActor( Actor A, bool WireFrame, int X, int Y, int XB, int YB, optional bool ClearZ );
+native(471) final function DrawClippedActor( Actor A, bool WireFrame, int X, int Y, int XB, int YB, optional bool ClearZ, optional float FOV );
 native(477) final function DrawTileStretched( Texture Tex, int X1, int Y1, int X2, int Y2 );
 native(480) final function DrawPortal( int X, int Y, int Width, int Height, actor CamActor, vector CamLocation, rotator CamRotation, optional int FOV, optional bool ClearZ );
 

@@ -124,7 +124,7 @@ var	bool						bOverTime;
 var globalconfig bool			bLocalLog;
 var globalconfig bool			bLocalLogQuery;
 var globalconfig bool			bWorldLog;
-var bool						bLoggingGame;	// Does this gametype log?
+var bool						bLoggingGame;			// Does this gametype log?
 
 //------------------------------------------------------------------------------
 var(BloodServer) globalconfig bool	bBleedingEnabled;			// Turn on bleeding.
@@ -143,6 +143,7 @@ var() globalconfig bool			bCastShadow;					// Shadow implementation
 var() globalconfig bool			bDecoShadows;					// Decoration cast shadows
 var() globalconfig bool			bCastProjectorShadows;			// Use advanced projector shadows instead of decal shadows. Very CPU intensive.
 var() globalconfig bool			bUseRealtimeShadow;				// Use blob shadow or realistic shadow
+var() globalconfig bool			bMultiThreadedShadows;			// Real-Time shadows should be drawn multi-threaded.
 var() globalconfig bool			bNoWalkInAir;					// Do not allow Pawn physics "walk in air" glitch
 var() globalconfig bool			bProjectorDecals;				// Use projectors for weapon decals. Very CPU intensive.
 var transient const bool		bIsSavedGame;					// Set to true on saved games.
@@ -154,6 +155,7 @@ var() globalconfig bool			bRestrictMoversRetriggering;	/* 227j. Specifies how mo
 																By default, only objects of types Engine.Mover and UnrealShare.AttachMover (but not
 																subclasses thereof) are affected by this setting. */
 var() globalconfig bool			bUseClassicBalance;				// Classic balance mode.
+var bool						bLoadPlayerClass;				// This gamemode should load playerpawn class when player joins or local player spawns (if false, always pass DefaultPlayerClass to Login)
 //------------------------------------------------------------------------------
 // 227j: Used for storing saved game info.
 struct SavedGameInfo
@@ -1810,4 +1812,6 @@ defaultproperties
 	GameMaxChannels=1024
 	DesiredMaxChannels=1024
 	bUseClassicBalance=true
+	bMultiThreadedShadows=true
+	bLoadPlayerClass=true
 }

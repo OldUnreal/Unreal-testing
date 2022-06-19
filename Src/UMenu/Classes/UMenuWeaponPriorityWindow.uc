@@ -25,7 +25,7 @@ function ResolutionChanged(float W, float H)
 
 function SetSizePos()
 {
-	SetSize(Min(480, Root.WinWidth - 50), Min(360, Root.WinHeight - 50));
+	SetSize(Min(700, Root.WinWidth - 50), Min(480, Root.WinHeight - 50));
 	WinLeft = int(Root.WinWidth/2 - WinWidth/2);
 	WinTop = int(Root.WinHeight/2 - WinHeight/2);
 }

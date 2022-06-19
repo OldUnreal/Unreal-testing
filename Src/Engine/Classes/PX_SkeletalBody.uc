@@ -18,7 +18,7 @@ struct export SkeletalBonePair
 {
 	var() name A,B;
 };
-var() array<SkeletalBonePair> DisableCollision; // Disable collision between these bone pairs.
+var array<SkeletalBonePair> DisableCollision; // NOT SUPPORTED: Disable collision between these bone pairs.
 
 cpptext
 {

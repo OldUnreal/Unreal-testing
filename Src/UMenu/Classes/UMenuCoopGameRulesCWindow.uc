@@ -95,25 +95,31 @@ function Notify(UWindowDialogControl C, byte E)
 
 function FriendlyFireChanged()
 {
-	class<CoopGame>(BotmatchParent.GameClass).default.bNoFriendlyFire = !FriendlyFire.bChecked;
+	if( class<CoopGame>(BotmatchParent.GameClass) )
+		class<CoopGame>(BotmatchParent.GameClass).default.bNoFriendlyFire = !FriendlyFire.bChecked;
 }
 
 function InstantWeaponRespawnChanged()
 {
-	class<CoopGame>(BotmatchParent.GameClass).default.bInstantWeaponRespawn = InstantWeaponRespawn.bChecked;
+	if( class<CoopGame>(BotmatchParent.GameClass) )
+		class<CoopGame>(BotmatchParent.GameClass).default.bInstantWeaponRespawn = InstantWeaponRespawn.bChecked;
 }
 
 function InstantItemRespawnChanged()
 {
-	class<CoopGame>(BotmatchParent.GameClass).default.bInstantItemRespawn = InstantItemRespawn.bChecked;
+	if( class<CoopGame>(BotmatchParent.GameClass) )
+		class<CoopGame>(BotmatchParent.GameClass).default.bInstantItemRespawn = InstantItemRespawn.bChecked;
 }
 
 function LoadCurrentValues()
 {
 	super.LoadCurrentValues();
-	FriendlyFire.bChecked = !class<CoopGame>(BotmatchParent.GameClass).default.bNoFriendlyFire;
-	InstantWeaponRespawn.bChecked = class<CoopGame>(BotmatchParent.GameClass).default.bInstantWeaponRespawn;
-	InstantItemRespawn.bChecked = class<CoopGame>(BotmatchParent.GameClass).default.bInstantItemRespawn;
+	if( class<CoopGame>(BotmatchParent.GameClass) )
+	{
+		FriendlyFire.bChecked = !class<CoopGame>(BotmatchParent.GameClass).default.bNoFriendlyFire;
+		InstantWeaponRespawn.bChecked = class<CoopGame>(BotmatchParent.GameClass).default.bInstantWeaponRespawn;
+		InstantItemRespawn.bChecked = class<CoopGame>(BotmatchParent.GameClass).default.bInstantItemRespawn;
+	}
 }
 
 defaultproperties

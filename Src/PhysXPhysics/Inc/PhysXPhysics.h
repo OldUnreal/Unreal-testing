@@ -27,42 +27,60 @@ typedef physx::PxArticulationLink PhysXArtLinkType;
 
 struct FPhysXScene;
 
-inline physx::PxVec3 VectToNX3v(const FVector& V)
+#define PXScaleToUE 50.f
+#define UEScaleToPX 0.02f
+#define PXMassToUE 100.f
+#define UEMassToPX 0.01f
+
+inline physx::PxVec3 UEVectorToPX(const FVector& V)
+{
+	return physx::PxVec3(V.X * UEScaleToPX, V.Y * UEScaleToPX, V.Z * UEScaleToPX);
+}
+inline FVector PXVectorToUE(const physx::PxVec3& t)
+{
+	return FVector(t.x * PXScaleToUE, t.y * PXScaleToUE, t.z * PXScaleToUE);
+}
+
+inline physx::PxVec3 UENormalToPX(const FVector& V)
 {
 	return physx::PxVec3(V.X, V.Y, V.Z);
 }
-inline FVector NX3vToVect(const physx::PxVec3& t)
+inline FVector PXNormalToUE(const physx::PxVec3& t)
 {
 	return FVector(t.x, t.y, t.z);
 }
 
-inline physx::PxTransform NXCoordsToMatrix(const FVector& Point, const FRotator& Rot)
+inline physx::PxTransform UECoordsToPX(const FVector& Point, const FRotator& Rot)
 {
 	FCoords C = GMath.UnitCoords / Rot;
 #if VECTOR_ALIGNMENT==16
-	return physx::PxTransform(VectToNX3v(Point), physx::PxQuat(physx::PxMat33(VectToNX3v(C.XAxis), VectToNX3v(C.YAxis), VectToNX3v(C.ZAxis))));
+	return physx::PxTransform(UEVectorToPX(Point), physx::PxQuat(physx::PxMat33(UENormalToPX(C.XAxis), UENormalToPX(C.YAxis), UENormalToPX(C.ZAxis))));
 #else
-	return physx::PxTransform(VectToNX3v(Point), physx::PxQuat(physx::PxMat33(&C.XAxis.X)));
+	return physx::PxTransform(UEVectorToPX(Point), physx::PxQuat(physx::PxMat33(&C.XAxis.X)));
 #endif
 }
-inline physx::PxTransform NXCoordsToMatrix(const FCoords& C)
+inline physx::PxTransform UECoordsToPX(const FCoords& C)
 {
 #if VECTOR_ALIGNMENT==16
-	return physx::PxTransform(VectToNX3v(C.Origin), physx::PxQuat(physx::PxMat33(VectToNX3v(C.XAxis), VectToNX3v(C.YAxis), VectToNX3v(C.ZAxis))));
+	return physx::PxTransform(UEVectorToPX(C.Origin), physx::PxQuat(physx::PxMat33(UENormalToPX(C.XAxis), UENormalToPX(C.YAxis), UENormalToPX(C.ZAxis))));
 #else
-	return physx::PxTransform(VectToNX3v(C.Origin), physx::PxQuat(physx::PxMat33(const_cast<FLOAT*>(&C.XAxis.X))));
+	return physx::PxTransform(UEVectorToPX(C.Origin), physx::PxQuat(physx::PxMat33(const_cast<FLOAT*>(&C.XAxis.X))));
 #endif
 }
-inline FCoords NXMatrixToCoords(const physx::PxTransform& m)
+inline FCoords PXCoordsToUE(const physx::PxTransform& m)
 {
 	physx::PxMat33 mx(m.q);
-	return FCoords(NX3vToVect(m.p), NX3vToVect(mx.column0), NX3vToVect(mx.column1), NX3vToVect(mx.column2));
+	return FCoords(PXVectorToUE(m.p), PXNormalToUE(mx.column0), PXNormalToUE(mx.column1), PXNormalToUE(mx.column2));
 }
-inline physx::PxQuat FRotatorToNXQuat(const FRotator& Rot)
+inline FQuat PXCoordsToUEQuat(const physx::PxTransform& m)
+{
+	return FQuat(m.q.x, m.q.y, m.q.z, m.q.w);
+}
+inline physx::PxQuat UERotatorToPX(const FRotator& Rot)
 {
 	FCoords C = GMath.UnitCoords / Rot;
 #if VECTOR_ALIGNMENT==16
-	return physx::PxQuat(physx::PxMat33(VectToNX3v(C.XAxis), VectToNX3v(C.YAxis), VectToNX3v(C.ZAxis)));
+	return physx::PxQuat(physx::PxMat33(UENormalToPX(C.XAxis), UENormalToPX(C.YAxis), UENormalToPX(C.ZAxis)));
 #else
 	return physx::PxQuat(physx::PxMat33(&C.XAxis.X));
 #endif
@@ -220,17 +238,17 @@ struct FPhysXScene : public PX_SceneBase
 		guardSlow(FPhysXScene::SetOptionalPosition);
 		FINISH_PHYSX_THREAD;
 		if (NewPos && NewRot)
-			rb->setGlobalPose(NXCoordsToMatrix(*NewPos, *NewRot), false);
+			rb->setGlobalPose(UECoordsToPX(*NewPos, *NewRot), false);
 		else if (NewPos)
 		{
 			physx::PxTransform T = rb->getGlobalPose();
-			T.p = VectToNX3v(*NewPos);
+			T.p = UEVectorToPX(*NewPos);
 			rb->setGlobalPose(T, false);
 		}
 		else if (NewRot)
 		{
 			physx::PxTransform T = rb->getGlobalPose();
-			T.q = FRotatorToNXQuat(*NewRot);
+			T.q = UERotatorToPX(*NewRot);
 			rb->setGlobalPose(T, false);
 		}
 		unguardSlow;
@@ -297,7 +315,7 @@ struct FListedPhysXActor : public FPhysXActorBase
 #define DECLARE_BASE_PX(baseclass,type) \
 	DWORD GetType() const \
 	{ \
-		return RBTYPE_RigidBody; \
+		return type; \
 	} \
 	AActor* GetActorOwner() const \
 	{ \

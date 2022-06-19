@@ -126,7 +126,7 @@ void AXParticleEmitter::Serialize(FArchive& Ar)
 	{
 		Super::Serialize(Ar);
 
-		if (Ar.SerializeRefs() && PartPtr)
+		if (!Ar.IsLoading() && !Ar.IsSaving() && PartPtr)
 			PartPtr->Serialize(Ar);
 	}
 	unguardSlow;

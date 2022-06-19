@@ -140,7 +140,8 @@ function StartPressed()
 	}
 
 	// Reset the game class.
-	GameClass.Static.ResetGame();
+	if( GameClass )
+		GameClass.Static.ResetGame();
 
 	if (bSetGameDifficulty)
 	{
@@ -155,6 +156,27 @@ function StartPressed()
 	GetPlayerOwner().ClientTravel(URL, TRAVEL_Absolute, false);
 }
 
+function PreGameChanged()
+{
+	if( RulesPage )
+	{
+		DeletePage(RulesPage);
+		RulesPage = None;
+	}
+	if( SettingsPage )
+	{
+		DeletePage(SettingsPage);
+		SettingsPage = None;
+	}
+	if( BotConfigPage )
+	{
+		DeletePage(BotConfigPage);
+		BotConfigPage = None;
+	}
+	if( GameClass )
+		GameClass.static.StaticSaveConfig();
+}
+
 function GameChanged()
 {
 	local class<UWindowPageWindow> PageClass;
@@ -163,31 +185,31 @@ function GameChanged()
 	bSetGameDifficulty = false;
 	InsertedPage = StartMatchPage;
 
-	// Change out the rules page...
-	DeletePage(RulesPage);
-	PageClass = class<UWindowPageWindow>(DynamicLoadObject(GameClass.Default.RulesMenuType, class'Class', true));
-	if (PageClass != none)
+	if( GameClass )
 	{
-		RulesPage = Pages.InsertPageAfter(InsertedPage, RulesTab, PageClass);
-		InsertedPage = RulesPage;
-	}
-
-	// Change out the settings page...
-	DeletePage(SettingsPage);
-	PageClass = class<UWindowPageWindow>(DynamicLoadObject(GameClass.Default.SettingsMenuType, class'Class', true));
-	if (PageClass != none)
-	{
-		SettingsPage = Pages.InsertPageAfter(InsertedPage, SettingsTab, PageClass);
-		InsertedPage = SettingsPage;
-	}
-
-	// Change out the bots page...
-	DeletePage(BotConfigPage);
-	if (Len(GameClass.default.BotMenuType) > 0)
-	{
-		PageClass = class<UWindowPageWindow>(DynamicLoadObject(GameClass.Default.BotMenuType, class'Class', true));
+		// Change out the rules page...
+		PageClass = class<UWindowPageWindow>(DynamicLoadObject(GameClass.Default.RulesMenuType, class'Class', true));
 		if (PageClass != none)
-			BotConfigPage = Pages.InsertPageAfter(InsertedPage, BotConfigTab, PageClass);
+		{
+			RulesPage = Pages.InsertPageAfter(InsertedPage, RulesTab, PageClass);
+			InsertedPage = RulesPage;
+		}
+
+		// Change out the settings page...
+		PageClass = class<UWindowPageWindow>(DynamicLoadObject(GameClass.Default.SettingsMenuType, class'Class', true));
+		if (PageClass != none)
+		{
+			SettingsPage = Pages.InsertPageAfter(InsertedPage, SettingsTab, PageClass);
+			InsertedPage = SettingsPage;
+		}
+
+		// Change out the bots page...
+		if (Len(GameClass.default.BotMenuType) > 0)
+		{
+			PageClass = class<UWindowPageWindow>(DynamicLoadObject(GameClass.Default.BotMenuType, class'Class', true));
+			if (PageClass != none)
+				BotConfigPage = Pages.InsertPageAfter(InsertedPage, BotConfigTab, PageClass);
+		}
 	}
 }
 

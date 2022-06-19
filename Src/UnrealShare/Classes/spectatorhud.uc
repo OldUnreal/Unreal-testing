@@ -32,6 +32,7 @@ simulated function PostRender( canvas Canvas )
 	}
 	if (Canvas.ClipY<290) Return;
 
+	Canvas.bNoSmooth = false;
 	Canvas.Style = ERenderStyle.STY_Translucent;
 	StartX = 0.5 * Canvas.ClipX - 128;
 	Canvas.SetPos(StartX,Canvas.ClipY-58);
@@ -40,7 +41,6 @@ simulated function PostRender( canvas Canvas )
 	StartX = 0.5 * Canvas.ClipX - 128;
 	Canvas.SetPos(StartX,Canvas.ClipY-52);
 	Canvas.DrawIcon(texture'Logo2', 1.0);
-	Canvas.Style = 1;
 }
 
 defaultproperties

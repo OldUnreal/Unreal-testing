@@ -65,8 +65,7 @@ defaultproperties
 	bHasLooseEnd=true
 	NumSegments=12
 	RopeThickness=2
-	//Physics=PHYS_RigidBody
-	Physics=PHYS_None
+	Physics=PHYS_RigidBody
 	TexVertScaling=3
 	
 	bNoDynamicShadowCast=true

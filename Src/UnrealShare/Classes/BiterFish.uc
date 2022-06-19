@@ -12,15 +12,22 @@ class BiterFish extends FlockPawn
 #exec MESH SEQUENCE MESH=AmbientFish SEQ=Swim1  STARTFRAME=0   NUMFRAMES=8
 #exec MESH SEQUENCE MESH=AmbientFish SEQ=Bite   STARTFRAME=8   NUMFRAMES=3
 
-#exec TEXTURE IMPORT NAME=Jfish21  FILE=Models\fish1.pcx GROUP=Skins
+#exec TEXTURE IMPORT NAME=Jfish21HD  FILE=Models\fish1.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jfish21  FILE=Models\fish1_old.pcx GROUP="Skins" HD=Jfish21HD
 #exec MESHMAP SCALE MESHMAP=AmbientFish X=0.06 Y=0.06 Z=0.12
 #exec MESHMAP SETTEXTURE MESHMAP=AmbientFish NUM=0 TEXTURE=Jfish21 TLOD=200
 
-#exec TEXTURE IMPORT NAME=Jfish22  FILE=Models\fish2.pcx GROUP=Skins
-#exec TEXTURE IMPORT NAME=Jfish23  FILE=Models\fish3.pcx GROUP=Skins
-#exec TEXTURE IMPORT NAME=Jfish24  FILE=Models\fish4.pcx GROUP=Skins
-#exec TEXTURE IMPORT NAME=Jfish25  FILE=Models\fish5.pcx GROUP=Skins
-#exec TEXTURE IMPORT NAME=Jfish26  FILE=Models\fish6.pcx GROUP=Skins
+#exec TEXTURE IMPORT NAME=Jfish22HD  FILE=Models\fish2.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jfish23HD  FILE=Models\fish3.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jfish24HD  FILE=Models\fish4.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jfish25HD  FILE=Models\fish5.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jfish26HD  FILE=Models\fish6.pcx GROUP="HD"
+
+#exec TEXTURE IMPORT NAME=Jfish22  FILE=Models\fish2_old.pcx GROUP="Skins" HD=Jfish22HD
+#exec TEXTURE IMPORT NAME=Jfish23  FILE=Models\fish3_old.pcx GROUP="Skins" HD=Jfish23HD
+#exec TEXTURE IMPORT NAME=Jfish24  FILE=Models\fish4_old.pcx GROUP="Skins" HD=Jfish24HD
+#exec TEXTURE IMPORT NAME=Jfish25  FILE=Models\fish5_old.pcx GROUP="Skins" HD=Jfish25HD
+#exec TEXTURE IMPORT NAME=Jfish26  FILE=Models\fish6_old.pcx GROUP="Skins" HD=Jfish26HD
 
 var() byte BiteDamage;
 var float AirTime;
