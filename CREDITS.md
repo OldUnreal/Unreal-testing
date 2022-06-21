@@ -4,9 +4,6 @@
 * Epic Games: the game itself as well as greenlighting the project.
 * UTPG: Previous work in UT
 * Chris Dohnal, aka UTGLR: original OpenGL, D3D8 and D3D9 renderers, native coding support.
-
-## The OldUnreal community
-
 * .:..: (a.k.a. Dots/Marco): Native functions, maths and routines as well as coding features such as in native Particle-Emitter, Octree-Hashing, Static Meshes, bug hunting, many script-fixes and additions.
 * Shambler: Native coding, Anticheat, general support.
 * Wolf: Anticheat, UnrealScript support.
