@@ -20,16 +20,18 @@
 * Hellkeeper: UED2.1 help file, Wiki maintenance, maps DmRiot and DmExar.
 * Henry00³ (de Jongh): UED bug hunting, UED help, final quality checks.
 * HyperNL: Enhanced ServerBrowser, server testing.
-* Ividyon: kicking Smirf's butt when needed.
+* ividyon: HD HUD assets, kicking Smirf's butt when needed.
 * Kerilk: FMOD, OpenAL support.
-* Krull0r: Maps DMRetrospective, DMBeyondTheSun and EntryII, graphical fixing, extensive mapping and script testing.
+* Krull0r: Maps DMRetrospective, DMBeyondTheSun and EntryII, graphical fixing, extensive mapping, script testing, HD HUD assets.
 * Masterkent: Bug hunting.
 * Neon_Knight: Wiki maintenance and admin, Release notes, Changelog.
 * Pitbull: Overall support.
 * Raven: Script based ParticleEmitter, UE1PreProcessor Commandlet and other nice features.
 * Roman Switch`Dzieciol: Base work on SWFMod.
+* Rubie: Bug hunting.
 * Shambler: Native coding, Anticheat, general support.
 * Shivaxi: Bug hunting, new decals, footstepsounds.
+* Sly.: HD HUD assets.
 * Turboman: Skeletal mesh testing, UMenu background.
 * Wolf: Anticheat, UnrealScript support.
 * Zombie: Script fixing, security issue reporting/fixing.
