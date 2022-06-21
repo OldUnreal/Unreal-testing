@@ -1,5 +1,7 @@
 # Unreal v227 credits
 
+Here’s a list of people that helped me in this project in no particular order. Had any of them not helped, this project would have been much more difficult. Forgive me and file a notice if I missed someone:
+
 * Smirftsch: main project coordination
 * Epic Games: the game itself as well as greenlighting the project.
 * UTPG: Previous work in UT
@@ -12,6 +14,7 @@
 * Buggie: Fixes, mobile templates for webadmin.
 * CacoFFF/Higor: Code fixes, ALAudio and OpenGL improvements.
 * []KAOS[]Casey: Script fixing, Blood effects, testing, bug hunting.
+* Chamberly: Original Discord server.
 * Creavion: UED2 Bug Hunting, Support.
 * DieHard: 227 High-Resolution Textures.
 * SA-Digimes and {KDS}Rewind: for hosting the OldUnreal-Serpentine server, which was badly needed for testing.
@@ -41,7 +44,7 @@
 
 * Epic Games/Digital Extremes/Legend Entertainment: Original English/German/French/Spanish/Italian localizations
 * Neon_Knight: Localization project coordination, Spanish maintenance.
-* Buggie: Localization templates for all 15 languages.
+* Buggie: Localization templates for all languages.
 * Smirftsch: German, additional contributions.
 * eGo: German, additional contributions.
 * Ividyon: German, additional contributions.
@@ -58,3 +61,5 @@
 * Naruto_9: Portuguese, additional contributions.
 * bennytrt: Dutch, additional contributions.
 * Rubie: Dutch, revision and additional contributions.
+
+And all friends who offered me mirroring; the OldUnreal community which helps me to find and fix bugs in the Forums and on Github; and of course all those I may forget now, and all those who donated to OldUnreal, helping me to pay and maintain OldUnreal.
