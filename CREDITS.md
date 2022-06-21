@@ -23,7 +23,7 @@
 * ividyon: HD HUD assets, kicking Smirf's butt when needed.
 * Kerilk: FMOD, OpenAL support.
 * Krull0r: Maps DMRetrospective, DMBeyondTheSun and EntryII, graphical fixing, extensive mapping, script testing, HD HUD assets.
-* Masterkent: Bug hunting.
+* Masterkent: Extensive bug hunting, script testing, script fixes, testing tools
 * Neon_Knight: Wiki maintenance and admin, Release notes, Changelog.
 * Pitbull: Overall support.
 * Raven: Script based ParticleEmitter, UE1PreProcessor Commandlet and other nice features.
