@@ -1,4 +1,4 @@
-﻿[Setup]
+[Setup]
 LocalProduct="Unreal Gold"
 DefaultFolder="C:\Program Files (x86)\UnrealGold"
 ReadMe="Help\227ReleaseNotes.pdf"

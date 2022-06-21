@@ -1,4 +1,4 @@
-[SVariableBase]
+﻿[SVariableBase]
 MenuName=Variables
 
 [VAR_OBJECT_BASE]
