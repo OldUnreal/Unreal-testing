@@ -427,6 +427,8 @@ HelpMessage[6]="Utiliza los Bots cuando juegues con otras personas."
 PickupMessage="Has recogido el Cinturón de Protección"
 ; EN: ItemName="Shield Belt"
 ItemName="Cinturón de Protección"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [Flashlight]
 ; EN: ExpireMessage="Flashlight batteries have died."
@@ -435,6 +437,14 @@ ExpireMessage="Las pilas de la Linterna se han agotado."
 PickupMessage="Has recogido la Linterna"
 ; EN: ItemName="Flashlight"
 ItemName="Linterna"
+; EN: ItemArticle="a"
+ItemArticle="una"
+; EN: M_Activated=" activated."
+M_Activated=" activada."
+; EN: M_Selected=" selected."
+M_Selected=" seleccionada."
+; EN: M_Deactivated=" deactivated."
+M_Deactivated=" desactivada."
 
 [UnrealLoadMenu]
 ; EN: RestartString="Restart "
@@ -495,12 +505,16 @@ HelpMessage[5]="Partida contra Bots en mapas multijugador."
 PickupMessage="Has recogido la Fruta Curativa Nali +"
 ; EN: ItemName="Nali Healing Fruit"
 ItemName="Fruta Curativa Nali"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [Health]
 ; EN: PickupMessage="You picked up a Health Pack +"
 PickupMessage="Has recogido un Botiquín de Salud +"
 ; EN: ItemName="Health Pack"
 ItemName="Botiquín de Salud"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UnrealMultiPlayerMenu]
 ; EN: MenuList[1]="JOIN GAME"
@@ -569,6 +583,8 @@ MenuTitle="SERV. LOCALES"
 PickupMessage="Has recogido la Mochila de Buceo"
 ; EN: ItemName="SCUBA Gear"
 ItemName="Mochila de Buceo"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [CoopGame]
 ; EN: ClassCaption="Coop Game"
@@ -598,6 +614,8 @@ MenuTitle="GUARDAR PART."
 PickupMessage="Has recogido 12 Proyectiles Eightball"
 ; EN: ItemName="Eightballs"
 ItemName="Proyectiles Eightball"
+; EN: ItemArticle="a bunch of"
+ItemArticle="un puñado de"
 
 [Amplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
@@ -606,36 +624,56 @@ ExpireMessage="El Amplificador Energético se ha agotado."
 PickupMessage="Has recogido el Amplificador Energético"
 ; EN: ItemName="Energy Amplifier"
 ItemName="Amplificador Energético"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [VoiceBox]
 ; EN: PickupMessage="You picked up the Voice Box"
 PickupMessage="Has recogido la Caja de Voces"
 ; EN: ItemName="Voice Box"
 ItemName="Caja de Voces"
+; EN: ItemArticle="a"
+ItemArticle="una"
+; EN: M_Activated=" activated."
+M_Activated=" activada."
+; EN: M_Selected=" selected."
+M_Selected=" seleccionada."
 
 [Shellbox]
 ; EN: PickupMessage="You picked up 50 bullets"
 PickupMessage="Has recogido una caja de 50 Balas"
 ; EN: ItemName="Bullet Box"
 ItemName="Caja de Balas"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [Flare]
 ; EN: PickupMessage="You got a Flare"
 PickupMessage="Has recogido una Bengala"
 ; EN: ItemName="Flare"
 ItemName="Bengala"
+; EN: ItemArticle="a"
+ItemArticle="una"
+; EN: M_Activated=" activated."
+M_Activated=" encendida."
+; EN: M_Selected=" selected."
+M_Selected=" seleccionada."
 
 [WeaponPowerUp]
 ; EN: PickupMessage="You got the Dispersion Pistol Powerup"
 PickupMessage="Has recogido un Mejorador para la Pistola de Dispersión"
 ; EN: ItemName="Dispersion Pistol Powerup"
 ItemName="Mejorador de Pistola de Dispersión"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [ASMDAmmo]
 ; EN: PickupMessage="You picked up an ASMD Core"
 PickupMessage="Has recogido un Núcleo ASMD"
 ; EN: ItemName="ASMD Core"
 ItemName="Núcleo ASMD"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [MaleThree]
 ; EN: MenuName="Male 3"
@@ -662,6 +700,8 @@ OKString="[Aceptar]"
 PickupMessage="Has recogido 40 Fragmentos de Taridio"
 ; EN: ItemName="Tarydium Shards"
 ItemName="Fragmentos de Taridio"
+; EN: ItemArticle="a bunch of"
+ItemArticle="un puñado de"
 
 [UnrealTeamGameOptionsMenu]
 ; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
@@ -674,30 +714,40 @@ MenuList[10]="Escala Fuego Amigo"
 PickupMessage="Has recogido el Superbotiquín de Salud"
 ; EN: ItemName="Super Health Pack"
 ItemName="Superbotiquín de Salud"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [Clip]
 ; EN: PickupMessage="You picked up a clip"
 PickupMessage="Has recogido un Cartucho"
 ; EN: ItemName="Clip"
 ItemName="Cartucho"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [Bandages]
 ; EN: PickupMessage="You got some Bandages +"
 PickupMessage="Has recogido algunas Vendas +"
 ; EN: ItemName="Bandages"
 ItemName="Vendas"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unas"
 
 [Armor]
 ; EN: PickupMessage="You got the Assault Vest"
 PickupMessage="Has recogido el Chaleco de Asalto"
 ; EN: ItemName="Assault Vest"
 ItemName="Chaleco de Asalto"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [KevlarSuit]
 ; EN: PickupMessage="You picked up the Kevlar Suit"
 PickupMessage="Has recogido el Traje de Kevlar"
 ; EN: ItemName="Kevlar Suit"
 ItemName="Traje de Kevlar"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [BabyCow]
 ; EN: NameArticle=" a "
@@ -1000,6 +1050,8 @@ PickupMessage="Has recogido la Pistola de Dispersión"
 ItemName="Pistola de Dispersión"
 FemDeathMessage="A %o la ha asesinado %k con su %w. ¡Pobre!"
 FemKillMessage="A %o lo ha asesinado %k con su %w. ¡Pobre!"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [UnrealVideoMenu]
 ; EN: MenuTitle="AUDIO/VIDEO"
@@ -1114,6 +1166,8 @@ PickupMessage="Pulsa F2 para activar el Traductor"
 ItemName="Traductor Universal"
 ; EN: HintString="Hint:"
 HintString="Pista:"
+; EN: ItemArticle="the"
+ItemArticle="el"
 
 [UnrealMeshMenu]
 ; EN: MenuList[4]="Class:"
@@ -1310,6 +1364,8 @@ PickupMessage="Has recogido el ASMD"
 ItemName="ASMD"
 FemDeathMessage="%k ha infligido heridas mortales a %o con su %w."
 FemKillMessage="%k ha infligido heridas mortales a %o con su %w."
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [Eightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
@@ -1320,6 +1376,8 @@ PickupMessage="Has recogido el Lanzador Eightball"
 ItemName="Lanzador Eightball"
 FemDeathMessage="%o fue vapuleada varias veces por el %w de %k."
 FemKillMessage="%o fue vapuleado varias veces por el %w de %k."
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [UnrealKeyboardMenu]
 ; EN: MenuTitle="CONTROLS"
@@ -1423,6 +1481,8 @@ PickupMessage="Has recogido la Autopistola"
 ItemName="Autopistola"
 FemDeathMessage="%o ha sido acribillada por el %w de %k."
 FemKillMessage="%o ha sido acribillado por el %w de %k."
+; EN: ItemArticle="an"
+ItemArticle="una"
 
 [UnrealChooseGameMenu]
 ; EN: MenuTitle="CHOOSE GAME"
@@ -1515,6 +1575,8 @@ PickupMessage="Has recogido el Cañón Perforador"
 ItemName="Cañón Perforador"
 FemDeathMessage="%o ha sido perforado por el %w de %k."
 FemKillMessage="%o ha sido perforado por el %w de %k."
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UnrealCoopGameOptions]
 ; EN: MenuList[3]="Difficulty"
@@ -1547,6 +1609,8 @@ MenuList[1]="Necesitas una versión más reciente de Unreal para jugar en este s
 PickupMessage="Has recogido 12 Cartuchos"
 ; EN: ItemName="Shells"
 ItemName="Cartuchos"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UnrealScoreBoard]
 ; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
@@ -1595,6 +1659,12 @@ PickupMessage="Has recogido un Arma Centinela Automática"
 ItemName="Arma Centinela Automática"
 ; EN: M_Activated=" deployed."
 M_Activated=" desplegada."
+; EN: ItemArticle="a"
+ItemArticle="un"
+; EN: M_Activated=" activated."
+M_Activated=" activada."
+; EN: M_Selected=" selected."
+M_Selected=" seleccionada."
 
 [UIKeyTrigger]
 ; EN: SuccessMessage="Access granted."
@@ -1607,12 +1677,16 @@ FailtureMessage="Necesitas una llave para abrir esta puerta."
 PickupMessage="Has recogido un Maestro de los Bosques +"
 ; EN: ItemName="Master of the Woods"
 ItemName="Maestro de los Bosques"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [WoodruffSchool]
 ; EN: PickupMessage="You got a bunch of Master of the Woods +"
 PickupMessage="Has recogido un puñado de Maestros de los Bosques +"
 ; EN: ItemName="Master of the woods"
 ItemName="Maestros de los Bosques"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UnrealMutatorMenu]
 ; EN: InUseString="In Use"

@@ -69,6 +69,8 @@ FemKillMessage="La granada de %k ha hecho explotar a %o."
 PickupMessage="Has recogido el Lanzagranadas UMS"
 ; EN: ItemName="UMS Grenade Launcher"
 ItemName="Lanzagranadas UMS"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [Cloak]
 ; EN: ExpireMessage="disengaged."
@@ -77,10 +79,14 @@ ExpireMessage="desactivado."
 PickupMessage="Has recogido el Dispositivo de Camuflaje"
 ; EN: ItemName="Cloaking Device"
 ItemName="Dispositivo de Camuflaje"
-; EN: M_Activated=" engaged"
-M_Activated=" activado"
-; EN: M_Deactivated=" disengaged"
-M_Deactivated=" desactivado"
+; EN: ItemArticle="a"
+ItemArticle="un"
+; EN: M_Activated=" activated."
+M_Activated=" activado."
+; EN: M_Selected=" selected."
+M_Selected=" seleccionado."
+; EN: M_Deactivated=" deactivated."
+M_Deactivated=" desactivado."
 
 [UPakHUD]
 ; EN: MultWeapSlotMsg="Press the weapon select button to toggle weapons."
@@ -99,6 +105,8 @@ FemKillMessage="El cohete de %k ha hecho añicos el cuerpo de %o."
 PickupMessage="Has recogido el Lanzacohetes UMS"
 ; EN: ItemName="UMS Rocket Launcher"
 ItemName="Lanzacohetes UMS"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UPakChooseGameMenu]
 MenuList[0]="Return to Na Pali"
@@ -117,6 +125,8 @@ FemKillMessage="%k convirtió a %o en queso gruyére con su %w."
 PickupMessage="Has recogido el Rifle de Asalto de Combate"
 ; EN: ItemName="Combat Assault Rifle"
 ItemName="Rifle de Asalto de Combate"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UPakScubaGear]
 ; EN: RechargedMessage="Marine SCUBA Gear fully recharged."
@@ -129,6 +139,8 @@ PickupMessage="Has recogido el Equipo de Buceo para Marines"
 ItemName="Equipo de Buceo para Marines"
 ; EN: M_Deactivated="deactivated... Recharging."
 M_Deactivated="desactivado... Recargando."
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [MarineMatch]
 ; EN: GameName="Marine Match"
@@ -155,18 +167,24 @@ MenuName="Mujer 1"
 PickupMessage="Has recogido 10 granadas UMS"
 ; EN: ItemName="UMS Grenades"
 ItemName="Granadas UMS"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [RLAmmo]
 ; EN: PickupMessage="You got 10 UMS Rockets"
 PickupMessage="Has recogido 10 cohetes UMS"
 ; EN: ItemName="UMS Rockets"
 ItemName="Cohetes UMS"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [CARifleClip]
 ; EN: PickupMessage="You got a 50 bullet CAR clip"
 PickupMessage="Has recogido un Cargador de 50 Balas de Asalto"
 ; EN: ItemName="CAR Clip"
 ItemName="Cargador RAC"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [UPakFemaleTwo]
 ; EN: MenuName="Female 2"
@@ -189,6 +207,8 @@ GameName="Partida de Armas Terrícolas"
 PickupMessage="Has recogido la Tableta Computarizada"
 ; EN: ItemName="Computer Tablet"
 ItemName="Tableta Computarizada"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [MarineArctic]
 ; EN: MenuName="UMS Arctic Marine"
