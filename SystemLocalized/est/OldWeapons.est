@@ -21,6 +21,8 @@ FemKillMessage="A %o lo ha asesinado %k con su %w. ¡Pobre!"
 PickupMessage="Has recogido la Pistola de Dispersión"
 ; EN: ItemName="Dispersion Pistol"
 ItemName="Pistola de Dispersión"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [OldASMD]
 ; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
@@ -31,6 +33,8 @@ FemKillMessage="%k ha infligido heridas mortales a %o con su %w."
 PickupMessage="Has recogido el ASMD"
 ; EN: ItemName="ASMD"
 ItemName="ASMD"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [OldEightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
@@ -41,6 +45,8 @@ FemKillMessage="%o fue vapuleado varias veces por el %w de %k."
 PickupMessage="Has recogido el Lanzador Eightball"
 ; EN: ItemName="Eightball"
 ItemName="Lanzador Eightball"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [OldRifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
@@ -51,6 +57,8 @@ PickupMessage="Has recogido el Rifle"
 ItemName="Rifle de Francotirador"
 FemDeathMessage="%k ha atravesado la cabeza de %o con una bala."
 FemKillMessage="%k ha atravesado la cabeza de %o con una bala."
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldFlakCannon]
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
@@ -61,6 +69,8 @@ PickupMessage="Has recogido el Cañón de Metralla"
 ItemName="Cañón de Metralla"
 FemDeathMessage="%o ha sido despedazada por el %w de %k."
 FemKillMessage="%o ha sido despedazado por el %w de %k."
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldAutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
@@ -71,6 +81,8 @@ FemKillMessage="%o ha sido acribillado por el %w de %k."
 PickupMessage="Has recogido la Autopistola"
 ; EN: ItemName="Automag"
 ItemName="Autopistola"
+; EN: ItemArticle="an"
+ItemArticle="una"
 
 [OldMinigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
@@ -81,6 +93,8 @@ PickupMessage="Has recogido la Metralleta"
 ItemName="Metralleta"
 FemDeathMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
 FemKillMessage="La %w de %k ha convertido a %o en un trozo de carne sangrante."
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [OldGESBioRifle]
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
@@ -91,6 +105,8 @@ PickupMessage="Has recogido el Rifle Biológico GES"
 ItemName="Rifle Biológico GES"
 FemDeathMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
 FemKillMessage="%o bebió un vaso de la sustancia verde que le goteaba a %k."
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldAmplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
@@ -99,6 +115,8 @@ ExpireMessage="El Amplificador Energético se ha agotado."
 PickupMessage="Has recogido el Amplificador Energético"
 ; EN: ItemName="Energy Amplifier"
 ItemName="Amplificador Energético"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [OldStinger]
 ; EN: DeathMessage="%o was perforated by %k's %w."
@@ -109,30 +127,40 @@ FemKillMessage="%o ha sido perforado por el %w de %k."
 PickupMessage="Has recogido el Cañón Perforador"
 ; EN: ItemName="Stinger"
 ItemName="Cañón Perforador"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldShellBox]
 ; EN: PickupMessage="You picked up 50 bullets"
 PickupMessage="Has recogido una caja de 50 Balas"
 ; EN: ItemName="Bullet Box"
 ItemName="Caja de Balas"
+; EN: ItemArticle="a"
+ItemArticle="una"
 
 [OldRifleAmmo]
 ; EN: PickupMessage="You got 8 Rifle Rounds"
 PickupMessage="Tienes 8 Cartuchos para el Rifle"
 ; EN: ItemName="Rifle Rounds"
 ItemName="Cartuchos de Rifle"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unos"
 
 [OldWeaponPowerUp]
 ; EN: PickupMessage="You got the Dispersion Pistol Powerup"
 PickupMessage="Has recogido un Mejorador para la Pistola de Dispersión"
 ; EN: ItemName="Dispersion Pistol Powerup"
 ItemName="Mejorador de Pistola de Dispersión"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldFlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
 PickupMessage="Tienes 10 Proyectiles de Metralla"
 ; EN: ItemName="Flak Shells"
 ItemName="Proyectiles de Metralla"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unos"
 
 [OldRazorjack]
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
@@ -143,58 +171,78 @@ PickupMessage="Has recogido el Lanzacuchillas"
 ItemName="Lanzacuchillas"
 FemDeathMessage="%k le pegó un buen tajo a %o con su %w."
 FemKillMessage="%k le pegó un buen tajo a %o con su %w."
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldDefaultAmmo]
 ; EN: PickupMessage="You picked up some ammo"
 PickupMessage="Has recogido algo de munción"
 ; EN: ItemName="Ammo"
 ItemName="Munición"
+; EN: ItemArticle="a bunch of"
+ItemArticle="un puñado de"
 
 [OldASMDAmmo]
 ; EN: PickupMessage="You picked up an ASMD Core"
 PickupMessage="Has recogido un Núcleo ASMD"
 ; EN: ItemName="ASMD Core"
 ItemName="Núcleo ASMD"
+; EN: ItemArticle="an"
+ItemArticle="un"
 
 [OldStingerAmmo]
 ; EN: PickupMessage="You picked up 40 Tarydium shards"
 PickupMessage="Has recogido 40 Fragmentos de Taridio"
 ; EN: ItemName="Tarydium Shards"
 ItemName="Fragmentos de Taridio"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unos"
 
 [OldRazorAmmo]
 ; EN: PickupMessage="You picked up Razor Blades"
 PickupMessage="Has recogido un paquete de Cuchillas Filosas"
 ; EN: ItemName="Razor Blades"
 ItemName="Cuchillas Filosas"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unas"
 
 [OldSludge]
 ; EN: PickupMessage="You picked up 25 Kilos of Tarydium Biosludge"
 PickupMessage="Has recogido 25 Kilos de Biodesechos de Taridio"
 ; EN: ItemName="Tarydium Biosludge"
 ItemName="Biodesechos de Taridio"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unos"
 
 [OldRocketCan]
 ; EN: PickupMessage="You picked up 12 Eightballs"
 PickupMessage="Has recogido 12 Proyectiles Eightball"
 ; EN: ItemName="Eightballs"
 ItemName="Proyectiles Eightball"
+; EN: ItemArticle="a bunch of"
+ItemArticle="unos"
 
 [OldClip]
 ; EN: PickupMessage="You picked up a clip"
 PickupMessage="Has recogido un Cartucho"
 ; EN: ItemName="Clip"
 ItemName="Cartucho"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldRifleRound]
 ; EN: PickupMessage="You got a Rifle Round"
 PickupMessage="Tienes un Cartucho para el Rifle"
 ; EN: ItemName="Rifle Round"
 ItemName="Cartucho de Rifle"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
 [OldFlakShellAmmo]
 ; EN: PickupMessage="You got a Flak Shell"
 PickupMessage="Tienes un Proyectil de Metralla"
 ; EN: ItemName="Flak Shell"
 ItemName="Proyectil de Metralla"
+; EN: ItemArticle="a"
+ItemArticle="un"
 
