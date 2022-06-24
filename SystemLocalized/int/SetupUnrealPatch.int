@@ -19,7 +19,7 @@ DeveloperURL="https://www.oldunreal.com/"
 
 [LinuxGroup]
 Caption="Linux native files"
-Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
+Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.2 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
 
 [OldWeaponsGroup]
 Caption="Old Weapons"

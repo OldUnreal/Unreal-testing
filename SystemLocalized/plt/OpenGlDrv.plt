@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=OpenGLDrv.OpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="OpenGL Support",Parent="Rendering",LangCaption="Obsługa OpenGL",Class=OpenGLDrv.OpenGLRenderDevice,Immediate=True)
+Preferences=(Caption="OpenGL",Parent="Rendering",LangCaption="OpenGL",Class=OpenGLDrv.OpenGLRenderDevice,Immediate=True)
 
 [Errors]
 ; EN: NoFindGL="Can't find OpenGL driver %ls"
@@ -11,8 +11,8 @@ MissingFunc="Niedostępna funkcja OpenGL %ls (%i)"
 ResFailed="Nie udało się wyświetlić rozdzielczości."
 
 [OpenGLRenderDevice]
-; EN: ClassCaption="OpenGL Support"
-ClassCaption="Obsługa OpenGL"
+; EN: ClassCaption="OpenGL"
+ClassCaption="OpenGL"
 ; EN: AskInstalled="Do you have a OpenGL compatible 3D accelerator installed?"
 AskInstalled="Czy na komputerze znajduje się karta zgodna ze standardem OpenGL?"
 ; EN: AskUse="Do you want Unreal to use your OpenGL accelerator?"
