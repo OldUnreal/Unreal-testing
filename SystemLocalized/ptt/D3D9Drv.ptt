@@ -8,4 +8,4 @@ ClassCaption="Suporte a Direct3D 9"
 ; EN: AskInstalled="Do you want to use Direct3D 9?"
 AskInstalled="Você deseja utilizar o suporte a aceleração Direct3D 9?"
 AskUse=""
-NoEditor=True
+NoEditor=False
