@@ -306,11 +306,13 @@ AdminLogoutText="Администратор %ls вошёл"
 CheatUsedStr="%ls использовал админскую/читерскую команду: %c"
 
 [Fonts]
-WhiteFont=UnrealShare.WhiteFont
-MedFont=Engine.MedFont
-LargeFont=Engine.LargeFont
-BigFont=Engine.BigFont
-SmallFont=Engine.SmallFont
+SmallFont=UWindowFonts.Tahoma10
+WhiteFont=UWindowFonts.Tahoma12
+MedFont=UWindowFonts.Tahoma11
+LargeFont=UWindowFonts.Tahoma30
+BigFont=UWindowFonts.Tahoma30
+Papyrus=UWindowFonts.Tahoma30
+Chiller=UWindowFonts.Tahoma30
 
 [LinkerUpdateCommandlet]
 HelpCmd=linkerupdate
