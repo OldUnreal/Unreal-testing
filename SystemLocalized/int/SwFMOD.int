@@ -1,6 +1,6 @@
 ﻿[Public]
 Object=(Name=SwFMOD.SwFMOD,Class=Class,MetaClass=Engine.AudioSubsystem,Autodetect=)
-Preferences=(Caption="SwFModEx Audio Support",Parent="Audio",Class=SwFMOD.SwFMOD,Immediate=True)
+Preferences=(Caption="SwFModEx",Parent="Audio",Class=SwFMOD.SwFMOD,Immediate=True)
 
 [SwFMOD]
-ClassCaption="SwFModEx Audio Support"
+ClassCaption="SwFModEx"
