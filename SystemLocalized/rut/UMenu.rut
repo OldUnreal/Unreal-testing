@@ -160,7 +160,7 @@ RestartText="Перезагрузить"
 RestartHelp="Нажмите, что бы перезагрузить текущий уровень."
 
 [UMenuOptionsWindow]
-WindowWidth=300
+WindowWidth=330
 ; EN: WindowTitle="Preferences"
 WindowTitle="Настройки"
 
@@ -1103,7 +1103,7 @@ LanguageText="Язык"
 ; EN: LanguageHelp="This is the current game language. Change it and press Restart button in order to apply changes."
 LanguageHelp="Это текущий язык игры. Измените его и нажмите кнопку «Перезагрузить», чтобы применить изменения."
 ; EN: ConsoleText="Console"
-ConsoleText="Приставка"
+ConsoleText="Консоль"
 ; EN: ConsoleHelp="This option determines the look of console and menus. Press Restart button to apply the changes."
 ConsoleHelp="Этот параметр определяет внешний вид консоли и меню. Нажмите кнопку «Перезагрузить», чтобы применить изменения."
 
@@ -1349,7 +1349,7 @@ UseClassicText="Использовать классический баланс"
 ; EN: UseClassicHelp="Some gameplay mechanics should behave as old Unreal versions."
 UseClassicHelp="Некоторые игровые механики должны вести себя как старые версии Unreal."
 ; EN: AdvancedText="Advanced..."
-AdvancedText="Передовой..."
+AdvancedText="Дополнительно..."
 ; EN: MirrorModeText="Mirror Mode"
 MirrorModeText="Зеркальный режим"
 ; EN: MirrorModeHelp="The world is not what it seams..."
