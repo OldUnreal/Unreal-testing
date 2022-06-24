@@ -171,7 +171,7 @@ Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Соеди
 ; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
 Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Соединение с сервером,Отключение от сервера")
 ; EN: Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
-Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Соединение с сервером,Переподключение к серверу")
+Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Соединение с сервером,Переподключение")
 ; EN: Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
 Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Консоль,Кнопка консоли")
 ; EN: Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
