@@ -91,15 +91,15 @@ Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="Widok,Sp
 ; EN: Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="View,Center View")
 Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="Widok,Wyśrodkuj Widok")
 ; EN: Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="View,Toggle Behindview")
-Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="Widok,Tryb 3-os")
+Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="Widok,Widok z Tyłu")
 ; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
-Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Broń,Strzał Gł.")
+Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Broń,Strzał")
 ; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
-Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Broń,Strzał Alt.")
+Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Broń,Strzał alternatywny")
 ; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
-Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Broń,Nast. Broń")
+Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Broń,Następna Broń")
 ; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
-Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Broń,Poprz. Broń")
+Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Broń,Poprzednia Broń")
 ; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
 Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Broń,Wyrzuć Broń")
 ; EN: Object=(Name="GetWeapon UnrealShare.DispersionPistol",Class=Class,MetaClass=Engine.Input,Description="Weapon,Dispersion Pistol")
@@ -117,7 +117,7 @@ Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,D
 ; EN: Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
 Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Broń,Rozpruwacz")
 ; EN: Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
-Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Broń,Karabin Odpadowy GES")
+Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Broń,Karabin GES")
 ; EN: Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
 Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Broń,Karabin Snajperski")
 ; EN: Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun")
@@ -125,9 +125,9 @@ Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Desc
 ; EN: Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Combat Assault Rifle")
 Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Broń,Karabin Szturmowy")
 ; EN: Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Grenade Launcher")
-Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Broń,Wyrzutnia Granatów UMS")
+Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Broń,Granatnik UMS")
 ; EN: Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Rocket Launcher")
-Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Broń,Wyrzutnia Rakiet UMS")
+Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Broń,Wyrzutnia rakiet UMS")
 ; EN: Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Weapon,Quad-Barreled Shotgun")
 Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Broń,Obrzyn")
 ; EN: Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Weapon,Translocator")
@@ -137,19 +137,19 @@ Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,D
 ; EN: Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
 Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Wyposażenie,Użyj Przedmiotu")
 ; EN: Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
-Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Wyposażenie,Nast. Przedmiot")
+Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Wyposażenie,Następny Przedmiot")
 ; EN: Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
-Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Wyposażenie,Poprz. Przedmiot")
+Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Wyposażenie,Poprzedni Przedmiot")
 ; EN: Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Translator")
 Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Wyposażenie,Aktywuj Tłumacza")
 ; EN: Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Game,Grab Decoration")
-Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Chwyć za Przedmiot")
+Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Podnieś obiekt")
 ; EN: Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Game,Suicide")
-Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Popełnić Samobójstwo")
+Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Popełnij Samobójstwo")
 ; EN: Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Game,Chat")
 Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Rozmawiaj")
 ; EN: Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Game,Team Chat")
-Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Rozmawiaj z Druż.")
+Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Rozmawiaj z Drużyną")
 ; EN: Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Game,Show Scores")
 Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Pokaż Wyniki")
 ; EN: Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save")
@@ -167,17 +167,17 @@ Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Ro
 ; EN: Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Game,Windowed mode")
 Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Rozgrywka,Tryb Okienkowy")
 ; EN: Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
-Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Anuluj Połączenie")
+Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Połączenie sieciowe,Anuluj Połączenie")
 ; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
-Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Odłącz od Serwera")
+Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Połączenie sieciowe,Rozłącz z Serwerem")
 ; EN: Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
-Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Połącz się Ponownie z Serwerem")
+Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Połączenie sieciowe,Połącz się Ponownie")
 ; EN: Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
-Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Przycisk Konsoli")
+Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Konsola,Przycisk Konsoli")
 ; EN: Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
-Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Konsola Postać")
+Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Konsola,Znak Konsoli")
 ; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
-Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Szybka Konsola")
+Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Konsola,Szybka Konsola")
 Preferences=(Caption="Coop Play",Parent="Game Types",LangCaption="Współpraca",Class=UnrealShare.CoopGame,Immediate=True)
 Preferences=(Caption="Deathmatch",Parent="Game Types",LangCaption="Deathmatch",Class=UnrealShare.DeathmatchGame,Immediate=True)
 Preferences=(Caption="Team Play",Parent="Game Types",LangCaption="Drużynowy DM",Class=UnrealShare.TeamGame,Immediate=True)
@@ -1087,9 +1087,9 @@ MenuList[11]="Sygnał wiadomości"
 ; EN: HelpMessage[11]="If enabled, you will hear a beep when you receive a message."
 HelpMessage[11]="Włączenie tej opcji spowoduje, że usłyszysz krótki sygnał dźwiękowy, gdy otrzymasz wiadomość."
 ; EN: MenuList[12]="Flat Shading"
-MenuList[12]="Cieniowanie Uproszczone"
+MenuList[12]="Płaskie cieniowanie"
 ; EN: HelpMessage[12]="If enabled, some specific meshes may use flat shading."
-HelpMessage[12]="Włączenie tej opcji spowoduje, że część modeli będzie cieniowana w sposób uproszczony."
+HelpMessage[12]="Włączenie tej opcji spowoduje, że część modeli użyje płaskiego cieniowana."
 ; EN: MenuList[13]="Curvy Meshes"
 MenuList[13]="Wygładzanie Modeli"
 ; EN: HelpMessage[13]="If enabled, some specific meshes may use curved surfaces for extra detail."
@@ -1099,9 +1099,9 @@ MenuList[14]="Cienie Postaci"
 ; EN: HelpMessage[14]="If enabled, pawns cast shadows. Changes to this setting will take effect on the next level change."
 HelpMessage[14]="Włączenie tej opcji spowoduje, że postacie będą posiadać cienie. Zmiana tego ustawienia wejdzie w życie po zmianie mapy."
 ; EN: MenuList[15]="Deco Shadows"
-MenuList[15]="Cienie Otoczenia"
+MenuList[15]="Cienie dekoracji"
 ; EN: HelpMessage[15]="If enabled, decoration cast shadows. Changes to this setting will take effect on the next level change."
-HelpMessage[15]="Włączenie tej opcji spowoduje, że elementy otoczenia będą posiadać cienie. Zmiana tego ustawienia wejdzie w życie po zmianie mapy."
+HelpMessage[15]="Włączenie tej opcji spowoduje, że dekoracje będą posiadać cienie. Zmiana tego ustawienia wejdzie w życie po zmianie mapy."
 ; EN: MenuList[16]="Shadow Detail"
 MenuList[16]="Szczegółowość Cienia"
 ; EN: HelpMessage[16]="If blob, use blob shadows, else use realistic shadows with different resolutions."
@@ -1125,13 +1125,13 @@ MenuList[18]="Filtrowanie Trójliniowe"
 ; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
 HelpMessage[18]="Użyj tej opcji, aby włączyć / wyłączyć filtrowanie trójliniowe."
 ; EN: MenuList[19]="Skybox Fogging"
-MenuList[19]="Mgła Skybox"
+MenuList[19]="Mgła na niebie"
 ; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
 HelpMessage[19]="Poziom szczegółowości zamglenia zastosowanego na niebie."
 ; EN: SkyFogDetail[0]="High Detail"
-SkyFogDetail[0]="Wysokie Szczegóły"
+SkyFogDetail[0]="Dużo szczegółów"
 ; EN: SkyFogDetail[1]="Low Detail"
-SkyFogDetail[1]="Mało Szczegółowo"
+SkyFogDetail[1]="Mało szczegółów"
 ; EN: SkyFogDetail[2]="Off"
 SkyFogDetail[2]="Wyłączone"
 ; EN: MenuList[20]="HUD Scale"
@@ -1187,7 +1187,7 @@ MenuList[1]="Imię: "
 ; EN: HelpMessage[1]="Hit enter to type in your name. Be sure to do this before joining a multiplayer game."
 HelpMessage[1]="Wciśnij klawisz Enter i wprowadź swoje imię. Koniecznie zrób to, zanim dołączysz do gry wieloosobowej."
 ; EN: MenuList[2]="Team Color:"
-MenuList[2]="Kolor Drużyny:"
+MenuList[2]="Drużyna:"
 ; EN: HelpMessage[2]="Use the arrow keys to change your team color (Red, Blue, Green, or Yellow)."
 HelpMessage[2]="Użyj klawiszy strzałek, aby zmienić kolor drużyny, do której dołączysz (Czerwoni, Niebiescy, Zieloni, Złoci, Brak)."
 ; EN: Teams[0]="Red"
@@ -1370,9 +1370,9 @@ MenuTitle="STEROWANIE"
 OrString=" lub "
 HelpMessage[1]=""
 ; EN: MenuList[1]="Fire"
-MenuList[1]="Strzał Gł."
+MenuList[1]="Strzał"
 ; EN: MenuList[2]="Alternate Fire"
-MenuList[2]="Strzał Alt."
+MenuList[2]="Strzał Alternatywny"
 ; EN: MenuList[3]="Move Forward"
 MenuList[3]="Idź do Przodu"
 ; EN: MenuList[4]="Move Backward"
@@ -1510,7 +1510,7 @@ MenuList[9]="Wiadomości o Zgonach"
 ; EN: HelpMessage[9]="Classic or new style (weapon based) deathmessages."
 HelpMessage[9]="Wiadomości o zgonach: klasyczne, lub zależne od broni używanej przez zabójcę."
 ; EN: DeathMessages[0]="Classic"
-DeathMessages[0]="Klasyczny"
+DeathMessages[0]="Klasyczne"
 ; EN: DeathMessages[1]="Weapon Based"
 DeathMessages[1]="Oparte na Broni"
 
@@ -1568,9 +1568,9 @@ MenuList[3]="Poziom Trudności"
 ; EN: HelpMessage[3]="Skill level setting."
 HelpMessage[3]="Ustawienia poziomu trudności."
 ; EN: MenuList[4]="No Friendly Fire"
-MenuList[4]="Brak Przyjaznego Ognia"
+MenuList[4]="Brak bratobójczego ognia"
 ; EN: HelpMessage[4]="If enabled, no friendly fire is allowed."
-HelpMessage[4]="Jeśli ta opcja jest włączona, żaden przyjazny ogień nie jest dozwolony."
+HelpMessage[4]="Jeśli ta opcja jest włączona, bratobójczy ogień nie jest dozwolony."
 ; EN: MenuList[5]="Weapons Stay"
 MenuList[5]="Broń Zostaje"
 ; EN: HelpMessage[5]="If enabled, weapons respawn instantly, but can only be picked up once by a given player."
