@@ -1,9 +1,9 @@
 ﻿[LevelInfo0]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Pisada Forte"
+; EN: Title="Stomp"
+Title="Pisada Forte"
 IdealPlayerCount="2-5"
 
 [LevelSummary]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Pisada Forte"
+; EN: Title="Stomp"
+Title="Pisada Forte"
 IdealPlayerCount="2-5"
