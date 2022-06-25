@@ -1,9 +1,9 @@
 ﻿[LevelInfo0]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Tupać"
+; EN: Title="Stomp"
+Title="Tupać"
 IdealPlayerCount="2-5"
 
 [LevelSummary]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Tupać"
+; EN: Title="Stomp"
+Title="Tupać"
 IdealPlayerCount="2-5"
