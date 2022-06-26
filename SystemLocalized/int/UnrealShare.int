@@ -33,7 +33,7 @@ Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Ma
 Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male5")
 Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male6")
 Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;UnrealShare.logo2;Unreal")
 Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
 Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
 Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Left")
