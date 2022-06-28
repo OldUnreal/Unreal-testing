@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Sacred Passage"
-Title="Passagem Sagrado"
+Title="Passagem Sagrada"
 ; EN: LevelEnterText="Entering the Sacred Passage"
-LevelEnterText="Entrando na Passagem Sagrado"
+LevelEnterText="Entrando na Passagem Sagrada"
 
 [LevelSummary]
 ; EN: Title="Sacred Passage"
-Title="Passagem Sagrado"
+Title="Passagem Sagrada"
 ; EN: LevelEnterText="Entering the Sacred Passage"
-LevelEnterText="Entrando na Passagem Sagrado"
+LevelEnterText="Entrando na Passagem Sagrada"
 
 [TranslatorEvent1]
 ; EN: Hint="Go for a swim and look for a secret passage."
@@ -28,7 +28,7 @@ Hint="Olhe em cada face."
 
 [TranslatorEvent11]
 ; EN: Message=""Wood must break free...""
-Message=""A mdeira deverá ser quebrada...""
+Message=""A madeira deverá ser quebrada...""
 ; EN: Hint="Activate the lever to let the water run."
 Hint="Use a alavanca para deixar a água correr."
 

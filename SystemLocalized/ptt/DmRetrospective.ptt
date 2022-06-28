@@ -4,7 +4,7 @@ PickupMessage="Você pegou o Mega Health Pack"
 
 [LevelInfo0]
 ; EN: Title="Retrospective"
-Title="Retrospectivo"
+Title="Retrospectiva"
 IdealPlayerCount="6-10"
 ; EN: LevelEnterText="Map for the Unreal 227 Patch!"
 LevelEnterText="Mapa para o patch 227 do Unreal!"
@@ -15,7 +15,7 @@ PickupMessage="Você pegou o Mega Health :)"
 
 [LevelSummary]
 ; EN: Title="Retrospective"
-Title="Retrospectivo"
+Title="Retrospectiva"
 IdealPlayerCount="6-10"
 ; EN: LevelEnterText="Map for the Unreal 227 Patch!"
 LevelEnterText="Mapa para o patch 227 do Unreal!"

@@ -1,10 +1,10 @@
 ﻿[LevelInfo1]
 ; EN: Title="End"
-Title="Fine"
+Title="Fim"
 
 [LevelSummary]
 ; EN: Title="End"
-Title="Fine"
+Title="Fim"
 
 [TransitionGenderEvent0]
 ; Note: Make the text coincide with the respective audio entry in Sounds/ptt/EndSnd.ptt. If there isn't one, CREATE IT!

@@ -2,13 +2,13 @@
 ; EN: Title="Chizra - Nali Water God"
 Title="Templo do Chizra-Deus Nali da Água"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
-LevelEnterText="Esta entrando no Templo do Chizra-Deus Nali da Água"
+LevelEnterText="Está entrando no Templo do Chizra-Deus Nali da Água"
 
 [LevelSummary]
 ; EN: Title="Chizra - Nali Water God"
 Title="Templo do Chizra-Deus Nali da Água"
 ; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
-LevelEnterText="Esta entrando no Templo do Chizra-Deus Nali da Água"
+LevelEnterText="Está entrando no Templo do Chizra-Deus Nali da Água"
 
 [TranslatorEvent7]
 ; EN: Message="The Nali Water God Chizra and his holy temple has been overrun by the water serpents and the demons who came from the stars. Only the messiah can purify the temple now."
@@ -32,17 +32,17 @@ Message="A pirâmide é a chave para a câmara da morte. Aqui você encontrará 
 
 [Counter3]
 ; EN: CountMessage="Snap!"
-CountMessage="Clic!"
+CountMessage="Click!"
 ; EN: CompleteMessage="The raft is loose"
-CompleteMessage="A balsa esta solta"
+CompleteMessage="A balsa está solta"
 
 [TranslatorEvent6]
 ; EN: Message="Beyond this stone seal lies the inner ceremonial chambers of the Nali water god."
-Message="Alem deste selo de pedra repousam as câmaras cerimoniais interiores do deus Nali da água."
+Message="Além deste selo de pedra repousam as câmaras cerimoniais interiores do deus Nali da água."
 
 [TranslatorEvent18]
 ; EN: Message="Beyond this golden door lies the holy altar of the stick of 6 fires. Only by touching the outset stones of the lightning fire pillars may one enter."
-Message="Alem desta porta dourada repousa o santo altar do bastão de 6 fogos. Apenas através do toque na origem das pedras dos pilares do fogo relampejante um poderá entrar."
+Message="Além desta porta dourada repousa o santo altar do bastão de 6 fogos. Apenas através do toque na origem das pedras dos pilares do fogo relampejante um poderá entrar."
 
 [TranslatorEvent14]
 ; EN: Message="The demons came down from the stars in a metal chariot as punishment for the sins of The Nali."
@@ -82,11 +82,11 @@ Message="Para alcançar a piscina do trovão um deverá escalar as pedras soltas
 
 [TranslatorEvent15]
 ; EN: Message="1400 hours Commander Mac Harrison: SITREP: These local natives have a 6 barreled rocket launcher on an altar but it is heavily guarded by those Salamander things. "The Stick of 6 fires" is what the Nali keep calling it. I'll try to sneak in tonight."
-Message="1400 horas Comandante Mac Harrison: Informe da situação: Estes nativos locais tem um lançador de foguetes de 6 canos num altar, mas é fortemente guardado por estas criaturas similares a salamandras. "O bastão de 6 fogos" é como os Nali isistem em chamá-lo. Eu tentarei me infiltrar lá de noite."
+Message="1400 horas Comandante Mac Harrison: Informe da situação: Estes nativos locais tem um lançador de foguetes de 6 canos num altar, mas é fortemente guardado por estas criaturas similares a salamandras. "O bastão de 6 fogos" é como os Nali insistem em chamá-lo. Eu tentarei me infiltrar lá de noite."
 
 [TranslatorEvent2]
 ; EN: Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder."
-Message="Este é o obelisco das nuvens. Alem daqui repousa a piscina do trovão."
+Message="Este é o obelisco das nuvens. Além daqui repousa a piscina do trovão."
 
 [TranslatorEvent0]
 ; EN: Message="Beware those of impure motives who enter the pool of thunder shall face the demon from the stars"

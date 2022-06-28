@@ -3,9 +3,9 @@ LocalProduct="Unreal"
 DefaultFolder="C:\Program Files\Unreal"
 ReadMe="Help\ReadMe.htm"
 ; EN: SetupWindowTitle="Unreal Setup"
-SetupWindowTitle="Instalação de Unreal"
+SetupWindowTitle="Instalação do Unreal"
 ; EN: AutoplayWindowTitle="Unreal Options"
-AutoplayWindowTitle="Opções de Unreal"
+AutoplayWindowTitle="Opções do Unreal"
 ProductURL="http://www.unrealengine.com/"
 VersionURL="https://www.oldunreal.com"
 ; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
@@ -27,7 +27,7 @@ EditLevelCommand="&Editar este nível do Unreal"
 ; EN: Caption="Game Content"
 Caption="Conteúdo do Jogo"
 ; EN: Description="Unreal game content. Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space."
-Description="Conteúdo de jogo Unreal. Instale-o para obter o melhor desempenho. Se você desmarcá-lo, o conteúdo do jogo será carregado do CD durante o jogo, degradando o desempenho, mas usando menos espaço no disco rígido."
+Description="Conteúdo do jogo Unreal. Instale-o para obter o melhor desempenho. Se você desmarcá-lo, o conteúdo do jogo será carregado pelo CD durante o jogo, degradando o desempenho, mas usando menos espaço no disco rígido."
 
 [GameGroup]
 ; EN: Caption="Unreal Game"
@@ -48,7 +48,7 @@ Description="Editor de mundo Unreal, para criar seus próprios ambientes 3D Unre
 
 [PlayShortcut]
 ; EN: Caption="Play Unreal"
-Caption="Jogar a Unreal"
+Caption="Jogar Unreal"
 
 [SafeModeShortcut]
 ; EN: Caption="Unreal Safe Mode"

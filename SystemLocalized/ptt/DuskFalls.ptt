@@ -8,7 +8,7 @@ Title="Borda de Na Pali"
 
 [TranslatorEvent6]
 ; EN: Message="LOG: M. Worch: My head hasn't stop spinning since the crash. Who keeps moving the ground down there? Oh God, I'm going to be sick again..."
-Message="Registro: M. Worch: A minha cabeça ainda não parou de girar desde a queda. Quem esta fazendo o chão se mover lá embaixo? Oh Deus, vou ficar enjoado de novo..."
+Message="Registro: M. Worch: A minha cabeça ainda não parou de girar desde a queda. Quem está fazendo o chão se mover lá embaixo? Oh Deus, vou ficar enjoado de novo..."
 
 [TranslatorEvent5]
 ; EN: Message="LOG: K. Divad: Our mission to locate the Vortex Rikers is a failure. The UMS Chantilly was pulled into the atmosphere of this god-forsaken planet and we crashed into a mountain. Only Pilot Worch and myself survived. They don't pay me enough for this."
@@ -40,7 +40,7 @@ Message="Estação de Mineração Terra-Neo"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: G. Dahlgren: Still no reply from Dalton's team. It's been four days now and no sign of the others. I don't think we're going to survive. I heard someone actually made it off this planet. Hope they send a ship back for us..."
-Message="Registro: G. Dahlgren: Ainda sem resposta do tipo de Dalton. Já fazem quatro dias aagora e sem sinal dos outros. Acho que não sobreviveremos. Ouvi dizer que alguém conseguiu, realmente, sair deste planeta. Espero que eles enviem uma nave de volta para nós..."
+Message="Registro: G. Dahlgren: Ainda sem resposta do tipo de Dalton. Já fazem quatro dias agora e sem sinal dos outros. Acho que não sobreviveremos. Ouvi dizer que alguém conseguiu, realmente, sair deste planeta. Espero que eles enviem uma nave de volta para nós..."
 
 [TranslatorEvent9]
 ; EN: Message="Terra-Sun Mining Station (North)"
@@ -52,4 +52,4 @@ Message="Instalação de Mineração Terra-Mina"
 
 [TranslatorEvent3]
 ; EN: Message="LOG: S. Dalton: Watched those brutes beat Marshall to a pulp last night. He never saw it coming. Probably better that way. I emptied an entire clip on one of them and he just kept coming. At least they haven't tried to get me up here..."
-Message="Registro: S. Dalton: Assisti aqueles brutos espancarem Marshall na última noite. Ele nunca os viu chegando. Deve ser melhor assim. Evaziei um cartucho inteiro em um deles, mas o bruto continou vindo. Pelo menos eles não tentaram subir aqui ainda..."
+Message="Registro: S. Dalton: Assisti aqueles brutos espancarem Marshall na última noite. Ele nunca os viu chegando. Deve ser melhor assim. Esvaziei um cartucho inteiro em um deles, mas o bruto continou vindo. Pelo menos eles não tentaram subir aqui ainda..."

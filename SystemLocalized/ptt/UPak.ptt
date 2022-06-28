@@ -16,9 +16,9 @@ Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
 ; EN: Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="UMS Grenade Launcher")
-Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lançagranadas UMS")
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lança-granadas UMS")
 ; EN: Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="UMS Rocket Launcher")
-Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lançafoguetes UMS")
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lança-foguetes UMS")
 ; EN: Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Combat Assault Rifle")
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Fuzil de Assalto")
 Preferences=(Caption="Cloak Match",Parent="Game Types",LangCaption="Partida de Jogadores Camuflados",Class=UPak.CloakMatch,Immediate=True)
@@ -32,25 +32,25 @@ Statheader="Estatísticas de mortes: "
 ; EN: CARStat="Combat Assault Rifle"
 CARStat="Fuzil de Assalto"
 ; EN: RLStat="UMS Rocket Launcher"
-RLStat="Lançafoguetes UMS"
+RLStat="Lança-foguetes UMS"
 ; EN: GLStat="UMS Grenade Launcher"
-GLStat="Lançagranadas UMS"
+GLStat="Lança-granadas UMS"
 ; EN: ASMDStat="ASMD"
 ASMDStat="ASMD"
 ; EN: AutomagStat="Automag"
-AutomagStat="Automag"
+AutomagStat="Magnum Automática"
 ; EN: DispersionStat="Dispersion Pistol"
 DispersionStat="Pistola de Dispersão"
 ; EN: EightballStat="Eightball"
 EightballStat="Canhão 8"
 ; EN: FlakCannonStat="Flak Cannon"
-FlakCannonStat="Lançaestilhaços"
+FlakCannonStat="Lança-estilhaços"
 ; EN: GESBioRifleStat="GES BioRifle"
 GESBioRifleStat="Lançalixo Tóxico GES"
 ; EN: MinigunStat="Minigun"
 MinigunStat="Metralhadora"
 ; EN: RazorjackStat="Razorjack"
-RazorjackStat="Lançalâminas"
+RazorjackStat="Lança-lâminas"
 ; EN: RifleStat="Sniper Rifle"
 RifleStat="Fuzil de Longo Alcance"
 ; EN: StingerStat="Stinger"
@@ -66,9 +66,9 @@ DeathMessage="A granada de %k feita %o explodiu."
 FemDeathMessage="A granada de %k feita %o explodiu."
 FemKillMessage="A granada de %k feita %o explodiu."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
-PickupMessage="Você pegou o Lançagranadas UMS"
+PickupMessage="Você pegou o Lança-granadas UMS"
 ; EN: ItemName="UMS Grenade Launcher"
-ItemName="Lançagranadas UMS"
+ItemName="Lança-granadas UMS"
 
 [Cloak]
 ; EN: ExpireMessage="disengaged."
@@ -95,9 +95,9 @@ DeathMessage="O foguete de %k transformou o corpo de %o em pedaços."
 FemDeathMessage="O foguete de %k transformou o corpo de %o em pedaços."
 FemKillMessage="O foguete de %k transformou o corpo de %o em pedaços."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
-PickupMessage="Você pegou o Lançafoguetes UMS"
+PickupMessage="Você pegou o Lança-foguetes UMS"
 ; EN: ItemName="UMS Rocket Launcher"
-ItemName="Lançafoguetes UMS"
+ItemName="Lança-foguetes UMS"
 
 [UPakChooseGameMenu]
 MenuList[0]="Return to Na Pali"
@@ -191,19 +191,19 @@ ItemName="Tablet do Computador"
 
 [MarineArctic]
 ; EN: MenuName="UMS Arctic Marine"
-MenuName="Marinho do Ártico UMS"
+MenuName="Marine do Ártico UMS"
 
 [MarineDesert]
 ; EN: MenuName="UMS Desert Marine"
-MenuName="Marinho do Deserto UMS"
+MenuName="Marine do Deserto UMS"
 
 [MarineJungle]
 ; EN: MenuName="UMS Jungle Marine"
-MenuName="Marinho da Selva UMS"
+MenuName="Marine da Selva UMS"
 
 [SpaceMarine]
 ; EN: MenuName="UMS Space Marine"
-MenuName="Marinho do Espaço UMS"
+MenuName="Marine do Espaço UMS"
 
 [TransitionBrute]
 ; EN: NameArticle=" a "

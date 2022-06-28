@@ -1,8 +1,8 @@
 ﻿[Public]
 Object=(Name=XOpenGLDrv.XOpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="XOpenGL",Parent="Rendering",LangCaption="Suporte a XOpenGL",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True,Category="Options")
-Preferences=(Caption="Debug Options",Parent="XOpenGL",LangCaption="Opções de Desenvolvimento",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True,Category="DebugOptions")
-Preferences=(Caption="Render Options",Parent="XOpenGL",LangCaption="Opções de Renderização",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True,Category="Client")
+Preferences=(Caption="XOpenGL",Parent="Rendering",LangCaption="XOpenGL",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="Options")
+Preferences=(Caption="Debug Options",Parent="XOpenGL",LangCaption="Opções de Desenvolvimento",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="DebugOptions")
+Preferences=(Caption="Render Options",Parent="XOpenGL",LangCaption="Opções de Renderização",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="Client")
 
 [Errors]
 ; EN: NoFindGL="Can't find OpenGL driver %ls"
