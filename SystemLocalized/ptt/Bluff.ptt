@@ -20,19 +20,19 @@ Message="Sumo Sacerdote De'Nasha Breeche 255-480"
 
 [TranslatorEvent11]
 ; EN: Message="I have been hiding here for what seems like months now. The Skaarj forces that have taken over our monastery continue to transport stolen tarydium and other strange mechanical devices using their lightning sled. I fear that they may find me."
-Message="Eu estou me escondendo aqui pelo que parecerem ser meses agora. As forças Skaarj que assaltaram o monastério continuam a transportar tarydium furtado e outros dispositivos estranhos usando o ultrarápido trenó deles. Temo que eles podem me encontrar."
+Message="Eu estou me escondendo aqui pelo que parecerem ser meses agora. As forças Skaarj que assaltaram o mosteiro continuam a transportar tarydium furtado e outros dispositivos estranhos usando o ultrarápido trenó deles. Temo que eles podem me encontrar."
 
 [TranslatorEvent8]
 ; EN: Message="MAGNETIC LOCKS ENGAGED: AUTHORIZED BY CAPTAIN DUK'CHOROTH - OF THE 12th HOUSE OF dUBREVI"
 Message="TRAVAS MANGÉTICAS ATIVADAS: AUTORIZAÇÃO DADA PELO CAPITÃO DUK'CHOROTH-DA 12º COMPANHIA DE DUBREVI"
 ; EN: AltMessage="MAGNETIC LOCKS DISENGAGED"
-AltMessage="CIERRES MAGNÉTICOS DESACTIVADOS"
+AltMessage="TRAVAS MAGNÉTICOS DESATIVADAS"
 
 [TranslatorEvent9]
 ; EN: Message="STATIC DISCHARGE NODES: EAST AND WEST BREAKERS MUST BE THROWN TO RELEASE STATIC DISCHARGE."
-Message="NÓS DE DESCARGA ESTÁTICA: STATIC DISCHARGE NODES: INTERRUPTORES LESTE E OESTE DEVEM SER ARREMESSADOS PARA LIBERAR A DESCARGA ESTÁTICA."
+Message="NÓS DE DESCARGA ESTÁTICA: INTERRUPTORES LESTE E OESTE DEVEM SER ARREMESSADOS PARA LIBERAR A DESCARGA ESTÁTICA."
 ; EN: AltMessage="STATIC DISCHARGE SUCCESSFUL - HYDRO-ELECTRIC SHIPPING CAR NOW FULLY OPERATIONAL."
-AltMessage="DESCARGA ESTÁTICA SUELTA-VAGÓN DE ENVÍOS HIDROELÉCTRICO AHORA EN TOTAL FUNCIONAMIENTO."
+AltMessage="DESCARGA ESTÁTICA COM SUCESSO DE ENVÍOS HIDROELÉCTRICO AGORA EM TOTAL FUNCIONAMIENTO."
 
 [TranslatorEvent6]
 ; EN: AltMessage="BELL TOWER MAGNETIC LOCKS DISENGAGED: ACCESS TO BELL TOWER PERMITTED."
@@ -44,7 +44,7 @@ Message="Acólito Ne'Pher Dunis 350-488"
 
 [TranslatorEvent14]
 ; EN: Message="The woman they captured is scheduled to be executed. I cannot let this happen! As foolish as it sounds I will attempt to sneak her out of the prison cell through our secret caves. From there she can escape to the bell tower until darkness."
-Message="A mulher que eles capturaram esta agendada para ser executada. Eu não posso deixar isso acontecer! Pode parecer uma tolice, mas eu tentarei me infiltrar para libertrá-la da cela da prisão através de nossas cavernas secretas. A partir dali ela poderá escapar para a torre do sino até o escurecer do dia."
+Message="A mulher que eles capturaram está agendada para ser executada. Eu não posso deixar isso acontecer! Pode parecer uma tolice, mas eu tentarei me infiltrar para libertá-la da cela da prisão através de nossas cavernas secretas. A partir dali ela poderá escapar para a torre do sino até o escurecer do dia."
 
 [TranslatorEvent5]
 ; EN: Message="SKAARJ SHIPPING FACILITY POWER MANAGEMENT STATION: HYDRO-ELECTRIC SHIPPING CAR STATUS - OFF / REACTIVATION REQUIRES STATIC DISCHARGE NODES TO BE OPENED AT TOP OF BELL TOWER."
@@ -52,7 +52,7 @@ Message="ESTAÇÃO DE GERENCIAMENTO DE ENERGIA DA INSTALÇÃO SKAARJ DE EMBARQUE
 
 [TranslatorEvent10]
 ; EN: Message="HAVE FAITH AND NEVER SWAY FROM YOUR BELIEFS. ONLY A SOUL THAT KEEPS THE FAITH DESPITE ALL OPPRESSION SHALL TRIUMPH WHEN THE SAVIOUR PRINCESS COMES FROM THE STARS"
-Message="TENHA FÉ E NUNCA DESISTA DAS SUAS CRENÇAS. SOMENTE UMA ALMA QUE MANTENHA A FÉ APESAR DE TODA A OPRESSÃO TRIUMFARÁ QUANDO A PRINCESA SALVADORA DESCER DAS ESTRELAS"
+Message="TENHA FÉ E NUNCA DESISTA DAS SUAS CRENÇAS. SOMENTE UMA ALMA QUE MANTÉM A FÉ APESAR DE TODA A OPRESSÃO TRIUNFARÁ QUANDO A PRINCESA SALVADORA DESCER DAS ESTRELAS"
 
 [TranslatorEvent13]
 ; EN: Message="Myscha Nov 28th 1994- June 1997"
@@ -60,15 +60,15 @@ Message="Myscha 28 de Novembro de 1994- Junho de 1997"
 
 [TranslatorEvent19]
 ; EN: Message="I am feeling ill. My cough has gotten worse and this darkened cell is not helping. I only hope that my  brother Kruun can escape to our childhood hiding hole in the sewers. From there he can access the inner walls of the monastery."
-Message="Eu estou me sentindo mal. Minha tosse piorou e esta cela sombria não esta ajudando. Só posso esperar que o meu irmão Kruun possa escapar para o nosso esconderijo de infância nas galerias subterrâneas. A partir dali ele pode acessar as paredes internas do monastério."
+Message="Eu estou me sentindo mal. Minha tosse piorou e esta cela sombria não está ajudando. Só posso esperar que o meu irmão Kruun possa escapar para o nosso esconderijo de infância nas galerias subterrâneas. A partir dali ele pode acessar as paredes internas do mosteiro."
 
 [TranslatorEvent1]
 ; EN: Message="Security Officer Sergai Dubrov: ISV-KRAN: LOG ENTRY: We are hot on the trail of the Skaarj Hunting party that captured Kira near the Sunspire. They are headed north towards the blue electrical storms on the horizon."
-Message="Agente de segurança Sergai Dubrov: ISV-KRAN: ENTRADA NO DIÁRIO: Nós estamos muito perto do rastro do grupo de Skaarj caçadores que capturaram Kira próximo ao Campanário Solar. Eles foram para o norte em direção às tempestades elétricas azuis no horizonte."
+Message="Agente de segurança Sergai Dubrov: ISV-KRAN: ENTRADA NO DIÁRIO: Estamos no encalço do grupo de Caça Skaarj que capturou Kira perto da Torre Solar. Eles estão indo para o norte em direção às tempestades elétricas azuis no horizonte."
 
 [TranslatorEvent12]
 ; EN: Message="I have discovered a secret! Last night I snuck out of my hiding place and swam through the pipes to the prison. They have captured a Girl! The Krall sergeant took two boots in the mouth when he approached her. Haha! I can only laugh at their stupidity."
-Message="Eu descobri um segredo! Na última noite rastejei para fora do meu esconderijo e nadei através dos canos par a prisão. Eles capturaram uma garota! O sargento krall pegou duas botas na boca quando ele se aproximou dela. Haha só posso rir da estupidez deles."
+Message="Eu descobri um segredo! Ontem à noite eu escapuli do meu esconderijo e nadei pelos canos até a prisão. Eles capturaram uma menina! O sargento Krall levou duas botas na boca quando se aproximou dela. Haha! Só posso rir da estupidez deles."
 
 [TranslatorEvent22]
 ; EN: Message="Son of Ne'Lin Garas 380-390"
@@ -76,11 +76,11 @@ Message="Filho de Ne'Lin Garas 380-390"
 
 [TranslatorEvent23]
 ; EN: Message="Pelit Jan 20 1997-July 17 1997"
-Message="Pelit, 20 de Enero de 1997-17 de Jullho de 1997"
+Message="Pelit, 20 de Janeiro de 1997-17 de Julho de 1997"
 
 [TranslatorEvent17]
 ; EN: Message="Only by facing the direction of the rising sun may one find a new day."
-Message="Somente ao olhar na direção do sol nascente um poderá encontrar um novo dia."
+Message="Somente olhando na direção do sol nascente pode-se encontrar um novo dia."
 
 [TranslatorEvent16]
 ; EN: Message="WARNING-STATIC DISCHARGE NODES-STAY CLEAR DURING OPERATION."
@@ -94,17 +94,17 @@ Message="Acólito Ne'Lin Garas 353-487"
 ; EN: Message="HYDRO-LASER CONTROL STATION: LASERS ON AND OPERATIONAL"
 Message="ESTAÇÃO DE CONTROLE DO LASER AQUÁTICO: LASERS LIGADOS E OPERACIONAIS"
 ; EN: AltMessage="HYDRO-LASER CONTROL STATION: LASERS DISENGAGED - ACCESS TO HYDRO-ELECTRIC GENERATOR BELOW BELL TOWER PERMITTED"
-AltMessage="ESTAÇÃO DE CONTROLE DO LASER AQUÁTICO: LASERS DESATIVADOS-ACESSO AO GERADOR HIDROELÉTRICO ABAIXO PERMITIDO"
+AltMessage="ESTAÇÃO DE CONTROLE HIDRO-LASER: LASERS DESLIGADOS - PERMITIDO ACESSO AO GERADOR HIDROELÉTRICO ABAIXO DA TORRE DE SINAL"
 
 [TranslatorEvent3]
 ; EN: Message="My brother Kriin is in the cell below me. My other brother Kruun escaped through the water tunnel under the stairs. They sacrificed my best friend Jaara for Kruun's escape."
-Message="Meu irmão Kriin esta na cela abaixo de mim. Meu outro irmão Kruun escapou através do tunel aquático debaixo das escadas. Eles sacrificaram o meu melhor amigo Jaara para que Kruun pudesse escapar."
+Message="Meu irmão Kriin está na cela abaixo de mim. Meu outro irmão Kruun escapou através do tunel aquático debaixo das escadas. Eles sacrificaram o meu melhor amigo Jaara para que Kruun pudesse escapar."
 
 [TranslatorEvent15]
 ; EN: Message="Vault of the Dead - Herein lies the last resting place of the High Priest of Bluff Eversmoking and the artifacts used by the Messiah."
 Message="Cofre dos mortos-Herein jaz no último local de descanço do sumo sacredote do Desfiladeiro da Cremação Eterna e dos artefatos usados pelo Messias."
 ; EN: Hint="Find a secret lever in the graveyard"
-Hint="Encontre uma avalanca secreta no cemitério"
+Hint="Encontre uma alavanca secreta no cemitério"
 
 [TranslatorEvent2]
 ; EN: Message="Science Officer Kira Argmanov: Separated from my crewmates from ISV-KRAN, I've only been able to stay alive by holding up in this bell tower. A native Nali help me escape the prison cell the Skaarj put me in. Hopefully the Skaarj won't find me here."
@@ -112,7 +112,7 @@ Message="Pesquisadora científica Kira Argmanov: Separada dos meus colegas de tr
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."
-Message="Diário da diretora médica da ISV-KRAN:-Tatiana Zimna: Nós chegamos a este lindo monastério num lago num canion em nossa busca pelos abduzidores de Kira. Nós acamparemos aqui neste crucifixo esta noite e recomeçar a busca amanhã de manhã."
+Message="Diário da Diretora Médica da ISV-KRAN:-Tatiana Zimna: Viemos a este belo mosteiro no lago do desfiladeiro em nossa busca pelos sequestradores de Kira. Vamos acampar perto deste crucifixo esta noite e partir amanhã cedo."
 
 [TranslatorEvent26]
 ; EN: Message="Shipping Log: Grorq of the Red Hand Tribe. I am really getting sick with the way the Skaarj are treating us. Constantly bossing us around and making us watch over their pathetic Nali slaves. My troops are getting sick of this situation."
@@ -124,19 +124,19 @@ Message="Diário de embarque: Grorq da Tribo da Mão Vermelha. Ao chegar da pró
 
 [TranslatorEvent25]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: we have captured a Terran girl. Some of my soldiers want to try and take liberties with her. I guess that's OK as long as they watch those boots! She kicked me in the Hrangos last time."
-Message="Carcereiro Hrang da Tribo da Mão Vermelha: nós capturamos uma garota terráquea. Alguns dos meus soldados querem tentar levar libertados com ela. Eu acho que não há problemas nisso, desde que eles cuidem daquelas botas! Ela me chutou nas minhas Hrangos da última vez."
+Message="Carcereiro Hrang da Tribo da Mão Vermelha: nós capturamos uma garota terráquea. Alguns dos meus soldados querem tentar tomar liberdades com ela. Eu acho que está tudo bem, desde que eles tomem cuidado com essas botas! Ela me chutou nos Hrangos da última vez."
 
 [TranslatorEvent27]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: Dorro owes me 25,000 gold Paaras when we get home! He truly sucks at death bones. Hustling him is like taking candy from a Terran baby. Speaking of which I think it's time to go beat on that ugly Terran girl some more!"
-Message="Carcereiro Hrang da Tribo da Mão Vermelha: Dorros me deve 25,000 Paaras de ouro assim que ele chegar em casa! Ele é realmente ruim em carregar os ossos dos mortos. Forçá-lo é como tirar o doce de um bebê terráqueo. Falando nisso, eu acho que já é hora de dar uma surra naquela garota terráquea mais um pouco!"
+Message="Carcereiro Hrang da Tribo da Mão Vermelha: Dorros me deve 25,000 Paaras de ouro assim que ele chegar em casa! Ele realmente é péssimo em ossos dos mortos. Empurrá-lo é como tirar o doce de um bebê terráqueo. Falando nisso, acho que já é hora de dar mais uma surra naquela garota terráquea feia!"
 
 [TranslatorEvent28]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: I can't believe it!!! That Terran girl escaped! One of those worthless Nali Monks must have tunneled her out. I am in DEEP SHIT! If Captain DUK'CHOROTH comes and finds out I let her escape I'll be de-hrangod for sure!"
-Message="Carcereiro Hrang da Tribo da Mão Vermelha: Eu não posso acreditar nisto!!! Aquela garota terráquea escapou! Um desses monges Nali inúteis deve te-la ajudado a rastejar para fora. Eu estou FERRADO! Se o capitão DUK'CHOROTH vier e descobrir que deixei ela escapar, serei des-hrangodizado com certeza!"
+Message="Carcereiro Hrang da Tribo da Mão Vermelha: Eu não posso acreditar nisto!!! Aquela garota terráquea escapou! Um desses monges Nali inúteis deve tê-la ajudado a rastejar para fora. Eu estou FERRADO! Se o capitão DUK'CHOROTH vier e descobrir que deixei ela escapar, serei des-hrangodizado com certeza!"
 
 [TranslatorEvent29]
 ; EN: Message="Kruun's personal diary: I have to be careful how many times I sneak into the monastery through the tunnels. I've marked the tunnel that leads to the inner monastery with a cross, the other leads to the prison where my brother is still being held."
-Message="Diário pessoal de Kruun: Eu tenho que ser cuidadoso nas vezes em que eu me infiltrar no monastério através das galerias subterrâneas. Marquei a que leva ao interior do monastério com uma cruz, a outra leva à prisão onde o meu irmão ainda esta preso."
+Message="Diário pessoal de Kruun: Eu tenho que ser cuidadoso nas vezes em que eu me infiltrar no mosteiro através das galerias subterrâneas. Marquei a que leva ao interior do mosteiro com uma cruz, a outra leva à prisão onde o meu irmão ainda está preso."
 
 [TranslatorEvent30]
 ; EN: Message="MAIN GATE GUARD TOWER"

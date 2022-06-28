@@ -65,9 +65,9 @@ Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movim
 ; EN: Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
 Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movimento,Move-se para Trás")
 ; EN: Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Left")
-Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movimento,Vira a Esquerda")
+Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movimento,Virar à Esquerda")
 ; EN: Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Right")
-Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movimento,Vira a Direita")
+Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movimento,Virar à Direita")
 ; EN: Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Left")
 Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Movimento,Pas. Lat. Esquerda")
 ; EN: Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Right")
@@ -97,9 +97,9 @@ Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Arma,Tiro")
 ; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
 Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Arma,Tiro Alternativo")
 ; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
-Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,Próx Arma")
+Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,Próxima Arma")
 ; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
-Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,Ante Arma")
+Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,Arma Anterior")
 ; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
 Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Arma,Jogar Arma")
 ; EN: Object=(Name="GetWeapon UnrealShare.DispersionPistol",Class=Class,MetaClass=Engine.Input,Description="Weapon,Dispersion Pistol")
@@ -113,9 +113,9 @@ Object=(Name="GetWeapon UnrealShare.ASMD",Class=Class,MetaClass=Engine.Input,Des
 ; EN: Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Weapon,Eightball")
 Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Arma,Canhão 8")
 ; EN: Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
-Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Arma,Lançaestilhaços")
+Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-estilhaços")
 ; EN: Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
-Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Arma,Lançalâminas")
+Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-lâminas")
 ; EN: Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
 Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Arma,Lançalixo Tóxico GES")
 ; EN: Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
@@ -125,9 +125,9 @@ Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Desc
 ; EN: Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Combat Assault Rifle")
 Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Arma,Fuzil de Assalto")
 ; EN: Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Grenade Launcher")
-Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lançagranadas UMS")
+Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-granadas UMS")
 ; EN: Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Rocket Launcher")
-Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lançafoguetes UMS")
+Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-foguetes UMS")
 ; EN: Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Weapon,Quad-Barreled Shotgun")
 Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Arma,Escopeta Quádrupla")
 ; EN: Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Weapon,Translocator")
@@ -135,7 +135,7 @@ Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.
 ; EN: Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,Description="Weapon,Peacemaker")
 Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,Description="Arma,Pacificador")
 ; EN: Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
-Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventário,Activate Item")
+Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventário,Ativar Item")
 ; EN: Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
 Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventário,Próximo Item")
 ; EN: Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
@@ -153,7 +153,7 @@ Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Jogo,Bat
 ; EN: Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Game,Show Scores")
 Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Jogo,Mostrar Placar")
 ; EN: Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save")
-Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Jogo,Salvamento Rapido")
+Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Jogo,Salvamento Rápido")
 ; EN: Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Load")
 Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Jogo,Carga Rápida")
 ; EN: Object=(Name="Shot",Class=Class,MetaClass=Engine.Input,Description="Game,Screenshot")
@@ -171,13 +171,13 @@ Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Conexão d
 ; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
 Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Conexão de Rede,Desconectar")
 ; EN: Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
-Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Conexão de Rede,Reconecte-se")
+Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Conexão de Rede,Reconectar")
 ; EN: Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
-Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Consola,Botão da Consola")
+Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Consola,Botão do Console")
 ; EN: Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
-Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Consola,Símbolo da Consola")
+Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Consola,Símbolo do Console")
 ; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
-Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Consola,Consola Rápida")
+Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Consola,Console Rápido")
 Preferences=(Caption="Coop Play",Parent="Game Types",LangCaption="Jogo Cooperativo",Class=UnrealShare.CoopGame,Immediate=True)
 Preferences=(Caption="Deathmatch",Parent="Game Types",LangCaption="Partida da Morte",Class=UnrealShare.DeathmatchGame,Immediate=True)
 Preferences=(Caption="Team Play",Parent="Game Types",LangCaption="Jogo de Times",Class=UnrealShare.TeamGame,Immediate=True)
@@ -191,7 +191,7 @@ ClassCaption="Partida da Morte"
 ; EN: GlobalNameChange=" changed name to "
 GlobalNameChange=" mudou de nome para "
 ; EN: NoNameChange=" is already in use"
-NoNameChange=" já esta em uso"
+NoNameChange=" já está em uso"
 ; EN: TimeMessage[0]="5 minutes left in the game!"
 TimeMessage[0]="5 minutos para o fim da partida!"
 ; EN: TimeMessage[1]="4 minutes left in the game!"
@@ -201,7 +201,7 @@ TimeMessage[2]="3 minutos para o fim da partida!"
 ; EN: TimeMessage[3]="2 minutes left in the game!"
 TimeMessage[3]="2 minutos para o fim da partida!"
 ; EN: TimeMessage[4]="1 minute left in the game!"
-TimeMessage[4]="1 minutos para o fim da partida!"
+TimeMessage[4]="1 minuto para o fim da partida!"
 ; EN: TimeMessage[5]="30 seconds left!"
 TimeMessage[5]="30 segundos para o fim!"
 ; EN: TimeMessage[6]="10 seconds left!"
@@ -239,7 +239,7 @@ YesSelString=" [SIM]  Não"
 ; EN: NoSelString=" Yes  [NO]"
 NoSelString="  Sim  [NÃO]"
 ; EN: HelpMessage[1]="Select yes and hit enter to return to your puny, miserable, useless real life, if you can't handle UNREALity."
-HelpMessage[1]="Selecione sim e aperte enter para retornar à sua insignificante, miserável, inútil vida real, se você não consegue suportar a surrealidade do UNREAL."
+HelpMessage[1]="Selecione sim e aperte Enter para retornar à sua insignificante, miserável, inútil vida real, se você não consegue suportar a surrealidade do UNREAL."
 ; EN: MenuList[0]="A Digital Extremes/Epic Megagames"
 MenuList[0]="Um jogo por Digital Extremes"
 ; EN: MenuList[1]="Collaboration"
@@ -287,7 +287,7 @@ HelpMessage[1]="Indica qual configuração do robô esta sendo editada. Use as s
 ; EN: MenuList[2]="Name"
 MenuList[2]="Nome"
 ; EN: HelpMessage[2]="Hit enter to edit the name of this bot."
-HelpMessage[2]="Aperte enter para mudar o nome deste robô."
+HelpMessage[2]="Aperte Enter para mudar o nome deste robô."
 ; EN: MenuList[3]="Class"
 MenuList[3]="Classe"
 ; EN: HelpMessage[3]="Use the left and right arrow keys to change the class of this bot."
@@ -395,31 +395,31 @@ MenuTitle="PRIORIDADES"
 
 [UnrealBotConfigMenu]
 ; EN: MenuTitle="BOTS"
-MenuTitle="BÔS"
+MenuTitle="ROBÔS"
 ; EN: MenuList[1]="Auto-Adjust Skills"
-MenuList[1]="Autoajust. Habilidad"
+MenuList[1]="Autoajust. Habilidade"
 ; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
-HelpMessage[1]="Se ligado, os bôs ajustam o nível das suas respectivas habilidades de acordo com o nível dos jogadores."
+HelpMessage[1]="Se ligado, os robôs ajustam o nível das suas respectivas habilidades de acordo com o nível dos jogadores."
 ; EN: MenuList[2]="Base Skill"
 MenuList[2]="Habilidade Base"
 ; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
-HelpMessage[2]="Nível base das habilidades dos bôs (Entre 0 e 3)."
+HelpMessage[2]="Nível base das habilidades dos robôs (Entre 0 e 3)."
 ; EN: MenuList[3]="Random Order"
-MenuList[3]="Ordem Aleatório"
+MenuList[3]="Ordem Aleatória"
 ; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
-HelpMessage[3]="Se ligado, os bôs entram no jogo em ordem aleatória. Se desligado, eles entram na ordem pré configurado."
+HelpMessage[3]="Se ligado, os robôs entram no jogo em ordem aleatória. Se desligado, eles entram na ordem pré-configurada."
 ; EN: MenuList[4]="Configure Individual Bots"
-MenuList[4]="Configura Bôs Individualmente"
+MenuList[4]="Configura Robôs Individualmente"
 ; EN: HelpMessage[4]="Change the configuration of individual bots."
-HelpMessage[4]="Muda a configuração dos bôs individualmente."
+HelpMessage[4]="Muda a configuração dos robôs individualmente."
 ; EN: MenuList[5]="Number of Bots"
-MenuList[5]="Numero de Bôs"
+MenuList[5]="Numero de Robôs"
 ; EN: HelpMessage[5]="Number of bots to start play (max 15)."
-HelpMessage[5]="Número de bôs que começam jogando (máximo 15)."
+HelpMessage[5]="Número de robôs que começam jogando (máximo 15)."
 ; EN: MenuList[6]="Bots in Multiplayer"
-MenuList[6]="Bôs no Multijogador"
+MenuList[6]="Robôs no Multijogador"
 ; EN: HelpMessage[6]="Use bots when playing with other people."
-HelpMessage[6]="Usar bôs quando estiver jogando com outras pessoas."
+HelpMessage[6]="Usar robôs quando estiver jogando com outras pessoas."
 
 [ShieldBelt]
 ; EN: PickupMessage="You got the Shield Belt"
@@ -445,15 +445,15 @@ MenuTitle="CARREGAR JOGO"
 ; EN: MenuList[1]="GAME"
 MenuList[1]="JOGO"
 ; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
-HelpMessage[1]="Pressione enter para modificar as opções do jogo, incluíndo o carregamento e o salvamento dos jogos, mudando o nível de dificuldade e começando uma partida contra robôs."
+HelpMessage[1]="Pressione Enter para modificar as opções do jogo, incluíndo o carregamento e o salvamento dos jogos, mudando o nível de dificuldade e começando uma Partida contra Robôs."
 ; EN: MenuList[2]="MULTIPLAYER"
 MenuList[2]="MULTIJOGADOR"
 ; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
-HelpMessage[2]="Aperte enter para modificar as opções de configuração do Multijogador, incluindo início ou entrada de um jogo em rede, alem de modificações na sua aparência, nome ou time."
+HelpMessage[2]="Aperte Enter para modificar as opções de configuração do Multijogador, incluindo início ou entrada de um jogo em rede, além de modificações na sua aparência, nome ou time."
 ; EN: MenuList[3]="OPTIONS"
 MenuList[3]="OPÇÕES"
 ; EN: HelpMessage[3]="Hit enter to customize controls."
-HelpMessage[3]="Aperte enter para personalizar os controles."
+HelpMessage[3]="Aperte Enter para personalizar os controles."
 ; EN: MenuList[4]="AUDIO/VIDEO"
 MenuList[4]="AUDIO/VIDEO"
 ; EN: HelpMessage[4]="Change sound and display options"
@@ -461,7 +461,7 @@ HelpMessage[4]="Modifica as opções de audio e de tela"
 ; EN: MenuList[5]="QUIT"
 MenuList[5]="SAIR"
 ; EN: HelpMessage[5]="Hit enter to quit game."
-HelpMessage[5]="Aperte enter para sair do jogo."
+HelpMessage[5]="Aperte Enter para sair do jogo."
 ; EN: MenuList[7]="ORDER INFO"
 MenuList[7]="INFORMAÇÕES DO PEDIDO"
 ; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
@@ -485,9 +485,9 @@ MenuList[4]="OPÇÕES DE JOGO"
 ; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
 HelpMessage[4]="Aperte Enter para modificar as opções de jogo. Note que você não pode fazer isso enquanto estiver jogando em modo multijogador."
 ; EN: MenuList[5]="BOTMATCH"
-MenuList[5]="PARTIDA CONTRA BÔS"
+MenuList[5]="PARTIDA CONTRA ROBÔS"
 ; EN: HelpMessage[5]="DeathMatch against Bots."
-HelpMessage[5]="Partida da Morte contra Bôs."
+HelpMessage[5]="Partida da Morte contra Robôs."
 
 [NaliFruit]
 ; EN: PickupMessage="You picked the Nali Healing Fruit +"
@@ -616,7 +616,7 @@ ItemName="Caixa de Voz"
 ; EN: PickupMessage="You picked up 50 bullets"
 PickupMessage="Você pegou 50 Munições"
 ; EN: ItemName="Bullet Box"
-ItemName="Caja de Munições"
+ItemName="Caixa de Munições"
 
 [Flare]
 ; EN: PickupMessage="You got a Flare"
@@ -666,7 +666,7 @@ ItemName="Fragmentos de Tarídio"
 ; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
 HelpMessage[10]="Porcentagem de dano recebido quando atingido por fogo amigo. Note que você sempre receberá dano total das suas próprias armas."
 ; EN: MenuList[10]="Friendly Fire Scale"
-MenuList[10]="Escama de Fogo Amigo"
+MenuList[10]="Escala de Fogo Amigo"
 
 [SuperHealth]
 ; EN: PickupMessage="You picked up the Super Health Pack"
@@ -688,15 +688,15 @@ ItemName="Ataduras"
 
 [Armor]
 ; EN: PickupMessage="You got the Assault Vest"
-PickupMessage="Você tem o Traje de Assalto"
+PickupMessage="Você tem o Colete de Assalto"
 ; EN: ItemName="Assault Vest"
-ItemName="Traje de Assalto"
+ItemName="Colete de Assalto"
 
 [KevlarSuit]
 ; EN: PickupMessage="You picked up the Kevlar Suit"
-PickupMessage="Você pegou um Traje de Kevlar"
+PickupMessage="Você pegou um Colete de Kevlar"
 ; EN: ItemName="Kevlar Suit"
-ItemName="Traje de Kevlar"
+ItemName="Colete de Kevlar"
 
 [BabyCow]
 ; EN: NameArticle=" a "
@@ -708,19 +708,19 @@ MenuName="Bezerro"
 ; EN: NameArticle=" a "
 NameArticle=" uma "
 ; EN: MenuName="Bird"
-MenuName="Vê"
+MenuName="Pássaro"
 
 [Biterfish]
 ; EN: NameArticle=" a "
 NameArticle=" um "
 ; EN: MenuName="Biterfish"
-MenuName="Peixe Mordedor"
+MenuName="Peixe-boi"
 
 [BiterfishSchool]
 ; EN: NameArticle=" a "
 NameArticle=" um "
 ; EN: MenuName="Biterfish"
-MenuName="Peixe Mordedor"
+MenuName="Peixe-boi"
 
 [Brute]
 ; EN: NameArticle=" a "
@@ -1018,11 +1018,11 @@ HelpMessage[2]="Mostra o Unreal em uma janela. Note que indo para o modo softwar
 ; EN: MenuList[3]="Select Resolution"
 MenuList[3]="Escolher Resolução"
 ; EN: HelpMessage[3]="Use the left and right arrows to select a resolution, and press enter to select this resolution."
-HelpMessage[3]="Use as setas esquerda e direita para escolher a resolução, e pressione enter para selecionar aquela resolução."
+HelpMessage[3]="Use as setas esquerda e direita para escolher a resolução, e pressione Enter para selecionar aquela resolução."
 ; EN: MenuList[4]="Field of View"
 MenuList[4]="Campo de Visão"
 ; EN: HelpMessage[4]="Use the left and right arrows to adjust Field of View (FoV) for widescreen displays"
-HelpMessage[4]="Use as setas esquerda e direita para ajustar o campo de visão (FoV) para telas anchas"
+HelpMessage[4]="Use as setas esquerda e direita para ajustar o campo de visão (FoV) para telas widescreen"
 ; EN: MenuList[5]="Texture Detail"
 MenuList[5]="Detalhe de Textura"
 ; EN: HelpMessage[5]="Use the low texture detail option to improve performance.  Changes to this setting will take effect on the next level change."
@@ -1038,7 +1038,7 @@ HelpMessage[7]="Ajusta o volume dos efeitos sonoros no jogo usando as setas esqu
 ; EN: MenuList[8]="Speech Volume"
 MenuList[8]="Volume de Fala"
 ; EN: HelpMessage[8]="Adjust the volume of speech, taunt and grunt effects in the game using the left and right arrow keys."
-HelpMessage[8]="Ajuste o volume da fala, os efeitos da provocação e do grunhido no jogo usando as teclas de seta esquerda e direita."
+HelpMessage[8]="Ajusta o volume da fala, os efeitos da provocação e do grunhido no jogo usando as teclas de seta esquerda e direita."
 ; EN: MenuList[9]="Sound Quality"
 MenuList[9]="Qualidade do Som"
 ; EN: HelpMessage[9]="Use the low sound quality option to improve performance on machines with 32 megabytes or less of memory. Changes to this setting will take effect on the next level change."
@@ -1054,11 +1054,11 @@ HelpMessage[11]="Se ligado, você ouvirá um sinal quando receber uma mensagem."
 ; EN: MenuList[12]="Flat Shading"
 MenuList[12]="Sombreamento Plano"
 ; EN: HelpMessage[12]="If enabled, some specific meshes may use flat shading."
-HelpMessage[12]="Se ligado, algumas meshes em especial podem usar sombreamento plano."
+HelpMessage[12]="Se ligado, algumas malhas em especial podem usar sombreamento plano."
 ; EN: MenuList[13]="Curvy Meshes"
 MenuList[13]="Malhas Curvilíneas"
 ; EN: HelpMessage[13]="If enabled, some specific meshes may use curved surfaces for extra detail."
-HelpMessage[13]="Se ligado, algumas meshes em especial podem usar superfícies curvas para detalhamento extra."
+HelpMessage[13]="Se ligado, algumas malhas em especial podem usar superfícies curvas para detalhamento extra."
 ; EN: MenuList[14]="Cast Shadows"
 MenuList[14]="Projetar Sombras"
 ; EN: HelpMessage[14]="If enabled, pawns cast shadows. Changes to this setting will take effect on the next level change."
@@ -1070,17 +1070,17 @@ HelpMessage[15]="Se ligado, os objetos de decoração projetam sombras. Mudança
 ; EN: MenuList[16]="Shadow Detail"
 MenuList[16]="Detalhe da Sombra"
 ; EN: HelpMessage[16]="If blob, use blob shadows, else use realistic shadows with different resolutions."
-HelpMessage[16]="Se mancha, usar sombras do tipo mancha, senão usa sombras realistas com diferentes resoluções. Mudanças neste parâmetro terão efeito após a mudança de mapa."
+HelpMessage[16]="Se borrar, usar sombras do tipo borrão, senão usa sombras realistas com diferentes resoluções. Mudanças neste parâmetro terão efeito após a mudança de mapa."
 ; EN: ShadowDetail[0]="Blob"
-ShadowDetail[0]="Mancha"
+ShadowDetail[0]="Borrão"
 ; EN: ShadowDetail[1]="Low Res"
-ShadowDetail[1]="Baixa Res."
+ShadowDetail[1]="Res. Baixa"
 ; EN: ShadowDetail[2]="Mid Res"
-ShadowDetail[2]="Média Res"
+ShadowDetail[2]="Res. Média"
 ; EN: ShadowDetail[3]="High Res"
-ShadowDetail[3]="Alta Res."
+ShadowDetail[3]="Res. Alta"
 ; EN: ShadowDetail[4]="Ultra Res"
-ShadowDetail[4]="Ultra Res."
+ShadowDetail[4]="Res. Ultra"
 ; EN: MenuList[17]="PreCaching Content"
 MenuList[17]="Pré-Carregar Conteúdo"
 ; EN: HelpMessage[17]="Use this option to precaching map content like sounds and textures."
@@ -1094,13 +1094,13 @@ MenuList[19]="Névoa do Céu"
 ; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
 HelpMessage[19]="Nível de detalhe para neblina aplicada no céu."
 ; EN: SkyFogDetail[0]="High Detail"
-SkyFogDetail[0]="Alto Detalhe"
+SkyFogDetail[0]="Detalhe Alto"
 ; EN: SkyFogDetail[1]="Low Detail"
-SkyFogDetail[1]="Baixo Detalhe"
+SkyFogDetail[1]="Detalhe Baixo"
 ; EN: SkyFogDetail[2]="Off"
 SkyFogDetail[2]="Desativado"
 ; EN: MenuList[20]="HUD Scale"
-MenuList[20]="Escala HUD"
+MenuList[20]="Escala do HUD"
 ; EN: HelpMessage[20]="The scaling of user HUD."
 HelpMessage[20]="A escala do HUD do usuário."
 
@@ -1130,7 +1130,7 @@ HelpMessage[6]="Deve observar a partida no lugar de jogar."
 ; EN: MenuList[7]="Start Game"
 MenuList[7]="Começar Jogo"
 ; EN: HelpMessage[7]="Press enter to start game."
-HelpMessage[7]="Pressione enter para começar o jogo."
+HelpMessage[7]="Pressione Enter para começar o jogo."
 ; EN: MenuList[8]="Mutators:"
 MenuList[8]="Mutadores:"
 ; EN: HelpMessage[8]="Should use mutators with this game?"
@@ -1146,7 +1146,7 @@ MenuTitle="Selecione Representação Digital"
 ; EN: MenuList[1]="Name: "
 MenuList[1]="Nome: "
 ; EN: HelpMessage[1]="Hit enter to type in your name. Be sure to do this before joining a multiplayer game."
-HelpMessage[1]="Aperte enter para digitar o seu nome. Certifique-se de fazer isto antes de entrar num jogo multijogador."
+HelpMessage[1]="Aperte Enter para digitar o seu nome. Certifique-se de fazer isto antes de entrar num jogo multijogador."
 ; EN: MenuList[2]="Team Color:"
 MenuList[2]="Cor do Time:"
 ; EN: HelpMessage[2]="Use the arrow keys to change your team color (Red, Blue, Green, Yellow or None)."
@@ -1168,13 +1168,13 @@ HelpMessage[3]="Mude a sua roupa com as setas esquerda e direita do teclado."
 ; EN: MenuList[4]="Face:"
 MenuList[4]="Rosto:"
 ; EN: HelpMessage[4]="Change your face skin using the left and right arrow keys."
-HelpMessage[4]="Mude a pele do seu rosto usando as setas esquerda e direita."
+HelpMessage[4]="Mude seu rosto usando as setas esquerda e direita."
 
 [UnrealJoinGameMenu]
 ; EN: MenuTitle="JOIN GAME"
 MenuTitle="ENTRAR NUM JOGO"
 ; EN: MenuList[1]="Find Local Servers"
-MenuList[1]="Encontrar Serv. Locais"
+MenuList[1]="Encontrar Servidores Locais"
 ; EN: HelpMessage[1]="Listen for local servers"
 HelpMessage[1]="Espera por servidores locais"
 ; EN: MenuList[2]="Choose From Favorites"
@@ -1184,7 +1184,7 @@ HelpMessage[2]="Escolha um servidor de uma lista de favoritos"
 ; EN: MenuList[3]="Open"
 MenuList[3]="Abrir"
 ; EN: HelpMessage[3]="Hit enter to type in a server address.  Hit enter again to go to this server."
-HelpMessage[3]="Aperte enter para digitar o endereço do servidor. Aperter enter novamente para entrar neste servidor."
+HelpMessage[3]="Aperte Enter para digitar o endereço do servidor. Aperter Enter novamente para entrar neste servidor."
 ; EN: MenuList[4]="Net Speed"
 MenuList[4]="Vel. da Conexão"
 ; EN: HelpMessage[4]="Set networking speed."
@@ -1202,7 +1202,7 @@ LANOption="(LAN)"
 ; EN: MenuList[5]="Go to the Unreal server list"
 MenuList[5]="Ir para a lista de servidores do Unreal"
 ; EN: HelpMessage[5]="Open Unreal Server List"
-HelpMessage[5]="Abrir o Lista do Servidores do Unreal"
+HelpMessage[5]="Abrir o Lista dos Servidores do Unreal"
 
 [UnrealOptionsMenu]
 ; EN: MenuTitle="OPTIONS MENU"
@@ -1216,7 +1216,7 @@ MenuList[2]="Habilitar Joystick"
 ; EN: HelpMessage[2]="Toggle enabling of joystick."
 HelpMessage[2]="Alterna entre habilitar ou desabilitar o joystick."
 ; EN: MenuList[3]="Mouse Sensitivity"
-MenuList[3]="Sins. do Mouse"
+MenuList[3]="Sens. do Mouse"
 ; EN: HelpMessage[3]="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
 HelpMessage[3]="Ajusta sensibilidade do mouse, ou quão longe você deve mover o mouse para produzir um movimento correspondente no jogo."
 ; EN: MenuList[4]="Mouse Smoothing"
@@ -1258,11 +1258,11 @@ HelpMessage[12]="Se ligado, ao pressionar duas vezes e rapidamente uma tecla de 
 ; EN: MenuList[13]="Customize Controls"
 MenuList[13]="Personalizar Controles"
 ; EN: HelpMessage[13]="Hit enter to customize keyboard, mouse, and joystick configuration."
-HelpMessage[13]="Aperte enter para personalizar as configurações do teclado, mouse e joystick."
+HelpMessage[13]="Aperte Enter para personalizar as configurações do teclado, mouse e joystick."
 ; EN: MenuList[14]="Prioritize Weapons"
 MenuList[14]="Priorizar Armas"
 ; EN: HelpMessage[14]="Hit enter to prioritize weapon switching order. (If never auto-switch is false)"
-HelpMessage[14]="Aperte enter para priorizar a ordem da troca de armas. (Se a opção de nunca trocar automaticamente estiver desligada)"
+HelpMessage[14]="Aperte Enter para priorizar a ordem da troca de armas. (Se a opção de nunca trocar automaticamente estiver desligada)"
 ; EN: MenuList[15]="No Auto Weapon Switch"
 MenuList[15]="Des. Automudança de Arma"
 ; EN: HelpMessage[15]="Never auto-switch to better weapon on pickup."
@@ -1292,9 +1292,9 @@ HighSpeedInternetOption="(Banda larga)"
 ; EN: LANOption="(LAN)"
 LANOption="(LAN)"
 ; EN: MenuList[19]="Console"
-MenuList[19]="Consola"
+MenuList[19]="Console"
 ; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
-HelpMessage[19]="Esta opção determina a aparência da consola e dos menus. Pressione Enter para reiniciar o jogo e aplicar as alterações."
+HelpMessage[19]="Esta opção determina a aparência do console e dos menus. Pressione Enter para reiniciar o jogo e aplicar as alterações."
 ; EN: MenuList[20]="Advanced Options"
 MenuList[20]="Opções Avançadas"
 ; EN: HelpMessage[20]="Open advanced preferences configuration menu."
@@ -1443,11 +1443,11 @@ MenuList[5]="Lim. Jogadores"
 ; EN: HelpMessage[5]="Maximum number of players allowed in the game."
 HelpMessage[5]="Número máximo de jogadore(a)s permitidos."
 ; EN: MenuList[6]="Weapons Stay"
-MenuList[6]="As Armas Continuam"
+MenuList[6]="As Armas Ficam"
 ; EN: HelpMessage[6]="If Weapons Stay is enabled, weapons respawn instantly, but can only be picked up once by a given player."
-HelpMessage[6]="Se As Armas Continuam estiver habilitado, as armas reaparecem instantaneamente, mas só podem ser pegas uma única vez por jogador."
+HelpMessage[6]="Se As Armas Ficam estiver habilitado, as armas reaparecem instantaneamente, mas só podem ser pegas uma única vez por jogador."
 ; EN: MenuList[7]="Configure Bots"
-MenuList[7]="Cofigurar os Bôs"
+MenuList[7]="Cofigurar os Robôs"
 ; EN: HelpMessage[7]="Configure bot game and individual parameters."
 HelpMessage[7]="Configura um jogo contra robôs e os parâmetros individuais."
 ; EN: MenuList[8]="Game Style"
@@ -1495,7 +1495,7 @@ MenuList[6]="PESADELO"
 HelpMessage[6]="Para os jogadores radicais."
 MenuList[7]="ULTRA-UNREAL"
 ; EN: HelpMessage[7]="HOLY SHIT!"
-HelpMessage[7]="MERDA!"
+HelpMessage[7]="PUTZ!"
 ; EN: MenuList[8]="Balance Mode: "
 MenuList[8]="Modo de Equilíbrio: "
 ; EN: HelpMessage[8]="Specifies if the gameplay should contain some minor bugfixes or remain classic."
@@ -1549,7 +1549,7 @@ ItemName="Cartuchos"
 
 [UnrealScoreBoard]
 ; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
-DeadStr="Você esta morto. Aperte [Atirar] para reaparecer!"
+DeadStr="Você está morto. Aperte [Atirar] para reaparecer!"
 ; EN: SpectatorStr="You are spectating. Hit [Fire] to view from another player!"
 SpectatorStr="Você esta observando. Aperte [Atirar] para ver outro jogador!"
 ; EN: GameType="Game Type: "

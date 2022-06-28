@@ -20,7 +20,7 @@ Message="SMU Prometeu - Terminal de informações: --- Rede de informações for
 
 [TranslatorEvent2]
 ; EN: Message="UMS Prometheus - Navigation Network: Error: Planet not found in map database! | Please stand by for results of primary analysis....."
-Message="SMU Prometeu - Rede de Navegação: Erro: Planeta não encontrado no banco de dados de mapas! | Favor esperar pelos resultados da primeira analálise..."
+Message="SMU Prometeu - Rede de Navegação: Erro: Planeta não encontrado no banco de dados de mapas! | Favor esperar pelos resultados da primeira análise..."
 
 [TranslatorEvent4]
 ; EN: Message="UMS Prometheus - Information Terminal: --- Information Network offline ---"
@@ -36,7 +36,7 @@ Message="SMU Prometeu - Rede de Navegação: Aviso: Aviso de Proximidade! Contat
 
 [TranslatorEvent0]
 ; EN: Message="UMS Prometheus - Navigation Network: Status: Entry into atmosphere detected | Warning: Drop rate exceeding acceptable limit! | Critical: Hull breach detected in Section B3! | Critical: Hull breach detected in Section B2! | Warning: Hull integrity dropped to 26% in Section A3! | Critical: Hull breach detected in Section A2!"
-Message="SMU Prometeu - Rede de navegação: Estado: Detectada entrada na atmosfera | Aviso: Taxa de queda excedendo o limite aceitável! | Crítico: Ruptura no casco detectada na Seção B3! | Crítico: Ruptura no casco detectada na Seção B2! | Aviso: Integridade do casco caiu para 26% na Seção A3! | Crítico: Ruptura do casco detectada na Seção A2!"
+Message="SMU Prometeu - Rede de navegação: Estado: Entrada na atmosfera detectada | Aviso: Taxa de queda excedendo o limite aceitável! | Crítico: Ruptura no casco detectada na Seção B3! | Crítico: Ruptura no casco detectada na Seção B2! | Aviso: Integridade do casco caiu para 26% na Seção A3! | Crítico: Ruptura do casco detectada na Seção A2!"
 
 [TransitionGenderEvent0]
 ; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/ptt/Interm5.uax, sounds FLog06b and MLog06b.
@@ -50,13 +50,13 @@ OutDelays[7]=7.000000
 OutDelays[8]=9.000000
 OutDelays[9]=26.000000
 ; EN: MaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
-MaleText[0]="Por algum milagre, o sistema de comunicação transluminal da Prometeu ainda funciona. Enquanto explorávamos o centro de comunicação me deparei com esta mensagem capturada e guardada pelos computadores:"
+MaleText[0]="Por algum milagre, o sistema de comunicação transluminal da Prometeu ainda funciona. Enquanto explorávamos o centro de comunicação me deparei com está mensagem capturada e guardada pelos computadores:"
 ; EN: FemaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
-FemaleText[0]="Por algum milagre, o sistema de comunicação transluminal da Prometeu ainda funciona. Enquanto explorávamos o centro de comunicação me deparei com esta mensagem capturada e guardada pelos computadores:"
+FemaleText[0]="Por algum milagre, o sistema de comunicação transluminal da Prometeu ainda funciona. Enquanto explorávamos o centro de comunicação me deparei com está mensagem capturada e guardada pelos computadores:"
 ; EN: CommonText[1]="Deep space warship UMS Bodega Bay..."
 CommonText[1]="Nave de espaço profundo SMU Baía Bodega..."
 ; EN: CommonText[2]="...clear to take whatever steps are necessary to ensure the success of Operation 'Talon Hunter'."
-CommonText[2]="...pronto para executar quaisquer passos que sejam necessários para garantier o sucesso da Operação 'Caçada de Talon'."
+CommonText[2]="...pronto para executar quaisquer passos que sejam necessários para garantir o sucesso da Operação 'Caçada de Talon'."
 ; EN: CommonText[3]="Acknowledged."
 CommonText[3]="Confirmado."
 ; EN: CommonText[4]="Ah, Bodega Bay, one more thing, Operation 'Talon Hunter' is classified Deep Ultra. Once you've finished your mission, you must implement measures to eliminate any security risks."

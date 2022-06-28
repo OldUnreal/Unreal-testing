@@ -22,7 +22,7 @@ CouldNotConnectError="Conexão para o servidor mestre falhou por tempo esgotado:
 ; EN: NotFoundError="Could not find the window: "
 NotFoundError="Não pode achar a janela: "
 ; EN: NotReadyError="Window is not ready: "
-NotReadyError="A janela não esta pronta: "
+NotReadyError="A janela não está pronta: "
 
 [UBrowserRulesGrid]
 ; EN: RuleText="Rule"
@@ -66,7 +66,7 @@ GameTypeText="Tipo de partida"
 ; EN: GameVersionText="Game Version"
 GameVersionText="Versão do jogo"
 ; EN: GameSubVersionText="Game SubVersion"
-GameSubVersionText="Sub versão do jogo"
+GameSubVersionText="Subversão do jogo"
 ; EN: WorldLogText="ngStats World Stat-Logging"
 WorldLogText="Registro de estatísticas globais ngStats"
 ; EN: TrueString="Enabled"

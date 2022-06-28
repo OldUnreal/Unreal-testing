@@ -24,14 +24,14 @@ DeveloperURL="https://www.oldunreal.com/"
 [LinuxGroup]
 ; EN: Caption="Linux native files"
 Caption="Arquivos Nativos do Linux"
-; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.2 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
-Description="Copia todos os ficheiros necessários para 'correr' e jogar Unreal de modo nativo em Linux. Ainda não existe menu de Opções Avançadas, mas todas as definições estão indicadas e podem ser editadas em UnrealLinux.ini. UnrealED2.2 não está disponível em Linux. Se tem dificuldades em iniciar o jogo, existe informação adicional e um FAQ em ReleaseNotes dentro da directoria 'Help'. Se o seu sistema não disponibiliza todas as bibliotecas, existe um pacote chamado 'lin_convenience_libs.tar.bz2' no directório 'Help' contendo todos os ficheiros necessários."
+; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.1 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
+Description="Copia todos os arquivos necessários para 'rodar' e jogar Unreal de modo nativo em Linux. Ainda não existe menu de Opções Avançadas, mas todas as definições estão indicadas e podem ser editadas em UnrealLinux.ini. UnrealED2.1 não está disponível em Linux. Se tem dificuldades em iniciar o jogo, existe informação adicional e um FAQ em ReleaseNotes dentro do diretório 'Help'. Se o seu sistema não disponibiliza todas as bibliotecas, existe um pacote chamado 'lin_convenience_libs.tar.bz2' no diretório 'Help' contendo todos os arquivos necessários."
 
 [OldWeaponsGroup]
 ; EN: Caption="Old Weapons"
 Caption="Armas Antigas"
 ; EN: Description="Copies the Old Weapons mutator files. These files allow you to play with the weapons of Unreal version 200. Details can be found in the OldWeaponsReadme.txt in the help folder."
-Description="Copia os ficheiros de mutator OldWeapons. Estes ficheiros permitem jogar com as armas de Unreal versão 200. Detalhes podem ser vistos em 'OldWeaponsReadme.txt' no directório de ajuda."
+Description="Copia os arquivos de mutator OldWeapons. Estes arquivos permitem jogar com as armas de Unreal versão 200. Detalhes podem ser vistos em 'OldWeaponsReadme.txt' no diretório de ajuda."
 
 [LinuxARMGroup]
 ; EN: Caption="Linux ARM (64-bit) version files"
@@ -59,15 +59,15 @@ Description="Jogo Unreal. A instalação é necessária."
 
 [EditorGroup]
 ; EN: Caption="Unreal Editor"
-Caption="Editor de Unreal"
+Caption="Editor do Unreal"
 ; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
-Description="Editor de níveles Unreal, para poder criar seus próprios ambientes 3D Unreal. Para usuários avançados, sua instalação é opcional."
+Description="Editor de níveis Unreal, para poder criar seus próprios ambientes 3D Unreal. Para usuários avançados, sua instalação é opcional."
 
 [Editor64Group]
 ; EN: Caption="Unreal Editor (64-bit)"
-Caption="Editor de Unreal (64 bits)"
+Caption="Editor do Unreal (64 bits)"
 ; EN: Description="Unreal world editor (64-bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
-Description="Editor de níveles Unreal (versão de 64 bits), para poder criar seus próprios ambientes 3D Unreal. Para usuários avançados, sua instalação é opcional."
+Description="Editor de níveis Unreal (versão de 64 bits), para poder criar seus próprios ambientes 3D Unreal. Para usuários avançados, sua instalação é opcional."
 
 [PlayShortcut]
 ; EN: Caption="Play Unreal"

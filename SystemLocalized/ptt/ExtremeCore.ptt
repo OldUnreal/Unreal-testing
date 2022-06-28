@@ -2,17 +2,17 @@
 ; EN: Title="MotherShip Core"
 Title="Núcleo da Navemãe"
 ; EN: LevelEnterText="Entering the MotherShip Core"
-LevelEnterText="Entrando no MotherShip Core"
+LevelEnterText="Entrando no Núcleo da Nave Mãe"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Núcleo da Navemãe"
 ; EN: LevelEnterText="Entering the MotherShip Core"
-LevelEnterText="Entrando no MotherShip Core"
+LevelEnterText="Entrando no Núcleo da Nave Mãe"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."
-AltMessage="Accesso ao Posto de Segurança permitido."
+AltMessage="Acesso ao Posto de Segurança permitido."
 ; EN: Hint="Go to the Security Post to gain access to the Primary Power Supply Core Generator."
 Hint="Vá até o Posto de Segurança para ganhar acesso ao Suprimento de Energia Primário do Núcleo do Gerador."
 

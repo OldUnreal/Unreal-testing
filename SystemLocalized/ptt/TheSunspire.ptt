@@ -12,7 +12,7 @@ LevelEnterText="Entrando no Campanário Solar"
 
 [TranslatorEvent17]
 ; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."
-Message="Eu não irei retornar ao Campanário Solar hoje. Eu quase fui assassinado pelo Demônio Alado esta manhã e temo que nossos irmãos que ainda não escaparam. Sinto que não irei mais ve-los nesta vida."
+Message="Eu não irei retornar ao Campanário Solar hoje. Eu quase fui assassinado pelo Demônio Alado esta manhã e temo que nossos irmãos que ainda não escaparam. Sinto que não irei mais vê-los nesta vida."
 ; EN: Hint="Watch out on the ledge. If you fall, you will fall to your death."
 Hint="Cuidado com as beiradas. Se você cair, cairá para a morte."
 
@@ -26,7 +26,7 @@ Message="Câmaras da Honra"
 
 [TranslatorEvent20]
 ; EN: Message="Log: Security Officer A. Connectof: We are running out of ammo fast. There's only one weapon left. We have to reach the top where we can activate the crystal that calls the Sky Elevator, according to the Nali at the gates."
-Message="Diário: Agente de segurança A.Connectof: Nós estamos ficando sem munição rapidamente. Sobrou apenas uma arma. Nós temos que alcançar o topo onde poderemos ativar o cristal e chamar o elevador aéreo, de acordo com o Nali nos portões."
+Message="Diário: Agente de Segurança A.Connectof: Nós estamos ficando sem munição rapidamente. Sobrou apenas uma arma. Nós temos que alcançar o topo onde poderemos ativar o cristal e chamar o elevador aéreo, de acordo com o Nali nos portões."
 ; EN: Hint="Find your way up to the crystal room. From there you can call the skyelevator."
 Hint="Encontre um caminho para a sala do cristal. A partir dali você pode chamar o elevador aéreo."
 
@@ -94,7 +94,7 @@ Hint="Prossiga com muito cuidado. Encontre um caminho para o topo."
 
 [TranslatorEvent8]
 ; EN: Message="Prepare to Embark"
-Message="Prepara-se para Embarcar"
+Message="Preparar-se para Embarcar"
 ; EN: Hint="Activate the crystal then go outdoors and wait for the Skyelevator to come down. Get on board and enjoy the ride."
 Hint="Ative o cristal e então vá para fora e espere para que o elevador aéreo desça. Suba nele e aproveite o passeio."
 

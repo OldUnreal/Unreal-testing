@@ -2,7 +2,7 @@
 Object=(Name=UnrealI.KingOfTheHill,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
 ; EN: Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Flak Cannon")
-Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Lançaestilhaços")
+Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Lança-estilhaços")
 ; EN: Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon,Description="Sniper Rifle")
 Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon,Description="Fuzil de Longo Alcance")
 ; EN: Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon,Description="Minigun")
@@ -10,7 +10,7 @@ Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon,Description="Me
 ; EN: Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="GES BioRifle")
 Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="Lançalixo Tóxico GES")
 ; EN: Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="RazorJack")
-Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="Lançalâminas")
+Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="Lança-lâminas")
 ; EN: Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon,Description="Quad-Barreled Shotgun")
 Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon,Description="Escopeta Quádrupla")
 ; EN: Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon,Description="Peacemaker")
@@ -337,7 +337,7 @@ Message1="A cápsula de escape dos Skaarj escapou da força gravitacional do pla
 ; EN: Message2="From where many have died, you have escaped. You laugh to yourself; so much has happened, but so little has changed."
 Message2="De onde muitos morreram, você conseguiu fugir. Você ri para si mesmo; muita coisa aconteceu, mas muito pouco mudou."
 ; EN: Message3="Before the crash landing, you were trapped in a cramped cell. Now, once again you are confined in a prison."
-Message3="Antes do pouso forçado você estava aprisionado numa pequena cela. Agora, mais uma vez você esta confinado numa prisão."
+Message3="Antes do pouso forçado você estava aprisionado numa pequena cela. Agora, mais uma vez você está confinado numa prisão."
 ; EN: Message4="But, you feel confident that someone will come upon your small vessel... eventually."
 Message4="Porém, você sente-se confiante de que alguém irá até a sua pequena espaçonave... eventualmente."
 ; EN: Message5="Until then, you drift and hope."
@@ -372,9 +372,9 @@ FemBlobKillMessage="foi corroída por uma Gosma"
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o foi destroçado pela %k de %w."
 ; EN: PickupMessage="You got the Flak Cannon"
-PickupMessage="Você pegou o Lançaestilhaços"
+PickupMessage="Você pegou o Lança-estilhaços"
 ; EN: ItemName="Flak Cannon"
-ItemName="Lançaestilhaços"
+ItemName="Lança-estilhaços"
 FemDeathMessage="%o foi destroçada pela %k de %w."
 FemKillMessage="%o foi destroçado pela %k de %w."
 
@@ -412,9 +412,9 @@ FemKillMessage="%o bebeu um copo de gosma verde de %k."
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%k rasgou um pedaço sangrento de %o com o %w."
 ; EN: PickupMessage="You got the RazorJack"
-PickupMessage="Você pegou o Lançalâminas"
+PickupMessage="Você pegou o Lança-lâminas"
 ; EN: ItemName="Razorjack"
-ItemName="Lançalâminas"
+ItemName="Lança-lâminas"
 FemDeathMessage="%k rasgou um pedaço sangrento de %o com o %w."
 FemKillMessage="%k rasgou um pedaço sangrento de %o com o %w."
 
