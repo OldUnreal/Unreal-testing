@@ -1,0 +1,1563 @@
+﻿[Public]
+Object=(Name=UnrealShare.DeathMatchGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.UnrealGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.TeamGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.CoopGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.VRikersGame,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.EntryGameInfo,Class=Class,MetaClass=Engine.GameInfo)
+Object=(Name=UnrealShare.DispersionPistol,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.ASMD,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.Eightball,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.AutoMag,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.Stinger,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=UnrealShare.UTranslocator,Class=Class,MetaClass=Engine.Weapon)
+; EN: Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Female 1")
+Object=(Name=UnrealShare.FemaleOne,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Kvinna 1")
+; EN: Object=(Name=UnrealShare.MaleThree,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Male 3")
+Object=(Name=UnrealShare.MaleThree,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Hane 3")
+; EN: Object=(Name=UnrealShare.UnrealSpectator,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Spectator")
+Object=(Name=UnrealShare.UnrealSpectator,Class=Class,MetaClass=UnrealShare.UnrealiPlayer,Description="Åskådare")
+; EN: Object=(Name=UnrealShare.FemaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Female 1")
+Object=(Name=UnrealShare.FemaleOneBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Kvinna 1")
+; EN: Object=(Name=UnrealShare.MaleThreeBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Male 3")
+Object=(Name=UnrealShare.MaleThreeBot,Class=Class,MetaClass=UnrealShare.Bots,Description="Hane 3")
+Object=(Name=UnrealShare.SinglePlayer,Class=Class,MetaClass=UnrealShare.SinglePlayer)
+; EN: Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Decals")
+Object=(Name=UnrealShare.Scorch,Class=Class,MetaClass=Engine.Effects,Description="Dekaler")
+; EN: Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Blood Settings")
+Object=(Name=UnrealShare.UnrealBlood,Class=Class,MetaClass=Engine.Effects,Description="Blodinställningar")
+; EN: Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali")
+Object=(Name=UnrealShare.JNali1,Class=Class,MetaClass=Engine.Texture,Description="Nali2; Nali")
+; EN: Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Priest")
+Object=(Name=UnrealShare.JNali2,Class=Class,MetaClass=Engine.Texture,Description="Nali2; Nali Priest")
+; EN: Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2;Nali Statue")
+Object=(Name=UnrealShare.JNaliStatue1,Class=Class,MetaClass=Engine.Texture,Description="Nali2; Nali-staty")
+; EN: Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female")
+Object=(Name=Unreali.F2Female2,Class=Class,MetaClass=Engine.Texture,Description="Kvinna2; F2 Kvinna")
+; EN: Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female2")
+Object=(Name=Unreali.F2Female3,Class=Class,MetaClass=Engine.Texture,Description="Kvinna2; F2 Kvinna2")
+; EN: Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Female2;F2 Female3")
+Object=(Name=Unreali.F2Female4,Class=Class,MetaClass=Engine.Texture,Description="Kvinna2; F2 Kvinna3")
+; EN: Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male")
+Object=(Name=Unreali.JMale2,Class=Class,MetaClass=Engine.Texture,Description="Man1; M1 Man")
+; EN: Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male2")
+Object=(Name=Unreali.JMale3,Class=Class,MetaClass=Engine.Texture,Description="Man1; M1 Man2")
+; EN: Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male3")
+Object=(Name=Unreali.JMale4,Class=Class,MetaClass=Engine.Texture,Description="Man1; M1 Man3")
+; EN: Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male4")
+Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Man1; M1 Man4")
+; EN: Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male5")
+Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Hane1; M1 Hane5")
+; EN: Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male6")
+Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Man1; M1 Man6")
+; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
+Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Man1; M1 Man7")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;UnrealShare.logo2;Unreal")
+; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
+Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
+; EN: Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
+Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
+; EN: Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Left")
+Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Left")
+; EN: Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Right")
+Object=(Name="TurnRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Right")
+; EN: Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Left")
+Object=(Name="StrafeLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Left")
+; EN: Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Right")
+Object=(Name="StrafeRight",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe Right")
+; EN: Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Movement,Jump/Up")
+Object=(Name="Jump",Class=Class,MetaClass=Engine.Input,Description="Movement,Jump/Up")
+; EN: Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Movement,Crouch/Down")
+Object=(Name="Duck",Class=Class,MetaClass=Engine.Input,Description="Movement,Crouch/Down")
+; EN: Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Movement,Walk")
+Object=(Name="Walking",Class=Class,MetaClass=Engine.Input,Description="Movement,Walk")
+; EN: Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe")
+Object=(Name="Strafe",Class=Class,MetaClass=Engine.Input,Description="Movement,Strafe")
+; EN: Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Movement,Feign Death")
+Object=(Name="FeignDeath",Class=Class,MetaClass=Engine.Input,Description="Movement,Feign Death")
+; EN: Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="View,Mouse Look")
+Object=(Name="Look",Class=Class,MetaClass=Engine.Input,Description="View,Mouse Look")
+; EN: Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="View,Look Up")
+Object=(Name="LookUp",Class=Class,MetaClass=Engine.Input,Description="View,Look Up")
+; EN: Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="View,Look Down")
+Object=(Name="LookDown",Class=Class,MetaClass=Engine.Input,Description="View,Look Down")
+; EN: Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="View,Center View")
+Object=(Name="CenterView",Class=Class,MetaClass=Engine.Input,Description="View,Center View")
+; EN: Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="View,Toggle Behindview")
+Object=(Name="UToggleBehindview",Class=Class,MetaClass=Engine.Input,Description="View,Toggle Behindview")
+; EN: Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
+Object=(Name="Fire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fire")
+; EN: Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
+Object=(Name="AltFire",Class=Class,MetaClass=Engine.Input,Description="Weapon,Alternate Fire")
+; EN: Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
+Object=(Name="NextWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Next Weapon")
+; EN: Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
+Object=(Name="PrevWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prev Weapon")
+; EN: Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
+Object=(Name="ThrowWeapon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Throw Weapon")
+; EN: Object=(Name="GetWeapon UnrealShare.DispersionPistol",Class=Class,MetaClass=Engine.Input,Description="Weapon,Dispersion Pistol")
+Object=(Name="GetWeapon UnrealShare.DispersionPistol",Class=Class,MetaClass=Engine.Input,Description="Weapon,Dispersionspistol")
+; EN: Object=(Name="GetWeapon UnrealShare.Automag",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag")
+Object=(Name="GetWeapon UnrealShare.Automag",Class=Class,MetaClass=Engine.Input,Description="Weapon,AutoMag")
+; EN: Object=(Name="GetWeapon UnrealShare.Stinger",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger")
+Object=(Name="GetWeapon UnrealShare.Stinger",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stinger")
+; EN: Object=(Name="GetWeapon UnrealShare.ASMD",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD")
+Object=(Name="GetWeapon UnrealShare.ASMD",Class=Class,MetaClass=Engine.Input,Description="Weapon,ASMD")
+; EN: Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Weapon,Eightball")
+Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Weapon,Åtta Boll")
+; EN: Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
+Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flakkanon")
+; EN: Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
+Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
+; EN: Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
+Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES Biogevär")
+; EN: Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
+Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Prickskyttegevär")
+; EN: Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun")
+Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun")
+; EN: Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Combat Assault Rifle")
+Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Stridsgevär")
+; EN: Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Grenade Launcher")
+Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Granatkastare")
+; EN: Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Rocket Launcher")
+Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Raketkastare")
+; EN: Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Weapon,Quad-Barreled Shotgun")
+Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fyrgevärigt Hagelgevär")
+; EN: Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Weapon,Translocator")
+Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Weapon,Translokator")
+; EN: Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,Description="Weapon,Peacemaker")
+Object=(Name="GetWeapon UnrealI.PeaceMaker",Class=Class,MetaClass=Engine.Input,Description="Weapon,Fredsmakare")
+; EN: Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
+Object=(Name="InventoryActivate",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Item")
+; EN: Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
+Object=(Name="InventoryNext",Class=Class,MetaClass=Engine.Input,Description="Inventory,Next Item")
+; EN: Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
+Object=(Name="InventoryPrevious",Class=Class,MetaClass=Engine.Input,Description="Inventory,Previous Item")
+; EN: Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Translator")
+Object=(Name="ActivateTranslator",Class=Class,MetaClass=Engine.Input,Description="Inventory,Activate Translator")
+; EN: Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Game,Grab Decoration")
+Object=(Name="Grab",Class=Class,MetaClass=Engine.Input,Description="Game,Grab Decoration")
+; EN: Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Game,Suicide")
+Object=(Name="Suicide",Class=Class,MetaClass=Engine.Input,Description="Game,Suicide")
+; EN: Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Game,Chat")
+Object=(Name="Talk",Class=Class,MetaClass=Engine.Input,Description="Game,Chat")
+; EN: Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Game,Team Chat")
+Object=(Name="TeamTalk",Class=Class,MetaClass=Engine.Input,Description="Game,Team Chat")
+; EN: Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Game,Show Scores")
+Object=(Name="ShowScores",Class=Class,MetaClass=Engine.Input,Description="Game,Show Scores")
+; EN: Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save")
+Object=(Name="QuickSave",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Save")
+; EN: Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Load")
+Object=(Name="QuickLoad",Class=Class,MetaClass=Engine.Input,Description="Game,Quick Load")
+; EN: Object=(Name="Shot",Class=Class,MetaClass=Engine.Input,Description="Game,Screenshot")
+Object=(Name="Shot",Class=Class,MetaClass=Engine.Input,Description="Game,Screenshot")
+; EN: Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Game,Change Brightness")
+Object=(Name="Brightness",Class=Class,MetaClass=Engine.Input,Description="Game,Change Brightness")
+; EN: Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Music menu")
+Object=(Name="UShowMusicMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Music menu")
+; EN: Object=(Name="UShowAdminMenu",Class=Class,MetaClass=Engine.Input,Description="Game,Admin menu")
+Object=(Name="UShowAdminMeny",Class=Class,MetaClass=Engine.Input,Description="Game,Admin menu")
+; EN: Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Game,Windowed mode")
+Object=(Name="EndFullscreen",Class=Class,MetaClass=Engine.Input,Description="Game,Fönsterläge")
+; EN: Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
+Object=(Name="Cancel",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Cancel Connection")
+; EN: Object=(Name="Disconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
+Object=(Name="Disconnect ifrån",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Disconnect")
+; EN: Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
+Object=(Name="Reconnect",Class=Class,MetaClass=Engine.Input,Description="Network Connection,Reconnect")
+; EN: Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
+Object=(Name="ConsoleKey",Class=Class,MetaClass=Engine.Input,Description="Console,Console Button")
+; EN: Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
+Object=(Name="ConsoleKeyChar",Class=Class,MetaClass=Engine.Input,Description="Console,Console Character")
+; EN: Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
+Object=(Name="Type",Class=Class,MetaClass=Engine.Input,Description="Console,Quick Console")
+Preferences=(Caption="Coop Play",Parent="Game Types",Class=UnrealShare.CoopGame,Immediate=True)
+Preferences=(Caption="Deathmatch",Parent="Game Types",Class=UnrealShare.DeathmatchGame,Immediate=True)
+Preferences=(Caption="Team Play",Parent="Game Types",Class=UnrealShare.TeamGame,Immediate=True)
+Preferences=(Caption="Config",Parent="Decals",Class=UnrealShare.Scorch,Immediate=True,Category=Decal)
+Preferences=(Caption="Client",Parent="Blood",Class=UnrealShare.UnrealBlood,Immediate=True,Category=BloodClient)
+Preferences=(Caption="Deathmatch Maps",Parent="Map Lists",Class=UnrealShare.DmMapList,Immediate=True)
+
+[DeathMatchGame]
+; EN: ClassCaption="Deathmatch"
+ClassCaption="Döds match"
+; EN: GlobalNameChange=" changed name to "
+GlobalNameChange=" ändrat namn till "
+; EN: NoNameChange=" is already in use"
+NoNameChange=" används redan"
+; EN: TimeMessage[0]="5 minutes left in the game!"
+TimeMessage[0]="5 minuter kvar av spelet!"
+; EN: TimeMessage[1]="4 minutes left in the game!"
+TimeMessage[1]="4 minuter kvar av spelet!"
+; EN: TimeMessage[2]="3 minutes left in the game!"
+TimeMessage[2]="3 minuter kvar av spelet!"
+; EN: TimeMessage[3]="2 minutes left in the game!"
+TimeMessage[3]="2 minuter kvar av spelet!"
+; EN: TimeMessage[4]="1 minute left in the game!"
+TimeMessage[4]="1 minut kvar i matchen!"
+; EN: TimeMessage[5]="30 seconds left!"
+TimeMessage[5]="30 sekunder kvar!"
+; EN: TimeMessage[6]="10 seconds left!"
+TimeMessage[6]="10 sekunder kvar!"
+; EN: TimeMessage[7]="5 seconds and counting..."
+TimeMessage[7]="5 sekunder och räknar ..."
+TimeMessage[8]="4..."
+TimeMessage[9]="3..."
+TimeMessage[10]="2..."
+TimeMessage[11]="1..."
+; EN: TimeMessage[12]="Time Up!"
+TimeMessage[12]="Tiden är ute!"
+; EN: GameName="DeathMatch"
+GameName="Döds match"
+
+[UnrealGameInfo]
+; EN: DeathMessage[0]="killed"
+DeathMessage[0]="dödad"
+; EN: DeathMessage[1]="ruled"
+DeathMessage[1]="styrde"
+; EN: DeathMessage[2]="smoked"
+DeathMessage[2]="rökt"
+; EN: DeathMessage[3]="slaughtered"
+DeathMessage[3]="slaktad"
+; EN: DeathMessage[4]="annihilated"
+DeathMessage[4]="förintad"
+; EN: DeathMessage[5]="put down"
+DeathMessage[5]="Lägg ner"
+; EN: DeathMessage[6]="splooged"
+DeathMessage[6]="spogade"
+; EN: DeathMessage[7]="perforated"
+DeathMessage[7]="perforerad"
+; EN: DeathMessage[8]="shredded"
+DeathMessage[8]="strimlad"
+; EN: DeathMessage[9]="destroyed"
+DeathMessage[9]="förstörd"
+DeathMessage[10]="whacked"
+; EN: DeathMessage[11]="canned"
+DeathMessage[11]="konserverad"
+; EN: DeathMessage[12]="busted"
+DeathMessage[12]="avslöjad"
+; EN: DeathMessage[13]="creamed"
+DeathMessage[13]="krämad"
+; EN: DeathMessage[14]="smeared"
+DeathMessage[14]="insmord"
+; EN: DeathMessage[15]="shut out"
+DeathMessage[15]="stänga ute"
+; EN: DeathMessage[16]="beaten down"
+DeathMessage[16]="nedslagen"
+; EN: DeathMessage[17]="smacked down"
+DeathMessage[17]="slog ner"
+; EN: DeathMessage[18]="pureed"
+DeathMessage[18]="puré"
+; EN: DeathMessage[19]="sliced"
+DeathMessage[19]="skivad"
+; EN: DeathMessage[20]="diced"
+DeathMessage[20]="tärnad"
+; EN: DeathMessage[21]="ripped"
+DeathMessage[21]="rev"
+; EN: DeathMessage[22]="blasted"
+DeathMessage[22]="sprängas"
+; EN: DeathMessage[23]="torn up"
+DeathMessage[23]="uppgiven"
+DeathMessage[24]="spanked"
+; EN: DeathMessage[25]="eviscerated"
+DeathMessage[25]="uttagna"
+; EN: DeathMessage[26]="neutered"
+DeathMessage[26]="kastrerad"
+; EN: DeathMessage[27]="whipped"
+DeathMessage[27]="vispad"
+; EN: DeathMessage[28]="shafted"
+DeathMessage[28]="skaftad"
+; EN: DeathMessage[29]="trashed"
+DeathMessage[29]="papperskorgen"
+; EN: DeathMessage[30]="smashed"
+DeathMessage[30]="krossade"
+DeathMessage[31]="trounced"
+; EN: DeathModifier[0]="thoroughly "
+DeathModifier[0]="grundligt "
+; EN: DeathModifier[1]="completely "
+DeathModifier[1]="helt och hållet "
+; EN: DeathModifier[2]="absolutely "
+DeathModifier[2]="absolut "
+; EN: DeathModifier[3]="totally "
+DeathModifier[3]="totalt "
+; EN: DeathModifier[4]="utterly "
+DeathModifier[4]="ytterst "
+; EN: MajorDeathMessage[0]=" ripped a new one"
+MajorDeathMessage[0]=" slet en ny"
+; EN: MajorDeathMessage[1]=" messed up real bad"
+MajorDeathMessage[1]=" trasslat riktigt dåligt"
+; EN: MajorDeathMessage[2]=" given a new definition of pain"
+MajorDeathMessage[2]=" fått en ny definition av smärta"
+; EN: HeadLossMessage[0]="decapitated"
+HeadLossMessage[0]="halshuggad"
+; EN: HeadLossMessage[1]="beheaded"
+HeadLossMessage[1]="halshuggad"
+; EN: DeathVerb=" was "
+DeathVerb=" var "
+; EN: DeathPrep=" by "
+DeathPrep=" förbi "
+; EN: DeathTerm="killed"
+DeathTerm="dödad"
+; EN: ExplodeMessage=" was blown up"
+ExplodeMessage=" sprängdes"
+; EN: SuicideMessage=" had a sudden heart attack."
+SuicideMessage=" hade en plötslig hjärtinfarkt."
+; EN: FallMessage=" left a small crater."
+FallMessage=" lämnade en liten krater."
+; EN: DrownedMessage=" forgot to come up for air."
+DrownedMessage=" glömde att komma upp för luft."
+; EN: BurnedMessage=" was incinerated"
+BurnedMessage=" förbränns"
+; EN: CorrodedMessage=" was slimed"
+CorrodedMessage=" var slimmad"
+; EN: HackedMessage=" was hacked"
+HackedMessage=" hackades"
+; EN: BleededMessage=" bled to death."
+BleededMessage=" blödde till döds."
+
+[UnrealHUD]
+; EN: IdentifyName="Name"
+IdentifyName="namn"
+; EN: IdentifyHealth="Health"
+IdentifyHealth="Hälsa"
+; EN: SomeoneName="Someone"
+SomeoneName="Någon"
+VersionMessage="Version"
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Rött lag: "
+TeamName[1]="Blue Team: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Gröna laget: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Guldlag: "
+; EN: DemoPlaybackProg="Demo: %f %"
+DemoPlaybackProg="Demo: %f %"
+; EN: DemoRecInfo="[REC]"
+DemoRecInfo="[REC]"
+
+[UnrealGameOptionsMenu]
+; EN: AdvancedString="Advanced Options"
+AdvancedString="Avancerade alternativ"
+; EN: AdvancedHelp="Edit advanced game configuration options."
+AdvancedHelp="Redigera avancerade spelkonfigurationsalternativ."
+; EN: HelpMessage[1]="Adjust the speed at which time passes in the game."
+HelpMessage[1]="Justera den hastighet som tiden går i spelet."
+; EN: HelpMessage[2]="If true, reduces the gore in the game."
+HelpMessage[2]="Om det är sant, minskar spelet i spelet."
+; EN: MenuList[1]="Game Speed"
+MenuList[1]="Spelhastighet"
+; EN: MenuList[2]="Reduced Gore"
+MenuList[2]="Minskad Gore"
+; EN: MenuTitle="GAME OPTIONS"
+MenuTitle="SPELALTERNATIV"
+
+[UnrealQuitMenu]
+; EN: YesSelString="[YES]  No "
+YesSelString="[Ja Nej "
+; EN: NoSelString=" Yes  [NO]"
+NoSelString=" Ja Nej]"
+; EN: HelpMessage[1]="Select yes and hit enter to return to your puny, miserable, useless real life, if you can't handle UNREALity."
+HelpMessage[1]="Välj ja och tryck Enter för att återvända till ditt ljumma, eländiga, värdelösa verkliga liv, om du inte kan hantera OREALITET."
+; EN: MenuList[0]="A Digital Extremes/Epic Megagames"
+MenuList[0]="A Digital Extremes / Epic Megagames"
+; EN: MenuList[1]="Collaboration"
+MenuList[1]="Samarbete"
+; EN: MenuList[2]="Game Design: James Schmalz"
+MenuList[2]="Speldesign: James Schmalz"
+MenuList[3]="    Cliff Bleszinski"
+; EN: MenuList[4]="Level Design: Cliff Bleszinski"
+MenuList[4]="Nivådesign: Cliff Bleszinski"
+; EN: MenuList[5]="    T. Elliot Cannon  Pancho Eekels"
+MenuList[5]="    T. Elliot Cannon Pancho Eekels"
+; EN: MenuList[6]="    Jeremy War  Cedric Fiorentino"
+MenuList[6]="    Jeremy War Cedric Fiorentino"
+MenuList[7]="    Shane Caudle"
+; EN: MenuList[8]="Animator: Dave Carter"
+MenuList[8]="Animatör: Dave Carter"
+; EN: MenuList[9]="Art: James Schmalz "
+MenuList[9]="Konst: James Schmalz "
+; EN: MenuList[10]="    Mike Leatham  Artur Bialas"
+MenuList[10]="    Mike Leatham Artur Bialas"
+; EN: MenuList[11]="Programming: Tim Sweeney  Steven Polge"
+MenuList[11]="Programmering: Tim Sweeney Steven Polge"
+; EN: MenuList[12]="    Erik de Neve  James Schmalz"
+MenuList[12]="    Erik de Neve James Schmalz"
+; EN: MenuList[13]="    Carlo Vogelsang  Nick Michon"
+MenuList[13]="    Carlo Vogelsang Nick Michon"
+; EN: MenuList[14]="Music: Alexander Brandon"
+MenuList[14]="Musik: Alexander Brandon"
+MenuList[15]="    Michiel van den Bos"
+; EN: MenuList[16]="Sound Effects: Dave Ewing"
+MenuList[16]="Ljudeffekter: Dave Ewing"
+; EN: MenuList[17]="Producer for GT: Jason Schreiber"
+MenuList[17]="Producent för GT: Jason Schreiber"
+MenuList[18]="Biz: Mark Rein Nigel Kent"
+MenuList[19]="    Craig Lafferty"
+MenuList[20]="Oldunreal patch: Jochen Goernitz"
+; EN: MenuList[21]="    and the Oldunreal community"
+MenuList[21]="    och Oldunreal-samhället"
+; EN: MenuTitle="Quit?"
+MenuTitle="Sluta?"
+
+[UnrealIndivBotMenu]
+; EN: HelpMessage[1]="Which Bot Configuration is being edited. Use left and right arrows to change."
+HelpMessage[1]="Vilken botkonfiguration som redigeras. Använd vänster- och högerpilarna för att ändra."
+; EN: HelpMessage[2]="Hit enter to edit the name of this bot."
+HelpMessage[2]="Tryck på Enter för att redigera namnet på den här botten."
+; EN: HelpMessage[3]="Use the left and right arrow keys to change the class of this bot."
+HelpMessage[3]="Använd vänster och höger piltangenter för att ändra klassen för denna bot."
+; EN: HelpMessage[4]="Use the left and right arrow keys to change the skin of this bot."
+HelpMessage[4]="Använd vänster och höger piltangenter för att ändra botten på botten."
+; EN: HelpMessage[5]="Adjust the overall skill of this bot by this amount (relative to the base skill for bots)."
+HelpMessage[5]="Justera botens övergripande skicklighet med detta belopp (i förhållande till basfärdigheten för bots)."
+; EN: HelpMessage[6]="Type in which team this bot plays on (Red, Blue, Green, or Yellow)."
+HelpMessage[6]="Skriv in vilket lag denna bot spelar på (röd, blå, grön eller gul)."
+; EN: MenuList[1]="Configuration"
+MenuList[1]="Konfiguration"
+; EN: MenuList[2]="Name"
+MenuList[2]="namn"
+; EN: MenuList[3]="Class"
+MenuList[3]="Klass"
+; EN: MenuList[4]="Skin"
+MenuList[4]="Hud"
+; EN: MenuList[5]="Skill Adjust"
+MenuList[5]="Färdighetsjustering"
+MenuList[6]="Team"
+; EN: MenuTitle="Artificial Intelligence Configuration"
+MenuTitle="Konfiguration av artificiell intelligens"
+
+[DispersionPistol]
+; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
+DeathMessage="%o dödades av %k's %w. Vilken förlorare!"
+; EN: PickupMessage="You got the Dispersion Pistol"
+PickupMessage="Du har Dispersionspistolen"
+; EN: ItemName="Dispersion Pistol"
+ItemName="Dispersionspistol"
+FemDeathMessage="%o dödades av %k's %w. Vilken förlorare!"
+FemKillMessage="%o dödades av %k's %w. Vilken förlorare!"
+
+[UnrealVideoMenu]
+; EN: LowText="Low"
+LowText="Låg"
+; EN: HighText="High"
+HighText="Hög"
+; EN: ShadowDetail[0]="Blob"
+ShadowDetail[0]="Klick"
+; EN: ShadowDetail[1]="Low Res"
+ShadowDetail[1]="Låg upplösning"
+ShadowDetail[2]="Mid Res"
+; EN: ShadowDetail[3]="High Res"
+ShadowDetail[3]="Högupplöst"
+ShadowDetail[4]="Ultra Res"
+; EN: HelpMessage[1]="Adjust display brightness using the left and right arrow keys."
+HelpMessage[1]="Justera skärmens ljusstyrka med vänster och höger piltangenter."
+; EN: HelpMessage[2]="Display Unreal in a window. Note that going to a software display mode may remove high detail actors that were visible with hardware acceleration."
+HelpMessage[2]="Visa Unreal i ett fönster. Observera att att gå till ett programvisningsläge kan ta bort aktörerna med höga detaljer som var synliga med hårdvaruacceleration."
+; EN: HelpMessage[3]="Use the left and right arrows to select a resolution, and press enter to select this resolution."
+HelpMessage[3]="Använd vänster- och högerpilarna för att välja en upplösning och tryck på enter för att välja denna upplösning."
+; EN: HelpMessage[4]="Use the left and right arrows to adjust Field of View (FoV) for widescreen displays"
+HelpMessage[4]="Använd vänster- och högerpilarna för att justera synfältet (FoV) för widescreen-skärmar"
+; EN: HelpMessage[5]="Use the low texture detail option to improve performance.  Changes to this setting will take effect on the next level change."
+HelpMessage[5]="Använd detalternativet med låg struktur för att förbättra prestanda. Ändringar av denna inställning träder i kraft vid nästa nivåändring."
+; EN: HelpMessage[6]="Adjust the volume of the music using the left and right arrow keys."
+HelpMessage[6]="Justera volymen på musiken med vänster och höger piltangenter."
+; EN: HelpMessage[7]="Adjust the volume of sound effects in the game using the left and right arrow keys."
+HelpMessage[7]="Justera volymen för ljudeffekter i spelet med vänster och höger piltangenter."
+; EN: HelpMessage[8]="Adjust the volume of speech, taunt and grunt effects in the game using the left and right arrow keys."
+HelpMessage[8]="Justera volymen av tal, hån och grymma effekter i spelet med vänster och höger piltangenter."
+; EN: HelpMessage[9]="Use the low sound quality option to improve performance on machines with 32 megabytes or less of memory.  Changes to this setting will take effect on the next level change."
+HelpMessage[9]="Använd alternativet för låg ljudkvalitet för att förbättra prestanda på maskiner med 32 megabyte eller mindre minne. Ändringar av denna inställning träder i kraft vid nästa nivåändring."
+; EN: HelpMessage[10]="If enabled, you will hear voice messages during gametypes that use them."
+HelpMessage[10]="Om det är aktiverat hör du röstmeddelanden under speltyper som använder dem."
+; EN: HelpMessage[11]="If enabled, you will hear a beep when you receive a message."
+HelpMessage[11]="Om det är aktiverat hörs ett pip när du får ett meddelande."
+; EN: HelpMessage[12]="If enabled, some specific meshes may use flat shading."
+HelpMessage[12]="Om det är aktiverat kan vissa specifika nät använda platt skuggning."
+; EN: HelpMessage[13]="If enabled, some specific meshes may use curved surfaces for extra detail."
+HelpMessage[13]="Om det är aktiverat kan vissa specifika maskor använda böjda ytor för extra detaljer."
+; EN: HelpMessage[14]="If enabled, pawns cast shadows. Changes to this setting will take effect on the next level change."
+HelpMessage[14]="Om det är aktiverat kastar bönder skuggor. Ändringar av denna inställning träder i kraft vid nästa nivåändring."
+; EN: HelpMessage[15]="If enabled, decoration cast shadows. Changes to this setting will take effect on the next level change."
+HelpMessage[15]="Om den är aktiverad kastar dekorationer skuggor. Ändringar av denna inställning träder i kraft vid nästa nivåändring."
+; EN: HelpMessage[16]="If blob, use blob shadows, else use realistic shadows with different resolutions."
+HelpMessage[16]="Om blob, använd blob-skuggor, annars använd realistiska skuggor med olika upplösningar."
+; EN: HelpMessage[17]="Use this option to precaching map content like sounds and textures."
+HelpMessage[17]="Använd det här alternativet för att färdigställa kartinnehåll som ljud och texturer."
+; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
+HelpMessage[18]="Använd det här alternativet för att aktivera / avaktivera trelinjig filtrering."
+; EN: MenuList[1]="Brightness"
+MenuList[1]="Ljusstyrka"
+; EN: MenuList[2]="Toggle Fullscreen Mode"
+MenuList[2]="Växla helskärmsläge"
+; EN: MenuList[3]="Select Resolution"
+MenuList[3]="Välj Upplösning"
+; EN: MenuList[4]="Field of View"
+MenuList[4]="Synfält"
+; EN: MenuList[5]="Texture Detail"
+MenuList[5]="Textur detalj"
+; EN: MenuList[6]="Music Volume"
+MenuList[6]="Musikvolym"
+; EN: MenuList[7]="Sound Volume"
+MenuList[7]="Ljudvolym"
+; EN: MenuList[8]="Speech Volume"
+MenuList[8]="Talvolym"
+; EN: MenuList[9]="Sound Quality"
+MenuList[9]="Ljudkvalitet"
+; EN: MenuList[10]="Voice Messages"
+MenuList[10]="Röstmeddelanden"
+; EN: MenuList[11]="Message Beep"
+MenuList[11]="Meddelande pip"
+; EN: MenuList[12]="Flat Shading"
+MenuList[12]="Platt skuggning"
+MenuList[13]="Curvy Meshes"
+; EN: MenuList[14]="Cast Shadows"
+MenuList[14]="Kasta skuggor"
+MenuList[15]="Deco Shadows"
+; EN: MenuList[16]="Realistic Shadows"
+MenuList[16]="Realistiska skuggor"
+; EN: MenuList[17]="PreCaching Content"
+MenuList[17]="PreCaching-innehåll"
+MenuList[18]="Trilinear Filtering"
+; EN: MenuTitle="AUDIO/VIDEO"
+MenuTitle="LJUD/VIDEO"
+; EN: MenuList[19]="Sky Fogging"
+MenuList[19]="Himmel imma"
+; EN: HelpMessage[19]="Changes how volumetric fog is being rendered on skybox."
+HelpMessage[19]="Ändrar hur volymetrisk dimma renderas på skybox."
+; EN: SkyFogDetail[0]="High Detail"
+SkyFogDetail[0]="Hög Detalj"
+; EN: SkyFogDetail[1]="Low Detail"
+SkyFogDetail[1]="Låg Detalj"
+; EN: SkyFogDetail[2]="Off"
+SkyFogDetail[2]="Av"
+; EN: MenuList[20]="HUD Scale"
+MenuList[20]="HUD-skala"
+; EN: HelpMessage[20]="Specifies the scaling level of the in-game HUD."
+HelpMessage[20]="Anger skalningsnivån för HUD i spelet."
+
+[UnrealFavoritesMenu]
+; EN: EditList[0]="Name for Server:"
+EditList[0]="Namn för server:"
+; EN: EditList[1]="Address:"
+EditList[1]="Adress:"
+; EN: HelpMessage[1]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[1]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[2]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[2]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[3]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[3]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[4]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[4]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[5]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[5]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[6]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[6]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[7]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[7]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[8]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[8]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[9]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[9]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[10]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[10]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[11]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[11]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: HelpMessage[12]="Hit enter to go to this server.  Hit the right arrow key to edit this entry."
+HelpMessage[12]="Tryck på Enter för att gå till den här servern. Tryck på höger piltangent för att redigera denna post."
+; EN: MenuTitle="FAVORITES"
+MenuTitle="FAVORITER"
+
+[Translator]
+; EN: NewMessage="Universal Translator"
+NewMessage="Universal Translator"
+; EN: HintString="Hint:"
+HintString="Antydan:"
+; EN: PickupMessage="Press F2 to activate the Translator"
+PickupMessage="Tryck på F2 för att aktivera översättaren"
+; EN: ItemName="Universal Translator"
+ItemName="Universal Translator"
+
+[UnrealTeamScoreBoard]
+; EN: TeamName[0]="Red Team: "
+TeamName[0]="Rött lag: "
+TeamName[1]="Blue Team: "
+; EN: TeamName[2]="Green Team: "
+TeamName[2]="Gröna laget: "
+; EN: TeamName[3]="Gold Team: "
+TeamName[3]="Guldlag: "
+
+[UnrealScoreBoard]
+; EN: DeadStr="You are dead. Hit [Fire] to respawn!"
+DeadStr="Du är död. Slå [Eld] för att återuppta!"
+; EN: SpectatorStr="You are spectating.  Hit [Fire] to view from another player!"
+SpectatorStr="Du tittar. Hit [Fire] för att se från en annan spelare!"
+; EN: GameType="Game Type: "
+GameType="Speltyp: "
+; EN: MapTitle="Map Title: "
+MapTitle="Karttitel: "
+; EN: Author="Author: "
+Author="Författare: "
+; EN: IdealPlayerCount="Ideal Player Load: "
+IdealPlayerCount="Idealt Antal Spelare: "
+
+[UnrealServerMenu]
+BotTitle="BOTMATCH"
+; EN: HelpMessage[1]="Choose Game Type."
+HelpMessage[1]="Välj speltyp."
+; EN: HelpMessage[2]="Choose Map."
+HelpMessage[2]="Välj karta."
+; EN: HelpMessage[3]="Modify Game Options."
+HelpMessage[3]="Ändra spelalternativ."
+; EN: HelpMessage[4]="Start Game."
+HelpMessage[4]="Starta spelet."
+; EN: HelpMessage[5]="Start a dedicated server on this machine."
+HelpMessage[5]="Starta en dedikerad server på den här maskinen."
+; EN: MenuList[1]="Select Game"
+MenuList[1]="Välj spel"
+; EN: MenuList[2]="Select Map"
+MenuList[2]="Välj karta"
+; EN: MenuList[3]="Configure Game"
+MenuList[3]="Konfigurera spel"
+; EN: MenuList[4]="Start Game"
+MenuList[4]="Starta spelet"
+; EN: MenuList[5]="Launch Dedicated Server"
+MenuList[5]="Starta dedikerad server"
+MenuTitle="MULTIPLAYER"
+
+[UnrealMeshMenu]
+; EN: HelpMessage[4]="Change your class using the left and right arrow keys."
+HelpMessage[4]="Ändra klass med vänster och höger piltangenter."
+; EN: HelpMessage[5]="To enter with an adminpassword or gamepassword, launch the server Browser, right click a server and select 'Join with password'."
+HelpMessage[5]="För att komma in med ett administratörslösenord eller spellösenord, starta webbläsaren, högerklicka på en server och välj "Gå med lösenord"."
+; EN: HelpMessage[6]="Should spectate the match instead of playing."
+HelpMessage[6]="Bör titta på matchen istället för att spela."
+; EN: HelpMessage[7]="Press enter to start game."
+HelpMessage[7]="Tryck på Enter för att starta spelet."
+; EN: MenuList[4]="Class:"
+MenuList[4]="Klass:"
+; EN: MenuList[5]="Passwords are now entered from the Unreal Server browser."
+MenuList[5]="Lösenord anges nu från webbläsaren Unreal Server."
+MenuList[6]="Spectate:"
+; EN: MenuList[7]="Start Game"
+MenuList[7]="Starta spelet"
+; EN: HelpMessage[8]="Should use mutators with this game?"
+HelpMessage[8]="Anger om den aktuella sessionen ska spelas med mutatorer."
+; EN: HelpMessage[9]="Select which mutators to use with this game."
+HelpMessage[9]="Välj vilka mutatorer som ska användas med det här spelet."
+; EN: MenuList[8]="Mutators:"
+MenuList[8]="Mutatorer:"
+; EN: MenuList[9]="Select Mutators"
+MenuList[9]="Välj mutatorer"
+
+[UnrealPlayerMenu]
+; EN: Teams[0]="Red"
+Teams[0]="Röd"
+; EN: Teams[1]="Blue"
+Teams[1]="Blå"
+; EN: Teams[2]="Green"
+Teams[2]="Grön"
+; EN: Teams[3]="Gold"
+Teams[3]="Guld"
+; EN: Teams[4]="None"
+Teams[4]="Ingen"
+; EN: HelpMessage[1]="Hit enter to type in your name. Be sure to do this before joining a multiplayer game."
+HelpMessage[1]="Tryck på Enter för att skriva in ditt namn. Var noga med att göra detta innan du går med i ett multiplayer-spel."
+; EN: HelpMessage[2]="Use the arrow keys to change your team color (Red, Blue, Green, or Yellow)."
+HelpMessage[2]="Använd piltangenterna för att ändra din lagfärg (röd, blå, grön eller gul)."
+; EN: HelpMessage[3]="Change your skin using the left and right arrow keys."
+HelpMessage[3]="Byt ut huden med vänster och höger piltangenter."
+; EN: MenuList[1]="Name: "
+MenuList[1]="Namn: "
+; EN: MenuList[2]="Team Color:"
+MenuList[2]="Lagfärg:"
+; EN: MenuList[3]="Skin:"
+MenuList[3]="Hud:"
+; EN: MenuTitle="Select Digital Representation"
+MenuTitle="Välj Digital representation"
+; EN: HelpMessage[4]="Change your face skin using the left and right arrow keys."
+HelpMessage[4]="Ändra din ansiktshud med vänster- och högerpiltangenterna."
+; EN: MenuList[4]="Face:"
+MenuList[4]="Ansikte:"
+
+[UnrealJoinGameMenu]
+; EN: InternetOption="(Dial-Up)"
+InternetOption="(Ringa upp)"
+; EN: FastInternetOption="(Dial-Up)"
+FastInternetOption="(Ringa upp)"
+; EN: VeryFastInternetOption="(Broadband)"
+VeryFastInternetOption="(Bredband)"
+; EN: HighSpeedInternetOption="(Broadband)"
+HighSpeedInternetOption="(Bredband)"
+LANOption="(LAN)"
+; EN: HelpMessage[1]="Listen for local servers"
+HelpMessage[1]="Lyssna efter lokala servrar"
+; EN: HelpMessage[2]="Choose a server from a list of favorites"
+HelpMessage[2]="Välj en server från en lista med favoriter"
+; EN: HelpMessage[3]="Hit enter to type in a server address.  Hit enter again to go to this server."
+HelpMessage[3]="Tryck på Enter för att skriva in en serveradress. Tryck på Enter igen för att gå till den här servern."
+; EN: HelpMessage[4]="Set networking speed."
+HelpMessage[4]="Ställ in nätverkshastighet."
+; EN: HelpMessage[5]="Open Unreal Server List"
+HelpMessage[5]="Öppna Unreal Server List"
+; EN: MenuList[1]="Find Local Servers"
+MenuList[1]="Hitta lokala servrar"
+; EN: MenuList[2]="Choose From Favorites"
+MenuList[2]="Välj bland favoriter"
+; EN: MenuList[3]="Open"
+MenuList[3]="Öppet"
+; EN: MenuList[4]="Net Speed"
+MenuList[4]="Nettohastighet"
+; EN: MenuList[5]="Go to the Unreal server list"
+MenuList[5]="Gå till Unreal-serverlistan"
+; EN: MenuTitle="JOIN GAME"
+MenuTitle="GÅ MED I SPEL"
+
+[UnrealOptionsMenu]
+; EN: HideString="Hidden"
+HideString="Dold"
+; EN: InternetOption="(Dial-Up)"
+InternetOption="(Ringa upp)"
+; EN: FastInternetOption="(Dial-Up)"
+FastInternetOption="(Ringa upp)"
+; EN: VeryFastInternetOption="(Broadband)"
+VeryFastInternetOption="(Bredband)"
+; EN: HighSpeedInternetOption="(Broadband)"
+HighSpeedInternetOption="(Bredband)"
+LANOption="(LAN)"
+; EN: HelpMessage[1]="Enable or disable vertical aiming help."
+HelpMessage[1]="Aktivera eller inaktivera hjälp för vertikal inriktning."
+; EN: HelpMessage[2]="Toggle enabling of joystick."
+HelpMessage[2]="Växla aktivering av joystick."
+; EN: HelpMessage[3]="Adjust the mouse sensitivity, or how far you have to move the mouse to produce a given motion in the game."
+HelpMessage[3]="Justera musens känslighet eller hur långt du måste flytta musen för att producera en viss rörelse i spelet."
+; EN: HelpMessage[4]="Enable or disable mouse smoothing (disable for high resolution mice)"
+HelpMessage[4]="Aktivera eller inaktivera musutjämning (inaktivera för högupplösta möss)"
+; EN: HelpMessage[5]="Invert the mouse X axis.  When true, pushing the mouse forward causes you to look down rather than up."
+HelpMessage[5]="Invertera musens X-axel. När det är sant, trycker du musen framåt får du att titta nedåt snarare än uppåt."
+; EN: HelpMessage[6]="If enabled, when you let go of the mouselook key the view will automatically center itself."
+HelpMessage[6]="Om aktiverat, när du släpper musknappen kommer vyn automatiskt att centrera sig."
+; EN: HelpMessage[7]="If enabled, the mouse is always used for looking up and down, with no need for a mouselook key."
+HelpMessage[7]="Om det är aktiverat används musen alltid för att titta upp och ner, utan att behöva en musnyckel."
+; EN: HelpMessage[8]="If enabled, when not mouse-looking your view will automatically be adjusted to look up and down slopes and stairs."
+HelpMessage[8]="Om den är aktiverad kommer din vy automatiskt att justeras så att den ser upp och ner i sluttningar och trappor när den inte ser ut."
+; EN: HelpMessage[9]="If enabled, your screen will flash when you fire your weapon."
+HelpMessage[9]="Om det är aktiverat kommer din skärm att blinka när du skjuter ditt vapen."
+; EN: HelpMessage[10]="Choose the crosshair appearing at the center of your screen"
+HelpMessage[10]="Välj hårkorset som visas mitt på skärmen"
+; EN: HelpMessage[11]="Select where your weapon will appear."
+HelpMessage[11]="Välj var ditt vapen ska visas."
+; EN: HelpMessage[12]="If enabled, double-clicking on the movement keys (forward, back, strafe left, and strafe right) will cause you to do a fast dodge move."
+HelpMessage[12]="Om det är aktiverat, dubbelklickar du på rörelseknapparna (framåt, bakåt, strafe vänster och strafe höger) kommer att få dig att göra ett snabbt undvikande drag."
+; EN: HelpMessage[13]="Hit enter to customize keyboard, mouse, and joystick configuration."
+HelpMessage[13]="Tryck på Enter för att anpassa tangentbord, mus och joystickkonfiguration."
+; EN: HelpMessage[14]="Hit enter to prioritize weapon switching order. (If never auto-switch is false)"
+HelpMessage[14]="Tryck på Enter för att prioritera vapenbytesordning. (Om aldrig automatisk växling är falsk)"
+; EN: HelpMessage[15]="Never auto-switch to better weapon on pickup."
+HelpMessage[15]="Byt aldrig automatiskt till bättre vapen vid upphämtning."
+; EN: HelpMessage[16]="Use the left and right arrow keys to select a Heads Up Display configuration."
+HelpMessage[16]="Använd vänster och höger piltangenter för att välja en Heads Up Display-konfiguration."
+; EN: HelpMessage[17]="Adjust the amount of bobbing when moving."
+HelpMessage[17]="Justera mängden bobbning när du rör dig."
+; EN: HelpMessage[18]="Set your optimal networking speed. This has an impact on internet gameplay."
+HelpMessage[18]="Ställ in din optimala nätverkshastighet. Detta har en inverkan på internetspel."
+; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
+HelpMessage[19]="Det här alternativet bestämmer utseendet på konsolen och menyerna. Tryck på Enter för att starta om spelet och tillämpa ändringarna."
+; EN: MenuList[1]="Auto Aim"
+MenuList[1]="Automatiskt sikte"
+; EN: MenuList[2]="Joystick Enabled"
+MenuList[2]="Joystick aktiverad"
+; EN: MenuList[3]="Mouse Sensitivity"
+MenuList[3]="Muskänslighet"
+; EN: MenuList[4]="Mouse Smoothing"
+MenuList[4]="Musutjämning"
+; EN: MenuList[5]="Invert Mouse"
+MenuList[5]="Invertera mus"
+MenuList[6]="LookSpring"
+; EN: MenuList[7]="Always MouseLook"
+MenuList[7]="Alltid MouseLook"
+MenuList[8]="Auto Slope Look"
+; EN: MenuList[9]="Weapon Flash"
+MenuList[9]="Vapenblixt"
+MenuList[10]="Crosshair"
+; EN: MenuList[11]="Weapon Hand"
+MenuList[11]="Vapenhand"
+MenuList[12]="Dodging"
+; EN: MenuList[13]="Customize Controls"
+MenuList[13]="Anpassa kontroller"
+; EN: MenuList[14]="Prioritize Weapons"
+MenuList[14]="Prioritera vapen"
+; EN: MenuList[15]="No Auto Weapon Switch"
+MenuList[15]="Ingen automatisk vapenbrytare"
+; EN: MenuList[16]="HUD Configuration"
+MenuList[16]="HUD-konfiguration"
+; EN: MenuList[17]="View Bob"
+MenuList[17]="Se Bob"
+; EN: MenuList[18]="Net Speed"
+MenuList[18]="Nettohastighet"
+; EN: MenuList[19]="Console"
+MenuList[19]="Trösta"
+; EN: MenuTitle="OPTIONS MENU"
+MenuTitle="ALTERNATIVMENY"
+; EN: MenuList[20]="Advanced Options"
+MenuList[20]="Avancerade alternativ"
+; EN: HelpMessage[20]="Open advanced preferences configuration menu."
+HelpMessage[20]="Öppna konfigurationsmenyn för avancerade inställningar."
+
+[TeamGame]
+; EN: ClassCaption="Team Play"
+ClassCaption="Lagspel"
+; EN: NewTeamMessage=" is now on "
+NewTeamMessage=" är nu på "
+; EN: TeamColor[0]="Red"
+TeamColor[0]="Röd"
+; EN: TeamColor[1]="Blue"
+TeamColor[1]="Blå"
+; EN: TeamColor[2]="Green"
+TeamColor[2]="Grön"
+; EN: TeamColor[3]="Gold"
+TeamColor[3]="Guld"
+; EN: GameName="Team Game"
+GameName="Lagspel"
+
+[ASMD]
+; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
+DeathMessage="%k orsakade dödlig skada på %o med %w."
+; EN: PickupMessage="You got the ASMD"
+PickupMessage="Du har ASMD"
+; EN: ItemName="ASMD"
+ItemName="ASMD"
+FemDeathMessage="%k orsakade dödlig skada på %o med %w."
+FemKillMessage="%k orsakade dödlig skada på %o med %w."
+
+[UnrealWeaponMenu]
+; EN: MenuTitle="PRIORITIES"
+MenuTitle="PRIORITERINGAR"
+
+[UnrealBotConfigMenu]
+; EN: HelpMessage[1]="If enabled, bots adjust their skill level based on how they are doing against players."
+HelpMessage[1]="Om det är aktiverat justerar robotar sin skicklighetsnivå baserat på hur de gör mot spelare."
+; EN: HelpMessage[2]="Base skill level of bots (between 0 and 3)."
+HelpMessage[2]="Basnivå för bots (mellan 0 och 3)."
+; EN: HelpMessage[3]="If enabled, bots enter the game in random order. If false, they enter in their configuration order."
+HelpMessage[3]="Om det är aktiverat kommer bots in i spelet i slumpmässig ordning. Om de är falska anger de i sin konfigurationsordning."
+; EN: HelpMessage[4]="Change the configuration of individual bots."
+HelpMessage[4]="Ändra konfigurationen för enskilda bots."
+; EN: HelpMessage[5]="Number of bots to start play (max 15)."
+HelpMessage[5]="Antal bots som ska spelas (max 15)."
+; EN: HelpMessage[6]="Use bots when playing with other people."
+HelpMessage[6]="Använd bots när du spelar med andra människor."
+; EN: MenuList[1]="Auto-Adjust Skills"
+MenuList[1]="Autojustera färdigheter"
+; EN: MenuList[2]="Base Skill"
+MenuList[2]="Basfärdighet"
+; EN: MenuList[3]="Random Order"
+MenuList[3]="Slumpmässig ordning"
+; EN: MenuList[4]="Configure Individual Bots"
+MenuList[4]="Konfigurera enskilda bots"
+; EN: MenuList[5]="Number of Bots"
+MenuList[5]="Antal bots"
+; EN: MenuList[6]="Bots in Multiplayer"
+MenuList[6]="Bots i multiplayer"
+MenuTitle="BOTS"
+
+[Eightball]
+; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
+DeathMessage="%o slogs ned flera gånger av %k %w."
+; EN: PickupMessage="You got the Eightball"
+PickupMessage="Du har Åtta Boll"
+; EN: ItemName="Eightball"
+ItemName="Åtta Boll"
+FemDeathMessage="%o slogs ned flera gånger av %k %w."
+FemKillMessage="%o slogs ned flera gånger av %k %w."
+
+[UnrealKeyboardMenu]
+; EN: OrString=" or "
+OrString=" eller "
+HelpMessage[1]=""
+; EN: MenuList[1]="Fire"
+MenuList[1]="Brand"
+; EN: MenuList[2]="Alternate Fire"
+MenuList[2]="Alternativ eld"
+; EN: MenuList[3]="Move Forward"
+MenuList[3]="Gå framåt"
+; EN: MenuList[4]="Move Backward"
+MenuList[4]="Flytta bakåt"
+; EN: MenuList[5]="Turn Left"
+MenuList[5]="Sväng vänster"
+; EN: MenuList[6]="Turn Right"
+MenuList[6]="Sväng höger"
+; EN: MenuList[7]="Strafe Left"
+MenuList[7]="Strafe vänster"
+; EN: MenuList[8]="Strafe Right"
+MenuList[8]="Strafe höger"
+; EN: MenuList[9]="Jump/Up"
+MenuList[9]="Hoppa upp"
+; EN: MenuList[10]="Crouch/Down"
+MenuList[10]="Huka ner"
+; EN: MenuList[11]="Mouse Look"
+MenuList[11]="Mus Look"
+; EN: MenuList[12]="Activate Item"
+MenuList[12]="Aktivera objekt"
+; EN: MenuList[13]="Next Item"
+MenuList[13]="Nästa artikel"
+; EN: MenuList[14]="Previous Item"
+MenuList[14]="Föregående artikel"
+; EN: MenuList[15]="Look Up"
+MenuList[15]="Slå upp"
+; EN: MenuList[16]="Look Down"
+MenuList[16]="Titta ner"
+; EN: MenuList[17]="Center View"
+MenuList[17]="Mittvy"
+; EN: MenuList[18]="Walk"
+MenuList[18]="Gå"
+MenuList[19]="Strafe"
+; EN: MenuList[20]="Next Weapon"
+MenuList[20]="Nästa vapen"
+; EN: MenuList[21]="Prev Weapon"
+MenuList[21]="Föregående vapen"
+; EN: MenuList[22]="Grab Decoration"
+MenuList[22]="Grab dekoration"
+; EN: MenuList[23]="Show Admin Menu"
+MenuList[23]="Visa administratörsmeny"
+; EN: MenuList[24]="Show Music Menu"
+MenuList[24]="Visa musikmeny"
+; EN: MenuList[25]="RESET TO DEFAULTS"
+MenuList[25]="ÅTERSTÄLL TILL FEL"
+; EN: MenuTitle="CONTROLS"
+MenuTitle="KONTROLLER"
+
+[UnrealNewKeyboardMenu]
+MenuWidth=340
+
+[CoopGame]
+; EN: ClassCaption="Cooperative Play"
+ClassCaption="Kooperativt spel"
+GameName="Coop Game"
+
+[Cow]
+; EN: MenuName="Cow"
+MenuName="Ko"
+
+[ShieldBelt]
+; EN: PickupMessage="You got the Shield Belt"
+PickupMessage="Du har sköldbältet"
+; EN: ItemName="Shield Belt"
+ItemName="Sköldbälte"
+
+[Flashlight]
+; EN: ExpireMessage="Flashlight batteries have died."
+ExpireMessage="Ficklampans batterier har dött."
+; EN: PickupMessage="You picked up the Flashlight"
+PickupMessage="Du tog upp ficklampan"
+; EN: ItemName="Flashlight"
+ItemName="Ficklampa"
+
+[DevilFish]
+MenuName="DevilFish"
+
+[UnrealMainMenu]
+; EN: HelpMessage[1]="Hit enter to modify game options, including loading and saving games, changing difficulty level, and starting a BotMatch."
+HelpMessage[1]="Tryck på Enter för att ändra spelalternativ, inklusive att ladda och spara spel, ändra svårighetsgrad och starta en BotMatch."
+; EN: HelpMessage[2]="Hit enter to modify Multiplayer setup options, including starting or joining a network game, and changing your appearance, name, or team."
+HelpMessage[2]="Tryck på Enter för att ändra inställningsalternativ för flera spelare, inklusive att starta eller gå med i ett nätverksspel och ändra ditt utseende, namn eller team."
+; EN: HelpMessage[3]="Hit enter to customize controls."
+HelpMessage[3]="Tryck på Enter för att anpassa kontrollerna."
+; EN: HelpMessage[4]="Change sound and display options"
+HelpMessage[4]="Ändra ljud- och visningsalternativ"
+; EN: HelpMessage[5]="Hit enter to quit game."
+HelpMessage[5]="Tryck på Enter för att avsluta spelet."
+; EN: HelpMessage[7]="Call TOLL FREE 1-877-4UNREAL to Order UNREAL!"
+HelpMessage[7]="Ring TOLL GRATIS 1-877-4UNREAL för att beställa UNREAL!"
+; EN: MenuList[1]="GAME"
+MenuList[1]="SPEL"
+MenuList[2]="MULTIPLAYER"
+; EN: MenuList[3]="OPTIONS"
+MenuList[3]="ALTERNATIV"
+; EN: MenuList[4]="AUDIO/VIDEO"
+MenuList[4]="LJUD VIDEO"
+; EN: MenuList[5]="QUIT"
+MenuList[5]="SLUTA"
+; EN: MenuList[7]="ORDER INFO"
+MenuList[7]="BESTÄLL INFO"
+
+[UnrealLoadMenu]
+; EN: RestartString="Restart "
+RestartString="Omstart "
+; EN: MenuTitle="LOAD GAME"
+MenuTitle="BELASTNINGS SPEL"
+
+[UnrealSlotMenu]
+; EN: EmptySlot="..Empty.."
+EmptySlot="..Tömma.."
+; EN: MonthNames[0]="January"
+MonthNames[0]="Januari"
+; EN: MonthNames[1]="February"
+MonthNames[1]="Februari"
+; EN: MonthNames[2]="March"
+MonthNames[2]="Mars"
+MonthNames[3]="April"
+; EN: MonthNames[4]="May"
+MonthNames[4]="Maj"
+; EN: MonthNames[5]="June"
+MonthNames[5]="Juni"
+; EN: MonthNames[6]="July"
+MonthNames[6]="Juli"
+; EN: MonthNames[7]="August"
+MonthNames[7]="Augusti"
+MonthNames[8]="September"
+; EN: MonthNames[9]="October"
+MonthNames[9]="Oktober"
+MonthNames[10]="November"
+MonthNames[11]="December"
+
+[TranslatorEvent]
+; EN: M_NewMessage="New Translator Message"
+M_NewMessage="Nytt översättarmeddelande"
+; EN: M_TransMessage="Translator Message"
+M_TransMessage="Översättarmeddelande"
+; EN: M_HintMessage="New hint message (press F3 to read)."
+M_HintMessage="Nytt tipsmeddelande (tryck på F3 för att läsa)."
+
+[NaliFruit]
+; EN: PickupMessage="You picked the Nali Healing Fruit +"
+PickupMessage="Du valde Nali Healing Fruit +"
+ItemName="Nali Healing Fruit "
+
+[Health]
+; EN: PickupMessage="You picked up a Health Pack +"
+PickupMessage="Du plockade upp ett Health Pack +"
+; EN: ItemName="Health Pack"
+ItemName="Hälsopaket"
+
+[BabyCow]
+; EN: MenuName="Baby Cow"
+MenuName="Baby ko"
+
+[UnrealGameMenu]
+; EN: HelpMessage[1]="Hit enter to save the current game."
+HelpMessage[1]="Tryck på Enter för att spara det aktuella spelet."
+; EN: HelpMessage[2]="Hit enter to load a saved game."
+HelpMessage[2]="Tryck på Enter för att ladda ett sparat spel."
+; EN: HelpMessage[3]="Select a difficulty level, and start a new game."
+HelpMessage[3]="Välj en svårighetsgrad och starta ett nytt spel."
+; EN: HelpMessage[4]="Hit enter to modify game options.  Note that you cannot do this if you are playing in a multiplayer game."
+HelpMessage[4]="Tryck på Enter för att ändra spelalternativ. Observera att du inte kan göra detta om du spelar i ett multiplayer-spel."
+; EN: HelpMessage[5]="DeathMatch against Bots."
+HelpMessage[5]="DeathMatch mot Bots."
+; EN: MenuList[1]="SAVE GAME"
+MenuList[1]="SPARA SPELET"
+; EN: MenuList[2]="LOAD GAME"
+MenuList[2]="BELASTNINGS SPEL"
+; EN: MenuList[3]="NEW GAME"
+MenuList[3]="NYTT SPEL"
+; EN: MenuList[4]="GAME OPTIONS"
+MenuList[4]="SPELALTERNATIV"
+MenuList[5]="BOTMATCH"
+
+[UnrealMultiPlayerMenu]
+; EN: HelpMessage[1]="Join a network game."
+HelpMessage[1]="Gå med i ett nätverksspel."
+; EN: HelpMessage[2]="Set up and start a network game."
+HelpMessage[2]="Ställ in och starta ett nätverksspel."
+; EN: HelpMessage[3]="Configure appearance, name, and team name."
+HelpMessage[3]="Konfigurera utseende, namn och lagnamn."
+; EN: MenuList[1]="JOIN GAME"
+MenuList[1]="GÅ MED I SPEL"
+; EN: MenuList[2]="START GAME"
+MenuList[2]="STARTA SPELET"
+; EN: MenuList[3]="PLAYER SETUP"
+MenuList[3]="SPELARINSTÄLLNING"
+
+[UnrealChooseGameMenu]
+; EN: HelpMessage[1]="Choose which game to play."
+HelpMessage[1]="Välj vilket spel du vill spela."
+; EN: HelpMessage[2]="Choose which game to play."
+HelpMessage[2]="Välj vilket spel du vill spela."
+; EN: HelpMessage[3]="Choose which game to play."
+HelpMessage[3]="Välj vilket spel du vill spela."
+; EN: HelpMessage[4]="Choose which game to play."
+HelpMessage[4]="Välj vilket spel du vill spela."
+; EN: HelpMessage[5]="Choose which game to play."
+HelpMessage[5]="Välj vilket spel du vill spela."
+; EN: HelpMessage[6]="Choose which game to play."
+HelpMessage[6]="Välj vilket spel du vill spela."
+; EN: HelpMessage[7]="Choose which game to play."
+HelpMessage[7]="Välj vilket spel du vill spela."
+; EN: HelpMessage[8]="Choose which game to play."
+HelpMessage[8]="Välj vilket spel du vill spela."
+; EN: HelpMessage[9]="Choose which game to play."
+HelpMessage[9]="Välj vilket spel du vill spela."
+; EN: HelpMessage[10]="Choose which game to play."
+HelpMessage[10]="Välj vilket spel du vill spela."
+; EN: HelpMessage[11]="Choose which game to play."
+HelpMessage[11]="Välj vilket spel du vill spela."
+; EN: HelpMessage[12]="Choose which game to play."
+HelpMessage[12]="Välj vilket spel du vill spela."
+; EN: HelpMessage[13]="Choose which game to play."
+HelpMessage[13]="Välj vilket spel du vill spela."
+; EN: HelpMessage[14]="Choose which game to play."
+HelpMessage[14]="Välj vilket spel du vill spela."
+; EN: HelpMessage[15]="Choose which game to play."
+HelpMessage[15]="Välj vilket spel du vill spela."
+; EN: HelpMessage[16]="Choose which game to play."
+HelpMessage[16]="Välj vilket spel du vill spela."
+; EN: HelpMessage[17]="Choose which game to play."
+HelpMessage[17]="Välj vilket spel du vill spela."
+; EN: HelpMessage[18]="Choose which game to play."
+HelpMessage[18]="Välj vilket spel du vill spela."
+; EN: HelpMessage[19]="Choose which game to play."
+HelpMessage[19]="Välj vilket spel du vill spela."
+; EN: MenuTitle="CHOOSE GAME"
+MenuTitle="VÄLJ SPEL"
+
+[AutoMag]
+; EN: DeathMessage="%o got gatted by %k's %w."
+DeathMessage="%o fick gattad av %​​k's %w."
+; EN: PickupMessage="You got the Automag"
+PickupMessage="Du har Automag"
+; EN: ItemName="Automag"
+ItemName="Automag"
+FemDeathMessage="%o fick gattad av %​​k's %w."
+FemKillMessage="%o fick gattad av %​​k's %w."
+
+[UnrealHelpMenu]
+; EN: HelpMessage[1]="Open the troubleshooting document."
+HelpMessage[1]="Öppna felsökningsdokumentet."
+; EN: MenuList[1]="TroubleShooting"
+MenuList[1]="Felsökning"
+; EN: MenuTitle="HELP"
+MenuTitle="HJÄLP"
+
+[UnrealDMGameOptionsMenu]
+; EN: GameStyle[0]="Classic"
+GameStyle[0]="Klassisk"
+GameStyle[1]="Hardcore"
+GameStyle[2]="Turbo"
+; EN: DeathMessages[0]="Classic"
+DeathMessages[0]="Klassisk"
+; EN: DeathMessages[1]="Weapon Based"
+DeathMessages[1]="Vapenbaserat"
+; EN: HelpMessage[3]="Number of frags scored by leading player to end game.  If 0, there is no limit."
+HelpMessage[3]="Antal bråk som görs av ledande spelare till slutspel. Om 0 är det ingen gräns."
+; EN: HelpMessage[4]="Time limit (in minutes) to end game.  If 0, there is no limit."
+HelpMessage[4]="Tidsgräns (i minuter) för att avsluta spelet. Om 0 är det ingen gräns."
+; EN: HelpMessage[5]="Maximum number of players allowed in the game."
+HelpMessage[5]="Maximalt antal spelare tillåtna i spelet."
+; EN: HelpMessage[6]="If Weapons Stay is enabled, weapons respawn instantly, but can only be picked up once by a given player."
+HelpMessage[6]="Om Weapons Stay är aktiverat, reagerar vapen direkt, men kan bara plockas upp en gång av en viss spelare."
+; EN: HelpMessage[7]="Configure bot game and individual parameters."
+HelpMessage[7]="Konfigurera botspel och individuella parametrar."
+; EN: HelpMessage[8]="Choose Game Style:  Hardcore game speed is faster and weapons do more damage than Classic. Turbo is Hardcore with really fast movement."
+HelpMessage[8]="Välj spelstil: Hardcore-spelhastigheten är snabbare och vapen gör mer skada än Classic. Turbo är Hardcore med riktigt snabb rörelse."
+; EN: HelpMessage[9]="Classic or new style (weapon based) deathmessages."
+HelpMessage[9]="Klassiska eller nya stil (vapenbaserade) dödsmeddelanden."
+; EN: MenuList[3]="Frag limit"
+MenuList[3]="Fraggräns"
+; EN: MenuList[4]="Time Limit"
+MenuList[4]="Tidsgräns"
+; EN: MenuList[5]="Max Players"
+MenuList[5]="Max spelare"
+; EN: MenuList[6]="Weapons Stay"
+MenuList[6]="Vapen stannar kvar"
+; EN: MenuList[7]="Configure Bots"
+MenuList[7]="Konfigurera bots"
+; EN: MenuList[8]="Game Style"
+MenuList[8]="Spelstil"
+; EN: MenuList[9]="Death Messages"
+MenuList[9]="Dödsmeddelanden"
+
+[YesNoMenu]
+; EN: YesSelString="[YES]  No"
+YesSelString="[Ja Nej"
+; EN: NoSelString=" Yes  [NO]"
+NoSelString=" Ja Nej]"
+
+[UnrealListenMenu]
+; EN: HelpMessage[1]="Hit Enter to select this server."
+HelpMessage[1]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[2]="Hit Enter to select this server."
+HelpMessage[2]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[3]="Hit Enter to select this server."
+HelpMessage[3]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[4]="Hit Enter to select this server."
+HelpMessage[4]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[5]="Hit Enter to select this server."
+HelpMessage[5]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[6]="Hit Enter to select this server."
+HelpMessage[6]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[7]="Hit Enter to select this server."
+HelpMessage[7]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[8]="Hit Enter to select this server."
+HelpMessage[8]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[9]="Hit Enter to select this server."
+HelpMessage[9]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[10]="Hit Enter to select this server."
+HelpMessage[10]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[11]="Hit Enter to select this server."
+HelpMessage[11]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[12]="Hit Enter to select this server."
+HelpMessage[12]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[13]="Hit Enter to select this server."
+HelpMessage[13]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[14]="Hit Enter to select this server."
+HelpMessage[14]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[15]="Hit Enter to select this server."
+HelpMessage[15]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[16]="Hit Enter to select this server."
+HelpMessage[16]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[17]="Hit Enter to select this server."
+HelpMessage[17]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[18]="Hit Enter to select this server."
+HelpMessage[18]="Tryck på Enter för att välja den här servern."
+; EN: HelpMessage[19]="Hit Enter to select this server."
+HelpMessage[19]="Tryck på Enter för att välja den här servern."
+; EN: MenuTitle="LOCAL SERVERS"
+MenuTitle="LOKALA SERVER"
+
+[SCUBAGear]
+; EN: PickupMessage="You picked up the SCUBA Gear"
+PickupMessage="Du plockade upp SCUBA Gear"
+; EN: ItemName="SCUBA Gear"
+ItemName="Dykarutrustning"
+
+[Amplifier]
+; EN: ExpireMessage="Energy Amplifier is out of power."
+ExpireMessage="Energiförstärkaren har slut på ström."
+; EN: PickupMessage="You got the Energy Amplifier"
+PickupMessage="Du har Energiförstärkaren"
+; EN: ItemName="Energy Amplifier"
+ItemName="Energiförstärkaren"
+
+[UnrealNewGameMenu]
+; EN: HelpMessage[1]="Tourist mode."
+HelpMessage[1]="Turistläge."
+; EN: HelpMessage[2]="Ready for some action!"
+HelpMessage[2]="Redo för lite action!"
+; EN: HelpMessage[3]="Not for the faint of heart."
+HelpMessage[3]="Inte för svaga hjärtan."
+; EN: HelpMessage[4]="Death wish."
+HelpMessage[4]="Dödsönskan."
+; EN: HelpMessage[5]="For players who want an extra difficulty."
+HelpMessage[5]="För spelare som vill ha extra svårigheter."
+; EN: HelpMessage[6]="For the hardcore gamers."
+HelpMessage[6]="För hardcore-spelarna."
+; EN: HelpMessage[7]="HOLY SHIT!"
+HelpMessage[7]="HELIG SKIT!"
+; EN: MenuList[1]="EASY"
+MenuList[1]="LÄTT"
+MenuList[2]="MEDIUM"
+; EN: MenuList[3]="HARD"
+MenuList[3]="HÅRD"
+MenuList[4]="UNREAL"
+; EN: MenuList[5]="EXTREME"
+MenuList[5]="EXTREM"
+; EN: MenuList[6]="NIGHTMARE"
+MenuList[6]="MARDRÖM"
+; EN: MenuList[7]="ULTRA-UNREAL"
+MenuList[7]="ULTRA-UNREAL"
+; EN: MenuList[8]="Balance Mode: "
+MenuList[8]="Balansläge: "
+; EN: HelpMessage[8]="Should gameplay contain some minor bugfixes or remain classic?"
+HelpMessage[8]="Ska spelet innehålla några mindre buggfixar eller förbli klassiskt?"
+; EN: ModeString[0]="Enhanced"
+ModeString[0]="Förbättrad"
+; EN: ModeString[1]="Classic"
+ModeString[1]="Classic"
+
+[TazerProj]
+; EN: ComboKillMessage="%o couldn't avoid the shock blast from %k's %w"
+ComboKillMessage="%o kunde inte undvika stötdämpningen från %k's %w"
+
+[SinglePlayer]
+; EN: GameName="Unreal"
+GameName="Overklig"
+
+[UnrealSaveMenu]
+; EN: CantSave="CAN'T SAVE WHEN DEAD"
+CantSave="KAN INTE SPARA NÄR DÖD"
+; EN: MenuTitle="SAVE GAME"
+MenuTitle="SPARA SPELET"
+
+[Stinger]
+; EN: DeathMessage="%o was perforated by %k's %w."
+DeathMessage="%o perforerades med %k %w."
+; EN: PickupMessage="You picked up the Stinger"
+PickupMessage="Du tog upp Stinger"
+; EN: ItemName="Stinger"
+ItemName="Stinger"
+FemDeathMessage="%o perforerades med %k %w."
+FemKillMessage="%o perforerades med %k %w."
+
+[RocketCan]
+; EN: PickupMessage="You picked up 12 Eightballs"
+PickupMessage="Du plockade upp 12 Åtta Bollar"
+; EN: ItemName="Eightballs"
+ItemName="Åtta Bollar"
+
+[VoiceBox]
+; EN: PickupMessage="You picked up the Voice Box"
+PickupMessage="Du tog upp röstlådan"
+ItemName="Voice Box"
+
+[WeaponPowerUp]
+; EN: PickupMessage="You got the Dispersion Pistol Powerup"
+PickupMessage="Du har Start för Dispersionspistolen"
+; EN: ItemName="Dispersion Pistol Powerup"
+ItemName="Start för Dispersionspistolen"
+
+[Flare]
+; EN: PickupMessage="You got a Flare"
+PickupMessage="Du har en bloss"
+; EN: ItemName="Flare"
+ItemName="Blossa"
+
+[ShellBox]
+; EN: PickupMessage="You picked up 50 bullets"
+PickupMessage="Du tog upp 50 kulor"
+; EN: ItemName="Bullet Box"
+ItemName="Skalbox"
+
+[ASMDAmmo]
+; EN: PickupMessage="You picked up an ASMD core"
+PickupMessage="Du plockade upp en ASMD-Kärna"
+; EN: ItemName="ASMD Core"
+ItemName="ASMD-Kärna"
+
+[MaleThree]
+; EN: MenuName="Male 3"
+MenuName="Hane 3"
+
+[FemaleOne]
+; EN: MenuName="Female 1"
+MenuName="Kvinna 1"
+
+[OKMenu]
+OKString="[OK]"
+
+[UnrealTeamGameOptionsMenu]
+; EN: HelpMessage[10]="Percentage of damage taken when hit by friendly fire.  Note that you always take full damage from your own weapons."
+HelpMessage[10]="Procent av skador som tagits när de träffas av vänlig eld. Observera att du alltid tar full skada från dina egna vapen."
+; EN: MenuList[10]="Friendly Fire Scale"
+MenuList[10]="Vänlig brandskala"
+
+[UnrealCoopGameOptions]
+; EN: HelpMessage[3]="Skill level setting."
+HelpMessage[3]="Färdighetsnivåinställning."
+; EN: HelpMessage[4]="If enabled, no friendly fire is allowed."
+HelpMessage[4]="Om den är aktiverad är ingen vänlig eld tillåten."
+; EN: HelpMessage[5]="If enabled, weapons respawn instantly, but can only be picked up once by a given player."
+HelpMessage[5]="Om aktiverat reagerar vapen direkt, men kan bara plockas upp en gång av en viss spelare."
+; EN: HelpMessage[6]="If enabled, weapons will be respawned instantly."
+HelpMessage[6]="Om aktiverat, kommer vapen att återupptas omedelbart."
+; EN: HelpMessage[7]="If enabled, items will be respawned instantly."
+HelpMessage[7]="Om det är aktiverat kommer objekten att återupptas omedelbart."
+; EN: MenuList[3]="Difficulty"
+MenuList[3]="Svårighet"
+; EN: MenuList[4]="No Friendly Fire"
+MenuList[4]="Ingen vänlig eld"
+; EN: MenuList[5]="Weapons Stay"
+MenuList[5]="Vapen stannar kvar"
+MenuList[6]="Instant Weapon Respawn"
+; EN: MenuList[7]="Instant Item Respawn"
+MenuList[7]="Omedelbar återanvändning"
+
+[SuperHealth]
+; EN: PickupMessage="You picked up the Super Health Pack"
+PickupMessage="Du plockade upp Super Health Pack"
+ItemName="Super Health Pack"
+
+[UpgradeMenu]
+; EN: MenuList[1]="You need a newer version of Unreal to play on this server. Would you like to go to the Unreal web site for a newer version?"
+MenuList[1]="Du behöver en nyare version av Unreal för att kunna spela på den här servern. Vill du gå till Unreal-webbplatsen för en nyare version?"
+
+[StingerAmmo]
+; EN: PickupMessage="You picked up 40 Tarydium shards"
+PickupMessage="Du plockade upp 40 Tarydium-skärvor"
+; EN: ItemName="Tarydium Shards"
+ItemName="Tarydium-skärvor"
+
+[Shells]
+; EN: PickupMessage="You picked up 12 shells"
+PickupMessage="Du plockade upp 12 Skal"
+; EN: ItemName="Shells"
+ItemName="Skal"
+
+[KevlarSuit]
+; EN: PickupMessage="You picked up the Kevlar Suit"
+PickupMessage="Du plockade upp Kevlar Suit"
+; EN: ItemName="Kevlar Suit"
+ItemName="Kevlar-kostym"
+
+[Clip]
+; EN: PickupMessage="You picked up a clip"
+PickupMessage="Du tog upp ett klipp"
+; EN: ItemName="Clip"
+ItemName="Klipp"
+
+[Bandages]
+; EN: PickupMessage="You got some Bandages +"
+PickupMessage="Du har några bandage +"
+; EN: ItemName="Bandages"
+ItemName="Förband"
+
+[Armor]
+; EN: PickupMessage="You got the Assault Vest"
+PickupMessage="Du har Assault Vest"
+; EN: ItemName="Assault Vest"
+ItemName="Assault Vest"
+
+[Hawk]
+; EN: MenuName="Hawk"
+MenuName="Hök"
+
+[MiniGunSentry]
+; EN: PickupMessage="You got an Automatic Sentry Gun"
+PickupMessage="Du har en automatisk vaktpistol"
+; EN: ItemName="Minigun Sentry"
+ItemName="Minigun Sentry"
+; EN: M_Activated=" deployed."
+M_Activated=" distribueras."
+
+[Woodruff]
+; EN: PickupMessage="You got some Master of the Woods +"
+PickupMessage="Du har lite Master of the Woods +"
+; EN: ItemName="Master of the Woods"
+ItemName="Master of the Woods"
+
+[UIKeyTrigger]
+; EN: SuccessMessage="Access granted."
+SuccessMessage="Tillgång beviljad."
+; EN: FailtureMessage="You need a key to open this door."
+FailtureMessage="Du behöver en nyckel för att öppna den här dörren."
+
+[UTranslocator]
+; EN: DeathMessage="%o was telefragged by %k."
+DeathMessage="%o telefaxades av %k."
+FemDeathMessage="%o telefaxades av %k."
+; EN: PickupMessage="You got the Translocator Source Module"
+PickupMessage="Du har Translocator Source Module"
+; EN: ItemName="Translocator"
+ItemName="Translokator"
+; EN: ItemArticle="the"
+ItemArticle="de"
+
+[WoodruffSchool]
+; EN: PickupMessage="You got a bunch of Master of the Woods +"
+PickupMessage="Du har en massa Master of the Woods +"
+
+[UnrealMutatorMenu]
+; EN: InUseString="In Use"
+InUseString="I Use"
+; EN: NotInUseString="Inactive"
+NotInUseString="Inaktiv"
+; EN: HelpMessage[0]="Return back to previous menu"
+HelpMessage[0]="Återgå till föregående meny"
+; EN: MenuList[0]="Return"
+MenuList[0]="Återvända"
+; EN: MenuTitle="MUTATORS"
+MenuTitle="MUTATORER"
+
+[MaleThreeBot]
+; EN: MenuName="Male 3"
+MenuName="Hane 3"
+
+[FemaleOneBot]
+; EN: MenuName="Female 1"
+MenuName="Kvinna 1"
+
+[Bird]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Bird"
+MenuName="Bird"
+
+[Biterfish]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Biterfish"
+MenuName="Biterfish"
+
+[BiterfishSchool]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Biterfish"
+MenuName="Biterfish"
+
+[Brute]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Brute"
+MenuName="Brute"
+
+[CaveManta]
+; EN: NameArticle=" the "
+NameArticle=" the "
+; EN: MenuName="Cave Manta"
+MenuName="Cave Manta"
+
+[Fly]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Fly"
+MenuName="Fly"
+
+[LesserBrute]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Lesser Brute"
+MenuName="Lesser Brute"
+
+[Manta]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Manta"
+MenuName="Manta"
+
+[Nali]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Nali"
+MenuName="Nali"
+
+[NaliPriest]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Nali Priest"
+MenuName="Nali Priest"
+
+[NaliRabbit]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Nali Rabbit"
+MenuName="Nali Rabbit"
+
+[Skaarj]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Skaarj"
+MenuName="Skaarj"
+
+[SkaarjScout]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Skaarj Scout"
+MenuName="Skaarj Scout"
+
+[SkaarjWarrior]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Skaarj Warrior"
+MenuName="Skaarj Warrior"
+
+[Slith]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Slith"
+MenuName="Slith"
+
+[Tentacle]
+; EN: NameArticle=" a "
+NameArticle=" a "
+; EN: MenuName="Tentacle"
+MenuName="Tentacle"

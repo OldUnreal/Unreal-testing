@@ -13,31 +13,34 @@ Object=(Name=OldWeapons.OldAutomag,Class=Class,MetaClass=Engine.Weapon)
 Object=(Name=OldWeapons.OldRifle,Class=Class,MetaClass=Engine.Weapon)
 
 [OldDispersionPistol]
-; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
+; EN: DeathMessage="%o was killed by %k's %w.  What a loser!"
 DeathMessage="%o a été tué par le %w de %k. Quelle merde!"
-FemDeathMessage="%o a été tuée par le %w de %k. Quelle merde!"
 ; EN: PickupMessage="You got the Dispersion Pistol"
-PickupMessage="Vous avez récupéré le Pistolet à Dispersion"
+PickupMessage="Vous avez trouvé le Pistolet à Dispersion"
 ; EN: ItemName="Dispersion Pistol"
 ItemName="Pistolet à Dispersion"
+FemDeathMessage="%o a été tuée par le %w de %k. Quelle merde!"
+FemKillMessage="%o a été tué par le %w de %k. Quelle merde!"
 
 [OldASMD]
 ; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
 DeathMessage="%k a blessé %o à mort avec son %w."
-FemDeathMessage="%k a blessé %o à mort avec son %w."
 ; EN: PickupMessage="You got the ASMD"
-PickupMessage="Vous avez récupéré l'ASMD"
+PickupMessage="Vous avez trouvé l'ASMD"
 ; EN: ItemName="ASMD"
 ItemName="ASMD"
+FemDeathMessage="%k a blessée %o à mort avec son %w."
+FemKillMessage="%k a blessé %o à mort avec son %w."
 
 [OldEightball]
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
-DeathMessage="%o a été multiplement frappé par le %w de %k."
-FemDeathMessage="%o a été multiplement frappée par le %w de %k."
-; EN: PickupMessage="You got the Eightball"
-PickupMessage="Vous avez récupéré le Lanceur 8 Coups"
+DeathMessage="%o a été multiplement frappé par le %w de %k." 
+; EN: PickupMessage="You got the Eightball gun"
+PickupMessage="Vous avez trouvé le Lance-roquettes"
 ; EN: ItemName="Eightball"
-ItemName="Lanceur 8 Coups"
+ItemName="Lance-roquettes"
+FemDeathMessage="%o a été multiplement frappée par le %w de %k." 
+FemKillMessage="%o a été multiplement frappé par le %w de %k."
 
 [OldRifle]
 ; EN: DeathMessage="%k put a bullet through %o's head."
@@ -62,11 +65,12 @@ FemKillMessage="%o a été coupé en morceau par le %w de %k."
 [OldAutoMag]
 ; EN: DeathMessage="%o got gatted by %k's %w."
 DeathMessage="%o a été percé par le %w de %k."
-FemDeathMessage="%o a été percée par le %w de %k."
-; EN: PickupMessage="You got the Automag"
-PickupMessage="Vous avez l'AutoMag"
+; EN: PickupMessage="You got the AutoMag"
+PickupMessage="Vous avez trouvé l'AutoMag"
 ; EN: ItemName="Automag"
 ItemName="Automag"
+FemDeathMessage="%o a été percée par le %w de %k." 
+FemKillMessage="%o a été percé par le %w de %k."
 
 [OldMinigun]
 ; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
@@ -98,12 +102,13 @@ ItemName="Amplificateur d'Énergie"
 
 [OldStinger]
 ; EN: DeathMessage="%o was perforated by %k's %w."
-DeathMessage="%o a été perforé par le %w de %k."
-FemDeathMessage="%o a été perforée par le %w de %k."
+DeathMessage="%o a été perforé par le %w de %k." 
 ; EN: PickupMessage="You picked up the Stinger"
-PickupMessage="Vous avez récupéré le Stinger"
+PickupMessage="Vous avez trouvé le Stinger" 
 ; EN: ItemName="Stinger"
 ItemName="Stinger"
+FemDeathMessage="%o a été perforée par le %w de %k."
+FemKillMessage="%o a été perforé par le %w de %k."
 
 [OldShellBox]
 ; EN: PickupMessage="You picked up 50 bullets"

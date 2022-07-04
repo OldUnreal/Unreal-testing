@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+; EN: Title="Riot!"
+Title="Opptøyer!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Opptøyer!"
+
+[LevelSummary]
+; EN: Title="Riot!"
+Title="Opptøyer!"
+IdealPlayerCount="2-3"
+; EN: LevelEnterText="Riot!"
+LevelEnterText="Opptøyer!"
+
+[TranslatorEvent0]
+; EN: Message="Started 18/04/10. Abandoned 05/10. Started over on 10/03/11. Layout finished on 14/06/11. Makeover done 20/06/11. Building finished on 21/06/11. Version 1.1 on 22/06/11."
+Message="Startet 18.04.10. Forlatt 05/10. Startet på nytt den 10.03.11. Oppsettet avsluttet 14/06/11. Makeover gjort 20.06.11. Bygningen ble ferdig 21.06.11. Versjon 1.1 den 22.06.11."
+; EN: Hint="Check your clipped BSP in notepad: vertices might snap off the grid for some reason."
+Hint="Sjekk din klippet BSP i notisblokk: hjørner kan av en eller annen grunn snappe av rutenettet."
+; EN: M_HintMessage="LOOK ABOVE FOR MEGA HINT"
+M_HintMessage="SE OVER MEGA HINT"

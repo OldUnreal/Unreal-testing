@@ -1,0 +1,251 @@
+﻿[public]
+; EN: Object=(Name=UWindow.UWindowWin95LookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Win 95")
+Object=(Name=UWindow.UWindowWin95LookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Vinn 95")
+
+[UWindowMessageBoxCW]
+; EN: YesText="Yes"
+YesText="Ja"
+; EN: NoText="No"
+NoText="Nej"
+OKText="OK"
+; EN: CancelText="Cancel"
+CancelText="Avbryt"
+
+[UWindowConsoleWindow]
+; EN: WindowTitle="System Console"
+WindowTitle="Systemkonsol"
+
+[UWindowSmallCloseButton]
+; EN: CloseText="Close"
+CloseText="Stänga"
+
+[UWindowSmallCancelButton]
+; EN: CancelText="Cancel"
+CancelText="Avbryt"
+
+[UWindowSmallOKButton]
+OKText="OK"
+
+[UWindowConsoleClientWindow]
+; EN: ShowColorsText="Show console messages in colours"
+ShowColorsText="Visa konsolmeddelanden i färger"
+; EN: ShowChatText="Log only chat messages"
+ShowChatText="Logga bara chattmeddelanden"
+; EN: ShowWarningText="Log script errors"
+ShowWarningText="Loggskriptfel"
+
+[AdminGUIPlayersGrid]
+; EN: PlayerID="ID#"
+PlayerID="ID-nummer"
+; EN: PlayerName="Player Name"
+PlayerName="Spelarnamn"
+; EN: PlayerIP="IP-Address"
+PlayerIP="IP-adress"
+; EN: PlayerClientID="Client ID"
+PlayerClientID="Klient ID"
+; EN: MaxLengthExceeded="Maximum player list length exceeded %i"
+MaxLengthExceeded="Maximal längd på spelarlistan översteg %i"
+; EN: IDMismatchedStr="Response ID mismatched: %i/%j"
+IDMismatchedStr="Svars-ID stämmer inte överens: %i/%j"
+; EN: ClientReceivedStr="Received client %ls."
+ClientReceivedStr="Mottagen klient %ls."
+; EN: GettingInfoStr="Getting player list from server, if nothing happens you may not be logged in as admin."
+GettingInfoStr="Att hämta spelarlista från servern, om inget händer kanske du inte är inloggad som admin."
+
+[AdminGUIBanLGrid]
+; EN: LengthExceeded="Maximum player list length exceeded %i"
+LengthExceeded="Maximal längd på spelarlistan översteg %i"
+; EN: ResponseMismatch="Response ID mismatched: %i/%j"
+ResponseMismatch="Svars-ID stämmer inte överens: %i/%j"
+; EN: ReceiveBanText="Received ban %ls."
+ReceiveBanText="Fick förbud %ls."
+; EN: GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
+GettingBanListText="Att få banlist från servern, om inget händer kanske du inte är inloggad som admin (eller det finns inga förbud på servern)."
+
+[MMMusicListGrid]
+; EN: MusicNameStr="Music name"
+MusicNameStr="Musiknamn"
+; EN: MusicPackStr="Music package"
+MusicPackStr="Musikpaket"
+; EN: FailedToPlayStr="Failed to play: Music %ls was not found or failed to load."
+FailedToPlayStr="Det gick inte att spela: Musik %ls hittades inte eller kunde inte laddas."
+; EN: StartedPlayStr="Started playing music %ls with section %i."
+StartedPlayStr="Började spela musik %ls med avsnitt %i."
+; EN: NullErrorStr="Failed to add: NULL is not a valid song."
+NullErrorStr="Det gick inte att lägga till: NULL är inte en giltig låt."
+; EN: FailedLoadStr="Failed to add: Music %ls file could not be found or loaded."
+FailedLoadStr="Det gick inte att lägga till: Musik %ls -fil kunde inte hittas eller laddas."
+; EN: ConfirmInsertDuplicateTitle="Adding an already listed track"
+ConfirmInsertDuplicateTitle="Lägga till ett redan listat spår"
+; EN: ConfirmInsertDuplicateText="Such a track is already included in the playlist. Insert it anyway?"
+ConfirmInsertDuplicateText="Ett sådant spår ingår redan i spellistan. Sätt in det ändå?"
+; EN: AddedStr="Added music %ls (%i)."
+AddedStr="Lade till musik %ls (%i)."
+; EN: RemoveSongStr="Removed song #%i."
+RemoveSongStr="Borttagen låt #%i."
+; EN: ClearListStr="Removed all tracks from the playlist."
+ClearListStr="Ta bort alla spår från spellistan."
+; EN: ConfirmClearListTitle="Confirm clearing the playlist"
+ConfirmClearListTitle="Bekräfta att du har rensat spellistan"
+; EN: ConfirmClearListText="Do you want to clear the playlist?"
+ConfirmClearListText="Vill du rensa spellistan?"
+; EN: BadIndexStr="Failed to remove: Bad remove index."
+BadIndexStr="Det gick inte att ta bort: Dåligt borttagningsindex."
+
+[AdminGUIClientWindow]
+; EN: PlayersListTxt="Clients List"
+PlayersListTxt="Kundlista"
+; EN: BanListTxt="Banned Clients"
+BanListTxt="Förbjudna klienter"
+; EN: TempBanListTxt="Session Banned Clients"
+TempBanListTxt="Sessionsförbjudna klienter"
+
+[AdminGUIManBanClientW]
+; EN: PlayerNameTxt="Client name (for banlisting purposes only):"
+PlayerNameTxt="Klientnamn (endast för banlistning):"
+; EN: PlayerIpTxt="Client IP address (or IP range if desired):"
+PlayerIpTxt="Klientens IP-adress (eller IP-intervall om så önskas):"
+; EN: InsertBanTxt="Insert ban"
+InsertBanTxt="Infoga förbud"
+
+[MMMainWindow]
+; EN: WindowTitle="Music Menu"
+WindowTitle="Musikmeny"
+
+[UWindowNetErrorClientWindow]
+; EN: ReconnectText="Reconnect to server"
+ReconnectText="Återanslut till servern"
+; EN: KickNetworkText="KICKED!|You have been kicked from this server by an administrator for remainder of the game.\"
+KickNetworkText="KICKAD! | Du har sparkats från den här servern av en administratör under resten av spelet. \"
+; EN: BanNetworkText="BANNED!|You have been banned from this server by an administrator for bad behaviour.\\If you feel like you don't deserve this ban, contact the administrator at: "
+BanNetworkText="BANNED! | Du har utestängts från den här servern av en administratör för dåligt beteende. \\ Om du känner att du inte förtjänar detta förbud, kontakta administratören på: "
+; EN: TempBanNetworkText="SESSION BANNED!|You have been temporarily banned from this server for remainder of the map.\"
+TempBanNetworkText="SESSION BANNED! | Du har tillfälligt förbjudits från den här servern för resten av kartan. \"
+
+[MMControlsClient]
+; EN: MusicVolumeText="Music Volume"
+MusicVolumeText="Musikvolym"
+; EN: BrowseText="Browse"
+BrowseText="Bläddra"
+; EN: BrowseHint="Browse music files"
+BrowseHint="Bläddra bland musikfiler"
+; EN: AddMusicText="Add Music"
+AddMusicText="Lägg till musik"
+; EN: AddMusicHint="Add music with the specified name"
+AddMusicHint="Lägg till musik med det angivna namnet"
+; EN: TimeLimitText="Time Limit"
+TimeLimitText="Tidsgräns"
+; EN: TimeLimitHint="Select music playtime in minutes (0 = no time limit)"
+TimeLimitHint="Välj musikens speltid i minuter (0 = ingen tidsgräns)"
+; EN: SectionText="Song Section"
+SectionText="Sångavsnitt"
+; EN: SectionHint="Set initial music section (0 - 254)"
+SectionHint="Ställ in inledande musikavsnitt (0 - 254)"
+; EN: MusicStoppedText="Music player was stopped."
+MusicStoppedText="Musikspelaren stoppades."
+; EN: PlayTrackHint="Play track"
+PlayTrackHint="Spela spår"
+; EN: StopTrackHint="Stop track"
+StopTrackHint="Stoppa spår"
+; EN: PriorTrackHint="Prior track"
+PriorTrackHint="Tidigare spår"
+; EN: NextTrackHint="Next track"
+NextTrackHint="Nästa spår"
+; EN: AddAllText="Add All"
+AddAllText="Lägg till alla"
+; EN: AddAllHint="This will search through entire music directory and add all audio tracks to playlist."
+AddAllHint="Detta kommer att söka igenom hela musikkatalogen och lägga till alla ljudspår till spellistan."
+; EN: AddAllWinHdr="WARNING: Add all songs?"
+AddAllWinHdr="VARNING: Lägg till alla låtar?"
+; EN: AddAllWarningText="This operation will be slow and will add every possible song to your playlist, proceed?"
+AddAllWarningText="Denna operation kommer att vara långsam och kommer att lägga till alla möjliga låtar till din spellista, fortsätt?"
+; EN: ShuffleText="Shuffle playlist"
+ShuffleText="Blanda spellista"
+; EN: ShuffleHint="Next track is always selected at random."
+ShuffleHint="Nästa spår väljs alltid slumpmässigt."
+
+[UWindowNetErrorWindow]
+; EN: WindowTitle="Player Network error status"
+WindowTitle="Felstatus för spelarnätverk"
+
+[AdminGUIMainWindow]
+; EN: WindowTitle="Admin Menu"
+WindowTitle="Admin-meny"
+
+[AdminGUIBanLPullDown]
+; EN: RemoveBanTxt="&Remove ban"
+RemoveBanTxt="&Ta bort förbud"
+; EN: CloseMenuTxt="&Close this menu"
+CloseMenuTxt="&Stäng den här menyn"
+; EN: RefreshTxt="&Refresh banlist"
+RefreshTxt="&Uppdatera banlista"
+; EN: ManualBanTxt="&Manually insert ban entry"
+ManualBanTxt="&Infoga förbudspost manuellt"
+
+[MMMusListWindow]
+; EN: WindowTitle="Found music tracks:"
+WindowTitle="Hittade musikspår:"
+
+[MMListPullDown]
+; EN: PlaySongStr="&Play"
+PlaySongStr="&Spela"
+; EN: RemoveSongStr="&Remove from playlist"
+RemoveSongStr="&Ta bort från spellistan"
+; EN: InsertCurrentSongStr="&Insert currently playing track"
+InsertCurrentSongStr="&Infoga spår som spelas för närvarande"
+; EN: ClearPlaylistStr="&Clear playlist"
+ClearPlaylistStr="&Rensa spellista"
+
+[MMMusicFilesGrid]
+; EN: ErrorLoadPackage="Error: Failed to load music package."
+ErrorLoadPackage="Fel: Det gick inte att ladda musikpaketet."
+; EN: ErrorNoMusics="Error: Failed to find any musics in this package."
+ErrorNoMusics="Fel: Det gick inte att hitta musik i detta paket."
+
+[AdminGUIPLPullDown]
+; EN: GetAliasesTxt="&Get player aliases"
+GetAliasesTxt="&Få spelaralias"
+; EN: KickPlayerTxt="&Kick player"
+KickPlayerTxt="&Kick-spelare"
+; EN: KickBanTempTxt="&Temporarily kick-ban player"
+KickBanTempTxt="&Tillfälligt kick-ban spelare"
+; EN: KickBanTxt="Kick-&ban player"
+KickBanTxt="Kick- &ban spelare"
+; EN: CloseMenuTxt="&Close this menu"
+CloseMenuTxt="&Stäng den här menyn"
+; EN: RefreshTxt="&Refresh players list"
+RefreshTxt="&Uppdatera spelarlistan"
+
+[AdminGUIManualBanWnd]
+; EN: WindowTitle="Insert manual ban"
+WindowTitle="Infoga manuellt förbud"
+
+[AdminGUITBanLGrid]
+; EN: GettingBanListText="Getting temp-banlist from server, if nothing happens you may not be logged in as admin (or there are no temp-bans on server)."
+GettingBanListText="Att få temp-banlist från servern, om inget händer kanske du inte är inloggad som admin (eller det finns inga temp-förbud på servern)."
+
+[FontStyle]
+SmallFont=UWindowFonts.Tahoma10
+SmallFontBold=UWindowFonts.TahomaB10
+MedFont=UWindowFonts.Tahoma20
+MedFontBold=UWindowFonts.TahomaB20
+LargeFont=UWindowFonts.Tahoma30
+LargeFontBold=UWindowFonts.TahomaB30
+
+[AdminGUIBanLGrid]
+; EN: LengthExceeded="Maximum player list length exceeded %i"
+LengthExceeded="Maximal längd på spelarlistan översteg %i"
+; EN: ResponseMismatch="Response ID mismatched: %i/%j"
+ResponseMismatch="Svars-ID stämmer inte överens: %i/%j"
+; EN: ReceiveBanText="Received ban %ls."
+ReceiveBanText="Fick förbud %ls."
+; EN: GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
+GettingBanListText="Att få banlist från servern, om inget händer kanske du inte är inloggad som admin (eller det finns inga förbud på servern)."
+
+[UWindowSmallRestartButton]
+; EN: RestartText="Restart"
+RestartText="Omstart"
+
+[WindowConsole]
+; EN: WarningMessage="Something is creating script warnings..."
+WarningMessage="Något skapar skriptvarningar..."

@@ -1,0 +1,21 @@
+﻿[LevelInfo0]
+Title="Glathriel Village"
+
+[LevelSummary]
+Title="Glathriel Village"
+
+[TranslatorEvent1]
+; EN: Message="Two more died last week. Luckily we got them out through the cave without the Nightstalkers taking notice. We're low on food again..."
+Message="To til døde i forrige uke. Heldigvis fikk vi dem ut gjennom hulen uten at Nightstalkers la merke til det. Vi har lite mat igjen ..."
+
+[TranslatorEvent2]
+; EN: Message="I found another one of those strange objects that fell from the sky. I will collect all that I can find and then bring them to the priest. He will know what we are meant to do."
+Message="Jeg fant en annen av de rare gjenstandene som falt fra himmelen. Jeg vil samle alt jeg kan finne, og deretter bringe dem til presten. Han vil vite hva vi er ment å gjøre."
+
+[TranslatorEvent0]
+; EN: Message="Would you die for this? http://www.ocrana.de"
+Message="Vil du dø for dette? http://www.ocrana.de"
+
+[TranslatorEvent5]
+; EN: Message="What did we do wrong to anger the gods? First the Nightstalkers, then the huge thunderbird flew over our valley and seeded fire and destruction. And now those strange boxes are raining from the sky, hitting our houses and killing our people."
+Message="Hva gjorde vi galt for å irritere gudene? Først Nightstalkers, deretter den enorme tordenfuglen fløy over dalen vår og sådd ild og ødeleggelse. Og nå regner de rare boksene fra himmelen, rammer husene våre og dreper folket vårt."

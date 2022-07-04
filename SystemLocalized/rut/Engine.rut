@@ -1,5 +1,4 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Стандартная")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -158,8 +157,6 @@ HelpParm[1]="AllAdmin"
 HelpDesc[1]="Дать всем игрокам админские права."
 
 [Console]
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Стандартная консоль Unreal"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="ЗАГРУЗКА"
 ; EN: SavingMessage="SAVING"
@@ -170,10 +167,6 @@ ConnectingMessage="СОЕДИНЕНИЕ"
 PausedMessage="НА ПАУЗЕ"
 ; EN: PrecachingMessage="PRECACHING"
 PrecachingMessage="ПРЕКЕШИРОВАНИЕ"
-; EN: ChatChannel="(CHAT) "
-ChatChannel="(ЧАТ) "
-; EN: TeamChannel="(TEAM) "
-TeamChannel="(КОМАНДА) "
 
 [Menu]
 MenuList=" "

@@ -1,0 +1,10 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 3"
+Title="Avbrudd 3"
+
+[TransitionGenderEvent3]
+OutDelays[1]=21.000000
+; EN: MaleText[0]="I'm glad I figured out how to bring back water into the underground well system. The Nali won't die of thirst. And it's a good thing the scuba gear worked so well... I wouldn't have made it without the new equipment. As much as I hate being back here, I have to say it was good to see the Nali again. I believe I'm getting closer to the Prometheus. I can feel it."
+MaleText[0]="Jeg er glad jeg fant ut hvordan jeg skulle bringe vann tilbake til det underjordiske brønnsystemet. Nali vil ikke dø av tørst. Og det er bra at dykkingutstyret fungerte så bra ... Jeg hadde ikke klart det uten det nye utstyret. Så mye som jeg hater å være tilbake her, må jeg si det var bra å se Nali igjen. Jeg tror jeg kommer nærmere Prometheus. Jeg kan føle det."
+; EN: FemaleText[0]="I'm glad I figured out how to bring back water into the underground well system. The Nali won't die of thirst. And it's a good thing the scuba gear worked so well... I wouldn't have made it without the new equipment. As much as I hate being back here, I have to say it was good to see the Nali again. I believe I'm getting closer to the Prometheus. I can feel it."
+FemaleText[0]="Jeg er glad jeg fant ut hvordan jeg skulle bringe vann tilbake til det underjordiske brønnsystemet. Nali vil ikke dø av tørst. Og det er bra at dykkingutstyret fungerte så bra ... Jeg hadde ikke klart det uten det nye utstyret. Så mye som jeg hater å være tilbake her, må jeg si det var bra å se Nali igjen. Jeg tror jeg kommer nærmere Prometheus. Jeg kan føle det."

@@ -1,5 +1,4 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -92,7 +91,6 @@ FailedView="Failed to change view."
 CantChangeNameMsg="You can't change your name during a global logged game."
 
 [Console]
-ClassCaption="Standard Unreal Console"
 LoadingMessage="LOADING"
 SavingMessage="SAVING"
 ConnectingMessage="CONNECTING"

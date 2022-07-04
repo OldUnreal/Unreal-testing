@@ -1,0 +1,16 @@
+﻿[LevelInfo2]
+; EN: Title="Intermission 5"
+Title="Paus 5"
+LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
+
+[LevelSummary]
+; EN: Title="Intermission 5"
+Title="Paus 5"
+LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
+
+[TransitionGenderEvent5]
+OutDelays[1]=35.000000
+; EN: MaleText[0]="I whacked the Marines, but I couldn't find their shuttle. It must have returned to the Bodega Bay. When I realized the shuttle was gone, I almost gave up... It all seemed so hopeless. But things were even worse the last time I was here, and somehow I made it. Eventually I decided to keep going. It's a good thing I did... Because there is hope after all. One of the Marines had a radio with a life frequency... there's another squad about ten clicks west of here holed up in some kind of fortress. I don't know how I'm going to get there, but they've got a shuttle and by God I'm going to get it!"
+MaleText[0]="Jag slog marinisterna, men jag kunde inte hitta deras transfer. Det måste ha återvänt till Bodega Bay. När jag insåg att skytteln var borta gav jag nästan upp ... Det hela verkade så hopplöst. Men saker och ting var ännu värre förra gången jag var här, och på något sätt gjorde jag det. Så småningom bestämde jag mig för att fortsätta. Det är bra jag gjorde ... För det finns trots allt hopp. En av marinmännen hade en radio med livstidsfrekvens ... det finns en annan grupp ungefär tio klick väster om här hålad i någon form av fästning. Jag vet inte hur jag ska komma dit, men de har en buss och av Gud ska jag få det!"
+; EN: FemaleText[0]="I whacked the Marines, but I couldn't find their shuttle. It must have returned to the Bodega Bay. When I realized the shuttle was gone, I almost gave up... It all seemed so hopeless. But things were even worse the last time I was here, and somehow I made it. Eventually I decided to keep going. It's a good thing I did... Because there is hope after all. One of the Marines had a radio with a life frequency... there's another squad about ten clicks west of here holed up in some kind of fortress. I don't know how I'm going to get there, but they've got a shuttle and by God I'm going to get it!"
+FemaleText[0]="Jag slog marinisterna, men jag kunde inte hitta deras transfer. Det måste ha återvänt till Bodega Bay. När jag insåg att skytteln var borta gav jag nästan upp ... Det hela verkade så hopplöst. Men saker och ting var ännu värre förra gången jag var här, och på något sätt gjorde jag det. Så småningom bestämde jag mig för att fortsätta. Det är bra jag gjorde ... För det finns trots allt hopp. En av marinmännen hade en radio med livstidsfrekvens ... det finns en annan grupp ungefär tio klick väster om här hålad i någon form av fästning. Jag vet inte hur jag ska komma dit, men de har en buss och av Gud ska jag få det!"

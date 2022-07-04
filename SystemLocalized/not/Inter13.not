@@ -1,0 +1,10 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 13"
+Title="Avbrudd 13"
+
+[TransitionGenderEvent7]
+OutDelays[1]=25.000000
+; EN: MaleText[0]="The ice caves and that nasty snow-covered ridge were leading me in the wrong direction, away from the shuttle, but I had no choice. When I fought my way into the fort and saw the teleporter, I didn't know what to think. Where would it take me? Closer to my goal or to some other part of the planet? My experience with these teleporters led me to believe it wouldn't take me too far, and I had no choice but to step on and find out..."
+MaleText[0]="Ishulene og den stygge snødekte ryggen førte meg i feil retning, vekk fra skyttelbussen, men jeg hadde ikke noe valg. Da jeg kjempet meg inn i fortet og så teleporteren, visste jeg ikke hva jeg skulle tenke. Hvor skulle det ta meg? Nærmere målet mitt eller en annen del av planeten? Min erfaring med disse teleporterne fikk meg til å tro at det ikke ville ta meg for langt, og jeg hadde ikke noe annet valg enn å gå videre og finne ut ..."
+; EN: FemaleText[0]="The ice caves and that nasty snow-covered ridge were leading me in the wrong direction, away from the shuttle, but I had no choice. When I fought my way into the fort and saw the teleporter, I didn't know what to think. Where would it take me? Closer to my goal or to some other part of the planet? My experience with these teleporters led me to believe it wouldn't take me too far, and I had no choice but to step on and find out..."
+FemaleText[0]="Ishulene og den stygge snødekte ryggen førte meg i feil retning, vekk fra skyttelbussen, men jeg hadde ikke noe valg. Da jeg kjempet meg inn i fortet og så teleporteren, visste jeg ikke hva jeg skulle tenke. Hvor skulle det ta meg? Nærmere målet mitt eller en annen del av planeten? Min erfaring med disse teleporterne fikk meg til å tro at det ikke ville ta meg for langt, og jeg hadde ikke noe annet valg enn å gå videre og finne ut ..."

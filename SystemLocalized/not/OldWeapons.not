@@ -1,0 +1,199 @@
+﻿[Public]
+; EN: Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="Old Weapons,Replace the newer Unreal weapon sounds with Unreal version 200 ones.")
+Object=(Name=OldWeapons.OldMutator,Class=Class,MetaClass=Engine.Mutator,Description="Gamle Våpen,Bytt ut de nyere Unreal våpenlydene med Unreal versjon 200.")
+Object=(Name=OldWeapons.OldDispersionPistol,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldASMD,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldEightball,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldFlakCannon,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldMinigun,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldRazorjack,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldGESBioRifle,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldStinger,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldAutomag,Class=Class,MetaClass=Engine.Weapon)
+Object=(Name=OldWeapons.OldRifle,Class=Class,MetaClass=Engine.Weapon)
+
+[OldDispersionPistol]
+; EN: DeathMessage="%o was killed by %k's %w. What a loser!"
+DeathMessage="%o ble drept av %k's %w. For en taper!"
+; EN: PickupMessage="You got the Dispersion Pistol"
+PickupMessage="Du har Dispersionspistolen"
+; EN: ItemName="Dispersion Pistol"
+ItemName="Dispersjonspistol"
+FemDeathMessage="%o ble drept av %k's %w. For en taper!"
+FemKillMessage="%o ble drept av %k's %w. For en taper!"
+
+[OldASMD]
+; EN: DeathMessage="%k inflicted mortal damage upon %o with the %w."
+DeathMessage="%k påførte dødelig skade på %o med %w."
+; EN: PickupMessage="You got the ASMD"
+PickupMessage="Du har ASMD"
+; EN: ItemName="ASMD"
+ItemName="ASMD"
+FemDeathMessage="%k påførte dødelig skade på %o med %w."
+FemKillMessage="%k påførte dødelig skade på %o med %w."
+
+[OldEightball]
+; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
+DeathMessage="%o ble slått ned flere ganger av %k's %w."
+; EN: PickupMessage="You got the Eightball gun"
+PickupMessage="Du har Åtteball"
+; EN: ItemName="Eightball"
+ItemName="Åtteball"
+FemDeathMessage="%o ble slått ned flere ganger av %k's %w."
+FemKillMessage="%o ble slått ned flere ganger av %k's %w."
+
+[OldRifle]
+; EN: DeathMessage="%k put a bullet through %o's head."
+DeathMessage="%k satte en kule gjennom hodet til %o."
+; EN: PickupMessage="You got the Rifle"
+PickupMessage="Du har Geværet"
+; EN: ItemName="Sniper Rifle"
+ItemName="Geværet"
+FemDeathMessage="%k satte en kule gjennom hodet til %o."
+FemKillMessage="%k satte en kule gjennom hodet til %o."
+
+[OldFlakCannon]
+; EN: DeathMessage="%o was ripped to shreds by %k's %w."
+DeathMessage="%o ble revet til filler av %k's %w."
+; EN: PickupMessage="You got the Flak Cannon"
+PickupMessage="Du har Flak Kanon"
+; EN: ItemName="Flak Cannon"
+ItemName="Flak Kanon"
+FemDeathMessage="%o ble revet til filler av %k's %w."
+FemKillMessage="%o ble revet til filler av %k's %w."
+
+[OldAutoMag]
+; EN: DeathMessage="%o got gatted by %k's %w."
+DeathMessage="%o fikk gatt av %k's %w."
+; EN: PickupMessage="You got the Automag"
+PickupMessage="Du har Automag"
+; EN: ItemName="Automag"
+ItemName="Automag"
+FemDeathMessage="%o fikk gatt av %k's %w."
+FemKillMessage="%o fikk gatt av %k's %w."
+
+[OldMinigun]
+; EN: DeathMessage="%k's %w turned %o into a leaky piece of meat."
+DeathMessage="%k's %w gjorde %o til et lekk stykke kjøtt."
+; EN: PickupMessage="You got the Minigun"
+PickupMessage="Du har Minigun"
+; EN: ItemName="Minigun"
+ItemName="Minigun"
+FemDeathMessage="%k's %w gjorde %o til et lekk stykke kjøtt."
+FemKillMessage="%k's %w gjorde %o til et lekk stykke kjøtt."
+
+[OldGESBioRifle]
+; EN: DeathMessage="%o drank a glass of %k's dripping green load."
+DeathMessage="%o drakk et glass %ks dryppende grønne last."
+; EN: PickupMessage="You got the GES BioRifle"
+PickupMessage="Du har BioGeværet GES"
+; EN: ItemName="GES BioRifle"
+ItemName="BioGeværet GES"
+FemDeathMessage="%o drakk et glass %ks dryppende grønne last."
+FemKillMessage="%o drakk et glass %ks dryppende grønne last."
+
+[OldAmplifier]
+; EN: ExpireMessage="Energy Amplifier is out of power."
+ExpireMessage="Energiforsterker er tom for strøm."
+; EN: PickupMessage="You got the Energy Amplifier"
+PickupMessage="Du har Energiforsterkeren"
+; EN: ItemName="Energy Amplifier"
+ItemName="Energiforsterker"
+
+[OldStinger]
+; EN: DeathMessage="%o was perforated by %k's %w."
+DeathMessage="%o ble perforert av %k's %w."
+; EN: PickupMessage="You picked up the Stinger"
+PickupMessage="Du hentet Stinger"
+; EN: ItemName="Stinger"
+ItemName="Stinger"
+FemDeathMessage="%o ble perforert av %k's %w."
+FemKillMessage="%o ble perforert av %k's %w."
+
+[OldShellBox]
+; EN: PickupMessage="You picked up 50 bullets"
+PickupMessage="Du tok opp 50 kuler"
+; EN: ItemName="Bullet Box"
+ItemName="Kuleboks"
+
+[OldRifleAmmo]
+; EN: PickupMessage="You got 8 Rifle Rounds"
+PickupMessage="Du har 8 Geværrunder"
+; EN: ItemName="Rifle Rounds"
+ItemName="Geværrunder"
+
+[OldWeaponPowerUp]
+; EN: PickupMessage="You got the Dispersion Pistol Powerup"
+PickupMessage="Du har Dispersjonspistol Oppstart"
+; EN: ItemName="Dispersion Pistol Powerup"
+ItemName="Dispersjonspistol Oppstart"
+
+[OldFlakBox]
+; EN: PickupMessage="You picked up 10 Flak Shells"
+PickupMessage="Du plukket opp 10 Flakskjell"
+; EN: ItemName="Flak Shells"
+ItemName="Flakskjell"
+
+[OldRazorjack]
+; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
+DeathMessage="%k tok en blodig del av %o med %w."
+; EN: PickupMessage="You got the RazorJack"
+PickupMessage="Du har Bladkaster"
+; EN: ItemName="RazorJack"
+ItemName="Bladkaster"
+FemDeathMessage="%k tok en blodig del av %o med %w."
+FemKillMessage="%k tok en blodig del av %o med %w."
+
+[OldDefaultAmmo]
+; EN: PickupMessage="You picked up some Ammo"
+PickupMessage="Du hentet Ammunisjon"
+; EN: ItemName="Ammo"
+ItemName="Ammunisjon"
+
+[OldASMDAmmo]
+; EN: PickupMessage="You picked up an ASMD Core"
+PickupMessage="Du plukket opp en ASMD-Kjerne"
+; EN: ItemName="ASMD Core"
+ItemName="ASMD-Kjerne"
+
+[OldStingerAmmo]
+; EN: PickupMessage="You picked up 40 Tarydium Shards"
+PickupMessage="Du plukket opp 40 Tarydium-Skjær"
+; EN: ItemName="Tarydium Shards"
+ItemName="Tarydium-Skjær"
+
+[OldRazorAmmo]
+; EN: PickupMessage="You picked up some Razor Blades"
+PickupMessage="Du plukket opp noen Barberblad"
+; EN: ItemName="Razor Blades"
+ItemName="Barberblad"
+
+[OldSludge]
+; EN: PickupMessage="You picked up 25 Kilos of Tarydium Sludge"
+PickupMessage="Du hentet 25 kilo Tarydium-Slam"
+; EN: ItemName="Tarydium Sludge"
+ItemName="Tarydium-Slam"
+
+[OldRocketCan]
+; EN: PickupMessage="You picked up 12 Eightballs"
+PickupMessage="Du plukket opp 12 Åtte Baller"
+; EN: ItemName="Eightballs"
+ItemName="Åtte Baller"
+
+[OldClip]
+; EN: PickupMessage="You picked up a Clip"
+PickupMessage="Du tok opp et Klipp"
+; EN: ItemName="Clip"
+ItemName="Klipp"
+
+[OldRifleRound]
+; EN: PickupMessage="You got a Rifle Round"
+PickupMessage="Du har en Geværrunde"
+; EN: ItemName="Rifle Round"
+ItemName="Geværrunde"
+
+[OldFlakShellAmmo]
+; EN: PickupMessage="You got a Flak shell"
+PickupMessage="Du har et Flakskall"
+; EN: ItemName="Flak Shell"
+ItemName="Flakskall"

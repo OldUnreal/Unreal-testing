@@ -1,0 +1,28 @@
+﻿[LevelInfo2]
+Title="Bounds of Foundry"
+
+[LevelSummary]
+Title="Bounds of Foundry"
+
+[Counter0]
+; EN: CountMessage="%i more to go..."
+CountMessage="%i mer å gå ..."
+; EN: CompleteMessage="Pumps destroyed! Emergency doors open."
+CompleteMessage="Pumper ødelagt! Nøddører åpnes."
+
+[TranslatorEvent2]
+; EN: Message="Crane controls must be activated in lower control room."
+Message="Kranstyring må aktiveres i nedre kontrollrom."
+
+[TranslatorEvent6]
+; EN: Message="Warning: Simultaneous activation of both pumps might result in explosion due to pressure level!"
+Message="Advarsel: Samtidig aktivering av begge pumpene kan føre til eksplosjon på grunn av trykknivå!"
+
+[TranslatorEvent3]
+; EN: Message="WARNING: Toxic fume buildup exceeds regulation limits. Exercise caution with weaponry near Tarydium byproducts."
+Message="ADVARSEL: Opphopning av giftig røyk overgår reguleringsgrensene. Vær forsiktig med våpen nær Tarydium biprodukter."
+
+[TranslatorEvent5]
+; EN: Message="WARNING: Remain clear of Tarydium Byproducts unless properly outfitted with Toxin Suit."
+Message="ADVARSEL: Hold deg fri for Tarydium Byprodukter med mindre de er riktig utstyrt med Toxin Suit."
+AltMessage="Test!"

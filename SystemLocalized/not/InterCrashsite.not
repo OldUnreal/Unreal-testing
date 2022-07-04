@@ -1,0 +1,18 @@
+﻿[LevelInfo1]
+; EN: Title="Auf der Reeperbahn nachts um halb 2..."
+Title="Auf der Reeperbahn nachts um halb 2 ..."
+; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
+LevelEnterText="Boah, ich brauch nen neuen Job ..."
+
+[LevelSummary]
+; EN: Title="Auf der Reeperbahn nachts um halb 2..."
+Title="Auf der Reeperbahn nachts um halb 2 ..."
+; EN: LevelEnterText="Boah, ich brauch nen neuen Job..."
+LevelEnterText="Boah, ich brauch nen neuen Job ..."
+
+[TransitionGenderEvent0]
+OutDelays[1]=29.500000
+; EN: MaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
+MaleText[0]="Prometheus kom hardt ned i en dal og kastet rusk da hun falt ut av himmelen. Det var kropper overalt. Jeg må anta at hele mannskapet ble utslettet. 150 sjeler ... Gud, jeg hater denne planeten. Skipet er et mareritt ... skroget er brutt flere steder, en av motorkjernene har smeltet ned, og korridorene er infisert med leiesoldater. Men jeg er nærme å være ferdig ... Jeg trenger bare å finne datakjernene og deretter utløse ELT på broen."
+; EN: FemaleText[0]="The Prometheus came down hard in a valley, shedding debris as she dropped out of the sky. There were bodies everywhere. I have to assume that the whole crew was wiped out. 150 souls... God, I hate this planet. The ship is a nightmare... the hull is breached in several places, one of the engine cores has melted down, and the corridors are infested with Mercenaries. But I'm close to being done... I just need to find the data cores and then trigger the ELT on the bridge."
+FemaleText[0]="Prometheus kom hardt ned i en dal og kastet rusk da hun falt ut av himmelen. Det var kropper overalt. Jeg må anta at hele mannskapet ble utslettet. 150 sjeler ... Gud, jeg hater denne planeten. Skipet er et mareritt ... skroget er brutt flere steder, en av motorkjernene har smeltet ned, og korridorene er infisert med leiesoldater. Men jeg er nærme å være ferdig ... Jeg trenger bare å finne datakjernene og deretter utløse ELT på broen."

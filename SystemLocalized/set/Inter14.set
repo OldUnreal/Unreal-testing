@@ -1,0 +1,14 @@
+﻿[LevelInfo1]
+; EN: Title="Intermission 14"
+Title="Paus 14"
+
+[LevelSummary]
+; EN: Title="Intermission 14"
+Title="Paus 14"
+
+[TransitionGenderEvent8]
+OutDelays[1]=40.500000
+; EN: MaleText[0]="At last! I've reached the shuttle and prepped her for take off. The last battle with the Warlord was grueling. And the Krall before that were no picnic. I barely made it to the ship. And after all that, I still have to deal with the Bodega Bay in orbit. A shuttle against a UMS Freeman Class Cruiser... what a joke. The odds aren't good. But my shuttle has a trans-light drive. If I'm very, very lucky, I can find some way to outsmart or out-fly the Bodega Bay. They sure as hell won't be expecting me. What's the alternative? Stay on the planet? I'll take my chances in space..."
+MaleText[0]="Äntligen! Jag har nått skytteln och förberett henne för start. Den sista striden med krigsherren var ansträngande. Och Krall innan det var ingen picknick. Jag räckte knappt till skeppet. Och efter allt detta måste jag fortfarande ta itu med Bodega Bay i omloppsbana. En transfer mot en UMS Freeman Class Cruiser ... vilket skämt. Oddsen är inte bra. Men min shuttle har en trans-light-enhet. Om jag är väldigt, mycket lycklig kan jag hitta något sätt att överlista eller flyga ut Bodega Bay. De förvissar mig inte. Vad är alternativet? Stanna kvar på planeten? Jag tar mina chanser i rymden ..."
+; EN: FemaleText[0]="At last! I've reached the shuttle and prepped her for take off. The last battle with the Warlord was grueling. And the Krall before that were no picnic. I barely made it to the ship. And after all that, I still have to deal with the Bodega Bay in orbit. A shuttle against a UMS Freeman Class Cruiser... what a joke. The odds aren't good. But my shuttle has a trans-light drive. If I'm very, very lucky, I can find some way to outsmart or out-fly the Bodega Bay. They sure as hell won't be expecting me. What's the alternative? Stay on the planet? I'll take my chances in space..."
+FemaleText[0]="Äntligen! Jag har nått skytteln och förberett henne för start. Den sista striden med krigsherren var ansträngande. Och Krall innan det var ingen picknick. Jag räckte knappt till skeppet. Och efter allt detta måste jag fortfarande ta itu med Bodega Bay i omloppsbana. En transfer mot en UMS Freeman Class Cruiser ... vilket skämt. Oddsen är inte bra. Men min shuttle har en trans-light-enhet. Om jag är väldigt, mycket lycklig kan jag hitta något sätt att överlista eller flyga ut Bodega Bay. De förvissar mig inte. Vad är alternativet? Stanna kvar på planeten? Jag tar mina chanser i rymden ..."

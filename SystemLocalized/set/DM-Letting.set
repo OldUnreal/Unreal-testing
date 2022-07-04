@@ -1,0 +1,13 @@
+﻿[LevelInfo0]
+; EN: Title="Blood Letting"
+Title="Blodsläppning"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Gå in i blodsläppet"
+
+[LevelSummary]
+; EN: Title="Blood Letting"
+Title="Blodsläppning"
+IdealPlayerCount="2-5"
+; EN: LevelEnterText="Entering the Blood Letting"
+LevelEnterText="Gå in i blodsläppet"

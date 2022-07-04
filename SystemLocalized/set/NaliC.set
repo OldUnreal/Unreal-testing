@@ -1,0 +1,45 @@
+﻿[LevelInfo3]
+Title="Nali Castle"
+; EN: LevelEnterText="Entering the Nali Castle"
+LevelEnterText="In på Nali Castle"
+
+[LevelSummary]
+Title="Nali Castle"
+; EN: LevelEnterText="Entering the Nali Castle"
+LevelEnterText="In på Nali Castle"
+
+[TranslatorEvent0]
+; EN: Message="The path to be followed is long and harrowing, but the strong of heart and purpose will prevail against the challenges."
+Message="Vägen som ska följas är lång och oroväckande, men den starka av hjärtat och syftet kommer att råda mot utmaningarna."
+; EN: Hint="Thy path is now clear."
+Hint="Din väg är nu klar."
+
+[TranslatorEvent5]
+; EN: Message="Only the enlightened one who has read the Book of the Good Lore in the chapel shall be granted passage to the tower through these divine gates."
+Message="Endast den upplysta som har läst Book of the Good Lore i kapellet får beviljas passage till tornet genom dessa gudomliga portar."
+; EN: Hint="Travel to the chapel and read the book to gain access."
+Hint="Res till kapellet och läs boken för att få tillgång."
+
+[TranslatorEvent4]
+; EN: Message="He who seeks knowledge would be well rewarded for perusing the tomes stored in the main feast hall."
+Message="Den som söker kunskap skulle belönas väl för att ha granskat de tomater som lagrats i den stora festlokalen."
+
+[TranslatorEvent1]
+; EN: Message="I sit here, waiting to die. Waiting... The wait is worse than death itself. My fears tear at my soul. I hear the wails of the others as they are taken to the bowels of the dungeon to be sacrificed to the winged Sky Daemon."
+Message="Jag sitter här och väntar på att dö. Väntar ... Väntetiden är värre än själva döden. Min rädsla tårar i min själ. Jag hör de andras klagor när de tas till fängelsehålan för att offras till den bevingade Sky Daemon."
+
+[TranslatorEvent3]
+; EN: Message="Only the warrior who demonstrates his bravery by defeating the five eyed daemon in the tower shall be granted passage to the dungeon."
+Message="Endast krigaren som demonstrerar sin tapperhet genom att besegra den femögda daemon i tornet får passera till fängelsehålan."
+; EN: Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon."
+Hint="Gå till det högsta tornet och slakta demonen för att få tillgång till fängelsehålan."
+
+[TranslatorEvent2]
+; EN: Message="Only the warrior who demonstrates his bravery by defeating the five eyed daemon in the tower shall be granted passage to the dungeon."
+Message="Endast krigaren som demonstrerar sin tapperhet genom att besegra den femögda daemon i tornet får passera till fängelsehålan."
+; EN: Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon."
+Hint="Gå till det högsta tornet och slakta demonen för att få tillgång till fängelsehålan."
+
+[TranslatorEvent6]
+; EN: Message="What the HELL are you doing up here?"
+Message="Vad fan gör du här uppe?"

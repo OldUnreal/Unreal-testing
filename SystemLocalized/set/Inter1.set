@@ -1,0 +1,10 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 1"
+Title="Paus 1"
+
+[TransitionGenderEvent1]
+OutDelays[1]=24.500000
+; EN: MaleText[0]="When I looked up and saw the shuttle pulling away it really hit me, I was back. I felt a familiar, sick rush of adrenaline and fear. Sure enough, it wasn't long before I ran into a Brute. I've been battling my way through the environment ever since. At least the combat assault rifle is a powerful weapon. No sign of the Prometheus in this valley or the surroundings... I need to keep searching."
+MaleText[0]="När jag tittade upp och såg skytteln dra iväg slog den mig verkligen, jag var tillbaka. Jag kände en bekant, sjuk brus av adrenalin och rädsla. Visst nog, det dröjde inte länge innan jag stötte på en brute. Sedan dess har jag kämpat mig igenom miljön. Åtminstone är geväret ett kraftfullt vapen. Inget tecken på Prometheus i den här dalen eller omgivningen ... Jag måste fortsätta söka."
+; EN: FemaleText[0]="When I looked up and saw the shuttle pulling away it really hit me, I was back. I felt a familiar, sick rush of adrenaline and fear. Sure enough, it wasn't long before I ran into a Brute. I've been battling my way through the environment ever since. At least the combat assault rifle is a powerful weapon. No sign of the Prometheus in this valley or the surroundings... I need to keep searching."
+FemaleText[0]="När jag tittade upp och såg skytteln dra iväg slog den mig verkligen, jag var tillbaka. Jag kände en bekant, sjuk brus av adrenalin och rädsla. Visst nog, det dröjde inte länge innan jag stötte på en brute. Sedan dess har jag kämpat mig igenom miljön. Åtminstone är geväret ett kraftfullt vapen. Inget tecken på Prometheus i den här dalen eller omgivningen ... Jag måste fortsätta söka."

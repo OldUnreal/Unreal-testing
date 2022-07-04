@@ -1,0 +1,39 @@
+﻿[LevelInfo1]
+; EN: Title="Escape from Na Pali"
+Title="Fly från Na Pali"
+
+[LevelSummary]
+; EN: Title="Escape from Na Pali"
+Title="Fly från Na Pali"
+
+[TranslatorEvent4]
+; EN: Message="Why me?"
+Message="Varför jag?"
+
+[TranslatorEvent7]
+; EN: Message="LOG: J. Crable: After trying to trade a useless flashlight to one of the Nali natives for some food, he turned me into a cow. I've learned that I must travel to high peaks of Mon-Ton Dew and meet with the high Priestess for a cure. My quest begins."
+Message="LOGGA: J. Crable: Efter att ha försökt byta en värdelös ficklampa till en av Nali-infödingarna för lite mat förvandlade han mig till en ko. Jag har lärt mig att jag måste resa till höga toppar i Mon-Ton Dew och träffa översteprästinnan för botemedel. Mitt uppdrag börjar."
+
+[TranslatorEvent1]
+; EN: Message="LOG: D. Beck: Our luck seems to have changed. We've found a Terran vessel of some sort settled in a mountain fortress. A gate prevents us from reaching it but the natives say it can be opened from a nearby tower. Looks like we're home free."
+Message="LOGG: D. Beck: Vår tur verkar ha förändrats. Vi har hittat ett Terran-fartyg av något slag bosatt i en bergsfästning. En grind hindrar oss från att nå den men de infödda säger att den kan öppnas från ett närliggande torn. Det verkar som om vi är gratis hemma."
+
+[TranslatorEvent0]
+; EN: Message="They tell me I must hurry. The Sky Demons have uncovered our secret. There is much work here, time escapes me. Nevertheless, the future shines bright in my eyes. We shall be victorious in the next life, but for now, everything must come to an end..."
+Message="De säger till mig att jag måste skynda mig. Sky Demons har avslöjat vår hemlighet. Det finns mycket arbete här, tiden flyr mig. Ändå lyser framtiden ljus i mina ögon. Vi kommer att segra i nästa liv, men för tillfället måste allt ta slut ..."
+
+[TranslatorEvent2]
+; EN: Message="LOG: M. Tetreault: As soon as I find that switch to open the gate, we can get the hell out of here. Think happy thoughts. Uh-oh, spotted another one of those Skaarj creatures. That's it, his ass is mine."
+Message="LOGG: M. Tetreault: Så snart jag hittar den strömbrytaren för att öppna grinden, kan vi ta bort helvetet härifrån. Tänk glada tankar. Uh-oh, såg en annan av dessa Skaarj-varelser. Det är det, hans röv är min."
+
+[TranslatorEvent6]
+; EN: Message="What is the point of me hanging around on this spike? What does it prove? I'm in a lot of pain here and I fail to see the humor in any of this."
+Message="Vad är poängen med att jag hänger på den här spetsen? Vad bevisar det? Jag har mycket ont här och jag ser inte humor i något av detta."
+
+[TranslatorEvent3]
+; EN: Message="My time has come to sleep the eternal sleep. Our struggle with the Sky Demons lives on. We pray for the savior to return to us, but our prayers go unanswered. At least the suffering is almost over..."
+Message="Min tid har kommit att sova den eviga sömnen. Vår kamp med Sky Demons lever. Vi ber för frälsaren att återvända till oss, men våra böner blir obesvarade. Åtminstone är lidandet nästan över ..."
+
+[TranslatorEvent5]
+; EN: Message="No secrets for you!"
+Message="Inga hemligheter för dig!"

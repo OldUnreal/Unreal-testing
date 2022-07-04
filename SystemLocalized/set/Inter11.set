@@ -1,0 +1,10 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 11"
+Title="Paus 11"
+
+[TransitionGenderEvent5]
+OutDelays[1]=23.500000
+; EN: MaleText[0]="It took everything I had to get through the rest of that miserable Tarydium plant. At least I killed a whole bunch of Skaarj and left the place a real mess. The Skaarj won't be using that place for a while. I thought I had made it when I saw that small alien ship in the middle of that seemingly endless plant... I thought I could use it to get off-planet. But it's busted. The shuttle is the only escape."
+MaleText[0]="Det tog allt jag hade för att få igenom resten av den eländiga Tarydium-växten. Jag dödade åtminstone en hel massa Skaarj och lämnade platsen en riktig röra. Skaarj kommer inte att använda den platsen på ett tag. Jag trodde att jag hade gjort det när jag såg det lilla främmande fartyget mitt i den till synes ändlösa anläggningen ... Jag trodde att jag kunde använda det för att komma utanför planeten. Men det är trasigt. Shuttle är den enda flykten."
+; EN: FemaleText[0]="It took everything I had to get through the rest of that miserable Tarydium plant. At least I killed a whole bunch of Skaarj and left the place a real mess. The Skaarj won't be using that place for a while. I thought I had made it when I saw that small alien ship in the middle of that seemingly endless plant... I thought I could use it to get off-planet. But it's busted. The shuttle is the only escape."
+FemaleText[0]="Det tog allt jag hade för att få igenom resten av den eländiga Tarydium-växten. Jag dödade åtminstone en hel massa Skaarj och lämnade platsen en riktig röra. Skaarj kommer inte att använda den platsen på ett tag. Jag trodde att jag hade gjort det när jag såg det lilla främmande fartyget mitt i den till synes ändlösa anläggningen ... Jag trodde att jag kunde använda det för att komma utanför planeten. Men det är trasigt. Shuttle är den enda flykten."

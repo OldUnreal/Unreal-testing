@@ -1,0 +1,10 @@
+﻿[LevelSummary]
+; EN: Title="Intermission 9"
+Title="Avbrudd 9"
+
+[TransitionGenderEvent3]
+OutDelays[1]=13.500000
+; EN: MaleText[0]="I'm tired of doubling back so often. Everytime I make some progress, it seems I hafta jump through hoops just to stay even. I know I'm getting there, but it's tough going. Two steps forward, one step back."
+MaleText[0]="Jeg er lei av å doble meg så ofte. Hver gang jeg gjør fremgang, ser det ut til at jeg har hoppet gjennom bøylene bare for å holde meg jevn. Jeg vet at jeg kommer dit, men det er tøft å gå. To skritt fremover, ett skritt tilbake."
+; EN: FemaleText[0]="I'm tired of doubling back so often. Everytime I make some progress, it seems I hafta jump through hoops just to stay even. I know I'm getting there, but it's tough going. Two steps forward, one step back."
+FemaleText[0]="Jeg er lei av å doble meg så ofte. Hver gang jeg gjør fremgang, ser det ut til at jeg har hoppet gjennom bøylene bare for å holde meg jevn. Jeg vet at jeg kommer dit, men det er tøft å gå. To skritt fremover, ett skritt tilbake."

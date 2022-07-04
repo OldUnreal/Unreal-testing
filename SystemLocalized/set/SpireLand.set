@@ -1,0 +1,27 @@
+﻿[LevelInfo2]
+; EN: Title="Spire Valley"
+Title="Spiredalen"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="Kommer in i Spiredalen"
+
+[LevelSummary]
+; EN: Title="Spire Valley"
+Title="Spiredalen"
+; EN: LevelEnterText="Entering the Spire Valley"
+LevelEnterText="Kommer in i Spiredalen"
+
+[TranslatorEvent7]
+; EN: Message="Land of Nagomi"
+Message="Land av Nagomi"
+
+[TranslatorEvent3]
+; EN: Message="LOG: R. Ovrevik: Montanus and I are at the top of the spire. We've located an alien shuttle of some sort that rises straight up into the clouds. It's getting rather stormy, but we're going to attempt to ride it."
+Message="LOG: R. Ovrevik: Montanus och jag är på toppen av spiran. Vi har hittat en utomjordisk skyttel av något slag som stiger rakt upp i molnen. Det börjar bli ganska stormigt, men vi ska försöka rida på det."
+
+[TranslatorEvent4]
+; EN: Message="LOG: J. Montanus: Ovrevik and I managed to ascend the large towering rock fairly easily. We suspect someone may have cleared the way. Maybe he's the one that made it off this forsaken planet."
+Message="LOG: J. Montanus: Ovrevik och jag lyckades ganska enkelt ta oss upp på den stora höga stenen. Vi misstänker att någon kan ha röjt vägen. Kanske är han den som lyckades fly från denna övergivna planet."
+
+[TranslatorEvent6]
+; EN: Message="Land of Nagomi"
+Message="Land av Nagomi"

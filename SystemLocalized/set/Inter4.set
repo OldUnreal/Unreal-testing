@@ -1,0 +1,18 @@
+﻿[LevelInfo4]
+; EN: Title="Yousa follow me now, okiday?"
+Title="Du följer mig nu, okej?"
+; EN: LevelEnterText="What the hell are you doing here..."
+LevelEnterText="Vad i helvete gör du här..."
+
+[LevelSummary]
+; EN: Title="Yousa follow me now, okiday?"
+Title="Du följer mig nu, okej?"
+; EN: LevelEnterText="What the hell are you doing here..."
+LevelEnterText="Vad i helvete gör du här..."
+
+[TransitionGenderEvent4]
+OutDelays[1]=23.500000
+; EN: MaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
+MaleText[0]="Jag är nära! Jag har sett de första bevisen på kraschplatsen. Under en tuff slog genom en Nali-by infekterad med Skaarj kom jag över bitar av ett kraschat Terran-fartyg. Skräpet sårades från återinträde och spriddes över ett stort område. Jag hoppas att hon inte gick sönder i luften ... om det gjorde det, finns det inga kärnor att återhämta sig. Kraschplatsen är mycket nära. Jag är nästan hemma fri."
+; EN: FemaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
+FemaleText[0]="Jag är nära! Jag har sett de första bevisen på kraschplatsen. Under en tuff slog genom en Nali-by infekterad med Skaarj kom jag över bitar av ett kraschat Terran-fartyg. Skräpet sårades från återinträde och spriddes över ett stort område. Jag hoppas att hon inte gick sönder i luften ... om det gjorde det, finns det inga kärnor att återhämta sig. Kraschplatsen är mycket nära. Jag är nästan hemma fri."

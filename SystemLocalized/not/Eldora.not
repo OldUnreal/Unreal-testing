@@ -1,0 +1,19 @@
+﻿[LevelInfo1]
+; EN: Title="The Eldora Well"
+Title="Eldora-brønnen"
+; EN: LevelEnterText="Entering the Eldora Well"
+LevelEnterText="Går nå inn i Eldora-brønnen"
+
+[LevelSummary]
+; EN: Title="The Eldora Well"
+Title="Eldora-brønnen"
+; EN: LevelEnterText="Entering the Eldora Well"
+LevelEnterText="Går nå inn i Eldora-brønnen"
+
+[TranslatorEvent1]
+; EN: Message="LOG: S. Brown: The mountains are becoming harder and harder to hike through. Getting tired. Just discovered a well nearby, about to investigate. It's guarded by brutes, but I should be able to slip by undetected."
+Message="LOGG: S. Brown: Fjellene blir vanskeligere og vanskeligere å gå gjennom. Jeg blir sliten. Jeg har nettopp oppdaget en brønn i nærheten, jeg skal undersøke. Den er bevoktet av Brutes, men jeg burde kunne skli forbi uoppdaget."
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Walden: No sign of anyone yet. It's getting dark again. Going to camp out near the well until morning. Well seems empty, there may be a way out. Maybe I'll find the others."
+Message="LOGG: J. Walden: Ingen tegn til noen ennå. Det begynner å bli mørkt igjen. Jeg skal slå leir i nærheten av brønnen til neste morgen. Brønnen virker tom, det kan være en vei ut. Kanskje jeg finner de andre."

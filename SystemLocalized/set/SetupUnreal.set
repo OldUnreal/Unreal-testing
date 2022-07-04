@@ -1,0 +1,67 @@
+﻿[Setup]
+LocalProduct="Unreal"
+DefaultFolder="C:\Program Files\Unreal"
+ReadMe="Help\ReadMe.htm"
+; EN: SetupWindowTitle="Unreal Setup"
+SetupWindowTitle="Unreal verklig inställning"
+; EN: AutoplayWindowTitle="Unreal Options"
+AutoplayWindowTitle="Unreal alternativ"
+ProductURL="http://www.unrealengine.com/"
+VersionURL="https://www.oldunreal.com"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 av Oldunreal"
+DeveloperURL="https://www.oldunreal.com/"
+Logo="Help\SetupLogo.bmp"
+
+[General]
+; EN: PlayLevelCommand="&Play this Unreal level"
+PlayLevelCommand="&Spela denna Unreal nivå"
+; EN: OpenLinkCommand="&Open this Unreal link"
+OpenLinkCommand="&Öppna den här oreala länken"
+; EN: InstallModuleCommand="&Install this Unreal module"
+InstallModuleCommand="&Installera den här Unreal-modulen"
+; EN: EditLevelCommand="&Edit this Unreal level"
+EditLevelCommand="&Redigera denna Unreal nivå"
+
+[ContentGroup]
+; EN: Caption="Game Content"
+Caption="Spelinnehåll"
+; EN: Description="Unreal game content. Install this for best performance. If you deselect it, the game content will be loaded from CD during play, degrading performance, but using less hard disk space."
+Description="Unreal spelinnehåll. Installera detta för bästa prestanda. Om du avmarkerar det laddas spelinnehållet från CD under uppspelning, förnedrande prestanda men med mindre hårddiskutrymme."
+
+[GameGroup]
+; EN: Caption="Unreal Game"
+Caption="Unreal spel"
+; EN: Description="Unreal game. Installation is required."
+Description="Unreal spel. Installation krävs."
+
+[DirectXGroup]
+Caption="DirectX"
+; EN: Description="Optional Microsoft DirectX 8 drivers for enhanced graphics, sound, and joystick support."
+Description="Valfria Microsoft DirectX 8-drivrutiner för förbättrad grafik-, ljud- och joystickstöd."
+
+[EditorGroup]
+; EN: Caption="Unreal Editor"
+Caption="Unreal redaktör"
+; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Unreal world editor, för att skapa dina egna 3D Unreal-miljöer. För avancerade användare; installationen är valfri."
+
+[PlayShortcut]
+; EN: Caption="Play Unreal"
+Caption="Spela Unreal"
+
+[SafeModeShortcut]
+; EN: Caption="Unreal Safe Mode"
+Caption="Unreal säkert läge"
+
+[EditorShortcut]
+; EN: Caption="Unreal Editor"
+Caption="Unreal redaktör"
+
+[DocumentationShortcut]
+; EN: Caption="Documentation"
+Caption="Dokumentation"
+
+[WebShortcut]
+; EN: Caption="Unreal Web Page"
+Caption="Unreal webbsida"

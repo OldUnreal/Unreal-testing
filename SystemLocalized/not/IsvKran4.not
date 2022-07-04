@@ -1,0 +1,59 @@
+﻿[LevelInfo2]
+Title="ISV-KRAN Deck 4"
+; EN: LevelEnterText="Entering ISV-KRAN Deck 4"
+LevelEnterText="Gå inn på ISV-KRAN Deck 4"
+
+[LevelSummary]
+Title="ISV-KRAN Deck 4"
+; EN: LevelEnterText="Entering ISV-KRAN Deck 4"
+LevelEnterText="Gå inn på ISV-KRAN Deck 4"
+
+[TranslatorEvent7]
+; EN: Message="Warehouse Safety Bars Override in Upper Warehouse Loft."
+Message="Lagerets sikkerhetsstenger tilsidesettes i øvre lagerloft."
+
+[TranslatorEvent13]
+; EN: AltMessage="Warehouse Safety Bars Disengaged: Access to Dock Permitted."
+AltMessage="Lagerets sikkerhetsstenger frakoblet: Tillatelse til dokken tillatt."
+
+[TranslatorEvent19]
+; EN: Message="ISV-KRAN DECK 4 STATUS: INTRUDER ALERT: SECURITY LOCKS ACTIVATED: INTRUDERS ON ALL DECKS AND ATTEMPTING TO REACTIVATE MAIN ENGINES - DECK 1 EMERGENCY TELEPORTER AT BRIDGE SECURE"
+Message="ISV-KRAN DECK 4 STATUS: INTRUDER VARSEL: SIKKERHETSLÅSER AKTIVERT: INNTRYKKERE PÅ ALLE DEKKER OG PRØVER Å GJENORDNE HOVEDMOTORER - DECK 1 NØDTELEPORTER PÅ BRO SIKKERHET"
+
+[TranslatorEvent1]
+; EN: Message="Ventilation Processing Mezzanine Ducts: Maintenance Personnel Only: WARNING - ENGINE COOLANT LEAK IN MEZZANINE"
+Message="Ventilasjonsbehandling av mezzaninkanaler: Bare vedlikeholdspersonell: ADVARSEL - MOTORKJØLEMIDLELEKASJON I MEZZANINE"
+
+[TranslatorEvent15]
+; EN: Message="PANEL REWIRED TO TRIP ALARM - SYSTEM ACCESSED BY UNAUTHORIZED USERS"
+Message="PANEL TILKOBLET TIL TURALARM - SYSTEM TILGANG TIL Uautoriserte brukere"
+
+[TranslatorEvent2]
+; EN: Message="Intruder Security Locks Activated - Bypass Required: Bypass panel located in Ventilation Processing Mezzanine."
+Message="Innbruddssikkerhetslåser aktivert - Bypass kreves: Bypass-panel plassert i ventilasjonsbehandlingsmezzanin."
+; EN: AltMessage="Intruder Security Locks Disengaged"
+AltMessage="Innbruddssikkerhetslåser frakoblet"
+
+[TranslatorEvent0]
+; EN: Message="AFT LOADING STATION: ISV-KRAN: We've been wedged into this mountain ridge for 2 months now. Each night these 4 story tall dinosaur type beasts come and beat on the rear hull of the ship. They appear to be relatively unintelligent and slow moving."
+Message="Etter lastestasjon: ISV-KRAN: Vi har blitt klemt inn i denne fjellryggen i to måneder nå. Hver kveld kommer disse 4 etasjene høye dyrene av dinosaurtypen og slår på skipets bakskrog. De ser ut til å være relativt uintelligente og beveger seg sakte."
+
+[TranslatorEvent33]
+; EN: Message="SECURITY BYPASS LOCK STATION: SECURITY LOCKS ENGAGED"
+Message="SIKKERHETSBYGGENDE LÅSSTASJON: SIKKERHETSLÅSER LAGERT"
+; EN: AltMessage="SECURITY LOCK BYPASS STATION: ALL LOCKS OPEN ACCESS PERMITTED TO WAREHOUSE"
+AltMessage="SIKKERHETSLÅS BIPASS-STASJON: ALLE LÅSER ÅPEN TILGANG TILLATT TIL LAGER"
+; EN: Hint="Touch this panel to open the security lock door."
+Hint="Trykk på dette panelet for å åpne sikkerhetslåsdøren."
+
+[TranslatorEvent37]
+; EN: Message="Corporal Anders Kerig: They're coming! I can hear them in the ventilation ducts. I'm going to activate the security locks to the Warehouse and implant a Human DNA code so only another Terran can bypass the lock systems."
+Message="Korporal Anders Kerig: De kommer! Jeg kan høre dem i ventilasjonskanalene. Jeg skal aktivere sikkerhetslåsene til lageret og implantere en menneskelig DNA-kode, slik at bare en annen Terran kan omgå låsesystemene."
+
+[TranslatorEvent38]
+; EN: Message="Corporal Pelli Onsov: If you're reading my log entry I am probably dead and our ship has been overrun by aliens called "Skaarj". Your only hope is to destroy the Gold Containment Cores, re-activate the Engines and get to the Deck 1 transporters."
+Message="Korporal Pelli Onsov: Hvis du leser loggoppføringen min, er jeg sannsynligvis død, og skipet vårt har blitt overkjørt av romvesener kalt "Skaarj". Ditt eneste håp er å ødelegge Gold Containment Cores, aktivere motorene på nytt og komme til Deck 1-transportørene."
+
+[TranslatorEvent36]
+; EN: Message="Petty Officer: Yuri Andromov: The Alien War Party has blasted a hole through the hull and are accessing the ship through the ventilation shafts - Kerig, Onsov and myself are going to make a stand with Stingers here in the loading area."
+Message="Underoffiser: Yuri Andromov: Alien War Party har sprengt et hull gjennom skroget og får tilgang til skipet gjennom ventilasjonsakslene - Kerig, Onsov og meg selv skal stille med Stingers her i lasteområdet."

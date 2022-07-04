@@ -1,0 +1,54 @@
+﻿[LevelInfo2]
+; EN: Title="Edge of Na Pali"
+Title="Kanten av Na Pali"
+
+[LevelSummary]
+; EN: Title="Edge of Na Pali"
+Title="Kanten av Na Pali"
+
+[TranslatorEvent6]
+; EN: Message="LOG: M. Worch: My head hasn't stop spinning since the crash. Who keeps moving the ground down there? Oh God, I'm going to be sick again..."
+Message="LOGG: M. Worch: Hodet mitt har ikke sluttet å spinne siden krasjet. Hvem fortsetter å flytte bakken der nede? Herregud, jeg blir syk igjen ..."
+
+[TranslatorEvent5]
+; EN: Message="LOG: K. Divad: Our mission to locate the Vortex Rikers is a failure. The UMS Chantilly was pulled into the atmosphere of this god-forsaken planet and we crashed into a mountain. Only Pilot Worch and myself survived. They don't pay me enough for this."
+Message="LOGG: K. Divad: Vår misjon om å finne Vortex Rikers er en fiasko. UMS Chantilly ble trukket inn i atmosfæren til denne gudforladte planeten, og vi krasjet inn i et fjell. Bare Pilot Worch og meg selv overlevde. De betaler meg ikke nok for dette."
+
+[TranslatorEvent0]
+; EN: Message="LOG: J. Parkman: On the Prometheus the crew behaved like a team. Here, they have turned on each other. Wish I didn't have to rely on them to survive. I think crewman Dalton deliberately led the brutes to crewman Marshall. Then he watched him die."
+Message="LOGG: J. Parkman: På Prometheus oppførte mannskapet seg som et team. Her har de slått på hverandre. Skulle ønske jeg ikke trengte å stole på dem for å overleve. Jeg tror mannskap Dalton bevisst førte brutene til mannskap Marshall. Så så han på ham dø."
+
+[TranslatorEvent4]
+; EN: Message="LOG: J. Airoldi: Had an encounter with a small reptilian creature this morning while scouting for food. It ran away, but came back with three more I think and they've been waiting outside all day. They're giving me the creeps."
+Message="LOGG: J. Airoldi: Hadde et møte med en liten reptildyr i morges mens jeg speidet etter mat. Den stakk av, men kom tilbake med tre til tror jeg, og de har ventet ute hele dagen. De gir meg krypene."
+
+[TranslatorEvent7]
+Message="Terra-Emi Mining Bunker"
+
+[TranslatorEvent2]
+; EN: Message="LOG: W. Marshall: Hiked through the mountains and making good time. Should make it to Dahlgren's coordinates in a few hours. Finally found some water. Thought I was going to die of dehydration."
+Message="LOGG: W. Marshall: Vandret gjennom fjellene og fikk god tid. Bør komme til Dahlgrens koordinater om noen få timer. Til slutt fant jeg litt vann. Trodde at jeg skulle dø av dehydrering."
+
+[TranslatorEvent8]
+; EN: Message="Terra-Sun Mining Station (South)"
+Message="Terra-Sun gruvedrift (sør)"
+
+[TranslatorEvent11]
+; EN: Message="Terra-Neo Mining Station"
+Message="Terra-Neo gruvedrift"
+
+[TranslatorEvent1]
+; EN: Message="LOG: G. Dahlgren: Still no reply from Dalton's team. It's been four days now and no sign of the others. I don't think we're going to survive. I heard someone actually made it off this planet. Hope they send a ship back for us..."
+Message="LOGG: G. Dahlgren: Fortsatt ikke noe svar fra Daltons team. Det har gått fire dager nå, og ingen tegn til de andre. Jeg tror ikke vi kommer til å overleve. Jeg hørte noen faktisk klarte det fra denne planeten. Håper de sender et skip tilbake for oss ..."
+
+[TranslatorEvent9]
+; EN: Message="Terra-Sun Mining Station (North)"
+Message="Terra-Sun Mining Station (Nord)"
+
+[TranslatorEvent10]
+; EN: Message="Terra-Mina Mining Facility"
+Message="Terra-Mina gruvedrift"
+
+[TranslatorEvent3]
+; EN: Message="LOG: S. Dalton: Watched those brutes beat Marshall to a pulp last night. He never saw it coming. Probably better that way. I emptied an entire clip on one of them and he just kept coming. At least they haven't tried to get me up here..."
+Message="LOGG: S. Dalton: Så de brutene slå Marshall til masse i går kveld. Han så det aldri komme. Sannsynligvis bedre på den måten. Jeg tømte et helt klipp på en av dem, og han fortsatte å komme. I det minste har de ikke prøvd å få meg opp hit ..."

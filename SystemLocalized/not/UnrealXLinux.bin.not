@@ -1,0 +1,9 @@
+﻿[General]
+; EN: Start="Unreal (Starting)"
+Start="Uvirkelig (starter)"
+; EN: Exit="Unreal (Exiting)"
+Exit="Uvirkelig (avsluttende)"
+; EN: Run="Unreal (Running)"
+Run="Uvirkelig (løping)"
+; EN: Product="Unreal"
+Product="Uvirkelig"

@@ -1,0 +1,35 @@
+﻿[LevelInfo0]
+Title="Spire Village"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Å gå inn i Spire Village"
+
+[LevelSummary]
+Title="Spire Village"
+; EN: LevelEnterText="Entering the Spire Village"
+LevelEnterText="Å gå inn i Spire Village"
+
+[TranslatorEvent19]
+; EN: Message="Our Haven, the great Sunspire, given to us by the Gods of the Good Lore, has been corrupted by the Sky Demons. Our once hope is now the foulest of terrors. The Sky Demons are stronger than ever. I had a vision of death, of immense beasts roaming the land"
+Message="Vår havn, det store solspiret, gitt oss av gudene i den gode historie, er blitt ødelagt av Sky Demons. Vårt engangs håp er nå det styggeste av skrekk. Sky Demons er sterkere enn noensinne. Jeg hadde en visjon om døden, om enorme dyr som streifet rundt i landet"
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Søk i husene grundig og følg dalen til porten. Se opp for Titans!"
+
+[TranslatorEvent2]
+; EN: Message="Safe haven for those who seek peace, welcome."
+Message="Trygt tilfluktssted for de som søker fred, velkommen."
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Søk i husene grundig og følg dalen til porten. Se opp for Titans!"
+
+[TranslatorEvent18]
+; EN: Message="The minions of our Gods are cast to the ground to do battle. We are put to the test. Our world is weakening, it spews forth terrible creatures. We will pray again tonight. Oh, hear our plea! Send our messiah!"
+Message="Våre Guds håndlangere blir kastet til bakken for å kjempe. Vi blir satt på prøve. Verden vår svekkes, den spyr ut forferdelige skapninger. Vi vil be igjen i kveld. Å, hør bønnen vår! Send vår messias!"
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Søk i husene grundig og følg dalen til porten. Se opp for Titans!"
+
+[TranslatorEvent22]
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Søk i husene grundig og følg dalen til porten. Se opp for Titans!"
+
+[TranslatorEvent21]
+; EN: Hint="Search the houses thoroughly and follow the valley to the gate. Watch out for those Titans!"
+Hint="Søk i husene grundig og følg dalen til porten. Se opp for Titans!"

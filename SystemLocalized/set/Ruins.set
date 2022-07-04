@@ -1,0 +1,31 @@
+﻿[LevelInfo0]
+; EN: Title="Temple of Vandora"
+Title="Vandoratemplet"
+; EN: LevelEnterText="Entering the Temple of Vandora"
+LevelEnterText="Kommer in i Vandoratemplet"
+
+[LevelSummary]
+; EN: Title="Temple of Vandora"
+Title="Vandoratemplet"
+; EN: LevelEnterText="Entering the Temple of Vandora"
+LevelEnterText="Kommer in i Vandoratemplet"
+
+[TranslatorEvent0]
+; EN: Message="And Vandora came forth, with fire from the Sky upon her lips, and sanctified the sacred fountain with her kiss. Thus, she said, he who follows me shall cast off the bonds of flesh and become as elusive as the mist."
+Message="Och Vandora kom ut med eld från himlen på sina läppar och helgade den heliga fontänen med sin kyss. Således sade hon, den som följer mig ska kasta bort köttets band och bli lika svårt som dimman."
+; EN: Hint="Sanctify the sacred fountain with fire and become as elusive as the mist."
+Hint="Heliga den heliga fontänen med eld och bli lika svårfångad som dimman."
+
+[TranslatorEvent1]
+; EN: Message="The Way is filled with darkness. The Torch of Tranquility must light the path of the worthy. Spiritual progression is achieved by those who set the Torch of Tranquility aflame."
+Message="Vägen är fylld med mörker. Luktens fackla måste tända de värdigas väg. Andlig progression uppnås av dem som sätter facklan av lugn i brand."
+; EN: Hint="Set the Torch of Thunder aflame to gain access."
+Hint="Ställ in Torch of Thunder för att få tillgång."
+
+[TranslatorEvent3]
+; EN: Message="Vandora, Goddess of Lightning."
+Message="Vandora, blixtens gudinna."
+
+[TranslatorEvent2]
+; EN: Message="Torch of Tranquility"
+Message="Fackla av lugn"
