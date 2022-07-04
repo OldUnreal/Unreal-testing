@@ -1,5 +1,4 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standaard")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -158,8 +157,6 @@ HelpParm[1]="AllAdmin"
 HelpDesc[1]="Geef alle spelers beheerdersrechten."
 
 [Console]
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Standaard Unreal-console"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="BEZIG MET LADEN"
 ; EN: SavingMessage="SAVING"
@@ -170,10 +167,6 @@ ConnectingMessage="VERBINDEN"
 PausedMessage="PAUZE"
 ; EN: PrecachingMessage="PRECACHING"
 PrecachingMessage="VOORBEREIDING"
-; EN: ChatChannel="(CHAT) "
-ChatChannel="(CHAT) "
-; EN: TeamChannel="(TEAM) "
-TeamChannel="(TEAM) "
 
 [Menu]
 MenuList=" "

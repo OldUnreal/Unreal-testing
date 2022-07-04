@@ -1,0 +1,16 @@
+﻿[LevelInfo2]
+; EN: Title="Intermission 5"
+Title="Avbrudd 5"
+LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
+
+[LevelSummary]
+; EN: Title="Intermission 5"
+Title="Avbrudd 5"
+LevelEnterText="Ich gruesse Mami, Pappi und Tante Hildtraut."
+
+[TransitionGenderEvent5]
+OutDelays[1]=35.000000
+; EN: MaleText[0]="I whacked the Marines, but I couldn't find their shuttle. It must have returned to the Bodega Bay. When I realized the shuttle was gone, I almost gave up... It all seemed so hopeless. But things were even worse the last time I was here, and somehow I made it. Eventually I decided to keep going. It's a good thing I did... Because there is hope after all. One of the Marines had a radio with a life frequency... there's another squad about ten clicks west of here holed up in some kind of fortress. I don't know how I'm going to get there, but they've got a shuttle and by God I'm going to get it!"
+MaleText[0]="Jeg slo marinesoldatene, men jeg fant ikke skyttelbussen deres. Den må ha kommet tilbake til Bodega Bay. Da jeg innså at skyttelbussen var borte, ga jeg nesten opp ... Det hele virket så håpløst. Men ting var enda verre sist jeg var her, og på en eller annen måte klarte jeg det. Etter hvert bestemte jeg meg for å fortsette. Det er bra jeg gjorde ... For det er tross alt håp. En av marinesoldatene hadde en radio med en livsfrekvens ... det er en annen tropp omtrent ti klikk vest her boret i en slags festning. Jeg vet ikke hvordan jeg kommer dit, men de har skyttelbuss og av Gud skal jeg få det!"
+; EN: FemaleText[0]="I whacked the Marines, but I couldn't find their shuttle. It must have returned to the Bodega Bay. When I realized the shuttle was gone, I almost gave up... It all seemed so hopeless. But things were even worse the last time I was here, and somehow I made it. Eventually I decided to keep going. It's a good thing I did... Because there is hope after all. One of the Marines had a radio with a life frequency... there's another squad about ten clicks west of here holed up in some kind of fortress. I don't know how I'm going to get there, but they've got a shuttle and by God I'm going to get it!"
+FemaleText[0]="Jeg slo marinesoldatene, men jeg fant ikke skyttelbussen deres. Den må ha kommet tilbake til Bodega Bay. Da jeg innså at skyttelbussen var borte, ga jeg nesten opp ... Det hele virket så håpløst. Men ting var enda verre sist jeg var her, og på en eller annen måte klarte jeg det. Etter hvert bestemte jeg meg for å fortsette. Det er bra jeg gjorde ... For det er tross alt håp. En av marinesoldatene hadde en radio med en livsfrekvens ... det er en annen tropp omtrent ti klikk vest her boret i en slags festning. Jeg vet ikke hvordan jeg kommer dit, men de har skyttelbuss og av Gud skal jeg få det!"

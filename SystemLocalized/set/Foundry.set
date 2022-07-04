@@ -1,0 +1,35 @@
+﻿[LevelInfo1]
+; EN: Title="Foundry Tarydium Plant"
+Title="Gjuteri Tarydium-växt"
+; EN: LevelEnterText="Entering the Foundry Tarydium Plant"
+LevelEnterText="Du går nu in i gjuteriet Tarydium-växt"
+
+[LevelSummary]
+; EN: Title="Foundry Tarydium Plant"
+Title="Gjuteri Tarydium-växt"
+; EN: LevelEnterText="Entering the Foundry Tarydium Plant"
+LevelEnterText="Du går nu in i gjuteriet Tarydium-växt"
+
+[TranslatorEvent1]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barriär mot högre hisskontroller intakta. Alla system normala."
+
+[TranslatorEvent0]
+; EN: Message="It has been 0 days since our last accident."
+Message="Det har gått 0 dagar sedan vår senaste olycka."
+
+[TranslatorEvent2]
+; EN: Message="Barrier to higher lift controls intact. All systems normal."
+Message="Barriär mot högre hisskontroller intakta. Alla system normala."
+
+[TranslatorEvent6]
+; EN: Message="Tarydium Processing and Purification Plant"
+Message="Tarydium bearbetnings- och reningsanläggning"
+
+[TranslatorEvent3]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Barriär för högre lyftreglage inaktiva."
+
+[TranslatorEvent4]
+; EN: Message="Barrier to higher lift controls inactive."
+Message="Barriär för högre lyftreglage inaktiva."

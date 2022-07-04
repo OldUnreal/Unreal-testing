@@ -1,0 +1,139 @@
+﻿[LevelInfo0]
+Title="Bluff Eversmoking"
+; EN: LevelEnterText="Entering Bluff Eversmoking"
+LevelEnterText="Å gå inn i Bluff Eversmoking"
+
+[LevelSummary]
+Title="Bluff Eversmoking"
+; EN: LevelEnterText="Entering Bluff Eversmoking"
+LevelEnterText="Å gå inn i Bluff Eversmoking"
+
+[TranslatorEvent7]
+; EN: Message="HYDRO-ELECTRIC SHIPPING CAR FULLY POWERED AND READY FOR DEPARTURE. ELECTRO-STATIC DISCHARGE NODES AT TOP OF BELL TOWER MUST BE ACTIVATED PRIOR TO CAR START-UP."
+Message="HYDRO-ELEKTRISK BIL FULLT KRAFTIG OG KLAR FOR AVGANG. ELEKTROSTATISK UTSLIPPSNODER PÅ TOPPEN AV KLOKKETÅRET MÅ AKTIVERES FØR BILSTARTING."
+
+[TranslatorEvent20]
+; EN: Message="High Priest De'Nasha Breeche 255-480"
+Message="Yppersteprest De'Nasha Breeche 255-480"
+
+[TranslatorEvent11]
+; EN: Message="I have been hiding here for what seems like months now. The Skaarj forces that have taken over our monastery continue to transport stolen tarydium and other strange mechanical devices using their lightning sled. I fear that they may find me."
+Message="Jeg har gjemt meg her i det som virker som måneder nå. Skaarj-styrkene som har overtatt klosteret vårt, fortsetter å transportere stjålet tarydium og andre rare mekaniske innretninger ved hjelp av lynkjøringen. Jeg frykter at de kan finne meg."
+
+[TranslatorEvent8]
+; EN: Message="MAGNETIC LOCKS ENGAGED: AUTHORIZED BY CAPTAIN DUK'CHOROTH - OF THE 12th HOUSE OF dUBREVI"
+Message="MAGNETISKE LÅSER LAGERT: GODKJENT AV CAPTAIN DUK'CHOROTH - AV DUBREVI 12. HUS"
+; EN: AltMessage="MAGNETIC LOCKS DISENGAGED"
+AltMessage="MAGNETISKE LÅSER UTKOBLET"
+
+[TranslatorEvent9]
+; EN: Message="STATIC DISCHARGE NODES: EAST AND WEST BREAKERS MUST BE THROWN TO RELEASE STATIC DISCHARGE."
+Message="STATISKE UTSLUTNINGSNODER: ØST- OG VESTBRYTERENE MÅ kastes for å frigjøre statisk utslipp."
+; EN: AltMessage="STATIC DISCHARGE SUCCESSFUL - HYDRO-ELECTRIC SHIPPING CAR NOW FULLY OPERATIONAL."
+AltMessage="STATISK UTLØSNING LYKKET - HYDRO-ELEKTRISK FRAKTBIL NÅ FULLT DRIFT."
+
+[TranslatorEvent6]
+; EN: AltMessage="BELL TOWER MAGNETIC LOCKS DISENGAGED: ACCESS TO BELL TOWER PERMITTED."
+AltMessage="BELL TOWER MAGNETISKE LÅKER UTKOBLET: TILGANG TIL BELL TOWER TILLATT."
+
+[TranslatorEvent18]
+Message="Acolyte Ne'Pher Dunis 350-488"
+
+[TranslatorEvent14]
+; EN: Message="The woman they captured is scheduled to be executed. I cannot let this happen! As foolish as it sounds I will attempt to sneak her out of the prison cell through our secret caves. From there she can escape to the bell tower until darkness."
+Message="Kvinnen de fanget er planlagt henrettet. Jeg kan ikke la dette skje! Så dumt som det høres ut, vil jeg prøve å snike henne ut av fengselscellen gjennom våre hemmelige huler. Derfra kan hun flykte til klokketårnet til det blir mørkt."
+
+[TranslatorEvent5]
+; EN: Message="SKAARJ SHIPPING FACILITY POWER MANAGEMENT STATION: HYDRO-ELECTRIC SHIPPING CAR STATUS - OFF / REACTIVATION REQUIRES STATIC DISCHARGE NODES TO BE OPENED AT TOP OF BELL TOWER."
+Message="SKAARJ FARTSSTYRING FOR FARTSSTYRING: HYDRO-ELEKTRISK FRAKTBILSTATUS - AV / REAKTIVERING KREVER STATISK UTSLIPPSNODER Å ÅPNES ØVERST I BELLTOREN."
+
+[TranslatorEvent10]
+; EN: Message="HAVE FAITH AND NEVER SWAY FROM YOUR BELIEFS. ONLY A SOUL THAT KEEPS THE FAITH DESPITE ALL OPPRESSION SHALL TRIUMPH WHEN THE SAVIOUR PRINCESS COMES FROM THE STARS"
+Message="HA TRO OG ALDRIG SVI FRA DINE TRO. Bare en sjel som holder troen til tross for all undertrykkelse skal seire når den frelsende prinsessen kommer fra stjernene"
+
+[TranslatorEvent13]
+; EN: Message="Myscha Nov 28th 1994- June 1997"
+Message="Myscha 28. november 1994 - juni 1997"
+
+[TranslatorEvent19]
+; EN: Message="I am feeling ill. My cough has gotten worse and this darkened cell is not helping. I only hope that my  brother Kruun can escape to our childhood hiding hole in the sewers. From there he can access the inner walls of the monastery."
+Message="Jeg føler meg syk. Hosten min har blitt verre, og denne mørke cellen hjelper ikke. Jeg håper bare at min bror Kruun kan flykte til barndommen vår gjemmer hull i kloakken. Derfra kan han få tilgang til klostrets indre vegger."
+
+[TranslatorEvent1]
+; EN: Message="Security Officer Sergai Dubrov: ISV-KRAN: LOG ENTRY: We are hot on the trail of the Skaarj Hunting party that captured Kira near the Sunspire. They are headed north towards the blue electrical storms on the horizon."
+Message="Sikkerhetsoffiser Sergai Dubrov: ISV-KRAN: LOGGINNGANG: Vi er varme på sporet av Skaarj Jaktparti som erobret Kira nær solspiren. De er på vei nordover mot de blå elektriske stormene i horisonten."
+
+[TranslatorEvent12]
+; EN: Message="I have discovered a secret! Last night I snuck out of my hiding place and swam through the pipes to the prison. They have captured a Girl! The Krall sergeant took two boots in the mouth when he approached her. Haha! I can only laugh at their stupidity."
+Message="Jeg har oppdaget en hemmelighet! I går snek jeg meg ut av gjemmestedet mitt og svømte gjennom rørene til fengselet. De har fanget en jente! Krall-sersjanten tok to støvler i munnen da han nærmet seg henne. Ha ha! Jeg kan bare le av deres dumhet."
+
+[TranslatorEvent22]
+; EN: Message="Son of Ne'Lin Garas 380-390"
+Message="Sønn av Ne'Lin Garas 380-390"
+
+[TranslatorEvent23]
+; EN: Message="Pelit Jan 20 1997-July 17 1997"
+Message="Pelit 20. januar 1997 - 17. juli 1997"
+
+[TranslatorEvent17]
+; EN: Message="Only by facing the direction of the rising sun may one find a new day."
+Message="Bare ved å vende mot den stigende solen kan man finne en ny dag."
+
+[TranslatorEvent16]
+; EN: Message="WARNING-STATIC DISCHARGE NODES-STAY CLEAR DURING OPERATION."
+Message="ADVARSEL-STATISK UTSLIPPING NODES-BLIR KLAR UNDER DRIFT."
+
+[TranslatorEvent21]
+Message="Acolyte Ne'Lin Garas 353-487"
+
+[TranslatorEvent4]
+; EN: Message="HYDRO-LASER CONTROL STATION: LASERS ON AND OPERATIONAL"
+Message="HYDRO-LASERKONTROLLSTASJON: LASERE PÅ OG DRIFTSLIG"
+; EN: AltMessage="HYDRO-LASER CONTROL STATION: LASERS DISENGAGED - ACCESS TO HYDRO-ELECTRIC GENERATOR BELOW BELL TOWER PERMITTED"
+AltMessage="HYDRO-LASER-KONTROLLSTASJON: LASERE KOBLET - TILGANG TIL HYDRO-ELEKTRISK GENERATOR NEDENT BELLTÅRN TILLATT"
+
+[TranslatorEvent3]
+; EN: Message="My brother Kriin is in the cell below me. My other brother Kruun escaped through the water tunnel under the stairs. They sacrificed my best friend Jaara for Kruun's escape."
+Message="Broren min Kriin er i cellen under meg. Den andre broren min Kruun rømte gjennom vanntunnelen under trappene. De ofret min beste venninne Jaara for Kruuns flukt."
+
+[TranslatorEvent15]
+; EN: Message="Vault of the Dead - Herein lies the last resting place of the High Priest of Bluff Eversmoking and the artifacts used by the Messiah."
+Message="De dødes hvelv - Her ligger det siste hvilestedet til ypperstepresten i Bluff Eversmoking og gjenstandene som brukes av Messias."
+; EN: Hint="Find a secret lever in the graveyard"
+Hint="Finn en hemmelig spak på kirkegården"
+
+[TranslatorEvent2]
+; EN: Message="Science Officer Kira Argmanov: Separated from my crewmates from ISV-KRAN, I've only been able to stay alive by holding up in this bell tower. A native Nali help me escape the prison cell the Skaarj put me in. Hopefully the Skaarj won't find me here."
+Message="Vitenskapsoffiser Kira Argmanov: Jeg har bare vært i stand til å holde meg i live ved å holde meg oppe i dette klokketårnet, adskilt fra lagkameratene mine fra ISV-KRAN. En innfødt Nali hjelper meg med å unnslippe fengselscellen Skaarj setter meg i. Forhåpentligvis finner ikke Skaarj meg her."
+
+[TranslatorEvent0]
+; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."
+Message="ISV-KRAN sjefsleder Logg: Tatiana Zimna: Vi har kommet til dette vakre kløftklosteret i vårt søk etter Kiras bortførere. Vi skal slå leir etter dette krusifikset i kveld og begynne tidlig i morgen."
+
+[TranslatorEvent26]
+; EN: Message="Shipping Log: Grorq of the Red Hand Tribe. I am really getting sick with the way the Skaarj are treating us. Constantly bossing us around and making us watch over their pathetic Nali slaves. My troops are getting sick of this situation."
+Message="Fraktlogg: Grorq of the Red Hand Tribe. Jeg blir virkelig syk av måten Skaarj behandler oss på. Stadig sjefe oss rundt og få oss til å våke over deres patetiske Nali-slaver. Mine tropper blir lei av denne situasjonen."
+
+[TranslatorEvent24]
+; EN: Message="Shipping Log: Grorq of the Red Hand Tribe. Coming the next full moon we are expecting a large shipment of salvaged supplies from the human spacecraft. I need to make a few repairs to the electric rails around the bluff but we should be ready by then."
+Message="Fraktlogg: Grorq of the Red Hand Tribe. Kommer neste fullmåne, forventer vi en stor forsendelse med berget forsyninger fra det menneskelige romfartøyet. Jeg må gjøre noen reparasjoner på de elektriske skinnene rundt bløven, men vi skal være klare da."
+
+[TranslatorEvent25]
+; EN: Message="Jailer Hrang of the Red Hand Tribe: we have captured a Terran girl. Some of my soldiers want to try and take liberties with her. I guess that's OK as long as they watch those boots! She kicked me in the Hrangos last time."
+Message="Fangevokter Hrang fra den røde håndstammen: vi har fanget en Terran-jente. Noen av soldatene mine vil prøve å ta seg friheter med henne. Jeg antar at det er OK så lenge de ser på støvlene! Hun sparket meg i Hrangos sist."
+
+[TranslatorEvent27]
+; EN: Message="Jailer Hrang of the Red Hand Tribe: Dorro owes me 25,000 gold Paaras when we get home! He truly sucks at death bones. Hustling him is like taking candy from a Terran baby. Speaking of which I think it's time to go beat on that ugly Terran girl some more!"
+Message="Fangevokter Hrang fra den røde håndstammen: Dorro skylder meg 25.000 gullparas når vi kommer hjem! Han suger virkelig dødsben. Å kaste ham er som å ta godteri fra en Terran-baby. Når jeg snakker om det, synes jeg det er på tide å slå på den stygge Terran-jenta litt til!"
+
+[TranslatorEvent28]
+; EN: Message="Jailer Hrang of the Red Hand Tribe: I can't believe it!!! That Terran girl escaped! One of those worthless Nali Monks must have tunneled her out. I am in DEEP SHIT! If Captain DUK'CHOROTH comes and finds out I let her escape I'll be de-hrangod for sure!"
+Message="Fangevokter Hrang fra Red Hand Tribe: Jeg kan ikke tro det !!! Den Terran-jenta slapp unna! En av de verdiløse Nali Monks må ha tunnelert henne ut. Jeg er i DEEP SHIT! Hvis kaptein DUK'CHOROTH kommer og finner ut at jeg lar henne unnslippe, vil jeg helt sikkert bli de-hrangod!"
+
+[TranslatorEvent29]
+; EN: Message="Kruun's personal diary: I have to be careful how many times I sneak into the monastery through the tunnels. I've marked the tunnel that leads to the inner monastery with a cross, the other leads to the prison where my brother is still being held."
+Message="Kruuns personlige dagbok: Jeg må være forsiktig med hvor mange ganger jeg sniker meg inn i klosteret gjennom tunnelene. Jeg har merket tunnelen som fører til det indre klosteret med et kors, den andre fører til fengselet der broren min fortsatt sitter."
+
+[TranslatorEvent30]
+; EN: Message="MAIN GATE GUARD TOWER"
+Message="HOVEDPORTVAKTTÅRN"

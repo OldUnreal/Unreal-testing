@@ -1,0 +1,13 @@
+﻿[LevelInfo3]
+Title="The Darkening"
+
+[LevelSummary]
+Title="The Darkening"
+
+[TranslatorEvent10]
+; EN: Message="The Source Antechamber, ACCESS DENIED."
+Message="The Source Antechamber, TILGANG TAPET."
+
+[TranslatorEvent0]
+; EN: AltMessage="Authorization granted. Activate the Emergency Power Supply."
+AltMessage="Autorisasjon gitt. Aktiver nødstrømforsyningen."

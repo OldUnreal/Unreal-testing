@@ -1,0 +1,41 @@
+﻿[LevelInfo0]
+Title="Sacred Passage"
+; EN: LevelEnterText="Entering the Sacred Passage"
+LevelEnterText="Gå inn i den hellige passasjen"
+
+[LevelSummary]
+Title="Sacred Passage"
+; EN: LevelEnterText="Entering the Sacred Passage"
+LevelEnterText="Gå inn i den hellige passasjen"
+
+[TranslatorEvent1]
+; EN: Hint="Go for a swim and look for a secret passage."
+Hint="Ta en svømmetur og se etter en hemmelig passasje."
+
+[TranslatorEvent12]
+; EN: Message=""...For that will be the key""
+Message=""... For det vil være nøkkelen""
+; EN: Hint="Activate the lever to let the water run."
+Hint="Aktiver spaken for å la vannet renne."
+
+[TranslatorEvent13]
+; EN: Message="You must have a keen eye, so that you may bathe in the sacred waters."
+Message="Du må ha et godt øye, slik at du kan bade i det hellige vannet."
+; EN: Hint="Look at each face."
+Hint="Se på hvert ansikt."
+
+[TranslatorEvent11]
+; EN: Message=""Wood must break free...""
+Message=""Tre må bryte løs ...""
+; EN: Hint="Activate the lever to let the water run."
+Hint="Aktiver spaken for å la vannet renne."
+
+[TranslatorEvent0]
+; EN: Hint="Go for a swim and look for a secret passage."
+Hint="Ta en svømmetur og se etter en hemmelig passasje."
+
+[TranslatorEvent2]
+; EN: Message="Only the purest of heart may pay homage to the God of The Good Lore Chizra"
+Message="Bare det reneste av hjertet kan hylle Gud av The Good Lore Chizra"
+; EN: Hint="Activate the lever to let the water run."
+Hint="Aktiver spaken for å la vannet renne."

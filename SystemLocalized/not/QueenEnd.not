@@ -1,0 +1,22 @@
+﻿[LevelInfo2]
+; EN: Title="The Source"
+Title="Kilden"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="Angi kilden"
+
+[LevelSummary]
+; EN: Title="The Source"
+Title="Kilden"
+; EN: LevelEnterText="Entering The Source"
+LevelEnterText="Angi kilden"
+
+[JumpBoots0]
+ItemName="Super Jump Boots"
+; EN: PickupMessage="You picked up Super Jump Boots."
+PickupMessage="Du hentet Super Jump Boots."
+; EN: ExpireMessage="The Super Jump Boots have drained."
+ExpireMessage="Super Jump Boots har tappet."
+
+[SpecialEvent18]
+; EN: DamageString="vaporized"
+DamageString="fordampet"

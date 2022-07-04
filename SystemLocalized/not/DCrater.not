@@ -1,0 +1,33 @@
+﻿[LevelInfo2]
+Title="Demon Crater"
+; EN: LevelEnterText="Entering the Demon Crater"
+LevelEnterText="Å gå inn i Demon Crater"
+
+[LevelSummary]
+Title="Demon Crater"
+; EN: LevelEnterText="Entering the Demon Crater"
+LevelEnterText="Å gå inn i Demon Crater"
+
+[TranslatorEvent1]
+; EN: Message="Generator Control Panel. Generator is operational. Power output nominal."
+Message="Generatorkontrollpanel. Generatoren er i drift. Effekt nominell."
+
+[TranslatorEvent0]
+; EN: Message="Portal Gate: Warning: not enough power to establish portal link. Activate the Generator."
+Message="Portal Gate: Advarsel: ikke nok kraft til å etablere portalkobling. Aktiver generatoren."
+; EN: AltMessage="Portal Gate: Link Established. Enter transport field."
+AltMessage="Portal Gate: Link etablert. Angi transportfeltet."
+; EN: Hint="Activate the Generator that powers the portal to the ship."
+Hint="Aktiver generatoren som driver portalen til skipet."
+
+[TranslatorEvent3]
+; EN: Message="Generator and Loading Room."
+Message="Generator og lasterom."
+; EN: Hint="Activate the Generator that powers the portal to the ship."
+Hint="Aktiver generatoren som driver portalen til skipet."
+
+[TranslatorEvent4]
+; EN: Message="Intruder Alert. Secure all access points, all personnel on full alert. Protect the Mother, failure results in DEATH."
+Message="Inntrengervarsel. Sikre alle tilgangspunkter, alt personell i full beredskap. Beskytt moren, feil resulterer i DØD."
+; EN: Hint="Activate the Generator that powers the portal to the ship."
+Hint="Aktiver generatoren som driver portalen til skipet."

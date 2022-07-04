@@ -1,0 +1,334 @@
+﻿[Public]
+Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
+Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
+; Main roots
+Preferences=(Caption="Advanced",Parent="Advanced Options")
+Preferences=(Caption="Rendering",Parent="Advanced Options")
+Preferences=(Caption="Audio",Parent="Advanced Options")
+Preferences=(Caption="Networking",Parent="Advanced Options")
+Preferences=(Caption="Game Types",Parent="Advanced Options")
+Preferences=(Caption="Display",Parent="Advanced Options")
+Preferences=(Caption="Joystick",Parent="Advanced Options")
+Preferences=(Caption="Drivers",Parent="Advanced Options",Class=Engine.Engine,Immediate=False,Category=Drivers)
+Preferences=(Caption="Game Settings",Parent="Advanced Options",Class=Engine.GameInfo,Immediate=True)
+Preferences=(Caption="Decals",Parent="Advanced Options")
+; Advanced
+Preferences=(Caption="Game Engine Settings",Parent="Advanced",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+Preferences=(Caption="Key Aliases",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=Aliases)
+Preferences=(Caption="Raw Key Bindings",Parent="Advanced",Class=Engine.Input,Immediate=True,Category=RawKeys)
+; Networking
+Preferences=(Caption="Public Server Information",Parent="Networking",Class=Engine.GameReplicationInfo,Immediate=True)
+Preferences=(Caption="Channel Download",Parent="Networking",Class=Engine.ChannelDownload)
+Preferences=(Caption="Connection Notifications",Parent="Networking",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
+Preferences=(Caption="Map Lists",Parent="Networking")
+; Decals
+Preferences=(Caption="Blood",Parent="Decals")
+Preferences=(Caption="Pawn Shadow",Parent="Decals",Class=Engine.PawnShadow,Immediate=True)
+Preferences=(Caption="Decoration Shadow",Parent="Decals",Class=Engine.DecoShadow,Immediate=True)
+Preferences=(Caption="Projectile Shadow",Parent="Decals",Class=Engine.ProjectileShadow,Immediate=True)
+; Blood
+Preferences=(Caption="Server",Parent="Blood",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
+
+[PlayerPawn]
+; EN: QuickSaveString="Quick Saving"
+QuickSaveString="Rask lagring"
+; EN: NoPauseMessage="Game is not pauseable"
+NoPauseMessage="Spillet kan ikke stoppes"
+; EN: ViewingFrom="Now viewing from "
+ViewingFrom="Ser nå fra "
+; EN: OwnCamera="own camera"
+OwnCamera="eget kamera"
+; EN: FailedView="Failed to change view."
+FailedView="Kunne ikke endre visning."
+; EN: CantChangeNameMsg="You can't change your name during a global logged game."
+CantChangeNameMsg="Du kan ikke endre navnet ditt under et globalt logget spill."
+
+[Pawn]
+; EN: NameArticle=" a "
+NameArticle=" en "
+
+[Inventory]
+; EN: PickupMessage="Snagged an item"
+PickupMessage="Fanget et element"
+; EN: ItemArticle="a"
+ItemArticle="en"
+; EN: M_Activated=" activated."
+M_Activated=" aktivert."
+; EN: M_Selected=" selected."
+M_Selected=" valgt."
+; EN: M_Deactivated=" deactivated."
+M_Deactivated=" deaktivert."
+
+[LevelInfo]
+; EN: Title="Untitled"
+Title="Uten navn"
+
+[Weapon]
+; EN: MessageNoAmmo=" has no ammo."
+MessageNoAmmo=" har ingen ammunisjon."
+; EN: DeathMessage="%o was killed by %k's %w."
+DeathMessage="%o ble drept av %w fra %k."
+; EN: PickupMessage="You got a weapon"
+PickupMessage="Du har et våpen"
+; EN: ItemName="Weapon"
+ItemName="Våpen"
+; EN: FemDeathMessage="%o was killed by %k's %w."
+FemDeathMessage="%o ble drept av %w fra %k."
+; EN: FemKillMessage="%o was killed by %k's %w."
+FemKillMessage="%o ble drept av %w fra %k."
+
+[Ammo]
+; EN: PickupMessage="You picked up some ammo"
+PickupMessage="Du hentet ammunisjon"
+; EN: ItemName="Ammo"
+ItemName="Ammunisjon"
+
+[Counter]
+; EN: CountMessage="Only %i more to go..."
+CountMessage="Bare %i mer å gå..."
+; EN: CompleteMessage="Completed!"
+CompleteMessage="Fullført!"
+
+[Spectator]
+; EN: MenuName="Spectator"
+MenuName="Tilskuer"
+
+[DamageType]
+; EN: Name="killed"
+Name="drept"
+; EN: AltName="killed"
+AltName="drept"
+
+[Progress]
+; EN: CancelledConnect="Cancelled Connect Attempt"
+CancelledConnect="Avbrutt tilkoblingsforsøk"
+; EN: RunningNet="%ls: %ls (%i players)"
+RunningNet="%ls: %ls (%i spillere)"
+; EN: NetReceiving="Receiving %ls: %i/%i"
+NetReceiving="Mottar %ls: %i/%i"
+; EN: NetReceiveOk="Successfully received %ls"
+NetReceiveOk="Mottatt %ls"
+; EN: NetSend="Sending %ls"
+NetSend="Sender %ls"
+; EN: NetSending="Sending %ls: %i/%i"
+NetSending="Sender %ls: %i/%i"
+; EN: Connecting="Connecting..."
+Connecting="Kobler til..."
+; EN: Listening="Listening for clients..."
+Listening="Lytter til klienter ..."
+; EN: Loading="Loading"
+Loading="Laster inn"
+; EN: Saving="Saving"
+Saving="Sparer"
+; EN: Paused="Paused by %ls"
+Paused="Stoppet av %ls"
+; EN: ReceiveFile="Receiving %ls (F10 Cancels)"
+ReceiveFile="Mottar %ls (F10 kansellerer)"
+; EN: ReceiveOptionalFile="Receiving optional file %ls (Press F10 to Skip)"
+ReceiveOptionalFile="Motta valgfri fil %ls (Trykk F10 for å hoppe over)"
+; EN: ReceiveSize="Size %iK, Complete %3.1f%% = %iK, %i Packages remaining"
+ReceiveSize="Størrelse %iK, komplett %3.1f%% = %iK, %i gjenværende pakker"
+; EN: ConnectingText="Connecting (F10 Cancels):"
+ConnectingText="Tilkobling (F10 avbryter):"
+ConnectingURL="unreal://%ls/%ls"
+
+[WarpZoneInfo]
+OtherSideURL=""
+
+[Pickup]
+ExpireMessage=""
+
+[SpecialEvent]
+DamageString=""
+
+[ServerCommandlet]
+HelpCmd=server
+HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
+; EN: HelpOneLiner="Network game server."
+HelpOneLiner="Nettverksspillserver."
+; EN: HelpUsage="server map.unr[?game=gametype] [-option...] [parm=value]..."
+HelpUsage="server map.unr[?game=Spilltype] [-alternativ...] [parm=value]..."
+HelpParm[0]="Log"
+; EN: HelpDesc[0]="Specify the log file to generate."
+HelpDesc[0]="Spesifiser loggfilen som skal genereres."
+HelpParm[1]="AllAdmin"
+; EN: HelpDesc[1]="Give all players admin privileges."
+HelpDesc[1]="Gi alle spillerne administratorrettigheter."
+
+[Console]
+; EN: LoadingMessage="LOADING"
+LoadingMessage="LASTER INN"
+; EN: SavingMessage="SAVING"
+SavingMessage="LAGRER"
+; EN: ConnectingMessage="CONNECTING"
+ConnectingMessage="KOBLER TIL"
+; EN: PausedMessage="PAUSED"
+PausedMessage="PAUSE"
+; EN: PrecachingMessage="PRECACHING"
+PrecachingMessage="FORHÅNDSLASTER"
+
+[Menu]
+MenuList=" "
+HelpMessage=" "
+; EN: HelpMessage[1]="This menu has not yet been implemented."
+HelpMessage[1]="Denne menyen har ikke blitt lagt til enda."
+; EN: LeftString="Left"
+LeftString="Venstre"
+; EN: RightString="Right"
+RightString="Høyre"
+; EN: CenterString="Center"
+CenterString="Senter"
+; EN: EnabledString="Enabled"
+EnabledString="På"
+; EN: DisabledString="Disabled"
+DisabledString="Av"
+; EN: YesString="Yes"
+YesString="Ja"
+; EN: NoString="No"
+NoString="Nei"
+; EN: OnString="On"
+OnString="På"
+; EN: OffString="Off"
+OffString="Av"
+
+[GameInfo]
+; EN: SwitchLevelMessage="Switching Levels"
+SwitchLevelMessage="Bytter kart"
+DefaultPlayerName="Player"
+; EN: LeftMessage=" left the game."
+LeftMessage=" har forlatt spillet."
+; EN: FailedSpawnMessage="Failed to spawn player actor"
+FailedSpawnMessage="Klarte ikke å spawne spiller!"
+; EN: FailedPlaceMessage="Could not find starting spot (level might need a "PlayerStart" actor)"
+FailedPlaceMessage="Kunne ikke finne startposisjon! (Kartet trenger muligens en "PlayerStart" actor)"
+; EN: FailedTeamMessage="Could not find team for player"
+FailedTeamMessage="Kan ikke finne lag for spilleren"
+; EN: NameChangedMessage="Name changed to "
+NameChangedMessage="Navn ble endret til "
+; EN: EnteredMessage=" entered the game."
+EnteredMessage=" Har blitt med i spillet."
+; EN: GameName="Game"
+GameName="Game"
+; EN: MaxedOutMessage="Server is already at capacity."
+MaxedOutMessage="Serveren er full."
+; EN: WrongPassword="The password you entered is incorrect."
+WrongPassword="Passordet er feil."
+; EN: NeedPassword="You need to enter a password to join this game."
+NeedPassword="Du må skrive inn passordet for å spille på denne serveren"
+; EN: MaleGender="his"
+MaleGender="hans"
+; EN: FemaleGender="her"
+FemaleGender="hennes"
+; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
+MaxedOutSpectatorsMsg="Maks tilskuere overskredet"
+
+[Errors]
+; EN: NetOpen="Error opening file"
+NetOpen="Feil ved åpning av fil"
+; EN: NetWrite="Error writing to file"
+NetWrite="Feil ved skriving til fil"
+; EN: NetRefused="Server refused to send %ls"
+NetRefused="Serveren nektet å sende %ls"
+; EN: NetClose="Error closing file"
+NetClose="Feil ved lukking av fil"
+; EN: NetSize="File size mismatch"
+NetSize="Filstørrelsen stemmer ikke overens"
+; EN: NetMove="Error moving file"
+NetMove="Feil ved flytting av fil"
+; EN: NetInvalid="Received invalid file request"
+NetInvalid="Mottok ugyldig filforespørsel"
+; EN: NoDownload="Package %ls is not downloadable"
+NoDownload="Pakken som heter %ls kan ikke lastes ned"
+; EN: DownloadFailed="Downloading package %ls failed: %ls"
+DownloadFailed="Nedlastingen av %ls Feilet: %ls"
+; EN: RequestDenied="Server requested file from pending level: Denied"
+RequestDenied="Server forespurte fil for oppkommende kart: Avvist"
+; EN: ConnectionFailed="Connection failed"
+ConnectionFailed="Tilkobling Feilet"
+; EN: ChAllocate="Couldn't allocate channel"
+ChAllocate="Kunne ikke tildele kanal"
+; EN: NetAlready="Already networking"
+NetAlready="Nettverket holder allerede på"
+; EN: NetListen="Listen failed: No linker context available"
+NetListen="Lytter feilet: Ingen linkerkontekst tilgjengelig"
+; EN: LoadEntry="Can't load Entry: %ls"
+LoadEntry="Kan ikke laste inn: %ls"
+; EN: InvalidUrl="Invalid URL: %ls"
+InvalidUrl="Ugyldig URL: %ls"
+; EN: InvalidLink="Invalid Link: %ls"
+InvalidLink="Ugyldig link: %ls"
+; EN: FailedBrowse="Failed to enter %ls: %ls"
+FailedBrowse="Kunne ikke bli med i %ls: %ls"
+; EN: Listen="Listen failed: %ls"
+Listen="Lytting feilet %ls"
+; EN: AbortToEntry="Failed; returning to Entry"
+AbortToEntry="Mislyktes, går tilbake til Entry"
+; EN: ServerOpen="Servers can't open network URLs"
+ServerOpen="Servere kan ikke åpne nettverk URL"
+; EN: ServerListen="Dedicated server can't listen: %ls"
+ServerListen="Dedikerte servere kan ikke lytte: %ls"
+; EN: Pending="Pending connect to %ls failed; %ls"
+Pending="Ventende tilkobling til %ls feilet; %ls"
+; EN: LoadPlayerClass="Failed to load player class"
+LoadPlayerClass="Kunne ikke laste spillertype"
+; EN: ServerOutdated="Server's version is outdated"
+ServerOutdated="Serveren sin versjon er utdatert."
+; EN: Banned="You have been banned"
+Banned="Du har blitt bannlyst"
+; EN: TempBanned="You have been temporarily banned"
+TempBanned="Du har blitt midlertidig utestengt"
+; EN: Kicked="You have been kicked"
+Kicked="Du har blitt sparket"
+
+[General]
+; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
+Upgrade="For å bli med i denne serveren må du laste ned den seneste Unreal patchen fra OldUnreal's Nettside:"
+UpgradeURL="https://www.oldunreal.com/oldunrealpatches.html"
+; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
+UpgradeQuestion="Vil du gå til nettsiden nå?"
+; EN: Version="Version %i"
+Version="Versjon %i"
+
+[AdminAccessManager]
+; EN: AdminLoginText="Administrator %ls logged in"
+AdminLoginText="Administrator %ls logget på"
+; EN: AdminLogoutText="Administrator %ls logged out"
+AdminLogoutText="Administrator %ls logget av"
+; EN: CheatUsedStr="%ls used admin/cheat command: %c"
+CheatUsedStr="%ls brukte kommando admin / cheat: %c"
+
+[Fonts]
+WhiteFont=UnrealShare.WhiteFont
+MedFont=Engine.MedFont
+LargeFont=Engine.LargeFont
+BigFont=Engine.BigFont
+SmallFont=Engine.SmallFont
+
+[LinkerUpdateCommandlet]
+HelpCmd=linkerupdate
+HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
+; EN: HelpOneLiner="Adds all checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
+HelpOneLiner="Legger til alle sjekksummer for filene i katalogen automatisk i filen SHALinkerCache.ini. Brukt av anticheat UnrealIntegrity."
+; EN: HelpUsage="linkerupdate <filename>"
+HelpUsage="linkerupdate <Filnavn>"
+; EN: HelpParm[0]="<filename>"
+HelpParm[0]="<Filnavn>"
+; EN: HelpDesc[0]="The file to calculate the checksum for posterior storage."
+HelpDesc[0]="Filen for å beregne sjekksummen for bakre lagring."
+
+[SHAUpdateCommandlet]
+HelpCmd=shaupdate
+HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
+; EN: HelpOneLiner="Adds all SHA256 checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
+HelpOneLiner="Legger til alle SHA256 sjekksummer for filene i katalogen automatisk i filen SHALinkerCache.ini. Brukt av anticheat UnrealIntegrity."
+; EN: HelpUsage="shaupdate <filename>"
+HelpUsage="shaupdate <Filnavn>"
+; EN: HelpParm[0]="<filename>"
+HelpParm[0]="<Filnavn>"
+; EN: HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
+HelpDesc[0]="Filen for å beregne SHA256 sjekksummen for bakre lagring. "
+
+[AutosaveTrigger]
+; EN: AutoSaveString="Auto Saving"
+AutoSaveString="Automatisk Sparing"

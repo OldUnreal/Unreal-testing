@@ -1,0 +1,15 @@
+﻿[LevelInfo1]
+; EN: Title="Approaching UMS Prometheus"
+Title="Närmar sig UMS Prometheus"
+; EN: LevelEnterText="Approaching UMS Prometheus"
+LevelEnterText="Närmar sig UMS Prometheus"
+
+[LevelSummary]
+; EN: Title="Approaching UMS Prometheus"
+Title="Närmar sig UMS Prometheus"
+; EN: LevelEnterText="Approaching UMS Prometheus"
+LevelEnterText="Närmar sig UMS Prometheus"
+
+[TranslatorEvent0]
+; EN: Message="Another thunderbird has fallen from the sky, right before our eyes! I am very scared. Scared that the Sky Demons will come to our valley now."
+Message="Ytterligare en åskfågel har fallit från himlen, precis framför våra ögon! Jag är väldigt rädd. Rädd att Sky Demons kommer till vår dal nu."

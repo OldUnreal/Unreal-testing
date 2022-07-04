@@ -1,0 +1,25 @@
+﻿[LevelInfo1]
+; EN: Title="End"
+Title="Slutet"
+
+[LevelSummary]
+; EN: Title="End"
+Title="Slutet"
+
+[TransitionGenderEvent0]
+; Note: Make the text coincide with the respective audio entry in Sounds/set/EndSnd.set. If there isn't one, CREATE IT!
+OutDelays[1]=3.000000
+; EN: CommonText[0]="Bodega Bay to shuttle craft. Please authenticate."
+CommonText[0]="Bodega Bay till skyttelbåtar. Vänligen autentisera."
+
+[TransitionGenderEvent2]
+; Note: Make the text coincide with the respective audio entry in Sounds/set/EndSnd.set. If there isn't one, CREATE IT!
+OutDelays[1]=3.000000
+; EN: CommonText[0]="Authenticate immediately or we will open fire."
+CommonText[0]="Autentisera omedelbart annars öppnar vi eld."
+
+[TransitionGenderEvent1]
+; Note: Make the text coincide with the respective audio entry in Sounds/set/EndSnd.set. If there isn't one, CREATE IT!
+OutDelays[1]=3.000000
+; EN: CommonText[0]="You were warned. We are opening fire."
+CommonText[0]="Du varnades. Vi öppnar eld."

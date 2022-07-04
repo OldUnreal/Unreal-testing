@@ -1,0 +1,39 @@
+﻿[LevelInfo0]
+; EN: Title="First Intermission"
+Title="Första pausen"
+
+[LevelSummary]
+; EN: Title="First Intermission"
+Title="Första pausen"
+
+[TransitionGenderEvent0]
+OutDelays[1]=5.00000
+OutDelays[2]=10.000000
+OutDelays[3]=17.000000
+OutDelays[4]=15.000000
+OutDelays[5]=13.000000
+OutDelays[6]=9.000000
+; EN: MaleText[0]="A day after my so-called rescue, and I'm going back to the surface of the planet."
+MaleText[0]="En dag efter min så kallade räddning, och jag kommer tillbaka till jordens yta."
+; EN: MaleText[1]="They've promised me a full pardon and transit back to Earth in exchange for my help. The alternative was a trip out the airlock without a suit. I agreed to take the mission."
+MaleText[1]="De har lovat mig full benådning och transit tillbaka till jorden i utbyte mot min hjälp. Alternativet var en resa ut luftslussen utan kostym. Jag gick med på att ta uppdraget."
+; EN: MaleText[2]="My job is to find the wreck of another ship, the Prometheus, and recover the data cores of some new secret weapons research project. When I've got the cores, I'm supposed to go to the bridge of the crashed ship and activate the ELT transmitter - the ELT will pinpoint my location for pick-up."
+MaleText[2]="Mitt jobb är att hitta vraket från ett annat fartyg, Prometheus, och återställa datakärnorna i ett nytt hemligt vapenforskningsprojekt. När jag har kärnorna ska jag gå till bryggan till det kraschade skeppet och aktivera ELT-sändaren - ELT kommer att hitta min plats för upphämtning."
+; EN: MaleText[3]="They need me because they don't know exactly where the Prometheus went down... apparently the Tarydium in the planet below is wreaking havoc with their scanners. They figure I learned a thing or two during my last romp on the surface. If anyone can find their missing ship, I can."
+MaleText[3]="De behöver mig eftersom de inte vet exakt var Prometheus gick ner ... tydligen orsakar Tarydium på planeten nedan förödelse med sina skannrar. De räknar med att jag lärde mig en sak eller två under min sista rundtur på ytan. Om någon kan hitta sitt saknade fartyg kan jag."
+; EN: MaleText[4]="I'm a little better prepared than last time... they've given me a military-issue combat assault rifle, a new portable scuba unit for under water, and this computer log. They've also made logistics drops of ammo, weapons, and other supplies."
+MaleText[4]="Jag är lite bättre förberedd än förra gången ... de har gett mig ett stridsgevär med militärfråga, en ny bärbar scuba-enhet för under vatten och den här datorloggen. De har också gjort logistikdroppar av ammunition, vapen och andra förnödenheter."
+; EN: MaleText[5]="So... I did it before, and I'll do it again - but it won't be easy. They call this a salvage mission. I call it a return to hell."
+MaleText[5]="Så ... Jag gjorde det tidigare, och jag gör det igen - men det blir inte lätt. De kallar detta ett bergningsuppdrag. Jag kallar det en återgång till helvetet."
+; EN: FemaleText[0]="A day after my so-called rescue, and I'm going back to the surface of the planet."
+FemaleText[0]="En dag efter min så kallade räddning, och jag kommer tillbaka till jordens yta."
+; EN: FemaleText[1]="They've promised me a full pardon and transit back to Earth in exchange for my help. The alternative was a trip out the airlock without a suit. I agreed to take the mission."
+FemaleText[1]="De har lovat mig full benådning och transit tillbaka till jorden i utbyte mot min hjälp. Alternativet var en resa ut luftslussen utan kostym. Jag gick med på att ta uppdraget."
+; EN: FemaleText[2]="My job is to find the wreck of another ship, the Prometheus, and recover the data cores of some new secret weapons research project. When I've got the cores, I'm supposed to go to the bridge of the crashed ship and activate the ELT transmitter - the ELT will pinpoint my location for pick-up."
+FemaleText[2]="Mitt jobb är att hitta vraket från ett annat fartyg, Prometheus, och återställa datakärnorna i ett nytt hemligt vapenforskningsprojekt. När jag har kärnorna ska jag gå till bryggan till det kraschade skeppet och aktivera ELT-sändaren - ELT kommer att hitta min plats för upphämtning."
+; EN: FemaleText[3]="They need me because they don't know exactly where the Prometheus went down... apparently the Tarydium in the planet below is wreaking havoc with their scanners. They figure I learned a thing or two during my last romp on the surface. If anyone can find their missing ship, I can."
+FemaleText[3]="De behöver mig eftersom de inte vet exakt var Prometheus gick ner ... tydligen orsakar Tarydium på planeten nedan förödelse med sina skannrar. De räknar med att jag lärde mig en sak eller två under min sista rundtur på ytan. Om någon kan hitta sitt saknade fartyg kan jag."
+; EN: FemaleText[4]="I'm a little better prepared than last time... they've given me a military-issue combat assault rifle, a new portable scuba unit for under water, and this computer log. They've also made logistics drops of ammo, weapons, and other supplies."
+FemaleText[4]="Jag är lite bättre förberedd än förra gången ... de har gett mig ett stridsgevär med militärfråga, en ny bärbar scuba-enhet för under vatten och den här datorloggen. De har också gjort logistikdroppar av ammunition, vapen och andra förnödenheter."
+; EN: FemaleText[5]="So... I did it before, and I'll do it again - but it won't be easy. They call this a salvage mission. I call it a return to hell."
+FemaleText[5]="Så ... Jag gjorde det tidigare, och jag gör det igen - men det blir inte lätt. De kallar detta ett bergningsuppdrag. Jag kallar det en återgång till helvetet."

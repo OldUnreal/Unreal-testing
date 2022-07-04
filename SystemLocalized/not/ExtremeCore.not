@@ -1,0 +1,59 @@
+﻿[LevelInfo0]
+Title="MotherShip Core"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Å gå inn i MotherShip Core"
+
+[LevelSummary]
+Title="MotherShip Core"
+; EN: LevelEnterText="Entering the MotherShip Core"
+LevelEnterText="Å gå inn i MotherShip Core"
+
+[TranslatorEvent10]
+; EN: AltMessage="Access to the Security Post granted."
+AltMessage="Tilgang til sikkerhetsposten gitt."
+; EN: Hint="Go to the Security Post to gain access to the Primary Power Supply Core Generator."
+Hint="Gå til Sikkerhetsposten for å få tilgang til den primære strømforsyningskjernegeneratoren."
+
+[TranslatorEvent4]
+; EN: Message="WARNING: Armed intruder detected. Close all access to the Source and to the Primary Power Supply. Preventing intruders from accessing the Core Generator is critical."
+Message="ADVARSEL: Bevæpnet inntrenger oppdaget. Lukk all tilgang til kilden og til den primære strømforsyningen. Det er avgjørende å forhindre inntrengere i å få tilgang til Core Generator."
+; EN: AltMessage="RED ALERT: Core Generator Security Compromised."
+AltMessage="RØD ALARM: Kjernegeneratorsikkerhet kompromittert."
+
+[TranslatorEvent5]
+; EN: Message="SECURITY ALERT: All War Masters report to Core Generator positions to ensure its protection."
+Message="SIKKERHETSVARSLING: Alle War Masters rapporterer til Core Generator-stillinger for å sikre beskyttelsen."
+; EN: AltMessage="Intruder detected near the Core Generator. Core Generator security must be maintained. Weakness shall be punished."
+AltMessage="Inntrenger oppdaget nær Core Generator. Core Generator-sikkerhet må opprettholdes. Svakhet skal straffes."
+
+[TranslatorEvent8]
+; EN: Message="Security Post, ACCESS DENIED."
+Message="Sikkerhetspost, TILGANG Nektet."
+
+[TranslatorEvent9]
+; EN: Message="Primary Power Supply, ACCESS DENIED."
+Message="Primær strømforsyning, TILGANG TAPET."
+; EN: Hint="Door can be unlocked from the control panel in the Security Post."
+Hint="Døren kan låses opp fra kontrollpanelet i Sikkerhetsposten."
+
+[TranslatorEvent11]
+; EN: Message="ACCESS DENIED: The Intruder must be eliminated. All War Masters are being routed to this area upon arrival from the Source."
+Message="TILGANG TAPT: Inntrengeren må elimineres. Alle krigsmestere blir dirigert til dette området ved ankomst fra kilden."
+; EN: Hint="Kill all the Skaarj to proceed to this area."
+Hint="Drep hele Skaarj for å fortsette til dette området."
+
+[TranslatorEvent12]
+; EN: AltMessage="Cryo Pods status: Temperature constant, Power at nominal levels, security systems active."
+AltMessage="Cryo Pods-status: Temperatur konstant, Kraft på nominelle nivåer, sikkerhetssystemer aktive."
+
+[TranslatorEvent6]
+; EN: Message="Core Generator security must be maintained. Access doors locked until security breach is contained."
+Message="Core Generator-sikkerhet må opprettholdes. Tilgangsdører låst til sikkerhetsbrudd er inneholdt."
+; EN: AltMessage="Core Access Door Open."
+AltMessage="Kjernedør er åpen."
+
+[TranslatorEvent13]
+; EN: Message="Emergency Power Supply, ACCESS DENIED: Primary Power Supply fully functional."
+Message="Nødstrømforsyning, TILGANG TENIERT: Primærstrømforsyning fullt funksjonell."
+; EN: Hint="Find the Core Generator and destroy it to gain access to this area."
+Hint="Finn kjernegeneratoren og ødelegg den for å få tilgang til dette området."

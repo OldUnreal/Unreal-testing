@@ -1,0 +1,15 @@
+﻿[LevelInfo3]
+; EN: Title="The Darkening"
+Title="Mörkningen"
+
+[LevelSummary]
+; EN: Title="The Darkening"
+Title="Mörkningen"
+
+[TranslatorEvent10]
+; EN: Message="The Source Antechamber, ACCESS DENIED."
+Message="Källkammaren, ACCESS NENIED."
+
+[TranslatorEvent0]
+; EN: AltMessage="Authorization granted. Activate the Emergency Power Supply."
+AltMessage="Auktorisation beviljad. Aktivera nödströmförsörjningen."

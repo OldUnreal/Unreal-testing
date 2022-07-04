@@ -1,0 +1,18 @@
+﻿[LevelInfo4]
+; EN: Title="Yousa follow me now, okiday?"
+Title="Du følger meg nå, okiday?"
+; EN: LevelEnterText="What the hell are you doing here..."
+LevelEnterText="Hva i all verden gjør du her..."
+
+[LevelSummary]
+; EN: Title="Yousa follow me now, okiday?"
+Title="Du følger meg nå, okiday?"
+; EN: LevelEnterText="What the hell are you doing here..."
+LevelEnterText="Hva i all verden gjør du her..."
+
+[TransitionGenderEvent4]
+OutDelays[1]=23.500000
+; EN: MaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
+MaleText[0]="Jeg er nær! Jeg har sett det første beviset på krasjstedet. Under et tøft slag gjennom en landsby i Nali fylt med Skaarj, kom jeg over biter av et krasjet Terran-skip. Ruskene ble såret fra re-entry og spredt over et bredt område. Jeg håper hun ikke brøt opp i luften ... hvis den gjorde det, vil det ikke være noen kjerner å komme seg. Krasjstedet er veldig nært. Jeg er nesten fri hjemme."
+; EN: FemaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
+FemaleText[0]="Jeg er nær! Jeg har sett det første beviset på krasjstedet. Under et tøft slag gjennom en landsby i Nali fylt med Skaarj, kom jeg over biter av et krasjet Terran-skip. Ruskene ble såret fra re-entry og spredt over et bredt område. Jeg håper hun ikke brøt opp i luften ... hvis den gjorde det, vil det ikke være noen kjerner å komme seg. Krasjstedet er veldig nært. Jeg er nesten fri hjemme."

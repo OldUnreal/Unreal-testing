@@ -1,0 +1,61 @@
+﻿[LevelInfo0]
+Title="Vortex Rikers"
+
+[LevelSummary]
+Title="Vortex Rikers"
+
+[TranslatorEvent11]
+; EN: Message="ATTENTION ALL PRISONERS: Remember, be kind to your cellmate. Violence will not be tolerated."
+Message="OBS! Alle fanger: Husk, vær snill mot cellen din. Vold vil ikke tolereres."
+; EN: Hint="Go to the air duct to escape."
+Hint="Gå til luftkanalen for å unnslippe."
+
+[TranslatorEvent1]
+; EN: Message="First Officer's Log: Vortex Rikers. The prisoners have become more and more restless as we get closer to the prison moon. Security says they have the prisoners under control but several have had to be taken to Med Lab for treatment."
+Message="Førstelederlogg: Vortex Rikers. Fangene har blitt mer og mer rastløse når vi kommer nærmere fengselsmånen. Sikkerhet sier at de har fangene under kontroll, men flere har måttet føres til Med Lab for behandling."
+
+[TranslatorEvent0]
+; EN: Message="Navigator's Log: Vortex Rikers. We are on route to the prison moon. Long range sensors are detecting uncharted magnetic masses in Gamma Sector 83H. The captain has ordered a change in course."
+Message="Navigatørlogg: Vortex Rikers. Vi er på vei til fengselsmånen. Sensorer med lang rekkevidde oppdager ukjente magnetiske masser i Gamma Sector 83H. Kapteinen har beordret kursendring."
+; EN: Hint="Bump your head on the switch in the Armoury to deactivate the force field."
+Hint="Støt hodet på bryteren i Armory for å deaktivere kraftfeltet."
+
+[TranslatorEvent2]
+; EN: Message="Captain's Log S. Kroon: Vortex Rikers. Altering our course may have proven detrimental to our mission. We are caught in the gravitational field of an uncharted planet. I have ordered the engine foreman to divert power to the drives."
+Message="Captain's Log S. Kroon: Vortex Rikers. Å endre kurs kan ha vist seg å være skadelig for vårt oppdrag. Vi er fanget i gravitasjonsfeltet til en ukjent planet. Jeg har beordret motorformannen å avlede kraft til stasjonene."
+
+[TranslatorEvent10]
+; EN: Message="ATTENTION ALL PRISONERS: Lights out tonight at 20:00. No exceptions."
+Message="OBS alle fanger: Lyser i kveld klokken 20.00. Ingen unntak."
+; EN: Hint="Go to the air duct to escape."
+Hint="Gå til luftkanalen for å unnslippe."
+
+[TranslatorEvent6]
+; EN: Message="Chief Security Guard's Log: Prison vessel 254 Vortex Rikers. They've pulled all power to the drives, to no effect. We're spiraling towards the planet. I don't know what is going to happen to us."
+Message="Hovedsikkerhetsvaktens logg: Fangenskip 254 Vortex Rikers. De har trukket all kraft til stasjonene, uten effekt. Vi spiralerer mot planeten. Jeg vet ikke hva som kommer til å skje med oss."
+; EN: Hint="Shoot the glass to open the hatch."
+Hint="Skyt glasset for å åpne luken."
+
+[TranslatorEvent5]
+; EN: Message="Engine Foreman's Log: Prison vessel 254 Vortex Rikers. I am juicing up all the power I can to escape from the gravitational pull of this mysterious planet. It doesn't seem to be working."
+Message="Engine Foreman's Log: Prison ship 254 Vortex Rikers. Jeg saver opp all den kraften jeg kan for å unnslippe gravitasjonstrekket til denne mystiske planeten. Det ser ikke ut til å virke."
+
+[TranslatorEvent8]
+; EN: Message="Boris Clague's Diary, day 3: I have been here but three days and already I have two cracked ribs, a fractured thigh, and fourteen stitches. I don't know if I'll make it to the prison moon, much less to the end of next week."
+Message="Boris Clagues dagbok, dag 3: Jeg har vært her men tre dager, og allerede har jeg to sprukne ribbeina, et lårbrudd og fjorten masker. Jeg vet ikke om jeg kommer til fengselsmånen, langt mindre til slutten av neste uke."
+
+[TranslatorEvent7]
+; EN: Message="Jonas Gershwin's Diary, day 204: There was another roach in my lunch today. I wonder how they make it on board starships such as this one. If that bitch in cell 4A keeps looking at me funny I swear I'm going to rip out her larynx!"
+Message="Jonas Gershwins dagbok, dag 204: Det var nok en mort i lunsjen min i dag. Jeg lurer på hvordan de gjør det ombord på stjerneskip som dette. Hvis den tispa i celle 4A fortsetter å se på meg morsom, sverger jeg at jeg skal rive ut strupehodet hennes!"
+
+[TranslatorEvent9]
+; EN: Message="Benjamin Nathaniel's Diary, day 93: Today is my birthday. I will celebrate by attempting to start another prison riot."
+Message="Benjamin Nathaniel's Diary, dag 93: I dag er det bursdagen min. Jeg vil feire ved å prøve å starte et nytt fengselsopprør."
+
+[TranslatorEvent12]
+; EN: Message="Prisoner 853, James Cavanaugh ready for electrocution."
+Message="Fange 853, James Cavanaugh klar for elektrosjokk."
+
+[TranslatorEvent3]
+; EN: Message="Chief Medical Officer's Log: Prison vessel 254 Vortex Rikers. The constant fighting between prisoners seems to be getting worse. At this rate, I will be out of supplies long before we reach the prison moon."
+Message="Overhudslog: Logg i fengsel 254 Vortex Rikers. Den konstante kampen mellom fanger ser ut til å bli verre. I denne hastigheten vil jeg være tom for forsyninger lenge før vi når fengselsmånen."

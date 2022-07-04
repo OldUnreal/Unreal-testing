@@ -1,5 +1,4 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Domyślna")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -156,8 +155,6 @@ HelpParm[1]="AllAdmin"
 HelpDesc[1]="Nadaje wszystkim graczom uprawnienia administracyjne."
 
 [Console]
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Konsola Domyślna Unreal"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="WCZYTYWANIE W TOKU"
 ; EN: SavingMessage="SAVING"
@@ -168,10 +165,6 @@ ConnectingMessage="ŁĄCZENIE W TOKU"
 PausedMessage="GRA ZATRZYMANA"
 ; EN: PrecachingMessage="PRECACHING"
 PrecachingMessage="BUFOROWANIE W TOKU"
-; EN: ChatChannel="(CHAT) "
-ChatChannel="(OGÓL.) "
-; EN: TeamChannel="(TEAM) "
-TeamChannel="(DRUŻ.) "
 
 [Menu]
 MenuList=" "

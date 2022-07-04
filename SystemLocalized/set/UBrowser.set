@@ -1,0 +1,187 @@
+﻿[Public]
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
+
+[UBrowserGSpyLink]
+; EN: ResolveFailedError="The master server could not be resolved: "
+ResolveFailedError="Masterservern kunde inte lösas: "
+; EN: TimeOutError="Timeout talking to the master server"
+TimeOutError="Timeout för att prata med huvudservern"
+; EN: CouldNotConnectError="Connecting to the master server timed out: "
+CouldNotConnectError="Anslutning till huvudservern har gått ut: "
+
+[UBrowserHTTPLink]
+; EN: ResolveFailedError="The master server could not be resolved: "
+ResolveFailedError="Masterservern kunde inte lösas: "
+; EN: TimeOutError="Timeout talking to the master server"
+TimeOutError="Timeout för att prata med huvudservern"
+; EN: CouldNotConnectError="Connecting to the master server timed out: "
+CouldNotConnectError="Anslutning till huvudservern har gått ut: "
+
+[UBrowserSubsetFact]
+; EN: NotFoundError="Could not find the window: "
+NotFoundError="Kunde inte hitta fönstret: "
+; EN: NotReadyError="Window is not ready: "
+NotReadyError="Fönstret är inte klart: "
+
+[UBrowserRulesGrid]
+; EN: RuleText="Rule"
+RuleText="Regel"
+; EN: ValueText="Value"
+ValueText="Värde"
+
+[UBrowserServerListWindow]
+; EN: InfoName="Info"
+InfoName="Info"
+; EN: PlayerCountName="Players"
+PlayerCountName="Spelare"
+; EN: ServerCountName="Servers"
+ServerCountName="Servrar"
+; EN: QueryServerText="Querying Master Server (hit F5 if nothing happens)"
+QueryServerText="Fråga efter Master Server (tryck på F5 om inget händer)"
+; EN: QueryFailedText="Master Server Failed: "
+QueryFailedText="Master Server misslyckades: "
+; EN: PingingText="Pinging Servers"
+PingingText="Pinging-servrar"
+; EN: CompleteText="Complete"
+CompleteText="Komplett"
+
+[UBrowserServerPing]
+; EN: AdminEmailText="Admin Email"
+AdminEmailText="Admin-e-post"
+; EN: AdminNameText="Admin Name"
+AdminNameText="Admin namn"
+; EN: ChangeLevelsText="Change Levels"
+ChangeLevelsText="Ändra nivåer"
+; EN: MultiplayerBotsText="Bots in Multiplayer"
+MultiplayerBotsText="Bots i multiplayer"
+; EN: FragLimitText="Frag Limit"
+FragLimitText="Frag Limit"
+; EN: TimeLimitText="Time Limit"
+TimeLimitText="Tidsgräns"
+; EN: GameModeText="Game Mode"
+GameModeText="Spelläge"
+; EN: GameTypeText="Game Type"
+GameTypeText="Speltyp"
+; EN: GameVersionText="Game Version"
+GameVersionText="Spelversion"
+; EN: GameSubVersionText="Game SubVersion"
+GameSubVersionText="Game SubVersion"
+; EN: WorldLogText="ngStats World Stat-Logging"
+WorldLogText="ngStats World Stat-Logging"
+; EN: TrueString="Enabled"
+TrueString="Aktiverad"
+; EN: FalseString="Disabled"
+FalseString="Inaktiverad"
+; EN: MapFileString="Map Filename"
+MapFileString="Karta Filnamn"
+; EN: DLLString="C++ Library"
+DLLString="C ++ bibliotek"
+; EN: DLLVerString="%ls (ver %i)"
+DLLVerString="%ls (ver %i)"
+; EN: WebURLString="Website URL"
+WebURLString="webbadress"
+; EN: ServerOSString="Server OS"
+ServerOSString="Server OS"
+; EN: GameClassString="Game Class"
+GameClassString="Spelklass"
+
+[UBrowserMainClientWindow]
+; EN: FavoritesName="Favorites"
+FavoritesName="Favoriter"
+; EN: NewsName="Community News"
+NewsName="Community Nyheter"
+; EN: RecentName="Recent servers"
+RecentName="Senaste servrar"
+
+[UBrowserServerGrid]
+; EN: ServerName="Server"
+ServerName="Server"
+; EN: PingName="Ping"
+PingName="Ping"
+; EN: MapNameName="Map Name"
+MapNameName="Kartnamn"
+; EN: PlayersName="Players"
+PlayersName="Spelare"
+; EN: VersionName="Version"
+VersionName="Version"
+
+[UBrowserInfoMenu]
+; EN: RefreshName="&Refresh Info"
+RefreshName="&Uppdatera info"
+; EN: AttachName="&Attach"
+AttachName="&Bifoga"
+; EN: CloseName="&Close"
+CloseName="&Stänga"
+
+[UBrowserMainWindow]
+; EN: WindowTitleString="Unreal Server Browser"
+WindowTitleString="Serverläsare Unreal"
+
+[UBrowserRightClickMenu]
+; EN: RefreshName="&Refresh All Servers"
+RefreshName="&Uppdatera alla servrar"
+; EN: FavoritesName="Add to &Favorites"
+FavoritesName="Lägg till i favoriter"
+; EN: RefreshServerName="&Ping This Server"
+RefreshServerName="&Ping den här servern"
+; EN: InfoName="&Server and Player Info"
+InfoName="&Server- och spelarinfo"
+; EN: PingAllName="Ping &All Servers"
+PingAllName="Ping &alla servrar"
+; EN: RemoveFavoritesName="Remove from &Favorites"
+RemoveFavoritesName="Ta bort från favoriter"
+; EN: JoinPasswordName="Join with &Password"
+JoinPasswordName="Gå med &Lösenord"
+; EN: JoinServerName="&Join server"
+JoinServerName="&Gå med i servern"
+; EN: SpectateServerName="Join as &Spectator"
+SpectateServerName="Gå med som &Åskådare"
+; EN: ServerWebsiteName="Show server &Website"
+ServerWebsiteName="Visa server &webbplats"
+; EN: CopyAddressName="&Copy server address"
+CopyAddressName="&Kopiera serveradress"
+
+[UBrowserPlayerGrid]
+; EN: NameText="Name"
+NameText="namn"
+; EN: FragsText="Frags"
+FragsText="Frags"
+; EN: PingText="Ping"
+PingText="Ping"
+; EN: TeamText="Team"
+TeamText="Team"
+; EN: MeshText="Mesh"
+MeshText="Maska"
+; EN: SkinText="Skin"
+SkinText="Hud"
+; EN: IDText="ID"
+IDText="ID"
+
+[UBrowserLibPageWindow]
+; EN: DLLTitleStr="Can't connect: Missing Dynamic Link Library %ls."
+DLLTitleStr="Det går inte att ansluta: Dynamiskt länkbibliotek %ls saknas."
+; EN: DLLVerTitleStr="Can't connect: Dynamic Link Library version mismatched %ls."
+DLLVerTitleStr="Det går inte att ansluta: Dynamic Link Library-versionen matchar inte %ls."
+; EN: InfoText[0]="To connect this server you will need additional C++ library %ls."
+InfoText[0]="För att ansluta den här servern behöver du ytterligare C ++ - bibliotek %ls."
+; EN: InfoText[1]="For more info view the external info from below (hosted by %ls):"
+InfoText[1]="För mer info se den externa informationen nedan (värd %ls):"
+
+[UBrowserConsole]
+; EN: ClassCaption="Unreal Browser Console"
+ClassCaption="Unreal webbläsarkonsol"
+
+[UBrowserOpenBar]
+; EN: OpenText="Open:"
+OpenText="Öppet:"
+; EN: OpenHelp="Enter a standard URL, or select one from the URL history. Press Enter to activate."
+OpenHelp="Ange en standard-URL eller välj en ur URL-historiken. Tryck på Enter för att aktivera."
+
+[UBrowserServerWebWin]
+; EN: WindowTitle="Unreal Web Explorer"
+WindowTitle="Unreal Web Explorer"
+
+[UBrowserServerWebCW]
+; EN: RefreshString="Refresh page"
+RefreshString="Uppdatera sida"

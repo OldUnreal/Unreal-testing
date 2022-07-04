@@ -1,0 +1,40 @@
+﻿[LevelInfo2]
+Title="Na Pali Haven"
+; EN: LevelEnterText="Entering Na Pali Haven"
+LevelEnterText="Kommer in i Na Pali Haven"
+
+[LevelSummary]
+Title="Na Pali Haven"
+; EN: LevelEnterText="Entering Na Pali Haven"
+LevelEnterText="Kommer in i Na Pali Haven"
+
+[TranslatorEvent0]
+; EN: Message="I have gathered all of these strange artifacts in the hope that the Messiah shall make use of them in the quest to free us from the Sky Demons. I know not what their uses are but the signs were clear, the stars foretold the need."
+Message="Jag har samlat alla dessa konstiga artefakter i hopp om att Messias ska använda dem i strävan att befria oss från Sky Demons. Jag vet inte vad deras användning är men tecknen var tydliga, stjärnorna förutsade behovet."
+
+[TranslatorEvent7]
+Message="Mountain Base Underwater Entrance Door Controls"
+
+[TranslatorEvent6]
+; EN: Message="All security forces must keep the Nali townsfolk under control. Kill all those who show signs of resistance. We only need to maintain enough pliable workers to mine the Tarydium."
+Message="Alla säkerhetsstyrkor måste hålla Nali-städerna under kontroll. Döda alla som visar tecken på motstånd. Vi behöver bara behålla tillräckligt med smidiga arbetare för att bryta Tarydium."
+
+[TranslatorEvent5]
+; EN: Message="Observation Center: The Eye Sees and The Mind Knows. Remember not to disturb the Nali townsfolk unnecessarily as their belief that they are still free prevents outright rebellion. This false hope is our primary control mechanism."
+Message="Observationscenter: ögat ser och sinnet vet. Kom ihåg att inte störa Nali-städerna i onödan eftersom deras tro att de fortfarande är fria förhindrar direkt uppror. Detta falska hopp är vår primära kontrollmekanism."
+
+[TranslatorEvent4]
+; EN: Message="Outer Doors Release Lever"
+Message="Frigöringsspak för ytterdörrar"
+
+[TranslatorEvent3]
+; EN: Message="I don't understand why they toy with us. My establishment used to be a place of laughter and joy for my fellow citizens. Now I just serve the whims of the Sky Demons in exchange for the life of my family. I await the Messiah."
+Message="Jag förstår inte varför de leker med oss. Min anläggning brukade vara en plats för skratt och glädje för mina medborgare. Nu tjänar jag bara Sky Demons nycklar i utbyte mot min familjs liv. Jag väntar på Messias."
+
+[TranslatorEvent2]
+; EN: Message="I've seen strange flying beasts vanishing into the depths of the mountain at night. The roar as they fly overhead is deafening. Never before have I heard its like. I feel that a great evil must dwell within the mountain."
+Message="Jag har sett konstiga flygande djur försvinna in i bergets djup på natten. Bruset när de flyger över huvudet är dövande. Aldrig tidigare har jag hört det. Jag känner att en stor ondska måste bo inom berget."
+
+[TranslatorEvent1]
+; EN: Message="They let us go about our business here, but it is a farce. I know that they are watching us, controlling us. I believe this once safe haven is as deadly as the surface planet below."
+Message="De lät oss gå vidare med vår verksamhet här, men det är en fars. Jag vet att de tittar på oss och kontrollerar oss. Jag tror att denna en gång säkra tillflyktsort är lika dödlig som ytplaneten nedanför."

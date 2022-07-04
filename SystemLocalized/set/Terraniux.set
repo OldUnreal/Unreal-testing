@@ -1,0 +1,91 @@
+﻿[LevelInfo0]
+Title="Terraniux"
+
+[LevelSummary]
+Title="Terraniux"
+
+[TranslatorEvent3]
+; EN: Message="Control Room Status: Pressurized and locked. Do not access except in case of emergency situation."
+Message="Kontrollrumsstatus: Tryck och låst. Åtkomst inte utom i nödsituationer."
+
+[TranslatorEvent4]
+; EN: Message="Security Status: Intruder detected at entrance. Activating security screens on Scientific Research Lab and Hydroponics Section. All security elements deploy around access points in Sections A, B and C to deny intruder access to Lift 1."
+Message="Säkerhetsstatus: Inbrott upptäcktes vid ingången. Aktivera säkerhetsskärmar på sektionen Scientific Research Lab and Hydroponics. Alla säkerhetselement distribueras runt åtkomstpunkter i avsnitt A, B och C för att neka inkräktare tillgång till Lift 1."
+; EN: Hint="Find the Containment rooms A, B and C and activate the buttons to access the Lift 1."
+Hint="Hitta inneslutningsrummen A, B och C och aktivera knapparna för att komma åt Lift 1."
+
+[TranslatorEvent5]
+; EN: Message="Drainage Status: Biowaste flow is at nominal levels. All pumps operational. Section C empty and available for any Biowaster overflow. Please be sure that the regular pipe maintenance is handled."
+Message="Dräneringsstatus: Bioavfallsflödet är på nominella nivåer. Alla pumpar är i drift. Avsnitt C tomt och tillgängligt för överflöd av Biowaster. Se till att regelbundet rörunderhåll hanteras."
+
+[TranslatorEvent0]
+; EN: Message="Section B: Status 48% full."
+Message="Avsnitt B: Status 48% full."
+
+[TranslatorEvent10]
+; EN: Message="Greenhouse B: Please verify that the Biowaste is being pumped through the Control Room filters and that no foreign objects are blocking the flow."
+Message="Växthus B: Kontrollera att bioavfallet pumpas genom kontrollrumsfiltret och att inga främmande föremål blockerar flödet."
+
+[Trigger32]
+; EN: Message="Lift to Noork's Elbow activated"
+Message="Lyft till Noorks armbåge aktiverad"
+
+[TranslatorEvent1]
+; EN: Message="Section A: Status full. Biowaste redirect to Section B active."
+Message="Avsnitt A: Status full. Bioavfall omdirigeras till avsnitt B aktiv."
+
+[TranslatorEvent8]
+; EN: Message="Access Denied. Control Room authorization must be granted to access Noork's Elbow."
+Message="Tillträde beviljas ej. Kontrollrumstillstånd måste beviljas för att komma åt Noorks armbåge."
+; EN: AltMessage="Access granted."
+AltMessage="Tillgång beviljad."
+; EN: Hint="If you swim down in the BioWaste you can access the Control Room."
+Hint="Om du simmar ner i BioWaste kan du komma åt kontrollrummet."
+
+[TranslatorEvent2]
+; EN: Message="Section C: Status Empty, this Containment Room is damaged, please avoid sending BioWaste here until we can fix it."
+Message="Avsnitt C: Status tom, detta inneslutningsrum är skadat, undvik att skicka BioWaste hit tills vi kan fixa det."
+
+[TranslatorEvent6]
+; EN: Message="Lift 1: Security Lock, Access denied. Containment room pumps must be active for entrance to hydroponic greenhouses."
+Message="Hiss 1: Säkerhetslås, åtkomst nekad. Förvaringsrumspumpar måste vara aktiva för att komma in i hydroponiska växthus."
+; EN: AltMessage="Lift 1: Status working. Access to hydroponic gardens permitted."
+AltMessage="Hiss 1: Status fungerar. Tillgång till hydroponiska trädgårdar tillåten."
+
+[TranslatorEvent7]
+; EN: Message="Lift 2 Status: A broken pipe was reported."
+Message="Lift 2 Status: Ett trasigt rör rapporterades."
+; EN: Hint="This Lift is broken, but verify the pipes, something interesting could be hidden."
+Hint="Denna hiss är trasig, men verifiera rören, något intressant kan döljas."
+
+[TranslatorEvent9]
+; EN: Message="Greenhouse A: Section A is full. Biowaste flow must be redirected from the Control Room. Section B of the waste facility has free capacity. Please be sure to monitor the water supply for impurities."
+Message="Växthus A: Avsnitt A är fullt. Bioavfallsflödet måste omdirigeras från kontrollrummet. Avdelning B i avfallsanläggningen har ledig kapacitet. Var noga med att övervaka vattentillförseln med avseende på föroreningar."
+; EN: Hint="The Biowaste is filtered in the Control Room."
+Hint="Bioavfallet filtreras i kontrollrummet."
+
+[TranslatorEvent11]
+; EN: Message="Greenhouse B: The Karkilys Zegnus need more fertilizer. Please dispatch a group of guards to inspect the Nali homes in the Noork's Elbow. Disembarkment authorization must be granted in the Control Room."
+Message="Växthus B: Karkilys Zegnus behöver mer gödselmedel. Skicka en grupp vakter för att inspektera Nali-hemmen i Noorks armbåge. Avstigningstillstånd måste beviljas i kontrollrummet."
+
+[TranslatorEvent12]
+; EN: Message="Greenhouse C: The night is coming soon, please maintain careful control of the hygrometric level and air temperature. Constant monitoring is necessary to keep them within appropriate levels."
+Message="Växthus C: Natten kommer snart, behåll noggrann kontroll av den hygrometriska nivån och lufttemperaturen. Konstant övervakning är nödvändig för att hålla dem på lämpliga nivåer."
+
+[TranslatorEvent13]
+; EN: Message="Control Room, ACCESS DENIED."
+Message="Kontrollrum, ÅTKOMST NÄTT."
+; EN: Hint="You must find another way to go in this room."
+Hint="Du måste hitta ett annat sätt att gå i det här rummet."
+
+[TranslatorEvent14]
+; EN: Message="Access Denied. Control Room authorization must be granted to access Noork Elbow."
+Message="Tillträde beviljas ej. Kontrollrumstillstånd måste beviljas för att komma åt Noork Elbow."
+
+[Trigger46]
+; EN: Message="Access Room security locks disengaged."
+Message="Access Room säkerhetslås urkopplade."
+
+[TranslatorEvent15]
+; EN: Message="Pump activated, Biowaste transferred in section B."
+Message="Pump aktiverad, Bioavfall överfört i avsnitt B."

@@ -1,5 +1,4 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -129,8 +128,6 @@ FailedView="Ansicht konnte nicht geändert werden."
 CantChangeNameMsg="Namensänderung in globalem Spiel nicht möglich."
 
 [Console]
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Standard-Unreal-Konsole"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="LADEVORGANG"
 ; EN: SavingMessage="SAVING"

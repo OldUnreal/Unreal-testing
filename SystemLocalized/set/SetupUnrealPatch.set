@@ -1,0 +1,96 @@
+﻿[Setup]
+LocalProduct="Unreal Gold"
+DefaultFolder="C:\Program Files (x86)\UnrealGold"
+ReadMe="Help\227ReleaseNotes.pdf"
+; EN: SetupWindowTitle="Unreal Gold Setup"
+SetupWindowTitle="Unreal Gold inställning"
+; EN: AutoplayWindowTitle="Unreal Gold Options"
+AutoplayWindowTitle="Unreal Gold alternativ"
+ProductURL="https://www.oldunreal.com/"
+VersionURL="https://www.oldunreal.com"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 av Oldunreal"
+DeveloperURL="https://www.oldunreal.com/"
+Logo="Help\Logo.bmp"
+
+[UnrealRequirement]
+LocalProduct="Unreal Gold"
+ProductURL="https://www.epicgames.com/"
+VersionURL="https://www.epicgames.com/"
+; EN: Developer="Epic Games, Inc. - 227 by Oldunreal"
+Developer="Epic Games, Inc. - 227 av Oldunreal"
+DeveloperURL="https://www.oldunreal.com/"
+
+[LinuxGroup]
+; EN: Caption="Linux native files"
+Caption="Inbyggda Linux-filer"
+; EN: Description="Copies all files required to run and play Unreal natively in Linux. There is no Advanced Options menu yet, but all settings are noted and can be edited in the UnrealLinux.ini in the System folder. The level editor UnrealED 2.2 is not available in Linux yet. If you have trouble starting the game, there is more information and a FAQ inside the ReleaseNotes in the Help directory. If your system doesn't provide all libraries, there is a package called lin_convenience_libs.tar.bz2 in the Help folder which should contain all the necessary files."
+Description="Kopierar alla filer som krävs för att köra och spela Unreal inbyggt i Linux. Det finns ingen meny för avancerade alternativ ännu, men alla inställningar noteras och kan redigeras i UnrealLinux.ini i systemmappen. Nivåredigeraren UnrealED 2.2 är inte tillgänglig i Linux än. Om du har problem med att starta spelet finns det mer information och en FAQ i ReleaseNotes i hjälpkatalogen. Om ditt system inte tillhandahåller alla bibliotek finns det ett paket som heter lin_convenience_libs.tar.bz2 i hjälpmappen som ska innehålla alla nödvändiga filer."
+
+[OldWeaponsGroup]
+; EN: Caption="Old Weapons"
+Caption="Gamla vapen"
+; EN: Description="Copies the Old Weapons mutator files. These files allow you to play with the weapons of Unreal version 200. Details can be found in the OldWeaponsReadme.txt in the help folder."
+Description="Kopierar de gamla vapenmutatorfilerna. Med dessa filer kan du spela med vapnen i Unreal version 200. Detaljer finns i OldWeaponsReadme.txt i hjälpmappen."
+
+[LinuxARMGroup]
+; EN: Caption="Linux ARM (64-bit) version files"
+Caption="Filer för 64-bitarsversionen av Linux ARM"
+; EN: Description="64-bit Linux ARM version of the game (Cortex-A72 CPU and compatible). The files will be installed in the Unreal/SystemARM folder."
+Description="Spelfiler för 64-bitarsversionen av Linux ARM (Cortex-A72-processor och kompatibel). Filerna kommer att installeras i Unreal/SystemARM-mappen."
+
+[Linux64Group]
+; EN: Caption="Linux 64-bit version files"
+Caption="Filer för 64-bitarsversionen av Linux"
+; EN: Description="64-bit Linux version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not use any ini settings from the 32-bit version."
+Description="Spelfiler för 64-bitarsversionen av Linux. Filerna kommer att installeras i Unreal/System64-mappen. 64-bitarsversionen kommer inte att använda några ini-inställningar från 32-bitarsversionen."
+
+[Windows64Group]
+; EN: Caption="Windows 64-bit version files"
+Caption="Filer för 64-bitarsversionen av Windows"
+; EN: Description="64-bit Windows version of the game. The files will be installed in the Unreal/System64 folder. The 64-bit version will not use any ini settings from the 32-bit version."
+Description="Spelfiler för 64-bitarsversionen av Windows. Filerna kommer att installeras i Unreal/System64-mappen. 64-bitarsversionen kommer inte att använda några ini-inställningar från 32-bitarsversionen."
+
+[GameGroup]
+; EN: Caption="Unreal Game"
+Caption="Unreal Spel"
+; EN: Description="Unreal game. Installation is required."
+Description="Unreal Spel. Installation krävs."
+
+[EditorGroup]
+; EN: Caption="Unreal Editor"
+Caption="Unreal Editor"
+; EN: Description="Unreal world editor, for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Unreal nivåredigerare, för att kunna skapa dina egna Unreal 3D-miljöer. För avancerade användare är installationen valfri."
+
+[Editor64Group]
+; EN: Caption="Unreal Editor (64-bit)"
+Caption="Unreal Editor (64-bitars)"
+; EN: Description="Unreal world editor (64-bit version), for creating your own 3D Unreal environments. For advanced users; installation is optional."
+Description="Unreal nivåredigerare (64-bitars version), för att kunna skapa dina egna Unreal 3D-miljöer. För avancerade användare är installationen valfri."
+
+[PlayShortcut]
+; EN: Caption="Play Unreal"
+Caption="Spela Unreal"
+
+[Play64Shortcut]
+; EN: Caption="Play Unreal (64-bit)"
+Caption="Spela Unreal (64 bitar)"
+
+[FactoryResetGroup]
+; EN: Caption="Reset all settings"
+Caption="Återställ alla inställningar"
+; EN: Description="Recommended! Reset all ini settings back to default. Keeping your old ini settings may cause problems with this version; this setting is optional."
+Description="Rekommenderas! Ställ in alla dina personliga Unreal-inställningar till deras standardvärden. Att behålla de gamla värdena kan orsaka problem med den här versionen; det här alternativet är valfritt."
+
+[ConsoleGroup]
+; EN: Caption="Classic Menu"
+Caption="Klassisk Meny"
+; EN: Description="Use the classic UBrowser menu instead of UMenu. For the classic experience, this original menu is keyboard based and the standard console before UMenu was introduced in Unreal Gold/Unreal Tournament."
+Description="Använd den klassiska UBrowser-menyn istället för UMenu för att få den klassiska upplevelsen. Den här menyn är tangentbordsbaserad och brukade vara standardmenyn fram till introduktionen av UMenu i Unreal Gold/Unreal Tournament."
+
+[RTNPGroup]
+; EN: Caption="Return to Na Pali Expansion Support"
+Caption="Stöd för Return to Na Pali Expansion"
+; EN: Description="This installs support for the Return to Na Pali expansion pack. This pack was sold separately and later included in Unreal Gold and Unreal Anthology versions. Do not install if you have the classic version only (226f)."
+Description="Det här alternativet installerar stöd för expansionspaketet Return to Na Pali. Denna expansion brukade säljas separat och inkluderas sedan i versionerna Unreal Gold och Unreal Anthology. Installera inte om du bara har basspelet installerat (226f)."

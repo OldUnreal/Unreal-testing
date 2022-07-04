@@ -1,0 +1,15 @@
+﻿[LevelInfo0]
+Title="Tundra"
+IdealPlayerCount="3-8"
+
+[LevelSummary]
+Title="Tundra"
+IdealPlayerCount="3-8"
+
+[Sludge0]
+; EN: PickupMessage="You Got a GEL Cartridge"
+PickupMessage="Du har en GEL-kassett"
+
+[Sludge1]
+; EN: PickupMessage="You Got a GEL Cartridge"
+PickupMessage="Du har en GEL-kassett"

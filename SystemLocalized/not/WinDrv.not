@@ -1,0 +1,31 @@
+﻿[Public]
+Class=(Class=WinDrv.WindowsClient,SuperClass=Engine.Client,Compat="Win32,Win64")
+Preferences=(Caption="Windows",Parent="Display",Class=WinDrv.WindowsClient,Immediate=True,Category=Display)
+Preferences=(Caption="Windows",Parent="Joystick",Class=WinDrv.WindowsClient,Immediate=True,Category=Joystick)
+
+[Errors]
+; EN: Failed3D="3D hardware initialization failed"
+Failed3D="Initialisering av 3D-maskinvare mislyktes"
+; EN: DDrawMode="DirectDraw was unable to set the requested video mode."
+DDrawMode="DirectDraw klarte ikke å stille inn ønsket videomodus."
+
+[General]
+; EN: ViewPersp="Perspective map"
+ViewPersp="Perspektivkart"
+; EN: ViewXY="Overhead map"
+ViewXY="Overliggende kart"
+; EN: ViewXZ="XZ map"
+ViewXZ="XZ kart"
+; EN: ViewYZ="YZ map"
+ViewYZ="YZ-kart"
+; EN: ViewOther="Viewport"
+ViewOther="Visningsport"
+; EN: Color16="&16-bit color"
+Color16="&16-biters farge"
+; EN: Color32="&32-bit color"
+Color32="&32-biters farge"
+; EN: AdvancedOptions="Advanced Options"
+AdvancedOptions="Avanserte instillinger"
+
+[WindowsClient]
+ClassCaption="Standard Windows Manager"

@@ -1,0 +1,91 @@
+﻿[LevelInfo0]
+Title="Chizra - Nali Water God"
+; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
+LevelEnterText="Gå in i Chizra - Nali Water God Temple"
+
+[LevelSummary]
+Title="Chizra - Nali Water God"
+; EN: LevelEnterText="Entering Chizra - The Nali Water God Temple"
+LevelEnterText="Gå in i Chizra - Nali Water God Temple"
+
+[TranslatorEvent7]
+; EN: Message="The Nali Water God Chizra and his holy temple has been overrun by the water serpents and the demons who came from the stars. Only the messiah can purify the temple now."
+Message="Nali Water God Chizra och hans heliga tempel har överskridits av vattenslangarna och demonerna som kom från stjärnorna. Endast Messias kan rena templet nu."
+
+[TranslatorEvent11]
+; EN: Message="Take the stick of 6 fires and go forth to the inner ceremonial chamber. There you shall find you way back to the place from whence you came and the metal chariot that fell from the stars."
+Message="Ta pinnen med 6 bränder och gå ut till den inre ceremoniella kammaren. Där hittar du dig tillbaka till platsen varifrån du kom och metallvagnen som föll från stjärnorna."
+
+[TranslatorEvent20]
+; EN: Message="Look into your own eyes. And when your courage is strongest your last step to the prize will be upheld by your faith."
+Message="Titta in i dina egna ögon. Och när ditt mod är starkast kommer ditt sista steg till priset att upprätthållas av din tro."
+
+[TranslatorEvent8]
+; EN: Message="The stick of 6 fires can only be reached by a warrior who has bathed in the pool of thunder, past the obelisk of the clouds."
+Message="Pinnen med 6 bränder kan endast nås av en krigare som har badat i åskbassängen förbi molnens obelisk."
+
+[TranslatorEvent9]
+; EN: Message="The pyramid is the key to the chamber of death. Here you shall find more power for the stick of 6 fires."
+Message="Pyramiden är nyckeln till dödskammaren. Här hittar du mer kraft för pinnen med 6 bränder."
+
+[Counter3]
+; EN: CountMessage="Snap!"
+CountMessage="Knäppa!"
+; EN: CompleteMessage="The raft is loose"
+CompleteMessage="Flotten är lös"
+
+[TranslatorEvent6]
+; EN: Message="Beyond this stone seal lies the inner ceremonial chambers of the Nali water god."
+Message="Utöver denna stenförsegling ligger de inre ceremoniella kamrarna i Nali vattengud."
+
+[TranslatorEvent18]
+; EN: Message="Beyond this golden door lies the holy altar of the stick of 6 fires. Only by touching the outset stones of the lightning fire pillars may one enter."
+Message="Bortom denna gyllene dörr ligger det heliga altaret på pinnen med 6 bränder. Endast genom att vidröra de inledande stenarna i blixteldarna kan man komma in."
+
+[TranslatorEvent14]
+; EN: Message="The demons came down from the stars in a metal chariot as punishment for the sins of The Nali."
+Message="Demonerna kom ner från stjärnorna i en metallvagn som straff för Nalis synder."
+
+[TranslatorEvent5]
+; EN: Message="Only a warrior who wields the stick of 6 fires may enter the inner ceremonial chambers. Once the stick of 6 fires is in your grasp the stone seal will rise."
+Message="Endast en krigare som använder 6 bränder kan komma in i de inre ceremoniella kamrarna. När pinnen med 6 bränder är i ditt grepp kommer stenförseglingen att stiga."
+
+[TranslatorEvent10]
+; EN: Message="THE STICK OF 6 FIRES CAME FROM THE NALI WATER GOD WHEN THE STAR FELL FROM THE SKY. TO FIND THE STAR ONE MUST PASS THROUGH THE CEREMONIAL WING."
+Message="STICKET PÅ 6 BRÄNDER KOM FRÅN NALI VATTENGUD NÄR STJÄRNAN FALD AV HIMMEN. FÖR ATT HITTA STJÄRNAN MÅSTE GÄLLA GENOM DEN CEREMONIALVINGEN."
+
+[TranslatorEvent13]
+; EN: Message="The pyramid's center is the focal point of Chizra the Nali water god's power."
+Message="Pyramidens centrum är kontaktpunkten för Chizra, den Nali vattengudens makt."
+
+[TranslatorEvent19]
+; EN: Message="Climb the loose stones to reach the lagoon of lightning fire. Beware the demon who came from the stars lurks in the shadows. A fool shall surely perish."
+Message="Klättra de lösa stenarna för att nå blixtnedslagning. Akta dig för demonen som kom från stjärnorna som lurar i skuggorna. En dår får förgås."
+
+[TranslatorEvent1]
+; EN: Message="Powerful strength comes from those who let the waterfall wash over them at the pool of thunder."
+Message="Kraftfull styrka kommer från dem som låter vattenfallet tvätta över dem vid åskbassängen."
+
+[TranslatorEvent12]
+; EN: Message="This is the pool of thunder. Impure souls who bathe in the water shall face the demon that came from the stars"
+Message="Det här är åskbassängen. Orena själar som badar i vattnet ska möta demonen som kommer från stjärnorna"
+
+[TranslatorEvent4]
+; EN: Message="Only a warrior who has touched the face of the water god idol may enter this temple."
+Message="Endast en krigare som har rört vattengudgudens ansikte får komma in i detta tempel."
+
+[TranslatorEvent3]
+; EN: Message="To reach the pool of thunder one must climb the loose stones."
+Message="För att nå åskbassängen måste man klättra upp i de lösa stenarna."
+
+[TranslatorEvent15]
+; EN: Message="1400 hours Commander Mac Harrison: SITREP: These local natives have a 6 barreled rocket launcher on an altar but it is heavily guarded by those Salamander things. "The Stick of 6 fires" is what the Nali keep calling it. I'll try to sneak in tonight."
+Message="1400 timmar Befälhavare Mac Harrison: SITREP: Dessa lokala infödingar har en raketskjutare med 6 tunnor på ett altare men den är starkt bevakad av dessa Salamander-saker. "The Stick of 6 fires" är vad Nali fortsätter att kalla det. Jag försöker smyga in ikväll."
+
+[TranslatorEvent2]
+; EN: Message="This is the obelisk of the clouds. Beyond here lies the pool of thunder."
+Message="Detta är molnens obelisk. Bortom här ligger åskbassängen."
+
+[TranslatorEvent0]
+; EN: Message="Beware those of impure motives who enter the pool of thunder shall face the demon from the stars"
+Message="Akta dig för de orena motiv som går in i åskpolen ska möta demonen från stjärnorna"

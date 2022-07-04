@@ -1,0 +1,11 @@
+﻿[LevelInfo0]
+Title="Blood Creek"
+IdealPlayerCount="3-6"
+; EN: LevelEnterText="This doesn't really work, but Tim left it in the game anyways."
+LevelEnterText="Dette fungerer ikke egentlig, men Tim la det uansett i spillet."
+
+[LevelSummary]
+Title="Blood Creek"
+IdealPlayerCount="3-6"
+; EN: LevelEnterText="This doesn't really work, but Tim left it in the game anyways."
+LevelEnterText="Dette fungerer ikke egentlig, men Tim la det uansett i spillet."

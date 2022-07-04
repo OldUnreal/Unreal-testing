@@ -1,0 +1,19 @@
+﻿[LevelInfo2]
+; EN: Title="Velora Temple"
+Title="Velora-tempelet"
+; EN: LevelEnterText="Entering Velora Temple"
+LevelEnterText="Inn i Velora-tempelet"
+
+[LevelSummary]
+; EN: Title="Velora Temple"
+Title="Velora-tempelet"
+; EN: LevelEnterText="Entering Velora Temple"
+LevelEnterText="Inn i Velora-tempelet"
+
+[TranslatorEvent1]
+; EN: Message="LOG: M. Verdu: Lost Leiby and Poesch about an hour ago. They must have made it outside. I think I'm getting close, but it's so dark it's hard to tell. Wait, something just fell off the wall. Coming this way... >>>ERROR<<<"
+Message="LOGG: M. Verdu: Lost Leiby og Poesch for omtrent en time siden. De må ha klart det utenfor. Jeg tror jeg nærmer meg, men det er så mørkt at det er vanskelig å fortelle. Vent, noe bare falt av veggen. Kommer på denne måten ... >>> FEIL <<<"
+
+[TranslatorEvent0]
+; EN: Message="LOG: M. Fox: Someone get me the hell out of here!!"
+Message="LOGG: M. Fox: Noen får meg i helvete herfra !!"

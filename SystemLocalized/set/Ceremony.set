@@ -1,0 +1,25 @@
+﻿[LevelInfo0]
+; EN: Title="The Ceremonial Chambers"
+Title="De ceremoniella kamrarna"
+; EN: LevelEnterText="Entering The Ceremonial Wing"
+LevelEnterText="Kommer in i den ceremoniella vingen"
+
+[LevelSummary]
+; EN: Title="The Ceremonial Chambers"
+Title="De ceremoniella kamrarna"
+; EN: LevelEnterText="Entering The Ceremonial Wing"
+LevelEnterText="Kommer in i den ceremoniella vingen"
+
+[TranslatorEvent15]
+; EN: Message="The inner ceremonial chambers. Here the water god's serpents reside to accept the flesh of the weak to be devoured. Only a warrior who swims like the serpent shall escape their clutches."
+Message="De inre ceremoniella kamrarna. Här bor vattengudens ormar för att ta emot de svagas kött som ska slukas. Endast en krigare som simmar som ormen ska undkomma sina grepp."
+
+[TranslatorEvent0]
+; EN: Message="Sgt. William Bradford: My entire squad has been killed by these salamander things. There's no ammo left and I've been holding up at this shrine with one of the native priests for days. While he prays I try and keep a watchful eye at the door."
+Message="Sgt. William Bradford: Hela truppen har dödats av dessa salamander saker. Det finns ingen ammunition kvar och jag har hållit på den här helgedomen med en av de infödda prästerna i flera dagar. Medan han ber försöker jag hålla ett vakande öga vid dörren."
+
+[Counter2]
+; EN: CountMessage="Prove to the Gods your Warrior Skills"
+CountMessage="Bevisa till gudarna dina krigarefärdigheter"
+; EN: CompleteMessage="Well Done!"
+CompleteMessage="Bra gjort!"
