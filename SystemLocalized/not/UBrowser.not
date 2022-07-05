@@ -1,6 +1,7 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
-Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
+; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Klassisk Meny")
+Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
@@ -169,8 +170,8 @@ InfoText[0]="For å koble til denne serveren, trenger du ekstra C ++ - bibliotek
 InfoText[1]="For mer info, se ekstern info nedenfra (hostet av %ls):"
 
 [UBrowserConsole]
-; EN: ClassCaption="Unreal Browser Console"
-ClassCaption="Uvirkelig nettleserkonsoll"
+; EN: ClassCaption="Classic Menu"
+ClassCaption="Klassisk Meny"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"

@@ -1,13 +1,13 @@
 ﻿[public]
-; EN: Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
-Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Uvirkelig")
-Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu")
 ; EN: Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Gold")
 Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Gull")
 ; EN: Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Ice")
 Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Is")
 ; EN: Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metal")
 Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metall")
+Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
+; EN: Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu (Windows-like)")
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu (Windows-lignende)")
 
 [UMenuBotmatchClientWindow]
 ; EN: StartMatchTab="Match"
@@ -297,8 +297,8 @@ WindowTitle="Lagre spillet"
 WindowTitle="Konfigurer individuelle roboter"
 
 [UnrealConsole]
-; EN: ClassCaption="UMenu Browser Console"
-ClassCaption="UMenu nettleserkonsoll"
+; EN: ClassCaption="UMenu (Windows-like)"
+ClassCaption="UMenu (Windows-lignende)"
 
 [UMenuMenuBar]
 ; EN: GameName="&Game"

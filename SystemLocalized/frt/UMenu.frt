@@ -6,7 +6,8 @@ Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLoo
 ; EN: Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metal")
 Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Métal")
 Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
-Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu")
+; EN: Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu (Windows-like)")
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu (Semb. à Windows)")
 
 [UMenuBotmatchClientWindow]
 ; EN: StartMatchTab="Match"
@@ -1620,8 +1621,8 @@ InstantItemRespawnHelp="Si activé, les items réapparaissent instantanément"
 WindowTitle="Nouveau Jeu Autonome"
 
 [UnrealConsole]
-; EN: ClassCaption="UMenu Browser Console"
-ClassCaption="Console du navigateur UMenu"
+; EN: ClassCaption="UMenu (Windows-like)"
+ClassCaption="UMenu (Semb. à Windows)"
 
 [UMenuWeaponPriorityCW]
 ListAreaWidth=150
