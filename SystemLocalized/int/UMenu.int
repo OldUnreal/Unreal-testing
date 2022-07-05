@@ -3,7 +3,7 @@ Object=(Name=UMenu.UMenuGoldLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLoo
 Object=(Name=UMenu.UMenuBlueLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Ice")
 Object=(Name=UMenu.UMenuMetalLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Metal")
 Object=(Name=UMenu.UMenuUGLookAndFeel,Class=Class,MetaClass=UWindow.UWindowLookAndFeel,Description="Unreal")
-Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu")
+Object=(Name=UMenu.UnrealConsole,Class=Class,MetaClass=Engine.Console,Description="UMenu (Windows-like)")
 
 [UMenuBotmatchClientWindow]
 StartMatchTab="Match"
@@ -910,7 +910,7 @@ InstantItemRespawnHelp="If checked, items will be respawned instantly"
 WindowTitle="New Standalone Game"
 
 [UnrealConsole]
-ClassCaption="UMenu Browser Console"
+ClassCaption="UMenu (Windows-like)"
 
 [UMenuWeaponPriorityCW]
 ListAreaWidth=150

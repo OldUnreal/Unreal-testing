@@ -1,4 +1,6 @@
 ﻿[Public]
+; EN: Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Deprecated)")
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Przestarzałe)")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -155,6 +157,8 @@ HelpParm[1]="AllAdmin"
 HelpDesc[1]="Nadaje wszystkim graczom uprawnienia administracyjne."
 
 [Console]
+; EN: ClassCaption="Standard (Deprecated)"
+ClassCaption="Standard (Przestarzałe)"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="WCZYTYWANIE W TOKU"
 ; EN: SavingMessage="SAVING"

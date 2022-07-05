@@ -1,4 +1,6 @@
 ﻿[Public]
+; EN: Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Deprecated)")
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Veraltet)")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -128,6 +130,8 @@ FailedView="Ansicht konnte nicht geändert werden."
 CantChangeNameMsg="Namensänderung in globalem Spiel nicht möglich."
 
 [Console]
+; EN: ClassCaption="Standard (Deprecated)"
+ClassCaption="Standard (Veraltet)"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="LADEVORGANG"
 ; EN: SavingMessage="SAVING"

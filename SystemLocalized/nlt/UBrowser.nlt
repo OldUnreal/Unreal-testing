@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Klassiek Menu")
 Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -169,8 +170,8 @@ InfoText[0]="Om verbinding te maken met deze server heb je een extra C ++ biblio
 InfoText[1]="Bekijk voor meer informatie de externe informatie onderaan (gehost door %ls):"
 
 [UBrowserConsole]
-; EN: ClassCaption="Unreal Browser Console"
-ClassCaption="Unreal Browser Console"
+; EN: ClassCaption="Classic Menu"
+ClassCaption="Klassiek Menu"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"
