@@ -40,6 +40,7 @@ Message="UMS Prometeusz - Sieć nawigacyjna: Raport: Wejście w atmosferę | Uwa
 
 [TransitionGenderEvent0]
 ; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/plt/Interm5.uax, sounds FLog06b and MLog06b.
+; Also make sure to use MaleText[X] and FemaleText[X] rather than CommonText[X] whenever gender is considered.
 OutDelays[1]=12.000000
 OutDelays[2]=3.000000
 OutDelays[3]=5.000000
@@ -49,9 +50,8 @@ OutDelays[6]=3.000000
 OutDelays[7]=7.000000
 OutDelays[8]=9.000000
 OutDelays[9]=26.000000
-; EN: MaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
+; EN: CommonText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
 MaleText[0]="Jakimś cudem, system komunikacji nadświetlnej 'Prometeusza' nadal działa. Gdy przeszukiwałem centrum łączności, natrafiłem na to nagranie, które zarejestrował komputer:"
-; EN: FemaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
 FemaleText[0]="Jakimś cudem, system komunikacji nadświetlnej 'Prometeusza' nadal działa. Gdy przeszukiwałam centrum łączności, natrafiłam na to nagranie, które zarejestrował komputer:"
 ; EN: CommonText[1]="Deep space warship UMS Bodega Bay..."
 CommonText[1]="Kosmiczny okręt wojenny UMS Bodega Bay..."
@@ -64,10 +64,11 @@ CommonText[4]="Jeszcze jedno, Bodega Bay. Operacja 'Łowca Szponów' ma klasyfik
 ; EN: CommonText[5]="Please clarify, Starlight Base."
 CommonText[5]="Prosimy to uściślić, Baza Gwiezdna."
 ; EN: CommonText[6]="Bodega Bay, make sure prisoner #849 doesn't come back; terminate the prisoner once the job is done."
-CommonText[6]="Bodega Bay, dopilnujcie, żeby więzień #849 nie opuścił planety; zabijcie więźnia natychmiast po zakończeniu misji."
+MaleText[6]="Bodega Bay, dopilnujcie, żeby więzień #849 nie opuścił planety; zabijcie więźnia natychmiast po zakończeniu misji."
+FemaleText[6]="Bodega Bay, dopilnujcie, żeby więzień #849 nie opuścił planety; zabijcie więźnia natychmiast po zakończeniu misji."
 ; EN: CommonText[7]="Understood, Starlight Base. We will dispose of prisoner #849 after Operation 'Talon Hunter' is concluded. Bodega Bay out."
-CommonText[7]="Zrozumiano, Baza Gwiezdna. Wyeliminujemy więźnia #849, gdy tylko dobiegnie końca operacja 'Łowca Szponów'. Bodega Bay, bez odbioru."
-; EN: MaleText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
+MaleText[7]="Zrozumiano, Baza Gwiezdna. Wyeliminujemy więźnia #849, gdy tylko dobiegnie końca operacja 'Łowca Szponów'. Bodega Bay, bez odbioru."
+FemaleText[7]="Zrozumiano, Baza Gwiezdna. Wyeliminujemy więźnia #849, gdy tylko dobiegnie końca operacja 'Łowca Szponów'. Bodega Bay, bez odbioru."
+; EN: CommonText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
 MaleText[8]="Zostałem zdradzony. Czemu mnie to nie dziwi? Powinienem był wiedzieć, czego się spodziewać ze strony tych drani. Wygląda na to, że pozostaje mi postawić wszystko na tą kartę: odzyskać czarne skrzynki, uruchomić nadajnik na mostku i porwać ich prom, gdy po mnie przyjdą. Ryzykowny plan, ale jedyny, jaki mam. Jeżeli mi się nie uda i ktoś znajdzie ten dziennik, może prawda wyjdzie na jaw."
-; EN: FemaleText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
 FemaleText[8]="Zostałam zdradzona. Czemu mnie to nie dziwi? Powinnam była wiedzieć, czego się spodziewać ze strony tych drani. Wygląda na to, że pozostaje mi postawić wszystko na tą kartę: odzyskać czarne skrzynki, uruchomić nadajnik na mostku i porwać ich prom, gdy po mnie przyjdą. Ryzykowny plan, ale jedyny, jaki mam. Jeżeli mi się nie uda i ktoś znajdzie ten dziennik, może prawda wyjdzie na jaw."

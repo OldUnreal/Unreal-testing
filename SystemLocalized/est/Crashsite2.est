@@ -40,6 +40,7 @@ Message="UMS Prometeo - Red de navegación: Estado: Ingreso a la atmósfera dete
 
 [TransitionGenderEvent0]
 ; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/est/Interm5.uax, sounds FLog06b and MLog06b.
+; Also make sure to use MaleText[X] and FemaleText[X] rather than CommonText[X] whenever gender is considered.
 OutDelays[1]=12.000000
 OutDelays[2]=3.000000
 OutDelays[3]=5.000000
@@ -49,16 +50,25 @@ OutDelays[6]=3.000000
 OutDelays[7]=7.000000
 OutDelays[8]=9.000000
 OutDelays[9]=26.000000
+; EN: CommonText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
 MaleText[0]="Milagrosamente, el sistema de comunicaciòn translumínica del Prometeo funciona todavía. Trasteando en el centro de comunicaciones, me topé con esta conversación capturada y registrada por los ordenadores:"
 FemaleText[0]="Milagrosamente, el sistema de comunicaciòn translumínica del Prometeo funciona todavía. Trasteando en el centro de comunicaciones, me topé con esta conversación capturada y registrada por los ordenadores:"
+; EN: CommonText[1]="Deep space warship UMS Bodega Bay..."
 CommonText[1]="Nave del espacio exterior UMS Bodega Bay..."
+; EN: CommonText[2]="...clear to take whatever steps are necessary to ensure the success of Operation 'Talon Hunter'."
 CommonText[2]="...para asegurar el éxito de la operación "Talon Hunter"."
+; EN: CommonText[3]="Acknowledged."
 CommonText[3]="Recibido."
+; EN: CommonText[4]="Ah, Bodega Bay, one more thing, Operation 'Talon Hunter' is classified Deep Ultra. Once you've finished your mission, you must implement measures to eliminate any security risks."
 CommonText[4]="Y una cosa más, Bodega Bay. La Operación "Talon Hunter" se ha clasificado como Ultra-Secreta. Una vez concluida la misión, deben introducir las medidas necesarias para eliminar todo elemento de riesgo potencial."
+; EN: CommonText[5]="Please clarify, Starlight Base."
 CommonText[5]="Starlight Base, solicitamos clarificación."
+; EN: CommonText[6]="Bodega Bay, make sure prisoner #849 doesn't come back; terminate the prisoner once the job is done."
 MaleText[6]="Bodega Bay, asegúrense de que el prisionero 849 no vuelva. Acaben con el prisionero una vez concluida su tarea."
 FemaleText[6]="Bodega Bay, asegúrense de que la prisionera 849 no vuelva. Acaben con la prisionera una vez concluida su tarea."
+; EN: CommonText[7]="Understood, Starlight Base. We will dispose of prisoner #849 after Operation 'Talon Hunter' is concluded. Bodega Bay out."
 MaleText[7]="Entendido Starlight Base. El prisionero 849 será eliminado cuando concluya la operación "Talon Hunter". Bodega Bay, cambio y fuera."
 FemaleText[7]="Entendido Starlight Base. La prisionera 849 será eliminada cuando concluya la operación "Talon Hunter". Bodega Bay, cambio y fuera."
+; EN: CommonText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
 MaleText[8]="¡Traicionado! Ni tan siquiera me sorprende. Debería haber sabido a qué atenerme con esos cerdos. Supongo que lo único que puedo hacer es seguirles el juego. Recuperar los núcleos de datos, activar el ELT del puente, y después intentar secuestrar la lanzadera cuando venga a buscarme. Lo veo difícil, pero no tengo más remedio. Si no lo logro y alguien recupera alguna vez este registro, quizás se llegue a conocer la verdad."
 FemaleText[8]="¡Traicionada! Ni tan siquiera me sorprende. Debería haber sabido a qué atenerme con esos cerdos. Supongo que lo único que puedo hacer es seguirles el juego. Recuperar los núcleos de datos, activar el ELT del puente, y después intentar secuestrar la lanzadera cuando venga a buscarme. Lo veo difícil, pero no tengo más remedio. Si no lo logro y alguien recupera alguna vez este registro, quizás se llegue a conocer la verdad."

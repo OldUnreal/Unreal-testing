@@ -621,7 +621,7 @@ LocalHelp="If checked, your system will log local botmatch and single player tou
 EditAreaWidth=120
 LanguageText="Language"
 LanguageHelp="This is the current game language. Change it and press Restart button."
-ConsoleText="Console"
+ConsoleText="Menu Design"
 ConsoleHelp="This option determines the look of console and menus. Press Restart button to apply the changes."
 
 [UMenuNetworkClientWindow]

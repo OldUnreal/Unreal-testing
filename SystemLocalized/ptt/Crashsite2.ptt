@@ -40,6 +40,7 @@ Message="SMU Prometeu - Rede de navegação: Estado: Entrada na atmosfera detect
 
 [TransitionGenderEvent0]
 ; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/ptt/Interm5.uax, sounds FLog06b and MLog06b.
+; Also make sure to use MaleText[X] and FemaleText[X] rather than CommonText[X] whenever gender is considered.
 OutDelays[1]=12.000000
 OutDelays[2]=3.000000
 OutDelays[3]=5.000000
@@ -49,9 +50,8 @@ OutDelays[6]=3.000000
 OutDelays[7]=7.000000
 OutDelays[8]=9.000000
 OutDelays[9]=26.000000
-; EN: MaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
+; EN: CommonText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
 MaleText[0]="Por algum milagre, o sistema de comunicação transluminal da Prometeu ainda funciona. Enquanto explorávamos o centro de comunicação me deparei com está mensagem capturada e guardada pelos computadores:"
-; EN: FemaleText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
 FemaleText[0]="Por algum milagre, o sistema de comunicação transluminal da Prometeu ainda funciona. Enquanto explorávamos o centro de comunicação me deparei com está mensagem capturada e guardada pelos computadores:"
 ; EN: CommonText[1]="Deep space warship UMS Bodega Bay..."
 CommonText[1]="Nave de espaço profundo SMU Baía Bodega..."
@@ -64,10 +64,11 @@ CommonText[4]="Ah, Baía Bodega, mais uma coisa, a Operação 'Caçada de Talon'
 ; EN: CommonText[5]="Please clarify, Starlight Base."
 CommonText[5]="Por favor exclareça, Base Estelar."
 ; EN: CommonText[6]="Bodega Bay, make sure prisoner #849 doesn't come back; terminate the prisoner once the job is done."
-CommonText[6]="Baía Bodega, tenha certeza que o prisioneiro #849 não volte; elimine o prisioneiro assim que o trabalho estiver feito."
+MaleText[6]="Baía Bodega, tenha certeza que o prisioneiro #849 não volte; elimine o prisioneiro assim que o trabalho estiver feito."
+FemaleText[6]="Baía Bodega, tenha certeza que a prisioneira #849 não volte; elimine a prisioneira assim que o trabalho estiver feito."
 ; EN: CommonText[7]="Understood, Starlight Base. We will dispose of prisoner #849 after Operation 'Talon Hunter' is concluded. Bodega Bay out."
-CommonText[7]="Entendido, Base Estelar. Iremos descartar o prisioneiro #849 depois que a operação 'Caçada de Talon' estiver concluída. Baía Bodega desliga."
-; EN: MaleText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
+MaleText[7]="Entendido, Base Estelar. Iremos descartar o prisioneiro #849 depois que a operação 'Caçada de Talon' estiver concluída. Baía Bodega desliga."
+FemaleText[7]="Entendido, Base Estelar. Iremos descartar a prisioneira #849 depois que a operação 'Caçada de Talon' estiver concluída. Baía Bodega desliga."
+; EN: CommonText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
 MaleText[8]="Eu fui traído. Por quê isto não me surpreende? Eu deveria saber o que esperar daqueles malditos. Acho que tudo que posso fazer é jogar isto longe; recuperar os núcleos de dados, ativar o TLE na ponte e daí tentar sequestrar a espaçonave quando eles tentarem me pegar. É um tiro no escuro, mas é tudo que tenho. Se eu não conseguir e alguém um dia recuperar este registro, talvez a verdade venha à tona."
-; EN: FemaleText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
 FemaleText[8]="Eu fui traída. Por quê isto não me surpreende? Eu deveria saber o que esperar daqueles malditos. Acho que tudo que posso fazer é jogar isto longe; recuperar os núcleos de dados, ativar o TLE na ponte e daí tentar sequestrar a espaçonave quando eles tentarem me pegar. É um tiro no escuro, mas é tudo que tenho. Se eu não conseguir e alguém um dia recuperar este registro, talvez a verdade venha à tona."
