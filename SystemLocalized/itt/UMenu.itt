@@ -1101,8 +1101,8 @@ EditAreaWidth=120
 LanguageText="Linguaggio"
 ; EN: LanguageHelp="This is the current game language. Change it and press Restart button in order to apply changes."
 LanguageHelp="Questa è l'attuale lingua del gioco. Modificalo e premi il pulsante Riavvia per applicare le modifiche."
-; EN: ConsoleText="Console"
-ConsoleText="Console"
+; EN: ConsoleText="Menu Design"
+ConsoleText="Aspetto del Menu"
 ; EN: ConsoleHelp="This option determines the look of console and menus. Press Restart button to apply the changes."
 ConsoleHelp="Questa opzione determina l'aspetto della console e dei menu. Premere il pulsante Riavvia per applicare le modifiche."
 
