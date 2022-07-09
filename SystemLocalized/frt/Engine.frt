@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
+; EN: Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Deprecated)")
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Obsolète)")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -129,8 +130,8 @@ FailedView="Impossible de changer de vue."
 CantChangeNameMsg="Vous ne pouvez pas changer de nom pendant un match."
 
 [Console]
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Console Unreal Standard"
+; EN: ClassCaption="Standard (Deprecated)"
+ClassCaption="Standard (Obsolète)"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="CHARGEMENT"
 ; EN: SavingMessage="SAVING"

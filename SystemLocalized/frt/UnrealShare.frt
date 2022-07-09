@@ -59,7 +59,7 @@ Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Ho
 Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Homme1;M1 Homme6")
 ; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
 Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Homme1;M1 Homme7")
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;UnrealShare.logo2;Unreal")
 ; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
 Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Avancer")
 ; EN: Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
@@ -1090,10 +1090,10 @@ HelpMessage[17]="Active la mise en mémoire cache des sons et textures."
 MenuList[18]="Filtrage Trilinéaire"
 ; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
 HelpMessage[18]="Activer ou désactive le filtrage trilinéaire."
-; EN: MenuList[19]="Skybox Fogging"
-MenuList[19]="Niveau de Buée Skybox"
-; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
-HelpMessage[19]="Niveau de détail du brouillard appliqué au ciel."
+; EN: MenuList[19]="Sky Fogging"
+MenuList[19]="Ciel Embué"
+; EN: HelpMessage[19]="Changes how volumetric fog is being rendered on skybox."
+HelpMessage[19]="Change le rendu du brouillard volumétrique sur la skybox."
 ; EN: SkyFogDetail[0]="High Detail"
 SkyFogDetail[0]="Haut Niveau"
 ; EN: SkyFogDetail[1]="Low Detail"
@@ -1102,8 +1102,8 @@ SkyFogDetail[1]="Faible Niveau"
 SkyFogDetail[2]="Désactivé"
 ; EN: MenuList[20]="HUD Scale"
 MenuList[20]="Échelle HUD"
-; EN: HelpMessage[20]="The scaling of user HUD."
-HelpMessage[20]="Échelle du HUD utilisateur."
+; EN: HelpMessage[20]="Specifies the scaling level of the in-game HUD."
+HelpMessage[20]="Spécifie le niveau de mise à l'échelle du HUD en jeu."
 
 [Translator]
 ; EN: NewMessage="Universal Translator"
@@ -1292,8 +1292,8 @@ VeryFastInternetOption="(ADSL)"
 HighSpeedInternetOption="(ADSL)"
 ; EN: LANOption="(LAN)"
 LANOption="(LAN)"
-; EN: MenuList[19]="Console"
-MenuList[19]="Console"
+; EN: MenuList[19]="Menu Design"
+MenuList[19]="Apparence des Menus"
 ; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
 HelpMessage[19]="Cette option détermine comment la console et les menus seront affichés. Appuyez sur Entrée pour redémarrer le jeu et appliquer les modifications."
 ; EN: MenuList[20]="Advanced Options"

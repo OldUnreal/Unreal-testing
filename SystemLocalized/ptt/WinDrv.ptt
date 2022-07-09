@@ -29,4 +29,4 @@ AdvancedOptions="Opções Avançadas"
 
 [WindowsClient]
 ; EN: ClassCaption="Standard Windows Manager"
-ClassCaption="Gerenciador de Windows padrão"
+ClassCaption="Gerenciador Padrão do Windows"

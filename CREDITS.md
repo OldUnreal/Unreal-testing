@@ -56,6 +56,7 @@ Here’s a list of people that helped me in this project in no particular order.
 * TaglesMalsto: Italian, additional contributions.
 * u.HighPriest: Russian, localization author.
 * Skaarj ZR: Russian, additional contributions.
+* Reborn: Russian, additional contributions.
 * Victor Delacroix: Polish, additional contributions.
 * Nahand: Portuguese, additional contributions.
 * Naruto_9: Portuguese, additional contributions.

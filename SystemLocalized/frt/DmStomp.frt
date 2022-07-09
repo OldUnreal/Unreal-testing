@@ -1,9 +1,9 @@
 ﻿[LevelInfo0]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Ecrasé"
+; EN: Title="Stomp"
+Title="Ecrasé"
 IdealPlayerCount="2-5"
 
 [LevelSummary]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Ecrasé"
+; EN: Title="Stomp"
+Title="Ecrasé"
 IdealPlayerCount="2-5"

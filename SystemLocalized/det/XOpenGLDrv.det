@@ -1,8 +1,8 @@
 ﻿[Public]
 Object=(Name=XOpenGLDrv.XOpenGLRenderDevice,Class=Class,MetaClass=Engine.RenderDevice,Autodetect=opengl32.dll)
-Preferences=(Caption="XOpenGL Support",Parent="Rendering",LangCaption="XOpenGL-Video",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="Options")
-Preferences=(Caption="Debug Options",Parent="XOpenGL Support",LangCaption="Debug-Optionen",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="DebugOptions")
-Preferences=(Caption="Render Options",Parent="XOpenGL Support",LangCaption="Render-Optionen",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True, Category="Client")
+Preferences=(Caption="XOpenGL",Parent="Rendering",LangCaption="XOpenGL",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True,Category="Options")
+Preferences=(Caption="Debug Options",Parent="XOpenGL",LangCaption="Debug-Optionen",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True,Category="DebugOptions")
+Preferences=(Caption="Render Options",Parent="XOpenGL",LangCaption="Render-Optionen",Class=XOpenGLDrv.XOpenGLRenderDevice,Immediate=True,Category="Client")
 
 [Errors]
 ; EN: NoFindGL="Can't find OpenGL driver %ls"
@@ -13,8 +13,8 @@ MissingFunc="Fehlende OpenGL Funktion %ls (%i)"
 ResFailed="Fehler beim Einstellen der Auflösung"
 
 [XOpenGLRenderDevice]
-; EN: ClassCaption="XOpenGL Support"
-ClassCaption="XOpenGL-Unterstützung"
+; EN: ClassCaption="XOpenGL"
+ClassCaption="XOpenGL"
 ; EN: AskInstalled="Do you have a graphics card supporting at least OpenGL version 3.3 or greater installed?"
 AskInstalled="Haben Sie eine Grafikkarte installiert, die mindestens OpenGL Version 3.3 oder höher unterstützt?"
 ; EN: AskUse="Do you want Unreal to use your XOpenGL accelerator?"

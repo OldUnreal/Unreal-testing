@@ -1,6 +1,6 @@
 ﻿[MegaHealth]
 ; EN: PickupMessage="You picked up the Mega Health Pack"
-PickupMessage="¡Has recogido el Megapaquete de Salud!"
+PickupMessage="Has recogido el Megapaquete de Salud"
 
 [LevelInfo0]
 ; EN: Title="Retrospective"
@@ -11,7 +11,7 @@ LevelEnterText="¡Mapa para el Parche 227 de Unreal!"
 
 [MegaHealth3]
 ; EN: PickupMessage="You picked up the Mega Health :)"
-PickupMessage="¡Has recogido la Megasalud! :)"
+PickupMessage="Has recogido la Megasalud :)"
 
 [LevelSummary]
 ; EN: Title="Retrospective"

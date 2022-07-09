@@ -1,5 +1,5 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
 Preferences=(Caption="UBrowser",Parent="Networking",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -99,7 +99,7 @@ InfoText[0]="To connect this server you will need additional C++ library %ls."
 InfoText[1]="For more info view the external info from below (hosted by %ls):"
 
 [UBrowserConsole]
-ClassCaption="Unreal Browser Console"
+ClassCaption="Classic Menu"
 
 [UBrowserOpenBar]
 OpenText="Open:"

@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console)
+; EN: Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Deprecated)")
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Przestarzałe)")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -156,8 +157,8 @@ HelpParm[1]="AllAdmin"
 HelpDesc[1]="Nadaje wszystkim graczom uprawnienia administracyjne."
 
 [Console]
-; EN: ClassCaption="Standard Unreal Console"
-ClassCaption="Konsola domyślna Unreal"
+; EN: ClassCaption="Standard (Deprecated)"
+ClassCaption="Standard (Przestarzałe)"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="WCZYTYWANIE W TOKU"
 ; EN: SavingMessage="SAVING"
@@ -168,10 +169,6 @@ ConnectingMessage="ŁĄCZENIE W TOKU"
 PausedMessage="GRA ZATRZYMANA"
 ; EN: PrecachingMessage="PRECACHING"
 PrecachingMessage="BUFOROWANIE W TOKU"
-; EN: ChatChannel="(CHAT) "
-ChatChannel="(OGÓL.) "
-; EN: TeamChannel="(TEAM) "
-TeamChannel="(DRUŻ.) "
 
 [Menu]
 MenuList=" "
@@ -193,9 +190,9 @@ YesString="tak"
 ; EN: NoString="No"
 NoString="nie"
 ; EN: OnString="On"
-OnString="Na"
+OnString="Wł."
 ; EN: OffString="Off"
-OffString="Poza"
+OffString="Wył."
 
 [GameInfo]
 ; EN: SwitchLevelMessage="Switching Levels"
@@ -304,9 +301,9 @@ AdminLogoutText="Administrator %ls wylogowany"
 CheatUsedStr="%ls używa polecenia administracyjnego lub „oszustwa”: %c"
 
 [Fonts]
-WhiteFont=UnrealShare.WhiteFont
-MedFont=Engine.MedFont
-LargeFont=Engine.LargeFont
+WhiteFont=UWindowFonts.Tahoma10
+MedFont=UWindowFonts.Tahoma10
+LargeFont=UWindowFonts.Tahoma30
 BigFont=Engine.BigFont
 SmallFont=Engine.SmallFont
 

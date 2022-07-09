@@ -2,26 +2,26 @@
 ; EN: Title="Dasa Mountain Pass"
 Title="Passagem da Montanha Dasa"
 ; EN: LevelEnterText="Entering Dasa Mouantain Pass"
-LevelEnterText="Esta entrando na Passagem da Montanha Dasa"
+LevelEnterText="Entrando na passagem da Montanha Dasa"
 
 [LevelSummary]
 ; EN: Title="Dasa Mountain Pass"
 Title="Passagem da Montanha Dasa"
 ; EN: LevelEnterText="Entering Dasa Mouantain Pass"
-LevelEnterText="Esta entrando na Passagem da Montanha Dasa"
+LevelEnterText="Entrando na passagem da Montanha Dasa"
 
 [TranslatorEvent3]
 ; EN: Message="Diary: Grok Vhul'rath: I ordered repairs to the Drawbridge again! This is getting really old. I'm sick of dealing with the Behemoths. They constantly break things and they're slobs like Aldarian Pigs. I'm anxious to get back to my homeworld."
-Message="Diário: Grok Vhul'rath: Eu ordenei reparos na ponte levadiça de novo! Isto esta se tornando  muito repetitivo-Estou cansado de lidar com os Behemots-Eles quebram as coisas constantemente, alem de serem mal-educados como Porcos Aldarianos. Estou anxioso para voltar ao meu mundo."
+Message="Diário: Grok Vhul'rath: Eu ordenei reparos na ponte levadiça de novo! Isto esta se tornando  muito repetitivo-Estou cansado de lidar com os Behemots-Eles quebram as coisas constantemente, além de serem mal-educados como Porcos Aldarianos. Estou ansioso para voltar ao meu mundo."
 
 [TranslatorEvent4]
 ; EN: Message="Bridge Foreman Khan Vhranna: I've about had it with Grok Vhul'rath. He's such a pompous son-of-a Bulrach. If he makes us fix the drawbridge one more time in the rain, I'm going to bust his face in."
-Message="Capataz da ponte Khan Vhranna: Eu estou prestes a explodir com Grok Vhul'rath. Ele é um tremendo filho de um Bulrach arrogante. Se ele nos fizer consertar a ponte levadiça na chuva mais uma vez, eu irei quebrar a cara dele."
+Message="Capataz da Ponte Khan Vhranna: Eu estou prestes a explodir com Grok Vhul'rath. Ele é um tremendo filho de um Bulrach arrogante. Se ele nos fizer consertar a ponte levadiça na chuva mais uma vez, eu irei quebrar a cara dele."
 
 [TranslatorEvent2]
 ; EN: Message="SHIPPING LOG: Dasa Pass Mountain Station: Grok Vhul'rath: We've decided to ditch using the Nali as slaves here. The word is they all believe their "savior" has come from the stars to kill us. We decided to execute them for refusing to work anyways."
-Message="Diário de envio: Passagem da Estação da Montanha Dasa : Grok Vhul'rath: Nós decidimos nos livrar dos escravos Nali aqui. O que eles dizem é que eles acreditam que o "salvador" deles veio das estrelas para nos matar. Nós decidimos por executá-los por recusa ao trabalho de qualquer forma."
+Message="Diário de Envio: Passagem da Estação da Montanha Dasa : Grok Vhul'rath: Nós decidimos nos livrar dos escravos Nali aqui. O que eles dizem é que eles acreditam que o "salvador" deles veio das estrelas para nos matar. Nós decidimos por executá-los por recusa ao trabalho de qualquer forma."
 
 [TranslatorEvent0]
 ; EN: Message="SHIPPING LOG: Dasa Pass Mountain Station: Grok Vhul'rath: This past week we've received over 45 cases of high tech equipment from the crashed human spacecraft ISV-KRAN. I've decided to store them in the cellars before we ship to the Warlord."
-Message="Diário de envio: Passagem da Estação da Montanha Dasa : Grok Vhul'rath- Na última semana nós recebemos mais de 45 caixotes de equipamentos de alta tecnologia de uma espaçonave humana ISV-KRAN caída. Eu tomei a decisão de guardá-las nos depósitos antes de enviá-las ao chefão."
+Message="Diário de Envio: Passagem da Estação da Montanha Dasa : Grok Vhul'rath- Na última semana nós recebemos mais de 45 caixotes de equipamentos de alta tecnologia de uma espaçonave humana ISV-KRAN caída. Eu tomei a decisão de guardá-las nos depósitos antes de enviá-las ao chefão."

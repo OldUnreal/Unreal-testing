@@ -12,7 +12,7 @@ LevelEnterText="Entrando na Cratera do Demônio"
 
 [TranslatorEvent1]
 ; EN: Message="Generator Control Panel. Generator is operational. Power output nominal."
-Message="Painel de Controle do Gerador. O gerador esta operacional. Saída nominal de energia."
+Message="Painel de Controle do Gerador. O gerador está operacional. Saída nominal de energia."
 
 [TranslatorEvent0]
 ; EN: Message="Portal Gate: Warning: not enough power to establish portal link. Activate the Generator."

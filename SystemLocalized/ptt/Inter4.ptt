@@ -1,12 +1,12 @@
 ﻿[LevelInfo4]
 ; EN: Title="Yousa follow me now, okiday?"
-Title="Vocês devem me seguir agora, ta bem?"
+Title="Vocês devem me seguir agora, ok?"
 ; EN: LevelEnterText="What the hell are you doing here..."
 LevelEnterText="O que diabos vocês estão fazendo aqui..."
 
 [LevelSummary]
 ; EN: Title="Yousa follow me now, okiday?"
-Title="Vocês devem me seguir agora, ta bem?"
+Title="Vocês devem me seguir agora, ok?"
 ; EN: LevelEnterText="What the hell are you doing here..."
 LevelEnterText="O que diabos vocês estão fazendo aqui..."
 
@@ -14,6 +14,6 @@ LevelEnterText="O que diabos vocês estão fazendo aqui..."
 ; Note: Make the text coincide with the equivalent in Sounds/ptt/Interm4.uax
 OutDelays[1]=23.500000
 ; EN: MaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
-MaleText[0]="Estou perto! Avistei a primeira evidência do local da queda. Durante o sacrifício através do vilarejo Nali infestado de Skaarj, eu me deparei com pedaços de uma nave terráquea caída. Os escombros foram cauterizados na reentrada e se espalharam por uma grande área. Espero que ela não tenha se desmanchado no ar... se isto acontenceu, não haverão núcleos para recuperar. O local da queda esta bem perto. Estou quase livre para ir para casa."
+MaleText[0]="Estou perto! Avistei a primeira evidência do local da queda. Durante o sacrifício através do vilarejo Nali infestado de Skaarj, eu me deparei com pedaços de uma nave terráquea caída. Os escombros foram cauterizados na reentrada e se espalharam por uma grande área. Espero que ela não tenha se desmanchado no ar... se isto acontenceu, não haverão núcleos para recuperar. O local da queda está bem perto. Estou quase livre para ir para casa."
 ; EN: FemaleText[0]="I'm close! I've seen the first evidence of the crash site. During a tough slog through a Nali village infested with Skaarj, I came across pieces of a crashed Terran ship. The debris was seared from from re-entry and scattered over a wide area. I hope she didn't break up in the air... if the did, there won't be any cores to recover. The crash site is very close. I'm nearly home free."
-FemaleText[0]="Estou perto! Avistei a primeira evidência do local da queda. Durante o sacrifício através do vilarejo Nali infestado de Skaarj, eu me deparei com pedaços de uma nave terráquea caída. Os escombros foram cauterizados na reentrada e se espalharam por uma grande área. Espero que ela não tenha se desmanchado no ar... se isto acontenceu, não haverão núcleos para recuperar. O local da queda esta bem perto. Estou quase livre para ir para casa."
+FemaleText[0]="Estou perto! Avistei a primeira evidência do local da queda. Durante o sacrifício através do vilarejo Nali infestado de Skaarj, eu me deparei com pedaços de uma nave terráquea caída. Os escombros foram cauterizados na reentrada e se espalharam por uma grande área. Espero que ela não tenha se desmanchado no ar... se isto acontenceu, não haverão núcleos para recuperar. O local da queda está bem perto. Estou quase livre para ir para casa."

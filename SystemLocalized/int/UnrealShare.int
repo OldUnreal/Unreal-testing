@@ -33,7 +33,7 @@ Object=(Name=Unreali.JMale5,Class=Class,MetaClass=Engine.Texture,Description="Ma
 Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male5")
 Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male6")
 Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;UnrealShare.logo2;Unreal")
 Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
 Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
 Object=(Name="TurnLeft",Class=Class,MetaClass=Engine.Input,Description="Movement,Turn Left")
@@ -651,13 +651,13 @@ MenuList[17]="PreCaching Content"
 HelpMessage[17]="Use this option to precaching map content like sounds and textures."
 MenuList[18]="Trilinear Filtering"
 HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
-MenuList[19]="Skybox Fogging"
-HelpMessage[19]="Level of detail for fogging applied onto sky."
+MenuList[19]="Sky Fogging"
+HelpMessage[19]="Changes how volumetric fog is being rendered on skybox."
 SkyFogDetail[0]="High Detail"
 SkyFogDetail[1]="Low Detail"
 SkyFogDetail[2]="Off"
 MenuList[20]="HUD Scale"
-HelpMessage[20]="The scaling of user HUD."
+HelpMessage[20]="Specifies the scaling level of the in-game HUD."
 
 [Translator]
 NewMessage="Universal Translator"
@@ -757,7 +757,7 @@ FastInternetOption="(Dial-Up)"
 VeryFastInternetOption="(Broadband)"
 HighSpeedInternetOption="(Broadband)"
 LANOption="(LAN)"
-MenuList[19]="Console"
+MenuList[19]="Menu Design"
 HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
 MenuList[20]="Advanced Options"
 HelpMessage[20]="Open advanced preferences configuration menu."

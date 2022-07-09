@@ -30,31 +30,31 @@ Message="O Vilarejo Harobed fica no outro lado dessas montanhas. Eu irei esperar
 
 [TranslatorEvent10]
 ; EN: Message="WARNING: Force Field power source two status is inactive. Security Condition Two reached."
-Message="AVISO: Estado da fonte de energia dois do campo de força é inativo. Condição de segurança dois alcançada."
+Message="AVISO: Estado da fonte de alimentação do Campo de Força Dois é inativo. Condição de Segurança Dois alcançada."
 
 [TranslatorEvent6]
 ; EN: Message="Force field intact. All systems normal."
-Message="Campo de força intacto. Todos os sistemas normais."
+Message="Campo de Força intacto. Todos os sistemas normais."
 ; EN: Hint="The force field must be deactivated. Find the control room."
 Hint="O campo de força deve ser desligado. Encontre a sala de controle."
 
 [TranslatorEvent5]
 ; EN: Message="WARNING! Force field de-activated. Intruder detected in Section C-6. Eliminate any unauthorized presence."
-Message="AVISO! Campo de força desativado. Intruso detectado na Seção C-6. Elimine qualquer presença não autorizada."
+Message="AVISO! Campo de Força desativado. Intruso detectado na Seção C-6. Elimine qualquer presença não autorizada."
 ; EN: Hint="Shoot all red barrels."
 Hint="Atire em todos os barris vermelhos."
 
 [TranslatorEvent9]
 ; EN: Message="WARNING: Force Field power source one status is inactive. Security Condition Two reached."
-Message="AVISO: Estado da fonte de energia um do campo de força é inativo. Condição de segurança dois alcançada."
+Message="AVISO: Estado da fonte de alimentação do Campo de Força Um é inativo. Condição de segurança dois alcançada."
 
 [TranslatorEvent19]
 ; EN: Message="NOTE: Area must be clear for transport lift to perform properly."
-Message="AVISO: Estado da fonte de energia um do campo de força é inativo. Condição de segurança dois alcançada."
+Message="NOTA: A área deve estar livre para que o elevador de transporte funcione corretamente."
 
 [TranslatorEvent15]
 ; EN: Message="You are SO dead."
-Message="Você esta TÃO morto."
+Message="Você está TÃO morto."
 
 [TranslatorEvent14]
 ; EN: Message="What the hell are you doing up here?"
@@ -62,16 +62,16 @@ Message="O que diabos você está fazendo aqui?"
 
 [TranslatorEvent20]
 ; EN: Message="Force Field Control Area"
-Message="Área de controle de campo de força"
+Message="Área de Controle do Campo de Força"
 
 [TranslatorEvent8]
 ; EN: Message="Force Field power source one status is active."
-Message="O estado da fonte de energia um do campo de força é ativo."
+Message="O estado da fonte de energia um do Campo de Força é ativo."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Aperte os botões vermelhos na parede batendo neles."
 
 [TranslatorEvent7]
 ; EN: Message="Force Field power source two status is active."
-Message="O estado da fonte de energia dois do campo de força é ativo."
+Message="O estado da fonte de energia dois do Campo de Força é ativo."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Aperte os botões vermelhos na parede batendo neles."

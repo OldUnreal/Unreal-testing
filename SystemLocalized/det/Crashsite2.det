@@ -40,6 +40,7 @@ Message="UMS Prometheus - Navigationsnetzwerk: Status: Eintritt in die Atmosphä
 
 [TransitionGenderEvent0]
 ; N_K: Make sure the text strings and their lengths coincide with the content of Sounds/det/Interm5.uax, sounds FLog06b and MLog06b.
+; Also make sure to use MaleText[X] and FemaleText[X] rather than CommonText[X] whenever gender is considered.
 OutDelays[1]=12.000000
 OutDelays[2]=3.000000
 OutDelays[3]=5.000000
@@ -49,14 +50,25 @@ OutDelays[6]=3.000000
 OutDelays[7]=7.000000
 OutDelays[8]=9.000000
 OutDelays[9]=26.000000
+; EN: CommonText[0]="By some miracle, the translight communication system on the Prometheus is still working. While I was exploring the comm center, I came across this exchange captured and recorded by the computers:"
 MaleText[0]="Wie durch ein Wunder ist die Überlichtverbindung auf der Prometheus immer noch online. Als ich in der Kommunikationszentrale war, stieß ich auf diese Aufzeichnung auf einem der Computer:"
 FemaleText[0]="Wie durch ein Wunder ist die Überlichtverbindung auf der Prometheus immer noch online. Als ich in der Kommunikationszentrale war, stieß ich auf diese Aufzeichnung auf einem der Computer:"
+; EN: CommonText[1]="Deep space warship UMS Bodega Bay..."
 CommonText[1]="Interstellares Kampfschiff UMS Bodega Bay..."
+; EN: CommonText[2]="...clear to take whatever steps are necessary to ensure the success of Operation 'Talon Hunter'."
 CommonText[2]="...sie dürfen alle nötigen Schritte für Operation 'Talon Hunter' einleiten."
+; EN: CommonText[3]="Acknowledged."
 CommonText[3]="Verstanden."
+; EN: CommonText[4]="Ah, Bodega Bay, one more thing, Operation 'Talon Hunter' is classified Deep Ultra. Once you've finished your mission, you must implement measures to eliminate any security risks."
 CommonText[4]="Bodega Bay, eine Sache noch, Operation 'Talon Hunter' hat Sicherheitsstufe Deep Ultra. Sobald sie die Mission erledigt haben, müssen alle möglichen Risiken eliminiert werden."
+; EN: CommonText[5]="Please clarify, Starlight Base."
 CommonText[5]="Definieren sie das, Starlight Base."
-CommonText[6]="Bodega Bay, sorgen sie dafür das Gefangener #849 nicht zurückkehrt; terminieren sie den Gefangenen sobald der Job erledigt wurde."
-CommonText[7]="Verstanden, Starlight Base. Wir kümmern uns um den Gefangenen #849 nach erfolgreichem Abschluss der Operation 'Talon Hunter'. Bodega Bay...Ende."
+; EN: CommonText[6]="Bodega Bay, make sure prisoner #849 doesn't come back; terminate the prisoner once the job is done."
+MaleText[6]="Bodega Bay, sorgen sie dafür das Gefangener #849 nicht zurückkehrt; terminieren sie den Gefangenen sobald der Job erledigt wurde."
+FemaleText[6]="Bodega Bay, sorgen sie dafür das Gefangener #849 nicht zurückkehrt; terminieren sie den Gefangenen sobald der Job erledigt wurde."
+; EN: CommonText[7]="Understood, Starlight Base. We will dispose of prisoner #849 after Operation 'Talon Hunter' is concluded. Bodega Bay out."
+MaleText[7]="Verstanden, Starlight Base. Wir kümmern uns um den Gefangenen #849 nach erfolgreichem Abschluss der Operation 'Talon Hunter'. Bodega Bay...Ende."
+FemaleText[7]="Verstanden, Starlight Base. Wir kümmern uns um den Gefangenen #849 nach erfolgreichem Abschluss der Operation 'Talon Hunter'. Bodega Bay...Ende."
+; EN: CommonText[8]="I've been betrayed. Why does this not surprise me? I should have known what to expect from those bastards. I guess all I can do is play out this hand; recover the data cores, activate the ELT on the bridge, and then try to hijack the shuttle when they come to get me. It's a long shot, but it's all I've got. If I don't make it and someone ever recovers this log, maybe the truth'll get out."
 MaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muss das jetzt durchziehen. Ich muss die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."
 FemaleText[8]="Man hat mich reingelegt. Warum überrascht mich das nicht. Ich hätte es wissen sollen, was man von diesen Bastarden erwarten kann. Ich glaube ich muss das jetzt durchziehen. Ich muss die Datenspeicher holen, das ELT auf der Brücke aktivieren und dann das Shuttle übernehmen, wenn sie mich holen wollen. Eine Alternative hab ich wohl nicht. Wenn ich es nicht schaffen sollte, aber jemand anders dies hier findet, gelangt die Wahrheit vielleicht doch an die Öffentlichkeit."

@@ -1,9 +1,9 @@
 ﻿[LevelInfo0]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Топать"
+; EN: Title="Stomp"
+Title="Топать"
 IdealPlayerCount="2-5"
 
 [LevelSummary]
-; EN: LevelEnterText="Stomp"
-LevelEnterText="Топать"
+; EN: Title="Stomp"
+Title="Топать"
 IdealPlayerCount="2-5"

@@ -10,11 +10,11 @@ Title="Limites da Fundição"
 ; EN: CountMessage="%i more to go..."
 CountMessage="Faltam mais %i..."
 ; EN: CompleteMessage="Pumps destroyed! Emergency doors open."
-CompleteMessage="Bombas destruída! Portas de emergência abertas."
+CompleteMessage="Bombas destruídas! Portas de emergência abertas."
 
 [TranslatorEvent2]
 ; EN: Message="Crane controls must be activated in lower control room."
-Message="Os controles do guindaste devem ser ativados na sala de controle de baixo."
+Message="Os controles do guindaste devem ser ativados na sala de controle abaixo."
 
 [TranslatorEvent6]
 ; EN: Message="Warning: Simultaneous activation of both pumps might result in explosion due to pressure level!"

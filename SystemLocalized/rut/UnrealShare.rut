@@ -59,7 +59,7 @@ Object=(Name=Unreali.JMale6,Class=Class,MetaClass=Engine.Texture,Description="Ma
 Object=(Name=Unreali.JMale7,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужчина6")
 ; EN: Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Male7")
 Object=(Name=Unreali.JMale8,Class=Class,MetaClass=Engine.Texture,Description="Male1;M1 Мужчина7")
-Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;Unreal")
+Object=(Name=Game.Game,Class=Class,MetaClass=UnrealShare.SinglePlayer,Description="Vortex2;UnrealShare.logo2;Unreal")
 ; EN: Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Forward")
 Object=(Name="MoveForward",Class=Class,MetaClass=Engine.Input,Description="Передвижение,Вперёд")
 ; EN: Object=(Name="MoveBackward",Class=Class,MetaClass=Engine.Input,Description="Movement,Move Backward")
@@ -1102,10 +1102,10 @@ HelpMessage[17]="Вкл./выкл. прекеширование содержим
 MenuList[18]="Трилинейн. фильтрация"
 ; EN: HelpMessage[18]="Use this option to active/deactivate trilinear filtering."
 HelpMessage[18]="Вкл./выкл. трилинейную фильтрацию текстур."
-; EN: MenuList[19]="Skybox Fogging"
-MenuList[19]="Запотевание скайбокса"
-; EN: HelpMessage[19]="Level of detail for fogging applied onto sky."
-HelpMessage[19]="Уровень детализации запотевания неба."
+; EN: MenuList[19]="Sky Fogging"
+MenuList[19]="Запотевание неба"
+; EN: HelpMessage[19]="Changes how volumetric fog is being rendered on skybox."
+HelpMessage[19]="Изменяет способ визуализации объемного тумана в скайбоксе."
 ; EN: SkyFogDetail[0]="High Detail"
 SkyFogDetail[0]="Высокая детализация"
 ; EN: SkyFogDetail[1]="Low Detail"
@@ -1114,8 +1114,8 @@ SkyFogDetail[1]="Низкая детализация"
 SkyFogDetail[2]="Выкл"
 ; EN: MenuList[20]="HUD Scale"
 MenuList[20]="Масштаб HUD"
-; EN: HelpMessage[20]="The scaling of user HUD."
-HelpMessage[20]="Масштабирование пользовательского HUD."
+; EN: HelpMessage[20]="Specifies the scaling level of the in-game HUD."
+HelpMessage[20]="Указывает уровень масштабирования внутриигрового HUD."
 
 [Translator]
 ; EN: NewMessage="Universal Translator"
@@ -1307,8 +1307,8 @@ VeryFastInternetOption="(скоростн.)"
 HighSpeedInternetOption="(скоростн.)"
 ; EN: LANOption="(LAN)"
 LANOption="(ЛВС)"
-; EN: MenuList[19]="Console"
-MenuList[19]="Консоль"
+; EN: MenuList[19]="Menu Design"
+MenuList[19]="Внешний bид Меню"
 ; EN: HelpMessage[19]="This option determines the look of console and menus. Press Enter to restart the game and apply the changes."
 HelpMessage[19]="Данная настройка задаёт тип консоли и внешний вид меню. Нажмите Enter для перезапуска игры и применения изменений."
 ; EN: MenuList[20]="Advanced Options"

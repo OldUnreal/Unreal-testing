@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Menú Clàssic")
 Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -169,8 +170,8 @@ InfoText[0]="Per connectar aquest servidor necessitareu una biblioteca C++ addic
 InfoText[1]="Per obtenir més informació, consulteu la informació externa des de sota (allotjada per %ls):"
 
 [UBrowserConsole]
-; EN: ClassCaption="Unreal Browser Console"
-ClassCaption="Consola de navegador Unreal"
+; EN: ClassCaption="Classic Menu"
+ClassCaption="Menú Clàssic"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"

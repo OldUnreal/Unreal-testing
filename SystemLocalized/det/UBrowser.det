@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Klassisches Menü")
 Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -169,8 +170,8 @@ InfoText[0]="Um diesen Server zu verbinden, benötigen Sie die zusätzliche C ++
 InfoText[1]="Für weitere Informationen sehen Sie sich die externen Informationen von unten an (gehostet von %ls):"
 
 [UBrowserConsole]
-; EN: ClassCaption="Unreal Browser Console"
-ClassCaption="Unreal Browser Konsole"
+; EN: ClassCaption="Classic Menu"
+ClassCaption="Klassisches Menü"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"

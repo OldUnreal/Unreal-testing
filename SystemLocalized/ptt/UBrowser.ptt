@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Menu Clássico")
 Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -22,7 +23,7 @@ CouldNotConnectError="Conexão para o servidor mestre falhou por tempo esgotado:
 ; EN: NotFoundError="Could not find the window: "
 NotFoundError="Não pode achar a janela: "
 ; EN: NotReadyError="Window is not ready: "
-NotReadyError="A janela não esta pronta: "
+NotReadyError="A janela não está pronta: "
 
 [UBrowserRulesGrid]
 ; EN: RuleText="Rule"
@@ -66,7 +67,7 @@ GameTypeText="Tipo de partida"
 ; EN: GameVersionText="Game Version"
 GameVersionText="Versão do jogo"
 ; EN: GameSubVersionText="Game SubVersion"
-GameSubVersionText="Sub versão do jogo"
+GameSubVersionText="Subversão do jogo"
 ; EN: WorldLogText="ngStats World Stat-Logging"
 WorldLogText="Registro de estatísticas globais ngStats"
 ; EN: TrueString="Enabled"
@@ -169,8 +170,8 @@ InfoText[0]="Para conectar este servidor, você precisará da biblioteca C ++ ad
 InfoText[1]="Para obter mais informações, veja as informações externas abaixo (hospedadas por %ls):"
 
 [UBrowserConsole]
-; EN: ClassCaption="Unreal Browser Console"
-ClassCaption="Console do Navegador do Unreal"
+; EN: ClassCaption="Classic Menu"
+ClassCaption="Menu Clássico"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"

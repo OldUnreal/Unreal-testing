@@ -23,7 +23,7 @@ HelpDesc[0]="Arquivo de configuração a ser utilizado. Padrão: UpdateServer.in
 HelpCmd=masterserver
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
 ; EN: HelpOneLiner="Maintain master list of servers."
-HelpOneLiner="Mantem a lista mestre de servidores."
+HelpOneLiner="Mantém a lista mestre de servidores."
 ; EN: HelpUsage="masterserver [-option...] [parm=value]"
 HelpUsage="masterserver [-opção...] [parm=valor]"
 HelpParm[0]="ConfigFile"
@@ -40,7 +40,7 @@ HelpUsage="compress Arquivo1 [Arquivo2 [Arquivo3 ...]]"
 ; EN: HelpParm[0]="Files"
 HelpParm[0]="Arquivos"
 ; EN: HelpDesc[0]="The wildcard or file names to compress."
-HelpDesc[0]="O coringa ou nome de arquivo a compactar."
+HelpDesc[0]="Os nomes curinga ou de arquivo a serem compactados."
 
 [DecompressCommandlet]
 HelpCmd=decompress

@@ -89,7 +89,7 @@ ItemArticle="unas"
 
 [FlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Tienes 10 Proyectiles de Metralla"
+PickupMessage="Has recogido 10 Proyectiles de Metralla"
 ; EN: ItemName="Flak Shells"
 ItemName="Proyectiles de Metralla"
 ; EN: ItemArticle="a"
@@ -105,7 +105,7 @@ MenuName="Varón 1"
 
 [RifleAmmo]
 ; EN: PickupMessage="You got 8 Rifle Rounds"
-PickupMessage="Tienes 8 Cartuchos para el Rifle"
+PickupMessage="Has recogido 8 Cartuchos para el Rifle"
 ; EN: ItemName="Rifle Rounds"
 ItemName="Cartuchos de Rifle"
 ; EN: ItemArticle="a bunch of"
@@ -113,7 +113,7 @@ ItemArticle="unos"
 
 [Seeds]
 ; EN: PickupMessage="You got the Nali Fruit Seeds"
-PickupMessage="Tienes las Semillas de Fruta Curativa Nali"
+PickupMessage="Has recogido las Semillas de Fruta Curativa Nali"
 ; EN: ItemName="Nali Fruit Seeds"
 ItemName="Semillas de Fruta Curativa Nali"
 ; EN: ItemArticle="a bunch of"
@@ -203,7 +203,7 @@ GameName="Partida a Oscuras"
 
 [FlakShellAmmo]
 ; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Tienes un Proyectil de Metralla"
+PickupMessage="Has recogido un Proyectil de Metralla"
 ; EN: ItemName="Flak Shell"
 ItemName="Proyectil de Metralla"
 ; EN: ItemArticle="a"
@@ -221,7 +221,7 @@ ItemArticle="un"
 ; EN: ExpireMessage="Acoustic dampener has run out."
 ExpireMessage="El Silenciador Acústico se ha agotado."
 ; EN: PickupMessage="You got the Acoustic Dampener"
-PickupMessage="Tienes el Silenciador Acústico"
+PickupMessage="Has recogido el Silenciador Acústico"
 ; EN: ItemName="Acoustic Dampener"
 ItemName="Silenciador Acústico"
 ; EN: ItemArticle="an"
@@ -243,7 +243,7 @@ ItemArticle="un"
 
 [PowerShield]
 ; EN: PickupMessage="You got the Power Shield"
-PickupMessage="Tienes el Escudo de Protección"
+PickupMessage="Has recogido el Escudo de Protección"
 ; EN: ItemName="Power Shield"
 ItemName="Escudo de Protección"
 ; EN: ItemArticle="a"
@@ -251,7 +251,7 @@ ItemArticle="un"
 
 [RifleRound]
 ; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Tienes un Cartucho para el Rifle"
+PickupMessage="Has recogido un Cartucho para el Rifle"
 ; EN: ItemName="Rifle Round"
 ItemName="Cartucho de Rifle"
 ; EN: ItemArticle="a"

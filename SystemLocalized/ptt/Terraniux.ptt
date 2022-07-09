@@ -12,13 +12,13 @@ Message="Estado da Sala de Controle: Pressurizada e travada. Não acesse-a excet
 
 [TranslatorEvent4]
 ; EN: Message="Security Status: Intruder detected at entrance. Activating security screens on Scientific Research Lab and Hydroponics Section. All security elements deploy around access points in Sections A, B and C to deny intruder access to Lift 1."
-Message="Estado da segurança: Intruso detectado na entrada. Ativando telas da segurança no Laboratório de Pesquisa Científica e na Seção de Hidrponia. Todos os agentes de segurança posicionem-se ao redor dos pontos de acesso nas Seções A, B e C e neguem o acesso do intruso ao elevador 1."
+Message="Estado da Segurança: Intruso detectado na entrada. Ativando telas da segurança no Laboratório de Pesquisa Científica e na Seção de Hidroponia. Todos os agentes de segurança posicionem-se ao redor dos pontos de acesso nas Seções A, B e C e neguem o acesso do intruso ao elevador 1."
 ; EN: Hint="Find the Containment rooms A, B and C and activate the buttons to access the Lift 1."
 Hint="Encontre as Salas de contenção A, B e C e ative os botões para ativar o Elevador 1."
 
 [TranslatorEvent5]
 ; EN: Message="Drainage Status: Biowaste flow is at nominal levels. All pumps operational. Section C empty and available for any Biowaster overflow. Please be sure that the regular pipe maintenance is handled."
-Message="Estado da drenagem: Fluxo de resíduo tóxido nos níveis nominais. Todas as bombas operacionais. Seção C vazia e disponível para qualquer sobrefluxo do resíduo tóxico. Por favor certifique-se que a manutenção rotineira dos canos esteja em ordem."
+Message="Estado da Drenagem: Fluxo de resíduo tóxido nos níveis nominais. Todas as bombas operacionais. Seção C vazia e disponível para qualquer sobrefluxo do resíduo tóxico. Por favor certifique-se que a manutenção rotineira dos canos esteja em ordem."
 
 [TranslatorEvent0]
 ; EN: Message="Section B: Status 48% full."
@@ -26,7 +26,7 @@ Message="Seção B: Estado 48% cheio."
 
 [TranslatorEvent10]
 ; EN: Message="Greenhouse B: Please verify that the Biowaste is being pumped through the Control Room filters and that no foreign objects are blocking the flow."
-Message="Estufa B: Por favor verfique que o resíduo tóxico esta sendo bombeado atravéz dos filtros da sala de controle e que não há nenhum objeto estranho bloqueando o fluxo."
+Message="Estufa B: Por favor verfique que o resíduo tóxico estaá sendo bombeado atravéz dos filtros da sala de controle e que não há nenhum objeto estranho bloqueando o fluxo."
 
 [Trigger32]
 ; EN: Message="Lift to Noork's Elbow activated"
@@ -38,7 +38,7 @@ Message="Seção A: Estado cheio. Redirecionamento do resíduo tóxico para a se
 
 [TranslatorEvent8]
 ; EN: Message="Access Denied. Control Room authorization must be granted to access Noork's Elbow."
-Message="Acesso negado. A autorização da Sala de Controle precisa ser concedida para acessar o Cotovelo de Noork."
+Message="Acesso Negado. A autorização da Sala de Controle precisa ser concedida para acessar o Cotovelo de Noork."
 ; EN: AltMessage="Access granted."
 AltMessage="Acceso concedido."
 ; EN: Hint="If you swim down in the BioWaste you can access the Control Room."
@@ -46,7 +46,7 @@ Hint="Se você nadar para baixo no resíduo tóxico você poderá acessar a Sala
 
 [TranslatorEvent2]
 ; EN: Message="Section C: Status Empty, this Containment Room is damaged, please avoid sending BioWaste here until we can fix it."
-Message="Seção C: Estado vazia, esta Sala de Contenção esta danificada, por favor evite mandar resíduo tóxico para cá até que nós possamos consertá-la."
+Message="Seção C: Estado Vazia, esta Sala de Contenção está danificada, por favor evite mandar resíduo tóxico para cá até que nós possamos consertá-la."
 
 [TranslatorEvent6]
 ; EN: Message="Lift 1: Security Lock, Access denied. Containment room pumps must be active for entrance to hydroponic greenhouses."
@@ -58,11 +58,11 @@ AltMessage="Elevador 1: Estado funcional. Acesso àos jardins hidropônicos perm
 ; EN: Message="Lift 2 Status: A broken pipe was reported."
 Message="Estado do elevador 2: Um cano quebrado foi notificado."
 ; EN: Hint="This Lift is broken, but verify the pipes, something interesting could be hidden."
-Hint="Este elevador esta quebrado, mas verifique os canos, algo interessante pode estar escondido."
+Hint="Este elevador está quebrado, mas verifique os canos, algo interessante pode estar escondido."
 
 [TranslatorEvent9]
 ; EN: Message="Greenhouse A: Section A is full. Biowaste flow must be redirected from the Control Room. Section B of the waste facility has free capacity. Please be sure to monitor the water supply for impurities."
-Message="Estufa A: Seção A esta cheia. O fluxo de resíduos tóxicos deve ser redirecionado a partir da Sala de Controle. A seção B da instalação esta livre. Por favor monitore o suprimento de água para impurezas."
+Message="Estufa A: Seção A está cheia. O fluxo de resíduos tóxicos deve ser redirecionado a partir da Sala de Controle. A seção B da instalação está livre. Por favor monitore o suprimento de água para impurezas."
 ; EN: Hint="The Biowaste is filtered in the Control Room."
 Hint="O resíduo tóxico é filtrado na Sala de Controle."
 
@@ -82,7 +82,7 @@ Hint="Você deve encontrar uma outra maneira para entrar nesta sala."
 
 [TranslatorEvent14]
 ; EN: Message="Access Denied. Control Room authorization must be granted to access Noork Elbow."
-Message="Accesso negado. A autorização da Sala de controle deve ser concedida para acessar o Cotovelo de Noork."
+Message="Accesso Negado. A autorização da Sala de controle deve ser concedida para acessar o Cotovelo de Noork."
 
 [Trigger46]
 ; EN: Message="Access Room security locks disengaged."

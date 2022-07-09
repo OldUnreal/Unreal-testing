@@ -1,5 +1,6 @@
 ﻿[Public]
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="UBrowser")
+; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Klasyczne Menu")
 Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -169,8 +170,8 @@ InfoText[0]="Aby dołączyć do wybranego serwera, potrzebna jest dodatkowa bibl
 InfoText[1]="Aby uzyskać dodatkowe informacje ze źródła zewnętrznego, udaj się pod poniższy adres: %ls:"
 
 [UBrowserConsole]
-; EN: ClassCaption="Unreal Browser Console"
-ClassCaption="Konsola przeglądarki Unreal"
+; EN: ClassCaption="Classic Menu"
+ClassCaption="Klasyczne Menu"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"

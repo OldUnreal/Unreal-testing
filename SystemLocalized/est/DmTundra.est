@@ -8,8 +8,8 @@ IdealPlayerCount="3-8"
 
 [Sludge0]
 ; EN: PickupMessage="You Got a GEL Cartridge"
-PickupMessage="¡Has obtenido un Cartucho de GEL!"
+PickupMessage="Has recogido un Cartucho de GEL"
 
 [Sludge1]
 ; EN: PickupMessage="You Got a GEL Cartridge"
-PickupMessage="¡Has obtenido un Cartucho de GEL!"
+PickupMessage="Has recogido un Cartucho de GEL"

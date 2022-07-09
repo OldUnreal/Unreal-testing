@@ -2,13 +2,13 @@
 ; EN: Title="Dark Arena"
 Title="Mroczna Arena"
 ; EN: LevelEnterText="Entering the Dark Arena"
-LevelEnterText="Wejście na Mroczna Arena"
+LevelEnterText="Wejście na Mroczną Arenę"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Mroczna Arena"
 ; EN: LevelEnterText="Entering the Dark Arena"
-LevelEnterText="Wejście na Mroczna Arena"
+LevelEnterText="Wejście na Mroczną Arenę"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."
@@ -32,7 +32,7 @@ Message="Jeżeli już mam tutaj umrzeć, cieszy mnie fakt, że moi niedawni ciem
 
 [TranslatorEvent6]
 ; EN: Message="I must try to find a way out of this place. The lizard men in charge here are strangely barbaric given the technological advancement implied by their weapons. It may be harder to fool them than I first thought, but I must make the attempt."
-Message="Muszę znaleźć jakieś wyjście stąd. Barbarzyńskie zwyczaje jaszczurów rządzących tym miejscem jest dziwne, biorąc pod uwagę ich zaawansowane technologicznie uzbrojenie. Mogą być trudniejsi do przechytrzenia, niż sądziłam, ale muszę spróbować."
+Message="Muszę znaleźć jakieś wyjście stąd. Barbarzyńskie zwyczaje jaszczurów rządzących tym miejscem są dziwne, biorąc pod uwagę ich zaawansowane technologicznie uzbrojenie. Mogą być trudniejsi do przechytrzenia, niż sądziłam, ale muszę spróbować."
 
 [TranslatorEvent7]
 ; EN: Message="The Skaarj have brought in a new batch of the two armed softskins from another of their raids. I fear that one of them is the Messiah, come down from the heavens, but I must pray that I am mistaken and not give up hope for the freedom of my people."
