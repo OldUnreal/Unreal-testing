@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Core"
-Title="Núcleo da Navemãe"
+Title="Núcleo da NaveMãe"
 ; EN: LevelEnterText="Entering the MotherShip Core"
-LevelEnterText="Entrando no Núcleo da Nave Mãe"
+LevelEnterText="Entrando no Núcleo da NaveMãe"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
-Title="Núcleo da Navemãe"
+Title="Núcleo da NaveMãe"
 ; EN: LevelEnterText="Entering the MotherShip Core"
-LevelEnterText="Entrando no Núcleo da Nave Mãe"
+LevelEnterText="Entrando no Núcleo da NaveMãe"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."
