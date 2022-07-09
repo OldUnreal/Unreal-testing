@@ -204,7 +204,7 @@ DeathMessage="%o ha sido asesinado por el %w de %k."
 FemDeathMessage="%o ha sido asesinada por el %w de %k."
 FemKillMessage="%o ha sido asesinada por el %w de %k."
 ; EN: PickupMessage="You got a weapon"
-PickupMessage="Tienes un arma"
+PickupMessage="Has recogido un arma"
 ; EN: ItemName="Weapon"
 ItemName="Arma"
 

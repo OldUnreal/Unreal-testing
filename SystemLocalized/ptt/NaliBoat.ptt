@@ -2,13 +2,13 @@
 ; EN: Title="Serpent Canyon"
 Title="Canyon da Serpente"
 ; EN: LevelEnterText="Entering the Serpent Canyon"
-LevelEnterText="Entrando no Canyon da Serpente"
+LevelEnterText="Entrando no Desfiladeiro da Serpente"
 
 [LevelSummary]
 ; EN: Title="Serpent Canyon"
 Title="Canyon da Serpente"
 ; EN: LevelEnterText="Entering the Serpent Canyon"
-LevelEnterText="Entrando no Canyon da Serpente"
+LevelEnterText="Entrando no Desfiladeiro da Serpente"
 
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."

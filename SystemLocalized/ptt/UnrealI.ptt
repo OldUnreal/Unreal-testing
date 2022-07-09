@@ -2,15 +2,15 @@
 Object=(Name=UnrealI.KingOfTheHill,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UnrealI.DarkMatch,Class=Class,MetaClass=Engine.GameInfo)
 ; EN: Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Flak Cannon")
-Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Lança-estilhaços")
+Object=(Name=UnrealI.FlakCannon,Class=Class,MetaClass=Engine.Weapon,Description="Lança-Estilhaços")
 ; EN: Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon,Description="Sniper Rifle")
 Object=(Name=UnrealI.Rifle,Class=Class,MetaClass=Engine.Weapon,Description="Fuzil de Longo Alcance")
 ; EN: Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon,Description="Minigun")
 Object=(Name=UnrealI.Minigun,Class=Class,MetaClass=Engine.Weapon,Description="Metralhadora")
 ; EN: Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="GES BioRifle")
-Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="Lançalixo Tóxico GES")
+Object=(Name=UnrealI.GESBioRifle,Class=Class,MetaClass=Engine.Weapon,Description="Lança-Lixo Tóxico GES")
 ; EN: Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="RazorJack")
-Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="Lança-lâminas")
+Object=(Name=UnrealI.RazorJack,Class=Class,MetaClass=Engine.Weapon,Description="Lança-Lâminas")
 ; EN: Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon,Description="Quad-Barreled Shotgun")
 Object=(Name=UnrealI.QuadShot,Class=Class,MetaClass=Engine.Weapon,Description="Escopeta Quádrupla")
 ; EN: Object=(Name=UnrealI.PeaceMaker,Class=Class,MetaClass=Engine.Weapon,Description="Peacemaker")
@@ -372,9 +372,9 @@ FemBlobKillMessage="foi corroída por uma Gosma"
 ; EN: DeathMessage="%o was ripped to shreds by %k's %w."
 DeathMessage="%o foi destroçado pela %k de %w."
 ; EN: PickupMessage="You got the Flak Cannon"
-PickupMessage="Você pegou o Lança-estilhaços"
+PickupMessage="Você pegou o Lança-Estilhaços"
 ; EN: ItemName="Flak Cannon"
-ItemName="Lança-estilhaços"
+ItemName="Lança-Estilhaços"
 FemDeathMessage="%o foi destroçada pela %k de %w."
 FemKillMessage="%o foi destroçado pela %k de %w."
 
@@ -402,9 +402,9 @@ FemKillMessage="A %w de %k transformou %o num pedaço de carne sangrenta."
 ; EN: DeathMessage="%o drank a glass of %k's dripping green load."
 DeathMessage="%o bebeu um copo de gosma verde de %k."
 ; EN: PickupMessage="You got the GES BioRifle"
-PickupMessage="Você pegou o Lançalixo Tóxico GES"
+PickupMessage="Você pegou o Lança-Lixo Tóxico GES"
 ; EN: ItemName="GES Bio Rifle"
-ItemName="Lançalixo Tóxico GES"
+ItemName="Lança-Lixo Tóxico GES"
 FemDeathMessage="%o bebeu um copo de gosma verde de %k."
 FemKillMessage="%o bebeu um copo de gosma verde de %k."
 
@@ -412,9 +412,9 @@ FemKillMessage="%o bebeu um copo de gosma verde de %k."
 ; EN: DeathMessage="%k took a bloody chunk out of %o with the %w."
 DeathMessage="%k rasgou um pedaço sangrento de %o com o %w."
 ; EN: PickupMessage="You got the RazorJack"
-PickupMessage="Você pegou o Lança-lâminas"
+PickupMessage="Você pegou o Lança-Lâminas"
 ; EN: ItemName="Razorjack"
-ItemName="Lança-lâminas"
+ItemName="Lança-Lâminas"
 FemDeathMessage="%k rasgou um pedaço sangrento de %o com o %w."
 FemKillMessage="%k rasgou um pedaço sangrento de %o com o %w."
 

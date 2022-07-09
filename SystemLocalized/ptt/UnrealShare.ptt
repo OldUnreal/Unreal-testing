@@ -113,11 +113,11 @@ Object=(Name="GetWeapon UnrealShare.ASMD",Class=Class,MetaClass=Engine.Input,Des
 ; EN: Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Weapon,Eightball")
 Object=(Name="GetWeapon UnrealShare.Eightball",Class=Class,MetaClass=Engine.Input,Description="Arma,Canhão 8")
 ; EN: Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Weapon,Flak Cannon")
-Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-estilhaços")
+Object=(Name="GetWeapon UnrealI.FlakCannon",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-Estilhaços")
 ; EN: Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Weapon,RazorJack")
-Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-lâminas")
+Object=(Name="GetWeapon UnrealI.Razorjack",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-Lâminas")
 ; EN: Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,GES BioRifle")
-Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Arma,Lançalixo Tóxico GES")
+Object=(Name="GetWeapon UnrealI.GESBioRifle",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-Lixo Tóxico GES")
 ; EN: Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Sniper Rifle")
 Object=(Name="GetWeapon UnrealI.Rifle",Class=Class,MetaClass=Engine.Input,Description="Arma,Fuzil de Longo Alcance")
 ; EN: Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Description="Weapon,Minigun")
@@ -125,9 +125,9 @@ Object=(Name="GetWeapon UnrealI.Minigun",Class=Class,MetaClass=Engine.Input,Desc
 ; EN: Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Weapon,Combat Assault Rifle")
 Object=(Name="GetWeapon UPak.CARifle",Class=Class,MetaClass=Engine.Input,Description="Arma,Fuzil de Assalto")
 ; EN: Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Grenade Launcher")
-Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-granadas UMS")
+Object=(Name="GetWeapon UPak.GrenadeLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-Granadas SMU")
 ; EN: Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Weapon,UMS Rocket Launcher")
-Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-foguetes UMS")
+Object=(Name="GetWeapon UPak.RocketLauncher",Class=Class,MetaClass=Engine.Input,Description="Arma,Lança-Foguetes SMU")
 ; EN: Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Weapon,Quad-Barreled Shotgun")
 Object=(Name="GetWeapon UnrealI.QuadShot",Class=Class,MetaClass=Engine.Input,Description="Arma,Escopeta Quádrupla")
 ; EN: Object=(Name="GetWeapon UnrealShare.UTranslocator",Class=Class,MetaClass=Engine.Input,Description="Weapon,Translocator")
@@ -594,9 +594,9 @@ MenuTitle="SALVAR JOGO"
 
 [RocketCan]
 ; EN: PickupMessage="You picked up 12 Eightballs"
-PickupMessage="Você pegou 12 Projéteis Eightball"
+PickupMessage="Você pegou 12 Projéteis do Canhão 8"
 ; EN: ItemName="Eightballs"
-ItemName="Projéteis Eightball"
+ItemName="Projéteis do Canhão 8"
 
 [Amplifier]
 ; EN: ExpireMessage="Energy Amplifier is out of power."
@@ -1314,9 +1314,9 @@ FemKillMessage="%k inflingiu dano mortal sobre %o com a %w."
 ; EN: DeathMessage="%o was smacked down multiple times by %k's %w."
 DeathMessage="%o foi esmagado múltiplas vezes pela %w de %k."
 ; EN: PickupMessage="You got the Eightball gun"
-PickupMessage="Você pegou a arma Eightball"
+PickupMessage="Você pegou a arma Canhão 8"
 ; EN: ItemName="Eightball"
-ItemName="Eightball"
+ItemName="Canhão 8"
 FemDeathMessage="%o foi esmagada múltiplas vezes pela %w de %k."
 FemKillMessage="%o foi esmagada múltiplas vezes pela %w de %k."
 

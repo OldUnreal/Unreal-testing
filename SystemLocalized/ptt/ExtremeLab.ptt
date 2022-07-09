@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="MotherShip Lab"
-Title="Laboratório da Navemãe"
+Title="Laboratório da NaveMãe"
 ; EN: LevelEnterText="Entering the MotherShip Lab"
-LevelEnterText="Entrando no Laboratório da Navemãe"
+LevelEnterText="Entrando no Laboratório da NaveMãe"
 
 [LevelSummary]
 ; EN: Title="MotherShip Lab"
-Title="Laboratório da Navemãe"
+Title="Laboratório da NaveMãe"
 ; EN: LevelEnterText="Entering the MotherShip Lab"
-LevelEnterText="Entrando no Laboratório da Navemãe"
+LevelEnterText="Entrando no Laboratório da NaveMãe"
 
 [TranslatorEvent0]
 ; EN: AltMessage="Primary Power Supply is operating at peak efficiency. Auxilliary Power Supply operational at 80% output. Activating the Alternate Power Supply for the Security Force Fields is imperative. Weakness shall be punished."
@@ -68,7 +68,7 @@ message="Departamento de Genética"
 
 [TranslatorEvent14]
 ; EN: AltMessage="Security Orders: Intruder detected in MotherShip, all experiments are suspended on orders of Chakti'Nrrj 2nd Great Talon of Ssa'Nrrj until further notice. Power Reserves must be at 100% for optimal security system operation."
-AltMessage="Ordens de segurança: Intruso detectado na navemãe, todos os experimentos estão suspendidos com ordens do Chakti'Nrrj 2º Grande Garra do Ssa'Nrrj até segunda ordem. As reservas de energia devem estar em 100% para melhor operação do sistema de segurança."
+AltMessage="Ordens de segurança: Intruso detectado na NaveMãe, todos os experimentos estão suspendidos com ordens do Chakti'Nrrj 2º Grande Garra do Ssa'Nrrj até segunda ordem. As reservas de energia devem estar em 100% para melhor operação do sistema de segurança."
 
 [TranslatorEvent15]
 ; EN: AltMessage="Report 187: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji reporting. Despite the failure in our previous tests on the shielding effect, the test subjects' cells are showing some residual effects. Very interesting..."

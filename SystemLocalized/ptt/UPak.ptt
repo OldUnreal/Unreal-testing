@@ -17,9 +17,9 @@ Object=(Name=UPak.TerranWeaponMatch,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.UPakIntro,Class=Class,MetaClass=Engine.GameInfo)
 Object=(Name=UPak.CreditsGame,Class=Class,MetaClass=Engine.GameInfo)
 ; EN: Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="UMS Grenade Launcher")
-Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lança-granadas UMS")
+Object=(Name=UPak.GrenadeLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lança-Granadas SMU")
 ; EN: Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="UMS Rocket Launcher")
-Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lança-foguetes UMS")
+Object=(Name=UPak.RocketLauncher,Class=Class,MetaClass=Engine.Weapon,Description="Lança-Foguetes SMU")
 ; EN: Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Combat Assault Rifle")
 Object=(Name=UPak.CARifle,Class=Class,MetaClass=Engine.Weapon,Description="Fuzil de Assalto")
 Preferences=(Caption="Cloak Match",Parent="Game Types",LangCaption="Partida de Jogadores Camuflados",Class=UPak.CloakMatch,Immediate=True)
@@ -33,9 +33,9 @@ Statheader="Estatísticas de mortes: "
 ; EN: CARStat="Combat Assault Rifle"
 CARStat="Fuzil de Assalto"
 ; EN: RLStat="UMS Rocket Launcher"
-RLStat="Lança-foguetes UMS"
+RLStat="Lança-Foguetes SMU"
 ; EN: GLStat="UMS Grenade Launcher"
-GLStat="Lança-granadas UMS"
+GLStat="Lança-Granadas SMU"
 ; EN: ASMDStat="ASMD"
 ASMDStat="ASMD"
 ; EN: AutomagStat="Automag"
@@ -45,13 +45,13 @@ DispersionStat="Pistola de Dispersão"
 ; EN: EightballStat="Eightball"
 EightballStat="Canhão 8"
 ; EN: FlakCannonStat="Flak Cannon"
-FlakCannonStat="Lança-estilhaços"
+FlakCannonStat="Lança-Estilhaços"
 ; EN: GESBioRifleStat="GES BioRifle"
-GESBioRifleStat="Lançalixo Tóxico GES"
+GESBioRifleStat="Lança-Lixo Tóxico GES"
 ; EN: MinigunStat="Minigun"
 MinigunStat="Metralhadora"
 ; EN: RazorjackStat="Razorjack"
-RazorjackStat="Lança-lâminas"
+RazorjackStat="Lança-Lâminas"
 ; EN: RifleStat="Sniper Rifle"
 RifleStat="Fuzil de Longo Alcance"
 ; EN: StingerStat="Stinger"
@@ -67,9 +67,9 @@ DeathMessage="A granada de %k feita %o explodiu."
 FemDeathMessage="A granada de %k feita %o explodiu."
 FemKillMessage="A granada de %k feita %o explodiu."
 ; EN: PickupMessage="You got the UMS Grenade Launcher"
-PickupMessage="Você pegou o Lança-granadas UMS"
+PickupMessage="Você pegou o Lança-Granadas SMU"
 ; EN: ItemName="UMS Grenade Launcher"
-ItemName="Lança-granadas UMS"
+ItemName="Lança-Granadas SMU"
 
 [Cloak]
 ; EN: ExpireMessage="disengaged."
@@ -96,9 +96,9 @@ DeathMessage="O foguete de %k transformou o corpo de %o em pedaços."
 FemDeathMessage="O foguete de %k transformou o corpo de %o em pedaços."
 FemKillMessage="O foguete de %k transformou o corpo de %o em pedaços."
 ; EN: PickupMessage="You got the UMS Rocket Launcher"
-PickupMessage="Você pegou o Lança-foguetes UMS"
+PickupMessage="Você pegou o Lança-Foguetes SMU"
 ; EN: ItemName="UMS Rocket Launcher"
-ItemName="Lança-foguetes UMS"
+ItemName="Lança-Foguetes SMU"
 
 [UPakChooseGameMenu]
 MenuList[0]="Return to Na Pali"
@@ -152,15 +152,15 @@ MenuName="Mulher 1"
 
 [GLAmmo]
 ; EN: PickupMessage="You picked up 10 UMS Grenades"
-PickupMessage="Você pegou 10 granadas UMS"
+PickupMessage="Você pegou 10 granadas SMU"
 ; EN: ItemName="UMS Grenades"
-ItemName="Granadas UMS"
+ItemName="Granadas SMU"
 
 [RLAmmo]
 ; EN: PickupMessage="You got 10 UMS Rockets"
-PickupMessage="Você pegou 10 foguetes UMS"
+PickupMessage="Você pegou 10 foguetes SMU"
 ; EN: ItemName="UMS Rockets"
-ItemName="Foguetes UMS"
+ItemName="Foguetes SMU"
 
 [CARifleClip]
 ; EN: PickupMessage="You got a 50 bullet CAR clip"
@@ -192,19 +192,19 @@ ItemName="Tablet do Computador"
 
 [MarineArctic]
 ; EN: MenuName="UMS Arctic Marine"
-MenuName="Marine do Ártico UMS"
+MenuName="Marine do Ártico SMU"
 
 [MarineDesert]
 ; EN: MenuName="UMS Desert Marine"
-MenuName="Marine do Deserto UMS"
+MenuName="Marine do Deserto SMU"
 
 [MarineJungle]
 ; EN: MenuName="UMS Jungle Marine"
-MenuName="Marine da Selva UMS"
+MenuName="Marine da Selva SMU"
 
 [SpaceMarine]
 ; EN: MenuName="UMS Space Marine"
-MenuName="Marine do Espaço UMS"
+MenuName="Marine do Espaço SMU"
 
 [TransitionBrute]
 ; EN: NameArticle=" a "

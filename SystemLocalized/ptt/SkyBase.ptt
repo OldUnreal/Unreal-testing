@@ -36,7 +36,7 @@ message="Controles da Porta Esquerda da Baía do Hangar"
 
 [TranslatorEvent2]
 ; EN: Message="Message Log 7: Mothership acknowledges request for resupply of Outpost 3J. Scout Skimmer 3J-1A authorized to return to the mothership to pick up cargo."
-message="Menssagem 7 do Diário: A NaveMãe confirma o pedido por suprimentos da Fortaleza da Montanha 3J. Escolta Skimmer 3J-1A autorizada a retornar à navemãe para pegar um carregamento."
+message="Menssagem 7 do Diário: A Navemãe confirma o pedido por suprimentos da Fortaleza da Montanha 3J. Escolta Skimmer 3J-1A autorizada a retornar à navemãe para pegar um carregamento."
 
 [TranslatorEvent1]
 ; EN: Message="Main Bay Door Controls"

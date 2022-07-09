@@ -156,7 +156,7 @@ ItemArticle="un"
 
 [OldFlakBox]
 ; EN: PickupMessage="You picked up 10 Flak Shells"
-PickupMessage="Tienes 10 Proyectiles de Metralla"
+PickupMessage="Has recogido 10 Proyectiles de Metralla"
 ; EN: ItemName="Flak Shells"
 ItemName="Proyectiles de Metralla"
 ; EN: ItemArticle="a bunch of"
@@ -232,7 +232,7 @@ ItemArticle="un"
 
 [OldRifleRound]
 ; EN: PickupMessage="You got a Rifle Round"
-PickupMessage="Tienes un Cartucho para el Rifle"
+PickupMessage="Has recogido un Cartucho para el Rifle"
 ; EN: ItemName="Rifle Round"
 ItemName="Cartucho de Rifle"
 ; EN: ItemArticle="a"
@@ -240,7 +240,7 @@ ItemArticle="un"
 
 [OldFlakShellAmmo]
 ; EN: PickupMessage="You got a Flak Shell"
-PickupMessage="Tienes un Proyectil de Metralla"
+PickupMessage="Has recogido un Proyectil de Metralla"
 ; EN: ItemName="Flak Shell"
 ItemName="Proyectil de Metralla"
 ; EN: ItemArticle="a"
