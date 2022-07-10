@@ -1,6 +1,6 @@
 ﻿[Public]
 ; EN: Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Standard (Deprecated)")
-Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Padrão (Descontinuada)")
+Object=(Name=Engine.Console,Class=Class,MetaClass=Engine.Console,Description="Padrão (Descontinuado)")
 Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
@@ -158,7 +158,7 @@ HelpDesc[1]="Dá privilégios de administrador a todos os jogadores."
 
 [Console]
 ; EN: ClassCaption="Standard (Deprecated)"
-ClassCaption="Padrão (Descontinuada)"
+ClassCaption="Padrão (Descontinuado)"
 ; EN: LoadingMessage="LOADING"
 LoadingMessage="CARREGANDO"
 ; EN: SavingMessage="SAVING"
