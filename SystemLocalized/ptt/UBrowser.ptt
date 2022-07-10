@@ -1,6 +1,6 @@
 ﻿[Public]
 ; EN: Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Classic Menu")
-Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Menu Clássico")
+Object=(Name=UBrowser.UBrowserConsole,Class=Class,MetaClass=Engine.Console,Description="Clássico")
 Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class=UBrowser.UBrowserMainClientWindow,Immediate=True)
 
 [UBrowserGSpyLink]
@@ -171,7 +171,7 @@ InfoText[1]="Para obter mais informações, veja as informações externas abaix
 
 [UBrowserConsole]
 ; EN: ClassCaption="Classic Menu"
-ClassCaption="Menu Clássico"
+ClassCaption="Clássico"
 
 [UBrowserOpenBar]
 ; EN: OpenText="Open:"
