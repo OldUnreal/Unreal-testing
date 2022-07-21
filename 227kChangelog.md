@@ -34,10 +34,14 @@
     * D3DDrv.\*: Now unavailable for Win64.
     * D3D9Drv.\*: The renderer can now be selected in UnrealEd.
     * DmStomp.\*: Fixed Title.
-    * Editor.\*: By consensus (sigh), the Commandlets will be left untranslated.
+    * Editor.\*:
+        * By consensus (sigh), the Commandlets will be left untranslated.
+        * CompareInt commandlet removed as it was fused with DumpInt. Updated description in DumpInt.
     * Engine.\*:
         * "Standard Console" now has a short name for the Classic Menu.
-    * Console name renamed: "Standard Unreal Console" -> "Standard (Deprecated)"
+        * Console name renamed: ''"Standard Unreal Console"'' -> ''"Standard (Deprecated)"''.
+        * General file layout updated in all languages.
+        * By consensus (sigh), the Commandlets will be left untranslated.
     * SetupUnrealPatch.\*: Removed UED version number.
     * UBrowser.\*: Console name renamed: "Unreal Browser Console" -> "Classic Menu"
     * UMenu.\*:
@@ -52,6 +56,7 @@
         * Tweaked descriptions of HUD Scaling and Sky Fogging.
         * "Console" -> "Menu Design"
     * UPak.\*: Console name renamed: "Unreal Gold Console" -> "Unreal Gold (Deprecated)"
+* German: Minor changes by hosterholz to Setup.det and UMenu.det.
 * French: OldWeapons' strings synced with UnrealI and UnrealShare.
 * Spanish:
     * Localized Viewport in SDL2Drv.est and WinDrv.est.
