@@ -42,25 +42,21 @@ Here’s a list of people that helped me in this project in no particular order.
 
 ## Localization credits
 
-* Epic Games/Digital Extremes/Legend Entertainment: Original English/German/French/Spanish/Italian localizations
-* Neon_Knight: Localization project coordination, Spanish maintenance.
-* Buggie: Localization templates for all languages.
-* Smirftsch: German, additional contributions.
-* eGo: German, additional contributions.
-* Ividyon: German, additional contributions.
-* Sly.: German, additional contributions.
-* Hellkeeper: French, fixes and maintenance.
-* Rackover/Louvenarde: French, fixes and maintenance.
-* rarsonic: Spanish, additional contributions.
-* UBerserker: Italian, additional contributions.
-* TaglesMalsto: Italian, additional contributions.
-* u.HighPriest: Russian, localization author.
-* Skaarj ZR: Russian, additional contributions.
-* Reborn: Russian, additional contributions.
-* Victor Delacroix: Polish, additional contributions.
-* Nahand: Portuguese, additional contributions.
-* Naruto_9: Portuguese, additional contributions.
-* bennytrt: Dutch, additional contributions.
-* Rubie: Dutch, revision and additional contributions.
+* **Epic Games/Digital Extremes/Legend Entertainment:** Original English/German/French/Spanish/Italian localizations
+* **Smirftsch:** Initial project coordination.
+* **Victor Delacroix:** Early project coordination.
+* **Hellkeeper:** Early project coordination.
+* **Neon_Knight:** Current project coordination.
+* **Buggie:** Localization templates for all 15 languages.
+* Language-specific:
+    * **_German:_** **Smirftsch, Jan "eGo" Urbansky, ividyon** and **Sly.** (review), **hosterholz** (additional contributions)
+    * **_French:_** **Hellkeeper** (review), **Rackover/Louvenarde** (additional contributions)
+    * **_Spanish:_** **Neon_Knight** (review), **rarsonic** (additional contributions)
+    * **_Italian:_** **UBerserker, BBG-(DOG)-, Lowenz** and **TaglesMalsto** (additional contributions)
+    * **_Russian:_** **u.HighPriest** (localization), **Skaarj ZR, FLAK, ArchGrey** and **Reborn** (additional contributions)
+    * **_Polish:_** **Victor Delacroix** (review), **yrex.** (additional contributions)
+    * **_Portuguese:_** **Nahand** (localization), **BIr4** (review), **Naruto_9** (additional contributions)
+    * **_Catalan:_** **rarsonic** (additional contributions)
+    * **_Dutch:_** **Rubie** (review), **bennytrt and Hyper** (additional contributions)
 
 And all friends who offered me mirroring; the OldUnreal community which helps me to find and fix bugs in the Forums and on Github; and of course all those I may forget now, and all those who donated to OldUnreal, helping me to pay and maintain OldUnreal.
