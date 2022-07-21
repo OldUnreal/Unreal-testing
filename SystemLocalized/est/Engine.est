@@ -5,31 +5,53 @@ Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 ; Main roots
+; Localized string here goes in LangCaption, e.g. Langcaption="Avanzado" (spanish)
 Preferences=(Caption="Advanced",Parent="Advanced Options",Langcaption="Avanzado")
+; Localized string here goes in LangCaption, e.g. Langcaption="Reproducción" (spanish)
 Preferences=(Caption="Rendering",Parent="Advanced Options",Langcaption="Reproducción")
+; Localized string here goes in LangCaption, e.g. Langcaption="Sonido" (spanish)
 Preferences=(Caption="Audio",Parent="Advanced Options",Langcaption="Sonido")
+; Localized string here goes in LangCaption, e.g. Langcaption="Juego en Red" (spanish)
 Preferences=(Caption="Networking",Parent="Advanced Options",Langcaption="Juego en Red")
+; Localized string here goes in LangCaption, e.g. Langcaption="Tipos de Juego" (spanish)
 Preferences=(Caption="Game Types",Parent="Advanced Options",Langcaption="Tipos de Juego")
+; Localized string here goes in LangCaption, e.g. Langcaption="Imagen" (spanish)
 Preferences=(Caption="Display",Parent="Advanced Options",Langcaption="Imagen")
+; Localized string here goes in LangCaption, e.g. Langcaption="Mando" (spanish)
 Preferences=(Caption="Joystick",Parent="Advanced Options",Langcaption="Mando")
+; Localized string here goes in LangCaption, e.g. Langcaption="Controladores" (spanish)
 Preferences=(Caption="Drivers",Parent="Advanced Options",Langcaption="Controladores",Class=Engine.Engine,Immediate=False,Category=Drivers)
+; Localized string here goes in LangCaption, e.g. Langcaption="Opciones de Juego" (spanish)
 Preferences=(Caption="Game Settings",Parent="Advanced Options",Langcaption="Opciones de Juego",Class=Engine.GameInfo,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Marcas" (spanish)
 Preferences=(Caption="Decals",Parent="Advanced Options",Langcaption="Marcas")
 ; Advanced
+; Localized string here goes in LangCaption, e.g. Langcaption="Configuración de Motor de Juego" (spanish)
 Preferences=(Caption="Game Engine Settings",Parent="Advanced",Langcaption="Configuración de Motor de Juego",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Macros para Asignaciones" (spanish)
 Preferences=(Caption="Key Aliases",Parent="Advanced",Langcaption="Macros para Asignaciones",Class=Engine.Input,Immediate=True,Category=Aliases)
+; Localized string here goes in LangCaption, e.g. Langcaption="Asignaciones de Botones" (spanish)
 Preferences=(Caption="Raw Key Bindings",Parent="Advanced",Langcaption="Asignaciones de Botones",Class=Engine.Input,Immediate=True,Category=RawKeys)
 ; Networking
+; Localized string here goes in LangCaption, e.g. Langcaption="Info. Pública de Servidor" (spanish)
 Preferences=(Caption="Public Server Information",Parent="Networking",Langcaption="Info. Pública de Servidor",Class=Engine.GameReplicationInfo,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Canal de Descargas" (spanish)
 Preferences=(Caption="Channel Download",Parent="Networking",Langcaption="Canal de Descargas",Class=Engine.ChannelDownload)
+; Localized string here goes in LangCaption, e.g. Langcaption="Notificaciones de Conexión" (spanish)
 Preferences=(Caption="Connection Notifications",Parent="Networking",Langcaption="Notificaciones de Conexión",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Listas de Mapas" (spanish)
 Preferences=(Caption="Map Lists",Parent="Networking",Langcaption="Listas de Mapas")
 ; Decals
+; Localized string here goes in LangCaption, e.g. Langcaption="Sangre" (spanish)
 Preferences=(Caption="Blood",Parent="Decals",Langcaption="Sangre")
+; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Personaje" (spanish)
 Preferences=(Caption="Pawn Shadow",Parent="Decals",Langcaption="Sombra de Personaje",Class=Engine.PawnShadow,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Decoración" (spanish)
 Preferences=(Caption="Decoration Shadow",Parent="Decals",Langcaption="Sombra de Decoración",Class=Engine.DecoShadow,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Proyectil" (spanish)
 Preferences=(Caption="Projectile Shadow",Parent="Decals",Langcaption="Sombra de Proyectil",Class=Engine.ProjectileShadow,Immediate=True)
 ; Blood
+; Localized string here goes in LangCaption, e.g. Langcaption="Servidor" (spanish)
 Preferences=(Caption="Server",Parent="Blood",Langcaption="Servidor",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
 
 [Pawn]
@@ -101,19 +123,16 @@ ReceiveSize="Tamaño %iK, Completo %3.1f%% = %iK, Quedan %i paquetes"
 ConnectingText="Conectando (F10 para cancelar):"
 ConnectingURL="unreal://%ls/%ls"
 
+; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [ServerCommandlet]
 HelpCmd=server
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Network game server."
-HelpOneLiner="Servidor en red de juego."
-; EN: HelpUsage="server map.unr[?game=gametype] [-option...] [parm=value]..."
-HelpUsage="server map.unr[?game=tipoDeJuego] [-opción...] [parámetro=valor]..."
+HelpOneLiner="Network game server."
+HelpUsage="server map.unr[?game=gametype] [-option...] [parm=value]..."
 HelpParm[0]="Log"
-; EN: HelpDesc[0]="Specify the log file to generate."
-HelpDesc[0]="Especifica el archivo de registro que debe ser generado."
+HelpDesc[0]="Specify the log file to generate."
 HelpParm[1]="AllAdmin"
-; EN: HelpDesc[1]="Give all players admin privileges."
-HelpDesc[1]="Da privilegios de administrador a todos los jugadores."
+HelpDesc[1]="Give all players admin privileges."
 
 [PlayerPawn]
 ; EN: QuickSaveString="Quick Saving"
@@ -174,7 +193,7 @@ LeftMessage=" ha abandonado la partida."
 ; EN: FailedSpawnMessage="Failed to spawn player actor"
 FailedSpawnMessage="No se ha podido crear actor de jugador"
 ; EN: FailedPlaceMessage="Could not find starting spot (level might need a "PlayerStart" actor)"
-FailedPlaceMessage="No se ha podido encontrar punto de partida (quizás el nivel necesite un actor "PlayerStart")"
+FailedPlaceMessage="No se ha podido encontrar punto de partida (quizás el nivel necesite un actor PlayerStart)"
 ; EN: FailedTeamMessage="Could not find team for player"
 FailedTeamMessage="No se ha podido encontrar equipo para el jugador"
 ; EN: NameChangedMessage="Name changed to "
@@ -201,19 +220,21 @@ MaxedOutSpectatorsMsg="Lím. máx. de espectadores alcanzado"
 MessageNoAmmo=" no tiene munición."
 ; EN: DeathMessage="%o was killed by %k's %w."
 DeathMessage="%o ha sido asesinado por el %w de %k."
-FemDeathMessage="%o ha sido asesinada por el %w de %k."
-FemKillMessage="%o ha sido asesinada por el %w de %k."
 ; EN: PickupMessage="You got a weapon"
 PickupMessage="Has recogido un arma"
 ; EN: ItemName="Weapon"
 ItemName="Arma"
+; If bGenderMessages=True in UnrealShare, section [UnrealGameInfo]
+FemDeathMessage="%o ha sido asesinada por el %w de %k."
+FemKillMessage="%o ha sido asesinada por el %w de %k."
 
 [DamageType]
 ; EN: Name="killed"
 Name="asesinado"
-FemName="asesinada"
 ; EN: AltName="killed"
 AltName="matado"
+; If bGenderMessages=True in UnrealShare, section [UnrealGameInfo]
+FemName="asesinada"
 AltFemName="matada"
 
 [Errors]
@@ -275,7 +296,7 @@ TempBanned="Tu entrada al servidor ha sido vetada temporalmente"
 Kicked="Has sido expulsado de la partida"
 
 [General]
-; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
+; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreal's Web site:"
 Upgrade="Para ingresar a este servidor, necesita la última actualización gratuita de Unreal disponible en el sitio web de OldUnreals:"
 UpgradeURL="https://www.oldunreal.com/oldunrealpatches.html"
 ; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
@@ -293,8 +314,10 @@ CheatUsedStr="%ls utilizó el comando trampa/administrativo %c"
 
 [AutosaveTrigger]
 ; EN: AutoSaveString="Auto Saving"
-AutoSaveString="Autoguardando..."
+AutoSaveString="Autoguardando"
 
+; BEWARE WHEN MODIFYING THIS SECTION. This only accepts "package.texture" keys. Make sure you enter the right ones.
+; At any doubt, ask in the forums or Discord.
 [Fonts]
 WhiteFont=UnrealShare.WhiteFont
 MedFont=Engine.MedFont
@@ -302,26 +325,20 @@ LargeFont=Engine.LargeFont
 BigFont=Engine.BigFont
 SmallFont=Engine.SmallFont
 
+; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [LinkerUpdateCommandlet]
 HelpCmd=linkerupdate
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Adds all checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
-HelpOneLiner="Agrega todas las sumas de verificación (checksum) dentro del directorio automáticamente al archivo SHALinkerCache.ini. Usado por el sistema antitrampas UnrealIntegrity."
-; EN: HelpUsage="linkerupdate <filename>"
-HelpUsage="linkerupdate <archivo>"
-; EN: HelpParm[0]="<filename>"
-HelpParm[0]="<archivo>"
-; EN: HelpDesc[0]="The file to calculate the checksum for posterior storage."
-HelpDesc[0]="El archivo sobre el cual se debe calcular la suma de verificación para su posterior almacenamiento."
+HelpOneLiner="Adds all checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
+HelpUsage="linkerupdate <filename>"
+HelpParm[0]="<filename>"
+HelpDesc[0]="The file to calculate the checksum for posterior storage."
 
+; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [SHAUpdateCommandlet]
 HelpCmd=shaupdate
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Adds all SHA256 checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
-HelpOneLiner="Agrega todas las sumas de verificación (checksum) SHA256 dentro del directorio automáticamente al archivo SHALinkerCache.ini. Usado por el sistema antitrampas UnrealIntegrity."
-; EN: HelpUsage="shaupdate <filename>"
-HelpUsage="shaupdate <archivo>"
-; EN: HelpParm[0]="<filename>"
-HelpParm[0]="<archivo>"
-; EN: HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
-HelpDesc[0]="El archivo sobre el cual se debe calcular la suma de verificación SHA256 para su posterior almacenamiento."
+HelpOneLiner="Adds all SHA256 checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
+HelpUsage="shaupdate <filename>"
+HelpParm[0]="<filename>"
+HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
