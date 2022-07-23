@@ -95,15 +95,6 @@ void main(void)
     Color = texture(Texture0, gTexCoords);
 #endif
 
-    #if SRGB
-	if((gPolyFlags & PF_Modulated)!=PF_Modulated)
-	{
-		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
-		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
-        Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
-    }
-    #endif
-
     if (gTextureInfo.x > 0.0)
         Color *= gTextureInfo.x; // Diffuse factor.
 
@@ -323,8 +314,24 @@ void main(void)
 	}
 #endif
 
+	if((gPolyFlags & PF_Modulated)!=PF_Modulated)
+	{
+#if EDITOR
+        // Gamma
+        float InGamma = gGamma*GammaMultiplierUED;
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#else
+		// Gamma
+        float InGamma = gGamma*GammaMultiplier; // gGamma is a value from 0.1 to 1.0
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#endif
+	}
 
-	// Add DistanceFog
+    // Add DistanceFog
 #if ENGINE_VERSION==227
 	if (gDistanceFogInfo.w >= 0.0)
 	{
@@ -345,38 +352,12 @@ void main(void)
 	}
 #endif
 
-	if((gPolyFlags & PF_Modulated)!=PF_Modulated)
-	{
-#if EDITOR
-        // Gamma
-        float InGamma = gGamma*GammaMultiplierUED;
-        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
-        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
-        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
-#else
-		// Gamma
-		float InGamma = gGamma*GammaMultiplier; // gGamma is a value from 0.1 to 1.0
-        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
-        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
-        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
-#endif
-	}
-
 #if EDITOR
 	// Editor support.
-	if (gRendMap == REN_Zones || gRendMap == REN_PolyCuts || gRendMap == REN_Polys || gRendMap==REN_PlainTex)
+	if (gRendMap == REN_Zones || gRendMap == REN_PolyCuts || gRendMap == REN_Polys)
 	{
-		TotalColor = Color;
-
-		if ( (gPolyFlags&PF_Selected) == PF_Selected )
-        {
-            TotalColor.r = (TotalColor.r*0.75);
-            TotalColor.g = (TotalColor.g*0.75);
-            TotalColor.b = (TotalColor.b*0.75) + 0.1;
-            TotalColor = clamp(TotalColor,0.0,1.0);
-            if(TotalColor.a < 0.5)
-                TotalColor.a = 0.51;
-        }
+		TotalColor +=0.5;
+		TotalColor *= gDrawColor;
 	}
 	else if ( gRendMap==REN_Normals )
 	{
@@ -394,6 +375,20 @@ void main(void)
 			TotalColor = vec4(max(0.0,T),max(0.0,-T),0.0,1.0);
 		}
 	}
+	else if ( gRendMap==REN_PlainTex )
+	{
+		TotalColor = Color;
+	}
+
+	if ( (gRendMap!=REN_Normals)  && ((gPolyFlags&PF_Selected) == PF_Selected) )
+	{
+		TotalColor.r = (TotalColor.r*0.75);
+        TotalColor.g = (TotalColor.g*0.75);
+        TotalColor.b = (TotalColor.b*0.75) + 0.1;
+		TotalColor = clamp(TotalColor,0.0,1.0);
+		if(TotalColor.a < 0.5)
+			TotalColor.a = 0.51;
+	}
 
     // HitSelection, Zoneview etc.
 	if (bool(gHitTesting))
@@ -405,16 +400,8 @@ void main(void)
 #endif
 
 # if SIMULATEMULTIPASS
-    if((gPolyFlags & PF_Modulated) == PF_Modulated || (gPolyFlags & PF_Translucent) == PF_Translucent)
-    {
-        FragColor	= TotalColor;
-        FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor);
-	}
-	else
-    {
-        FragColor	= TotalColor;
-        FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor)*LightColor;
-	}
+    FragColor	= TotalColor;
+    FragColor1  = ((vec4(1.0)-TotalColor*LightColor)); //no, this is not entirely right, TotalColor has already LightColor applied. But will blow any fog/transparency otherwise. However should not make any (visual) difference here for this equation. Any better idea?
 #else
     FragColor	= TotalColor;
 #endif

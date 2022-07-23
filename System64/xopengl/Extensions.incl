@@ -7,16 +7,21 @@
 =============================================================================*/
 #if BINDLESSTEXTURES
 #extension GL_ARB_bindless_texture : require
-#extension GL_ARB_gpu_shader_int64 : enable
+#extension GL_ARB_gpu_shader_int64 : enable // we store bindless textures in interface blocks. This only works if we support int64s in GLSL
 #extension GL_ARB_shading_language_420pack : enable
+#endif
+
+#if SHADERDRAWPARAMETERS
 #extension GL_ARB_shader_draw_parameters : require
 #endif
 
 #ifdef GL_ES
 // The following extension appears not to be available on RaspberryPi4 at the moment.
 #extension GL_EXT_clip_cull_distance : enable
-precision mediump float;
-precision mediump int;
+
+// This determines how much precision the GPU uses when calculating. Performance critical (especially on low end)!! Not every option is available on any platform. Todo: separate option for vert and frag?
+precision highp float; // options: lowp/mediump/highp, should be mediump for performance reasons, but appears to cause trouble determining DrawFlags then !?! (Currently on NVIDIA 470.103.01).
+precision highp int;
 #endif
 
 // The following directive resets the line number to 1 to have the correct output logging for a possible error within the shader files.

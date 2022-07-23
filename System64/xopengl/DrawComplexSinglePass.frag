@@ -448,7 +448,6 @@ void main (void)
 #if HARDWARELIGHTS || BUMPMAPS
     vec3 TangentViewDir  = normalize( vTangentViewPos - vTangentFragPos );
     int NumLights = int(LightData4[0].y);
-    float parallaxHeight = 1.0;
 
     #if !SHADERDRAWPARAMETERS
         vBumpMapSpecular = TexCoords[IDX_BUMPMAP_INFO].y;
@@ -456,13 +455,13 @@ void main (void)
 
 #if BASIC_PARALLAX || OCCLUSION_PARALLAX || RELIEF_PARALLAX
     // ParallaxMap
+    float parallaxHeight = 1.0;
     if ((vDrawFlags & DF_HeightMap) == DF_HeightMap)
     {
         // get new texture coordinates from Parallax Mapping
         texCoords = ParallaxMapping(vTexCoords, TangentViewDir, vHeightMapTexNum, parallaxHeight);
-
         //if(texCoords.x > 1.0 || texCoords.y > 1.0 || texCoords.x < 0.0 || texCoords.y < 0.0)
-         //  discard;// texCoords = vTexCoords;
+        //  discard;// texCoords = vTexCoords;
     }
 #endif
 
@@ -475,15 +474,6 @@ void main (void)
 #else
     Color = texture(Texture0, texCoords);
 #endif
-
-    #if SRGB
-	if((vPolyFlags & PF_Modulated)!=PF_Modulated)
-	{
-		Color.r=max(1.055 * pow(Color.r, 0.416666667) - 0.055, 0.0);
-		Color.g=max(1.055 * pow(Color.g, 0.416666667) - 0.055, 0.0);
-        Color.b=max(1.055 * pow(Color.b, 0.416666667) - 0.055, 0.0);
-    }
-    #endif
 
     if (vBaseDiffuse > 0.0)
         Color *= vBaseDiffuse; // Diffuse factor.
@@ -515,7 +505,7 @@ void main (void)
     vec4 LightColor = vec4(1.0);
 #if HARDWARELIGHTS
 		float LightAdd = 0.0f;
-		LightColor = vec4(0.0,0.0,0.0,0.0);
+		LightColor = vec4(0.0);
 
 		for (int i=0; i < NumLights; i++)
 		{
@@ -553,14 +543,14 @@ void main (void)
 # else
 			LightColor = texture(Texture1, vLightMapCoords);
 # endif
+            // Fetch lightmap texel. Data in LightMap is in 0..127/255 range, which needs to be scaled to 0..2 range.
 # ifdef GL_ES
-			TotalColor*=vec4(LightColor.bgr,1.0);
+            LightColor.bgr = LightColor.bgr*(2.0*255.0/127.0);
 # else
-			TotalColor*=vec4(LightColor.rgb,1.0);
+            LightColor.rgb = LightColor.rgb*(2.0*255.0/127.0);
 # endif
-			TotalColor.rgb=clamp(TotalColor.rgb*2.0,0.0,1.0); //saturate.
+			LightColor.a = 1.0;
 		}
-
 #endif
 
 	// DetailTextures
@@ -699,20 +689,18 @@ void main (void)
 #endif
 
 	// FogMap
-	vec4 FogColor = vec4(1.0);
+	vec4 FogColor = vec4(0.0);
 	if ((vDrawFlags & DF_FogMap) == DF_FogMap)
 	{
 #if BINDLESSTEXTURES
 	    if (vFogMapTexNum > 0u)
-            FogColor = texture(Textures[vFogMapTexNum], vFogMapCoords);
+            FogColor = texture(Textures[vFogMapTexNum], vFogMapCoords) * 2.0;
 		else
-		    FogColor = texture(Texture2, vFogMapCoords);
+		    FogColor = texture(Texture2, vFogMapCoords) * 2.0;
 
 #else
-		FogColor = texture(Texture2, vFogMapCoords);
+		FogColor = texture(Texture2, vFogMapCoords) * 2.0;
 #endif
-        TotalColor.rgb = TotalColor.rgb * (1.0-FogColor.a) + FogColor.rgb;
-        TotalColor.a   = FogColor.a;
 	}
 
 	// EnvironmentMap
@@ -742,7 +730,34 @@ void main (void)
 
 	//TotalColor=clamp(TotalColor,0.0,1.0); //saturate.
 
-	// Add DistanceFog
+	if((vPolyFlags & PF_Modulated)!=PF_Modulated)
+	{
+#if EDITOR
+        // Gamma
+        float InGamma = vGamma*GammaMultiplierUED;
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#else
+		// Gamma
+        float InGamma = vGamma*GammaMultiplier; // vGamma is a value from 0.1 to 1.0
+        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
+        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
+        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
+#endif
+	}
+
+    if((vPolyFlags & PF_Modulated)!=PF_Modulated)
+	{
+	    TotalColor  = TotalColor * LightColor;
+	}
+	else
+    {
+		TotalColor = TotalColor;
+    }
+    TotalColor += FogColor;
+
+ // Add DistanceFog, needs to be added after Light has been applied.
 #if ENGINE_VERSION==227
 	// stijn: Very slow! Went from 135 to 155FPS on CTF-BT-CallousV3 by just disabling this branch even tho 469 doesn't do distance fog
 	int FogMode = int(vDistanceFogInfo.w);
@@ -764,23 +779,6 @@ void main (void)
 		TotalColor = mix(TotalColor, DistanceFogParams.FogColor, getFogFactor(DistanceFogParams));
 	}
 #endif
-
-	if((vPolyFlags & PF_Modulated)!=PF_Modulated)
-	{
-#if EDITOR
-        // Gamma
-        float InGamma = vGamma*GammaMultiplierUED;
-        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
-        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
-        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
-#else
-		// Gamma
-		float InGamma = vGamma*GammaMultiplier; // vGamma is a value from 0.1 to 1.0
-        TotalColor.r=pow(TotalColor.r,1.0/InGamma);
-        TotalColor.g=pow(TotalColor.g,1.0/InGamma);
-        TotalColor.b=pow(TotalColor.b,1.0/InGamma);
-#endif
-	}
 
 #if EDITOR
 	// Editor support.
@@ -823,24 +821,14 @@ void main (void)
     // HitSelection, Zoneview etc.
 	if (bHitTesting)
 		TotalColor = vDrawColor; // Use ONLY DrawColor.
-
 #endif
 
 # if SIMULATEMULTIPASS
-    if((vPolyFlags & PF_Modulated) == PF_Modulated || (vPolyFlags & PF_Translucent) == PF_Translucent)
-    {
-        FragColor	= TotalColor;
-        FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor);
-	}
-	else
-    {
-        FragColor	= TotalColor;
-        FragColor1	= (vec4(1.0,1.0,1.0,1.0)-TotalColor)*LightColor;
-	}
+    FragColor	= TotalColor;
+    FragColor1  = ((vec4(1.0)-TotalColor)*LightColor);
 #else
     FragColor	= TotalColor;
 #endif
-
 
 }
 #else
