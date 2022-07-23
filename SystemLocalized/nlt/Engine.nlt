@@ -5,46 +5,54 @@ Object=(Name=Engine.ServerCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.LinkerUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 Object=(Name=Engine.SHAUpdateCommandlet,Class=Class,MetaClass=Core.Commandlet)
 ; Main roots
-Preferences=(Caption="Advanced",Parent="Advanced Options",LangCaption="Geavanceerd")
-Preferences=(Caption="Rendering",Parent="Advanced Options",LangCaption="Renderen")
-Preferences=(Caption="Audio",Parent="Advanced Options",LangCaption="Geluid")
-Preferences=(Caption="Networking",Parent="Advanced Options",LangCaption="Netwerken")
-Preferences=(Caption="Game Types",Parent="Advanced Options",LangCaption="Speltypes")
-Preferences=(Caption="Display",Parent="Advanced Options",LangCaption="Weergave")
-Preferences=(Caption="Joystick",Parent="Advanced Options",LangCaption="Joystick")
-Preferences=(Caption="Drivers",Parent="Advanced Options",LangCaption="Drivers",Class=Engine.Engine,Immediate=False,Category=Drivers)
-Preferences=(Caption="Game Settings",Parent="Advanced Options",LangCaption="Spelinstellingen",Class=Engine.GameInfo,Immediate=True)
-Preferences=(Caption="Decals",Parent="Advanced Options",LangCaption="Decals")
+; Localized string here goes in LangCaption, e.g. Langcaption="Avanzado" (spanish)
+Preferences=(Caption="Advanced",Parent="Advanced Options",Langcaption="Geavanceerd")
+; Localized string here goes in LangCaption, e.g. Langcaption="Reproducción" (spanish)
+Preferences=(Caption="Rendering",Parent="Advanced Options",Langcaption="Renderen")
+; Localized string here goes in LangCaption, e.g. Langcaption="Sonido" (spanish)
+Preferences=(Caption="Audio",Parent="Advanced Options",Langcaption="Geluid")
+; Localized string here goes in LangCaption, e.g. Langcaption="Juego en Red" (spanish)
+Preferences=(Caption="Networking",Parent="Advanced Options",Langcaption="Netwerken")
+; Localized string here goes in LangCaption, e.g. Langcaption="Tipos de Juego" (spanish)
+Preferences=(Caption="Game Types",Parent="Advanced Options",Langcaption="Speltypes")
+; Localized string here goes in LangCaption, e.g. Langcaption="Imagen" (spanish)
+Preferences=(Caption="Display",Parent="Advanced Options",Langcaption="Weergave")
+; Localized string here goes in LangCaption, e.g. Langcaption="Mando" (spanish)
+Preferences=(Caption="Joystick",Parent="Advanced Options",Langcaption="Joystick")
+; Localized string here goes in LangCaption, e.g. Langcaption="Controladores" (spanish)
+Preferences=(Caption="Drivers",Parent="Advanced Options",Langcaption="Drivers",Class=Engine.Engine,Immediate=False,Category=Drivers)
+; Localized string here goes in LangCaption, e.g. Langcaption="Opciones de Juego" (spanish)
+Preferences=(Caption="Game Settings",Parent="Advanced Options",Langcaption="Spelinstellingen",Class=Engine.GameInfo,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Marcas" (spanish)
+Preferences=(Caption="Decals",Parent="Advanced Options",Langcaption="Decals")
 ; Advanced
-Preferences=(Caption="Game Engine Settings",Parent="Advanced",LangCaption="Game Engine-instellingen",Class=Engine.GameEngine,Category=Settings,Immediate=True)
-Preferences=(Caption="Key Aliases",Parent="Advanced",LangCaption="Sleutelaliassen",Class=Engine.Input,Immediate=True,Category=Aliases)
-Preferences=(Caption="Raw Key Bindings",Parent="Advanced",LangCaption="RawKeyBindingen",Class=Engine.Input,Immediate=True,Category=RawKeys)
+; Localized string here goes in LangCaption, e.g. Langcaption="Configuración de Motor de Juego" (spanish)
+Preferences=(Caption="Game Engine Settings",Parent="Advanced",Langcaption="Game Engine-instellingen",Class=Engine.GameEngine,Category=Settings,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Macros para Asignaciones" (spanish)
+Preferences=(Caption="Key Aliases",Parent="Advanced",Langcaption="Sleutelaliassen",Class=Engine.Input,Immediate=True,Category=Aliases)
+; Localized string here goes in LangCaption, e.g. Langcaption="Asignaciones de Botones" (spanish)
+Preferences=(Caption="Raw Key Bindings",Parent="Advanced",Langcaption="RawKeyBindingen",Class=Engine.Input,Immediate=True,Category=RawKeys)
 ; Networking
-Preferences=(Caption="Public Server Information",Parent="Networking",LangCaption="Openbare ServerInformatie",Class=Engine.GameReplicationInfo,Immediate=True)
-Preferences=(Caption="Channel Download",Parent="Networking",LangCaption="Kanaal Downloaden",Class=Engine.ChannelDownload)
-Preferences=(Caption="Connection Notifications",Parent="Networking",LangCaption="Verbindingsmeldingen",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
-Preferences=(Caption="Map Lists",Parent="Networking",LangCaption="KaartLijsten")
+; Localized string here goes in LangCaption, e.g. Langcaption="Info. Pública de Servidor" (spanish)
+Preferences=(Caption="Public Server Information",Parent="Networking",Langcaption="Openbare ServerInformatie",Class=Engine.GameReplicationInfo,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Canal de Descargas" (spanish)
+Preferences=(Caption="Channel Download",Parent="Networking",Langcaption="Kanaal Downloaden",Class=Engine.ChannelDownload)
+; Localized string here goes in LangCaption, e.g. Langcaption="Notificaciones de Conexión" (spanish)
+Preferences=(Caption="Connection Notifications",Parent="Networking",Langcaption="Verbindingsmeldingen",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Listas de Mapas" (spanish)
+Preferences=(Caption="Map Lists",Parent="Networking",Langcaption="KaartLijsten")
 ; Decals
-Preferences=(Caption="Blood",Parent="Decals",LangCaption="Bloed")
-Preferences=(Caption="Pawn Shadow",Parent="Decals",LangCaption="Speler Schaduw",Class=Engine.PawnShadow,Immediate=True)
-Preferences=(Caption="Decoration Shadow",Parent="Decals",LangCaption="Decoratie Schaduw",Class=Engine.DecoShadow,Immediate=True)
-Preferences=(Caption="Projectile Shadow",Parent="Decals",LangCaption="Projectiel Schaduw",Class=Engine.ProjectileShadow,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Sangre" (spanish)
+Preferences=(Caption="Blood",Parent="Decals",Langcaption="Bloed")
+; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Personaje" (spanish)
+Preferences=(Caption="Pawn Shadow",Parent="Decals",Langcaption="Speler Schaduw",Class=Engine.PawnShadow,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Decoración" (spanish)
+Preferences=(Caption="Decoration Shadow",Parent="Decals",Langcaption="Decoratie Schaduw",Class=Engine.DecoShadow,Immediate=True)
+; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Proyectil" (spanish)
+Preferences=(Caption="Projectile Shadow",Parent="Decals",Langcaption="Projectiel Schaduw",Class=Engine.ProjectileShadow,Immediate=True)
 ; Blood
-Preferences=(Caption="Server",Parent="Blood",LangCaption="Server",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
-
-[PlayerPawn]
-; EN: QuickSaveString="Quick Saving"
-QuickSaveString="Snel opslaan"
-; EN: NoPauseMessage="Game is not pauseable"
-NoPauseMessage="Het spel kan niet worden gepauzeerd"
-; EN: ViewingFrom="Now viewing from "
-ViewingFrom="Nu bekijken van "
-; EN: OwnCamera="own camera"
-OwnCamera="eigen camera"
-; EN: FailedView="Failed to change view."
-FailedView="Kan weergave niet wijzigen."
-; EN: CantChangeNameMsg="You can't change your name during a global logged game."
-CantChangeNameMsg="U kunt uw naam niet wijzigen tijdens een wereldwijd gelogd spel."
+; Localized string here goes in LangCaption, e.g. Langcaption="Servidor" (spanish)
+Preferences=(Caption="Server",Parent="Blood",Langcaption="Server",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
 
 [Pawn]
 ; EN: NameArticle=" a "
@@ -62,45 +70,25 @@ M_Selected=" geselecteerd."
 ; EN: M_Deactivated=" deactivated."
 M_Deactivated=" gedeactiveerd."
 
-[LevelInfo]
-; EN: Title="Untitled"
-Title="Ongetiteld"
-
-[Weapon]
-; EN: MessageNoAmmo=" has no ammo."
-MessageNoAmmo=" heeft geen munitie."
-; EN: DeathMessage="%o was killed by %k's %w."
-DeathMessage="%o werd gedood door %w van %k."
-; EN: PickupMessage="You got a weapon"
-PickupMessage="Je hebt een wapen"
-; EN: ItemName="Weapon"
-ItemName="Wapen"
-; EN: FemDeathMessage="%o was killed by %k's %w."
-FemDeathMessage="%o werd gedood door %w van %k."
-; EN: FemKillMessage="%o was killed by %k's %w."
-FemKillMessage="%o werd gedood door %w van %k."
-
 [Ammo]
 ; EN: PickupMessage="You picked up some ammo"
 PickupMessage="Je hebt wat munitie opgehaald"
 ; EN: ItemName="Ammo"
 ItemName="Munitie"
 
-[Counter]
-; EN: CountMessage="Only %i more to go..."
-CountMessage="Nog maar %i te gaan ..."
-; EN: CompleteMessage="Completed!"
-CompleteMessage="Voltooid!"
+[LevelInfo]
+; EN: Title="Untitled"
+Title="Ongetiteld"
 
 [Spectator]
 ; EN: MenuName="Spectator"
 MenuName="Toeschouwer"
 
-[DamageType]
-; EN: Name="killed"
-Name="gedood"
-; EN: AltName="killed"
-AltName="gedood"
+[Counter]
+; EN: CountMessage="Only %i more to go..."
+CountMessage="Nog maar %i te gaan ..."
+; EN: CompleteMessage="Completed!"
+CompleteMessage="Voltooid!"
 
 [Progress]
 ; EN: CancelledConnect="Cancelled Connect Attempt"
@@ -135,28 +123,30 @@ ReceiveSize="Grootte %iK, voltooid %3.1f%% = %iK, %i Pakketten resterend"
 ConnectingText="Verbinden (F10 Annuleert):"
 ConnectingURL="unreal://%ls/%ls"
 
-[WarpZoneInfo]
-OtherSideURL=""
-
-[Pickup]
-ExpireMessage=""
-
-[SpecialEvent]
-DamageString=""
-
+; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [ServerCommandlet]
 HelpCmd=server
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Network game server."
-HelpOneLiner="Netwerkspelserver."
-; EN: HelpUsage="server map.unr[?game=gametype] [-option...] [parm=value]..."
-HelpUsage="server map.unr[?game=Speltype] [-option...] [parm=waarde]..."
+HelpOneLiner="Network game server."
+HelpUsage="server map.unr[?game=gametype] [-option...] [parm=value]..."
 HelpParm[0]="Log"
-; EN: HelpDesc[0]="Specify the log file to generate."
-HelpDesc[0]="Geef het logboekbestand op dat u wilt genereren."
+HelpDesc[0]="Specify the log file to generate."
 HelpParm[1]="AllAdmin"
-; EN: HelpDesc[1]="Give all players admin privileges."
-HelpDesc[1]="Geef alle spelers beheerdersrechten."
+HelpDesc[1]="Give all players admin privileges."
+
+[PlayerPawn]
+; EN: QuickSaveString="Quick Saving"
+QuickSaveString="Snel opslaan"
+; EN: NoPauseMessage="Game is not pauseable"
+NoPauseMessage="Het spel kan niet worden gepauzeerd"
+; EN: ViewingFrom="Now viewing from "
+ViewingFrom="Nu bekijken van "
+; EN: OwnCamera="own camera"
+OwnCamera="eigen camera"
+; EN: FailedView="Failed to change view."
+FailedView="Kan weergave niet wijzigen."
+; EN: CantChangeNameMsg="You can't change your name during a global logged game."
+CantChangeNameMsg="U kunt uw naam niet wijzigen tijdens een wereldwijd gelogd spel."
 
 [Console]
 ; EN: ClassCaption="Standard (Deprecated)"
@@ -173,8 +163,6 @@ PausedMessage="PAUZE"
 PrecachingMessage="VOORBEREIDING"
 
 [Menu]
-MenuList=" "
-HelpMessage=" "
 ; EN: HelpMessage[1]="This menu has not yet been implemented."
 HelpMessage[1]="Dit menu is nog niet geïmplementeerd."
 ; EN: LeftString="Left"
@@ -205,7 +193,7 @@ LeftMessage=" heeft het spel verlaten."
 ; EN: FailedSpawnMessage="Failed to spawn player actor"
 FailedSpawnMessage="Kan speleractor niet plaatsen"
 ; EN: FailedPlaceMessage="Could not find starting spot (level might need a "PlayerStart" actor)"
-FailedPlaceMessage="Kan startplaats niet vinden (level heeft mogelijk een "PlayerStart" actor nodig)"
+FailedPlaceMessage="Kan startplaats niet vinden (level heeft mogelijk een PlayerStart actor nodig)"
 ; EN: FailedTeamMessage="Could not find team for player"
 FailedTeamMessage="Kan team voor speler niet vinden"
 ; EN: NameChangedMessage="Name changed to "
@@ -226,6 +214,28 @@ MaleGender="zijn"
 FemaleGender="haar"
 ; EN: MaxedOutSpectatorsMsg="Max spectators exceeded"
 MaxedOutSpectatorsMsg="Maximum aantal toeschouwers overschreden"
+
+[Weapon]
+; EN: MessageNoAmmo=" has no ammo."
+MessageNoAmmo=" heeft geen munitie."
+; EN: DeathMessage="%o was killed by %k's %w."
+DeathMessage="%o werd gedood door %w van %k."
+; EN: PickupMessage="You got a weapon"
+PickupMessage="Je hebt een wapen"
+; EN: ItemName="Weapon"
+ItemName="Wapen"
+; If bGenderMessages=True in UnrealShare, section [UnrealGameInfo]
+FemDeathMessage="%o werd gedood door %w van %k."
+FemKillMessage="%o werd gedood door %w van %k."
+
+[DamageType]
+; EN: Name="killed"
+Name="gedood"
+; EN: AltName="killed"
+AltName="gedood"
+; If bGenderMessages=True in UnrealShare, section [UnrealGameInfo]
+FemName="gedood"
+AltFemName="gedood"
 
 [Errors]
 ; EN: NetOpen="Error opening file"
@@ -286,8 +296,8 @@ TempBanned="Je bent tijdelijk verbannen"
 Kicked="Je bent uit het spel geschopt"
 
 [General]
-; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreals's Web site:"
-Upgrade="Om toegang te krijgen tot deze server, heb je de laatste gratis update voor Unreal nodig die beschikbaar is op de website van OldUnreals:"
+; EN: Upgrade="To enter this server, you need the latest free update to Unreal available from OldUnreal's Web site:"
+Upgrade="Om toegang te krijgen tot deze server, heb je de laatste gratis update voor Unreal nodig die beschikbaar is op de website van OldUnreal:"
 UpgradeURL="https://www.oldunreal.com/oldunrealpatches.html"
 ; EN: UpgradeQuestion="Do you want to launch your web browser and go to the upgrade page now?"
 UpgradeQuestion="Wilt u uw webbrowser starten en nu naar de upgradepagina gaan?"
@@ -300,8 +310,14 @@ AdminLoginText="Beheerder %ls ingelogd"
 ; EN: AdminLogoutText="Administrator %ls logged out"
 AdminLogoutText="Beheerder %ls is uitgelogd"
 ; EN: CheatUsedStr="%ls used admin/cheat command: %c"
-CheatUsedStr="%ls gebruikte het admin / cheat commando: %c"
+CheatUsedStr="%ls gebruikte het admin/cheat commando: %c"
 
+[AutosaveTrigger]
+; EN: AutoSaveString="Auto Saving"
+AutoSaveString="Automatisch Opslaan"
+
+; BEWARE WHEN MODIFYING THIS SECTION. This only accepts "package.texture" keys. Make sure you enter the right ones.
+; At any doubt, ask in the forums or Discord.
 [Fonts]
 WhiteFont=UnrealShare.WhiteFont
 MedFont=Engine.MedFont
@@ -309,30 +325,20 @@ LargeFont=Engine.LargeFont
 BigFont=Engine.BigFont
 SmallFont=Engine.SmallFont
 
+; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [LinkerUpdateCommandlet]
 HelpCmd=linkerupdate
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Adds all checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
-HelpOneLiner="Voegt alle checksums van de bestanden in de directory automatisch toe aan het bestand SHALinkerCache.ini. Gebruikt door de anticheat UnrealIntegrity."
-; EN: HelpUsage="linkerupdate <filename>"
-HelpUsage="linkerupdate <Bestandsnaam>"
-; EN: HelpParm[0]="<filename>"
-HelpParm[0]="<Bestandsnaam>"
-; EN: HelpDesc[0]="The file to calculate the checksum for posterior storage."
-HelpDesc[0]="Het bestand om de checksum voor posterieure opslag te berekenen."
+HelpOneLiner="Adds all checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
+HelpUsage="linkerupdate <filename>"
+HelpParm[0]="<filename>"
+HelpDesc[0]="The file to calculate the checksum for posterior storage."
 
+; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [SHAUpdateCommandlet]
 HelpCmd=shaupdate
 HelpWebLink="https://www.oldunreal.com/wiki/index.php?title=Commandlet"
-; EN: HelpOneLiner="Adds all SHA256 checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
-HelpOneLiner="Voegt automatisch alle "SHA256" checksums van de bestanden in de directory toe aan het bestand SHALinkerCache.ini. Gebruikt door de anticheat UnrealIntegrity."
-; EN: HelpUsage="shaupdate <filename>"
-HelpUsage="shaupdate <Bestandsnaam>"
-; EN: HelpParm[0]="<filename>"
-HelpParm[0]="<Bestandsnaam>"
-; EN: HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
-HelpDesc[0]="Het bestand om de SHA256 checksum te berekenen voor posterieure opslag."
-
-[AutosaveTrigger]
-; EN: AutoSaveString="Auto Saving"
-AutoSaveString="Automatisch Opslaan"
+HelpOneLiner="Adds all SHA256 checksums of the files within the directory automatically to the file SHALinkerCache.ini. Used by the UnrealIntegrity anticheat."
+HelpUsage="shaupdate <filename>"
+HelpParm[0]="<filename>"
+HelpDesc[0]="The file to calculate the SHA256 checksum for posterior storage."
