@@ -10,7 +10,7 @@ Title="Вортекс Райкерс"
 ; EN: Message="ATTENTION ALL PRISONERS: Remember, be kind to your cellmate. Violence will not be tolerated."
 Message="Внимание всем заключённым: Будьте вежливы со своими сокамерниками. Насилие будет пресекаться!"
 ; EN: Hint="Go to the air duct to escape."
-Hint="Используйте вентиляционную шахту что-бы сбежать."
+Hint="Используйте вентиляционную шахту чтобы сбежать."
 
 [TranslatorEvent1]
 ; EN: Message="First Officer's Log: Vortex Rikers. The prisoners have become more and more restless as we get closer to the prison moon. Security says they have the prisoners under control but several have had to be taken to Med Lab for treatment."

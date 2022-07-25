@@ -60,7 +60,7 @@ Message="Исследовательский Центр"
 
 [TranslatorEvent22]
 ; EN: Message="Report 190: Shrk'Tajji 2nd Lesser Eye of Ess'Tajji observing. We are ready for the next experiment. We expect an 18% drop in Power Reserves from 100% levels. The test subject is in place and the Tarydium is prepared for charging."
-Message="Отчет 190: Сшарк'Тэйджи младший смотрящий Исса'Тэйджи, наблюдения. Мы готовы начать следующий эксперимент. Мы ожидаем падение резервных мощностей на 18% от общего значения в 100%. Подопытный на своем месте и таридиум подготовлен к подзарядке."
+Message="Отчет 190: Сшарк'Тэйджи младший смотрящий Исса'Тэйджи, наблюдения. Мы готовы начать следующий эксперимент. Мы ожидаем падение резервных мощностей на 18% от общего значения в 100%. Подопытный на своем месте и таридий подготовлен к подзарядке."
 
 [TranslatorEvent20]
 ; EN: Message="Genetic Department"
@@ -96,4 +96,4 @@ Message="Экспериментальный отдел"
 
 [TranslatorEvent4]
 ; EN: AltMessage="Report 190: We're ready for the next experiment, the subject is positionned properly and the Primary Generator Power will be reduced to 80%. The subject should barely be affected, the expected energy level is characterised by an orange color."
-AltMessage="Отчет 190: Сшарк'Тэйджи младший смотрящий Исса'Тэйджи, наблюдения. Мы готовы начать следующий эксперимент. Мы ожидаем падение резервных мощностей на 18% от общего значения в 100%. Подопытный на своем месте и таридиум подготовлен к подзарядке."
+AltMessage="Отчет 190: Сшарк'Тэйджи младший смотрящий Исса'Тэйджи, наблюдения. Мы готовы начать следующий эксперимент. Мы ожидаем падение резервных мощностей на 18% от общего значения в 100%. Подопытный на своем месте и таридий подготовлен к подзарядке."

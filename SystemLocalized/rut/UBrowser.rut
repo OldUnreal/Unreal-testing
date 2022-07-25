@@ -5,7 +5,7 @@ Preferences=(Caption="UBrowser",Parent="Networking",LangCaption="UBrowser",Class
 
 [UBrowserGSpyLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
-ResolveFailedError="Мастер сервер не может быть найден в ДНС: "
+ResolveFailedError="Не могу найти Мастер сервер: "
 ; EN: TimeOutError="Timeout talking to the master server"
 TimeOutError="Таймаут к мастер серверу"
 ; EN: CouldNotConnectError="Connecting to the master server timed out: "
@@ -13,7 +13,7 @@ CouldNotConnectError="Таймаут соединения с мастер сер
 
 [UBrowserHTTPLink]
 ; EN: ResolveFailedError="The master server could not be resolved: "
-ResolveFailedError="Мастер сервер не может быть найден в ДНС: "
+ResolveFailedError="Не могу найти Мастер сервер: "
 ; EN: TimeOutError="Timeout talking to the master server"
 TimeOutError="Таймаут к мастер серверу"
 ; EN: CouldNotConnectError="Connecting to the master server timed out: "
@@ -181,7 +181,7 @@ OpenHelp="Введите стандартное URL, или выберете и�
 
 [UBrowserServerWebWin]
 ; EN: WindowTitle="Unreal Web Explorer"
-WindowTitle="Веб обозреватель Unreal"
+WindowTitle="Веб-обозреватель Unreal"
 
 [UBrowserServerWebCW]
 ; EN: RefreshString="Refresh page"

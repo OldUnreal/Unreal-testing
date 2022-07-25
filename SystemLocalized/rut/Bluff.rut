@@ -20,7 +20,7 @@ Message="Первосвященник Денаша Бричи 255-480"
 
 [TranslatorEvent11]
 ; EN: Message="I have been hiding here for what seems like months now. The Skaarj forces that have taken over our monastery continue to transport stolen tarydium and other strange mechanical devices using their lightning sled. I fear that they may find me."
-Message="Я прячусь здесь около месяца. Скааржи захватившие наш монастырь продолжают перевозить украденный таридиум и другие странные устройства используя свои световые сани. Я боюсь что они могут найти меня."
+Message="Я прячусь здесь около месяца. Скааржи захватившие наш монастырь продолжают перевозить украденный таридий и другие странные устройства используя свои световые сани. Я боюсь что они могут найти меня."
 
 [TranslatorEvent8]
 ; EN: Message="MAGNETIC LOCKS ENGAGED: AUTHORIZED BY CAPTAIN DUK'CHOROTH - OF THE 12th HOUSE OF dUBREVI"
@@ -30,7 +30,7 @@ AltMessage="МАГНИТНЫЕ ЗАМКИ ОТКЛЮЧЕНЫ"
 
 [TranslatorEvent9]
 ; EN: Message="STATIC DISCHARGE NODES: EAST AND WEST BREAKERS MUST BE THROWN TO RELEASE STATIC DISCHARGE."
-Message="Статические узлы разгрузки: Восточный и западный рубильники должны быть опущены что бы запустить статическую разгрузку."
+Message="Статические узлы разгрузки: Восточный и западный рубильники должны быть опущены чтобы запустить статическую разгрузку."
 ; EN: AltMessage="STATIC DISCHARGE SUCCESSFUL - HYDRO-ELECTRIC SHIPPING CAR NOW FULLY OPERATIONAL."
 AltMessage="Статическая разгрузка произведена успешно. Гидроэлектрический транспортер теперь полностью функционирует."
 

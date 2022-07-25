@@ -1,6 +1,6 @@
 ﻿[public]
 ; EN: Object=(Name=UWebAdmin.DMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="DeathMatch Game")
-Object=(Name=UWebAdmin.DMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Десмач")
+Object=(Name=UWebAdmin.DMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Бой насмерть")
 ; EN: Object=(Name=UWebAdmin.TDMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Team Game")
 Object=(Name=UWebAdmin.TDMPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Командная игра")
 ; EN: Object=(Name=UWebAdmin.CPPageConfig,Class=Class,MetaClass=UWebAdmin.ModPageContent,Description="Coop Game")
