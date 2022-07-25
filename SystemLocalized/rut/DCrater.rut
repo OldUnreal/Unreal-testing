@@ -16,7 +16,7 @@ Message="Панель управления генератором. Генера�
 
 [TranslatorEvent0]
 ; EN: Message="Portal Gate: Warning: not enough power to establish portal link. Activate the Generator."
-Message="Портал: Внимание; недостаточно энергии что бы установить связь. Активируйте генератор."
+Message="Портал: Внимание; недостаточно энергии чтобы установить связь. Активируйте генератор."
 ; EN: AltMessage="Portal Gate: Link Established. Enter transport field."
 AltMessage="Портал: Соединение установлено. Вход в транспортную зону."
 ; EN: Hint="Activate the Generator that powers the portal to the ship."

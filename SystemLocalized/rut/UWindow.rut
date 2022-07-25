@@ -33,7 +33,7 @@ ShowColorsText="Показывать цветные сообщения конс�
 ; EN: ShowChatText="Log only chat messages"
 ShowChatText="Записывать только сообщения чата"
 ; EN: ShowWarningText="Log script errors"
-ShowWarningText="Ошибки сценария журнала"
+ShowWarningText="Показывать сообщения об ошибках"
 
 [AdminGUIPlayersGrid]
 ; EN: PlayerID="ID#"
@@ -51,7 +51,7 @@ IDMismatchedStr="Ответ ID не совпадает: %i/%j"
 ; EN: ClientReceivedStr="Received client %ls."
 ClientReceivedStr="Получен клиент %ls."
 ; EN: GettingInfoStr="Getting player list from server, if nothing happens you may not be logged in as admin."
-GettingInfoStr="Получение списка игроков с сервера, если ничего не происходит, вы возможно не вошли как админ."
+GettingInfoStr="Получение списка игроков с сервера, если ничего не происходит, возможно вы не вошли как админ."
 
 [AdminGUIBanLGrid]
 ; EN: LengthExceeded="Maximum player list length exceeded %i"
@@ -61,13 +61,13 @@ ResponseMismatch="Ответ ID не совпадает: %i/%j"
 ; EN: ReceiveBanText="Received ban %ls."
 ReceiveBanText="Получен бан %ls."
 ; EN: GettingBanListText="Getting banlist from server, if nothing happens you may not be logged in as admin (or there are no bans on server)."
-GettingBanListText="Получение списка банов с сервера, если ничего не происходит, вы возможно не вошли как админ (или на сервере нет банов)."
+GettingBanListText="Получение списка банов с сервера, если ничего не происходит, возможно вы не вошли как админ (или на сервере нет банов)."
 
 [MMMusicListGrid]
 ; EN: MusicNameStr="Music name"
 MusicNameStr="Имя музыки"
 ; EN: MusicPackStr="Music package"
-MusicPackStr="Пакадж музыки"
+MusicPackStr="Файл музыки"
 ; EN: FailedToPlayStr="Failed to play: Music %ls was not found or failed to load."
 FailedToPlayStr="Невозможно проиграть: Музыка %ls не найдена или произошёл сбой загрузки."
 ; EN: StartedPlayStr="Started playing music %ls with section %i."
@@ -101,7 +101,7 @@ PlayersListTxt="Список клиентов"
 ; EN: BanListTxt="Banned Clients"
 BanListTxt="Забаненые клиенты"
 ; EN: TempBanListTxt="Session Banned Clients"
-TempBanListTxt="Клиенты забаненные на сессию"
+TempBanListTxt="Клиенты, забаненые на сессию"
 
 [AdminGUIManBanClientW]
 ; EN: PlayerNameTxt="Client name (for banlisting purposes only):"
@@ -187,7 +187,7 @@ ManualBanTxt="&Добавить бан вручную"
 
 [MMMusListWindow]
 ; EN: WindowTitle="Found music tracks:"
-WindowTitle="Найдено множество музыки:"
+WindowTitle="Найдена музыка:"
 
 [MMListPullDown]
 ; EN: PlaySongStr="&Play"
@@ -201,9 +201,9 @@ ClearPlaylistStr="Очистить список"
 
 [MMMusicFilesGrid]
 ; EN: ErrorLoadPackage="Error: Failed to load music package."
-ErrorLoadPackage="Ошибка: Не получилось загрузить пакадж музыки."
+ErrorLoadPackage="Ошибка: Не получилось загрузить файл музыки."
 ; EN: ErrorNoMusics="Error: Failed to find any musics in this package."
-ErrorNoMusics="Ошибка: Не получилось найти музыку в этом пакадже."
+ErrorNoMusics="Ошибка: Не получилось найти музыку в этом файле."
 
 [AdminGUIPLPullDown]
 ; EN: GetAliasesTxt="&Get player aliases"
@@ -221,7 +221,7 @@ RefreshTxt="&Обновить списки игроков"
 
 [AdminGUIManualBanWnd]
 ; EN: WindowTitle="Insert manual ban"
-WindowTitle="Добавления бана вручную"
+WindowTitle="Добавление бана вручную"
 
 [AdminGUITBanLGrid]
 ; EN: GettingBanListText="Getting temp-banlist from server, if nothing happens you may not be logged in as admin (or there are no temp-bans on server)."

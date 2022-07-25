@@ -8,7 +8,7 @@ Title="Глубины Ражигар"
 
 [TranslatorEvent4]
 ; EN: Message="WARNING: Exercise caution when in the vicinity of Tarydium barrels."
-Message="ПРЕДУПРЕЖДЕНИЕ: Будьте осторожны находясь рядом с бочками таридиума."
+Message="ПРЕДУПРЕЖДЕНИЕ: Будьте осторожны находясь рядом с бочками таридия."
 
 [TranslatorEvent17]
 ; EN: Message="Come on in, the Lava's fine!"
@@ -24,7 +24,7 @@ Message="В Канаде по настоящему холодно. Я люблю
 
 [TranslatorEvent3]
 ; EN: Message="Secondary Tarydium transport cart activation unit."
-Message="Модуль управления дополнительной тележкой для транспортировки таридиума."
+Message="Модуль управления дополнительной тележкой для транспортировки таридия."
 
 [TranslatorEvent12]
 ; EN: Message="Gas Re-Routing Station Status: Doors are pressurized and locked."
@@ -34,4 +34,4 @@ AltMessage="Двери разгерметизированы. Доступ пол
 
 [TranslatorEvent2]
 ; EN: Message="Primary Tarydium transport cart activation unit."
-Message="Модуль управления основной тележкой для транспортировки таридиума."
+Message="Модуль управления основной тележкой для транспортировки таридия."

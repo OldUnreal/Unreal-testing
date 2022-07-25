@@ -1,6 +1,6 @@
 ﻿[Public]
-Preferences=(Caption="Unreal Integrity",Parent="Networking",LangCaption="Unreal Целостность")
-Preferences=(Caption="Integrity Server",Parent="Unreal Integrity",LangCaption="Сервер Целостности",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
+Preferences=(Caption="Unreal Integrity",Parent="Networking",LangCaption="Целостность Unreal'а")
+Preferences=(Caption="Integrity Server",Parent="Unreal Integrity",LangCaption="Сервер целостности",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
 Preferences=(Caption="Whitelist",Parent="Unreal Integrity",LangCaption="Белый Лист",Class=UnrealIntegrity.ExternalWhiteList,Immediate=True)
 
 [General]

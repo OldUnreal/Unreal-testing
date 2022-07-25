@@ -2,7 +2,7 @@
 ; EN: Start="Unreal (Starting)"
 Start="Unreal (Запускается)"
 ; EN: Exit="Unreal (Exiting)"
-Exit="Unreal (Выходит)"
+Exit="Unreal (Закрывается)"
 ; EN: Run="Unreal (Running)"
 Run="Unreal (Запущен)"
 Product="Unreal"

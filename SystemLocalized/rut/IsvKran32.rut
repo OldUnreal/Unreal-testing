@@ -44,7 +44,7 @@ Message="Станция хим защиты: Ошибка системы: Эне
 
 [TranslatorEvent26]
 ; EN: Message="SCANNING STATION 1: Short range surface scans indicate location of large Alien spacecraft on the planet surface that matches the description of the same ship viewed entering and leaving the planet's Tarydium field's prior to orbital decay."
-Message="Станция сканирования 1: Коротковолновые сканеры обнаружили местонахождение огромного корабля пришельцев на поверхности планеты, по описанию соответствующий кораблю замеченному ранее, что курсирует от полей таридиума к орбите."
+Message="Станция сканирования 1: Коротковолновые сканеры обнаружили местонахождение огромного корабля пришельцев на поверхности планеты, по описанию соответствующий кораблю замеченному ранее, что курсирует от Таридиевых полей к орбите."
 
 [TranslatorEvent27]
 ; EN: Message="SCANNING STATION 2: Surface scan indicates indigenous primitive structures on the planet surface. A higher technology town detected on a rock suspended in the sky by some unknown force. Huge power sources emanating from an obelisk within this town."
