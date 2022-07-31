@@ -114,7 +114,7 @@ DeathMessage="%w %k превратил %o в швейцарский сыр."
 FemDeathMessage="%w %k превратил %o в швейцарский сыр."
 FemKillMessage="%w %k превратил %o в швейцарский сыр."
 ; EN: PickupMessage="You got the Combat Assault Rifle"
-PickupMessage="Вы взяли Штурмовая винтовка"
+PickupMessage="Вы взяли Штурмовую винтовку"
 ; EN: ItemName="Combat Assault Rifle"
 ItemName="Штурмовая винтовка"
 
@@ -154,13 +154,13 @@ MenuName="Женщина 1"
 ; EN: PickupMessage="You picked up 10 UMS Grenades"
 PickupMessage="Вы подобрали 10 гранат ОВС"
 ; EN: ItemName="UMS Grenades"
-ItemName="гранат ОВС"
+ItemName="Гранаты ОВС"
 
 [RLAmmo]
 ; EN: PickupMessage="You got 10 UMS Rockets"
 PickupMessage="Вы взяли 10 ракет ОВС"
 ; EN: ItemName="UMS Rockets"
-ItemName="ракет ОВС"
+ItemName="Ракеты ОВС"
 
 [CARifleClip]
 ; EN: PickupMessage="You got a 50 bullet CAR clip"
@@ -188,7 +188,7 @@ GameName="Матч с десантным оружием"
 ; EN: PickupMessage="You got the Computer Tablet"
 PickupMessage="Вы нашли модуль с данными"
 ; EN: ItemName="Computer Tablet"
-ItemName="модуль с данными"
+ItemName="Модуль с данными"
 
 [MarineArctic]
 ; EN: MenuName="UMS Arctic Marine"
@@ -240,7 +240,7 @@ MenuName="Хищник"
 ; EN: NameArticle=" a "
 NameArticle=" "
 ; EN: MenuName="Pack Hunter"
-MenuName="Оъотник"
+MenuName="Охотник"
 
 [Spinner]
 ; EN: NameArticle=" a "
