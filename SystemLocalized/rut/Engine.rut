@@ -26,14 +26,10 @@ Preferences=(Caption="Channel Download",Parent="Networking",LangCaption="Заг�
 Preferences=(Caption="Connection Notifications",Parent="Networking",LangCaption="Соединения",Class=Engine.Gameinfo,Category=Networking,Immediate=True)
 Preferences=(Caption="Map Lists",Parent="Networking",LangCaption="Списки Карт")
 ; Decals
-; Localized string here goes in LangCaption, e.g. Langcaption="Sangre" (spanish)
-Preferences=(Caption="Blood",Parent="Decals",Langcaption="Кровь")
-; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Personaje" (spanish)
-Preferences=(Caption="Pawn Shadow",Parent="Decals",Langcaption="Тени Существ",Class=Engine.PawnShadow,Immediate=True)
-; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Decoración" (spanish)
-Preferences=(Caption="Decoration Shadow",Parent="Decals",Langcaption="Тени Декораций",Class=Engine.DecoShadow,Immediate=True)
-; Localized string here goes in LangCaption, e.g. Langcaption="Sombra de Proyectil" (spanish)
-Preferences=(Caption="Projectile Shadow",Parent="Decals",Langcaption="Тени Снарядов",Class=Engine.ProjectileShadow,Immediate=True)
+Preferences=(Caption="Blood",Parent="Decals",LangCaption="Кровь")
+Preferences=(Caption="Pawn Shadow",Parent="Decals",LangCaption="Тени Существ",Class=Engine.PawnShadow,Immediate=True)
+Preferences=(Caption="Decoration Shadow",Parent="Decals",LangCaption="Тени Декораций",Class=Engine.DecoShadow,Immediate=True)
+Preferences=(Caption="Projectile Shadow",Parent="Decals",LangCaption="Тени Снарядов",Class=Engine.ProjectileShadow,Immediate=True)
 ; Blood
 Preferences=(Caption="Server",Parent="Blood",LangCaption="Сервер",Class=Engine.GameInfo,Category=BloodServer,Immediate=True)
 
@@ -145,7 +141,7 @@ ConnectingMessage="СОЕДИНЕНИЕ"
 ; EN: PausedMessage="PAUSED"
 PausedMessage="НА ПАУЗЕ"
 ; EN: PrecachingMessage="PRECACHING"
-PrecachingMessage="ПРЕКЕШИРОВАНИЕ"
+PrecachingMessage="КЭШИРОВАНИЕ"
 
 [Menu]
 ; EN: HelpMessage[1]="This menu has not yet been implemented."
