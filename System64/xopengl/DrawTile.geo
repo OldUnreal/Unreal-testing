@@ -24,8 +24,6 @@ out float gl_ClipDistance[MAX_CLIPPINGPLANES];
 
 void main()
 {
-	uint ClipIndex = uint(ClipParams.x);
-
 	gTexNum = vTexNum[0];
 
 	float RFX2=vTexCoords0[0].x;
@@ -59,7 +57,6 @@ void main()
 	gDrawColor=vDrawColor[0];
 
 	gl_Position = modelviewprojMat *  vec4(Position, 1.0);
-	gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[0]);
 	EmitVertex();
 
 	// 1
@@ -71,7 +68,6 @@ void main()
 	gDrawColor=vDrawColor[0];
 
 	gl_Position = modelviewprojMat *  vec4(Position, 1.0);
-	gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[1]);
 	EmitVertex();
 
 	// 2
@@ -83,7 +79,6 @@ void main()
 	gDrawColor=vDrawColor[0];
 
 	gl_Position = modelviewprojMat *  vec4(Position, 1.0);
-	gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[2]);
 	EmitVertex();
 	EndPrimitive();
 
@@ -96,7 +91,6 @@ void main()
 	gDrawColor=vDrawColor[0];
 
 	gl_Position = modelviewprojMat *  vec4(Position, 1.0);
-	gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[0]);
 	EmitVertex();
 
 	// 2
@@ -108,7 +102,6 @@ void main()
 	gDrawColor=vDrawColor[0];
 
 	gl_Position = modelviewprojMat *  vec4(Position, 1.0);
-	gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[1]);
 	EmitVertex();
 
 	// 3
@@ -120,7 +113,6 @@ void main()
 	gDrawColor=vDrawColor[0];
 
 	gl_Position = modelviewprojMat *  vec4(Position, 1.0);
-	gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,vCoords[2]);
 	EmitVertex();
 
 	EndPrimitive();

@@ -69,6 +69,12 @@ void main(void)
 
 	gl_Position = modelviewprojMat * vec4(Coords, 1.0);
 #else
+
+#if SUPPORTSCLIPDISTANCE
+	uint ClipIndex = uint(ClipParams.x);
+    gl_ClipDistance[ClipIndex] = PlaneDot(ClipPlane,Coords.xyz);
+#endif // SUPPORTSCLIPDISTANCE
+
     vEyeSpacePos = modelviewMat*vec4(Coords, 1.0);
     vCoords = Coords;
 
