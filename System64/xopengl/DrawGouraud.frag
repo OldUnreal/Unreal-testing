@@ -90,15 +90,19 @@ void main(void)
 	if (gTextureFormat == TEXF_BC5) //BC5 (GL_COMPRESSED_RG_RGTC2) compression
         Color.b = sqrt(1.0 - Color.r*Color.r + Color.g*Color.g);
 
+	if ( (gPolyFlags&PF_AlphaBlend) == PF_AlphaBlend )
+	{
+		Color.a *= gLightColor.a; // Alpha.
+		if( Color.a < 0.01 )
+			discard;
+	}
 	// Handle PF_Masked.
-	if ( (gPolyFlags&PF_Masked) == PF_Masked )
+	else if ( (gPolyFlags&PF_Masked) == PF_Masked )
 	{
 		if(Color.a < 0.5)
 			discard;
 		else Color.rgb /= Color.a;
 	}
-	else if ( ((gPolyFlags&PF_AlphaBlend) == PF_AlphaBlend) && Color.a < 0.01 )
-		discard;
 
 	vec4 LightColor;
 
