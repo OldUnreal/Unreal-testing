@@ -16,13 +16,13 @@ class DAmmo2 extends DispersionAmmo;
 
 defaultproperties
 {
-	ExplosionDecal=class'Unrealshare.BoltscorchY'
-	ExpType=Texture'DispExpl.dseY_A00'
-	ExpSkin=Texture'UnrealShare.Effects.PalYellow'
-	ParticleType=Class'UnrealShare.Spark32'
+	ExplosionDecal=class'BoltscorchY'
+	ExpType=Texture'dseY_A00'
+	ExpSkin=Texture'PalYellow'
+	ParticleType=Class'Spark32'
 	SparkModifier=1.500000
 	Damage=25.000000
-	Mesh=Mesh'UnrealShare.DispM1'
+	Mesh=Mesh'DispM1'
 	LightBrightness=155
 	LightHue=42
 	LightSaturation=72

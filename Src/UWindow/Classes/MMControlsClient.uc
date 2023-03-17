@@ -12,8 +12,7 @@ var UWindowMultimediaButton PlayButton, StopButton, PriorButton, NextButton;
 var UWindowHSliderControl MusicVolumeSlider;
 var UWindowSmallButton AddMusicButton, BrowseButton, AddAllButton;
 var UWindowEditControl AddMusicEdit, SectionEdit, TimeLimitEdit;
-var UWindowCheckbox MusicSuffleCBox;
-var UWindowLabelControl ShuffleLabel;
+var UWindowCheckbox MusicShuffleCBox;
 
 var float MinButtonWidth;
 
@@ -108,7 +107,7 @@ function Created()
 
 	// Music Volume
 	MusicVolumeSlider = UWindowHSliderControl(CreateControl(class'UWindowHSliderControl', WinWidth - SliderWidth, ControlOffsetY, 180, 1));
-	MusicVolumeSlider.SetRange(0, 255, 32);
+	MusicVolumeSlider.SetRange(0, 255, 4);
 	MusicVolumeSlider.SetValue(int(GetPlayerOwner().ConsoleCommand("get ini:Engine.Engine.AudioDevice MusicVolume")));
 	MusicVolumeSlider.SetText(MusicVolumeText);
 	MusicVolumeSlider.SetFont(F_Normal);
@@ -175,16 +174,13 @@ function Created()
 	ControlOffsetX = ControlHSpacing;
 	ControlOffsetY -= ButtonDistY;
 	
-	// Suffle music
-	MusicSuffleCBox = UWindowCheckbox(CreateWindow(class'UWindowCheckbox', ControlOffsetX, ControlOffsetY, 16, 16));
-	MusicSuffleCBox.bChecked = class'MMMusicListGrid'.Default.bShuffleMusic;
-	MusicSuffleCBox.NotifyWindow = Self;
-	MusicSuffleCBox.SetHelpText(ShuffleHint);
-	
-	ControlOffsetX+=18;
-	
-	ShuffleLabel = UWindowLabelControl(CreateWindow(class'UWindowLabelControl', ControlOffsetX, ControlOffsetY, MinButtonWidth, 8));
-	ShuffleLabel.SetText(ShuffleText);
+	// Shuffle music
+	MusicShuffleCBox = UWindowCheckbox(CreateWindow(class'UWindowCheckbox', ControlOffsetX, ControlOffsetY, 16, 16));
+	MusicShuffleCBox.bChecked = class'MMMusicListGrid'.Default.bShuffleMusic;
+	MusicShuffleCBox.NotifyWindow = Self;
+	MusicShuffleCBox.SetText(ShuffleText);
+	MusicShuffleCBox.Align = TA_Right;
+	MusicShuffleCBox.SetHelpText(ShuffleHint);
 }
 
 function BeforePaint(Canvas C, float X, float Y)
@@ -207,6 +203,8 @@ function BeforePaint(Canvas C, float X, float Y)
 	AddMusicEdit.WinLeft = 2 * ControlHSpacing + AddMusicButton.WinWidth;
 	AddMusicEdit.SetSize(WinWidth - AddMusicButton.WinWidth - 3 * ControlHSpacing, 1);
 	AddMusicEdit.EditBoxWidth = AddMusicEdit.WinWidth;
+	
+	MusicShuffleCBox.AutoWidth(C);
 }
 
 final function UpdateMusicScroll()
@@ -301,9 +299,9 @@ function Notify(UWindowDialogControl C, byte E)
 	}
 	else if (E == DE_Change && C == MusicVolumeSlider)
 		GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.AudioDevice MusicVolume "$MusicVolumeSlider.Value);
-	else if( C==MusicSuffleCBox )
+	else if( C==MusicShuffleCBox )
 	{
-		MMClient.Grid.bShuffleMusic = MusicSuffleCBox.bChecked;
+		MMClient.Grid.bShuffleMusic = MusicShuffleCBox.bChecked;
 		MMClient.Grid.SaveConfig();
 	}
 }

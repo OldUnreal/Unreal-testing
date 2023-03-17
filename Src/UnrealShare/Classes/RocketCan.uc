@@ -5,6 +5,9 @@ class RocketCan extends Ammo;
 
 #exec OBJ LOAD FILE=Detail.utx
 
+#exec TEXTURE IMPORT NAME=JRocketCan1HD FILE=Models\RocketCn.pcx GROUP="HD" DETAIL=Metal
+#exec TEXTURE IMPORT NAME=JRocketCan1 FILE=Models\RocketCn_old.pcx GROUP="Skins" DETAIL=Metal HD=JRocketCan1HD
+
 #exec AUDIO IMPORT FILE="Sounds\Pickups\AMMOPUP1.wav" NAME="AmmoSnd" GROUP="Pickups"
 
 #exec Texture Import File=Textures\HD_Icons\I_HD_Rocketammo.bmp Name=I_HD_Rocketammo Group="HD" Mips=Off
@@ -15,7 +18,6 @@ class RocketCan extends Ammo;
 #exec MESH ORIGIN MESH=RocketCanMesh X=0 Y=0 Z=-15 YAW=0
 #exec MESH SEQUENCE MESH=RocketCanMesh SEQ=All    STARTFRAME=0  NUMFRAMES=10
 #exec MESH SEQUENCE MESH=RocketCanMesh SEQ=Open   STARTFRAME=0  NUMFRAMES=10
-#exec TEXTURE IMPORT NAME=JRocketCan1 FILE=Models\RocketCn.pcx GROUP="Skins" DETAIL=Metal
 #exec MESHMAP SCALE MESHMAP=RocketCanMesh X=0.06 Y=0.06 Z=0.12
 #exec MESHMAP SETTEXTURE MESHMAP=RocketCanMesh NUM=1 TEXTURE=JRocketCan1 TLOD=10
 

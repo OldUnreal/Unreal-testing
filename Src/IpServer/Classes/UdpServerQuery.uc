@@ -39,7 +39,7 @@ function PreBeginPlay()
 		return;
 	}
 	else Log("Bound to port"@Port$".",Class.Name);
-	ServerOSStr = ConsoleCommand("OS");
+	ServerOSStr = ConsoleCommand("OS")$" ("$ConsoleCommand("OS BITMODE")$" bit)";
 }
 
 function PostBeginPlay()

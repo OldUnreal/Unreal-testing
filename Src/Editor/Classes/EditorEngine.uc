@@ -21,6 +21,41 @@ class EditorEngine extends Engine extends FNotifyHook
 
 #exec Texture Import File=Textures\backdropcol.bmp Mips=Off Name="TexPreviewBack"
 
+#exec Texture Import File=Textures\ModeCamera.pcx Name=J_EM_ModeCamera Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeVertex.pcx Name=J_EM_ModeVertex Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeSheer.pcx Name=J_EM_ModeSheer Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeScale.pcx Name=J_EM_ModeScale Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeStretch.pcx Name=J_EM_ModeStretch Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeSnapScale.pcx Name=J_EM_ModeSnapScale Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeRotate.pcx Name=J_EM_ModeRotate Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\TexturePan.pcx Name=J_EM_TexturePan Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\TextureRotate.pcx Name=J_EM_TextureRotate Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeBrushClip.pcx Name=J_EM_ModeBrushClip Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeFaceDrag.pcx Name=J_EM_ModeFaceDrag Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\ModeTerrainEdit.pcx Name=J_EM_ModeTerrainEdit Group="EditMode" Mips=Off Flags=2
+#exec Texture Import File=Textures\SphereIc.pcx Name=J_SphereMarker Mips=Off Flags=2
+
+// Editor mode settings (mirrored in Engine/UnCamera.h).
+const noexport EM_None			= 0;	// Gameplay, editor disabled.
+const noexport EM_ViewportMove	= 1;	// Move viewport normally.
+const noexport EM_ViewportZoom	= 2;	// Move viewport with acceleration.
+const noexport EM_BrushRotate	= 5;	// Rotate brush.
+const noexport EM_BrushSheer	= 6;	// Sheer brush.
+const noexport EM_BrushScale	= 7;	// Scale brush.
+const noexport EM_BrushStretch	= 8;	// Stretch brush.
+const noexport EM_TexturePan	= 11;	// Pan textures.
+const noexport EM_TextureRotate	= 13;	// Rotate textures.
+const noexport EM_TextureScale	= 14;	// Scale textures.
+const noexport EM_BrushSnap		= 18;	// Brush snap-scale.
+const noexport EM_TexView		= 19;	// Viewing textures.
+const noexport EM_TexBrowser	= 20;	// Browsing textures.
+const noexport EM_MeshView		= 21;	// Viewing mesh.
+const noexport EM_MeshBrowser	= 22;	// Browsing mesh.
+const noexport EM_BrushClip		= 23;	// brush Clipping.
+const noexport EM_VertexEdit	= 24;	// Multiple Vertex Editing.
+const noexport EM_FaceDrag		= 25;	// Face Dragging.
+const noexport EM_TerrainEdit	= 26;	// Terrain heightmap.
+
 // Objects.
 var const Level       Level;
 var const Model       TempModel,bspProcessModel;
@@ -41,6 +76,7 @@ var Texture CollOn, CollOff;
 var Texture PlyrOn, PlyrOff;
 var Texture LiteOn, LiteOff;
 var Texture BackPrev;
+var Texture TerrainMarker;
 
 // Textures.
 var Texture Bad, Bkgnd, BkgndHi;
@@ -86,6 +122,7 @@ var(Advanced) config string GameCommandLine; // Commandline to append whenever y
 var(Advanced) config array<string> EditPackages;
 var(Advanced) config string CodePath; // Relative path for source codes to launcher exe when compiling with UCC make
 var(Advanced) config bool AlwaysPermanentBrush; // Red builder brush is always transformed permanently whenever modified.
+var(Advanced) config bool bMultiThreadBSPBuild; // Enable multi-threading to BSP rebuilder.
 
 // Color preferences.
 var(Colors) config color
@@ -146,6 +183,22 @@ struct export EdKeyBinding
 };
 var(Advanced) config array<EdKeyBinding> KeyBindings;
 
+struct export EditModeType
+{
+	var string Tooltip;
+	var Texture Image;
+	var int Mode;
+};
+var array<EditModeType> EditModeList;
+
+struct export TerrainModeSettings
+{
+	var int Mode,Index;
+	var float Radius,InnerRadius,Strength;
+	var TerrainInfo Terrain;
+};
+var const TerrainModeSettings TerrainSettings;
+
 defaultproperties
 {
 	MenuUp=B_MenuUp
@@ -158,11 +211,27 @@ defaultproperties
 	Bad=Bad
 	Bkgnd=Bkgnd
 	BkgndHi=BkgndHi
+	TerrainMarker=Texture'J_SphereMarker'
 	GridSize=(X=16,Y=16,Z=16)
 	BackPrev=TexPreviewBack
 	AlwaysPermanentBrush=True
 	CodePath="..\\"
 	SaveLevelSummary=True
+	bMultiThreadBSPBuild=true
+	TerrainSettings=(Radius=0.32,Strength=1)
+	
+	EditModeList.Add((Mode=EM_ViewportMove,Image=Texture'J_EM_ModeCamera',Tooltip="Camera Movement"))
+	EditModeList.Add((Mode=EM_VertexEdit,Image=Texture'J_EM_ModeVertex',Tooltip="Vertex Editing"))
+	EditModeList.Add((Mode=EM_BrushSheer,Image=Texture'J_EM_ModeSheer',Tooltip="Brush Sheering"))
+	EditModeList.Add((Mode=EM_BrushScale,Image=Texture'J_EM_ModeScale',Tooltip="Actor Scaling"))
+	EditModeList.Add((Mode=EM_BrushStretch,Image=Texture'J_EM_ModeStretch',Tooltip="Actor Stretching"))
+	EditModeList.Add((Mode=EM_BrushSnap,Image=Texture'J_EM_ModeSnapScale',Tooltip="Snapped Brush Scaling"))
+	EditModeList.Add((Mode=EM_BrushRotate,Image=Texture'J_EM_ModeRotate',Tooltip="Brush Rotate"))
+	EditModeList.Add((Mode=EM_TexturePan,Image=Texture'J_EM_TexturePan',Tooltip="Texture Pan"))
+	EditModeList.Add((Mode=EM_TextureRotate,Image=Texture'J_EM_TextureRotate',Tooltip="Texture Rotate"))
+	EditModeList.Add((Mode=EM_BrushClip,Image=Texture'J_EM_ModeBrushClip',Tooltip="Brush Clipping"))
+	//EditModeList.Add((Mode=EM_FaceDrag,Image=Texture'J_EM_ModeFaceDrag',Tooltip="Face Drag")) // TODO - fix this mode someday...
+	EditModeList.Add((Mode=EM_TerrainEdit,Image=Texture'J_EM_ModeTerrainEdit',Tooltip="Terrain Edit"))
 	
 	KeyBindings.Add((Key=VK_F1,Cmd="HOOK OPEN HELP"))
 	KeyBindings.Add((Key=VK_F1,Cmd="HOOK BROWSE ACTOR",bCtrl=True))

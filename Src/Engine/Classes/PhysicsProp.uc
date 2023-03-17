@@ -7,7 +7,7 @@ Class PhysicsProp extends Decoration
 var() bool bCanCarryProp; // Prop is carryable (ignores mass).
 var() bool bTranslucentCarry; // Prop should turn translucent while carried.
 var() int Health; // 0 = invincible.
-var() float DamageImpactForce; // How hard should momentum from damage transer to this prop.
+var() float DamageImpactForce; // How hard should momentum from damage transfer to this prop.
 var() float MinCrushVelocity; // Minimum velocity of this object before it should deal damage.
 var() float PushingForce; // How strong normal actors can push this object.
 var() float CrushDamageScaling; // Damage scale when prop is hitting an actor.
@@ -20,7 +20,7 @@ var PXJ_ShadowParm ActiveConstraint;
 var ERenderStyle BackupStyle;
 var Pawn CurrentCarrier;
 
-const MIN_DOWN_ANGLE = -0.77f;
+const MIN_DOWN_ANGLE = 8192;
 
 function Destroyed()
 {
@@ -171,21 +171,14 @@ function Died( vector momentum, name damageType )
 
 final function vector GetCarryOffset( Pawn P )
 {
-	local vector V;
+	local rotator R;
 
-	V = vector(P.ViewRotation);
-	if( V.Z<-0.999f ) // Special hack when facing straight down.
-	{
-		V = vector(Construct<rotator>(Yaw=P.ViewRotation.Yaw));
-		V.Z = MIN_DOWN_ANGLE;
-		V = Normal(V);
-	}
-	else if( V.Z<MIN_DOWN_ANGLE )
-	{
-		V.Z = MIN_DOWN_ANGLE;
-		V = Normal(V);
-	}
-	return V*(CollisionRadius+P.CollisionRadius+20.f) + P.Location + Construct<Vector>(0.f,0.f,P.EyeHeight);
+	R.Yaw = P.ViewRotation.Yaw;
+	R.Pitch = P.ViewRotation.Pitch & 65535;
+	if( R.Pitch<32768 )
+		R.Pitch = Min(R.Pitch,16384);
+	else R.Pitch = Max(R.Pitch,{65536 - MIN_DOWN_ANGLE});
+	return vector(R)*(CollisionRadius+P.CollisionRadius+20.f) + P.Location + Construct<Vector>(0.f,0.f,P.EyeHeight);
 }
 
 // Carry logic
@@ -236,7 +229,7 @@ function bool IsStillCarrying( Pawn Other )
 	
 	V = GetCarryOffset(Other);
 	if( ActiveConstraint )
-		ActiveConstraint.SetLocation(V, Other.Rotation);
+		ActiveConstraint.SetLocation(V + (Other.Velocity*(Level.LastDeltaTime*10.f)), Other.Rotation);
 	return VSize(Location-V)<100.f;
 }
 

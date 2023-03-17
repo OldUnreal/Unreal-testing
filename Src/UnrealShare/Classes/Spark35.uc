@@ -5,5 +5,5 @@ class Spark35 extends Spark3;
 
 defaultproperties
 {
-	Texture=FireTexture'fireeffect1.FireEffect1p'
+	Texture=FireTexture'FireEffect1p'
 }

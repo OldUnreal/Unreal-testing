@@ -118,23 +118,18 @@ function LoadPossibleWeapons()
 {
 	local string WeaponClassName;
 	local class<Weapon> WeaponClass;
-	local int WeaponNum, i;
-	local PlayerPawn P;
+	local int i;
 
-	P = GetPlayerOwner();
 	FavoriteWeaponCombo.AddItem(NoFavoriteWeapon,"None");
-	WeaponNum = 1;
-	WeaponClassName = P.GetNextInt(Class'UMenuWeaponPriorityListBox'.Default.WeaponClassParent, 0);
-	while ( Len(WeaponClassName)>0 && WeaponNum<50 )
+	foreach Class'Actor'.Static.IntDescIterator(Class'UMenuWeaponPriorityListBox'.Default.WeaponClassParent,WeaponClassName,,true)
 	{
 		i = FavoriteWeaponCombo.FindItemIndex2(WeaponClassName,true);
 		if ( i==-1 )
 		{
 			WeaponClass = class<Weapon>(DynamicLoadObject(WeaponClassName, class'Class'));
-			if ( WeaponClass!=None )
+			if ( WeaponClass )
 				FavoriteWeaponCombo.AddItem(WeaponClass.Default.ItemName,string(WeaponClass));
 		}
-		WeaponClassName = P.GetNextInt(Class'UMenuWeaponPriorityListBox'.Default.WeaponClassParent, WeaponNum++);
 	}
 }
 

@@ -41,7 +41,7 @@ function PreBeginPlay()
 
 	// Find a the server query handler.
 	foreach AllActors(class'UdpServerQuery', Query, TargetQueryName)
-	break;
+		break;
 
 	if ( Query==None )
 	{
@@ -93,7 +93,7 @@ function Resolved( IpAddr Addr )
 // Host resolution failue.
 function ResolveFailed()
 {
-	Log("Failed to resolve master server address, aborting.",Class.Name);
+	Log("Failed to resolve master server address ("$MasterServerAddress$"), aborting.",Class.Name);
 }
 
 // Notify the MasterServer we exist.
@@ -127,7 +127,7 @@ event ReceivedText( IpAddr Addr, string Text )
 	local string Query;
 	local bool QueryRemaining;
 	local int  QueryNum, PacketNum;
-
+	
 	// Assign this packet a unique value from 1 to 100
 	CurrentQueryNum++;
 	if (CurrentQueryNum > 100)
@@ -227,6 +227,11 @@ function string ParseQuery( IpAddr Addr, coerce string QueryStr, int QueryNum, o
 		ValidationString = "\\validate\\"$Validate(QueryValue, Query.GameName);
 		Result = SendQueryPacket(Addr, ValidationString, QueryNum, ++PacketNum, FinalPacket);
 	}
+	else if ( QueryType=="portverify" ) // 227k masterserver, verify ports from source connection.
+	{
+		Query.SendText(Addr, "\\queryport\\"$QueryValue);
+		SendDriverMessage(Addr, "\\serverport\\"$QueryValue);
+	}
 	return QueryRest;
 }
 
@@ -253,4 +258,5 @@ defaultproperties
 	RemoteRole=ROLE_None
 	DoUplink=False
 	Region=0
+	bTickRealTime=true
 }

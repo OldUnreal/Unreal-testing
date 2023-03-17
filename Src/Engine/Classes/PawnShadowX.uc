@@ -2,8 +2,6 @@ class PawnShadowX extends Projector
 	NoUserCreate
 	transient;
 
-#exec TEXTURE IMPORT NAME=BlobShadow FILE=Textures\BlobShadow.pcx LODSET=2
-
 var transient vector OldOwnerLocation;
 var transient bool bOptionalUpdate;
 var transient ShadowBitMap PLShadow;
@@ -55,7 +53,7 @@ simulated function UpdateShadow()
 		return;
 	}
 
-	if( Owner.Style == STY_Translucent || Owner.bHidden || Owner.DrawType == DT_None )
+	if( Owner.Style==STY_Translucent || Owner.bHidden || Owner.DrawType==DT_None || !Owner.Mesh )
 	{
 		if (bHasAttached)
 			DeattachPrjDecal();
@@ -138,9 +136,7 @@ simulated function ShadowModeChange()
 	{
 		if( !PLShadow )
 		{
-			PLShadow = ShadowBitMap(Level.AllocateObj(Class'ShadowBitMap'));
-			if (PLShadow == none)
-				PLShadow = new(Outer) class'ShadowBitMap';
+			PLShadow = Level.AllocateObj(Class'ShadowBitMap');
 			PLShadow.SetActor(Owner);
 			PLShadow.ProjectDirection = rotang(90,0,0);
 			ProjectTexture = PLShadow;

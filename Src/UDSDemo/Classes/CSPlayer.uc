@@ -149,43 +149,27 @@ function POVGotoLocation(CS_Camera Camera)
 
 function POVThirdPerson(bool letterboxed)
 {
-
 	// Switch POV to behind the back
-	log( "a" );
-  	bBehindView = true;  	
-	log( "b" );  	
+  	bBehindView = true;
 	// Set the custom hud
 
 	if (myHud != None)
 	{
 		OldHudMode = MyHud.HudMode;  // Save this for later
-		log( "c" );	
 		if (!LetterBoxed)
-		{
-		log( "d" );
  			MyHud.HudMode=6;
-		}
- 		else
-		{
-		log( "e" );
- 			MyHud.HudMode=7;
-		}
+ 		else MyHud.HudMode=7;
 	}
 }
 // POVFirstPerson - This function also was a part of the original Omni-Cam.  
 
 function POVFirstPerson()
 {
-
 	bBehindView = false;
 	bCSCameraMode = false;
 	bCamDebug = false;
 	CSCAmera = none;
-
-	//log("Old Hude = "$OldHudMode);
-
     MyHud.HudMode=OldHudMode;
-	
 }
 
 // ShowMenu must be modified so a menu cannot appear while the cut sequence is happening.
@@ -206,27 +190,22 @@ static final function bool LevelIsIntro2( LevelInfo L )
 
 function Freeze(bool value)
 {
-  bIsActing = value;
-  if (value)
-    GotoState('PlayerActing');
-  else
-    GotoState('PlayerWalking');
+	bIsActing = value;
+	if (value)
+		GotoState('PlayerActing');
+	else GotoState('PlayerWalking');
 }
-
 
 function ScriptedMove(vector NewVelocity)
 {
-	
-    AdjVelocity = NewVelocity;
-  
+	AdjVelocity = NewVelocity;
 }
 
 function ResetScriptedMove()
 {
-
-  AdjVelocity.X = 0;  
-  AdjVelocity.Y = 0;
-  AdjVelocity.Z = 0;
+	AdjVelocity.X = 0;  
+	AdjVelocity.Y = 0;
+	AdjVelocity.Z = 0;
 }
 
 
@@ -438,8 +417,8 @@ exec function Fire( optional float F )
 	if( LevelIsIntro1(Level) )
 		URL = "Intro2";
 	else if( LevelIsIntro2(Level) )
-		URL = "InterIntro?Game=UPak.UPakTransitionInfo?Class=UPak."$AdjustPlayer();
-	else URL = "UPack?Game=UPak.UPakIntro";
+		URL = "InterIntro?Game=UPak.UPakTransitionInfo";
+	else URL = "UPack";
 	Level.Game.SendPlayer(Self, URL);
 }
 

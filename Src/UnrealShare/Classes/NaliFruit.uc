@@ -3,6 +3,9 @@
 //=============================================================================
 class NaliFruit extends Health;
 
+#exec TEXTURE IMPORT NAME=JNaliFruit1HD FILE=Models\Nalipl.pcx GROUP="HD" FLAGS=2
+#exec TEXTURE IMPORT NAME=JNaliFruit1 FILE=Models\Nalipl_old.pcx GROUP="Skins" FLAGS=2 HD=JNaliFruit1HD
+
 #exec MESH IMPORT MESH=NaliFruitMesh ANIVFILE=Models\nalipl_a.3d DATAFILE=Models\nalipl_d.3d LODSTYLE=2
 #exec MESH LODPARAMS MESH=NaliFruitMesh STRENGTH=0.1
 
@@ -12,7 +15,6 @@ class NaliFruit extends Health;
 #exec  MESH SEQUENCE MESH=NaliFruitMesh SEQ=Root   STARTFRAME=1  NUMFRAMES=1
 #exec  MESH SEQUENCE MESH=NaliFruitMesh SEQ=Grow  STARTFRAME=1  NUMFRAMES=26
 #exec  MESH SEQUENCE MESH=NaliFruitMesh SEQ=Waver STARTFRAME=27  NUMFRAMES=2
-#exec  TEXTURE IMPORT NAME=JNaliFruit1 FILE=Models\Nalipl.pcx GROUP="Skins" FLAGS=2
 #exec  MESHMAP SCALE MESHMAP=NaliFruitMesh X=0.15 Y=0.15 Z=0.3
 #exec  MESHMAP SETTEXTURE MESHMAP=NaliFruitMesh NUM=1 TEXTURE=JNaliFruit1
 

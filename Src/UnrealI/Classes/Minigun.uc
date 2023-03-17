@@ -78,7 +78,6 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 	local vector StartT;
 	local byte HitCount;
 	local ZoneInfo HitZone;
-	local rotator Dummy;
 	local Actor A;
 
 	if ( PlayerPawn(Owner) != None )
@@ -86,29 +85,28 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 	A = Self;
 
 	/* Check if were passing through zoneportals */
-	if ( Other!=None )
+	if ( Other )
 	{
 		HitZone = Level.GetLocZone(HitLocation+HitNormal).Zone;
-		while ( WarpZoneInfo(HitZone)!=None && WarpZoneInfo(HitZone).OtherSideActor!=None && HitCount++<5 )
+		while ( WarpZoneInfo(HitZone) && WarpZoneInfo(HitZone).OtherSideActor!=None && HitCount++<5 )
 		{
 			StartT = HitLocation;
-			WarpZoneInfo(HitZone).UnWarp(StartT,X,Dummy);
-			WarpZoneInfo(HitZone).OtherSideActor.Warp(StartT,X,Dummy);
+			WarpZoneInfo(HitZone).WarpBothCoords(StartT,X);
 			A = WarpZoneInfo(HitZone).OtherSideActor;
 			Z = StartT+X*10000;
 			Other = A.Trace(HitLocation,HitNormal,Z,StartT,True); // We dont use owner pawn trace here because we could hit ourselves.
-			while ( Other!=None && Other.bIsPawn && !Pawn(Other).AdjustHitLocation(HitLocation, Z - StartT) )
+			while ( Other && Other.bIsPawn && !Pawn(Other).AdjustHitLocation(HitLocation, Z - StartT) )
 			{
 				StartT = HitLocation;
 				Other = Other.Trace(HitLocation,HitNormal,Z,StartT,True);
 			}
-			if ( Other==None )
+			if ( !Other )
 				Break;
-			HitZone = Level.GetLocZone(HitLocation+HitNormal).Zone;
+			HitZone = A.Level.GetLocZone(HitLocation+HitNormal).Zone;
 		}
 	}
 
-	if ( Other != None && (Other == Level || Other.bWorldGeometry || Other.Brush!=None))
+	if ( Other != None && (Other == A.Level || Other.bWorldGeometry || Other.Brush!=None))
 		A.Spawn(class'LightWallHitEffect',,, HitLocation+HitNormal*9, Rotator(HitNormal));
 	else if ( Other!=None && Other!=Self )
 	{

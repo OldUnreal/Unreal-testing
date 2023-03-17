@@ -339,6 +339,11 @@ simulated function HitWall(vector HitNormal, actor Wall)
 {
 	local BloodSpurt b;
 
+	if( Base && Physics!=PHYS_Falling ) // 227k: Could be based on a Pawn or Mover and they moved into a wall, make em fall off...
+	{
+		SetPhysics(PHYS_Falling);
+		return;
+	}
 	b = Spawn(class 'Bloodspurt',,,,Rotator(HitNormal));
 	if ( bGreenBlood )
 		b.GreenBlood();
@@ -438,6 +443,7 @@ state Dead
 
 	singular event BaseChange()
 	{
+		Enable('HitWall'); // 227k: Allow carcasses that landed on another pawn or movers to fall off when it bumps into a wall.
 		if ( (Mover(Base) != None) && (ExistTime == 0) )
 		{
 			ExistTime = FClamp(30.0 - 2 * DeathZone.NumCarcasses, 5, 12);

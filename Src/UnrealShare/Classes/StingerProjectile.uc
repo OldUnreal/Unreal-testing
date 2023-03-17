@@ -3,10 +3,13 @@
 //=============================================================================
 class StingerProjectile extends Projectile;
 
+#exec OBJ LOAD FILE=Detail.utx
+
 #exec MESH IMPORT MESH=TarydiumProjectile ANIVFILE=Models\aniv52.3d DATAFILE=Models\data52.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=TarydiumProjectile X=0 Y=0 Z=0 YAW=64
 #exec MESH SEQUENCE MESH=TarydiumProjectile SEQ=All  STARTFRAME=0  NUMFRAMES=1
-#exec TEXTURE IMPORT NAME=Tarydium1 FILE=Models\shells.pcx
+#exec TEXTURE IMPORT NAME=Tarydium1HD FILE=Models\shells.bmp Group="HD" DETAIL=Marble
+#exec TEXTURE IMPORT NAME=Tarydium1 FILE=Models\shells_old.pcx HD=Tarydium1HD
 #exec MESHMAP SCALE MESHMAP=TarydiumProjectile X=0.015 Y=0.015 Z=0.03
 #exec MESHMAP SETTEXTURE MESHMAP=TarydiumProjectile NUM=4 TEXTURE=Tarydium1
 
@@ -165,7 +168,7 @@ defaultproperties
 	Mesh=Mesh'UnrealShare.TarydiumProjectile'
 	AmbientGlow=215
 	bUnlit=True
-	bNoSmooth=True
+	bNoSmooth=False
 	bMeshCurvy=False
 	LightType=LT_Steady
 	LightEffect=LE_NonIncidence

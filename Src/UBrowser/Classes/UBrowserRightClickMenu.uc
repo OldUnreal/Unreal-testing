@@ -93,7 +93,7 @@ function RMouseUp(float X, float Y)
 
 function ShowWindow()
 {
-	PasswordJoin.bDisabled = (List == None || List.GamePort == 0);
+	PasswordJoin.bDisabled = (!List || !List.ValidGamePort());
 	Website.bDisabled = (List == None || Len(List.ServerWebPage)==0);
 	ServerJoin[0].bDisabled = PasswordJoin.bDisabled;
 	ServerJoin[1].bDisabled = PasswordJoin.bDisabled;

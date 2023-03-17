@@ -535,6 +535,16 @@ function Tick(float Delta)
 	Super.Tick(Delta);
 }
 
+function NotifyBeforeLevelChange()
+{
+	// 227: Allow custom menus to get gc'd
+	MouseWindow = Self;
+	KeyFocusWindow = Self;
+	FocusedWindow = None;
+	
+	Super.NotifyBeforeLevelChange();
+}
+
 //===================================================================================
 // New in 227: Copy text to UWindow clip board.
 final function CopyText( string Text )

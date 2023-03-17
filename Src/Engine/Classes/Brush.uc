@@ -4,7 +4,8 @@
 //=============================================================================
 class Brush extends Actor
 	native
-	NoUserCreate;
+	NoUserCreate
+	editoronly;
 
 //-----------------------------------------------------------------------------
 // Variables.
@@ -33,6 +34,7 @@ var() color BrushColor;
 var() int	PolyFlags;
 var() bool  bColored;
 var() bool  bStrictMerging; // 227j: This brush should be strictly merged with other geometry (can be used to avoid having builder make tiny gaps if there are many surfaces or edges parallel to each other).
+var() bool  bHintBrush; // 227k: This brush (preferably a sheet) should take priority when BSP splitting world on rebuild.
 
 simulated function OnMirrorMode()
 {

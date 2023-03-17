@@ -56,7 +56,7 @@ function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation,
 	{
 		Health = 0;
 		Velocity += momentum/mass;
-		if ( instigatedBy && instigatedBy.Health>0 && !Class'GameInfo'.Default.bUseClassicBalance )
+		if ( instigatedBy && instigatedBy.Health>0 )
 		{
 			foreach RadiusActors(class'NaliRabbit',aPawn,500.f)
 			{

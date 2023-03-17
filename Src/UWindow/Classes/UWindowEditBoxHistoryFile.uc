@@ -2,7 +2,8 @@ class UWindowEditBoxHistoryFile expands UWindowBase
 	config(User)
 	PerObjectConfig;
 
-var config array<string> H;
+var config array<string> H; // History lines.
+var config array<string> Blacklist; // Blacklist lines.
 var config int MaxHistory;
 
 final function UWindowEditBoxHistory LoadHistory( UWindowEditBoxHistory L )
@@ -46,6 +47,10 @@ final function SaveNewHistory( string Str )
 		H.Empty();
 	else
 	{
+		for( i=(Blacklist.Size()-1); i>=0; --i )
+			if( StartsWith(Str,Blacklist[i]$" ",true) )
+				return;
+		
 		i = H.Find(Str);
 		if( i>=0 )
 			H.Remove(i);

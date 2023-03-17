@@ -23,12 +23,12 @@ function Initfor(actor Other)
 
 defaultproperties
 {
-     bodyparts(1)=LodMesh'UPak.SMGib1'
-     bodyparts(2)=LodMesh'UPak.SMGib2'
-     bodyparts(3)=LodMesh'UPak.SMGib3'
-     bodyparts(4)=LodMesh'UPak.SMGib4'
-     bodyparts(5)=None
-     flies=0
-     AnimSequence=Dead2
-     Mesh=LodMesh'UPak.Marine'
+	bodyparts(1)=LodMesh'SMGib1'
+	bodyparts(2)=LodMesh'SMGib2'
+	bodyparts(3)=LodMesh'SMGib3'
+	bodyparts(4)=LodMesh'SMGib4'
+	bodyparts(5)=None
+	flies=0
+	AnimSequence=Dead2
+	Mesh=LodMesh'Marine'
 }

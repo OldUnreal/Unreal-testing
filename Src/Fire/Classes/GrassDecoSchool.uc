@@ -29,7 +29,7 @@ simulated function BeginPlay()
 			if( T==None )
 				continue;
 		}
-		Start = Normal(Construct<Vector>(FRand()-0.5f,FRand()-0.5f,0.f)) * FRand() * GrassRadius;
+		Start = Normal2D(Construct<Vector>(FRand()-0.5f,FRand()-0.5f,0.f)) * FRand() * GrassRadius;
 		Start.Z = Location.Z + TestHeight;
 		End = Start;
 		End.Z = Location.Z - MaxDepth;

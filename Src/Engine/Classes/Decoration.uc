@@ -281,7 +281,7 @@ simulated function Frag(class<fragment> FragType, vector Momentum, float DSize, 
 
 function Timer()
 {
-	if( default.AmbientSound!=none )
+	if( default.AmbientSound )
 	{
 		AmbientSound = default.AmbientSound;
 		SoundRadius = default.SoundRadius;
@@ -300,7 +300,7 @@ function Bump( actor Other )
 	if (bStatic || bDeleteme)
 		return;
 
-	if ( bPushable && (Pawn(Other)!=None) && (Other.Mass > 40) )
+	if ( bPushable && Other.bIsPawn && (Other.Mass > 40) )
 	{
 		othervel=Other.Velocity;
 		if (othervel== Vect(0,0,0))
@@ -312,7 +312,7 @@ function Bump( actor Other )
 		if ( Physics == PHYS_None )
 		{
 			Velocity.Z = 25;
-			if (PushSound!=none)
+			if( PushSound )
 			{
 				AmbientSound=PushSound;
 				SoundRadius=32;
@@ -348,14 +348,11 @@ function GrabbedBy( Pawn Other )
 		if (!SetLocation(Location))
 			SetLocation(Other.Location);
 	}
-	else if( (Other.Weapon==None || Other.Weapon.Mass<20) && bPushable && Mass<=40 && StandingCount==0 )
+	else if( (!Other.Weapon || Other.Weapon.Mass<20) && bPushable && Mass<=40 && !HasStackedObjects() && SetLocation(Other.GrabbedDecorationPos(self)) )
 	{
-		if (SetLocation(Other.GrabbedDecorationPos(self)))
-		{
-			Other.CarriedDecoration = Self;
-			SetPhysics(PHYS_None);
-			SetBase(Other);
-		}
+		Other.CarriedDecoration = Self;
+		SetPhysics(PHYS_None);
+		SetBase(Other);
 	}
 }
 
@@ -374,7 +371,7 @@ function bool IsStillCarrying( Pawn Other )
 	if( Base!=Other )
 		return false;
 	carried = Rotator(Location - Other.Location);
-	carried.Yaw = ((carried.Yaw & 65535) - (Other.Rotation.Yaw & 65535)) & 65535;
+	carried.Yaw = (carried.Yaw - Other.Rotation.Yaw) & 65535;
 	return ((carried.Yaw < 3072) || (carried.Yaw > 62463));
 }
 
@@ -394,6 +391,20 @@ final function float GetStandingWeight()
 	foreach BasedActors(class'Pawn',P)
 		M+=P.Mass;
 	return M;
+}
+
+// Check if this decoration has other objects stacked ontop of this or if they are emitters/details attached to it.
+final function bool HasStackedObjects()
+{
+	local Actor A;
+	
+	if( StandingCount )
+	{
+		foreach BasedActors(class'Actor',A)
+			if( !A.bHardAttach && A.bCollideActors && (A.bBlockActors || A.bBlockPlayers || A.bProjTarget) )
+				return true;
+	}
+	return false;
 }
 
 defaultproperties

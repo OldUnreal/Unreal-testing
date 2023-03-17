@@ -15,6 +15,10 @@ cpptext
 {
 	virtual void Tick( FLOAT DeltaTime )
 	{}
+	UBOOL AllowScriptDestroy()
+	{
+		return FALSE;
+	}
 }
 
 defaultproperties

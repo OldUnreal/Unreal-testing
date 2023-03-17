@@ -22,6 +22,21 @@ var(Material) float VStretchOffset;
 var transient float LastSu,ScalerU;
 var transient float LastSv,ScalerV;
 
+function Reset()
+{
+	Super.Reset();
+	UOscillationRate = 1.f;
+	VOscillationRate = 1.f;
+	UOscillationAmplitude = 0.1f;
+	VOscillationAmplitude = 0.1f;
+	UOscillationType = OT_Pan;
+	VOscillationType = OT_Pan;
+	UOffset = 0.f;
+	VOffset = 0.f;
+	UStretchOffset = 0.f;
+	VStretchOffset = 0.f;
+}
+
 defaultproperties
 {
 	UOscillationAmplitude=0.1

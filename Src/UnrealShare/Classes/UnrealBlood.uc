@@ -1,7 +1,7 @@
 //==================================================================================
 //  UnrealBlood.
 //  heavily modified into unreal 227 by []KAOS[]Casey.
-//  Green blood textures provided by Dark-_¦_-Night.:
+//  Green blood textures provided by Dark-_|_-Night.:
 //==================================================================================
 Class UnrealBlood expands Effects config abstract;
 

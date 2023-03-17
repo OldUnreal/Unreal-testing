@@ -119,7 +119,6 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 {
 	local shellcase s;
 	local vector StartT;
-	local rotator Dummy;
 	local byte HitCount;
 	local ZoneInfo HitZone;
 	local Actor A;
@@ -142,25 +141,24 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 		while ( WarpZoneInfo(HitZone)!=None && WarpZoneInfo(HitZone).OtherSideActor!=None && HitCount++<5 )
 		{
 			StartT = HitLocation;
-			WarpZoneInfo(HitZone).UnWarp(StartT,X,Dummy);
-			WarpZoneInfo(HitZone).OtherSideActor.Warp(StartT,X,Dummy);
+			WarpZoneInfo(HitZone).WarpBothCoords(StartT,X);
 			A = WarpZoneInfo(HitZone).OtherSideActor;
 			Z = StartT+X*10000;
 			Other = A.Trace(HitLocation,HitNormal,Z,StartT,True); // We dont use owner pawn trace here because we could hit ourselves.
-			while ( Other!=None && Other.bIsPawn && !Pawn(Other).AdjustHitLocation(HitLocation, Z - StartT) )
+			while ( Other && Other.bIsPawn && !Pawn(Other).AdjustHitLocation(HitLocation, Z - StartT) )
 			{
 				StartT = HitLocation;
 				Other = Other.Trace(HitLocation,HitNormal,Z,StartT,True);
 			}
-			if ( Other==None )
+			if ( !Other )
 				Break;
-			HitZone = Level.GetLocZone(HitLocation+HitNormal).Zone;
+			HitZone = A.Level.GetLocZone(HitLocation+HitNormal).Zone;
 		}
 	}
 
-	if ( Other != None && (Other == Level || Other.bWorldGeometry))
+	if ( Other && (Other == A.Level || Other.bWorldGeometry))
 		A.Spawn(class'HeavyWallHitEffect',,, HitLocation+HitNormal*9, Rotator(HitNormal));
-	else if ( Other!=None && Other!=Self )
+	else if ( Other && Other!=Self )
 	{
 		if ( Other.bIsPawn && (instigator.IsA('PlayerPawn') || (instigator.skill > 1)) && Pawn(Other).IsHeadShot(HitLocation,X) )
 			Other.TakeDamage(100, Pawn(Owner), HitLocation, 35000 * X, 'decapitated');

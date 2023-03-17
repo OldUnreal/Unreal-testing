@@ -3,6 +3,9 @@
 //=============================================================================
 class Flag3 extends Decoration;
 
+#exec TEXTURE IMPORT NAME=JFlag31HD FILE=Models\flag3.pcx GROUP="HD" FLAGS=2
+#exec TEXTURE IMPORT NAME=JFlag31 FILE=Models\flag3_old.pcx GROUP=Skins FLAGS=2 HD=JFlag31HD
+
 #exec MESH IMPORT MESH=Flag3M ANIVFILE=Models\flag3_a.3d DATAFILE=Models\flag3_d.3d X=0 Y=0 Z=0 LODSTYLE=2 MLOD=1
 
 // 60 Vertices, 82 Triangles
@@ -13,7 +16,6 @@ class Flag3 extends Decoration;
 #exec MESH SEQUENCE MESH=flag3M SEQ=All    STARTFRAME=0   NUMFRAMES=1
 #exec MESH SEQUENCE MESH=flag3M SEQ=Still  STARTFRAME=0   NUMFRAMES=1
 
-#exec TEXTURE IMPORT NAME=JFlag31 FILE=Models\flag3.pcx GROUP=Skins FLAGS=2
 #exec MESHMAP SCALE MESHMAP=flag3M X=0.1 Y=0.1 Z=0.2
 #exec MESHMAP SETTEXTURE MESHMAP=flag3M NUM=1 TEXTURE=Jflag31 TLOD=10
 

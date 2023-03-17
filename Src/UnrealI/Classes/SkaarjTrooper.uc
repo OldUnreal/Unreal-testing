@@ -165,6 +165,8 @@ function PlayTakeHit(float tweentime, vector HitLoc, int damage)
 
 auto state Startup
 {
+Ignores Bump,TakeDamage,Falling,Landed,BaseChange,Falling;
+
 	function BeginState()
 	{
 		Super.BeginState();

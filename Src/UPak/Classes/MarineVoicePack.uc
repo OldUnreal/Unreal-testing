@@ -1,7 +1,7 @@
 // Moved all talking from CrashSiteGame to here
 Class MarineVoicePack extends Info;
 
-#exec OBJ LOAD FILE=..\Sounds\Marine.uax
+#exec OBJ LOAD FILE=Marine.uax
 
 var() config bool bNoTalking,bCanTalkBS;
 var() sound MaleKillSounds[7],FemaleKillSounds[6],MaleHelpReq[9],FemaleHelpReq[8],MaleAcquireTalk[12],FemaleAcquireTalk[9],MaleCharge[18],FemaleCharge[16];

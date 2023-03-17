@@ -1,6 +1,6 @@
 class UMenuHUDConfigCW extends UMenuPageWindow;
 
-var int HUDConfigSliderY, CrosshairSliderY;
+var int HUDConfigSliderY, HUDConfigSliderScale, CrosshairSliderY;
 
 // HUD Config
 var UWindowHSliderControl HUDConfigSlider;
@@ -12,6 +12,10 @@ var() texture HUDIcon[6],CrosshairTex[6];
 var UWindowHSliderControl CrosshairSlider;
 var localized string CrosshairText;
 var localized string CrosshairHelp;
+
+var UWindowEditControl CrosshairScaleEditBox;
+var localized string CrosshairScaleText;
+var localized string CrosshairScaleHelp;
 
 // HUD Scale
 var UWindowEditControl HUDScaleEditBox;
@@ -43,7 +47,8 @@ function Created()
 	HUDConfigSlider.SetHelpText(HUDConfigHelp);
 	HUDConfigSlider.SetFont(F_Normal);
 	HUDConfigSliderY = ControlOffset+15;
-	ControlOffset+=159;
+	HUDConfigSliderScale = DesiredWidth - 10;
+	ControlOffset+=(HUDConfigSliderScale+26);
 
 	// Crosshair
 	CrosshairSlider = UWindowHSliderControl(CreateControl(class'UWindowHSliderControl', CenterPos, ControlOffset, CenterWidth, 1));
@@ -56,6 +61,16 @@ function Created()
 	
 	ControlWidth = Class'UMenuVideoClientWindow'.Default.EditAreaWidth;
 	ControlLeft = (WinWidth - ControlWidth) / 2;
+	
+	// Crosshair Scale
+	CrosshairScaleEditBox = UWindowEditControl(CreateControl(class'UWindowEditControl', ControlLeft, ControlOffset, ControlWidth, 1));
+	CrosshairScaleEditBox.SetText(CrosshairScaleText);
+	CrosshairScaleEditBox.SetHelpText(CrosshairScaleHelp);
+	CrosshairScaleEditBox.SetFont(F_Normal);
+	CrosshairScaleEditBox.SetNumericOnly(true);
+	CrosshairScaleEditBox.SetNumericFloat(true);
+	CrosshairScaleEditBox.Align = TA_Left;
+	ControlOffset+=25;
 	
 	// HUD Scale
 	HUDScaleEditBox = UWindowEditControl(CreateControl(class'UWindowEditControl', ControlLeft, ControlOffset, ControlWidth, 1));
@@ -88,6 +103,7 @@ function LoadAvailableSettings()
 		HudMode = 0;
 	HUDConfigSlider.SetValue(HudMode);
 	CrosshairSlider.SetValue(GetPlayerOwner().myHUD.Crosshair);
+	CrosshairScaleEditBox.SetValue(string(Class'HUD'.Default.CrosshairScale));
 	HUDScaleEditBox.SetValue(string(Class'HUD'.Default.HudScaler));
 }
 
@@ -112,6 +128,7 @@ function BeforePaint(Canvas C, float X, float Y)
 	CrosshairSlider.SliderWidth = 90;
 	CrosshairSlider.WinLeft = CenterPos;
 	
+	CrosshairScaleEditBox.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	HUDScaleEditBox.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	
 	// Setup for editbox width.
@@ -122,6 +139,10 @@ function BeforePaint(Canvas C, float X, float Y)
 	LabelAreaWidth = LabelTextAreaWidth + LabelHSpacing;
 	ControlWidth = LabelAreaWidth + Class'UMenuVideoClientWindow'.Default.EditAreaWidth;
 	ControlLeft = LabelHSpacing;
+	
+	CrosshairScaleEditBox.SetSize(ControlWidth, 1);
+	CrosshairScaleEditBox.WinLeft = ControlLeft;
+	CrosshairScaleEditBox.EditBoxWidth = Class'UMenuVideoClientWindow'.Default.EditAreaWidth;
 	
 	HUDScaleEditBox.SetSize(ControlWidth, 1);
 	HUDScaleEditBox.WinLeft = ControlLeft;
@@ -143,7 +164,7 @@ function Paint(Canvas C, float X, float Y)
 	Super.Paint(C, X, Y);
 
 	// draw HUD format icon
-	DrawStretchedTextureSegment( C, CenterPos, HUDConfigSliderY, 170, 128, 0, 0, 64, 64, HUDIcon[ HUDConfigSlider.Value ]);
+	DrawStretchedTextureSegment( C, (WinWidth - HUDConfigSliderScale) / 2, HUDConfigSliderY, HUDConfigSliderScale, HUDConfigSliderScale, 0, 0, HUDIcon[HUDConfigSlider.Value].USize, HUDIcon[HUDConfigSlider.Value].VSize, HUDIcon[HUDConfigSlider.Value]);
 
 	// DrawCrosshair
 	DrawClippedTexture(C, CenterPos, CrosshairSliderY, CrosshairTex[Clamp(GetPlayerOwner().myHUD.Crosshair,0,ArrayCount(CrosshairTex)-1)]);
@@ -165,6 +186,9 @@ function Notify(UWindowDialogControl C, byte E)
 		case HUDConfigSlider:
 			HUDConfigChanged();
 			break;
+		case CrosshairScaleEditBox:
+			CrossScaleChanged();
+			break;
 		case HUDScaleEditBox:
 			HUDScaleChanged();
 			break;
@@ -181,6 +205,17 @@ function CrosshairChanged()
 function HUDConfigChanged()
 {
 	GetPlayerOwner().myHUD.HudMode = int(HUDConfigSlider.Value);
+}
+
+function CrossScaleChanged()
+{
+	if (CrosshairScaleEditBox.GetValue()!="")
+	{
+		Class'HUD'.Default.CrosshairScale = FClamp(float(CrosshairScaleEditBox.GetValue()), 0.1f, 8.f);
+		if( GetPlayerOwner().MyHUD )
+			GetPlayerOwner().MyHUD.CrosshairScale = Class'HUD'.Default.CrosshairScale;
+		Class'HUD'.Static.StaticSaveConfig();
+	}
 }
 
 function HUDScaleChanged()
@@ -205,12 +240,12 @@ defaultproperties
 {
 	HUDConfigText="HUD Layout"
 	HUDConfigHelp="Use the left and right arrow keys to select a Heads Up Display configuration."
-	HUDIcon(0)=Texture'UnrealShare.Hud1'
-	HUDIcon(1)=Texture'UnrealShare.Hud2'
-	HUDIcon(2)=Texture'UnrealShare.Hud3'
-	HUDIcon(3)=Texture'UnrealShare.Hud4'
-	HUDIcon(4)=Texture'UnrealShare.Hud5'
-	HUDIcon(5)=Texture'UnrealShare.Hud6'
+	HUDIcon(0)=Texture'HD_Hud1'
+	HUDIcon(1)=Texture'HD_Hud2'
+	HUDIcon(2)=Texture'HD_Hud3'
+	HUDIcon(3)=Texture'HD_Hud4'
+	HUDIcon(4)=Texture'HD_Hud5'
+	HUDIcon(5)=Texture'HD_Hud6'
 	CrosshairTex(0)=Texture'Crosshair1'
 	CrosshairTex(1)=Texture'Crosshair2'
 	CrosshairTex(2)=Texture'Crosshair3'
@@ -219,4 +254,6 @@ defaultproperties
 	CrosshairTex(5)=Texture'Crosshair7'
 	CrosshairText="Crosshair Style"
 	CrosshairHelp="Choose the crosshair appearing at the center of your screen."
+	CrosshairScaleText="Crosshair Scale"
+	CrosshairScaleHelp="Scaling of the crosshair on HUD."
 }

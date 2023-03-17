@@ -9,7 +9,8 @@
 //
 //=============================================================================
 class ClipMarker extends Keypoint
-	native;
+	native
+	transient;
 
 #exec Texture Import File=Textures\S_ClipMarker.pcx Name=S_ClipMarker Mips=Off Flags=2
 #exec Texture Import File=Textures\S_ClipMarker1.pcx Name=S_ClipMarker1 Mips=Off Flags=2

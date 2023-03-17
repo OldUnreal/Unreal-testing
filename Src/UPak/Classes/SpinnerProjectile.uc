@@ -3,6 +3,19 @@
 //=============================================================================
 class SpinnerProjectile expands Projectile;
 
+#exec TEXTURE IMPORT NAME=SpProjPal FILE=Models\Spinner\SpProjPal.pcx GROUP=SpEffect
+#exec TEXTURE IMPORT NAME=e8_a09 FILE=Models\Spinner\e8_a09.pcx GROUP=SpEffect MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a08 FILE=Models\Spinner\e8_a08.pcx GROUP=SpEffect Next=e8_a09 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a07 FILE=Models\Spinner\e8_a07.pcx GROUP=SpEffect Next=e8_a08 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a06 FILE=Models\Spinner\e8_a06.pcx GROUP=SpEffect Next=e8_a07 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a05 FILE=Models\Spinner\e8_a05.pcx GROUP=SpEffect Next=e8_a06 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a04 FILE=Models\Spinner\e8_a04.pcx GROUP=SpEffect Next=e8_a05 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a03 FILE=Models\Spinner\e8_a03.pcx GROUP=SpEffect Next=e8_a04 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a02 FILE=Models\Spinner\e8_a02.pcx GROUP=SpEffect Next=e8_a03 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a01 FILE=Models\Spinner\e8_a01.pcx GROUP=SpEffect Next=e8_a02 MinFrameRate=0 MaxFrameRate=15
+#exec TEXTURE IMPORT NAME=e8_a00 FILE=Models\Spinner\e8_a00.pcx GROUP=SpEffect Next=e8_a01 MinFrameRate=0 MaxFrameRate=15
+#exec OBJ SET CLASS=Texture NAME=e8_a09 PROPERTY=AnimNext VALUE=e8_a03
+
 #exec AUDIO IMPORT FILE="Sounds\Spinner\Shoot2.wav"  NAME="Fire"   GROUP="Spinner"
 #exec AUDIO IMPORT FILE="Sounds\Spinner\Impact3.wav" NAME="Hit"    GROUP="Spinner"
 
@@ -72,7 +85,7 @@ defaultproperties
      LifeSpan=7.300000
      DrawType=DT_Sprite
      Style=STY_Translucent
-     Texture=Texture'UPak.SpEffect.SpEffect.e8_a00'
+     Texture=Texture'UPak.SpEffect.e8_a00'
      DrawScale=0.500000
      bUnlit=True
      LightType=LT_Steady

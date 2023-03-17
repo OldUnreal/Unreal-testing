@@ -91,6 +91,7 @@ var() bool			bShouldChangeMusicTrack;// 227j: This sub-level should change playe
 
 var(Audio) music  Song;          // Default song for level.
 var(Audio) byte   SongSection;   // Default song order for level.
+var(Audio) byte   SongVolume;	 // 227k: Default song volume modifier for the level.
 var(Audio) byte   CdTrack;       // Default CD track for level.
 var(Audio) float  PlayerDoppler; // Player doppler shift, 0=none, 1=full.
 var music		backup_Song;
@@ -373,8 +374,8 @@ Return the point region (zone, iLeaf..) of a desired location */
 native(1709) final function PointRegion GetLocZone( vector Pos, optional Actor InActor );
 
 /* Very fast:
-Find a free object from the list, will return None if not found (Read more: http://wiki.beyondunreal.com/Legacy:Object_Pool). */
-native(1710) final function Object AllocateObj( Class ObjClass );
+Find a free object from the list, will allocate a new object and return that if not found. (Read more: http://wiki.beyondunreal.com/Legacy:Object_Pool). */
+native(1710) final function coerce Object AllocateObj( Class ObjClass );
 
 /* Very fast:
 Free an Object back into object list (after its been used). */
@@ -488,6 +489,7 @@ defaultproperties
 	VisibleGroups="None"
 	bHighDetailMode=True
 	CdTrack=255
+	SongVolume=255
 	Brightness=1.000000
 	DefaultTexture=Texture'DefaultTexture'
 	WhiteTexture=Texture'WhiteTexture'

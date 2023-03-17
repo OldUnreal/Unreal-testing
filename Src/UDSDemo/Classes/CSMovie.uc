@@ -67,10 +67,16 @@ function Timer()
 //
 function SendPlayer( PlayerPawn aPlayer, string URL )
 {
-	aPlayer.ClientTravel( URL, TRAVEL_Relative, true );
+	if( class'CSPlayer'.Static.LevelIsIntro1(Level) )
+		URL = "Intro2";
+	else if( class'CSPlayer'.Static.LevelIsIntro2(Level) )
+		URL = "InterIntro?Game=UPak.UPakTransitionInfo";
+	if( Left(URL,5)~="UPack" )
+		aPlayer.ClientTravel( URL, TRAVEL_Absolute, false);
+	else aPlayer.ClientTravel( URL, TRAVEL_Relative, true );
 }
 
 defaultproperties
 {
-	DefaultPlayerClass=Class'UDSDemo.CSPlayer'
+	DefaultPlayerClass=Class'CSFemaleOne'
 }

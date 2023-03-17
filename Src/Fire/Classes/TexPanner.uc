@@ -4,8 +4,16 @@ Class TexPanner extends TexModifier
 	Native;
 
 var(Material) vector InitPanning,PanningSpeed;
-var transient vector OldVals[2],CurPanning; // For caching.
-var transient bool bHasAutoPan;
+var transient vector PrevInitPan, // For caching.
+						CurPanning; // Current panning with PanningSpeed.
+
+function Reset()
+{
+	Super.Reset();
+	InitPanning = vect(0,0,0);
+	PanningSpeed = vect(0,0,0);
+	CurPanning = vect(0,0,0);
+}
 
 defaultproperties
 {

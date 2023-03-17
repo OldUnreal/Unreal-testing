@@ -20,12 +20,17 @@ cpptext
 	*/
 	AActor* OnGetActors(FSceneNode* Camera);
 	virtual AActor* GetActors();
+	virtual AActor* GetStaticActors() { return reinterpret_cast<AActor*>(GetOuter()); }
+	virtual UBOOL PrepareVolume(FSceneNode* Camera) { return TRUE; } // About to draw this with bFilterByVolume enabled.
+	UBOOL ShouldDrawIterator(DWORD ShowFlags) const;
 }
 
 var int MaxItems, Index; // Obsolete.
 var pointer<class APlayerPawn*>	Observer;
 var pointer<struct FSceneNode*>	Frame;
 var transient private bool bHurtEntry; // Keep GetActors from being reentered.
+
+var const editconst bool bIsParticleEmitter,bIsTerrain; // Render filter flags for editor.
 
 // Call native code for obtaining actors.
 native(921) final function Actor GetNativeActors( Canvas Canvas );

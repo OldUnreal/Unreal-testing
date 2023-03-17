@@ -3,14 +3,17 @@
 // finds all the single player game types (using the .int files)
 // then allows the player to choose one (if there is only one, this menu never displays)
 //=============================================================================
-class UnrealChooseGameMenu extends UnrealLongMenu;
+class UnrealChooseGameMenu extends UnrealLongMenu
+	config(User);
 
 struct FGameEntry
 {
-	var string StartMap, GameName, GameClass, TextureName;
+	var string StartMap, GameName, GameClass, TextureName, SaveInfo;
 	var Texture ScreenShot;
 };
-var FGameEntry GameList[19];
+var array<FGameEntry> GameList;
+var config string LastSelectedGame;
+var config byte LastSelectedSkill;
 
 function PostBeginPlay()
 {
@@ -26,6 +29,10 @@ function PostBeginPlay()
 			j = InStr(Des,";");
 			if ( j!=-1 )
 			{
+				GameList[MenuLength].SaveInfo = Ent@Left(Des,j);
+				if( Default.LastSelectedGame~=GameList[MenuLength].SaveInfo )
+					Selection = MenuLength+1;
+				
 				GameList[MenuLength].StartMap = Left(Des,j);
 				Des = Mid(Des,j+1);
 				j = InStr(Des,";");
@@ -58,6 +65,11 @@ function bool ProcessSelection()
 	S = GameList[Selection-1].StartMap;
 	if ( !(GameList[Selection-1].GameClass~="Game.Game") )
 		S = S$"?Game="$GameList[Selection-1].GameClass;
+	if( Default.LastSelectedGame!=GameList[Selection-1].SaveInfo )
+	{
+		Default.LastSelectedGame = GameList[Selection-1].SaveInfo;
+		StaticSaveConfig();
+	}
 	UnrealNewGameMenu(ChildMenu).StartMap = S;
 
 	if ( MenuLength == 1 )
@@ -128,6 +140,8 @@ function DrawMenu(canvas Canvas)
 
 defaultproperties
 {
+	LastSelectedGame="Game.Game Vortex2"
+	LastSelectedSkill=1
 	HelpMessage(1)="Choose which game to play."
 	MenuTitle="CHOOSE GAME"
 }

@@ -6,7 +6,7 @@
 //=============================================================================
 class TowRocket expands UPakRocket;
 
-var vector RepPos,RepVeloC;
+var repnotify vector RepPos,RepVeloC;
 
 replication
 {
@@ -15,6 +15,16 @@ replication
 		RepPos,RepVeloC;
 }
 
+simulated function OnRepNotify( name Property )
+{
+	if( Property=='RepPos' )
+		SetLocation(RepPos);
+	else if( Property=='RepVeloC' )
+	{
+		Velocity = RepVeloC;
+		SetRotation(rotator(RepVeloC));
+	}
+}
 simulated function Tick( float DeltaTime )
 {
 	local SpriteSmokePuff b;
@@ -23,22 +33,8 @@ simulated function Tick( float DeltaTime )
 	
 	if( Level.NetMode==NM_DedicatedServer )
 		Return;
-	if( Level.NetMode==NM_Client )
-	{
-		if( RepPos!=vect(0,0,0) )
-		{
-			SetLocation(RepPos);
-			RepPos = vect(0,0,0);
-		}
-		if( RepVeloC!=Vect(0,0,0) )
-		{
-			Velocity = RepVeloC;
-			SetRotation(rotator(RepVeloC));
-			RepVeloC = vect(0,0,0);
-		}
-	}
+
 	TempVelocity = VSize( Velocity );
-	
 	if( TempVelocity > 1200 && bSmoking && AnimSequence!='Fly' )
 	{
 		LoopAnim( 'Fly' );
@@ -65,7 +61,7 @@ simulated function Tick( float DeltaTime )
 }
 simulated function Timer()
 {
-	local rotator newRot, pawnRot;
+	local rotator newRot;
 	
 	if( (Level.NetMode==NM_Client && !bNetOwner) || !Owner )
 		Return;
@@ -73,14 +69,14 @@ simulated function Timer()
 	{
 		if( Owner.bIsPlayerPawn )
 			newRot = Pawn(Owner).ViewRotation;
-		else if( Pawn(Owner).Enemy && Pawn(Owner).Enemy.Health>0 )
+		else if( Pawn(Owner).Enemy && Pawn(Owner).Enemy.Health>0 && Pawn(Owner).CanSee(Pawn(Owner).Enemy) )
 		{
-			newRot = rotator(Pawn(Owner).Enemy.Location-Location);
-			pawnRot.Yaw = newRot.Yaw;
-			Owner.SetRotation(pawnRot);
+			newRot = GetAimRotation(Pawn(Owner).Enemy);
+			newRot.Yaw = FixedTurnTo(Rotation.Yaw, newRot.Yaw, 3500);
+			newRot.Pitch = FixedTurnTo(Rotation.Pitch, newRot.Pitch, 3500);
 		}
 		else newRot = Rotation;
-		newRot.Roll += 12768;
+		newRot.Roll = Rotation.Roll + 12768;
 		SetRotation( newRot );	
 	}
 	Velocity = VSize( Velocity ) * Vector( Rotation );
@@ -89,6 +85,26 @@ simulated function Timer()
 		RepPos = Location;
 		RepVeloC = Velocity;
 	}
+}
+final function int FixedTurnTo( int Src, int Dest, int Delta )
+{
+	Dest = (Dest - Src) & 65535;
+	if( Dest>=32768 )
+		Dest-=65536;
+	return (Src + Clamp(Dest,-Delta,Delta)) & 65535;
+}
+function rotator GetAimRotation( Actor Other )
+{
+	local vector V;
+	
+	V = Other.Location;
+	if( VSizeSq(V-Location)>Square(500.f) )
+	{
+		V += Other.Velocity;
+		if( !FastTrace(Other.Location,V) || !FastTrace(V,Location) )
+			V = Other.Location;
+	}
+	return rotator(V-Location);
 }
 
 // ================================================================================================

@@ -1,6 +1,7 @@
 // Adds velocity to particles.
 Class VelocityForce extends XParticleForces
-Native;
+	Native
+	clientonly;
 
 #EXEC TEXTURE IMPORT FILE="Textures\S_VelForce.bmp" NAME="S_VelocityForce" GROUP="Icons" MIPS=off FLAGS=2 TEXFLAGS=0
 

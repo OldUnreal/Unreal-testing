@@ -79,6 +79,39 @@ function ActivateTranslator(bool bHint)
 	Activate();
 }
 
+function AssignMessage( TranslatorEvent E, bool bFirstMessage )
+{
+	Hint = E.Hint;
+	bShowHint = False;
+	if( Len(E.Message) )
+	{
+		NewMessage = E.Message;
+		
+		if( bFirstMessage )
+		{
+			bNewMessage = true;
+			Pawn(Owner).ClientMessage(E.M_NewMessage);
+		}
+		else
+		{
+			bNotNewMessage = true;
+			Pawn(Owner).ClientMessage(E.M_TransMessage);
+		}
+	}
+	else
+	{
+		bNewMessage = true;
+		Pawn(Owner).ClientMessage(E.M_HintMessage);
+	}
+}
+
+function UntouchMessage( TranslatorEvent E )
+{
+	bNewMessage = False;
+	bNotNewMessage = False;
+	if( IsInState('Activated') ) GoToState('Deactivated');
+}
+
 // 227g: Moved Translator draw code from HUD to here.
 simulated function DrawTranslator( Canvas Canvas )
 {

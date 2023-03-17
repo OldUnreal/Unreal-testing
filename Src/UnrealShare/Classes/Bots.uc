@@ -706,7 +706,7 @@ function Bump(actor Other)
 
 	if ( Health <= 0 || bDeleteme )
 	{
-		log("Bump while dead");
+		//log("Bump while dead");
 		return;
 	}
 	if ( Enemy != None )
@@ -2019,7 +2019,7 @@ state Roaming
 		goalItem = InventorySpot(MoveTarget).markedItem;
 		if ( goalItem == None ) // FIXME REMOVE
 		{
-			log(" No marked item for "$MoveTarget);
+			//log(" No marked item for "$MoveTarget);
 			return;
 		}
 
@@ -3256,7 +3256,7 @@ Moving:
 		AnimEnd();
 	if ( MoveTarget == None )
 	{
-		log("no movetarget");
+		//log("no movetarget");
 		Sleep(0.0);
 		Goto('RunAway');
 	}
@@ -4471,8 +4471,8 @@ state Hunting
 
 	function BeginState()
 	{
-		if ( health <= 0 )
-			log(self$" hunting while dead");
+		//if ( health <= 0 )
+		//	log(self$" hunting while dead");
 		SpecialGoal = None;
 		SpecialPause = 0.0;
 		bFromWall = false;
@@ -4705,8 +4705,8 @@ Begin:
 	{
 		Acceleration = vect(0,0,0);
 		NextAnim = '';
-		if ( Health <= 0 )
-			log(self$" fall from takehit while dead");
+		//if ( Health <= 0 )
+		//	log(self$" fall from takehit while dead");
 		GotoState('FallingState', 'Ducking');
 	}
 	else if (NextState != '' && NextState != 'TakeHit')
@@ -4753,8 +4753,8 @@ ignores Bump, Hitwall, WarnTarget;
 
 	function ZoneChange(ZoneInfo newZone)
 	{
-		if ( Health <= 0 )
-			log("Zonechange in falling state while dead");
+		//if ( Health <= 0 )
+		//	log("Zonechange in falling state while dead");
 		Global.ZoneChange(newZone);
 		if (newZone.bWaterZone)
 		{
@@ -4777,7 +4777,8 @@ ignores Bump, Hitwall, WarnTarget;
 	                     Vector momentum, name damageType)
 	{
 		Global.TakeDamage(Damage, instigatedBy, hitlocation, momentum, damageType);
-
+		if ( health <= 0 || bDeleteme)
+			return;
 		if (Enemy == None)
 		{
 			Enemy = instigatedBy;
@@ -4809,8 +4810,8 @@ ignores Bump, Hitwall, WarnTarget;
 
 	function Timer()
 	{
-		if ( Health <= 0 )
-			log(self$" fall from timer while dead");
+		//if ( Health <= 0 )
+		//	log(self$" fall from timer while dead");
 		if ( Enemy != None )
 		{
 			bReadyToAttack = true;
@@ -4867,8 +4868,8 @@ ignores Bump, Hitwall, WarnTarget;
 
 	function SetFall()
 	{
-		if ( Health < 0 )
-			log(self$" setfall from fall");
+		//if ( Health < 0 )
+		//	log(self$" setfall from fall");
 		if (!bUpAndOut)
 			GotoState('FallingState');
 	}
@@ -4881,8 +4882,8 @@ ignores Bump, Hitwall, WarnTarget;
 
 	function BeginState()
 	{
-		if ( Health <= 0 )
-			log(self$" entered falling state at "$Level.Timeseconds$ "with next "$NextState);
+		//if ( Health <= 0 )
+		//	log(self$" entered falling state at "$Level.Timeseconds$ "with next "$NextState);
 		if (Enemy == None)
 			Disable('EnemyNotVisible');
 		else
@@ -4929,7 +4930,7 @@ LongFall:
 		FinishAnim();
 	}
 	TweenToFalling();
-	if ( Velocity.Z > -150 ) //stuck
+	if ( Velocity.Z > -20.f && Velocity.Z<=0.f ) //stuck
 	{
 		SetPhysics(PHYS_Falling);
 		if ( Enemy != None )
@@ -5193,8 +5194,8 @@ ignores EnemyNotVisible;
 
 	function BeginState()
 	{
-		if ( Health < 0 )
-			log(self$" victory dance while dead");
+		//if ( Health < 0 )
+		//	log(self$" victory dance while dead");
 		SpecialGoal = None;
 		SpecialPause = 0.0;
 		SetAlertness(-0.3);

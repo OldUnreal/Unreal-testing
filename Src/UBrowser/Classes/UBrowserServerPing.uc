@@ -39,7 +39,7 @@ function ValidateServer()
 {
 	if (Server.ServerPing != Self)
 	{
-		Log("ORPHANED: "$Self,'UBrowser');
+		//Log("ORPHANED: "$Self,'UBrowser');
 		Destroy();
 	}
 }
@@ -421,7 +421,7 @@ state GetInfo
 		ValidateServer();
 		Server.Ping = 1000*ElapsedTime;
 		Server.HostName = Server.IP;
-		Server.GamePort = 0;
+		Server.SetGamePort(0);
 		Server.MapName = "";
 		Server.GameType = "";
 		Server.GameMode = "";
@@ -456,7 +456,7 @@ state GetInfo
 		if (i >= 0)
 		{
 			Temp = Right(Text, l - i - 10);
-			Server.GamePort = Int(Left(Temp, InStr(Temp, "\\")));
+			Server.SetGamePort(Int(Left(Temp, InStr(Temp, "\\"))));
 		}
 
 		i=InStr(Text, "\\mapname\\");
@@ -555,7 +555,7 @@ state GetInfo
 			Log("Ping Timeout from "$Server.IP$" Giving Up",'UBrowser');
 
 			Server.Ping = 9999;
-			Server.GamePort = 0;
+			Server.SetGamePort(0);
 			Server.MapName = "";
 			Server.GameType = "";
 			Server.GameMode = "";

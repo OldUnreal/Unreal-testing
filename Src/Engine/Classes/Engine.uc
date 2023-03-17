@@ -7,6 +7,12 @@ class Engine extends Subsystem
 	transient
 	abstract;
 
+struct export CreditsInfo
+{
+	var string Credits,Website;
+	var Texture Logo;
+};
+
 // Drivers.
 var(Drivers) config class<RenderDevice>   GameRenderDevice;
 var(Drivers) config class<AudioSubsystem> AudioDevice;
@@ -21,6 +27,7 @@ var const client Client;
 var const renderbase Render;
 var const audiosubsystem Audio;
 var const PhysicsEngine Physics;
+var const array<CreditsInfo> DriverCredits;
 var int TickCycles, GameCycles, ClientCycles;
 var(Settings) config int CacheSizeMegs;
 var(Settings) config bool UseSound;
@@ -37,6 +44,10 @@ static invariant final function bool IsPhysicsEnabled()
 {
 	return bool(GetEngine().Physics);
 }
+
+// Store a login password for a server, will be automatically appended when trying to login to said remote address.
+// (not accessible in UnrealScript for security reasons)
+static native final function StorePassword( string Addr, string Password );
 
 defaultproperties
 {

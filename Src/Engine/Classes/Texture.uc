@@ -18,7 +18,8 @@
 class Texture extends Bitmap
 	safereplace
 	native
-	runtimestatic;
+	runtimestatic
+	nousercreate;
 
 // Subtextures.
 var() texture BumpMap;			// Bump map to illuminate this texture with.
@@ -158,6 +159,7 @@ defaultproperties
 	Specular=0
 	DrawScale=1
 	Friction=1
+	Alpha=1
 	LODSet=LODSET_World
 	UClampMode=UWrap
 	VClampMode=VWrap

@@ -15,7 +15,6 @@ cpptext
 	virtual void _Init( UViewport* Viewport );
 	virtual void PreRender( FSceneNode* Frame );
 	virtual void PostRender( FSceneNode* Frame );
-	virtual void Serialize( const TCHAR* Data, EName MsgType );
 	virtual UBOOL GetDrawWorld();
 	inline UBOOL GetbTyping() const
 	{
@@ -29,6 +28,10 @@ cpptext
 	{
 		return GlobalWindowKey;
 	}
+	
+	// FOutputDevice interface.
+	void Serialize( const TCHAR* Data, EName MsgType );
+	UPlayer* GetUserContext() const;
 }
 
 // Imports.
@@ -59,7 +62,7 @@ var texture ConBackground, Border;
 var bool bNoStuff, bTyping, bTimeDemo;
 var TimeDemo TimeDemo;
 var bool bNoDrawWorld;
-var int TypingOffset; // Offset while typing string
+var int TypingOffset;					// Offset while typing string
 var globalconfig byte GlobalConsoleKey;
 var globalconfig byte GlobalWindowKey;
 var transient const int LastInputKey;	// The Key code that can be retrieved from event function KeyType.
@@ -71,6 +74,7 @@ var localized string ConnectingMessage;
 var localized string PausedMessage;
 var localized string PrecachingMessage;
 var bool bValidKeyEvent;
+var globalconfig bool bConsoleCommandLog; // Should print results of consolecommands to client log.
 
 //-----------------------------------------------------------------------------
 // Input.
@@ -616,13 +620,13 @@ state Typing
 	}
 	function bool KeyType( EInputKey Key )
 	{
+		if ( bNoStuff )
+		{
+			bNoStuff = false;
+			return true;
+		}
 		if ( LastInputKey>=Asc(" ") && LastInputKey!=0x7F && LastInputKey!=Asc("~") && LastInputKey!=Asc("`") )
 		{
-			if ( bNoStuff )
-			{
-				bNoStuff = false;
-				return true;
-			}
 			TypedStr = TypedStr $ Chr(LastInputKey);
 			Scrollback=0;
 			return true;
@@ -632,6 +636,8 @@ state Typing
 	function bool KeyEvent( EInputKey Key, EInputAction Action, FLOAT Delta )
 	{
 		local string Temp;
+		
+		bNoStuff = false;
 		if ( global.KeyEvent( Key, Action, Delta ) || Action!=IST_Press )
 		{
 			return true;
@@ -902,4 +908,5 @@ defaultproperties
 	TypingOffset=-1
 	GlobalConsoleKey=192
 	GlobalWindowKey=27
+	bConsoleCommandLog=true
 }

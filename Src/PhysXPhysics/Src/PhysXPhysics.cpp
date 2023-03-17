@@ -133,16 +133,27 @@ class UESimulatedCallback : public physx::PxSimulationEventCallback
 			
 			static physx::PxContactPairPoint Points[3];
 			physx::PxU32 n = P.extractContacts(Points, 3);
+			if (!n)
+				continue;
 
-			for (physx::PxU32 j = 0; j < n; ++j)
+			UBOOL bAbsorb = FALSE;
+			if (P.shapes[0]->userData)
+				bAbsorb = reinterpret_cast<FPhysXShape*>(P.shapes[0]->userData)->OnContact(Points[0].position, Points[0].normal);
+			if (P.shapes[1]->userData)
+				bAbsorb = reinterpret_cast<FPhysXShape*>(P.shapes[1]->userData)->OnContact(Points[0].position, -Points[0].normal) | bAbsorb;
+
+			if (!bAbsorb)
 			{
-				FLOAT Force = Abs(Points[j].separation) / SimDeltaTime;
-				if (!bDidHit || Force > BestForce)
+				for (physx::PxU32 j = 0; j < n; ++j)
 				{
-					BestLocation = PXVectorToUE(Points[j].position);
-					BestNormal = PXNormalToUE(Points[j].normal);
-					BestForce = Force;
-					bDidHit = TRUE;
+					FLOAT Force = Abs(Points[j].separation) / SimDeltaTime;
+					if (!bDidHit || Force > BestForce)
+					{
+						BestLocation = PXVectorToUE(Points[j].position);
+						BestNormal = PXNormalToUE(Points[j].normal);
+						BestForce = Force;
+						bDidHit = TRUE;
+					}
 				}
 			}
 		}
@@ -163,16 +174,53 @@ class UESimulatedCallback : public physx::PxSimulationEventCallback
 	}
 };
 
+class UEContactModify : public physx::PxContactModifyCallback
+{
+public:
+	void onContactModify(physx::PxContactModifyPair* const pairs, physx::PxU32 count)
+	{
+		physx::PxVec3 ResultVel;
+		physx::PxU32 i, j, z;
+		for (i = 0; i < count; ++i)
+		{
+			for (j = 0; j < 2; ++j)
+			{
+				if (!pairs[i].shape[j]->userData || !reinterpret_cast<FPhysXShape*>(pairs[i].shape[j]->userData)->bUseContactVelocity || !pairs[i].contacts.size())
+					continue;
+
+				const physx::PxVec3& BaseVel = reinterpret_cast<FPhysXShape*>(pairs[i].shape[j]->userData)->CurContactVelocity;
+
+				for (z = 0; z < pairs[i].contacts.size(); ++z)
+				{
+					const physx::PxVec3& FloorNormal = pairs[i].contacts.getNormal(z);
+					FLOAT FloorDot = BaseVel.dot(FloorNormal);
+					ResultVel = BaseVel - (FloorNormal * FloorDot);
+					if (j)
+						ResultVel *= -1.f;
+
+# if 0
+					const FVector GPos = PXVectorToUE(pairs[i].contacts.getPoint(z));
+					new FDebugLineData(GPos, GPos + PXNormalToUE(pairs[i].contacts.getNormal(z)) * 32.f, FPlane(0, 0, 1, 1));
+					new FDebugLineData(GPos, GPos + PXVectorToUE(ResultVel), FPlane(0, 1, 0, 1));
+#endif
+
+					pairs[i].contacts.setTargetVelocity(z, ResultVel);
+				}
+			}
+		}
+	}
+};
+
 #if PHYSX_MULTITHREAD
-static FWorkingThread GPhysXThread(TEXT("PhysX"));
+static FWorkingThread* GPhysXThread = nullptr;
 
 struct FPhysXSceneWork : public FWorkQuery
 {
 	FPhysXScene* Scene;
 	FLOAT DeltaTime;
 
-	FPhysXSceneWork(FWorkingThread* InThread, FPhysXScene* S, FLOAT dt)
-		: FWorkQuery(InThread, TEXT("PhysXScene")), Scene(S), DeltaTime(dt)
+	FPhysXSceneWork(FPhysXScene* S, FLOAT dt)
+		: FWorkQuery(TEXT("PhysXScene")), Scene(S), DeltaTime(dt)
 	{}
 	void Main();
 };
@@ -181,8 +229,10 @@ struct FPhysXSceneWork : public FWorkQuery
 void UPhysXPhysics::StaticConstructor()
 {
 	guard(UPhysXPhysics::StaticConstructor);
+#if PHYSX_MULTITHREAD
 	bEnableMultiThreading = TRUE;
 	new(GetClass(), TEXT("bEnableMultiThreading"), 0)UBoolProperty(CPP_PROPERTY(bEnableMultiThreading), TEXT("Config"), (CPF_Config | CPF_Edit));
+#endif
 	unguard;
 }
 
@@ -191,6 +241,14 @@ void UPhysXPhysics::InitEngine()
 	guard(UPhysXPhysics::InitEngine);
 	if (physXScene)
 		appErrorf(TEXT("PhysX Physics engine already initialized!"));
+
+#if PHYSX_MULTITHREAD
+	if (bEnableMultiThreading)
+	{
+		if (!GPhysXThread)
+			GPhysXThread = new FWorkingThread(TEXT("PhysX"));
+	}
+#endif
 
 	NAME_PhysX = (EName)FName(PHYS_X_NAME, FNAME_Intrinsic).GetIndex();
 	GLog->Logf(NAME_PhysX, TEXT("Initializing PhysX physics engine (ver %i.%i.%i)!"), PX_PHYSICS_VERSION_MAJOR, PX_PHYSICS_VERSION_MINOR, PX_PHYSICS_VERSION_BUGFIX);
@@ -210,6 +268,8 @@ void UPhysXPhysics::InitEngine()
 	DefaultMaterial = physXScene->createMaterial(0.5f, 0.5f, 0.5f);
 
 	bEngineRunning = TRUE;
+
+	UEngine::ImplementCredits(TEXT("Physics Engine: Phys X - Copyright (c) 2018 NVIDIA Corporation"), TEXT("www.nvidia.com"), TEXT("UnrealI.PhysXLogo"));
 	unguard;
 }
 void UPhysXPhysics::ExitEngine()
@@ -251,7 +311,7 @@ UBOOL UPhysXPhysics::Exec(const TCHAR* Cmd, FOutputDevice& Out)
 PX_SceneBase* UPhysXPhysics::CreateScene(ULevel* Level)
 {
 	guard(UPhysXPhysics::CreateScene);
-	FPhysXScene* NewScene = NewTagged(PHYS_X_NAME) FPhysXScene(Level, (bEnableMultiThreading != 0));
+	FPhysXScene* NewScene = new FPhysXScene(Level, (bEnableMultiThreading != 0));
 	if (!NewScene->pxScene)
 	{
 		delete NewScene;
@@ -266,11 +326,14 @@ physx::PxFilterFlags UEFilterShader(
 	physx::PxFilterObjectAttributes attributes1, physx::PxFilterData filterData1,
 	physx::PxPairFlags& pairFlags, const void* constantBlock, physx::PxU32 constantBlockSize)
 {
-	if (!filterData0.word0 && !filterData1.word0 && !(filterData0.word2 & filterData1.word1) && !(filterData1.word2 & filterData0.word1))
+	if (!(filterData0.word0 | filterData1.word0) && !(filterData0.word2 & filterData1.word1) && !(filterData1.word2 & filterData0.word1))
 		return physx::PxFilterFlag::eSUPPRESS;
 
-	//pairFlags = physx::PxPairFlag::eCONTACT_DEFAULT | physx::PxPairFlag::eNOTIFY_TOUCH_FOUND;
-	pairFlags = physx::PxPairFlag::eCONTACT_DEFAULT | physx::PxPairFlag::eNOTIFY_THRESHOLD_FORCE_FOUND | physx::PxPairFlag::eNOTIFY_CONTACT_POINTS;
+	if ((filterData0.word3 | filterData1.word3) & ESHAPEFLAGS_ContactCallback)
+		pairFlags = physx::PxPairFlag::eCONTACT_DEFAULT | physx::PxPairFlag::eNOTIFY_TOUCH_FOUND | physx::PxPairFlag::eNOTIFY_TOUCH_PERSISTS | physx::PxPairFlag::eNOTIFY_CONTACT_POINTS;
+	else pairFlags = physx::PxPairFlag::eCONTACT_DEFAULT;
+	if ((filterData0.word3 | filterData1.word3) & ESHAPEFLAGS_ContactModify)
+		pairFlags |= physx::PxPairFlag::eMODIFY_CONTACTS;
 	return physx::PxFilterFlag::eDEFAULT;
 }
 
@@ -282,7 +345,7 @@ FPhysXScene::FPhysXScene(ULevel* L, UBOOL bMultiThread)
 {
 	guard(FPhysXScene::FPhysXScene);
 	FINISH_PHYSX_THREAD;
-	debugf(NAME_PhysX, TEXT("New PhysX scene %p - %ls"), this, L->GetFullName());
+//	debugfSlow(TEXT("New PhysX scene %016lx - %ls"), this, L->GetFullName());
 	++NumScenes;
 	physx::PxSceneDesc Desc(UPhysXPhysics::physXScene->getTolerancesScale());
 	Desc.cpuDispatcher = UPhysXPhysics::CPUDistpatcher;
@@ -316,13 +379,15 @@ FPhysXScene::FPhysXScene(ULevel* L, UBOOL bMultiThread)
 
 		static UESimulatedCallback UECallback;
 		pxScene->setSimulationEventCallback(&UECallback);
+		static UEContactModify UEContactCallback;
+		pxScene->setContactModifyCallback(&UEContactCallback);
 	}
 	unguard;
 }
 void FPhysXScene::ShutDownScene()
 {
 	guard(FPhysXScene::ShutDownScene);
-	debugf(NAME_PhysX, TEXT("End PhysX scene %p - %ls"), this, GetNameSafe());
+//	debugfSlow(TEXT("End PhysX scene %016lx - %ls"), this, GetNameSafe());
 #if PHYSX_MULTITHREAD
 	if (ThreadProc)
 		ThreadProc->Destroy();
@@ -418,7 +483,7 @@ void FPhysXActorBase::pxSetScene(void* rb, PX_SceneBase* NewScene)
 constexpr FLOAT MAX_SIM_DELTA = 1.f / 40.f;
 constexpr FLOAT MIN_SIM_DELTA = 1.f / 80.f;
 
-inline void RunSubstep(FPhysXScene* S, FLOAT DeltaTime)
+static void RunSubstep(FPhysXScene* S, FLOAT DeltaTime)
 {
 	guard_nofunc;
 	{
@@ -476,7 +541,7 @@ void FPhysXSceneWork::Main()
 {
 	guard(FPhysXSceneWork::Main);
 	RunSubstep(Scene, DeltaTime);
-	unguard;
+	unguardf((TEXT("(%p)"), Scene));
 }
 #endif
 
@@ -546,7 +611,8 @@ void FPhysXScene::TickScene(FLOAT DeltaTime)
 		}
 		FLOAT SceneDelta = Min(DeltaTime + SkippedDelta, 0.5f);
 		SkippedDelta = 0.f;
-		ThreadProc = new FPhysXSceneWork(&GPhysXThread, this, SceneDelta);
+		ThreadProc = new FPhysXSceneWork(this, SceneDelta);
+		ThreadProc->StartWorking(GPhysXThread);
 	}
 	else
 #endif

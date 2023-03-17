@@ -16,40 +16,40 @@
 #define AUTOGENERATE_FUNCTION(cls,idx,name)
 #endif
 
-AUTOGENERATE_NAME(PostNetNotify)
-AUTOGENERATE_NAME(NotifyNewParticle)
 AUTOGENERATE_NAME(GetParticleProps)
+AUTOGENERATE_NAME(ModifyCameraLoc)
+AUTOGENERATE_NAME(NotifyNewParticle)
+AUTOGENERATE_NAME(OnRopeBreak)
 AUTOGENERATE_NAME(ParticleWallHit)
 AUTOGENERATE_NAME(ParticleZoneHit)
-AUTOGENERATE_NAME(ModifyCameraLoc)
+AUTOGENERATE_NAME(PostNetNotify)
 
 #ifndef NAMES_ONLY
 
-enum EHitEventType
+enum EBeamTargetType : BYTE
 {
-	HIT_DoNothing,
-	HIT_Destroy,
-	HIT_StopMovement,
-	HIT_Bounce,
-	HIT_Script,
-	HIT_MAX,
+	BEAM_Velocity,
+	BEAM_BeamActor,
+	BEAM_Offset,
+	BEAM_OffsetAsAbsolute,
+	BEAM_MAX,
 };
-enum EWeatherAreaType
+enum EEmitterPartCol : BYTE
 {
-	EWA_Box,
-	EWA_Zone,
-	EWA_Brush,
-	EWA_MAX,
+	ECT_HitNothing,
+	ECT_HitWalls,
+	ECT_HitActors,
+	ECT_HitProjTargets,
+	ECT_MAX,
 };
-enum EFallingType
+enum EEmitterTriggerType : BYTE
 {
-	EWF_Rain,
-	EWF_Snow,
-	EWF_Dust,
-	EWF_Neighter,
-	EWF_MAX,
+	ETR_ToggleDisabled,
+	ETR_ResetEmitter,
+	ETR_SpawnParticles,
+	ETR_MAX,
 };
-enum ESpawnPosType
+enum ESpawnPosType : BYTE
 {
 	SP_Box,
 	SP_Sphere,
@@ -58,22 +58,7 @@ enum ESpawnPosType
 	SP_BoxCylinder,
 	SP_MAX,
 };
-enum EEmitterTriggerType
-{
-	ETR_ToggleDisabled,
-	ETR_ResetEmitter,
-	ETR_SpawnParticles,
-	ETR_MAX,
-};
-enum EEmitterPartCol
-{
-	ECT_HitNothing,
-	ECT_HitWalls,
-	ECT_HitActors,
-	ECT_HitProjTargets,
-	ECT_MAX,
-};
-enum ESpriteAnimType
+enum ESpriteAnimType : BYTE
 {
 	SAN_None,
 	SAN_PlayOnce,
@@ -81,13 +66,23 @@ enum ESpriteAnimType
 	SAN_LoopAnim,
 	SAN_MAX,
 };
-enum ETrailType
+enum EEmPartRotType : BYTE
 {
-	TRAIL_Sheet,
-	TRAIL_DoubleSheet,
-	TRAIL_MAX,
+	MEP_DesiredRot,
+	MEP_FacingCamera,
+	MEP_YawingToCamera,
+	MEP_MAX,
 };
-enum ESprPartRotType
+enum EHitEventType : BYTE
+{
+	HIT_DoNothing,
+	HIT_Destroy,
+	HIT_StopMovement,
+	HIT_Bounce,
+	HIT_Script,
+	HIT_MAX,
+};
+enum ESprPartRotType : BYTE
 {
 	SPR_DesiredRot,
 	SPR_RelFacingVelocity,
@@ -96,31 +91,64 @@ enum ESprPartRotType
 	SPR_AbsFacingNormal,
 	SPR_MAX,
 };
-enum EEmPartRotType
+enum ETrailType : BYTE
 {
-	MEP_DesiredRot,
-	MEP_FacingCamera,
-	MEP_YawingToCamera,
-	MEP_MAX,
+	TRAIL_Sheet,
+	TRAIL_DoubleSheet,
+	TRAIL_MAX,
 };
-enum EBeamTargetType
+enum EFallingType : BYTE
 {
-	BEAM_Velocity,
-	BEAM_BeamActor,
-	BEAM_Offset,
-	BEAM_OffsetAsAbsolute,
-	BEAM_MAX,
+	EWF_Rain,
+	EWF_Snow,
+	EWF_Dust,
+	EWF_Neighter,
+	EWF_MAX,
+};
+enum EWeatherAreaType : BYTE
+{
+	EWA_Box,
+	EWA_Zone,
+	EWA_Brush,
+	EWA_MAX,
 };
 
-struct FIntRange
+struct FFBeamTargetPoint
 {
-	INT Min GCC_PACK(INT_ALIGNMENT);
-	INT Max;
-
-	inline INT GetValue() const
-	{
-		return (Min==Max ? Min : Min+(appRand() % (Max-Min)));
-	}
+	class AActor* TargetActor GCC_PACK(INT_ALIGNMENT);
+	FVector Offset;
+};
+struct FColorScaleRangeType
+{
+	FLOAT Time GCC_PACK(INT_ALIGNMENT);
+	FVector ColorScaling;
+};
+struct FRevolveScaleType
+{
+	FVector RevolutionScale GCC_PACK(INT_ALIGNMENT);
+	FLOAT Time;
+};
+struct FScaleRangeType
+{
+	FLOAT DrawScaling GCC_PACK(INT_ALIGNMENT);
+	FLOAT Time;
+};
+struct FSpeed3DType
+{
+	FVector VelocityScale GCC_PACK(INT_ALIGNMENT);
+	FLOAT Time;
+};
+struct FSpeedRangeType
+{
+	FLOAT VelocityScale GCC_PACK(INT_ALIGNMENT);
+	FLOAT Time;
+};
+struct FAnimationType
+{
+	FName AnimSeq GCC_PACK(INT_ALIGNMENT);
+	FLOAT Frame;
+	FLOAT Rate;
+	BITFIELD bAnimLoop:1 GCC_PACK(INT_ALIGNMENT);
 };
 struct FByteRange
 {
@@ -142,15 +170,14 @@ struct FFloatRange
 		return (Min==Max ? Min : Min+(Max-Min)*appFrand());
 	}
 };
-struct FRangeVector
+struct FIntRange
 {
-	FFloatRange X GCC_PACK(INT_ALIGNMENT);
-	FFloatRange Y;
-	FFloatRange Z;
+	INT Min GCC_PACK(INT_ALIGNMENT);
+	INT Max;
 
-	inline FVector GetValue() const
+	inline INT GetValue() const
 	{
-		return FVector(X.GetValue(), Y.GetValue(), Z.GetValue());
+		return (Min==Max ? Min : Min+(appRand() % (Max-Min)));
 	}
 };
 struct FParticleSndType
@@ -164,99 +191,29 @@ struct FParticleSndType
 	void PlaySoundEffect( const FVector &Location, ULevel* Level ) const;
 	void InitSoundList();
 };
-struct FSpeedRangeType
+struct FRangeVector
 {
-	FLOAT VelocityScale GCC_PACK(INT_ALIGNMENT);
-	FLOAT Time;
+	FFloatRange X GCC_PACK(INT_ALIGNMENT);
+	FFloatRange Y;
+	FFloatRange Z;
+
+	inline FVector GetValue() const
+	{
+		return FVector(X.GetValue(), Y.GetValue(), Z.GetValue());
+	}
 };
-struct FSpeed3DType
+struct FRopePiece
 {
-	FVector VelocityScale GCC_PACK(INT_ALIGNMENT);
-	FLOAT Time;
-};
-struct FRevolveScaleType
-{
-	FVector RevolutionScale GCC_PACK(INT_ALIGNMENT);
-	FLOAT Time;
-};
-struct FScaleRangeType
-{
-	FLOAT DrawScaling GCC_PACK(INT_ALIGNMENT);
-	FLOAT Time;
-};
-struct FColorScaleRangeType
-{
-	FLOAT Time GCC_PACK(INT_ALIGNMENT);
-	FVector ColorScaling;
-};
-struct FAnimationType
-{
-	FName AnimSeq GCC_PACK(INT_ALIGNMENT);
-	FLOAT Frame;
-	FLOAT Rate;
-	BITFIELD bAnimLoop:1 GCC_PACK(INT_ALIGNMENT);
-};
-struct FFBeamTargetPoint
-{
-	class AActor* TargetActor GCC_PACK(INT_ALIGNMENT);
-	FVector Offset;
+	FVector Pos GCC_PACK(INT_ALIGNMENT);
+	FVector Velocity;
+	FRotator Dir;
 };
 
-class EMITTER_API AXRainRestrictionVolume : public AVolume
+class EMITTER_API AEmitterRC : public AActor
 {
 public:
-	TArrayNoInit<class AXWeatherEmitter*> Emitters GCC_PACK(INT_ALIGNMENT);
-	FVector BoundsMin;
-	FVector BoundsMax;
-	FBoundingBox RainBounds;
-	BITFIELD bBoundsDirty:1 GCC_PACK(INT_ALIGNMENT);
-	DECLARE_CLASS(AXRainRestrictionVolume,AVolume,0,Emitter)
-	#include "AXRainRestrictionVolume.h"
-};
-
-class EMITTER_API AEmitterGarbageCollector : public AInfo
-{
-public:
-	UINT CleanUpTime GCC_PACK(INT_ALIGNMENT);
-	TArray<class FParticlesDataBase*>* GarbagePtr;
-	DECLARE_CLASS(AEmitterGarbageCollector,AInfo,CLASS_Transient,Emitter)
-	#include "AEmitterGarbageCollector.h"
-};
-
-class EMITTER_API AXRopeDeco : public ADecoration
-{
-public:
-	UINT LastUpdateFrame GCC_PACK(INT_ALIGNMENT);
-	FLOAT RopeThickness;
-	FLOAT TexVertScaling;
-	FLOAT RopeLength;
-	class AActor* RopeStartActor;
-	class AActor* RopeEndActor;
-	class UPXJ_BaseJoint* RopeJoint;
-	FName BreakEvent;
-	class UClass* BreakEffect;
-	TArrayNoInit<class AActor*> MidPointActors;
-	TArrayNoInit<FVector> MidPoints;
-	TArrayNoInit<FVector> RenderPoints;
-	FVector RopeEndOffset;
-	class URopeMesh* RopeMeshPtr;
-	BYTE NumSegments;
-	BYTE RopeBreakIndex;
-	BITFIELD bHasLooseStart:1 GCC_PACK(INT_ALIGNMENT);
-	BITFIELD bHasLooseEnd:1;
-	DECLARE_FUNCTION(execSetEndLocation);
-	DECLARE_FUNCTION(execSetStartLocation);
-	DECLARE_FUNCTION(execResetRope);
-	DECLARE_CLASS(AXRopeDeco,ADecoration,0,Emitter)
-	#include "AXRopeDeco.h"
-};
-
-class EMITTER_API ADistantLightActor : public ALight
-{
-public:
-	FLOAT NewLightRadius GCC_PACK(INT_ALIGNMENT);
-	DECLARE_CLASS(ADistantLightActor,ALight,0,Emitter)
-	#include "ADistantLightActor.h"
+	DECLARE_CLASS(AEmitterRC,AActor,CLASS_Abstract,Emitter)
+	NO_DEFAULT_CONSTRUCTOR(AEmitterRC)
 };
 
 class EMITTER_API AXParticleEmitter : public AActor
@@ -264,6 +221,7 @@ class EMITTER_API AXParticleEmitter : public AActor
 public:
 	INT ActiveCount GCC_PACK(INT_ALIGNMENT);
 	UINT LastUpdateTime;
+	FLOAT EmitterLifeSpan;
 	class AXParticleEmitter* ParentEmitter;
 	class AXParticleEmitter* CombinerList;
 	class AXParticleEmitter* TransientEmitters;
@@ -321,50 +279,6 @@ public:
 	#include "AXParticleEmitter.h"
 };
 
-class EMITTER_API AXWeatherEmitter : public AXParticleEmitter
-{
-public:
-	INT ParticleCount GCC_PACK(INT_ALIGNMENT);
-	FLOAT NextParticleTime;
-	FLOAT SpawnInterval;
-	FLOAT WallHitMinZ;
-	class UMesh* SheetModel;
-	class AVolume* RainVolume;
-	FName WallHitEmitter;
-	FName RainVolumeTag;
-	FName WaterHitEmitter;
-	TArrayNoInit<class AXRainRestrictionVolume*> NoRainBounds;
-	TArrayNoInit<class AXEmitter*> WallHitEmitters;
-	TArrayNoInit<class AXEmitter*> WaterHitEmitters;
-	TArrayNoInit<class UTexture*> PartTextures;
-	FVector LastCamPosition;
-	FVector VecArea[2];
-	FCoords CachedCoords;
-	FCoords TransfrmCoords;
-	FRangeVector Position;
-	FRangeVector AppearArea;
-	FRangeVector ParticlesColor;
-	FFloatRange Lifetime;
-	FFloatRange speed;
-	FFloatRange Size;
-	FFloatRange FadeOutDistance;
-	FRainAreaTree* RainTree;
-	BYTE WallHitEvent;
-	BYTE WaterHitEvent;
-	BYTE AppearAreaType;
-	BYTE WeatherType;
-	BYTE PartStyle;
-	BITFIELD bUseAreaSpawns:1 GCC_PACK(INT_ALIGNMENT);
-	BITFIELD bParticleColorEnabled:1;
-	BITFIELD bIsEnabled:1;
-	BITFIELD bBoundsDirty:1;
-	DECLARE_FUNCTION(execSetRainVolume);
-	DECLARE_FUNCTION(execRemoveNoRainBounds);
-	DECLARE_FUNCTION(execAddNoRainBounds);
-	DECLARE_CLASS(AXWeatherEmitter,AXParticleEmitter,CLASS_Abstract,Emitter)
-	#include "AXWeatherEmitter.h"
-};
-
 class EMITTER_API AXEmitter : public AXParticleEmitter
 {
 public:
@@ -415,6 +329,7 @@ public:
 	TArrayNoInit<class AXEmitter*> KillCombiner;
 	TArrayNoInit<class AXEmitter*> WallHitCombiner;
 	TArrayNoInit<class AXEmitter*> LifeTimeCombiner;
+	TArrayNoInit<class AXEmitter*> IdleCombiner;
 	TArrayNoInit<FScaleRangeType> TimeScale;
 	TArrayNoInit<FSpeed3DType> TimeDrawScale3D;
 	TArrayNoInit<FSpeedRangeType> SpeedScale;
@@ -426,6 +341,7 @@ public:
 	FBoundingBox RendBoundingBox;
 	FFloatRange LifetimeRange;
 	FFloatRange AutoResetTime;
+	FFloatRange StartupDelay;
 	FRangeVector RevolutionOffset;
 	FRangeVector RevolutionsPerSec;
 	FVector RevolutionOffsetUnAxis;
@@ -500,34 +416,26 @@ public:
 	#include "AXEmitter.h"
 };
 
-class EMITTER_API AXTrailEmitter : public AXEmitter
+class EMITTER_API AXBeamEmitter : public AXEmitter
 {
 public:
-	FLOAT TrailTreshold GCC_PACK(INT_ALIGNMENT);
-	FLOAT MaxTrailLength;
+	FLOAT NoiseSwapTime GCC_PACK(INT_ALIGNMENT);
 	FLOAT TextureUV[4];
-	FVector SheetUpdir;
-	BYTE TrailType;
-	BITFIELD bSmoothEntryPoint:1 GCC_PACK(INT_ALIGNMENT);
-	BITFIELD bDynamicParticleCount:1;
-	BITFIELD bTexContinous:1;
-	BITFIELD bSheetRelativeToRotation:1;
-	BITFIELD bFadeByOwnerParticle:1;
-	DECLARE_CLASS(AXTrailEmitter,AXEmitter,CLASS_Abstract,Emitter)
-	#include "AXTrailEmitter.h"
-};
-
-class EMITTER_API AXSpriteEmitter : public AXEmitter
-{
-public:
-	FLOAT RotateByVelocityScale GCC_PACK(INT_ALIGNMENT);
-	class UMesh* SheetModel;
-	FRangeVector RotationsPerSec;
-	FRangeVector InitialRot;
-	FVector RotNormal;
-	BYTE ParticleRotation;
-	DECLARE_CLASS(AXSpriteEmitter,AXEmitter,CLASS_Abstract,Emitter)
-	#include "AXSpriteEmitter.h"
+	FLOAT TurnRate;
+	class UTexture* StartTexture;
+	class UTexture* EndTexture;
+	TArrayNoInit<FFBeamTargetPoint> BeamTarget;
+	TArrayNoInit<FScaleRangeType> NoiseTimeScale;
+	TArrayNoInit<FLOAT> BeamPointScaling;
+	FRangeVector NoiseRange;
+	class UBeamMesh* RenderDataModel;
+	BYTE BeamTargetType;
+	BYTE Segments;
+	BITFIELD bDynamicNoise:1 GCC_PACK(INT_ALIGNMENT);
+	BITFIELD bDoBeamNoise:1;
+	BITFIELD bEndPointFixed:1;
+	DECLARE_CLASS(AXBeamEmitter,AXEmitter,CLASS_Abstract,Emitter)
+	#include "AXBeamEmitter.h"
 };
 
 class EMITTER_API AXMeshEmitter : public AXEmitter
@@ -554,26 +462,78 @@ public:
 	#include "AXMeshEmitter.h"
 };
 
-class EMITTER_API AXBeamEmitter : public AXEmitter
+class EMITTER_API AXSpriteEmitter : public AXEmitter
 {
 public:
-	FLOAT NoiseSwapTime GCC_PACK(INT_ALIGNMENT);
+	FLOAT RotateByVelocityScale GCC_PACK(INT_ALIGNMENT);
+	class UMesh* SheetModel;
+	FRangeVector RotationsPerSec;
+	FRangeVector InitialRot;
+	FVector RotNormal;
+	BYTE ParticleRotation;
+	DECLARE_CLASS(AXSpriteEmitter,AXEmitter,CLASS_Abstract,Emitter)
+	#include "AXSpriteEmitter.h"
+};
+
+class EMITTER_API AXTrailEmitter : public AXEmitter
+{
+public:
+	FLOAT TrailTreshold GCC_PACK(INT_ALIGNMENT);
+	FLOAT MaxTrailLength;
 	FLOAT TextureUV[4];
-	FLOAT TurnRate;
-	class UTexture* StartTexture;
-	class UTexture* EndTexture;
-	TArrayNoInit<FFBeamTargetPoint> BeamTarget;
-	TArrayNoInit<FScaleRangeType> NoiseTimeScale;
-	TArrayNoInit<FLOAT> BeamPointScaling;
-	FRangeVector NoiseRange;
-	class UBeamMesh* RenderDataModel;
-	BYTE BeamTargetType;
-	BYTE Segments;
-	BITFIELD bDynamicNoise:1 GCC_PACK(INT_ALIGNMENT);
-	BITFIELD bDoBeamNoise:1;
-	BITFIELD bEndPointFixed:1;
-	DECLARE_CLASS(AXBeamEmitter,AXEmitter,CLASS_Abstract,Emitter)
-	#include "AXBeamEmitter.h"
+	FVector SheetUpdir;
+	BYTE TrailType;
+	BITFIELD bSmoothEntryPoint:1 GCC_PACK(INT_ALIGNMENT);
+	BITFIELD bDynamicParticleCount:1;
+	BITFIELD bTexContinous:1;
+	BITFIELD bSheetRelativeToRotation:1;
+	BITFIELD bFadeByOwnerParticle:1;
+	DECLARE_CLASS(AXTrailEmitter,AXEmitter,CLASS_Abstract,Emitter)
+	#include "AXTrailEmitter.h"
+};
+
+class EMITTER_API AXWeatherEmitter : public AXParticleEmitter
+{
+public:
+	INT ParticleCount GCC_PACK(INT_ALIGNMENT);
+	FLOAT NextParticleTime;
+	FLOAT SpawnInterval;
+	FLOAT WallHitMinZ;
+	class UMesh* SheetModel;
+	class AVolume* RainVolume;
+	FName WallHitEmitter;
+	FName RainVolumeTag;
+	FName WaterHitEmitter;
+	TArrayNoInit<class AXRainRestrictionVolume*> NoRainBounds;
+	TArrayNoInit<class AXEmitter*> WallHitEmitters;
+	TArrayNoInit<class AXEmitter*> WaterHitEmitters;
+	TArrayNoInit<class UTexture*> PartTextures;
+	FVector LastCamPosition;
+	FVector VecArea[2];
+	FCoords CachedCoords;
+	FCoords TransfrmCoords;
+	FRangeVector Position;
+	FRangeVector AppearArea;
+	FRangeVector ParticlesColor;
+	FFloatRange Lifetime;
+	FFloatRange Speed;
+	FFloatRange Size;
+	FFloatRange FadeOutDistance;
+	FRainAreaTree* RainTree;
+	BYTE WallHitEvent;
+	BYTE WaterHitEvent;
+	BYTE AppearAreaType;
+	BYTE WeatherType;
+	BYTE PartStyle;
+	BITFIELD bUseAreaSpawns:1 GCC_PACK(INT_ALIGNMENT);
+	BITFIELD bParticleColorEnabled:1;
+	BITFIELD bIsEnabled:1;
+	BITFIELD bBoundsDirty:1;
+	DECLARE_FUNCTION(execSetRainVolume);
+	DECLARE_FUNCTION(execRemoveNoRainBounds);
+	DECLARE_FUNCTION(execAddNoRainBounds);
+	DECLARE_CLASS(AXWeatherEmitter,AXParticleEmitter,CLASS_Abstract,Emitter)
+	#include "AXWeatherEmitter.h"
 };
 
 class EMITTER_API AXParticleForces : public AActor
@@ -589,14 +549,12 @@ public:
 	#include "AXParticleForces.h"
 };
 
-class EMITTER_API AVelocityForce : public AXParticleForces
+class EMITTER_API AKillParticleForce : public AXParticleForces
 {
 public:
-	FVector VelocityToAdd GCC_PACK(INT_ALIGNMENT);
-	BITFIELD bChangeAcceleration:1 GCC_PACK(INT_ALIGNMENT);
-	BITFIELD bInstantChange:1;
-	DECLARE_CLASS(AVelocityForce,AXParticleForces,0,Emitter)
-	#include "AVelocityForce.h"
+	FLOAT LifeTimeDrainAmount GCC_PACK(INT_ALIGNMENT);
+	DECLARE_CLASS(AKillParticleForce,AXParticleForces,CLASS_ClientOnly,Emitter)
+	#include "AKillParticleForce.h"
 };
 
 class EMITTER_API AParticleConcentrateForce : public AXParticleForces
@@ -607,30 +565,89 @@ public:
 	FVector CenterPointOffset;
 	BITFIELD bSetsAcceleration:1 GCC_PACK(INT_ALIGNMENT);
 	BITFIELD bActorDistanceSuckIn:1;
-	DECLARE_CLASS(AParticleConcentrateForce,AXParticleForces,0,Emitter)
+	DECLARE_CLASS(AParticleConcentrateForce,AXParticleForces,CLASS_ClientOnly,Emitter)
 	#include "AParticleConcentrateForce.h"
 };
 
-class EMITTER_API AKillParticleForce : public AXParticleForces
+class EMITTER_API AVelocityForce : public AXParticleForces
 {
 public:
-	FLOAT LifeTimeDrainAmount GCC_PACK(INT_ALIGNMENT);
-	DECLARE_CLASS(AKillParticleForce,AXParticleForces,0,Emitter)
-	#include "AKillParticleForce.h"
+	FVector VelocityToAdd GCC_PACK(INT_ALIGNMENT);
+	BITFIELD bChangeAcceleration:1 GCC_PACK(INT_ALIGNMENT);
+	BITFIELD bInstantChange:1;
+	DECLARE_CLASS(AVelocityForce,AXParticleForces,CLASS_ClientOnly,Emitter)
+	#include "AVelocityForce.h"
 };
 
-class EMITTER_API AEmitterRC : public AActor
+class EMITTER_API AXRainRestrictionVolume : public AVolume
 {
 public:
-	DECLARE_CLASS(AEmitterRC,AActor,CLASS_Abstract,Emitter)
-	NO_DEFAULT_CONSTRUCTOR(AEmitterRC)
+	TArrayNoInit<class AXWeatherEmitter*> Emitters GCC_PACK(INT_ALIGNMENT);
+	FVector BoundsMin;
+	FVector BoundsMax;
+	FBoundingBox RainBounds;
+	BITFIELD bBoundsDirty:1 GCC_PACK(INT_ALIGNMENT);
+	DECLARE_CLASS(AXRainRestrictionVolume,AVolume,0,Emitter)
+	#include "AXRainRestrictionVolume.h"
 };
 
-class EMITTER_API UEmitterRendering : public URenderIterator
+class EMITTER_API AXRopeDeco : public ADecoration
 {
 public:
-	DECLARE_CLASS(UEmitterRendering,URenderIterator,CLASS_Transient,Emitter)
-	#include "UEmitterRendering.h"
+	UINT LastUpdateFrame GCC_PACK(INT_ALIGNMENT);
+	FLOAT WindStrength;
+	FLOAT WindOscalliationRate;
+	FLOAT WindAmptitude;
+	FLOAT WindRandDir;
+	FLOAT RopeThickness;
+	FLOAT TexVertScaling;
+	FLOAT RopeLoseness;
+	FLOAT RopeLength;
+	class AActor* RopeStartActor;
+	class AActor* RopeEndActor;
+	class UPXJ_BaseJoint* RopeJointStart;
+	class UPXJ_BaseJoint* RopeJointEnd;
+	class USound* BreakSound;
+	class UClass* BreakEffect;
+	TArrayNoInit<class AActor*> MidPointActors;
+	TArrayNoInit<FVector> MidPoints;
+	TArrayNoInit<FVector> RenderPoints;
+	TArrayNoInit<FRopePiece> PiecePoints;
+	FVector WindDirection;
+	FVector RopeEndOffset;
+	class URopeMesh* RopeMeshPtr;
+	BYTE NumSegments;
+	BYTE RopeBrokenIndex;
+	BITFIELD bRopeWind:1 GCC_PACK(INT_ALIGNMENT);
+	BITFIELD bHasLooseStart:1;
+	BITFIELD bHasLooseEnd:1;
+	DECLARE_FUNCTION(execSetEndLocation);
+	DECLARE_FUNCTION(execSetStartLocation);
+	DECLARE_FUNCTION(execBreakRope);
+	DECLARE_FUNCTION(execResetRope);
+	void eventOnRopeBreak(BYTE Offset)
+	{
+		ProcessEvent(FindFunctionChecked(EMITTER_OnRopeBreak),&Offset);
+	}
+	DECLARE_CLASS(AXRopeDeco,ADecoration,0,Emitter)
+	#include "AXRopeDeco.h"
+};
+
+class EMITTER_API AEmitterGarbageCollector : public AInfo
+{
+public:
+	UINT CleanUpTime GCC_PACK(INT_ALIGNMENT);
+	TArray<class FParticlesDataBase*>* GarbagePtr;
+	DECLARE_CLASS(AEmitterGarbageCollector,AInfo,CLASS_Transient,Emitter)
+	#include "AEmitterGarbageCollector.h"
+};
+
+class EMITTER_API ADistantLightActor : public ALight
+{
+public:
+	FLOAT NewLightRadius GCC_PACK(INT_ALIGNMENT);
+	DECLARE_CLASS(ADistantLightActor,ALight,0,Emitter)
+	#include "ADistantLightActor.h"
 };
 
 class EMITTER_API UActorFaceCameraRI : public URenderIterator
@@ -658,20 +675,28 @@ public:
 	#include "UActorFaceCameraRI.h"
 };
 
+class EMITTER_API UEmitterRendering : public URenderIterator
+{
+public:
+	DECLARE_CLASS(UEmitterRendering,URenderIterator,CLASS_Transient,Emitter)
+	#include "UEmitterRendering.h"
+};
+
 #endif
 
-AUTOGENERATE_FUNCTION(AXWeatherEmitter,-1,execSetRainVolume);
-AUTOGENERATE_FUNCTION(AXWeatherEmitter,-1,execRemoveNoRainBounds);
-AUTOGENERATE_FUNCTION(AXWeatherEmitter,-1,execAddNoRainBounds);
-AUTOGENERATE_FUNCTION(AXParticleEmitter,1771,execAllParticles);
-AUTOGENERATE_FUNCTION(AXParticleEmitter,1770,execSetParticlesProps);
 AUTOGENERATE_FUNCTION(AXEmitter,1769,execEmTrigger);
 AUTOGENERATE_FUNCTION(AXEmitter,1768,execKill);
 AUTOGENERATE_FUNCTION(AXEmitter,1767,execSetMaxParticles);
 AUTOGENERATE_FUNCTION(AXEmitter,1766,execSpawnParticles);
+AUTOGENERATE_FUNCTION(AXParticleEmitter,1771,execAllParticles);
+AUTOGENERATE_FUNCTION(AXParticleEmitter,1770,execSetParticlesProps);
 AUTOGENERATE_FUNCTION(AXRopeDeco,-1,execSetEndLocation);
 AUTOGENERATE_FUNCTION(AXRopeDeco,-1,execSetStartLocation);
+AUTOGENERATE_FUNCTION(AXRopeDeco,-1,execBreakRope);
 AUTOGENERATE_FUNCTION(AXRopeDeco,-1,execResetRope);
+AUTOGENERATE_FUNCTION(AXWeatherEmitter,-1,execSetRainVolume);
+AUTOGENERATE_FUNCTION(AXWeatherEmitter,-1,execRemoveNoRainBounds);
+AUTOGENERATE_FUNCTION(AXWeatherEmitter,-1,execAddNoRainBounds);
 
 #ifndef NAMES_ONLY
 #undef AUTOGENERATE_NAME
@@ -683,55 +708,36 @@ AUTOGENERATE_FUNCTION(AXRopeDeco,-1,execResetRope);
 #endif
 
 #ifdef VERIFY_CLASS_SIZES
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,Emitters)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,BoundsMin)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,BoundsMax)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,RainBounds)
-VERIFY_CLASS_SIZE_NODIE(AXRainRestrictionVolume)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,ParticleCount)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,NextParticleTime)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,SpawnInterval)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitMinZ)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,SheetModel)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,RainVolume)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,RainVolumeTag)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WaterHitEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,NoRainBounds)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitEmitters)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WaterHitEmitters)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,PartTextures)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,LastCamPosition)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,VecArea)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,CachedCoords)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,TransfrmCoords)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Position)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,AppearArea)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,ParticlesColor)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Lifetime)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,speed)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Size)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,FadeOutDistance)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,RainTree)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitEvent)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WaterHitEvent)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,AppearAreaType)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WeatherType)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,PartStyle)
-VERIFY_CLASS_SIZE_NODIE(AXWeatherEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,ActiveCount)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,LastUpdateTime)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,ParentEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,CombinerList)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,TransientEmitters)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,PartPtr)
-VERIFY_CLASS_SIZE_NODIE(AXParticleEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,TrailTreshold)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,MaxTrailLength)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,TextureUV)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,SheetUpdir)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,TrailType)
-VERIFY_CLASS_SIZE_NODIE(AXTrailEmitter)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(U,ActorFaceCameraRI,RotationModifier)
+VERIFY_CLASS_SIZE_NODIE(UActorFaceCameraRI)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,DistantLightActor,NewLightRadius)
+VERIFY_CLASS_SIZE_NODIE(ADistantLightActor)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,EmitterGarbageCollector,CleanUpTime)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,EmitterGarbageCollector,GarbagePtr)
+VERIFY_CLASS_SIZE_NODIE(AEmitterGarbageCollector)
+VERIFY_CLASS_SIZE_NODIE(AEmitterRC)
+VERIFY_CLASS_SIZE_NODIE(UEmitterRendering)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,KillParticleForce,LifeTimeDrainAmount)
+VERIFY_CLASS_SIZE_NODIE(AKillParticleForce)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,ParticleConcentrateForce,DrainSpeed)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,ParticleConcentrateForce,MaxDistance)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,ParticleConcentrateForce,CenterPointOffset)
+VERIFY_CLASS_SIZE_NODIE(AParticleConcentrateForce)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,VelocityForce,VelocityToAdd)
+VERIFY_CLASS_SIZE_NODIE(AVelocityForce)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,NoiseSwapTime)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,TextureUV)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,TurnRate)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,StartTexture)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,EndTexture)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,BeamTarget)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,NoiseTimeScale)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,BeamPointScaling)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,NoiseRange)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,RenderDataModel)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,BeamTargetType)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,Segments)
+VERIFY_CLASS_SIZE_NODIE(AXBeamEmitter)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,MaxParticles)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,SingleIVert)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,NextParticleTime)
@@ -779,6 +785,7 @@ VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,SpawnCombiner)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,KillCombiner)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,WallHitCombiner)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,LifeTimeCombiner)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,IdleCombiner)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,TimeScale)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,TimeDrawScale3D)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,SpeedScale)
@@ -790,6 +797,7 @@ VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,OldSpawnPosition)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,RendBoundingBox)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,LifetimeRange)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,AutoResetTime)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,StartupDelay)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,RevolutionOffset)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,RevolutionsPerSec)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,RevolutionOffsetUnAxis)
@@ -825,13 +833,6 @@ VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,ParticleCollision)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,WallImpactAction)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XEmitter,WaterImpactAction)
 VERIFY_CLASS_SIZE_NODIE(AXEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,RotateByVelocityScale)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,SheetModel)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,RotationsPerSec)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,InitialRot)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,RotNormal)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,ParticleRotation)
-VERIFY_CLASS_SIZE_NODIE(AXSpriteEmitter)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XMeshEmitter,PartAnimRate)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XMeshEmitter,PartAnimFrameStart)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XMeshEmitter,ParticleMesh)
@@ -843,56 +844,91 @@ VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XMeshEmitter,RotationsPerSec)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XMeshEmitter,InitialRot)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XMeshEmitter,ParticleRotation)
 VERIFY_CLASS_SIZE_NODIE(AXMeshEmitter)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,EmitterGarbageCollector,CleanUpTime)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,EmitterGarbageCollector,GarbagePtr)
-VERIFY_CLASS_SIZE_NODIE(AEmitterGarbageCollector)
-VERIFY_CLASS_SIZE_NODIE(UEmitterRendering)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,LastUpdateFrame)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeThickness)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,TexVertScaling)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeLength)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeStartActor)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeEndActor)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeJoint)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,BreakEvent)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,BreakEffect)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,MidPointActors)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,MidPoints)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RenderPoints)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeEndOffset)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeMeshPtr)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,NumSegments)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeBreakIndex)
-VERIFY_CLASS_SIZE_NODIE(AXRopeDeco)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,VelocityForce,VelocityToAdd)
-VERIFY_CLASS_SIZE_NODIE(AVelocityForce)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,ActiveCount)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,LastUpdateTime)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,EmitterLifeSpan)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,ParentEmitter)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,CombinerList)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,TransientEmitters)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleEmitter,PartPtr)
+VERIFY_CLASS_SIZE_NODIE(AXParticleEmitter)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleForces,EffectingRadius)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleForces,OldTagName)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleForces,EffectingBox)
 VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XParticleForces,EffectPartLifeTime)
 VERIFY_CLASS_SIZE_NODIE(AXParticleForces)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,ParticleConcentrateForce,DrainSpeed)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,ParticleConcentrateForce,MaxDistance)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,ParticleConcentrateForce,CenterPointOffset)
-VERIFY_CLASS_SIZE_NODIE(AParticleConcentrateForce)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,KillParticleForce,LifeTimeDrainAmount)
-VERIFY_CLASS_SIZE_NODIE(AKillParticleForce)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,NoiseSwapTime)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,TextureUV)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,TurnRate)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,StartTexture)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,EndTexture)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,BeamTarget)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,NoiseTimeScale)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,BeamPointScaling)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,NoiseRange)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,RenderDataModel)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,BeamTargetType)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XBeamEmitter,Segments)
-VERIFY_CLASS_SIZE_NODIE(AXBeamEmitter)
-VERIFY_CLASS_SIZE_NODIE(AEmitterRC)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(U,ActorFaceCameraRI,RotationModifier)
-VERIFY_CLASS_SIZE_NODIE(UActorFaceCameraRI)
-VERIFY_CLASS_OFFSET_NODIE_SLOW(A,DistantLightActor,NewLightRadius)
-VERIFY_CLASS_SIZE_NODIE(ADistantLightActor)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,Emitters)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,BoundsMin)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,BoundsMax)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRainRestrictionVolume,RainBounds)
+VERIFY_CLASS_SIZE_NODIE(AXRainRestrictionVolume)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,LastUpdateFrame)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,WindStrength)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,WindOscalliationRate)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,WindAmptitude)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,WindRandDir)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeThickness)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,TexVertScaling)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeLoseness)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeLength)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeStartActor)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeEndActor)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeJointStart)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeJointEnd)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,BreakSound)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,BreakEffect)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,MidPointActors)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,MidPoints)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RenderPoints)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,PiecePoints)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,WindDirection)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeEndOffset)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeMeshPtr)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,NumSegments)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XRopeDeco,RopeBrokenIndex)
+VERIFY_CLASS_SIZE_NODIE(AXRopeDeco)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,RotateByVelocityScale)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,SheetModel)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,RotationsPerSec)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,InitialRot)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,RotNormal)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XSpriteEmitter,ParticleRotation)
+VERIFY_CLASS_SIZE_NODIE(AXSpriteEmitter)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,TrailTreshold)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,MaxTrailLength)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,TextureUV)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,SheetUpdir)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XTrailEmitter,TrailType)
+VERIFY_CLASS_SIZE_NODIE(AXTrailEmitter)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,ParticleCount)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,NextParticleTime)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,SpawnInterval)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitMinZ)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,SheetModel)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,RainVolume)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitEmitter)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,RainVolumeTag)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WaterHitEmitter)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,NoRainBounds)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitEmitters)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WaterHitEmitters)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,PartTextures)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,LastCamPosition)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,VecArea)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,CachedCoords)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,TransfrmCoords)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Position)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,AppearArea)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,ParticlesColor)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Lifetime)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Speed)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,Size)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,FadeOutDistance)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,RainTree)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WallHitEvent)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WaterHitEvent)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,AppearAreaType)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,WeatherType)
+VERIFY_CLASS_OFFSET_NODIE_SLOW(A,XWeatherEmitter,PartStyle)
+VERIFY_CLASS_SIZE_NODIE(AXWeatherEmitter)
 #endif // VERIFY_CLASS_SIZES

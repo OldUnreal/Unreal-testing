@@ -45,4 +45,5 @@ function bool ShouldRestrictMoverRetriggering()
 
 defaultproperties
 {
+	bDirectionalPushOff=true
 }

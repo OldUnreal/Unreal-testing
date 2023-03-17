@@ -5,6 +5,9 @@ class DevilFish extends ScriptedPawn;
 
 #exec OBJ LOAD FILE=Detail.utx
 
+#exec TEXTURE IMPORT NAME=Jfish1HD FILE=Models\shark.pcx GROUP="HD" DETAIL=Pock
+#exec TEXTURE IMPORT NAME=Jfish1 FILE=Models\shark_old.pcx GROUP=Skins DETAIL=Pock HD=Jfish1HD
+
 #exec MESH IMPORT MESH=fish ANIVFILE=Models\fish_a.3d DATAFILE=Models\fish_d.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=fish X=0 Y=30 Z=0 YAW=64 PITCH=0 ROLL=-64
 
@@ -21,7 +24,6 @@ class DevilFish extends ScriptedPawn;
 #exec MESH SEQUENCE MESH=fish SEQ=fighter	   STARTFRAME=0   NUMFRAMES=10
 #exec MESH SEQUENCE MESH=fish SEQ=takehit      STARTFRAME=36  NUMFRAMES=1
 
-#exec TEXTURE IMPORT NAME=Jfish1 FILE=Models\shark.pcx GROUP=Skins DETAIL=Pock
 #exec MESHMAP SCALE MESHMAP=fish X=0.085 Y=0.085 Z=0.17
 #exec MESHMAP SETTEXTURE MESHMAP=fish NUM=1 TEXTURE=Jfish1
 

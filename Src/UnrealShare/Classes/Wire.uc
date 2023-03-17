@@ -3,6 +3,9 @@
 //=============================================================================
 class Wire extends Decoration;
 
+#exec TEXTURE IMPORT NAME=JWire1HD FILE=Models\wire.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=JWire1 FILE=Models\wire_old.pcx GROUP="Skins" HD=JWire1HD
+
 #exec MESH IMPORT MESH=WireM ANIVFILE=Models\wire_a.3d DATAFILE=Models\wire_d.3d X=0 Y=0 Z=0 LODSTYLE=8 MLOD=1
 
 // 64 Vertices, 112 Triangles
@@ -13,7 +16,6 @@ class Wire extends Decoration;
 #exec MESH SEQUENCE MESH=WireM SEQ=Still   STARTFRAME=24 NUMFRAMES=2 RATE=3
 #exec MESH SEQUENCE MESH=WireM SEQ=Still2  STARTFRAME=26 NUMFRAMES=1
 #exec MESH SEQUENCE MESH=WireM SEQ=Wiggle  STARTFRAME=27  NUMFRAMES=33
-#exec TEXTURE IMPORT NAME=JWire1 FILE=Models\wire.pcx GROUP="Skins"
 #exec OBJ LOAD FILE=Textures\fireeffect25.utx PACKAGE=UnrealShare.Effect25
 #exec MESHMAP SCALE MESHMAP=WireM X=0.13 Y=0.13 Z=0.26
 #exec MESHMAP SETTEXTURE MESHMAP=WireM NUM=1 TEXTURE=JWire1 TLOD=10

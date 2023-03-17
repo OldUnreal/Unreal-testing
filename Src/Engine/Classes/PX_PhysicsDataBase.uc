@@ -1,9 +1,10 @@
 //=============================================================================
 // PX_PhysicsDataBase: Additional RigidBody physics data for an actor.
 //=============================================================================
-Class PX_PhysicsDataBase extends Object
+Class PX_PhysicsDataBase extends PhysicsObject
 	native
-	abstract;
+	abstract
+	safereplace;
 
 var(Physics) editinline array<PXJ_BaseJoint> Joints; // Joints associated to this physics object.
 // NOTE: Joints are deleted when owner actor is destroyed.

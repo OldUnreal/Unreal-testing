@@ -1,5 +1,6 @@
 
 #include "PhysXPhysics.h"
+#include "UnRender.h"
 
 //==========================================================================================
 // Declarations
@@ -8,9 +9,11 @@ struct FPhysXArticulationBody : public PX_ArticulationList, public FListedPhysXA
 {
 	DECLARE_BASE_PX(PX_ArticulationList, RBTYPE_Articulation);
 
-	FVector Gravity;
+	physx::PxVec3 localGravity;
+	FVector ZoneVelocity;
+	FLOAT ZoneSpeed;
 
-	BITFIELD bAddedScene : 1, bHasGravity : 1;
+	BITFIELD bAddedScene : 1, bHasGravity : 1, bHasZoneVelocity : 1;
 
 	FPhysXArticulationBody(AActor* A, FPhysXScene* S, INT NumIterations);
 	~FPhysXArticulationBody() noexcept(false);
@@ -22,12 +25,27 @@ struct FPhysXArticulationBody : public PX_ArticulationList, public FListedPhysXA
 	void SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel);
 	void SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp);
 
+	inline physx::PxVec3 GetDesiredZoneSpeed(FLOAT MaxDelta, PhysXArtLinkType* rb) const
+	{
+		FLOAT CurSpeed = (PXVectorToUE(rb->getLinearVelocity()) | ZoneVelocity);
+		if (CurSpeed < ZoneSpeed)
+			return UEVectorToPX(ZoneVelocity * Min(MaxDelta, ZoneSpeed - CurSpeed));
+		return physx::PxVec3(physx::PxZero);
+	}
+
 	UBOOL IsSleeping();
 	void WakeUp();
 	void PutToSleep();
-	void SetGravity(const FVector& NewGrav);
+	void SetGravity(const FVector& NewGrav) override;
+	void SetConstVelocity(const FVector& NewVel) override;
 
 	void PhysicsTick(FLOAT DeltaTime);
+
+	void PhysicsDraw() override
+	{
+		DrawDebug();
+	}
+	void DrawDebug() override;
 
 	// Collision grouping
 	void SetCollisionFlags(DWORD Group, DWORD Flags);
@@ -58,6 +76,12 @@ struct FPhysXArticulationLink : public PX_ArticulationLink, public FPhysXActorBa
 
 	// Collision grouping
 	void SetCollisionFlags(DWORD Group, DWORD Flags);
+
+	void PhysicsDraw() override
+	{
+		DrawDebug();
+	}
+	void DrawDebug() override;
 };
 
 //==========================================================================================
@@ -69,13 +93,13 @@ struct FPhysXArticulationLink : public PX_ArticulationLink, public FPhysXActorBa
 PX_ArticulationList* FPhysXScene::CreateArticulation(AActor* Owner, INT NumIterations)
 {
 	guard(FPhysXScene::CreateArticulation);
-	return NewTagged(PHYS_X_NAME) FPhysXArticulationBody(Owner, this, NumIterations);
+	return new FPhysXArticulationBody(Owner, this, NumIterations);
 	unguard;
 }
 PX_ArticulationLink* FPhysXArticulationBody::CreateArticulationLink(const FArticulationProperties& Parms, const FVector& Pos, const FRotator& Rot)
 {
 	guard(FPhysXArticulationBody::CreateArticulationLink);
-	FPhysXArticulationLink* NewLink = NewTagged(PHYS_X_NAME) FPhysXArticulationLink(this, Parms, pxScene, Pos, Rot);
+	FPhysXArticulationLink* NewLink = new FPhysXArticulationLink(this, Parms, pxScene, Pos, Rot);
 	if (!NewLink->GetRbActor())
 	{
 		delete NewLink;
@@ -136,14 +160,19 @@ FPhysXArticulationBody::~FPhysXArticulationBody() noexcept(false)
 }
 void FPhysXArticulationBody::PhysicsTick(FLOAT DeltaTime)
 {
-	if (bHasGravity)
+	if (bHasGravity || bHasZoneVelocity)
 	{
 		// Don't accumulate forces in sleeping objects, else they explode when waking up
 		if (GET_BODY(rbActor)->isSleeping())
 			return;
 
 		for (PX_ArticulationLink* L = GetList(); L; L = L->GetListNext())
-			GET_LINK(L->GetRbActor())->addForce(UEVectorToPX(Gravity * DeltaTime), physx::PxForceMode::eVELOCITY_CHANGE, false);
+		{
+			if (bHasGravity)
+				GET_LINK(L->GetRbActor())->addForce(localGravity * DeltaTime, physx::PxForceMode::eVELOCITY_CHANGE, false);
+			if (bHasZoneVelocity)
+				GET_LINK(L->GetRbActor())->addForce(GetDesiredZoneSpeed(ZoneSpeed * 5.f * DeltaTime, GET_LINK(L->GetRbActor())), physx::PxForceMode::eVELOCITY_CHANGE, false);
+		}
 	}
 }
 UBOOL FPhysXArticulationBody::IsSleeping()
@@ -170,8 +199,20 @@ void FPhysXArticulationBody::PutToSleep()
 void FPhysXArticulationBody::SetGravity(const FVector& NewGrav)
 {
 	FINISH_PHYSX_THREAD;
-	Gravity = NewGrav;
+	rbGravity = NewGrav;
+	localGravity = UEVectorToPX(NewGrav);
 	bHasGravity = !NewGrav.IsZero();
+}
+void FPhysXArticulationBody::SetConstVelocity(const FVector& NewVel)
+{
+	FINISH_PHYSX_THREAD;
+	ZoneSpeed = NewVel.SizeSquared();
+	bHasZoneVelocity = (ZoneSpeed > 1.f);
+	if (bHasZoneVelocity)
+	{
+		ZoneSpeed = appSqrt(ZoneSpeed);
+		ZoneVelocity = NewVel / ZoneSpeed;
+	}
 }
 void FPhysXArticulationBody::SetCollisionFlags(DWORD Group, DWORD Flags)
 {
@@ -214,6 +255,18 @@ void FPhysXArticulationBody::SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp)
 	}
 	unguard;
 }
+void FPhysXArticulationBody::DrawDebug()
+{
+	guard(FPhysXArticulationBody::DrawDebug);
+	if (rbActor)
+	{
+		physx::PxBounds3 B = GET_BODY(rbActor)->getWorldBounds();
+		FDebugLineData::DrawBox(PXVectorToUE(B.minimum), PXVectorToUE(B.maximum), FPlane(0.5, 0, 0, 1));
+		for (PX_ArticulationLink* L = GetList(); L; L = L->GetListNext())
+			L->DrawDebug();
+	}
+	unguard;
+}
 
 //==========================================================================================
 // Articulation link
@@ -234,9 +287,8 @@ FPhysXArticulationLink::FPhysXArticulationLink(FPhysXArticulationBody* B, const 
 
 		// Init mass
 		FINISH_PHYSX_THREAD;
-		//physx::PxVec3 COM = VectToNX3v(Parms.COMOffset);
-		//physx::PxRigidBodyExt::updateMassAndInertia(*Link, Parms.Mass * UEMassToPX);
 		Link->setMass(Parms.Mass * UEMassToPX);
+		Link->setMassSpaceInertiaTensor(UENormalToPX(Parms.InertiaTensor * (Parms.Mass * UEMassToPX)));
 		Link->userData = NULL;
 
 		physx::PxArticulationJointReducedCoordinate* rcJoint = static_cast<physx::PxArticulationJointReducedCoordinate*>(Link->getInboundJoint());
@@ -391,4 +443,10 @@ void FPhysXArticulationLink::SetCollisionFlags(DWORD Group, DWORD Flags)
 {
 	if (rbActor)
 		FPhysXScene::SetActorCollisionFlags(GET_LINK(rbActor), Group, Flags);
+}
+void FPhysXArticulationLink::DrawDebug()
+{
+	guard(FPhysXArticulationLink::DrawDebug);
+	DrawRbShapes(*this, FPlane(0.2, 1, 0.2, 1));
+	unguard;
 }

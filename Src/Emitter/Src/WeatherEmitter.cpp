@@ -79,14 +79,14 @@ struct FRainNode
 
 		for (i = (Volume.Num() - 1); i >= 0; --i)
 		{
-			new FDebugLineData(Point, Volume(i)->Location, FPlane(1, 0, 0, 1), TRUE);
+			FDebugLineData::DrawLine(FDebugLineData::FLinePair(Point, Volume(i)->Location), FPlane(1, 0, 0, 1), TRUE);
 			FDebugLineData::DrawBox(Volume(i)->RainBounds.Min, Volume(i)->RainBounds.Max, FPlane(0, 0, 1, 1), TRUE);
 		}
 		if (Children)
 		{
 			for (i = 0; i < 8; ++i)
 			{
-				new FDebugLineData(Point, Children[i].Point, FPlane(1, 1, 1, 1), TRUE);
+				FDebugLineData::DrawLine(FDebugLineData::FLinePair(Point, Children[i].Point), FPlane(1, 1, 1, 1), TRUE);
 				Children[i].DrawDebug();
 			}
 		}
@@ -131,8 +131,9 @@ private:
 		else Volume.AddItem(V);
 	}
 };
-struct FRainAreaTree
+class FRainAreaTree
 {
+public:
 	AXWeatherEmitter* Emitter;
 	FRainNode* MainNode;
 	FVector RainAreaMin, RainAreaMax;
@@ -334,6 +335,7 @@ void AXWeatherEmitter::InitializeEmitter(AXParticleEmitter* Parent)
 		else A->Skin = NULL;
 		if (GIsEditor && !A->Skin)
 			A->Skin = GetDefault<AActor>()->Texture;
+		A->bAssimilated = (A->Skin != NULL);
 		A->Texture = A->Skin;
 		A->DrawScale = Size.GetValue();
 	}
@@ -599,7 +601,7 @@ UBOOL AXWeatherEmitter::SpawnParticle(UEmitterRendering* Render, const FVector& 
 	if (A->LightDataPtr)
 		A->LightDataPtr->UpdateFrame = GFrameNumber - 500; // Force to recompute lighting rather then fade from previous particle.
 	A->Pos = SpP;
-	A->Velocity = Rotation.Vector() * speed.GetValue();
+	A->Velocity = Rotation.Vector() * Speed.GetValue();
 	if( bUSModifyParticles )
 	{
 		eventGetParticleProps(A, A->Pos, A->Velocity, A->Rotation);

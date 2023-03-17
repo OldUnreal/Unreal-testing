@@ -216,27 +216,27 @@ simulated function SpawnPlant(int ChosenPlant, out int j)
 			RD=Rand(5);
 			switch (RD)
 			{
-			case 0: //45�
+			case 0: //45
 				NewRot=SpawnedVegetation.Rotation;
 				NewRot.Yaw=8192;
 				SpawnedVegetation.SetRotation(NewRot);
 				break;
-			case 1: //90�
+			case 1: //90
 				NewRot=SpawnedVegetation.Rotation;
 				NewRot.Yaw=16384;
 				SpawnedVegetation.SetRotation(NewRot);
 				break;
-			case 2: //180�
+			case 2: //180
 				NewRot=SpawnedVegetation.Rotation;
 				NewRot.Yaw=32768;
 				SpawnedVegetation.SetRotation(NewRot);
 				break;
-			case 3: //270�
+			case 3: //270
 				NewRot=SpawnedVegetation.Rotation;
 				NewRot.Yaw=49152;
 				SpawnedVegetation.SetRotation(NewRot);
 				break;
-			case 4: //360�
+			case 4: //360
 				NewRot=SpawnedVegetation.Rotation;
 				NewRot.Yaw=65536;
 				SpawnedVegetation.SetRotation(NewRot);

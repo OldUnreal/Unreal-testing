@@ -79,7 +79,7 @@ class Nali extends ScriptedPawn;
 #exec AUDIO IMPORT FILE="Sounds\Nali\sweat1na.wav" NAME="sweat1n" GROUP="Nali"
 #exec AUDIO IMPORT FILE="Sounds\Nali\levitF1.wav" NAME="pray1n" GROUP="Nali"
 #exec AUDIO IMPORT FILE="Sounds\Cow\walknc.wav" NAME="walkC" GROUP="Cow"
-#exec AUDIO IMPORT FILE="Sounds\Generic\teleprt27.wav" NAME="Teleport1" GROUP="Generic"
+//#exec AUDIO IMPORT FILE="Sounds\Generic\teleprt27.wav" NAME="Teleport1" GROUP="Generic"
 
 
 //====================================================================

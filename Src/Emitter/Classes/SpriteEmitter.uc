@@ -1,5 +1,6 @@
 // Placeable advanced sprite emitter
-Class SpriteEmitter extends XSpriteEmitter;
+Class SpriteEmitter extends XSpriteEmitter
+	clientonly;
 
 defaultproperties
 {

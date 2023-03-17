@@ -72,7 +72,11 @@ function TakeDamage( int Damage, Pawn instigatedBy, Vector hitlocation,
 		Velocity = vect(0,0,0);
 }
 
-
+function HitWall( vector HitNormal, actor HitWall )
+{
+	if( Base && Physics!=PHYS_Falling ) // 227k: Could be based on a Pawn or Mover and they moved into a wall, make em fall off...
+		SetPhysics(PHYS_Falling);
+}
 
 auto state Dying
 {

@@ -97,14 +97,66 @@ AActor* UEmitterRendering::GetActors()
 	STAT(FStatTimerScope Scope(GStatEmitter.UpdEmitTime));
 	AXParticleEmitter* A = reinterpret_cast<AXParticleEmitter*>(GetOuter());
 
+	if (!A->bFilterByVolume) // This is already handeled at earlier call from PrepareVolume
+	{
+		// Local variables.
+		if (!A || !A->ShouldUpdateEmitter(Frame))
+		{
+			A->LastUpdateTime = GFrameNumber;
+			return NULL;
+		}
+		if (A->bNotOnPortals && Frame->Recursion)
+			return NULL;
+
+		if (!A->bHasInitialized)
+		{
+			A->bHasInitialized = 1;
+			A->InitializeEmitter(A);
+			A->LastUpdateTime = GFrameNumber;
+		}
+
+		if ((A->LastUpdateTime != GFrameNumber) &&
+			(GIsEditor
+				? (Frame->Viewport && Frame->Viewport->IsRealtime())
+				: (!A->Level->Pauser.Len() && (A->bAlwaysTick || !A->Level->bPlayersOnly))
+				))
+		{
+			A->LastUpdateTime = GFrameNumber;
+			CamPos.Origin = Frame->Coords.Origin;
+			CamPos.XAxis = Frame->Coords.ZAxis;
+			CamPos.YAxis = Frame->Coords.XAxis;
+			CamPos.ZAxis = -Frame->Coords.YAxis;
+			const FLOAT DeltaTime = A->Level->LastDeltaTime;
+			A->UpdateEmitter(DeltaTime, this, FALSE);
+		}
+
+		if (!A->ShouldRenderEmitter(Frame))
+			return NULL;
+	}
+
+	AActor* Result = (Observer->ShowFlags & SHOW_InGameMode) ? nullptr : A;
+	Result = A->GetRenderList(Result);
+	A->Target = NULL; // Make sure owner emitter never references a particle (should always be on the end of list)!
+	return Result;
+	unguard;
+}
+
+UBOOL UEmitterRendering::PrepareVolume(FSceneNode* Camera)
+{
+	guard(UEmitterRendering::PrepareVolume);
+	STAT(FStatTimerScope Scope(GStatEmitter.UpdEmitTime));
+	AXParticleEmitter* A = reinterpret_cast<AXParticleEmitter*>(GetOuter());
+	Frame = Camera;
+	Observer = Camera->Viewport->Actor;
+
 	// Local variables.
-	if (!A || !A->ShouldUpdateEmitter(Frame))
+	if (!A || !A->ShouldUpdateEmitter(Camera))
 	{
 		A->LastUpdateTime = GFrameNumber;
-		return NULL;
+		return FALSE;
 	}
-	if (A->bNotOnPortals && Frame->Recursion)
-		return NULL;
+	if (A->bNotOnPortals && Camera->Recursion)
+		return FALSE;
 
 	if (!A->bHasInitialized)
 	{
@@ -115,26 +167,22 @@ AActor* UEmitterRendering::GetActors()
 
 	if ((A->LastUpdateTime != GFrameNumber) &&
 		(GIsEditor
-			? (Frame->Viewport && Frame->Viewport->IsRealtime())
+			? (Camera->Viewport && Camera->Viewport->IsRealtime())
 			: (!A->Level->Pauser.Len() && (A->bAlwaysTick || !A->Level->bPlayersOnly))
 			))
 	{
 		A->LastUpdateTime = GFrameNumber;
-		CamPos.Origin = Frame->Coords.Origin;
-		CamPos.XAxis = Frame->Coords.ZAxis;
-		CamPos.YAxis = Frame->Coords.XAxis;
-		CamPos.ZAxis = -Frame->Coords.YAxis;
+		CamPos.Origin = Camera->Coords.Origin;
+		CamPos.XAxis = Camera->Coords.ZAxis;
+		CamPos.YAxis = Camera->Coords.XAxis;
+		CamPos.ZAxis = -Camera->Coords.YAxis;
 		const FLOAT DeltaTime = A->Level->LastDeltaTime;
 		A->UpdateEmitter(DeltaTime, this, FALSE);
 	}
 
-	if (!A->ShouldRenderEmitter(Frame))
-		return NULL;
-
-	AActor* Result = (Observer->ShowFlags & SHOW_InGameMode) ? nullptr : A;
-	Result = A->GetRenderList(Result);
-	A->Target = NULL; // Make sure owner emitter never references a particle (should always be on the end of list)!
-	return Result;
+	if (!A->ShouldRenderEmitter(Camera))
+		return FALSE;
+	return TRUE;
 	unguard;
 }
 

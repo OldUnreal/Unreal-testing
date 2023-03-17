@@ -11,7 +11,7 @@ class HUD extends Actor
 
 var globalconfig int HudMode;
 var globalconfig int Crosshair;
-var globalconfig float HudScaler;
+var globalconfig float HudScaler, CrosshairScale;
 var() class<menu> MainMenuType;
 var() string HUDConfigWindowType;
 
@@ -95,4 +95,5 @@ defaultproperties
 	bHidden=True
 	RemoteRole=ROLE_SimulatedProxy
 	HudScaler=1
+	CrosshairScale=1
 }

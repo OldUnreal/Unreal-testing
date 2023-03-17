@@ -2,10 +2,8 @@
 // WaveTexture: Simple phongish water surface.
 // This is a built-in Unreal class and it shouldn't be modified.
 //=============================================================================
-
 class WaveTexture extends WaterTexture
 	native
-	noexport
 	runtimestatic;
 
 var(WaterPaint)			byte   BumpMapLight;

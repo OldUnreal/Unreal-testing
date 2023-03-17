@@ -3,6 +3,46 @@
 //=============================================================================
 class Spinner expands ScriptedPawn;
 
+#exec MESH IMPORT MESH=Spinner ANIVFILE=MODELS\Spinner\Spider_a.3d DATAFILE=MODELS\Spinner\Spider_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=Spinner X=0 Y=0 Z=112 YAW=-64
+
+#exec MESH SEQUENCE MESH=Spinner SEQ=All      STARTFRAME=0 NUMFRAMES=183
+#exec MESH SEQUENCE MESH=Spinner SEQ=death    STARTFRAME=0 NUMFRAMES=20
+#exec MESH SEQUENCE MESH=Spinner SEQ=bite     STARTFRAME=20 NUMFRAMES=17 Group=Attack
+#exec MESH SEQUENCE MESH=Spinner SEQ=backstep STARTFRAME=37 NUMFRAMES=9
+#exec MESH SEQUENCE MESH=Spinner SEQ=idle     STARTFRAME=46 NUMFRAMES=19
+#exec MESH SEQUENCE MESH=Spinner SEQ=jump     STARTFRAME=65 NUMFRAMES=16
+#exec MESH SEQUENCE MESH=Spinner SEQ=look     STARTFRAME=81 NUMFRAMES=26
+#exec MESH SEQUENCE MESH=Spinner SEQ=run      STARTFRAME=107 NUMFRAMES=10
+#exec MESH SEQUENCE MESH=Spinner SEQ=threat   STARTFRAME=117 NUMFRAMES=17
+#exec MESH SEQUENCE MESH=Spinner SEQ=walk     STARTFRAME=134 NUMFRAMES=16
+#exec MESH SEQUENCE MESH=Spinner SEQ=wound    STARTFRAME=150 NUMFRAMES=11
+#exec MESH SEQUENCE MESH=Spinner SEQ=zap      STARTFRAME=160 NUMFRAMES=23 Group=Attack
+#exec MESH SEQUENCE MESH=Spinner SEQ=jumpbite STARTFRAME=182 NUMFRAMES=1 Group=MovingAttack
+#exec MESH SEQUENCE MESH=Spinner SEQ=runbite  STARTFRAME=182 NUMFRAMES=1 Group=MovingAttack
+
+#exec TEXTURE IMPORT NAME=JSpinner1 FILE=MODELS\Spinner\Spider1.PCX GROUP=Skins FLAGS=2 // spidxLEG3
+#exec TEXTURE IMPORT NAME=JSpinner2 FILE=MODELS\Spinner\Spider2.PCX GROUP=Skins // spidx2map6
+
+#exec MESH NOTIFY MESH=Spinner SEQ=bite          TIME=0.50 FUNCTION=BiteDamageTarget
+#exec MESH NOTIFY MESH=Spinner SEQ=jumpbite      TIME=0.50 FUNCTION=BiteDamageTarget
+#exec MESH NOTIFY MESH=Spinner SEQ=runbite       TIME=0.50 FUNCTION=BiteDamageTarget
+#exec MESH NOTIFY MESH=Spinner SEQ=runbite       TIME=0.00 FUNCTION=RunStep
+#exec MESH NOTIFY MESH=Spinner SEQ=runbite       TIME=0.60 FUNCTION=RunStep
+#exec MESH NOTIFY MESH=Spinner SEQ=run           TIME=0.00 FUNCTION=RunStep
+#exec MESH NOTIFY MESH=Spinner SEQ=run           TIME=0.50 FUNCTION=RunStep
+#exec MESH NOTIFY MESH=Spinner SEQ=walk          TIME=0.43 FUNCTION=WalkStep
+#exec MESH NOTIFY MESH=Spinner SEQ=walk          TIME=0.93 FUNCTION=WalkStep
+//#exec MESH NOTIFY MESH=Spinner SEQ=zap           TIME=0.33 FUNCTION=SpawnShot
+//#exec MESH NOTIFY MESH=Spinner SEQ=zap           TIME=0.67 FUNCTION=SpawnShot
+#exec MESH NOTIFY MESH=Spinner SEQ=zap           TIME=0.50 FUNCTION=SpawnShot
+
+#exec MESHMAP NEW   MESHMAP=Spinner MESH=Spinner
+#exec MESHMAP SCALE MESHMAP=Spinner X=0.1 Y=0.1 Z=0.2
+
+#exec MESHMAP SETTEXTURE MESHMAP=Spinner NUM=1 TEXTURE=JSpinner1
+#exec MESHMAP SETTEXTURE MESHMAP=Spinner NUM=2 TEXTURE=JSpinner2
+
 #exec AUDIO IMPORT FILE="Sounds\Spinner\Idle1.wav"   NAME="amb1"   GROUP="Spinner"
 #exec AUDIO IMPORT FILE="Sounds\Spinner\Idle2.wav"   NAME="amb2"   GROUP="Spinner"
 #exec AUDIO IMPORT FILE="Sounds\Spinner\Bite.wav"    NAME="bite"   GROUP="Spinner"

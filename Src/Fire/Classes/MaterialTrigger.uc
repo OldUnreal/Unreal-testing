@@ -11,7 +11,7 @@ struct MaterialSequenceItem
 var() bool bLoopSequence;
 var() MaterialSequence Sequence;
 var() array<MaterialSequenceItem> Materials;
-var byte RepIndex,ClientIndex;
+var repnotify byte RepIndex;
 
 replication
 {
@@ -26,39 +26,39 @@ simulated function PostBeginPlay()
 		Sequence.Paused = true;
 		Sequence.Loop = false;
 		Sequence.CurrentTime = 0.f;
-		Array_Size(Sequence.SequenceItems,2);
+		Sequence.SequenceItems.SetSize(2);
 		Sequence.SequenceItems[1].DisplayTime = 1.f;
 		Sequence.SequenceItems[1].FadeOutTime = 0.f;
 		Sequence.SequenceItems[1].Material = Materials[0].Material;
 		Sequence.SequenceItems[0].Material = Materials[0].Material;
 	}
 }
-simulated function PostNetReceive()
+simulated function OnRepNotify( name Property )
 {
-	if( ClientIndex!=RepIndex )
-	{
-		ClientIndex = RepIndex;
+	if( Property=='RepIndex' )
 		FadeToMaterial(RepIndex);
-	}
 }
 simulated final function FadeToMaterial( byte Num )
 {
-	RepIndex = Num;
-
+	if( Level.NetMode!=NM_Client )
+	{
+		RepIndex = Num;
+		bForceNetUpdate = true;
+	}
 	if( Level.NetMode!=NM_DedicatedServer )
 	{
 		Sequence.Paused = false;
 		Sequence.CurrentTime = 0.f;
 		Sequence.SequenceItems[0].Material = Sequence.SequenceItems[1].Material;
 		Sequence.SequenceItems[0].DisplayTime = 0.f;
-		Sequence.SequenceItems[0].FadeOutTime = Materials[RepIndex].FadeInTime;
-		Sequence.SequenceItems[1].Material = Materials[RepIndex].Material;
+		Sequence.SequenceItems[0].FadeOutTime = Materials[Num].FadeInTime;
+		Sequence.SequenceItems[1].Material = Materials[Num].Material;
 	}
 }
 
 function Trigger( actor Other, pawn EventInstigator )
 {
-	if( (RepIndex+1)>=Array_Size(Materials) )
+	if( (RepIndex+1)>=Materials.Size() )
 	{
 		if( !bLoopSequence )
 			Disable('Trigger');
@@ -75,10 +75,10 @@ function Reset()
 defaultproperties
 {
 	bStatic=true
-	bNetNotify=true
 	RemoteRole=ROLE_SimulatedProxy
 	bAlwaysRelevant=true
-	NetUpdateFrequency=10
+	NetUpdateFrequency=1
 	bSkipActorReplication=true
+	bOnlyDirtyReplication=true
 	bCollideActors=false
 } 

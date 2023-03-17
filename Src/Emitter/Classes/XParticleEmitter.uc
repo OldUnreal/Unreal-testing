@@ -85,6 +85,7 @@ var const noedsave bool bDestruction; // Emitter is about to be killed!
 var transient const editconst XParticleEmitter ParentEmitter,CombinerList,TransientEmitters;  // List of combiner particle emitters
 var pointer<class FParticlesDataBase*> PartPtr;
 var transient const uint LastUpdateTime;
+var transient const float EmitterLifeSpan;
 
 var bool bUSNotifyParticles; // Call NotifyNewParticle whenever a particle has been spawned.
 var bool bNotifyNetReceive; // Call PostNetNotify when a new packet has been received.
@@ -101,18 +102,8 @@ function PreBeginPlay()
 }
 simulated function BeginPlay()
 {
-	local Actor A;
-
 	if ( (bNoDelete || bStatic) && RemoteRole==ROLE_None )
-	{
-		Role = ROLE_Authority; // Important!
-		if( Level.NetMode==NM_Client && AttachTag!='' ) // Client attach actor.
-			foreach AllActors(Class'Actor',A,AttachTag)
-			{
-				SetBase(A);
-				break;
-			}
-	}
+		Role = ROLE_Authority; // Give client authority over actor.
 }
 
 Event PostNetNotify();

@@ -72,6 +72,7 @@ var() bool		 bDirectionalPushOff;	// 227h: Push actors in direction it's rotatin
 var() bool		 bAdvancedCamUpdate;	// 227j: updates Roll and Pitch for Pawns additionally.
 var() bool		 bUseGoodCollision;		// 227: Use high precision collision detection (good for complex mover shapes).
 var() bool		 bIgnoreInventory;		// 227j: Mover will ignore inventory it encroaches (and detonates flares).
+var(Networking) bool bReplicateSimMove;	// 227k: Should replicate sim movement in this mover.
 
 var() name       PlayerBumpEvent;		// Optional event to cause when the player bumps the mover.
 var() name       BumpEvent;				// Optional event to cause when any valid bumper bumps the mover.
@@ -393,7 +394,7 @@ final function InterpolateTo( byte NewKeyNum, float Seconds )
 	SimOldRotRoll = OldRot.Roll;
 	SimInterpolate.X = 100 * PhysAlpha;
 	SimInterpolate.Y = 100 * FMax(0.01, PhysRate);
-	SimInterpolate.Z = 256 * PrevKeyNum + KeyNum;
+	SimInterpolate.Z = ((PrevKeyNum << 8) | KeyNum);
 }
 
 final function StopMovement()
@@ -407,6 +408,39 @@ final function StopMovement()
 	
 	SetPhysics(PHYS_None);
 	bInterpolating = false;
+}
+
+// 227k: Moved from C++ code to UnrealScript.
+// Called when SimInterpolate changes in ClientSide.
+simulated event ClientSimMove()
+{
+	local int i;
+
+	if (SimInterpolate.Y < 0.f) // 227j: Stopped movement.
+	{
+		PhysAlpha = SimInterpolate.X * 0.01f;
+		SetPhysics(PHYS_None);
+		bInterpolating = false;
+		OldPos = SimOldPos;
+		OldRot.Yaw = SimOldRotYaw;
+		OldRot.Pitch = SimOldRotPitch;
+		OldRot.Roll = SimOldRotRoll;
+		Move(SimOldPos - Location, OldRot);
+	}
+	else
+	{
+		OldPos = SimOldPos;
+		OldRot.Yaw = SimOldRotYaw;
+		OldRot.Pitch = SimOldRotPitch;
+		OldRot.Roll = SimOldRotRoll;
+		PhysAlpha = SimInterpolate.X * 0.01f;
+		PhysRate = SimInterpolate.Y * 0.01f;
+		i = int(SimInterpolate.Z);
+		KeyNum = i & 255;
+		PrevKeyNum = i >> 8;
+		SetPhysics(PHYS_MovingBrush);
+		bInterpolating = true;
+	}
 }
 
 // Set the specified keyframe.
@@ -561,6 +595,10 @@ function PostBeginPlay()
 		}
 		SetCollision(false, false, false);
 		Tag = '';
+		bReplicateSimMove = false;
+		bSkipActorReplication = true;
+		InitialState = 'DisabledState';
+		GoToState('DisabledState');
 	}
 	else
 	{
@@ -757,7 +795,8 @@ function bool ShouldRestrictMoverRetriggering()
 // Notified by movement physics when mover is stuck with an actor inside it
 event ActorBecameStuck( Actor Other )
 {
-	StuckedActor = Other;
+	if( MoverEncroachType!=ME_IgnoreWhenEncroach )
+		StuckedActor = Other;
 }
 
 //-----------------------------------------------------------------------------
@@ -1308,8 +1347,14 @@ Begin:
 	else GoToState('Auto');
 }
 
+state DisabledState
+{
+Ignores MakeGroupReturn,MakeGroupStop,Trigger,TakeDamage,GrabbedBy,Bump,Reset,InterpolateEnd;
+}
+
 defaultproperties
 {
+	bNetInterpolatePos=true
 	MoverEncroachType=ME_ReturnWhenEncroach
 	MoverGlideType=MV_GlideByTime
 	NumKeys=2
@@ -1336,4 +1381,5 @@ defaultproperties
 	CollisionFlag=COLLISIONFLAG_Movers
 	NetUpdateFrequency=2
 	bNotifyPositionUpdate=true
+	bReplicateSimMove=true
 }

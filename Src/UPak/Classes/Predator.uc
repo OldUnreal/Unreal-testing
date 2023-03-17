@@ -3,6 +3,41 @@
 //=============================================================================
 class Predator expands ScriptedPawn;
 
+#exec MESH IMPORT MESH=Predator ANIVFILE=MODELS\Predator\PackLizard_a.3d DATAFILE=MODELS\Predator\PackLizard_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=Predator X=0 Y=0 Z=35 YAW=-64
+
+#exec MESH SEQUENCE MESH=Predator SEQ=All      STARTFRAME=0   NUMFRAMES=229
+#exec MESH SEQUENCE MESH=Predator SEQ=Death    STARTFRAME=0   NUMFRAMES=25
+#exec MESH SEQUENCE MESH=Predator SEQ=Bite     STARTFRAME=25  NUMFRAMES=16 Group=Attack
+#exec MESH SEQUENCE MESH=Predator SEQ=Backstep STARTFRAME=41  NUMFRAMES=24
+#exec MESH SEQUENCE MESH=Predator SEQ=Idle     STARTFRAME=65  NUMFRAMES=24
+#exec MESH SEQUENCE MESH=Predator SEQ=Jump     STARTFRAME=89  NUMFRAMES=15
+#exec MESH SEQUENCE MESH=Predator SEQ=Look     STARTFRAME=104 NUMFRAMES=40
+#exec MESH SEQUENCE MESH=Predator SEQ=Run      STARTFRAME=144 NUMFRAMES=10
+#exec MESH SEQUENCE MESH=Predator SEQ=Threat   STARTFRAME=154 NUMFRAMES=16
+#exec MESH SEQUENCE MESH=Predator SEQ=Walk     STARTFRAME=170 NUMFRAMES=14
+#exec MESH SEQUENCE MESH=Predator SEQ=Wound    STARTFRAME=184 NUMFRAMES=20
+#exec MESH SEQUENCE MESH=Predator SEQ=RunBite  STARTFRAME=204 NUMFRAMES=10 Group=MovingAttack
+#exec MESH SEQUENCE MESH=Predator SEQ=JumpBite STARTFRAME=214 NUMFRAMES=15 Group=MovingAttack
+
+#exec TEXTURE IMPORT NAME=JPredator1 FILE=MODELS\Predator\PackLizard1.PCX FLAGS=2
+#exec TEXTURE IMPORT NAME=JPredator1 FILE=MODELS\Predator\PackLizard1.PCX GROUP=Skins FLAGS=2 // tail11T2y
+#exec TEXTURE IMPORT NAME=JPredator2 FILE=MODELS\Predator\PackLizard2.PCX GROUP=Skins // head4T6y
+
+#exec MESH NOTIFY MESH=Predator SEQ=Bite          TIME=0.50 FUNCTION=BiteDamageTarget
+#exec MESH NOTIFY MESH=Predator SEQ=RunBite       TIME=0.50 FUNCTION=BiteDamageTarget
+#exec MESH NOTIFY MESH=Predator SEQ=JumpBite      TIME=0.50 FUNCTION=BiteDamageTarget
+#exec MESH NOTIFY MESH=Predator SEQ=Run           TIME=0.00 FUNCTION=RunStep
+#exec MESH NOTIFY MESH=Predator SEQ=Run           TIME=0.50 FUNCTION=RunStep
+#exec MESH NOTIFY MESH=Predator SEQ=Walk          TIME=0.43 FUNCTION=WalkStep
+#exec MESH NOTIFY MESH=Predator SEQ=Walk          TIME=0.93 FUNCTION=WalkStep
+
+#exec MESHMAP NEW   MESHMAP=Predator MESH=Predator
+#exec MESHMAP SCALE MESHMAP=Predator X=0.45 Y=0.45 Z=0.90
+
+#exec MESHMAP SETTEXTURE MESHMAP=Predator NUM=1 TEXTURE=JPredator1
+#exec MESHMAP SETTEXTURE MESHMAP=Predator NUM=2 TEXTURE=JPredator2
+
 #exec AUDIO IMPORT FILE="Sounds\Predator\Bite.wav"  NAME="bite"  GROUP="Predator"
 #exec AUDIO IMPORT FILE="Sounds\Predator\Death.wav" NAME="die"   GROUP="Predator"
 #exec AUDIO IMPORT FILE="Sounds\Predator\Fear1.wav" NAME="fear1" GROUP="Predator"

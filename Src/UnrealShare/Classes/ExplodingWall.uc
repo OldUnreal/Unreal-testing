@@ -24,11 +24,13 @@ var() bool bUnlitGlass;
 
 var int BACKUP_Health;
 var bool BACKUP_Collision;
+var Sound BACKUP_AmbientSound;
 
 function PreBeginPlay()
 {
 	BACKUP_Collision = bCollideActors;
 	BACKUP_Health = Health;
+	BACKUP_AmbientSound = AmbientSound;
 	DrawType = DT_None;
 	Super.PreBeginPlay();
 }
@@ -127,11 +129,14 @@ Ignores Trigger,TakeDamage;
 	{
 		SetCollision(false);
 		bHidden = true;
+		AmbientSound = None;
+		LightType = LT_None;
 	}
 	function Reset()
 	{
 		SetCollision(BACKUP_Collision);
 		Health = BACKUP_Health;
+		AmbientSound = BACKUP_AmbientSound;
 		GoToState('Exploding');
 	}
 }

@@ -15,7 +15,7 @@ function bool Create()
 	local Actor temp;
 	local rotator newRot;
 
-	if ( factory.bCovert && PlayerCanSeeMe() ) //make sure no player can see this
+	if ( !factory.prototype || (factory.bCovert && PlayerCanSeeMe()) ) //make sure no player can see this
 		return false;
 
 	if ( factory.prototype.Default.bIsProjectile )

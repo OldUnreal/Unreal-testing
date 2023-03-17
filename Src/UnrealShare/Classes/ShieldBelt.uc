@@ -13,11 +13,13 @@ class ShieldBelt extends Pickup;
 #exec TEXTURE IMPORT NAME=RedSkin FILE=Models\ChromR.pcx GROUP=Skins FLAGS=2 // skin
 #exec TEXTURE IMPORT NAME=BlueSkin FILE=Models\ChromB.pcx GROUP=Skins FLAGS=2 // skin
 
+#exec TEXTURE IMPORT NAME=Abelt1HD FILE=Models\belt.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Abelt1 FILE=Models\belt_old.pcx GROUP="Skins" HD=Abelt1HD
+
 #exec MESH IMPORT MESH=ShieldBeltMesh ANIVFILE=Models\belt_a.3d DATAFILE=Models\belt_d.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=ShieldBeltMesh X=0 Y=120 Z=110 YAW=64
 #exec MESH LODPARAMS MESH=ShieldBeltMesh STRENGTH=0.3
 #exec MESH SEQUENCE MESH=ShieldBeltMesh SEQ=All    STARTFRAME=0  NUMFRAMES=1
-#exec TEXTURE IMPORT NAME=Abelt1 FILE=Models\belt.pcx GROUP="Skins"
 #exec MESHMAP SCALE MESHMAP=ShieldBeltMesh X=0.025 Y=0.025 Z=0.05
 #exec MESHMAP SETTEXTURE MESHMAP=ShieldBeltMesh NUM=1 TEXTURE=Abelt1
 

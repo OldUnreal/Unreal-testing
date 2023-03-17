@@ -18,6 +18,7 @@ defaultproperties
 		CollisionShape=TableShapeMeshCV
 		bStartSleeping=true
 		COMOffset=(Z=-10)
+		InertiaTensor=(X=3,Y=3,Z=2)
 	End Object
 	PhysicsData=TableRigidBody
 	

@@ -78,10 +78,10 @@ auto state CheckReplacement
 	function BeginState()
 	{
 		local int i;
-		local Actor what;
+		local Inventory what;
 
 		// destroy any other actors inside a 2-mark radius (safeguard)
-		foreach RadiusActors(Class'Actor', what,2,location)
+		foreach RadiusActors(Class'Inventory',what,2,,true)
 		{
 			if (what != self)
 			{
@@ -111,7 +111,7 @@ auto state CheckReplacement
 		if (numItems <= 0)
 		{
 			log(self$" without any Items to spawn - self-terminating!",'ARBITITEM');
-			self.destroy();
+			destroy();
 			return;
 		}
 
@@ -140,7 +140,7 @@ auto state CheckReplacement
 		if (numItems <= 0)
 		{
 			log(self$" had all its Items replaced and is now without any Items to spawn - self-terminating!");
-			self.destroy();
+			destroy();
 			return;
 		}
 		if (bDebug) log(self$" has "$numItems$" after replacement check...",'ARBITITEM');
@@ -167,35 +167,16 @@ auto state CheckReplacement
 // been replaced with
 function Inventory findReplacedItem()
 {
-	local Actor what;
-	local Inventory result;
+	local Inventory what;
 
 	if (bDebug) log("Trying to find replaced item...",'ARBITITEM');
 
-	foreach RadiusActors(Class'Actor', what,2,location)
+	foreach RadiusActors(Class'Inventory',what,2,,true)
 	{
-		if (	(what != none)	&&	// found something
-				(what != self)	&&	// is not self arbititem
-				(Inventory(what) != none)	// it is an inventory item
-		   )
+		if( what != self )
 			break;
-
 	}
-
-	if (what == none)
-	{
-		if (bDebug) log("item was destroyed...",'ARBITITEM');
-		return none;
-	}
-
-	result = Inventory(what);
-	/*if (result == none)
-	{
-		log(self$" item was replaced but "$what.class$" is not a Item.",'ARBITITEM');
-		what.destroy();
-		return none;
-	}*/
-	return result;
+	return what;
 }
 
 
@@ -247,7 +228,7 @@ state Pickup
 		if (currentItem.IsA('Weapon'))
 			Weapon(currentItem).bWeaponStay = false;
 		// use Item's properties to adjust self properly
-		self.SetCollisionSize(currentItem.CollisionRadius, currentItem.CollisionHeight);
+		SetCollisionSize(currentItem.CollisionRadius, currentItem.CollisionHeight);
 
 		// bot support
 		if (MyMarker != None)

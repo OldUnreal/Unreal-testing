@@ -4,6 +4,7 @@ class UBrowserGSpyLink extends UBrowserBufferedTcpLink;
 var UBrowserGSpyFact		OwnerFactory;
 var IpAddr					MasterServerIpAddr;
 var bool					bOpened;
+var bool					bNewListing;
 
 // Params
 var string					MasterServerAddress;	// Address of the master server
@@ -22,6 +23,7 @@ const FoundSecureRequest = 1;
 const FoundSecret        = 2;
 const NextIP             = 3;
 const NextAddress        = 4;
+const NextServerName     = 5;
 
 function BeginPlay()
 {
@@ -110,22 +112,43 @@ function Tick(float DeltaTime)
 	DoBufferQueueIO();
 }
 
+final function string GetLocalIPAddress()
+{
+	local IpAddr Address;
+	local string S;
+	
+	GetLocalIP(Address);
+	S = IpAddrToString(Address);
+	return Left(S,InStr(S,":"));
+}
 
 function HandleServer(string Text)
 {
 	local string	Address;
-	local string	Port;
+	local string	Port, GamePort;
+	local bool		bIsLan;
+	local UBrowserServerList L;
 
+	if( Right(Text,1)=="\\" )
+		Text = Left(Text,Len(Text)-1);
 	Address = ParseDelimited(Text, ":", 1);
-	Port = ParseDelimited(ParseDelimited(Text, ":", 2), "\\", 1);
-
-	OwnerFactory.FoundServer(Address, int(Port), "", GameName);
+	Port = ParseDelimited(Text, ":", 2);
+	if( bNewListing )
+		GamePort = ParseDelimited(Text, ":", 3);
+	
+	if( Address=="LAN" )
+	{
+		bIsLan = true;
+		Address = GetLocalIPAddress();
+	}
+	L = OwnerFactory.FoundServer(Address, int(Port), "", GameName);
+	L.bLocalServer = bIsLan;
+	if( Len(GamePort) )
+		L.SetGamePort(int(GamePort), true);
 }
-
 
 function GotMatch(int MatchData)
 {
-
 	switch (MatchData)
 	{
 	case FoundSecureRequest:
@@ -151,8 +174,16 @@ function GotMatch(int MatchData)
 		break;
 	case NextAddress:
 		Enable('Tick');
-		HandleServer(WaitResult);
-		WaitFor("\\", 5, NextIP);
+		if (WaitResult == "nl\\")
+		{
+			bNewListing = true;
+			WaitFor("\\", 10, NextIP);
+		}
+		else
+		{
+			HandleServer(WaitResult);
+			WaitFor("\\", 5, NextIP);
+		}
 		break;
 	default:
 		break;
@@ -185,7 +216,7 @@ state FoundSecretState
 Begin:
 	Enable('Tick');
 	Sleep(2);
-	SendBufferedData("\\list\\\\gamename\\"$GameName$"\\final\\");
+	SendBufferedData("\\list\\227\\gamename\\"$GameName$"\\final\\");
 	WaitFor("ip\\", 30, NextIP);
 }
 

@@ -13,7 +13,8 @@ class StingerAmmo extends Ammo;
 #exec MESH IMPORT MESH=TarydiumPickup ANIVFILE=MODELS\aniv54_a.3d DATAFILE=MODELS\data54_d.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=TarydiumPickup X=-63 Y=-82 Z=-65 PITCH=-64 ROLL=64
 #exec MESH LODPARAMS MESH=TarydiumPickup STRENGTH=0.3
-#exec TEXTURE IMPORT NAME=JTaryPick1 FILE=Models\Shells.pcx GROUP="Skins" FLAGS=2 DETAIL=Marble
+#exec TEXTURE IMPORT NAME=JTaryPick1HD FILE=Models\shells.bmp Group="HD" DETAIL=Marble
+#exec TEXTURE IMPORT NAME=JTaryPick1 FILE=Models\shells_old.pcx GROUP="Skins" FLAGS=2 HD=JTaryPick1HD
 #exec MESH SEQUENCE MESH=TarydiumPickup SEQ=All   STARTFRAME=0 NUMFRAMES=1
 #exec MESH SEQUENCE MESH=TarydiumPickup SEQ=STILL STARTFRAME=0 NUMFRAMES=1
 

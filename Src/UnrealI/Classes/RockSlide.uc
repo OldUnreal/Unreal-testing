@@ -51,15 +51,13 @@ function MakeRock ()
 	SpawnLoc.Y += FRand()*CubeDimensions.Y;
 	SpawnLoc.Z += FRand()*CubeDimensions.Z;
 
-	TempRock = Spawn (ProjectileClass, ,'', SpawnLoc);
-	TempRock.instigator=none;
-	if ( TempRock != None )
+	TempRock = Spawn(ProjectileClass,,,SpawnLoc);
+	if( TempRock )
 	{
+		TempRock.Instigator = None;
 		TempRock.SetRotation(InitialDirection);
-		TempRock.velocity = (MinInitialSpeed+
-							 (MaxInitialSpeed-MinInitialSpeed)*FRand())*Vector(Rotation);
-
-		TempRock.DrawScale = (MaxScaleFactor-MinScaleFactor)*FRand()+MinScaleFactor;
+		TempRock.Velocity = RandRange(MinInitialSpeed,MaxInitialSpeed)*Vector(Rotation);
+		TempRock.DrawScale = RandRange(MinScaleFactor,MaxScaleFactor);
 		TempRock.SetCollisionSize(TempRock.CollisionRadius*TempRock.DrawScale/TempRock.Default.DrawScale,
 								  TempRock.CollisionHeight*TempRock.DrawScale/TempRock.Default.DrawScale);
 	}
@@ -95,7 +93,7 @@ Begin:
 	// effect, producing rocks at randomized intervals.
 RocksFall:
 	MakeRock();
-	NextRockTime = FRand()*(MaxBetweenTime-MinBetweenTime)+ MinBetweenTime;
+	NextRockTime = RandRange(MinBetweenTime, MaxBetweenTime);
 	TotalPassedTime += NextRockTime;
 	sleep (NextRockTime);
 	if ( !TimeLimit || (TotalPassedTime < TimeLength) )

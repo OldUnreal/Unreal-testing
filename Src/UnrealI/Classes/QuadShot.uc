@@ -447,18 +447,20 @@ function EjectCartridge()
 	local shellcase s;
 	local vector realLoc, X, Y, Z;
 	local Pawn PawnOwner;
+	local int i;
 
 	PawnOwner = Pawn(Owner);
 
 	GetAxes(PawnOwner.ViewRotation,X,Y,Z);
 
-	if (SpentCartridge>=3)
+	realLoc = Owner.Location + CalcDrawOffset();
+	for( i=Max(SpentCartridge,1); i>0; --i )
 	{
-		realLoc = Owner.Location + CalcDrawOffset();
-		s = Spawn(class'ShotShellCase',PawnOwner, '', realLoc + (20 * X) + (FireOffset.Y * Y) + Z);
+		s = Spawn(class'ShotShellCase',,, realLoc - (2.f*X) + (FireOffset.Y * Y) + Z);
 		if ( s != None )
-			s.Eject(((FRand()*0.3+0.4)*X + (FRand()*0.2+0.2)*Y + (FRand()*0.3+1.0) * Z)*160);
+			s.Eject((RandRange(0.4,0.7)*X + RandRange(0.2,0.4)*Y + RandRange(1,1.3)*Z)*160);
 	}
+	SpentCartridge = 0;
 }
 
 //======================================================================================
@@ -555,6 +557,7 @@ Begin:
 	PlayAnim( 'Fire', 0.9, 0.05);
 	DischargeWeapon();
 	FinishAnim();
+	EjectCartridge();
 	GoToState('ReLoad');
 }
 
@@ -578,6 +581,7 @@ Begin:
 	Owner.PlaySound(CockingSound, SLOT_None,0.6*Pawn(Owner).SoundDampening);
 	SpentCartridge++;
 	FinishAnim();
+	LoopAnim('Idle',0.5,0.f);
 	Finish();
 }
 
@@ -688,7 +692,6 @@ function Weapon RecommendWeapon( out float rating, out int bUseAltMode )
 
 defaultproperties
 {
-	SpentCartridge=-1
 	hitdamage=12
 	HitMomentum=18000.000000
 	PelletsPerShell=10

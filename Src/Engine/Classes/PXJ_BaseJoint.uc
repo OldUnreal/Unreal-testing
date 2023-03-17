@@ -1,9 +1,10 @@
 //=============================================================================
 // PXJ_BaseJoint: Joint to attach PhysX objects together.
 //=============================================================================
-Class PXJ_BaseJoint extends Object
+Class PXJ_BaseJoint extends PhysicsObject
 	native
-	abstract;
+	abstract
+	safereplace;
 
 var const editconst PX_PhysicsDataBase Owner;
 

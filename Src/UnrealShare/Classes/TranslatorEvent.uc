@@ -25,7 +25,7 @@ var() localized String M_HintMessage;
 
 function Trigger( actor Other, pawn EventInstigator )
 {
-	local Actor Targets;
+	local PlayerPawn Targets;
 	local string Temp;
 
 	if (bTriggerAltMessage)
@@ -34,8 +34,8 @@ function Trigger( actor Other, pawn EventInstigator )
 		Message = AltMessage;
 		AltMessage = Temp;
 		bHitOnce = False;
-		foreach TouchingActors(class'Actor', Targets)
-		if (Targets == Other) Touch(Other);
+		foreach TouchingActors(class'PlayerPawn', Targets)
+			Touch(Targets);
 	}
 	else Touch(Other);
 }
@@ -53,11 +53,10 @@ function Timer()
 
 function Touch( actor Other )
 {
-	local inventory Inv;
-
 	if (PlayerPawn(Other)==None || bHitDelay) Return;
 
-	if ( (Level.NetMode==NM_StandAlone && Hint=="" && Message=="") || Message=="" ) Return;
+	//if ( (Level.NetMode==NM_StandAlone) ? (!Len(Hint) && !Len(Message)) : !Len(Message) ) Return; < Marco: this was intended solution, but Epic messed it up so it isn't working like this...
+	if ( !Len(Message) ) Return;
 
 	if ( ReTriggerDelay > 0 )
 	{
@@ -66,39 +65,24 @@ function Touch( actor Other )
 		TriggerTime = Level.TimeSeconds;
 	}
 
-	for ( Inv=Other.Inventory; Inv!=None; Inv=Inv.Inventory )
-		if (Translator(Inv)!=None)
+	foreach Pawn(Other).AllInventory(class'Translator',Trans)
+	{
+		Trans.AssignMessage(Self, !bHitOnce);
+		if ( Len(Message) )
 		{
-			Trans = Translator(Inv);
-			Trans.Hint = Hint;
-			Trans.bShowHint = False;
-			if ( Message=="" )
-			{
-				Trans.bNewMessage = true;
-				Pawn(Other).ClientMessage(M_HintMessage);
-				Return;
-			}
-			if (!bHitOnce) Trans.bNewMessage = true;
-			else Trans.bNotNewMessage = true;
-			Trans.NewMessage = Message;
-			if (!bHitOnce) Pawn(Other).ClientMessage(M_NewMessage);
-			else Pawn(Other).ClientMessage(M_TransMessage);
 			bHitOnce = True;
 			SetTimer(0.3,False);
 			bHitDelay = True;
 			PlaySound(NewMessageSound, SLOT_Misc);
-			Break;
 		}
+		break;
+	}
 }
 
 function UnTouch( actor Other )
 {
-	if (Trans!=None)
-	{
-		Trans.bNewMessage = False;
-		Trans.bNotNewMessage = False;
-		if ( Trans.IsInState('Activated')) Trans.GoToState('Deactivated');
-	}
+	if( Trans && Trans.Owner==Other )
+		Trans.UntouchMessage(Self);
 	bHitDelay=False;
 }
 

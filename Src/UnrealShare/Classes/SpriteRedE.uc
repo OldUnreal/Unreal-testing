@@ -7,6 +7,6 @@ class SpriteRedE extends SpriteBlueExplo;
 
 defaultproperties
 {
-	Texture=Texture'DispExpl.DseO_A00'
-	Skin=Texture'UnrealShare.Effects.PalRed'
+	Texture=Texture'DseO_A00'
+	Skin=Texture'PalRed'
 }

@@ -226,7 +226,7 @@ state UWindow
 	event bool KeyType( EInputKey Key )
 	{
 		//log(LastInputKey);
-		if (GlobalConsoleKey == 0 && LastInputKey != 0 && LastInputKey == ConsoleKeyChar)
+		if( !GlobalConsoleKey && LastInputKey && LastInputKey==ConsoleKeyChar )
 		{
 			if (bShowConsole)
 				HideConsole();
@@ -247,74 +247,67 @@ state UWindow
 
 	event bool KeyEvent( EInputKey Key, EInputAction Action, FLOAT Delta )
 	{
-		local byte k;
-
-		k = Key;
 		switch (Action)
 		{
 		case IST_Release:
-			switch (k)
+			switch (Key)
 			{
-			case EInputKey.IK_LeftMouse:
-				if (Root != None)
-					Root.WindowEvent(WM_LMouseUp, None, MouseX, MouseY, k);
+			case IK_LeftMouse:
+				if( Root )
+					Root.WindowEvent(WM_LMouseUp, None, MouseX, MouseY, Key);
 				break;
-			case EInputKey.IK_RightMouse:
-				if (Root != None)
-					Root.WindowEvent(WM_RMouseUp, None, MouseX, MouseY, k);
+			case IK_RightMouse:
+				if( Root )
+					Root.WindowEvent(WM_RMouseUp, None, MouseX, MouseY, Key);
 				break;
-			case EInputKey.IK_MiddleMouse:
-				if (Root != None)
-					Root.WindowEvent(WM_MMouseUp, None, MouseX, MouseY, k);
+			case IK_MiddleMouse:
+				if( Root )
+					Root.WindowEvent(WM_MMouseUp, None, MouseX, MouseY, Key);
 				break;
 			default:
-				if (Root != None)
-					Root.WindowEvent(WM_KeyUp, None, MouseX, MouseY, k);
+				if( Root )
+					Root.WindowEvent(WM_KeyUp, None, MouseX, MouseY, Key);
 				break;
 			}
 			break;
 
 		case IST_Press:
-			switch (k)
+			switch (Key)
 			{
-			case EInputKey.IK_F9:	// Screenshot
+			case IK_F9:	// Screenshot
 				return Global.KeyEvent(Key, Action, Delta);
 				break;
-			case GlobalConsoleKey:
-				if (GlobalConsoleKey != 0)
+			case IK_Escape:
+				if( Root )
+					Root.CloseActiveWindow();
+				break;
+			case IK_LeftMouse:
+				if( Root )
+					Root.WindowEvent(WM_LMouseDown, None, MouseX, MouseY, Key);
+				break;
+			case IK_RightMouse:
+				if( Root )
+					Root.WindowEvent(WM_RMouseDown, None, MouseX, MouseY, Key);
+				break;
+			case IK_MiddleMouse:
+				if( Root )
+					Root.WindowEvent(WM_MMouseDown, None, MouseX, MouseY, Key);
+				break;
+			default:
+				if( GlobalConsoleKey && Key==GlobalConsoleKey )
 				{
 					if (bShowConsole)
 						HideConsole();
-					else if (Root != none)
+					else if( Root )
 					{
 						if (Root.bAllowConsole)
 							ShowConsole();
 						else
-							Root.WindowEvent(WM_KeyDown, None, MouseX, MouseY, k);
+							Root.WindowEvent(WM_KeyDown, None, MouseX, MouseY, Key);
 					}
 				}
-				else
-					Root.WindowEvent(WM_KeyDown, None, MouseX, MouseY, k);
-				break;
-			case EInputKey.IK_Escape:
-				if (Root != None)
-					Root.CloseActiveWindow();
-				break;
-			case EInputKey.IK_LeftMouse:
-				if (Root != None)
-					Root.WindowEvent(WM_LMouseDown, None, MouseX, MouseY, k);
-				break;
-			case EInputKey.IK_RightMouse:
-				if (Root != None)
-					Root.WindowEvent(WM_RMouseDown, None, MouseX, MouseY, k);
-				break;
-			case EInputKey.IK_MiddleMouse:
-				if (Root != None)
-					Root.WindowEvent(WM_MMouseDown, None, MouseX, MouseY, k);
-				break;
-			default:
-				if (Root != None)
-					Root.WindowEvent(WM_KeyDown, None, MouseX, MouseY, k);
+				else if( Root )
+					Root.WindowEvent(WM_KeyDown, None, MouseX, MouseY, Key);
 				break;
 			}
 			break;
@@ -645,13 +638,13 @@ state Typing
 {
 	function bool KeyType( EInputKey Key )
 	{
+		if ( bNoStuff )
+		{
+			bNoStuff = false;
+			return true;
+		}
 		if (LastInputKey>=Asc(" ") && LastInputKey != 0x7F)
 		{
-			if ( bNoStuff )
-			{
-				bNoStuff = false;
-				return true;
-			}
 			if( TypingOffset>=0 && TypingOffset<Len(TypedStr) )
 			{
 				TypedStr = Left(TypedStr,TypingOffset) $ Chr(LastInputKey) $ Mid(TypedStr,TypingOffset);
@@ -667,7 +660,8 @@ state Typing
 	{
 		local string Temp;
 
-		if ( Root!=None )
+		bNoStuff = false;
+		if ( Root )
 		{
 			if ( Key==IK_Ctrl )
 			{

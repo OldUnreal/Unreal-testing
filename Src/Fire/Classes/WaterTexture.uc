@@ -2,17 +2,16 @@
 //  WaterTexture: Base class for fractal water textures. Parent of Wave- and WetTexture.
 //  This is a built-in Unreal class and it shouldn't be modified.
 //=======================================================================================
-
 class WaterTexture extends FractalTexture
 	native
-	noexport
 	abstract
 	runtimestatic;
+
+const MaxDrops=256; /* Maximum number of drops in a water texture. */
 
 //
 // Water drops.
 //
-
 enum WDrop
 {
 	DROP_FixedDepth			, // Fixed depth spot, A=depth
@@ -41,8 +40,7 @@ enum WDrop
 //
 // Information about a single drop.
 //
-
-struct ADrop
+struct export ADrop
 {
 	var WDrop Type;   // Drop type.
 	var byte  Depth;  // Drop heat.
@@ -55,31 +53,29 @@ struct ADrop
 	var byte  ByteD;  // Exp.Time etc.
 };
 
-
 //
 // Water parameters.
 //
+var(WaterPaint)					WDrop	DropType;
+var(WaterPaint)					byte	WaveAmp;
 
-var(WaterPaint)					WDrop  DropType;
-var(WaterPaint)					byte   WaveAmp;
+var(WaterPaint)					byte	FX_Frequency;
+var(WaterPaint)					byte	FX_Phase;
+var(WaterPaint)					byte	FX_Amplitude;
+var(WaterPaint)					byte	FX_Speed;
+var(WaterPaint)					byte	FX_Radius;
+var(WaterPaint)					byte	FX_Size;
+var(WaterPaint)					byte	FX_Depth;
+var(WaterPaint)                 byte	FX_Time;
 
-var(WaterPaint)					byte   FX_Frequency;
-var(WaterPaint)					byte   FX_Phase;
-var(WaterPaint)					byte   FX_Amplitude;
-var(WaterPaint)					byte   FX_Speed;
-var(WaterPaint)					byte   FX_Radius;
-var(WaterPaint)					byte   FX_Size;
-var(WaterPaint)					byte   FX_Depth;
-var(WaterPaint)                 byte   FX_Time;
+var								int		NumDrops;
+var								ADrop	Drops[MaxDrops];
 
-var								int    NumDrops;
-var								ADrop  Drops[256];
-
-var		 			pointer    SourceFields;
-var					transient   byte   RenderTable[1028];
-var					transient	byte   WaterTable[1536];
-var					transient	byte   WaterParity;
-var					transient	int    OldWaveAmp;
+var					pointer<BYTE*>		SourceFields;
+var					transient	byte	RenderTable[1028];
+var					transient	byte	WaterTable[1536];
+var					transient	byte	WaterParity;
+var					transient	int		OldWaveAmp;
 
 defaultproperties
 {

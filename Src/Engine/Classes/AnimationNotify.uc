@@ -11,7 +11,8 @@
 // from C++ code.
 // This time, you can have one class per mesh
 // or animation. 
-class AnimationNotify extends Object native;
+class AnimationNotify extends Object
+	native;
 
 struct export sAnimNotify
 {
@@ -33,6 +34,10 @@ var int NumAnimFrames; // Current animation sequence anim frames (0 = anim not f
 /** initalized */
 var bool bInitialized, bErrorOccured;
 
+// [227k] LIPSync audio data.
+var transient const float VoiceVolume, LIPSyncTime, LIPSyncRate; // VoiceVolume is current talking volume for the current LIPSync track.
+var transient const Sound LIPSyncSound;
+
 /**
  * Called on notify
  *
@@ -43,6 +48,14 @@ event Notify(float DeltaTime, int Num);
 
 // Animation Notify was initialized.
 event OnInit();
+
+// [227k] Start a LIPSynch audio track.
+// Use Sound 'None' to stop it.
+native final function StartLIPSyncTrack( Sound Sound, optional float Pitch );
+
+// [227k] Notify event when this actor is about to play a sound effect with SLOT_Talk (called on client, only when played within hearing distance).
+// Useful for starting a LIPSync track at the same time.
+event OnPlayVoiceSound( Sound Sound, float Volume, float Pitch );
 
 defaultproperties
 {

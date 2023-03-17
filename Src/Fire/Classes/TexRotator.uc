@@ -19,6 +19,19 @@ var transient const bool bWasFixedRot;
 var transient float CurrentAngle;
 var transient int RenderAngle;
 
+function Reset()
+{
+	Super.Reset();
+	TexRotationType = TR_FixedRotation;
+	Rotation = 0.f;
+	UOffset = 0.f;
+	VOffset = 0.f;
+	OscillationRate = 0.f;
+	OscillationAmplitude = 0.f;
+	CurrentAngle = 0.f;
+	RenderAngle = 0;
+}
+
 defaultproperties
 {
 	TexRotationType=TR_FixedRotation

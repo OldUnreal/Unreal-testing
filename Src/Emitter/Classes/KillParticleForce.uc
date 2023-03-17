@@ -1,6 +1,7 @@
 // Drains lifespan from particles.
 Class KillParticleForce extends XParticleForces
-Native;
+	Native
+	clientonly;
 
 #EXEC TEXTURE IMPORT FILE="Textures\S_KillForce.bmp" NAME="S_KillForce" GROUP="Icons" MIPS=off FLAGS=2 TEXFLAGS=0
 

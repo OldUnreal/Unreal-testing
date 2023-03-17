@@ -262,13 +262,12 @@ function DoubleClickRow(int Row)
 
 	if (SelectedServer != Server) return;
 
-	if (Server != None && Server.GamePort != 0)
+	if( Server && Server.ValidGamePort() )
 	{
 		if( !Server.ValidateClientDLLs(Self) )
 			return;
 		AddRecentServer(Server);
-		if ( !Class'UBrowserJoinPWD'.Static.MakeClientJoinWithP(Server.IP$":"$Server.GamePort,GetPlayerOwner(),"") )
-			GetPlayerOwner().ClientTravel("unreal://"$Server.IP$":"$Server.GamePort$UBrowserServerListWindow(GetParent(Class'UBrowserServerListWindow')).URLAppend$"?Password="$Rand(1000), TRAVEL_Absolute, false);
+		GetPlayerOwner().ClientTravel("unreal://"$Server.IP$":"$Server.GamePort$UBrowserServerListWindow(GetParent(Class'UBrowserServerListWindow')).URLAppend, TRAVEL_Absolute, false);
 
 		GetParent(class'UWindowFramedWindow').Close();
 		Root.Console.CloseUWindow();
@@ -561,7 +560,7 @@ function JoinAServer( UBrowserServerList List, bool bSpectateIt )
 {
 	local string Cl;
 
-	if ( List!=None && List.GamePort!=0 )
+	if ( List!=None && List.ValidGamePort() )
 	{
 		if( !List.ValidateClientDLLs(Self) )
 			return;
@@ -569,8 +568,7 @@ function JoinAServer( UBrowserServerList List, bool bSpectateIt )
 		if ( bSpectateIt )
 			Cl = "?Class="$string(Class'UnrealSpectator');
 		else Cl = "?Class="$Class'UnrealPlayerMenu'.Default.ClassString;
-		if ( !Class'UBrowserJoinPWD'.Static.MakeClientJoinWithP(List.IP$":"$List.GamePort,GetPlayerOwner(),Cl) )
-			GetPlayerOwner().ClientTravel("unreal://"$List.IP$":"$List.GamePort$UBrowserServerListWindow(GetParent(Class'UBrowserServerListWindow')).URLAppend$"?Password="$Rand(1000)$Cl, TRAVEL_Absolute, false);
+		GetPlayerOwner().ClientTravel("unreal://"$List.IP$":"$List.GamePort$UBrowserServerListWindow(GetParent(Class'UBrowserServerListWindow')).URLAppend$Cl, TRAVEL_Absolute, false);
 
 		GetParent(class'UWindowFramedWindow').Close();
 		Root.Console.CloseUWindow();

@@ -36,13 +36,12 @@ function PostBeginPlay()
 
 	Super.PostBeginPlay();
 
-	GetNextIntDesc("Bots", 0, NextBotClass, NextBotDesc);
-	while ( (NextBotClass != "") && (NumClasses < 32) )
+	foreach IntDescIterator(string(class'Bots'),NextBotClass,NextBotDesc,true)
 	{
 		AvailableClasses[NumClasses] = NextBotClass;
 		AvailableDescriptions[NumClasses] = NextBotDesc;
-		NumClasses++;
-		GetNextIntDesc("Bots", NumClasses, NextBotClass, NextBotDesc);
+		if( ++NumClasses==ArrayCount(AvailableClasses) )
+			break;
 	}
 }
 

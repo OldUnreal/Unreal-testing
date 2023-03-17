@@ -20,6 +20,23 @@ var const texture SoftwareFallback;
 var() bool bStaticFrame; // Fast render, only for non-animating textures.
 var transient bool bComputedFrame; // When 'bStaticFrame', frame is already computed, no need for update anymore.
 
+function Reset()
+{
+	Material1 = None;
+	Material2 = None;
+	MaskTexture = None;
+	CombineOperation = CO_OverlayWithTransp;
+	MatUSize = 64;
+	MatVSize = 64;
+	MaterialAScale[0] = 0;
+	MaterialAScale[1] = 0;
+	MaterialBScale[0] = 0;
+	MaterialBScale[1] = 0;
+	MaterialCScale[0] = 0;
+	MaterialCScale[1] = 0;
+	bStaticFrame = true;
+}
+
 defaultproperties
 {
 	bRealtime=true

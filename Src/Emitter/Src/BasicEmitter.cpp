@@ -25,15 +25,16 @@ void AXEmitter::SpawnMoreParticles( int Count )
 {
 	if( !RenderInterface )
 		return;
+	GetParticleInterface();
 	CacheRot = (GMath.UnitCoords * Rotation);
 	FVector* TransPose = NULL;
 	while( Count>0 )
 	{
-		SpawnParticle((UEmitterRendering*)RenderInterface,PSF_None,TransPose);
+		SpawnParticle(reinterpret_cast<UEmitterRendering*>(RenderInterface), PSF_None, TransPose);
 		Count--;
 	}
 	if( TransPose )
-		delete TransPose;
+		delete[] TransPose;
 }
 void AXEmitter::execSetMaxParticles (FFrame& Stack, RESULT_DECL)
 {
@@ -81,10 +82,7 @@ void AXEmitter::TriggerEmitter()
 		bDisabled = !bDisabled;
 		break;
 	case ETR_ResetEmitter:
-		if( PartPtr )
-			PartPtr->HideAllParts();
-		ActiveCount = 0;
-		bAllParticlesSpawned = FALSE;
+		RespawnEmitter();
 		break;
 	default:
 		SpawnMoreParticles(SpawnParts.GetValue());
@@ -156,6 +154,7 @@ void AXEmitter::TagPersistentActors()
 		HANDLE_COMBINERS(KillCombiner);
 		HANDLE_COMBINERS(WallHitCombiner);
 		HANDLE_COMBINERS(LifeTimeCombiner);
+		HANDLE_COMBINERS(IdleCombiner);
 	}
 	unguardobj;
 }
@@ -173,6 +172,7 @@ void AXEmitter::PostLoad()
 		HANDLE_COMBINERS(KillCombiner);
 		HANDLE_COMBINERS(WallHitCombiner);
 		HANDLE_COMBINERS(LifeTimeCombiner);
+		HANDLE_COMBINERS(IdleCombiner);
 	}
 	unguard;
 }
@@ -184,16 +184,13 @@ void AXEmitter::UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL 
 	if (!PartPtr)
 		GetParticleInterface();
 	CacheRot = (GMath.UnitCoords * Rotation);
-	if (bAllParticlesSpawned && (bAutoReset || GIsEditor))
+	if (bAllParticlesSpawned && !reinterpret_cast<AXEmitter*>(ParentEmitter)->bDisabled && !bDestruction && (bAutoReset || (GIsEditor && (ParentEmitter == this))))
 	{
 		if (ResetTimer > 0)
 		{
 			ResetTimer -= DeltaTime;
 			if (ResetTimer <= 0)
-			{
-				ActiveCount = 0;
-				bAllParticlesSpawned = FALSE;
-			}
+				RespawnEmitter();
 		}
 		else if (!HasAliveParticles())
 		{
@@ -219,7 +216,7 @@ void AXEmitter::UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL 
 			delete[] TransPose;
 		unguardSlow;
 	}
-	if (!bDisabled && !bDestruction)
+	if (!reinterpret_cast<AXEmitter*>(ParentEmitter)->bDisabled && !bDestruction)
 	{
 		guardSlow(SpawnParticles);
 		NextParticleTime-=DeltaTime;
@@ -296,13 +293,29 @@ void AXEmitter::UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL 
 	citem->bIsInternalEmitter = TRUE; \
 	citem->InitializeEmitter(Parent)
 
-#define LOOP_NEW_CLASSES(clist, carr) \
+#define LOOP_NEW_CLASSES(coldlist, clist, carr) \
+	for (i = (coldlist.Num() - 1); i >= 0; --i) \
+	{ \
+		X = coldlist(i); \
+		if (X) \
+			carr.AddItem(X); \
+	} \
 	for (i = (clist.Num() - 1); i >= 0; --i) \
 	{ \
 		X = clist(i); \
 		if (X) \
 		{ \
 			carr.AddItem(X); \
+			INCLUDE_EMITTER(X); \
+		} \
+	}
+
+#define LOOP_NEW_CLASSES_NL(clist) \
+	for (i = (clist.Num() - 1); i >= 0; --i) \
+	{ \
+		X = clist(i); \
+		if (X) \
+		{ \
 			INCLUDE_EMITTER(X); \
 		} \
 	}
@@ -316,7 +329,7 @@ void AXEmitter::InitializeEmitter(AXParticleEmitter* Parent)
 	if( ParticlesPerSec<=0 )
 		SpawnInterval = LifetimeRange.Max/MaxParticles;
 	else SpawnInterval = LifetimeRange.Max/ParticlesPerSec;
-	NextParticleTime = 0.f;
+	NextParticleTime = StartupDelay.GetValue();
 	if( !bSpawnInitParticles )
 		ActiveCount = MaxParticles;
 	bHasLossVel = (!VelocityLossRate.IsZero());
@@ -341,10 +354,11 @@ void AXEmitter::InitializeEmitter(AXParticleEmitter* Parent)
 	{
 		INCLUDE_EMITTER(ParticleTrail);
 	}
-	LOOP_NEW_CLASSES(SpawnCombiner, TSpawnC);
-	LOOP_NEW_CLASSES(KillCombiner, TDestructC);
-	LOOP_NEW_CLASSES(WallHitCombiner, TWallHitC);
-	LOOP_NEW_CLASSES(LifeTimeCombiner, TLifeTimeC);
+	LOOP_NEW_CLASSES(SpawnCombiners, SpawnCombiner, TSpawnC);
+	LOOP_NEW_CLASSES(DestructCombiners, KillCombiner, TDestructC);
+	LOOP_NEW_CLASSES(WallHitCombiners, WallHitCombiner, TWallHitC);
+	LOOP_NEW_CLASSES(LifeTimeCombiners, LifeTimeCombiner, TLifeTimeC);
+	LOOP_NEW_CLASSES_NL(IdleCombiner);
 	unguard;
 }
 
@@ -356,9 +370,10 @@ void AXEmitter::InitializeEmitter(AXParticleEmitter* Parent)
 FLOAT AXEmitter::GetMaxLifeTime() const
 {
 	guardSlow(AXEmitter::GetMaxLifeTime);
-	const FLOAT MaxLife = Max(LifetimeRange.Min, LifetimeRange.Max);
+	const FLOAT MaxLife = Max(LifetimeRange.Min, LifetimeRange.Max) + Max(StartupDelay.Min, StartupDelay.Max);
 	FLOAT Result = MaxLife;
 	INT i;
+	LOOP_CHILDREN(IdleCombiner, 0.f);
 	LOOP_CHILDREN(TSpawnC, 0.f);
 	LOOP_CHILDREN(TLifeTimeC, MaxLife);
 	LOOP_CHILDREN(TDestructC, MaxLife);
@@ -369,6 +384,7 @@ FLOAT AXEmitter::GetMaxLifeTime() const
 	unguardSlow;
 }
 
+#undef LOOP_NEW_CLASSES_NL
 #undef LOOP_OLD_C_CLASSES
 #undef INCLUDE_EMITTER
 #undef LOOP_NEW_CLASSES
@@ -405,8 +421,6 @@ UBOOL AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVec
 	if( bRespawnParticles || !(SpawnFlags & PSF_CheckRespawn) )
 	{
 		Tex = GetPartTexture(this);
-		if (!Tex && bNeedsTexture)
-			return FALSE;
 		A = reinterpret_cast<ParticlesDataList*>(PartPtr)->GrabDeadParticle();
 		if (!A)
 			return FALSE;
@@ -416,8 +430,6 @@ UBOOL AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVec
 		if (ActiveCount >= MaxParticles)
 			return FALSE;
 		Tex = GetPartTexture(this);
-		if (!Tex && bNeedsTexture)
-			return FALSE;
 
 		A = reinterpret_cast<ParticlesDataList*>(PartPtr)->GrabDeadParticle();
 		if (!A)
@@ -426,9 +438,13 @@ UBOOL AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVec
 		ActiveCount++;
 		if (ActiveCount >= MaxParticles)
 		{
+			reinterpret_cast<ParticlesDataList*>(PartPtr)->bAllSpawned = TRUE;
 			bAllParticlesSpawned = TRUE;
 			if (bAutoDestroy && !GIsEditor)
+			{
+				EmitterLifeSpan = GetMaxLifeTime();
 				bDestruction = TRUE;
+			}
 			if (FinishedSpawningTrigger)
 				FinishedSpawningTrigger->eventTrigger(this, Instigator);
 		}
@@ -568,6 +584,7 @@ UBOOL AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVec
 	if (A->LightDataPtr)
 		A->LightDataPtr->UpdateFrame = GFrameNumber - 500; // Force to recompute lighting rather then fade from previous particle.
 
+	A->bAssimilated = (Tex || !bNeedsTexture);
 	A->Pos = StartPos;
 	A->DrawScale = StartingScale.GetValue();
 	A->DrawScale3D = DrawScale3D * Scale3DRange.GetValue();
@@ -616,18 +633,6 @@ UBOOL AXEmitter::SpawnParticle( UEmitterRendering* Render, BYTE SpawnFlags, FVec
 		A->LatentActor = ParticleTrail->GrabTrail(A->Location, A->Rotation);
 		if (A->LatentActor)
 			A->LatentActor->bAnimByOwner = (ParticleTrail->bFadeByOwnerParticle != 0);
-#if 0
-		if (A->LatentActor)
-		{
-			for (xParticle* B = reinterpret_cast<ParticlesDataList*>(PartPtr)->AliveList; B; B = B->NextParticle)
-			{
-				if (A != B && B->LatentActor == A->LatentActor)
-				{
-					appErrorf(TEXT("2 particles had same trail! (%i/%i)"), A->NetTag, B->NetTag);
-				}
-			}
-		}
-#endif
 	}
 
 	if( WaterImpactAction!=HIT_DoNothing )
@@ -1022,13 +1027,8 @@ FRotator AXEmitter::GetParticleRot(xParticle* A, FLOAT Dlt, FVector& Mvd, UEmitt
 void AXEmitter::ResetEmitter()
 {
 	guard(AXEmitter::ResetEmitter);
-	AXParticleEmitter::ResetEmitter();
-
 	if( PartPtr )
-	{
 		PartPtr->SetLen(MaxParticles);
-		PartPtr->HideAllParts();
-	}
 
 	ImpactSound.InitSoundList();
 	SpawnSound.InitSoundList();
@@ -1036,12 +1036,26 @@ void AXEmitter::ResetEmitter()
 	if( ParticlesPerSec<=0 )
 		SpawnInterval = LifetimeRange.Max/MaxParticles;
 	else SpawnInterval = LifetimeRange.Max/ParticlesPerSec;
-	NextParticleTime = 0.1;
-	if( !bSpawnInitParticles )
-		ActiveCount = MaxParticles;
 	bHasLossVel = (VelocityLossRate!=FVector(0,0,0));
-	bAllParticlesSpawned = FALSE;
+
+	RespawnEmitter();
 	unguard;
+}
+
+void AXEmitter::RespawnEmitter()
+{
+	guardSlow(AXEmitter::RespawnEmitter);
+	Super::RespawnEmitter();
+	if (PartPtr)
+		reinterpret_cast<ParticlesDataList*>(PartPtr)->bAllSpawned = !bSpawnInitParticles;
+	if (bSpawnInitParticles)
+	{
+		NextParticleTime = StartupDelay.GetValue();
+		ActiveCount = 0;
+	}
+	else ActiveCount = MaxParticles;
+	bAllParticlesSpawned = FALSE;
+	unguardSlow;
 }
 
 UBOOL AXEmitter::ShouldRenderEmitter(FSceneNode* Frame)
@@ -1115,6 +1129,16 @@ void AXEmitter::GenerateChildEmitter(UClass* EmitClass, TArray<AXEmitter*>& Appe
 		} \
 	}
 
+#define LOOP_COMBINERS_NL(clist) \
+	for (i = (clist.Num() - 1); i >= 0; --i) \
+	{ \
+		X = clist(i); \
+		if (X) \
+		{ \
+			HANDLE_EMITTER(X); \
+		} \
+	}
+
 void AXEmitter::RelinkChildEmitters()
 {
 	guardSlow(AXEmitter::RelinkChildEmitters);
@@ -1127,6 +1151,7 @@ void AXEmitter::RelinkChildEmitters()
 	LOOP_COMBINERS(LifeTimeCombiners, LifeTimeCombiner, TLifeTimeC);
 	LOOP_COMBINERS(DestructCombiners, KillCombiner, TDestructC);
 	LOOP_COMBINERS(WallHitCombiners, WallHitCombiner, TWallHitC);
+	LOOP_COMBINERS_NL(IdleCombiner);
 
 	if (ParticleTrail)
 	{
@@ -1135,6 +1160,8 @@ void AXEmitter::RelinkChildEmitters()
 	unguardSlow;
 }
 
+#undef LOOP_COMBINERS
+#undef LOOP_COMBINERS_NL
 #undef HANDLE_EMITTER
 #undef LOOP_COMBINERS
 
@@ -1250,6 +1277,7 @@ void AXEmitter::DestroyCombiners()
 	KILL_COMBINER_LIST(KillCombiner);
 	KILL_COMBINER_LIST(WallHitCombiner);
 	KILL_COMBINER_LIST(LifeTimeCombiner);
+	KILL_COMBINER_LIST(IdleCombiner);
 	TSpawnC.EmptyFArray();
 	TLifeTimeC.EmptyFArray();
 	TDestructC.EmptyFArray();
@@ -1257,6 +1285,9 @@ void AXEmitter::DestroyCombiners()
 	Super::DestroyCombiners();
 	unguardSlow;
 }
+
+#undef KILL_COMBINER_LIST
+#undef KILL_COMBINER_ITEM
 
 #define CLEANUP_REFS_FROM(carr) \
 	for( i=(carr.Num()-1); i>=0; i-- ) \
@@ -1279,14 +1310,17 @@ void AXEmitter::CleanUpRefs( AXEmitter* X )
 }
 #undef CLEANUP_REFS_FROM
 
-void AXEmitter::OnCreateObjectNew(UObject* ParentObject)
+void AXEmitter::OnCreateObjectNew(UObject* ParentObject, UProperty* PropertyRef)
 {
 	guardSlow(AXEmitter::OnCreateObjectNew);
-	Super::OnCreateObjectNew(ParentObject);
+	Super::OnCreateObjectNew(ParentObject, PropertyRef);
 
-	// Setup good properties for child emitters.
-	bSpawnInitParticles = FALSE;
-	bRespawnParticles = FALSE;
+	if (appStricmp(PropertyRef->GetName(), TEXT("IdleCombiner")))
+	{
+		// Setup good properties for child emitters.
+		bSpawnInitParticles = FALSE;
+		bRespawnParticles = FALSE;
+	}
 
 	// Not needed on server!
 	SetFlags(RF_NotForServer);

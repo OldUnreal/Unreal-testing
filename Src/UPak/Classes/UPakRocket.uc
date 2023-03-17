@@ -6,9 +6,23 @@
 //=============================================================================
 class UPakRocket expands Projectile;
 
-#forceexec AUDIO IMPORT FILE="Sounds\RocketLauncher\RocketLoop2.WAV" NAME="RocketLoop2" GROUP="RocketLauncher"
-#forceexec AUDIO IMPORT FILE="Sounds\RocketLauncher\RocketLoop1.WAV" NAME="RocketLoop1" GROUP="RocketLauncher"
+#exec MESH IMPORT MESH=rocketL ANIVFILE=MODELS\ROCKETLAUNCHER\rocketL_a.3d DATAFILE=MODELS\ROCKETLAUNCHER\rocketL_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=rocketL X=20 Y=0 Z=-2
 
+#exec MESH SEQUENCE MESH=rocketL SEQ=All   STARTFRAME=0 NUMFRAMES=5
+#exec MESH SEQUENCE MESH=rocketL SEQ=PopUp STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=rocketL SEQ=Wings STARTFRAME=1 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=rocketL SEQ=Fly   STARTFRAME=2 NUMFRAMES=3
+
+#exec TEXTURE IMPORT NAME=JrocketL1 FILE=MODELS\ROCKETLAUNCHER\rocketL1.PCX GROUP=Skins FLAGS=2 // rocket01
+
+#exec MESHMAP NEW   MESHMAP=rocketL MESH=rocketL
+#exec MESHMAP SCALE MESHMAP=rocketL X=0.375 Y=0.375 Z=0.75
+
+#exec MESHMAP SETTEXTURE MESHMAP=rocketL NUM=1 TEXTURE=JrocketL1
+
+#exec AUDIO IMPORT FILE="Sounds\RocketLauncher\RocketLoop2.WAV" NAME="RocketLoop2" GROUP="RocketLauncher"
+#exec AUDIO IMPORT FILE="Sounds\RocketLauncher\RocketLoop1.WAV" NAME="RocketLoop1" GROUP="RocketLauncher"
 
 var vector OldVel;
 var float SpeedModifier;

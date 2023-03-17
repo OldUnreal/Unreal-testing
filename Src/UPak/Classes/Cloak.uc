@@ -10,12 +10,26 @@ class Cloak expands Pickup;
 #exec TEXTURE IMPORT NAME=I_Cloak FILE=TEXTURES\CLOAK\i_invisi.PCX GROUP="Icons"  MIPS=OFF HD=I_HD_Cloak
 #exec TEXTURE IMPORT NAME=CloakTexture FILE=TEXTURES\CLOAK\CloakTexture.PCX GROUP="Cloak"
 
-#forceexec AUDIO IMPORT FILE="Sounds\Cloak\CloakOn.WAV" NAME="CloakOn" GROUP="Cloak"
-#forceexec AUDIO IMPORT FILE="Sounds\Cloak\CloakOff.WAV" NAME="CloakOff" GROUP="Cloak"
-#forceexec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop2.WAV" NAME="CloakLoop2" GROUP="Cloak"
-#forceexec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop3.WAV" NAME="CloakLoop3" GROUP="Cloak"
-#forceexec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop1a.WAV" NAME="CloakLoop1a" GROUP="Cloak"
-#forceexec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop1b.WAV" NAME="CloakLoop1b" GROUP="Cloak"
+#exec MESH IMPORT MESH=pyramid ANIVFILE=MODELS\CLOAK\pyramid_a.3d DATAFILE=MODELS\CLOAK\pyramid_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=pyramid X=0 Y=0 Z=50 ROLL=0.59
+#exec MESH SEQUENCE MESH=pyramid SEQ=All    STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=pyramid SEQ=INVISI STARTFRAME=0 NUMFRAMES=1
+
+#exec TEXTURE IMPORT NAME=Jpyramid0 FILE=MODELS\CLOAK\pyramidFX.PCX GROUP=Skins FLAGS=2 // SKIN
+#exec TEXTURE IMPORT NAME=Jpyramid1 FILE=MODELS\CLOAK\pyramid.PCX GROUP=Skins // Material #1
+
+#exec MESHMAP NEW   MESHMAP=pyramid MESH=pyramid
+#exec MESHMAP SCALE MESHMAP=pyramid X=0.04 Y=0.04 Z=0.1
+
+#exec MESHMAP SETTEXTURE MESHMAP=pyramid NUM=0 TEXTURE=Jpyramid0
+#exec MESHMAP SETTEXTURE MESHMAP=pyramid NUM=1 TEXTURE=Jpyramid1
+
+#exec AUDIO IMPORT FILE="Sounds\Cloak\CloakOn.WAV" NAME="CloakOn" GROUP="Cloak"
+#exec AUDIO IMPORT FILE="Sounds\Cloak\CloakOff.WAV" NAME="CloakOff" GROUP="Cloak"
+#exec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop2.WAV" NAME="CloakLoop2" GROUP="Cloak"
+#exec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop3.WAV" NAME="CloakLoop3" GROUP="Cloak"
+#exec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop1a.WAV" NAME="CloakLoop1a" GROUP="Cloak"
+#exec AUDIO IMPORT FILE="Sounds\Cloak\CloakLoop1b.WAV" NAME="CloakLoop1b" GROUP="Cloak"
 // add fade-in effect for respawning?
 
 var Weapon LastWeapon;			// Last Weapon wielded by owner

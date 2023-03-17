@@ -16,6 +16,13 @@ var transient Coords2D TexCoords;
 
 var transient bool bSourceDirty;
 
+function Reset()
+{
+	Material = None;
+	BitMapScaling[0] = 0;
+	BitMapScaling[1] = 0;
+}
+
 defaultproperties
 {
 	bRealtime=true

@@ -40,6 +40,7 @@ var float DefaultFOV;
 // Music info.
 var music Song;
 var byte  SongSection;
+var byte  SongVolume; // 227k: Song volume modifier.
 var byte  CdTrack;
 var EMusicTransition Transition;
 
@@ -2724,18 +2725,22 @@ exec function Summon( string ClassName )
 	OrginalClass = ClassName;
 	if ( InStr(ClassName,".")==-1 )
 		ClassName = "UnrealI."$ClassName;
-	log( "Fabricate " $ ClassName );
-	NewClass = class<actor>( DynamicLoadObject( ClassName, class'Class',True) );
-	if ( NewClass!=None )
+	NewClass = class<actor>(DynamicLoadObject(ClassName,class'Class',True));
+	if ( NewClass )
 	{
-		if ( NewClass.Default.bStatic )
-			ClientMessage("Cannot spawn a bStatic actor" @ NewClass);
-		else if ( NewClass.Default.bNoDelete )
-			ClientMessage("Cannot spawn a bNoDelete actor" @ NewClass);
-		else if ( Spawn( NewClass,,,Location + (40+NewClass.Default.CollisionRadius) * Vector(Rotation) + vect(0,0,1) * 15,ViewRotation)==None )
-			ClientMessage("Failed to spawn an actor" @ NewClass);
+		Log(GetHumanName()$": Fabricate "$NewClass);
+		if( NewClass.Default.bStatic )
+			ClientMessage("Can't spawn a bStatic actor "$NewClass);
+		else if( NewClass.Default.bNoDelete )
+			ClientMessage("Can't spawn a bNoDelete actor "$NewClass);
+		else if( NewClass.Static.GetClassFlags() & CLASS_Abstract )
+			ClientMessage("Can't spawn an Abstract actor "$NewClass);
+		else if( NewClass.Static.GetClassFlags() & CLASS_EditorOnly )
+			ClientMessage("Can't spawn an EditorOnly actor "$NewClass);
+		else if( !Spawn( NewClass,,,Location + (40+NewClass.Default.CollisionRadius) * Vector(Rotation) + vect(0,0,1) * 15,ViewRotation) )
+			ClientMessage("Failed to spawn an actor "$NewClass);
 	}
-	else ClientMessage("Unable to load class"@OrginalClass);
+	else ClientMessage("Unable to load class "$OrginalClass);
 }
 
 exec function TimeDemo( bool bActivate, optional bool bSaveToFile, optional int QuitAfterCycles )
@@ -3067,6 +3072,7 @@ event Possess()
 	local byte i,j;
 	local float CustomFOV;
 
+	SongVolume = Level.SongVolume; // 227k: Assign default volume level for musics on this level.
 	if (Level.NetMode == NM_Standalone && Level.Game.bIsSavedGame)
 	{
 		ServerUpdateWeapons();
@@ -3555,8 +3561,7 @@ function ViewShake(float DeltaTime)
 {
 	if (shaketimer > 0.0) //shake view
 	{
-		Shaketimer=FClamp(Shaketimer,0.0,4.0); //4 seconds max
-		shaketimer -= DeltaTime;
+		shaketimer = FMin(shaketimer - DeltaTime,4.0); //4 seconds max
 		if ( verttimer == 0 )
 		{
 			verttimer = 0.1;
@@ -6618,4 +6623,5 @@ defaultproperties
 	bIsPlayerPawn=True
 	bAlwaysNetDirty=true
 	CollisionFlag=COLLISIONFLAG_PlayerPawn
+	SongVolume=255
 }

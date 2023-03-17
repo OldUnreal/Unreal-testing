@@ -271,18 +271,17 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 		if (NumPoints>15) NumPoints=15;
 		if ( NumPoints>1.0 ) SpawnEffect(DVector, NumPoints, SmokeRotation, SmokeLocation);
 
-		if ( Other==None )
+		if ( !Other )
 			Break;
-		HitZone = Level.GetLocZone(HitLocation+HitNormal).Zone;
-		if ( WarpZoneInfo(HitZone)==None || WarpZoneInfo(HitZone).OtherSideActor==None )
+		HitZone = EffectLevel.Level.GetLocZone(HitLocation+HitNormal).Zone;
+		if ( !WarpZoneInfo(HitZone) || !WarpZoneInfo(HitZone).OtherSideActor )
 			Break;
 		SmokeLocation = HitLocation;
-		WarpZoneInfo(HitZone).UnWarp(SmokeLocation,X,SmokeRotation);
-		WarpZoneInfo(HitZone).OtherSideActor.Warp(SmokeLocation,X,SmokeRotation);
+		WarpZoneInfo(HitZone).WarpBothCoords(SmokeLocation,X,,SmokeRotation);
 		EffectLevel = WarpZoneInfo(HitZone).OtherSideActor;
 		Z = SmokeLocation+X*8000;
 		Other = EffectLevel.Trace(HitLocation,HitNormal,Z,SmokeLocation,True); // We dont use owner pawn trace here because we could hit ourselves.
-		while ( Other!=None && Other.bIsPawn && !Pawn(Other).AdjustHitLocation(HitLocation, Z - SmokeLocation) )
+		while ( Other && Other.bIsPawn && !Pawn(Other).AdjustHitLocation(HitLocation, Z - SmokeLocation) )
 		{
 			SmokeLocation = HitLocation;
 			Other = Other.Trace(HitLocation,HitNormal,Z,SmokeLocation,True);

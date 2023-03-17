@@ -1,2 +1,3 @@
 // Weather particle emitter
-Class WeatherEmitter extends XWeatherEmitter;
+Class WeatherEmitter extends XWeatherEmitter
+	clientonly;

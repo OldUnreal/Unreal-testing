@@ -1,5 +1,6 @@
 // Mesh particle emitter
-Class BeamEmitter extends XBeamEmitter;
+Class BeamEmitter extends XBeamEmitter
+	clientonly;
 
 defaultproperties
 {

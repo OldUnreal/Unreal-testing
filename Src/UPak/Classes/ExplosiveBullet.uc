@@ -3,7 +3,19 @@
 // $Date: 4/28/99 2:18p $
 // $Revision: 3 $
 //=============================================================================
-class ExplosiveBullet expands Projectile;
+class ExplosiveBullet expands Projectile
+	DependsOn(CARifleClip);
+
+#exec MESH IMPORT MESH=CARbullet ANIVFILE=MODELS\CARifle\CARbullet_a.3d DATAFILE=MODELS\CARifle\CARbullet_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=CARbullet X=0 Y=0 Z=0 YAW=385
+
+#exec MESH SEQUENCE MESH=CARbullet SEQ=All       STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=CARbullet SEQ=CARBULLET STARTFRAME=0 NUMFRAMES=1
+
+#exec MESHMAP NEW   MESHMAP=CARbullet MESH=CARbullet
+#exec MESHMAP SCALE MESHMAP=CARbullet X=0.1 Y=0.1 Z=0.2
+
+#exec MESHMAP SETTEXTURE MESHMAP=CARbullet NUM=0 TEXTURE=JCARammo1
 
 // ================================================================================================
 // Flying State

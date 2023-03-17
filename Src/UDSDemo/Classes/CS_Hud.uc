@@ -43,7 +43,7 @@ simulated function PostBeginPlay()
 	{
 		SetTimer( 6.0, false );
 	}
-	else if( class'CSPlayer'.Static.LevelIsIntro2(Level) )
+	else if( !class'CSPlayer'.Static.LevelIsIntro2(Level) )
 	{
 		SetTimer( 107.0, false );
 	}

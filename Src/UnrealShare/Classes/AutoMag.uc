@@ -213,7 +213,6 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 	local ZoneInfo HitZone;
 	local byte HitCount;
 	local Actor A;
-	local rotator Dummy;
 
 	realLoc = Owner.Location + CalcDrawOffset();
 	s = Spawn(class'ShellCase',Pawn(Owner), '', realLoc + 20 * X + FireOffset.Y * Y + Z);
@@ -225,11 +224,10 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 	if ( Other!=None )
 	{
 		HitZone = Level.GetLocZone(HitLocation+HitNormal).Zone;
-		while ( WarpZoneInfo(HitZone)!=None && WarpZoneInfo(HitZone).OtherSideActor!=None && HitCount++<5 )
+		while ( WarpZoneInfo(HitZone) && WarpZoneInfo(HitZone).OtherSideActor && HitCount++<5 )
 		{
 			realLoc = HitLocation;
-			WarpZoneInfo(HitZone).UnWarp(realLoc,X,Dummy);
-			WarpZoneInfo(HitZone).OtherSideActor.Warp(realLoc,X,Dummy);
+			WarpZoneInfo(HitZone).WarpBothCoords(realLoc,X);
 			A = WarpZoneInfo(HitZone).OtherSideActor;
 			Z = realLoc+X*8000;
 			Other = A.Trace(HitLocation,HitNormal,Z,realLoc,True); // We dont use owner pawn trace here because we could hit ourselves.
@@ -240,11 +238,11 @@ function ProcessTraceHit(Actor Other, Vector HitLocation, Vector HitNormal, Vect
 			}
 			if ( Other==None )
 				Break;
-			HitZone = Level.GetLocZone(HitLocation+HitNormal).Zone;
+			HitZone = A.Level.GetLocZone(HitLocation+HitNormal).Zone;
 		}
 	}
 
-	if ( Other != None && (Other == Level || Other.bWorldGeometry))
+	if ( Other != None && (Other == A.Level || Other.bWorldGeometry))
 		A.Spawn(class'WallHitEffect',,, HitLocation+HitNormal*9, Rotator(HitNormal));
 	else if ( Other!=None && Other!=Self )
 	{

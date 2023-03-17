@@ -9,11 +9,13 @@ class Flashlight extends Pickup;
 #exec Texture Import File=Textures\HD_Icons\I_HD_FlashLight.bmp Name=I_HD_FlashLight Group="HD" Mips=Off
 #exec TEXTURE IMPORT NAME=I_Flashlight FILE=Textures\Hud\i_flash.pcx GROUP="Icons" MIPS=OFF HD=I_HD_FlashLight
 
+#exec TEXTURE IMPORT NAME=JFlashl1HD FILE=Models\flashl.pcx GROUP="HD" FLAGS=2
+#exec TEXTURE IMPORT NAME=JFlashl1 FILE=Models\flashl_old.pcx GROUP=Skins FLAGS=2 HD=JFlashl1HD
+
 #exec MESH IMPORT MESH=Flashl ANIVFILE=Models\flashl_a.3d DATAFILE=Models\flashl_d.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=Flashl X=0 Y=0 Z=0 YAW=64
 #exec MESH SEQUENCE MESH=flashl SEQ=All    STARTFRAME=0  NUMFRAMES=1
 #exec MESH SEQUENCE MESH=flashl SEQ=Still  STARTFRAME=0  NUMFRAMES=1
-#exec TEXTURE IMPORT NAME=JFlashl1 FILE=Models\flashl.pcx GROUP=Skins FLAGS=2
 #exec MESHMAP SCALE MESHMAP=Flashl X=0.02 Y=0.02 Z=0.04
 #exec MESHMAP SETTEXTURE MESHMAP=flashl NUM=1 TEXTURE=Jflashl1
 

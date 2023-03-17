@@ -3,6 +3,11 @@
 //=============================================================================
 class MonkStatue extends Decoration;
 
+#exec OBJ LOAD FILE=Detail.utx
+
+#exec TEXTURE IMPORT NAME=JMonkStatue1HD FILE=Models\monk.pcx GROUP="HD" DETAIL=rockde2
+#exec TEXTURE IMPORT NAME=JMonkStatue1 FILE=Models\monk_old.pcx GROUP="Skins" DETAIL=rockde2 HD=JMonkStatue1HD
+
 #exec  MESH IMPORT MESH=MonkStatueM ANIVFILE=Models\monk_a.3d DATAFILE=Models\monk_d.3d X=0 Y=0 Z=0 MLOD=1
 
 // 53 Vertices, 102 Triangles
@@ -10,7 +15,6 @@ class MonkStatue extends Decoration;
 #exec MESH ORIGIN MESH=MonkStatueM X=0 Y=-55 Z=19 YAW=0 PITCH=0 ROLL=64
 #exec MESH SEQUENCE MESH=MonkStatueM SEQ=ALL    STARTFRAME=0 NUMFRAMES=1 
 #exec MESH SEQUENCE MESH=MonkStatueM SEQ=Still    STARTFRAME=0 NUMFRAMES=1 
-#exec TEXTURE IMPORT NAME=JMonkStatue1 FILE=Models\monk.pcx GROUP="Skins"
 #exec MESHMAP SCALE MESHMAP=MonkStatueM X=0.125 Y=0.125 Z=0.25
 #exec MESHMAP SETTEXTURE MESHMAP=MonkStatueM NUM=0 TEXTURE=JMonkStatue1 TLOD=10
 

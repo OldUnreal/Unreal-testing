@@ -16,13 +16,13 @@ class DAmmo5 extends DispersionAmmo;
 
 defaultproperties
 {
-	ExplosionDecal=class'Unrealshare.BoltscorchR'
-	ParticleType=Class'UnrealShare.Spark35'
+	ExplosionDecal=class'BoltscorchR'
+	ParticleType=Class'Spark35'
 	SparkModifier=3.000000
-	ExpType=Texture'DispExpl.DseO_A00'
-	ExpSkin=Texture'UnrealShare.Effects.PalRed'
+	ExpType=Texture'DseO_A00'
+	ExpSkin=Texture'PalRed'
 	Damage=75.000000
-	Mesh=Mesh'UnrealShare.DispM4'
+	Mesh=Mesh'DispM4'
 	LightBrightness=190
 	LightHue=5
 	LightSaturation=63

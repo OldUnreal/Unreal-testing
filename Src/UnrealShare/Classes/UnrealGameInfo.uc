@@ -11,6 +11,7 @@ class UnrealGameInfo extends GameInfo
 #exec AUDIO IMPORT FILE="Sounds\Generic\lsplash.wav" NAME="LSplash" GROUP="Generic"
 #exec AUDIO IMPORT FILE="Sounds\Pickups\genwep1.wav" NAME="WeaponPickup" GROUP="Pickups"
 #exec AUDIO IMPORT FILE="Sounds\Generic\teleport1.wav" NAME="Teleport1" GROUP="Generic"
+#exec OBJ LOAD FILE="Models\ErrMesh.usm" PACKAGE="UnrealShare"
 
 var(DeathMessage) localized string DeathMessage[32];    // Player name, or blank if none.
 var(DeathMessage) localized string DeathModifier[5];

@@ -1,6 +1,8 @@
 // Physics body for a skeletal mesh.
-Class PX_SkeletalBody extends Object
-	native;
+Class PX_SkeletalBody extends PhysicsObject
+	native
+	safereplace
+	runtimestatic;
 
 struct export SkeletalBodyPart
 {

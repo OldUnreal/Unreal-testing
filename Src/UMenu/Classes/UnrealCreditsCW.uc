@@ -32,177 +32,148 @@ var int MaxBiz;
 
 var UMenuLabelControl PatchHeader;
 var localized string PatchText;
-var UMenuLabelControl PatchLabels[10];
+var array<UMenuLabelControl> AllLabels;
 var string PatchNames[10];
 var int MaxPatch;
 
+const TEXT_BASE_OFFSET = 25;
+const TEXT_SECTION_OFFSET = 15;
+const TEXT_LINE_HEIGHT = 10;
+
 function Created()
 {
-	local int i;
-	local int ControlWidth, ControlLeft, ControlRight;
-	local int CenterWidth, CenterPos, ButtonWidth, ButtonLeft;
-	local float ControlOffset, BaseOffset;
+	local int i, ControlOffset;
+	local int CenterWidth, CenterPos;
+	local Engine E;
 
 	Super.Created();
 
-	ControlWidth = WinWidth/2.5;
-	ControlLeft = (WinWidth/2 - ControlWidth)/2;
-	ControlRight = WinWidth/2 + ControlLeft;
-
-	CenterWidth = (WinWidth/4)*3;
+	CenterWidth = (WinWidth*0.925);
 	CenterPos = (WinWidth - CenterWidth)/2;
 
-	ButtonWidth = WinWidth - 140;
-	ButtonLeft = WinWidth - ButtonWidth - 40;
-
-	ControlOffset = 25;
+	// Left side
+	ControlOffset = TEXT_BASE_OFFSET;
 	ProgrammersHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 	ProgrammersHeader.SetText(ProgrammersText);
 	ProgrammersHeader.SetFont(F_Bold);
 	ProgrammersHeader.Align = TA_Left;
+	AllLabels.Add(ProgrammersHeader);
 	for (i=0; i<MaxProgs; i++)
 	{
-		ControlOffset += 10;
+		ControlOffset += TEXT_LINE_HEIGHT;
 		ProgrammerLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 		ProgrammerLabels[i].SetText(ProgrammerNames[i]);
 		ProgrammerLabels[i].SetFont(F_Normal);
 		ProgrammerLabels[i].Align = TA_Left;
+		AllLabels.Add(ProgrammerLabels[i]);
 	}
-
-	ControlOffset = 25;
-	LevelDesignHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
-	LevelDesignHeader.SetText(LevelDesignText);
-	LevelDesignHeader.SetFont(F_Bold);
-	LevelDesignHeader.Align = TA_Right;
-	for (i=0; i<MaxDesigners; i++)
-	{
-		ControlOffset += 10;
-		DesignerLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
-		DesignerLabels[i].SetText(DesignerNames[i]);
-		DesignerLabels[i].SetFont(F_Normal);
-		DesignerLabels[i].Align = TA_Right;
-	}
-
-	Controloffset += 25;
-	BaseOffset = ControlOffset;
+	
+	ControlOffset += TEXT_SECTION_OFFSET;
 	ArtHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 	ArtHeader.SetText(ArtText);
 	ArtHeader.SetFont(F_Bold);
 	ArtHeader.Align = TA_Left;
+	AllLabels.Add(ArtHeader);
 	for (i=0; i<MaxArts; i++)
 	{
-		ControlOffset += 10;
+		ControlOffset += TEXT_LINE_HEIGHT;
 		ArtLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 		ArtLabels[i].SetText(ArtNames[i]);
 		ArtLabels[i].SetFont(F_Normal);
 		ArtLabels[i].Align = TA_Left;
+		AllLabels.Add(ArtLabels[i]);
+	}
+	
+	ControlOffset += TEXT_SECTION_OFFSET;
+	PatchHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
+	PatchHeader.SetText(PatchText);
+	PatchHeader.SetFont(F_Bold);
+	PatchHeader.Align = TA_Left;
+	AllLabels.Add(PatchHeader);
+	for (i=0; i<MaxPatch; i++)
+	{
+		ControlOffset += TEXT_LINE_HEIGHT;
+		PatchHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
+		PatchHeader.SetText(PatchNames[i]);
+		PatchHeader.SetFont(F_Normal);
+		PatchHeader.Align = TA_Left;
+		AllLabels.Add(PatchHeader);
+	}
+	E = GetEngine();
+	for( i=0; i<E.DriverCredits.Size(); ++i )
+	{
+		ControlOffset += TEXT_LINE_HEIGHT;
+		PatchHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
+		PatchHeader.SetText(E.DriverCredits[i].Credits);
+		PatchHeader.SetFont(F_Normal);
+		PatchHeader.Align = TA_Left;
+		AllLabels.Add(PatchHeader);
+	}
+	
+	// Right side
+	ControlOffset = TEXT_BASE_OFFSET;
+	LevelDesignHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
+	LevelDesignHeader.SetText(LevelDesignText);
+	LevelDesignHeader.SetFont(F_Bold);
+	LevelDesignHeader.Align = TA_Right;
+	AllLabels.Add(LevelDesignHeader);
+	for (i=0; i<MaxDesigners; i++)
+	{
+		ControlOffset += TEXT_LINE_HEIGHT;
+		DesignerLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
+		DesignerLabels[i].SetText(DesignerNames[i]);
+		DesignerLabels[i].SetFont(F_Normal);
+		DesignerLabels[i].Align = TA_Right;
+		AllLabels.Add(DesignerLabels[i]);
 	}
 
-	ControlOffset = BaseOffset;
+	ControlOffset += TEXT_SECTION_OFFSET;
 	MusicSoundHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 	MusicSoundHeader.SetText(MusicSoundText);
 	MusicSoundHeader.SetFont(F_Bold);
 	MusicSoundHeader.Align = TA_Right;
+	AllLabels.Add(MusicSoundHeader);
 	for (i=0; i<MaxMusics; i++)
 	{
-		ControlOffset += 10;
+		ControlOffset += TEXT_LINE_HEIGHT;
 		MusicLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 		MusicLabels[i].SetText(MusicNames[i]);
 		MusicLabels[i].SetFont(F_Normal);
 		MusicLabels[i].Align = TA_Right;
+		AllLabels.Add(MusicLabels[i]);
 	}
-	ControlOffset += 25;
-
+	
+	ControlOffset += TEXT_SECTION_OFFSET;
 	BizHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 	BizHeader.SetText(BizText);
 	BizHeader.SetFont(F_Bold);
-	BizHeader.Align = TA_Center;
+	BizHeader.Align = TA_Right;
+	AllLabels.Add(BizHeader);
 	for (i=0; i<MaxBiz; i++)
 	{
-		ControlOffset += 10;
+		ControlOffset += TEXT_LINE_HEIGHT;
 		BizLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
 		BizLabels[i].SetText(BizNames[i]);
 		BizLabels[i].SetFont(F_Normal);
-		BizLabels[i].Align = TA_Center;
+		BizLabels[i].Align = TA_Right;
+		AllLabels.Add(BizLabels[i]);
 	}
-	
-	ControlOffset += 25;
-
-	PatchHeader = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
-	PatchHeader.SetText(PatchText);
-	PatchHeader.SetFont(F_Bold);
-	PatchHeader.Align = TA_Center;
-	for (i=0; i<MaxPatch; i++)
-	{
-		ControlOffset += 10;
-		PatchLabels[i] = UMenuLabelControl(CreateWindow(class'UMenuLabelControl', CenterPos, ControlOffset, CenterWidth, 1));
-		PatchLabels[i].SetText(PatchNames[i]);
-		PatchLabels[i].SetFont(F_Normal);
-		PatchLabels[i].Align = TA_Center;
-	}	
 }
 
 function BeforePaint(Canvas C, float X, float Y)
 {
 	local int i;
-	local int ControlWidth, ControlLeft, ControlRight;
 	local int CenterWidth, CenterPos;
 
 	Super.BeforePaint(C, X, Y);
 
-	ControlWidth = WinWidth/2.5;
-	ControlLeft = (WinWidth/2 - ControlWidth)/2;
-	ControlRight = WinWidth/2 + ControlLeft;
-
-	CenterWidth = (WinWidth/4)*3;
+	CenterWidth = (WinWidth*0.925);
 	CenterPos = (WinWidth - CenterWidth)/2;
 
-	ProgrammersHeader.SetSize(CenterWidth, 1);
-	ProgrammersHeader.WinLeft = CenterPos;
-	for (i=0; i<MaxProgs; i++)
+	for(i=(AllLabels.Size()-1); i>=0; --i )
 	{
-		ProgrammerLabels[i].SetSize(CenterWidth, 1);
-		ProgrammerLabels[i].WinLeft = CenterPos;
-	}
-
-	LevelDesignHeader.SetSize(CenterWidth, 1);
-	LevelDesignHeader.WinLeft = CenterPos;
-	for (i=0; i<MaxDesigners; i++)
-	{
-		DesignerLabels[i].SetSize(CenterWidth, 1);
-		DesignerLabels[i].WinLeft = CenterPos;
-	}
-
-	ArtHeader.SetSize(CenterWidth, 1);
-	ArtHeader.WinLeft = CenterPos;
-	for (i=0; i<MaxArts; i++)
-	{
-		ArtLabels[i].SetSize(CenterWidth, 1);
-		ArtLabels[i].WinLeft = CenterPos;
-	}
-
-	MusicSoundHeader.SetSize(CenterWidth, 1);
-	MusicSoundHeader.WinLeft = CenterPos;
-	for (i=0; i<MaxMusics; i++)
-	{
-		MusicLabels[i].SetSize(CenterWidth, 1);
-		MusicLabels[i].WinLeft = CenterPos;
-	}
-
-	BizHeader.SetSize(CenterWidth, 1);
-	BizHeader.WinLeft = CenterPos;
-	for (i=0; i<MaxBiz; i++)
-	{
-		BizLabels[i].SetSize(CenterWidth, 1);
-		BizLabels[i].WinLeft = CenterPos;
-	}
-	
-	PatchHeader.SetSize(CenterWidth, 1);
-	PatchHeader.WinLeft = CenterPos;
-	for (i=0; i<MaxPatch; i++)
-	{
-		PatchLabels[i].SetSize(CenterWidth, 1);
-		PatchLabels[i].WinLeft = CenterPos;
+		AllLabels[i].SetSize(CenterWidth, 1);
+		AllLabels[i].WinLeft = CenterPos;
 	}
 }
 
@@ -242,7 +213,7 @@ defaultproperties
 	MusicNames(2)="Dave Ewing"
 	MusicNames(3)="Lani Minella"
 	MusicNames(4)="Shannon Newans"
-	MusicNames(5)="Michiel Van De Bos"
+	MusicNames(5)="Michiel van den Bos"
 	MaxMusics=6
 	BizText="Biz"
 	BizNames(0)="Mark Rein"

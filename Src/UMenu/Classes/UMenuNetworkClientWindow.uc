@@ -7,6 +7,12 @@ var UWindowComboControl NetSpeedCombo;
 var localized string NetSpeedText;
 var localized string NetSpeedHelp;
 var localized string NetSpeeds[5];
+var int NetSpeedValues[5];
+
+// Custom NetSpeed
+var UWindowEditControl NetSpeedEditBox;
+var localized string CNetSpeedText;
+var localized string CNetSpeedHelp;
 
 var bool bInitialized;
 
@@ -18,6 +24,7 @@ function Created()
 {
 	local int ControlWidth, ControlLeft, ControlRight;
 	local int CenterWidth, CenterPos;
+	local int i;
 
 	Super.Created();
 
@@ -34,12 +41,20 @@ function Created()
 	NetSpeedCombo.SetHelpText(NetSpeedHelp);
 	NetSpeedCombo.SetFont(F_Normal);
 	NetSpeedCombo.SetEditable(False);
-	NetSpeedCombo.AddItem(2600 @ NetSpeeds[0]);
-	NetSpeedCombo.AddItem(5000 @ NetSpeeds[1]);
-	NetSpeedCombo.AddItem(10000 @ NetSpeeds[2]);
-	NetSpeedCombo.AddItem(20000 @ NetSpeeds[3]);
-	NetSpeedCombo.AddItem(50000 @ NetSpeeds[4]);
+	for( i=0; i<ArrayCount(NetSpeeds); ++i )
+		NetSpeedCombo.AddItem(string(NetSpeedValues[i])@NetSpeeds[i]);
+	NetSpeedCombo.AddItem(CNetSpeedText);
 	ControlOffset += 25;
+	
+	// Custom NetSpeed
+	NetSpeedEditBox = UWindowEditControl(CreateControl(class'UWindowEditControl', ControlLeft, ControlOffset, ControlWidth, 1));
+	NetSpeedEditBox.SetText(CNetSpeedText);
+	NetSpeedEditBox.SetHelpText(CNetSpeedHelp);
+	NetSpeedEditBox.SetFont(F_Normal);
+	NetSpeedEditBox.SetNumericOnly(true);
+	NetSpeedEditBox.SetNumericFloat(false);
+	NetSpeedEditBox.Align = TA_Left;
+	ControlOffset+=25;
 }
 
 function WindowShown()
@@ -50,21 +65,22 @@ function WindowShown()
 
 function LoadAvailableSettings()
 {
+	local int i;
+
 	bInitialized = false;
 
-	if (Root.Console.ViewPort.Actor.NetSpeed >= 25000)
-		NetSpeedCombo.SetSelectedIndex(4);
-	else if (Root.Console.ViewPort.Actor.NetSpeed >= 12500)
-		NetSpeedCombo.SetSelectedIndex(3);
-	else if (Root.Console.ViewPort.Actor.NetSpeed >= 6000)
-		NetSpeedCombo.SetSelectedIndex(2);
-	else if (Root.Console.ViewPort.Actor.NetSpeed >= 4000)
-		NetSpeedCombo.SetSelectedIndex(1);
-	else
-		NetSpeedCombo.SetSelectedIndex(0);
-
-	NetSpeedCombo.EditBox.Value = Root.Console.ViewPort.Actor.NetSpeed @ NetSpeeds[NetSpeedCombo.GetSelectedIndex()];
-
+	for( i=0; i<ArrayCount(NetSpeeds); ++i )
+	{
+		if( NetSpeedValues[i]==Class'PlayerPawn'.Default.NetSpeed )
+		{
+			NetSpeedCombo.SetSelectedIndex(i);
+			break;
+		}
+	}
+	if( i==ArrayCount(NetSpeeds) )
+		NetSpeedCombo.SetSelectedIndex(ArrayCount(NetSpeeds));
+	NetSpeedEditBox.SetDisabled(NetSpeedCombo.GetSelectedIndex()!=ArrayCount(NetSpeeds));
+	NetSpeedEditBox.SetValue(string(Class'PlayerPawn'.Default.NetSpeed));
 	bInitialized = true;
 }
 
@@ -78,6 +94,7 @@ function AfterCreate()
 function CalcLabelTextAreaWidth(Canvas C, out float LabelTextAreaWidth)
 {
 	NetSpeedCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	NetSpeedEditBox.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 }
 
 function BeforePaint(Canvas C, float X, float Y)
@@ -109,6 +126,10 @@ function BeforePaint(Canvas C, float X, float Y)
 	NetSpeedCombo.SetSize(ControlWidth, 1);
 	NetSpeedCombo.WinLeft = ControlLeft;
 	NetSpeedCombo.EditBoxWidth = EditAreaWidth;
+	
+	NetSpeedEditBox.SetSize(ControlWidth, 1);
+	NetSpeedEditBox.WinLeft = ControlLeft;
+	NetSpeedEditBox.EditBoxWidth = EditAreaWidth;
 }
 
 function Notify(UWindowDialogControl C, byte E)
@@ -121,6 +142,7 @@ function Notify(UWindowDialogControl C, byte E)
 		switch (C)
 		{
 		case NetSpeedCombo:
+		case NetSpeedEditBox:
 			NetSpeedChanged();
 			break;
 		}
@@ -133,31 +155,25 @@ function Notify(UWindowDialogControl C, byte E)
 
 function NetSpeedChanged()
 {
-	local int NewSpeed;
+	local int NewSpeed,i;
 
 	if (!bInitialized)
 		return;
 
-	switch (NetSpeedCombo.GetSelectedIndex())
+	i = NetSpeedCombo.GetSelectedIndex();
+	if( i==ArrayCount(NetSpeeds) )
 	{
-	case 0:
-		NewSpeed = 2600;
-		break;
-	case 1:
-		NewSpeed = 5000;
-		break;
-	case 2:
-		NewSpeed = 10000;
-		break;
-	case 3:
-		NewSpeed = 20000;
-		break;
-	case 4:
-		NewSpeed = 50000;
-		break;
+		if( NetSpeedEditBox.bDisabled )
+			NetSpeedEditBox.SetDisabled(false);
+		NewSpeed = int(NetSpeedEditBox.GetValue());
 	}
-	GetPlayerOwner().ConsoleCommand("NETSPEED" @ NewSpeed);
-	GetPlayerOwner().SaveConfig();
+	else
+	{
+		if( !NetSpeedEditBox.bDisabled )
+			NetSpeedEditBox.SetDisabled(true);
+		NewSpeed = NetSpeedValues[i];
+	}
+	GetPlayerOwner().ConsoleCommand("NETSPEED "$NewSpeed);
 }
 
 defaultproperties
@@ -170,6 +186,14 @@ defaultproperties
 	NetSpeeds(2)="(Broadband)"
 	NetSpeeds(3)="(Broadband)"
 	NetSpeeds(4)="(LAN)"
+	NetSpeedValues(0)=2600
+	NetSpeedValues(1)=5000
+	NetSpeedValues(2)=10000
+	NetSpeedValues(3)=20000
+	NetSpeedValues(4)=50000
+	
+	CNetSpeedText="Custom"
+	CNetSpeedHelp="Enter customized NetSpeed here."
 	bShownWindow=True
 	ControlOffset=20.000000
 }

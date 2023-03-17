@@ -444,7 +444,7 @@ event FellOutOfWorld()
 
 	if (Role != ROLE_Authority || !CanInteractWithWorld())
 		return;
-	if (PlayerReplicationInfo != none)
+	if( PlayerReplicationInfo )
 	{
 		SetPhysics(PHYS_None);
 		if (Health > 0)
@@ -456,14 +456,18 @@ event FellOutOfWorld()
 				Health = OldHealth;
 		}
 	}
-	else if ( Region.ZoneNumber == 0 )
-		Error(Name@"fell out of the world!");
 	else if (Health > 0)
 	{
 		Died(None, 'fell', Location);
-		if (Health <= 0)
-			Destroy();
+		if( !bDeleteMe )
+		{
+			if( Region.ZoneNumber==0 )
+				Error(Name@"fell out of the world!");
+			else if (Health <= 0)
+				Destroy();
+		}
 	}
+	else SetPhysics(PHYS_None);
 }
 
 function PlayRecoil(float Rate);
@@ -1355,39 +1359,54 @@ function Gasp();
 
 function DropDecoration()
 {
-	if (CarriedDecoration != None)
+	if( CarriedDecoration )
 		CarriedDecoration.GrabbedBy(Self);
 }
 
 function GrabDecoration()
 {
+	local actor HitActor;
+
+	if( !carriedDecoration )
+	{
+		HitActor = TraceGrabActor();
+		if( HitActor )
+			HitActor.GrabbedBy(Self);
+	}
+}
+
+function Actor TraceGrabActor()
+{
 	local vector lookDir, HitLocation, HitNormal, T1, T2;
 	local actor HitActor;
 
-	if ( carriedDecoration == None )
+	// 227k: Accurate trace first.
+	lookDir = vector(ViewRotation);
+	T1 = Location + EyeHeight * vect(0,0,1);
+	T2 = T1 + lookDir * 2.4 * CollisionRadius;
+	HitActor = Trace(HitLocation, HitNormal, T2, T1, true);
+	if( HitActor && !HitActor.bWorldGeometry )
+		return HitActor;
+	
+	//first trace to find it
+	lookDir.Z = 0;
+	T1 += lookDir * 0.8 * CollisionRadius;
+	T2 = T1 + lookDir * 1.2 * CollisionRadius;
+	HitActor = Trace(HitLocation, HitNormal, T2, T1, true);
+	if ( !HitActor )
 	{
-		//first trace to find it
-		lookDir = vector(Rotation);
-		lookDir.Z = 0;
-		T1 = Location + BaseEyeHeight * vect(0,0,1) + lookDir * 0.8 * CollisionRadius;
-		T2 = T1 + lookDir * 1.2 * CollisionRadius;
-		HitActor = Trace(HitLocation, HitNormal, T2, T1, true);
-		if ( HitActor == None )
-		{
-			T1 = T2 - (BaseEyeHeight + CollisionHeight - 2) * vect(0,0,1);
-			HitActor = Trace(HitLocation, HitNormal, T1, T2, true);
-		}
-		else if ( HitActor == Level )
-		{
-			T2 = HitLocation - lookDir;
-			T1 = T2 - (BaseEyeHeight + CollisionHeight - 2) * vect(0,0,1);
-			HitActor = Trace(HitLocation, HitNormal, T1, T2, true);
-		}
-		if ( (HitActor == None) || (HitActor == Level) )
-			HitActor = Trace(HitLocation, HitNormal, Location + lookDir * 1.2 * CollisionRadius, Location, true, GetExtent());
-		if( HitActor!=None )
-			HitActor.GrabbedBy(Self);
+		T1 = T2 - (EyeHeight + CollisionHeight - 2) * vect(0,0,1);
+		HitActor = Trace(HitLocation, HitNormal, T1, T2, true);
 	}
+	else if ( HitActor.bWorldGeometry )
+	{
+		T2 = HitLocation - lookDir;
+		T1 = T2 - (EyeHeight + CollisionHeight - 2) * vect(0,0,1);
+		HitActor = Trace(HitLocation, HitNormal, T1, T2, true);
+	}
+	if ( !HitActor || HitActor.bWorldGeometry )
+		HitActor = Trace(HitLocation, HitNormal, Location + lookDir * 1.2 * CollisionRadius, Location, true, GetExtent());
+	return HitActor;
 }
 
 final function vector GrabbedDecorationPos(Decoration Decoration)

@@ -1742,7 +1742,7 @@ function bool AIFindBackup() // 227j: Try to get some backup.
 
 auto state StartUp
 {
-	Ignores Bump,TakeDamage,Falling,Landed;
+Ignores Bump,TakeDamage,Falling,Landed,BaseChange,Falling;
 	
 	function InitAmbushLoc()
 	{

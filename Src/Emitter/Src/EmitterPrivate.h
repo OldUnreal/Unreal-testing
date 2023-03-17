@@ -14,13 +14,12 @@ enum EParticleSpawnFlags
 
 class UEmitterRendering;
 class xParticle;
-struct FRainAreaTree;
+class FRainAreaTree;
 
 #include "EmitterClasses.h"
-
 #include "UnEmitterRendering.h"
 
-#if 1 // DEBUG
+#if 0 // DEBUG
 #undef guardSlow
 #define guardSlow guard
 #undef unguardSlow
@@ -251,3 +250,8 @@ inline UBOOL AXParticleEmitter::HasAliveParticles()
 	return FALSE;
 	unguardobjSlow;
 }
+
+#include "EmitterPhysX.h"
+#include "AXTrailParticle.h"
+#include "UTrailMesh.h"
+#include "UBeamMesh.h"

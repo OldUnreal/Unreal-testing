@@ -10,6 +10,13 @@ class UnrealOptionsMenu extends UnrealLongMenu;
 #exec Texture Import File=Textures\hud5.pcx Name=Hud5 MIPS=OFF
 #exec Texture Import File=Textures\hud6.pcx Name=Hud6 MIPS=OFF
 
+#exec Texture Import File=Textures\HD_Icons\HUD1_HD.bmp Name=HD_Hud1 Group="HD"
+#exec Texture Import File=Textures\HD_Icons\HUD2_HD.bmp Name=HD_Hud2 Group="HD"
+#exec Texture Import File=Textures\HD_Icons\HUD3_HD.bmp Name=HD_Hud3 Group="HD"
+#exec Texture Import File=Textures\HD_Icons\HUD4_HD.bmp Name=HD_Hud4 Group="HD"
+#exec Texture Import File=Textures\HD_Icons\HUD5_HD.bmp Name=HD_Hud5 Group="HD"
+#exec Texture Import File=Textures\HD_Icons\HUD6_HD.bmp Name=HD_Hud6 Group="HD"
+
 var() texture HUDIcon[6];
 var   string MenuValues[21];
 var	  bool bJoystick;
@@ -357,7 +364,7 @@ function DrawValues(canvas Canvas, Font RegFont, int Spacing, int StartX, int St
 
 function DrawMenu(canvas Canvas)
 {
-	local int StartX, StartY, Spacing, HelpPanelX, i;
+	local int StartX, StartY, Spacing, HelpPanelX, i, j;
 
 	DrawBackGround(Canvas, (Canvas.ClipY < 250));
 
@@ -425,11 +432,17 @@ function DrawMenu(canvas Canvas)
 	DrawSlider(Canvas, StartX + 155, StartY + 16 * Spacing + 1, 1000 * PlayerOwner.Bob, 0, 4);
 
 	PlayerOwner.MyHUD.DrawCrossHair(Canvas, StartX + 160, StartY + 9 * Spacing - 3 );
-	Canvas.SetPos(StartX+168, Canvas.ClipY-125 );
+
 	if (Selection==16)
 	{
-		if (Canvas.ClipY > 380 && PlayerOwner.MyHUD.HudMode<=6 && HUDIcon[PlayerOwner.MyHud.HudMode]!=None)
-			Canvas.DrawIcon(HUDIcon[PlayerOwner.MyHUD.HudMode],1.0);
+		if( Canvas.ClipY > 380 && PlayerOwner.MyHUD.HudMode<ArrayCount(HUDIcon) && HUDIcon[PlayerOwner.MyHud.HudMode] )
+		{
+			j = (Canvas.ClipX*0.02);
+			Canvas.CurX = StartX+240 + j;
+			i = Max(Canvas.ClipX - j - Canvas.CurX, 64);
+			Canvas.CurY = Canvas.ClipY - j - i;
+			Canvas.DrawRect(HUDIcon[PlayerOwner.MyHUD.HudMode],i,i);
+		}
 		Canvas.Font = Canvas.MedFont;
 		HelpPanelX = 150;
 	}
@@ -503,12 +516,12 @@ function ApplyConsoleChange()
 
 defaultproperties
 {
-	HUDIcon(0)=Texture'UnrealShare.Hud1'
-	HUDIcon(1)=Texture'UnrealShare.Hud2'
-	HUDIcon(2)=Texture'UnrealShare.Hud3'
-	HUDIcon(3)=Texture'UnrealShare.Hud4'
-	HUDIcon(4)=Texture'UnrealShare.Hud5'
-	HUDIcon(5)=Texture'UnrealShare.Hud6'
+	HUDIcon(0)=Texture'HD_Hud1'
+	HUDIcon(1)=Texture'HD_Hud2'
+	HUDIcon(2)=Texture'HD_Hud3'
+	HUDIcon(3)=Texture'HD_Hud4'
+	HUDIcon(4)=Texture'HD_Hud5'
+	HUDIcon(5)=Texture'HD_Hud6'
 	HideString="Hidden"
 	InternetOption="(Dial-Up)"
 	FastInternetOption="(Dial-Up)"

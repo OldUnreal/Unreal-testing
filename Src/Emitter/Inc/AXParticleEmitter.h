@@ -6,7 +6,7 @@
 	virtual void RelinkChildEmitters();
 	virtual void UpdateEmitter(FLOAT DeltaTime, UEmitterRendering* Render, UBOOL bSkipChildren) {}
 	void PostEditChange();
-	virtual void ResetEmitter();
+	virtual void ResetEmitter() {}
 	virtual void KillEmitter();
 	virtual UBOOL ShouldRenderEmitter(FSceneNode* Frame) { return TRUE; }
 	virtual UBOOL ShouldUpdateEmitter(FSceneNode* Frame) { return TRUE; }
@@ -23,8 +23,10 @@
 	UBOOL HasAliveParticles();
 	virtual void DestroyCombiners();
 	virtual FLOAT GetMaxLifeTime() const;
+	virtual void RespawnEmitter();
 
 	void Serialize(FArchive& Ar);
+	void ScriptDestroyed();
 	void Destroy();
 	UBOOL ShouldExportProperty(UProperty* Property) const;
 /*-----------------------------------------------------------------------------

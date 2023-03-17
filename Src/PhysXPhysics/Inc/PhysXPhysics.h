@@ -15,8 +15,8 @@
 #endif
 
 #if PHYSX_MULTITHREAD
-#define FINISH_PHYSX_THREAD FScopeThread PhysXScope(UPhysXPhysics::SimulationMutex)
-#define FINISH_PHYSX_ACTORLIST FScopeThread PhysXScope(UPhysXPhysics::ActorListMutex)
+#define FINISH_PHYSX_THREAD FScopeThread<FThreadLock> PhysXScope(UPhysXPhysics::SimulationMutex)
+#define FINISH_PHYSX_ACTORLIST FScopeThread<FThreadLock> PhysXScope(UPhysXPhysics::ActorListMutex)
 #else
 #define FINISH_PHYSX_THREAD 
 #define FINISH_PHYSX_ACTORLIST 
@@ -27,10 +27,10 @@ typedef physx::PxArticulationLink PhysXArtLinkType;
 
 struct FPhysXScene;
 
-#define PXScaleToUE 50.f
-#define UEScaleToPX 0.02f
-#define PXMassToUE 100.f
-#define UEMassToPX 0.01f
+#define PXScaleToUE 20.f
+#define UEScaleToPX 0.05f
+#define PXMassToUE 50.f
+#define UEMassToPX 0.02f
 
 inline physx::PxVec3 UEVectorToPX(const FVector& V)
 {
@@ -136,28 +136,28 @@ public:
 
 	static physx::PxCooking* GetCooker();
 
-	void Tick(FLOAT DeltaTime);
-	void PreTick();
+	void Tick(FLOAT DeltaTime) override;
+	void PreTick() override;
 
-	UBOOL Exec(const TCHAR* Cmd, FOutputDevice& Out = *GLog);
-	PX_SceneBase* CreateScene(ULevel* Level);
+	UBOOL Exec(const TCHAR* Cmd, FOutputDevice& Out = *GLog) override;
+	PX_SceneBase* CreateScene(ULevel* Level) override;
 
 	// Physics mesh creation.
-	PX_MeshShape* CreateConvexMesh(FVector* Ptr, INT NumPts, UBOOL bMayMirror);
-	PX_MeshShape* CreateMultiConvexMesh(struct FConvexModel* ConvexMesh, UBOOL bMayMirror);
-	PX_MeshShape* CreateTrisMesh(FVector* Ptr, INT NumPts, DWORD* Tris, INT NumTris, UBOOL bMayMirror);
+	PX_MeshShape* CreateConvexMesh(FVector* Ptr, INT NumPts, UBOOL bMayMirror) override;
+	PX_MeshShape* CreateMultiConvexMesh(struct FConvexModel* ConvexMesh, UBOOL bMayMirror) override;
+	PX_MeshShape* CreateTrisMesh(FVector* Ptr, INT NumPts, DWORD* Tris, INT NumTris, UBOOL bMayMirror) override;
 
 	// Shape creation.
-	void CreateBoxShape(const FShapeProperties& Props, const FVector& Extent);
-	void CreateSphereShape(const FShapeProperties& Props, FLOAT Radii);
-	void CreateCapsuleShape(const FShapeProperties& Props, FLOAT Height, FLOAT Radii);
-	void CreateMeshShape(const FShapeProperties& Props, PX_MeshShape* Mesh, const FVector& Scale = FVector(1, 1, 1));
+	PX_ShapeObject* CreateBoxShape(const FShapeProperties& Props, const FVector& Extent) override;
+	PX_ShapeObject* CreateSphereShape(const FShapeProperties& Props, FLOAT Radii) override;
+	PX_ShapeObject* CreateCapsuleShape(const FShapeProperties& Props, FLOAT Height, FLOAT Radii) override;
+	PX_ShapeObject* CreateMeshShape(const FShapeProperties& Props, PX_MeshShape* Mesh, const FVector& Scale = FVector(1, 1, 1)) override;
 
 	// Joints.
-	UBOOL CreateJointFixed(const FJointBaseProps& Props);
-	UBOOL CreateJointHinge(const FJointHingeProps& Props);
-	UBOOL CreateJointSocket(const FJointSocketProps& Props);
-	UBOOL CreateConstriant(const FJointConstProps& Props);
+	UBOOL CreateJointFixed(const FJointBaseProps& Props) override;
+	UBOOL CreateJointHinge(const FJointHingeProps& Props) override;
+	UBOOL CreateJointSocket(const FJointSocketProps& Props) override;
+	UBOOL CreateConstriant(const FJointConstProps& Props) override;
 };
 
 struct FPhysXScene : public PX_SceneBase
@@ -283,6 +283,11 @@ struct FPhysXMesh : public PX_MeshShape
 
 struct FPhysXUserDataBase
 {
+	UBOOL bShapeQuery; // A shape has contact data in query.
+
+	FPhysXUserDataBase()
+		: bShapeQuery(FALSE)
+	{}
 	virtual AActor* GetActorOwner() const _VF_BASE_RET(NULL);
 	virtual UBOOL OnContact(FPhysXUserDataBase* Other, const FVector& Position, const FVector& Normal, FLOAT Force) _VF_BASE_RET(FALSE);
 };
@@ -298,6 +303,10 @@ struct FPhysXActorBase
 	virtual void pxSetScene(void* rb, PX_SceneBase* NewScene);
 
 	virtual void PhysicsTick(FLOAT DeltaTime) {}
+
+	virtual void PhysicsDraw() {}
+
+	static void DrawRbShapes(const PX_PhysicsObject& Object, const FPlane& ShapeColor);
 };
 
 // Object with gravity/force influences.
@@ -364,6 +373,59 @@ struct FPhysXJoint : public PX_JointBase
 	void UpdateCoords(const FCoords& A, const FCoords& B);
 	void NoteJointBroken();
 };
+
+enum EShapeFlags : DWORD
+{
+	ESHAPEFLAGS_None			= 0,
+	ESHAPEFLAGS_ContactCallback	= (1 << 0),
+	ESHAPEFLAGS_ContactModify	= (1 << 1),
+};
+
+struct FPhysXShape : public PX_ShapeObject
+{
+	physx::PxShape* Shape;
+	physx::PxMaterial* LocalMateria;
+
+	FPhysXUserDataBase* UserData;
+	UBOOL bPendingContact, bUseContactVelocity;
+	physx::PxVec3 PendingLocation, PendingNormal, CurContactVelocity;
+	UINT LastContactFrame;
+
+	FPhysXShape(const FShapeProperties& Parms, physx::PxShape* Sh, physx::PxMaterial* LM);
+	~FPhysXShape() noexcept(false);
+
+	FCoords GetLocalPose() override;
+	void SetContactNotify(UBOOL bEnable) override;
+	void SetFriction(FLOAT NewStatic, FLOAT NewDynmaic, FLOAT NewRestitution) override;
+	void SetLocalPose(const FCoords& NewCoords) override;
+	void SetContactVelocity(const FVector& NewCVelocity);
+	
+	inline void SyncContact()
+	{
+		guardSlow(FPhysXShape::SyncContact);
+		bPendingContact = FALSE;
+		bIsContact = TRUE;
+		ContactLocation = PXVectorToUE(PendingLocation);
+		ContactNormal = PXNormalToUE(PendingNormal);
+		LastContactFrame = GFrameNumber + 2;
+		unguardSlow;
+	}
+	inline UBOOL TickContact()
+	{
+		guardSlow(FPhysXShape::TickContact);
+		if (bIsContact && LastContactFrame < GFrameNumber)
+		{
+			bIsContact = FALSE;
+			return TRUE;
+		}
+		return FALSE;
+		unguardSlow;
+	}
+
+	UBOOL OnContact(const physx::PxVec3& Location, const physx::PxVec3& Normal);
+};
+
+#define DECLARE_PXSHAPE(ShClass) ShClass(const FShapeProperties& Parms, physx::PxShape* Sh, physx::PxMaterial* LM) : FPhysXShape(Parms, Sh, LM) {} void DrawDebug(const FPlane& ShapeColor)
 
 #if STATS
 struct FPhysXStats : public FStatGroup

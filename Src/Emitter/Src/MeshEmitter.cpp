@@ -12,7 +12,8 @@ void AXMeshEmitter::ModifyParticle(xParticle* A)
 	A->bParticles = bRenderParticles;
 	A->bRandomFrame = bParticlesRandFrame;
 	FVector V = InitialRot.GetValue() * 65536.f;
-	A->PRot = (GMath.UnitCoords / FRotator(appFloor(V.X),appFloor(V.Y),appFloor(V.Z)));
+	A->Rotation = FRotator(appFloor(V.X), appFloor(V.Y), appFloor(V.Z));
+	A->PRot = (GMath.UnitCoords / A->Rotation);
 	A->RotSp = RotationsPerSec.GetValue() * 65536.f;
 	A->bDoRot = !A->RotSp.IsZero();
 	A->AmbientGlow = AmbientGlow;

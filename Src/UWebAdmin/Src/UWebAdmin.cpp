@@ -140,7 +140,7 @@ FString Base64Decode( const TCHAR* Str )
 			break;
 
 		Junk[0] = ch;
-		ch = Base64Map.InStr(FString(Junk));
+		ch = Base64Map.InStr(Junk);
 		if( ch == -1 )
 			return FString();
 

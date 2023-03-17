@@ -35,9 +35,7 @@ event Accepted()
 	{
 		if( Query==None )
 		{
-			Query = WebQuery(Level.AllocateObj(class'WebQuery'));
-			if( Query==None )
-				Query = New (None) Class'WebQuery';
+			Query = Level.AllocateObj(class'WebQuery');
 			Query.Connection = Self;
 			Query.Manager = SubWeb;
 		}

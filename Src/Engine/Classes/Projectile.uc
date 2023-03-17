@@ -95,8 +95,8 @@ simulated function HitWall (vector HitNormal, actor Wall)
 	LastHitActor = Wall;
 	if ( Role == ROLE_Authority )
 	{
-		if ( (Mover(Wall) != None) && Mover(Wall).bDamageTriggered )
-			Wall.TakeDamage( Damage, instigator, Location, MomentumTransfer * Normal(Velocity), '');
+		if ( Wall.bIsMover && Mover(Wall).bDamageTriggered )
+			Wall.TakeDamage( Damage, instigator, Location, MomentumTransfer * Normal(Velocity), MyDamageType);
 
 		MakeNoise(1.0);
 	}

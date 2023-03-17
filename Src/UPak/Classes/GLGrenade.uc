@@ -6,8 +6,16 @@
 //=============================================================================
 class GLGrenade expands Projectile;
 
+#exec MESH IMPORT MESH=grenade ANIVFILE=MODELS\GLAUNCHER\grenade_a.3d DATAFILE=MODELS\GLAUNCHER\grenade_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=grenade X=0 Y=0 Z=0
+
+#exec MESH SEQUENCE MESH=grenade SEQ=All     STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=grenade SEQ=GRENADE STARTFRAME=0 NUMFRAMES=1
+
 #exec TEXTURE IMPORT NAME=Jgrenade1 FILE=MODELS\GLAUNCHER\grenpln.pcx GROUP=Grenade FLAGS=2 // Material #1
-#exec MESHMAP SETTEXTURE MESHMAP=grenade NUM=1 TEXTURE=Jgrenade1
+
+#exec MESHMAP NEW   MESHMAP=grenade MESH=grenade
+#exec MESHMAP SCALE MESHMAP=grenade X=0.1 Y=0.1 Z=0.2
 
 var bool bCanHitOwner, bHitWater;
 var float Count, SmokeRate;

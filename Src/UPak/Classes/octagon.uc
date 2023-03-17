@@ -3,6 +3,19 @@
 //=============================================================================
 class Octagon expands Effects;
 
+#exec MESH IMPORT MESH=Octagon ANIVFILE=MODELS\OCTAGON\Octagon_a.3d DATAFILE=MODELS\OCTAGON\Octagon_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=Octagon X=0 Y=0 Z=0
+
+#exec MESH SEQUENCE MESH=Octagon SEQ=All     STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=Octagon SEQ=OCTAGON STARTFRAME=0 NUMFRAMES=1
+
+#exec TEXTURE IMPORT NAME=JOctagon0 FILE=MODELS\OCTAGON\Octagon01.PCX GROUP=Skins FLAGS=2 // SKIN
+
+#exec MESHMAP NEW   MESHMAP=Octagon MESH=Octagon
+#exec MESHMAP SCALE MESHMAP=Octagon X=0.1 Y=0.1 Z=125.2
+
+#exec MESHMAP SETTEXTURE MESHMAP=Octagon NUM=0 TEXTURE=JOctagon0
+
 #exec AUDIO IMPORT FILE="SOUNDS\MARINE\BEAMIN.WAV" NAME="BeamIn" GROUP="Beam"
 
 simulated function PostBeginPlay()

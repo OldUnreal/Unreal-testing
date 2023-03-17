@@ -10,6 +10,7 @@
 	class FParticlesDataBase* GetParticleInterface();
 	void ResetEmitter();
 	void InitializeEmitter(AXParticleEmitter* Parent);
+	void RespawnEmitter() {}
 	FLOAT GetMaxLifeTime() const;
 /*-----------------------------------------------------------------------------
 	The End.

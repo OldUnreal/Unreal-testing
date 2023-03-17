@@ -3,8 +3,6 @@
 //=============================================================================
 class UPakShieldEffect expands ShieldBeltEffect;
 
-#exec obj load file="Textures\UPakCloak.utx" Package="UPak.BeamEffect"
-
 var float LastDrawScale;
 
 simulated function Tick( float DeltaTime )
@@ -76,5 +74,5 @@ defaultproperties
 {
      ScaleGlow=1.000000
      Fatness=240
-	 Texture=FireTexture'UPak.BeamEffect.Cloak.BeamTexture'
+	 Texture=FireTexture'BeamTexture'
 }

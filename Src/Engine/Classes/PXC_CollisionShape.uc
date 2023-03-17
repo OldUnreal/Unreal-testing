@@ -1,12 +1,14 @@
 // RigidBody physics collision shapes.
-Class PXC_CollisionShape extends Object
+Class PXC_CollisionShape extends PhysicsObject
 	native
-	abstract;
+	abstract
+	safereplace;
 
 var(Collision) float Friction; // Friction of this shape (in range of 0-1).
 var(Collision) float Restitution; // Bouncyness of this shape (in range of 0-1).
 var(Collision) vector Offset;
 var(Collision) rotator RotOffset;
+var(Collision) bool bContactReport; // This shape should cause contact callbacks.
 
 cpptext
 {
@@ -23,4 +25,5 @@ defaultproperties
 {
 	Friction=0.75
 	Restitution=0.4
+	bContactReport=true
 }

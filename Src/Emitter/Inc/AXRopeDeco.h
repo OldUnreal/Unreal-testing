@@ -12,4 +12,4 @@
 	void SoftwareCalcRope();
 	void SyncRBRope();
 	void InitRbPhysics();
-	void OnJointBroken(class UPXJ_BaseJoint* Joint);
+	BYTE GetSplitOffset() const;

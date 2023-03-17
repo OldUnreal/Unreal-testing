@@ -4,7 +4,8 @@
 // because they were moved during the split into UnrealI/UnrealShare.
 // NEVER use in mods or maps!
 //=============================================================================
-class Old extends Decoration;
+class Old extends Decoration
+	transient;
 
 // Books
 #exec MESH IMPORT MESH=BookM ANIVFILE=..\UnrealShare\Models\Book_a.3d DATAFILE=Models\Book_d.3d X=0 Y=0 Z=0

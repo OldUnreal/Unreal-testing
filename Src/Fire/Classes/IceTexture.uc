@@ -2,15 +2,11 @@
 //  WaterTexture: Simple phongish water surface.
 //  This is a built-in Unreal class and it shouldn't be modified.
 // ===================================================================
-
 class IceTexture extends FractalTexture
 	native
-	noexport
 	runtimestatic;
 
-
 // Ice movement definitions.
-
 enum PanningType
 {
 	SLIDE_Linear,
@@ -20,17 +16,13 @@ enum PanningType
 	SLIDE_WavyY,
 };
 
-
-
 enum TimingType
 {
 	TIME_FrameRateSync,
 	TIME_RealTimeScroll,
 };
 
-
 // Persistent IceTexture Parameters.
-
 var(IceLayer)		texture		GlassTexture;
 var(IceLayer)		texture		SourceTexture;
 var(IceLayer)       PanningType PanningStyle;
@@ -48,13 +40,12 @@ var                 float       UPosition;
 var                 float       VPosition;
 
 // Transient IceTexture Parameters
-
 var	transient		float       TickAccu;
 var	transient		int         OldUDisplace;
 var	transient		int         OldVDisplace;
 var transient       texture     OldGlassTex;
 var transient		texture     OldSourceTex;
-var pointer			LocalSource;
+var	pointer<BYTE*>				LocalSource;
 var transient       int			ForceRefresh;
 
 defaultproperties

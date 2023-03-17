@@ -42,6 +42,14 @@ var enum EReceiveMode
 	RMODE_Event
 } ReceiveMode;
 
+// [227j] Encoding for SendText/ReadText.
+var enum ETextEncoding
+{
+	TEXTENC_OS,			// Use OS specific encoding.
+	TEXTENC_Truncate,	// Truncate to 8 bits (0-255 char range)
+	TEXTENC_UTF16,		// Keep same UTF-16 encoding regardless of OS.
+} TextEncoding;
+
 //-----------------------------------------------------------------------------
 // Natives.
 
@@ -74,6 +82,12 @@ native function string IpAddrToString( IpAddr Arg );
 // Validate: Takes a challenge string and returns an encoded validation string.
 native function string Validate( string ValidationString, string GameName );
 
+// [227/UT] Get the local machine IP address.
+native final function GetLocalIP( out IpAddr Arg );
+
+// [227k] Send an Udp message through servers TcpIpDriver, returns false if not a server.
+native final function bool SendDriverMessage( IpAddr Arg, string Str );
+
 //-----------------------------------------------------------------------------
 // Events.
 
@@ -86,4 +100,5 @@ event ResolveFailed();
 
 defaultproperties
 {
+	TextEncoding=TEXTENC_Truncate
 }

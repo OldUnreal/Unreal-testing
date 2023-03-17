@@ -19,7 +19,7 @@ function BeginPlay()
 {
 	Super.BeginPlay();
 
-	WindowTitle = "Unreal"@WindowTitleString;
+	WindowTitle = WindowTitleString;
 	ClientClass = class'UBrowserMainClientWindow';
 }
 
@@ -78,5 +78,5 @@ function SelectLAN()
 
 defaultproperties
 {
-	WindowTitleString="Server Browser"
+	WindowTitleString="Unreal Server Browser"
 }

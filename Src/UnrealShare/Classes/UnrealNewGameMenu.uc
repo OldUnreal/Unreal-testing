@@ -17,10 +17,7 @@ function PostBeginPlay()
 {
 	Super.PostBeginPlay();
 	bClassicMode = Class'GameInfo'.Default.bUseClassicBalance;
-	if (Level.Game != none)
-		Selection = Clamp(Level.Game.Difficulty + 1, 1, MenuLength-1);
-	else
-		Selection = 1;
+	Selection = Clamp(Class'UnrealChooseGameMenu'.Default.LastSelectedSkill+1, 1, MenuLength-1);
 }
 
 function bool ProcessLeft()
@@ -45,6 +42,9 @@ function bool ProcessSelection()
 		bClassicMode = !bClassicMode;
 	else
 	{
+		Class'UnrealChooseGameMenu'.Default.LastSelectedSkill = Selection-1;
+		Class'UnrealChooseGameMenu'.Static.StaticSaveConfig();
+		
 		ChildMenu = spawn(class'UnrealMeshMenu', owner);
 		HUD(Owner).MainMenu = ChildMenu;
 		ChildMenu.ParentMenu = self;

@@ -6,4 +6,5 @@ class EmitterRendering expands RenderIterator
 
 defaultproperties
 {
+	bIsParticleEmitter=true
 }

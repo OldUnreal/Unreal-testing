@@ -22,7 +22,7 @@ cpptext
 	
 	void Destroy();
 	
-	static void CreateDefaultCylinder(PX_PhysicsObject* Object, FLOAT Radius, FLOAT Height, class AZoneInfo* Zone);
+	static PX_ShapeObject* CreateDefaultCylinder(PX_PhysicsObject* Object, FLOAT Radius, FLOAT Height, class AZoneInfo* Zone);
 	
 	virtual UBOOL Exec(const TCHAR* Cmd, FOutputDevice& Out = *GLog);
 	
@@ -38,10 +38,10 @@ cpptext
 	virtual PX_MeshShape* CreateTrisMesh(FVector* Ptr, INT NumPts, DWORD* Tris, INT NumTris, UBOOL bMayMirror) { return NULL; }
 	
 	// Shape creation.
-	virtual void CreateBoxShape(const FShapeProperties& Props, const FVector& Extent) {}
-	virtual void CreateSphereShape(const FShapeProperties& Props, FLOAT Radii) {}
-	virtual void CreateCapsuleShape(const FShapeProperties& Props, FLOAT Height, FLOAT Radii) {}
-	virtual void CreateMeshShape(const FShapeProperties& Props, PX_MeshShape* Mesh, const FVector& Scale=FVector(1,1,1)) {}
+	virtual PX_ShapeObject* CreateBoxShape(const FShapeProperties& Props, const FVector& Extent) { return NULL; }
+	virtual PX_ShapeObject* CreateSphereShape(const FShapeProperties& Props, FLOAT Radii) { return NULL; }
+	virtual PX_ShapeObject* CreateCapsuleShape(const FShapeProperties& Props, FLOAT Height, FLOAT Radii) { return NULL; }
+	virtual PX_ShapeObject* CreateMeshShape(const FShapeProperties& Props, PX_MeshShape* Mesh, const FVector& Scale=FVector(1,1,1)) { return NULL; }
 	
 	// Joints.
 	virtual UBOOL CreateJointFixed( const FJointBaseProps& Props ) { return FALSE; }

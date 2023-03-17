@@ -86,7 +86,7 @@ var(Display)  bool      bNoSmooth;       // Don't smooth actor's texture.
 var(Display)  bool      bParticles;      // Mesh is a particle system. Don't forget to set Texure->Alpha in case of an alphablend texture.
 var(Display)  bool      bRandomFrame;    // Particles use a random texture from among the default texture and the multiskins textures.
 var(Display)  bool      bMeshEnviroMap;  // Environment-map the mesh.
-var(Display)  bool		bFilterByVolume; // Filter this sprite by its Visibility volume.
+var bool				bFilterByVolume; // Filter this sprite by its Visibility volume (used by particle emitters).
 var bool				bMeshCurvy;      // Not used anymore.
 
 // 227: Implemented.
@@ -175,6 +175,7 @@ var transient const bool bRegionZoneDirty;	// 227j: This actor has moved since l
 var transient bool		bEdSelectionLock;	// 227j: This actor can't be selected in editor.
 var bool				bTraceHitBoxes;		// 227j: This actor should trace skeletal mesh hitboxes.
 var bool				bTextureAnimOnce;	// 227j: DT_SpriteAnimOnce but for mesh skins.
+var bool				bOnlyDrawWithBase;	// 227k: Only draw this actor along with the base (if Base is none, then it remains invisible).
 var private bool		bSerializeMeshInst; // Internal: Should serialize mesh instance data.
 var(Advanced) bool		bSpecialBrushActor;	// 227j Editor only: This actor can be deployed as a brush actor.
 var(Advanced) bool		bNetInterpolatePos;	// 227j: This actor should interpolate between position on net updates.
@@ -199,13 +200,17 @@ var int					CollisionGroups,CollisionFlag; // 2 actors with matching groups and 
 var(Movement) const editinline export PX_PhysicsDataBase PhysicsData; // Current rigidbody physics data associated to this actor while PHYS_RigidBody.
 var pointer<FActorRBPhysicsBase*> RbPhysicsData;	// Internal physics data.
 
-var enum ERenderPass
+var(Display) enum ERenderPass
 {
-	RP_Auto,								// Let Engine handle it.
-	RP_Solid,								// Fully solid
-	RP_SemiSolid,							// Partially translucent
-	RP_Translucent,							// Fully translucent, must draw last.
-} RenderPass;								// Overridden render pass
+	RP_Auto,
+	RP_Solid,
+	RP_SemiSolid,
+	RP_Translucent,
+} RenderPass;								/* Overridden render pass:
+											RP_Auto - Let Engine handle it.
+											RP_Solid - Fully solid.
+											RP_SemiSolid - Partially translucent.
+											RP_Translucent - Fully translucent, must draw last.*/
 
 var enum EHitBoxType
 {
@@ -667,7 +672,7 @@ enum EInputKey
 	/*FC*/	IK_NoName		,IK_PA1			,IK_OEMClear
 };
 
-var(Display) class<RenderIterator> RenderIteratorClass;	// class to instantiate as the actor's RenderInterface
+var class<RenderIterator> RenderIteratorClass;		// class to instantiate as the actor's RenderInterface
 var transient RenderIterator RenderInterface;		// abstract iterator initialized in the Rendering engine
 
 //-----------------------------------------------------------------------------
@@ -1147,7 +1152,7 @@ native(1761) final function BoundingBox GetBoundingBox( optional bool bRenderBou
 // Defaults to spawning at the spawner's location.
 // @Template - Can be class, in which case it will use the default object as template, or an actor to use as template.
 //
-native(278) final function actor Spawn
+native(278) final function coerce actor Spawn
 (
 	class<actor>      SpawnClass,
 	optional actor	  SpawnOwner,

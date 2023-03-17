@@ -11,7 +11,7 @@ class GameInfo extends Info
 // Variables.
 
 var int					ItemGoals, KillGoals, SecretGoals; // Special game goals.
-var byte					Difficulty;				// 0=easy, 1=medium, 2=hard, 3=very hard. 227 - Up to 6 for coopmode.
+var byte					Difficulty;				// 0=easy, 1=medium, 2=hard, 3=unreal. 227 - Up to 6 for coopmode.
 
 var() globalconfig float		AutoAim;				// How much autoaiming to do (1 = none, 0 = always).
 // (cosine of max error to correct)
@@ -96,13 +96,17 @@ var GameRules GameRules;						// Mutate some game rules. Do *not* use this if yo
 var AdminAccessManager AccessManager;
 const ColorCodeNumber=27; // Text color code ID when drawing on Canvas.
 
-var int GameMaxChannels;	// Maximum number of actor channels available (only for 227j+ clients).
+var int GameMaxChannels;	// [227j] Maximum number of actor channels available.
 
 var() globalconfig string		AccessManagerClass;
 var(BloodServer) globalconfig int	BleedingDamageMin;	// minimum bleeding damage
 var(BloodServer) globalconfig int	BleedingDamageMax;	// maximum bleeding damage
 var(Networking) config int		DesiredMaxChannels;		// Desired max actor channels for this game mode (custom map may override this).
 var() config string				InventoryDataIni; // Ini filename of the inventory data if GameEngine.bServerSaveInventory is enabled.
+
+// [227k] Server prelogin scene management.
+var() config string				ServerSceneClass;		// Scene class can be changed before PostBeginPlay, that's when C++ codes instances this object, but it's safe to be changed during runtime.
+var transient ServerPreloginScene ServerScene;
 
 // Bitmask flags =========================================
 var() config bool				bNoMonsters;				// Whether monsters are allowed in this play mode.

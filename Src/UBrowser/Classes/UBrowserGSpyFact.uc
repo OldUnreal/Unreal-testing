@@ -25,8 +25,8 @@ function Query(optional bool bBySuperset, optional bool bInitial)
 
 	DestroyLinks();
 
-	NumLinks = Array_Size(Default.MasterServers);
-	Array_Size(LinkAr,NumLinks);
+	NumLinks = Default.MasterServers.Size();
+	LinkAr.SetSize(NumLinks);
 	NumFinished = 0;
 	
 	for( i=0; i<NumLinks; ++i )
@@ -66,16 +66,16 @@ function DestroyLinks()
 	for( i=0; i<NumLinks; ++i )
 		if ( LinkAr[i]!=None && (GetPlayerOwner().GetEntryLevel().XLevel==LinkAr[i].XLevel || GetPlayerOwner().XLevel==LinkAr[i].XLevel) )
 			LinkAr[i].Destroy();
-	Array_Size(LinkAr,0);
+	LinkAr.Empty();
 	NumLinks = 0;
 }
 
 static final function ApplyNewServers( string S )
 {
-	local int i,P,PB;
+	local int i,j,P,PB;
 	local string V,PV;
 
-	Array_Size(Default.MasterServers,0);
+	Default.MasterServers.Empty();
 	while( true )
 	{
 		// Grab next entry.
@@ -115,11 +115,11 @@ static final function ApplyNewServers( string S )
 			}
 			P = int(PV);
 		}
-		i = Array_Size(Default.MasterServers);
-		Default.MasterServers[i].MasterServerAddress = V;
-		Default.MasterServers[i].MasterServerTCPPort = P;
-		Default.MasterServers[i].MasterServerUdpPort = PB;
-		Log("MasterServer["$i$"] = "$V$":"$P$" UdpPort: "$PB,'UBrowser');
+		Default.MasterServers[j].MasterServerAddress = V;
+		Default.MasterServers[j].MasterServerTCPPort = P;
+		Default.MasterServers[j].MasterServerUdpPort = PB;
+		Log("MasterServer["$j$"] = "$V$":"$P$" UdpPort: "$PB,'UBrowser');
+		++j;
 	}
 	StaticSaveConfig();
 }

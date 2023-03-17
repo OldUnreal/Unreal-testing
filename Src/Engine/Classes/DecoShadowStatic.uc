@@ -96,9 +96,7 @@ simulated function ShadowModeChange()
 	{
 		if( !PLShadow )
 		{
-			PLShadow = ShadowBitMap(Level.AllocateObj(Class'ShadowBitMap'));
-			if (PLShadow == none)
-				PLShadow = new(Outer) class'ShadowBitMap';
+			PLShadow = Level.AllocateObj(Class'ShadowBitMap');
 			PLShadow.SetActor(Owner);
 			PLShadow.ProjectDirection = rotang(90,0,0);
 			ProjectTexture = PLShadow;

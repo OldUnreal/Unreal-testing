@@ -55,13 +55,6 @@ void AXParticleEmitter::PostEditChange()
 		ResetEmitter();
 }
 
-void AXParticleEmitter::ResetEmitter()
-{
-	guard(AXParticleEmitter::ResetEmitter);
-	ActiveCount = 0;
-	unguard;
-}
-
 void AXParticleEmitter::ResetVars()
 {
 	guard(AXParticleEmitter::ResetVars);
@@ -80,13 +73,14 @@ void AXParticleEmitter::PostNetReceive()
 UBOOL AXParticleEmitter::Tick( FLOAT DeltaTime, enum ELevelTick TickType )
 {
 	guardSlow(AXParticleEmitter::Tick);
-	if (bDestruction && !GIsEditor && !bNoDelete && !HasAliveParticles())
+	if (!Super::Tick(DeltaTime, TickType))
+		return FALSE;
+	if (bDestruction && !GIsEditor && !bDeleteMe && !bNoDelete && ((EmitterLifeSpan -= DeltaTime) <= 0.f || !HasAliveParticles()))
 	{
 		eventExpired();
 		XLevel->DestroyActor(this);
-		return 1;
 	}
-	return Super::Tick(DeltaTime,TickType);
+	return TRUE;
 	unguardSlow;
 }
 void AXParticleEmitter::PostScriptDestroyed()
@@ -176,7 +170,7 @@ void AXParticleEmitter::KillEmitter()
 		XLevel->DestroyActor(this);
 	else
 	{
-		LifeSpan = Max(GetMaxLifeTime(), 0.01f); // To ensure emitter is destroyed even if bHidden.
+		EmitterLifeSpan = GetMaxLifeTime(); // To ensure emitter is destroyed even if bHidden.
 		bDestruction = TRUE;
 		for (AXParticleEmitter* P = CombinerList; P; P = P->CombinerList)
 			P->bDestruction = TRUE;
@@ -191,14 +185,23 @@ FLOAT AXParticleEmitter::GetMaxLifeTime() const
 	unguardSlow;
 }
 
+void AXParticleEmitter::ScriptDestroyed()
+{
+	guard(AXParticleEmitter::ScriptDestroyed);
+	if (PartPtr)
+	{
+		AEmitterGarbageCollector::MarkGCParticles(XLevel, PartPtr);
+		PartPtr = NULL;
+	}
+	Super::ScriptDestroyed();
+	unguard;
+}
 void AXParticleEmitter::Destroy()
 {
 	guard(AXParticleEmitter::Destroy);
 	if (PartPtr)
 	{
-		if (GUglyHackFlags & HACKFLAGS_AllowAutoDestruct) // Make sure we are doing this at a safe time!
-			AEmitterGarbageCollector::MarkGCParticles(XLevel, PartPtr);
-		else delete PartPtr;
+		delete PartPtr; // Most likely called during gc...
 		PartPtr = NULL;
 	}
 	Super::Destroy();
@@ -214,6 +217,7 @@ void AXParticleEmitter::DestroyCombiners()
 		for (AXParticleEmitter* P = TransientEmitters; P; P = NP)
 		{
 			NP = P->TransientEmitters;
+			P->TransientEmitters = NULL;
 			P->DestroyCombiners();
 			P->ConditionalDestroy();
 			delete P;
@@ -237,6 +241,19 @@ void AXParticleEmitter::InitializeEmitter(AXParticleEmitter* Parent)
 		XLevel = Parent->XLevel;
 		Region = Parent->Region;
 		HitActor = Parent;
+	}
+	unguardSlow;
+}
+
+void AXParticleEmitter::RespawnEmitter()
+{
+	guardSlow(AXParticleEmitter::RespawnEmitter);
+	if (PartPtr)
+		PartPtr->HideAllParts();
+	if (ParentEmitter == this)
+	{
+		for (AXParticleEmitter* P = CombinerList; P; P = P->CombinerList)
+			P->RespawnEmitter();
 	}
 	unguardSlow;
 }

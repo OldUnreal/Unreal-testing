@@ -65,10 +65,10 @@ var(DistanceFog) bool bDistanceFog; // Fog is distance fog.
 var(DistanceFog) bool bZoneBasedFog; // If enabled, the distance fog will only render inside this zone and not entire map.
 var(DistanceFog) float FogDistanceStart; // Starting distance, MUST BE LOWER THAN FogDistance!
 var(DistanceFog) color FogColor;
-var(DistanceFog) float FogDistance; // End distance of the fog. Although not needed for exponential fog, mappers still may want to use it to adjust max line of sight and clipping. !Needed for bDistanceFogClips!
+var(DistanceFog) float FogDistance; // End distance of the fog. Although not needed for exponential fog, mappers still may want to use it to adjust max line of sight and clipping. !Needed for bDistanceFogClips and DynamicCoronas!
 var(DistanceFog) float FadeTime;    // Timespan in which the fog fades in or over
 var(DistanceFog) float FogDensity;	// FogDensity. For exponential fog. Use low values, like 0.0005
-var(DistanceFog) int FogMode;		// 0 = Linear, 1 = Exponential, 2 = Exponential, DistanceFog fog does NOT work with SoftDrv or other older renderers like Glide or D3D.
+var(DistanceFog) int FogMode;		// 0 = Linear, 1 = Exponential, 2 = Exponential Squared, DistanceFog fog does NOT work with SoftDrv or other older renderers like Glide or D3D.
 
 //-----------------------------------------------------------------------------
 // Zone light.

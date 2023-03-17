@@ -21,7 +21,7 @@ simulated function PostBeginPlay()
 }
 simulated function Touch( Actor Other )
 {
-	if( bProjectActors && !Other.bHidden && Other.DrawType==DT_Mesh && Other.Mesh!=None && (!bOnlyAttachStaticActors || Other.bStatic)
+	if( bProjectActors && !Other.bHidden && ((Other.DrawType==DT_Mesh && Other.Mesh) || TerrainInfo(Other)) && (!bOnlyAttachStaticActors || Other.bStatic)
 		 && (IgnoreAttachActorTag=='' || Other.Tag!=IgnoreAttachActorTag) && (OnlyAttachTag=='' || OnlyAttachTag==Other.Tag) )
 		AttachActor(Other);
 }

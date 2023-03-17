@@ -9,13 +9,15 @@ class JumpBoots extends Pickup;
 #exec Texture Import File=Textures\HD_Icons\I_HD_JumpBoots.bmp Name=I_HD_JumpBoots Group="HD" Mips=Off
 #exec TEXTURE IMPORT NAME=I_Boots FILE=Textures\Hud\i_Boots.pcx GROUP="Icons" MIPS=OFF HD=I_HD_JumpBoots
 
+#exec TEXTURE IMPORT NAME=Jlboot1HD FILE=Models\boot.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jlboot1 FILE=Models\boot_old.pcx GROUP=Skins HD=Jlboot1HD
+
 #exec MESH IMPORT MESH=lboot ANIVFILE=Models\boot_a.3d DATAFILE=Models\boot_d.3d X=0 Y=0 Z=0
 #exec MESH LODPARAMS MESH=lboot STRENGTH=0.3
 
 #exec MESH ORIGIN MESH=lboot X=-70 Y=150 Z=-50 YAW=64
 #exec MESH SEQUENCE MESH=lboot SEQ=All    STARTFRAME=0   NUMFRAMES=1
 #exec MESH SEQUENCE MESH=lboot SEQ=Still  STARTFRAME=0   NUMFRAMES=1
-#exec TEXTURE IMPORT NAME=Jlboot1 FILE=Models\boot.pcx GROUP=Skins
 #exec MESHMAP SCALE MESHMAP=lboot X=0.03 Y=0.03 Z=0.06
 #exec MESHMAP SETTEXTURE MESHMAP=lboot NUM=1 TEXTURE=Jlboot1 TLOD=5
 

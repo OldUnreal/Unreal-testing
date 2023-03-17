@@ -19,6 +19,7 @@ public:
 	virtual void HideAllParts() _VF_BASE;
 	virtual void ScaleParticles(FLOAT SpeedScale, FLOAT DrawScale) {}
 	virtual void SetLen(INT GoalLen) _VF_BASE;
+	virtual void DrawRbDebug() {}
 
 	inline AXParticleEmitter* GetOwner() const
 	{
@@ -125,6 +126,11 @@ public:
 		}
 		unguardSlow;
 	}
+	inline void DrawRbDebug() const
+	{
+		if (RbPhysicsData)
+			RbPhysicsData->DrawDebug();
+	}
 };
 
 class ParticlesDataList : public FParticlesDataBase
@@ -139,6 +145,7 @@ private:
 
 public:
 	TArray<FVector> DelaySpawn;
+	UBOOL bAllSpawned;
 
 	inline xParticle* GetFirstAlive() const
 	{
@@ -176,9 +183,7 @@ public:
 	UBOOL HasAliveParticles() const
 	{
 		guardSlow(ParticlesDataList::HasAliveParticles);
-		if (DelaySpawn.Num())
-			return TRUE;
-		return (AliveList != NULL);
+		return (!bAllSpawned || DelaySpawn.Num() || (AliveList != NULL));
 		unguardSlow;
 	}
 	inline bool AboutToDie( INT i ) const // Return true if particle is dead or very close to dying.
@@ -272,7 +277,7 @@ public:
 				DeadList = P;
 				P->DestroyParticle();
 			}
-			else
+			else if (P->bAssimilated)
 			{
 				Prev = P;
 				P->Target = Last;
@@ -299,6 +304,14 @@ public:
 		unguard;
 	}
 
+	void DrawRbDebug()
+	{
+		guardSlow(ParticlesDataList::DrawRbDebug);
+		for (xParticle* P = AliveList; P; P = P->NextParticle)
+			P->DrawRbDebug();
+		unguardSlow;
+	}
+
 	// Destructor
 	~ParticlesDataList() noexcept(false)
 	{
@@ -318,6 +331,7 @@ public:
 		, Data(nullptr)
 		, AliveList(nullptr)
 		, DeadList(nullptr)
+		, bAllSpawned(TRUE)
 	{
 	}
 };

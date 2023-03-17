@@ -3,6 +3,9 @@
 //=============================================================================
 class Fly extends ScriptedPawn;
 
+#exec TEXTURE IMPORT NAME=JFly1HD FILE=Models\fly.pcx GROUP="HD" FLAGS=2
+#exec TEXTURE IMPORT NAME=JFly1 FILE=Models\fly_old.pcx GROUP=Skins FLAGS=2 HD=JFly1HD
+
 #exec MESH IMPORT MESH=FlyM ANIVFILE=Models\fly_a.3d DATAFILE=Models\fly_d.3d LODSTYLE=2
 #exec MESH ORIGIN MESH=FlyM X=0 Y=-30 Z=70 YAW=64 ROLL=-62
 
@@ -18,7 +21,6 @@ class Fly extends ScriptedPawn;
 #exec MESH SEQUENCE MESH=FlyM SEQ=Waiting  STARTFRAME=88   NUMFRAMES=1
 #exec MESH SEQUENCE MESH=FlyM SEQ=Fighter  STARTFRAME=0     NUMFRAMES=1
 
-#exec TEXTURE IMPORT NAME=JFly1 FILE=Models\fly.pcx GROUP=Skins FLAGS=2
 #exec MESHMAP SCALE MESHMAP=flyM X=0.06 Y=0.06 Z=0.12
 #exec MESHMAP SETTEXTURE MESHMAP=flyM NUM=1 TEXTURE=Jfly1
 

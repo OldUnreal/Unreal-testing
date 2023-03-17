@@ -3,6 +3,19 @@
 //=============================================================================
 class MarineBox expands SteelBox;
 
+#exec MESH IMPORT MESH=dropbox ANIVFILE=MODELS\CARGO\dropbox_a.3d DATAFILE=MODELS\CARGO\dropbox_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=dropbox X=0 Y=00 Z=000
+
+#exec MESH SEQUENCE MESH=dropbox SEQ=All     STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=dropbox SEQ=DROPBOX STARTFRAME=0 NUMFRAMES=1
+
+#exec TEXTURE IMPORT NAME=Jdropbox1 FILE=MODELS\CARGO\dropbox.PCX GROUP=Skins FLAGS=2 // mat1
+
+#exec MESHMAP NEW   MESHMAP=dropbox MESH=dropbox
+#exec MESHMAP SCALE MESHMAP=dropbox X=1.05 Y=1.05 Z=2.625
+
+#exec MESHMAP SETTEXTURE MESHMAP=dropbox NUM=1 TEXTURE=Jdropbox1
+
 var bool bChainedExplosion, bDestroy;
 var class<Inventory> ContentArray[ 3 ];
 var() int Health;

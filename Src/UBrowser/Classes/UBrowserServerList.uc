@@ -17,7 +17,7 @@ var globalconfig int			MaxSimultaneousPing;
 
 // Master server variables
 var string				IP;
-var int					QueryPort;
+var int					QueryPort, VerifiedGamePort;
 var string				Category;		// Master server categorization
 var string				GameName;		// Unreal, Unreal Tournament
 
@@ -61,6 +61,21 @@ function DestroyListItem()
 		ServerPing = None;
 	}
 	Super.DestroyListItem();
+}
+
+final function SetGamePort( int NewPort, optional bool bVerified )
+{
+	if( bVerified )
+	{
+		VerifiedGamePort = NewPort;
+		GamePort = NewPort;
+	}
+	else if( VerifiedGamePort==-1 )
+		GamePort = NewPort;
+}
+final function bool ValidGamePort()
+{
+	return (GamePort>0);
 }
 
 function QueryFinished(UBrowserServerListFactory Fact, bool bSuccess, optional string ErrorMsg)
@@ -273,6 +288,7 @@ function UWindowList CopyExistingListItem(Class<UWindowList> ItemClass, UWindowL
 
 	L.bLocalServer	= UBrowserServerList(SourceItem).bLocalServer;
 	L.IP			= UBrowserServerList(SourceItem).IP;
+	L.VerifiedGamePort = UBrowserServerList(SourceItem).VerifiedGamePort;
 	L.QueryPort		= UBrowserServerList(SourceItem).QueryPort;
 	L.Ping		= UBrowserServerList(SourceItem).Ping;
 	L.HostName		= UBrowserServerList(SourceItem).HostName;
@@ -286,7 +302,7 @@ function UWindowList CopyExistingListItem(Class<UWindowList> ItemClass, UWindowL
 	L.GameVer		= UBrowserServerList(SourceItem).GameVer;
 	L.MinGameVer	= UBrowserServerList(SourceItem).MinGameVer;
 	L.GameVerStr	= UBrowserServerList(SourceItem).GameVerStr;
-	L.LibraryWebPage	= UBrowserServerList(SourceItem).LibraryWebPage;
+	L.LibraryWebPage = UBrowserServerList(SourceItem).LibraryWebPage;
 	L.ServerWebPage	= UBrowserServerList(SourceItem).ServerWebPage;
 	return L;
 }
@@ -380,4 +396,5 @@ defaultproperties
 {
 	MaxSimultaneousPing=10
 	LibraryWebPage="www.oldunreal.com/libs/"
+	VerifiedGamePort=-1
 }

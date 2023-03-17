@@ -11,6 +11,7 @@ class UnrealHUD extends HUD
 #exec TEXTURE IMPORT NAME=HudGreenAmmo FILE=Textures\HUD\greenammo.pcx GROUP="Icons" MIPS=OFF
 #exec Texture Import File=Textures\HD_Icons\I_HD_Health.bmp Name=I_HD_Health Group="HD" Mips=Off
 #exec TEXTURE IMPORT NAME=IconHealth FILE=Textures\HUD\i_health.pcx GROUP="Icons" MIPS=OFF HD=I_HD_Health
+#exec TEXTURE IMPORT NAME=I_Health FILE=Textures\Hud\i_Health.pcx GROUP="Icons" MIPS=OFF HD=I_HD_Health // Moved from Health.uc for HD ref
 #exec TEXTURE IMPORT NAME=IconSelection FILE=Textures\HUD\i_rim.pcx GROUP="Icons" FLAGS=2 MIPS=OFF
 #exec Texture Import File=Textures\HD_Icons\I_HD_Skull.bmp Name=I_HD_Skull Group="HD" Mips=Off
 #exec TEXTURE IMPORT NAME=IconSkull FILE=Textures\HUD\i_skull.pcx GROUP="Icons" MIPS=OFF HD=I_HD_Skull
@@ -145,16 +146,19 @@ simulated function HUDSetup(canvas canvas)
 
 simulated function DrawCrossHair( canvas Canvas, int StartX, int StartY )
 {
+	local float XL;
+	
 	if (Crosshair>5) Return;
-	Canvas.SetPos(StartX, StartY );
-	Canvas.Style = 2;
-	if		(Crosshair==0) 	Canvas.DrawIcon(Texture'Crosshair1', 1.0);
-	else if (Crosshair==1) 	Canvas.DrawIcon(Texture'Crosshair2', 1.0);
-	else if (Crosshair==2) 	Canvas.DrawIcon(Texture'Crosshair3', 1.0);
-	else if (Crosshair==3) 	Canvas.DrawIcon(Texture'Crosshair4', 1.0);
-	else if (Crosshair==4) 	Canvas.DrawIcon(Texture'Crosshair5', 1.0);
-	else if (Crosshair==5) 	Canvas.DrawIcon(Texture'Crosshair7', 1.0);
-	Canvas.Style = 1;
+	XL = (CrosshairScale-1.f) * 8.f;
+	Canvas.SetPos(float(StartX)-XL, float(StartY)-XL);
+	Canvas.Style = ERenderStyle.STY_Masked;
+	if		(Crosshair==0) 	Canvas.DrawIcon(Texture'Crosshair1', CrosshairScale);
+	else if (Crosshair==1) 	Canvas.DrawIcon(Texture'Crosshair2', CrosshairScale);
+	else if (Crosshair==2) 	Canvas.DrawIcon(Texture'Crosshair3', CrosshairScale);
+	else if (Crosshair==3) 	Canvas.DrawIcon(Texture'Crosshair4', CrosshairScale);
+	else if (Crosshair==4) 	Canvas.DrawIcon(Texture'Crosshair5', CrosshairScale);
+	else if (Crosshair==5) 	Canvas.DrawIcon(Texture'Crosshair7', CrosshairScale);
+	Canvas.Style = ERenderStyle.STY_Normal;
 }
 
 simulated function DisplayProgressMessage( canvas Canvas )
@@ -162,13 +166,11 @@ simulated function DisplayProgressMessage( canvas Canvas )
 	local int i;
 	local float YOffset, XL, YL;
 
-	Canvas.DrawColor.R = 255;
-	Canvas.DrawColor.G = 255;
-	Canvas.DrawColor.B = 255;
+	Canvas.SetDrawColorRGB(255,255,255);
 	Canvas.bCenter = true;
 	Canvas.Font = Canvas.MedFont;
 	YOffset = 0;
-	Canvas.StrLen("TEST", XL, YL);
+	Canvas.TextSize("TEST", XL, YL);
 	for (i=0; i<5; i++)
 	{
 		Canvas.SetPos(0, 0.25 * Canvas.ClipY + YOffset);
@@ -177,14 +179,12 @@ simulated function DisplayProgressMessage( canvas Canvas )
 		YOffset += YL + 1;
 	}
 	Canvas.bCenter = false;
-	Canvas.DrawColor.R = 255;
-	Canvas.DrawColor.G = 255;
-	Canvas.DrawColor.B = 255;
+	Canvas.SetDrawColorRGB(255,255,255);
 }
 
 simulated function PreRender( canvas Canvas )
 {
-	if (PlayerPawn(Owner).Weapon != None)
+	if( PlayerPawn(Owner).Weapon )
 		PlayerPawn(Owner).Weapon.PreRender(Canvas);
 }
 
@@ -192,19 +192,20 @@ simulated function DisplayMenu( canvas Canvas )
 {
 	local float VersionW, VersionH;
 
-	if ( MainMenu == None )
+	if ( !MainMenu )
 		CreateMenu();
-	if ( MainMenu != None )
-		MainMenu.DrawMenu(Canvas);
-
-	if ( MainMenu.Class == MainMenuType )
+	if ( MainMenu )
 	{
-		Canvas.bCenter = false;
-		Canvas.Font = Canvas.MedFont;
-		Canvas.Style = 1;
-		Canvas.StrLen(VersionMessage@Level.EngineVersion$Chr(96+int(Level.EngineSubVersion)), VersionW, VersionH);
-		Canvas.SetPos(Canvas.ClipX - VersionW - 4, 4);
-		Canvas.DrawText(VersionMessage@Level.EngineVersion$Chr(96+int(Level.EngineSubVersion)), False);
+		MainMenu.DrawMenu(Canvas);
+		if ( MainMenu.Class == MainMenuType )
+		{
+			Canvas.bCenter = false;
+			Canvas.Font = Canvas.MedFont;
+			Canvas.Style = 1;
+			Canvas.StrLen(VersionMessage@Level.EngineVersion$Chr(96+int(Level.EngineSubVersion)), VersionW, VersionH);
+			Canvas.SetPos(Canvas.ClipX - VersionW - 4, 4);
+			Canvas.DrawText(VersionMessage@Level.EngineVersion$Chr(96+int(Level.EngineSubVersion)), False);
+		}
 	}
 }
 
@@ -213,12 +214,12 @@ simulated function PostRender( canvas Canvas )
 	local PlayerPawn P;
 	
 	P = PlayerPawn(Owner);
-	if( P==None )
+	if( !P )
 		return;
 
 	HUDSetup(canvas);
 
-	if ( P.PlayerReplicationInfo == None )
+	if ( !P.PlayerReplicationInfo )
 		return;
 	
 	if( Level.bIsDemoPlayback || Level.bIsDemoRecording )
@@ -241,7 +242,7 @@ simulated function PostRender( canvas Canvas )
 			return;
 		}
 	}
-	else if ( P.Weapon!=None && (Level.LevelAction == LEVACT_None) )
+	else if ( P.Weapon && (Level.LevelAction == LEVACT_None) )
 	{
 		Canvas.Font = Font'WhiteFont';
 		P.Weapon.PostRender(Canvas);
@@ -257,7 +258,7 @@ simulated function PostRender( canvas Canvas )
 		DrawInventory(Canvas, Canvas.ClipX-96, 0,False);
 		Return;
 	}
-	if (Canvas.ClipX<320) HudMode = 4;
+	//if (Canvas.ClipX<320) HudMode = 4; <- Marco: Don't override HUD settings!
 
 	// Draw Armor
 	if (HudMode<2) DrawArmor(Canvas, 0, 0,False);
@@ -280,7 +281,7 @@ simulated function PostRender( canvas Canvas )
 	else if (HudMode==2) DrawInventory(Canvas, Canvas.ClipX/2-64, Canvas.ClipY-32,False);
 
 	// Display Frag count
-	if ( (Level.Game == None) || Level.Game.bDeathMatch )
+	if ( !Level.Game || Level.Game.bDeathMatch )
 	{
 		if (HudMode<3) DrawFragCount(Canvas, Canvas.ClipX-32,Canvas.ClipY-64);
 		else if (HudMode==3) DrawFragCount(Canvas, 0,Canvas.ClipY-64);
@@ -581,9 +582,9 @@ simulated function DrawArmor(Canvas Canvas, int X, int Y, bool bDrawOne)
 	Canvas.CurY = Y;
 	if (ArmorAmount>0 && HudMode==0)
 	{
+		Canvas.Font = Font'LargeGreenFont';
 		Canvas.StrLen(ArmorAmount,XL,YL);
 		ArmorOffset += XL;
-		Canvas.Font = Font'LargeGreenFont';
 		Canvas.DrawText(ArmorAmount,False);
 	}
 }

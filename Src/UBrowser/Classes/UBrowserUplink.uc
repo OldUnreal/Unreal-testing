@@ -17,7 +17,7 @@ function PreBeginPlay()
 		Class'UBrowserMasterServerFact'.Static.StaticSaveConfig();
 		Spawn(class'UBrowserMServerLink');
 	}
-	Num = Array_Size(class'UBrowserGSpyFact'.Default.MasterServers);
+	Num = class'UBrowserGSpyFact'.Default.MasterServers.Size();
 	if( Num<=0 )
 	{
 		Error("No masterservers specified.");

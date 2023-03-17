@@ -1,6 +1,7 @@
 // Suck any nearby particles toward some point - Idea by Shadow
 Class ParticleConcentrateForce extends XParticleForces
-Native;
+	Native
+	clientonly;
 
 #EXEC TEXTURE IMPORT FILE="Textures\S_SuckForce.bmp" NAME="S_ConcentrateForce" GROUP="Icons" MIPS=off FLAGS=2 TEXFLAGS=0
 

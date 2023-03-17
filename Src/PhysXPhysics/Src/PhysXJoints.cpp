@@ -59,7 +59,7 @@ static UBOOL GetBaseProperties(const FJointBaseProps& P, physx::PxRigidActor*& A
 }
 
 #define CONSTRUCT_JOINT(jntType) \
-	NewTagged(PHYS_X_NAME) jntType(Props.Owner, J); \
+	new jntType(Props.Owner, J); \
 	return TRUE;
 
 UBOOL UPhysXPhysics::CreateJointFixed(const FJointBaseProps& Props)

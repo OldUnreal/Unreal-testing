@@ -97,14 +97,7 @@ function Paint(Canvas C, float X, float Y)
 		P = GetPlayerOwner();
 		OldFov = P.FOVAngle;
 		P.FOVAngle = 30;
-		if (bFace)
-		{
-			if( bIsHuman )
-				DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(-10, 0, -1.5), true );
-			else DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(-10, 0, -2.5), true );
-		}
-		else
-			DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, vect(0, 0, 0), true );
+		DrawClippedActor( C, WinWidth/2, WinHeight/2, MeshActor, False, ViewRotator, bFace ? (bIsHuman ? vect(-7, 0, -1.5) : vect(-4, 0, -1.5)) : (bIsHuman ? vect(0, 0, 0) : vect(5, 0, 0)), true );
 		C.SetCustomLighting();
 		C.ClearCustomLightSources();
 		P.FOVAngle = OldFov;

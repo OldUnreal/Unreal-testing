@@ -330,29 +330,28 @@ function KeyDown(int Key, float X, float Y)
 		}
 		break;
 	default:
+		if (Key >= 0x41 && Key <= 0x60)
+		{
+			// Check for hotkeys in each menu item
+			for( I = UWindowPulldownMenuItem(Items.Next); I; I=UWindowPulldownMenuItem(I.Next) )
+			{
+				if( Key==I.HotKey )
+				{
+					PerformSelect(I);
+					if ( I.Caption != "-" && !I.bDisabled )
+					{
+						BeforeExecuteItem(I);
+						ExecuteItem(I);
+					}
+				}
+			}
+		}
 	}
 }
 
 function KeyUp(int Key, float X, float Y)
 {
-	local UWindowPulldownMenuItem I;
-
-	if (Key >= 0x41 && Key <= 0x60)
-	{
-		// Check for hotkeys in each menu item
-		for ( I = UWindowPulldownMenuItem(Items.Next); I != None; I = UWindowPulldownMenuItem(I.Next) )
-		{
-			if (Key == I.HotKey)
-			{
-				PerformSelect(I);
-				if (I != None && I.Caption != "-" && !I.bDisabled)
-				{
-					BeforeExecuteItem(I);
-					ExecuteItem(I);
-				}
-			}
-		}
-	}
+	// 227k: Moved to KeyDown, because if user holds down a key when entering menu state, engine will spam KeyUp events due to input engine not being allowed to process "unpress".
 }
 
 function MenuCmd(int Item)

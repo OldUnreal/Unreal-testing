@@ -13,7 +13,7 @@
 	void PostLoad();
 
 	void InitView();
-	void OnCreateObjectNew(UObject* ParentObject);
+	void OnCreateObjectNew(UObject* ParentObject, UProperty* PropertyRef);
 	virtual void SpawnMoreParticles( int Count );
 	virtual void ChangeMaxParticles( int Count );
 	virtual void TriggerEmitter();
@@ -42,6 +42,8 @@
 	virtual void InitPhysXParticle(class xParticle* A);
 	void ExitRbPhysics();
 	FLOAT GetMaxLifeTime() const;
+	void RespawnEmitter();
+	void DrawRbDebug();
 /*-----------------------------------------------------------------------------
 	The End.
 -----------------------------------------------------------------------------*/

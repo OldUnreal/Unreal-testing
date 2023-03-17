@@ -4,7 +4,6 @@
 //=============================================================================
 class FireTexture extends FractalTexture
 	native
-	noexport
 	runtimestatic;
 
 //
@@ -43,7 +42,6 @@ enum ESpark
 	SPARK_Sprinkler			,
 };
 
-
 // Draw mode types
 enum DMode
 {
@@ -54,13 +52,10 @@ enum DMode
 	DRAW_Lathe_4 ,
 };
 
-
-
 //
 // Information about a single spark.
 //
-
-struct Spark
+struct export Spark
 {
 	var ESpark Type;   // Spark type.
 	var byte   Heat;   // Spark heat.
@@ -71,6 +66,14 @@ struct Spark
 	var byte   ByteB;  // Y-speed.
 	var byte   ByteC;  // Age, Emitter freq.
 	var byte   ByteD;  // Exp.Time.
+	
+	cpptext
+	{
+		friend FArchive& operator<<( FArchive& Ar, FSpark& S )
+		{
+			return  Ar << S.Type << S.Heat << S.X << S.Y << S.ByteA << S.ByteB << S.ByteC << S.ByteD;
+		}
+	}
 };
 
 

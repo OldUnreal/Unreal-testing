@@ -2,11 +2,9 @@
 // FractalTexture: Base class of FireEngine fractal textures.
 // This is a built-in Unreal class and it shouldn't be modified.
 //=============================================================================
-
 class FractalTexture extends Texture
-		native
-		noexport
-			abstract;
+	native
+	abstract;
 
 // Transient editing parameters.
 var transient   int  UMask;

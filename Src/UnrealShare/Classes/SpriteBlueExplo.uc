@@ -16,9 +16,9 @@ simulated function PostBeginPlay()
 
 defaultproperties
 {
-	EffectSound1=Sound'UnrealShare.General.DispEX1'
-	Texture=Texture'UnrealShare.DispExpl.dseb_A00'
-	Skin=Texture'UnrealShare.Effects.BluePal'
+	EffectSound1=Sound'DispEX1'
+	Texture=Texture'dseb_A00'
+	Skin=Texture'BluePal'
 	DrawScale=2.700000
 	LightRadius=6
 }

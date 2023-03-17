@@ -3,8 +3,51 @@
 //=============================================================================
 class SpaceMarine expands MaleBot;
 
-#exec obj load file="UPakModels.u" Package="UPak"
-#exec obj load file="Textures\UPakCloak.utx" Package="UPak"
+#exec TEXTURE IMPORT NAME=beam2 FILE=Textures\BeamEffect\beam2.fx GROUP=BeamEffect
+#exec TEXTURE IMPORT NAME=beam3 FILE=Textures\BeamEffect\beam3.fx GROUP=BeamEffect
+#exec TEXTURE IMPORT NAME=BeamTexture FILE=Textures\BeamEffect\BeamTexture.fx GROUP=BeamEffect
+
+#exec MESH IMPORT MESH=marine ANIVFILE=MODELS\MARINE\marine_a.3d DATAFILE=MODELS\MARINE\marine_d.3d X=0 Y=0 Z=0
+#exec MESH ORIGIN MESH=marine X=0 Y=0 Z=-5 YAW=200
+
+#exec MESH SEQUENCE MESH=marine SEQ=All       STARTFRAME=0 NUMFRAMES=284
+#exec MESH SEQUENCE MESH=marine SEQ=AimDnL    STARTFRAME=0 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=AimUpL    STARTFRAME=1 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=Dead2     STARTFRAME=2 NUMFRAMES=16
+#exec MESH SEQUENCE MESH=marine SEQ=Dead3     STARTFRAME=18 NUMFRAMES=13
+#exec MESH SEQUENCE MESH=marine SEQ=DeathEnd  STARTFRAME=31 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=DeathEnd2 STARTFRAME=32 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=GutHit    STARTFRAME=33 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=HeadHit   STARTFRAME=34 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=JumpLgl   STARTFRAME=35 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=LandLgFr  STARTFRAME=36 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=LeftHit   STARTFRAME=37 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=Look1L    STARTFRAME=38 NUMFRAMES=25
+#exec MESH SEQUENCE MESH=marine SEQ=RightHit  STARTFRAME=63 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=RunLgFr   STARTFRAME=64 NUMFRAMES=11
+#exec MESH SEQUENCE MESH=marine SEQ=SaluteLg  STARTFRAME=75 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=TalkLg    STARTFRAME=90 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=TalkREM   STARTFRAME=105 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=TauntL    STARTFRAME=120 NUMFRAMES=7
+#exec MESH SEQUENCE MESH=marine SEQ=TurnLg    STARTFRAME=127 NUMFRAMES=2
+#exec MESH SEQUENCE MESH=marine SEQ=Victory1L STARTFRAME=129 NUMFRAMES=25
+#exec MESH SEQUENCE MESH=marine SEQ=WaveL     STARTFRAME=154 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=TreadLg   STARTFRAME=169 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=Walk      STARTFRAME=184 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=WalkLgFr  STARTFRAME=199 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=SwimLg    STARTFRAME=214 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=StillFrRP STARTFRAME=229 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=StillFirL STARTFRAME=202 NUMFRAMES=1
+#exec MESH SEQUENCE MESH=marine SEQ=WalkLg    STARTFRAME=244 NUMFRAMES=15
+#exec MESH SEQUENCE MESH=marine SEQ=RunLg     STARTFRAME=259 NUMFRAMES=11
+#exec MESH SEQUENCE MESH=marine SEQ=Breath1L  STARTFRAME=270 NUMFRAMES=7
+#exec MESH SEQUENCE MESH=marine SEQ=Breath2L  STARTFRAME=277 NUMFRAMES=7
+
+#exec TEXTURE IMPORT NAME=JMarine7 FILE=MODELS\MARINE\smblack6.pcx GROUP=Skins FLAGS=2
+#exec TEXTURE IMPORT NAME=JMarine8 FILE=MODELS\MARINE\smblackx6.pcx GROUP=SKINS
+
+#exec MESHMAP NEW   MESHMAP=marine MESH=marine
+#exec MESHMAP SCALE MESHMAP=marine X=0.28 Y=0.28 Z=0.57
 
 #exec MESHMAP SETTEXTURE MESHMAP=marine NUM=1 TEXTURE=JMarine7
 #exec MESHMAP SETTEXTURE MESHMAP=marine NUM=2 TEXTURE=JMarine8
@@ -1598,8 +1641,11 @@ ignores SeePlayer, EnemyNotVisible, HearNoise, Died, Bump, Trigger, HitWall, Hea
 			Weapon.AmmoType.AmmoAmount = Weapon.Default.AmmoType.AmmoAmount - Rand( 4 );
 		if( MarineBeamController != none )
 			MarineBeamController.SubtractMarine( Self );
-		bHidden = true;
-		SpawnCarcass();
+		if (!bHidden)
+		{
+			bHidden = true;
+			SpawnCarcass();
+		}
 		if( !Level.Game.IsA( 'MarineMatch' ) )
 			Destroy();
 	}
@@ -2433,24 +2479,24 @@ function Destroyed()
 
 defaultproperties
 {
-				VoiceList(0)=(duration=3.500000,UsedInState="WarnFriends")
-				VoiceList(1)=(duration=2.500000,UsedInState="TransmitHuntingMessage")
-				VoiceList(2)=(duration=2.500000,UsedInState="AcknowledgeWarning")
-				CarcassType=Class'UPak.SpaceMarineCarcass'
-				RefireRate=0.700000
-				bIsWuss=True
-				bLeadTarget=False
-				GroundSpeed=300.000000
-				AccelRate=1500.000000
-				JumpZ=300.000000
-				SightRadius=1000.000000
-				Health=80
-				AttitudeToPlayer=ATTITUDE_Ignore
-				AnimSequence="Breath1L"
-				Mesh=LodMesh'UPak.marine'
-				MultiSkins(1)=Texture'UPak.Skins.JMarine7'
-				MultiSkins(2)=Texture'UPak.Skins.JMarine8'
-				CollisionRadius=20.500000
-				CollisionHeight=41.000000
-				Mass=125.000000
+	VoiceList(0)=(duration=3.500000,UsedInState="WarnFriends")
+	VoiceList(1)=(duration=2.500000,UsedInState="TransmitHuntingMessage")
+	VoiceList(2)=(duration=2.500000,UsedInState="AcknowledgeWarning")
+	CarcassType=Class'SpaceMarineCarcass'
+	RefireRate=0.700000
+	bIsWuss=True
+	bLeadTarget=False
+	GroundSpeed=300.000000
+	AccelRate=1500.000000
+	JumpZ=300.000000
+	SightRadius=1000.000000
+	Health=80
+	AttitudeToPlayer=ATTITUDE_Ignore
+	AnimSequence="Breath1L"
+	Mesh=LodMesh'marine'
+	MultiSkins(1)=Texture'JMarine7'
+	MultiSkins(2)=Texture'JMarine8'
+	CollisionRadius=20.500000
+	CollisionHeight=41.000000
+	Mass=125.000000
 }

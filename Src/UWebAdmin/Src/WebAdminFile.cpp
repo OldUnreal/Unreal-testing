@@ -214,7 +214,7 @@ static BYTE VerifyPackageFile( FArchive& Ar, FPackageVerifier& Refs )
 }
 static void CheckReferencePackages( FPackageVerifier& Refs )
 {
-	TCHAR ResultPck[1024];
+	FString ResultPck;
 	while( Refs.RefList.Num() )
 	{
 		FName ThisName = Refs.RefList.Pop();
@@ -222,7 +222,7 @@ static void CheckReferencePackages( FPackageVerifier& Refs )
 
 		if( appFindPackageFile(*ThisName,NULL,ResultPck) )
 		{
-			FArchive* LoadAr = GFileManager->CreateFileReader(ResultPck);
+			FArchive* LoadAr = GFileManager->CreateFileReader(*ResultPck);
 			if( LoadAr && VerifyPackageFile(*LoadAr,Refs) )
 			{
 				delete LoadAr;
@@ -376,7 +376,7 @@ void UWebQuery::execMovePackage(FFrame& Stack, RESULT_DECL)
 	}
 
 	FString Extension;
-	INT iSplit = FileName.InStr(TEXT("."),1);
+	INT iSplit = FileName.InStrRight(TEXT("."));
 	if( iSplit==INDEX_NONE )
 		Extension = TEXT(".u");
 	else
@@ -387,7 +387,7 @@ void UWebQuery::execMovePackage(FFrame& Stack, RESULT_DECL)
 	INT BestMatch = 0;
 	for( INT i=0; i<GSys->Paths.Num(); ++i )
 	{
-		if( GSys->Paths(i).Left(Extension.Len())==Extension )
+		if( GSys->Paths(i).Right(Extension.Len())==Extension )
 		{
 			BestMatch = i;
 			break;

@@ -73,9 +73,10 @@ native(597) final function DrawPortal( Level Map, vector Pos, rotator Rot, optio
 
 event Main()
 {
-	if( NotifyActor!=None )
+	if( NotifyActor )
 		NotifyActor.RenderTexture(Self);
-	else DrawText(5,5,"Detached client",Font'MedFont');
+	else if( AppIsEditor() )
+		DrawText(5,5,"Detached client",Font'MedFont');
 }
 
 defaultproperties

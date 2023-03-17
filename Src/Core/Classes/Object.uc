@@ -12,6 +12,7 @@ class Object
 // Internal variables.
 var pointer ObjectVtbl;
 var native const editconst int ObjectIndex;
+var native private const editconst int ObjectHashIndex;
 var pointer ObjectInternal[4];
 var native const editconst object Outer;
 var native const editconst object ObjectArchetype;
@@ -33,6 +34,20 @@ const RF_NotForEdit		= 0x00400000; // Don't load for editor.
 const RF_HasStack		= 0x02000000; // Has execution stack.
 const RF_Native			= 0x04000000; // Native.
 const RF_PendingDelete	= 0x40000000; // Object is marked for deletion.
+
+// Class flags
+const CLASS_Abstract			= 0x00001;  // Class is abstract and can't be instantiated directly.
+const CLASS_Config				= 0x00004;  // Load object configuration at construction time.
+const CLASS_Transient			= 0x00008;	// This object type can't be saved; null it out at save time.
+const CLASS_Localized			= 0x00020;  // Class contains localized text.
+const CLASS_SafeReplace			= 0x00040;  // Objects of this class can be safely replaced with default or NULL.
+const CLASS_RuntimeStatic		= 0x00080;	// Objects of this class are static during gameplay.
+const CLASS_NoExport			= 0x00100;  // Don't export to C++ header.
+const CLASS_NoUserCreate		= 0x00200;  // Don't allow users to create in the editor.
+const CLASS_PerObjectConfig		= 0x00400;  // Handle object configuration on a per-object basis, rather than per-class.
+const CLASS_NativeReplication	= 0x00800;  // Replication handled in C++.
+const CLASS_EditorOnly			= 0x02000;  // Object should only exist in editor.
+const CLASS_ClientOnly			= 0x04000;  // Object should not exist in dedicated server.
 
 // Template base for dynamic arrays (only used for C++ props).
 struct Template { var const byte B; };
@@ -170,6 +185,17 @@ enum EAnyPropertyType
 	ANYTYPE_Name,
 	ANYTYPE_Struct,
 	ANYTYPE_Object,
+};
+
+// A interpolated function
+struct InterpCurvePoint
+{
+	var() float InVal;
+	var() float OutVal;
+};
+struct InterpCurve
+{
+	var() array<InterpCurvePoint>	Points;
 };
 
 //=============================================================================
@@ -357,7 +383,7 @@ native(237) static final function int    Asc    ( string S, optional int Pos );
 native(325) static final function string IntToStr(int Value, int MinWidth);
 
 /* Lower-case some text */
-native(238) static final function string Locs( string InStr );
+native(238) static final function string Locs( coerce string S );
 /* Replace parts of some text */
 native(239) static final function string ReplaceStr( string Text, string FindStr, skip string ReplaceWith, optional bool bCaseInsensitive );
 
@@ -461,7 +487,7 @@ native(198) static final function color MakeColor( byte R, byte G, byte B, optio
 /* Very fast:
 Find an object based on object name (and outer name), example:
 SomeTexture = FindObject(Class'Texture',"Engine.P_Pawn"); */
-native(600) static final function Object FindObject( Class<Object> ObjClass, string ObjectName );
+native(600) static final function coerce Object FindObject( Class<Object> ObjClass, string ObjectName );
 
 /* Very fast:
 Returns the parent class of the desired class (defaults to current class) */
@@ -554,6 +580,9 @@ native final function vector LerpVector( vector Dest, vector Src, float Alpha );
 native final function rotator LerpRotation( rotator Dest, rotator Src, float Alpha ); // ^ Same as above but uses shortest rotation.
 native final function rotator SlerpRotation( rotator Dest, rotator Src, float Alpha ); // Will use quaternion for actual shortest rotation.
 
+// InterpCurve operator
+native static final function float InterpCurveEval( out InterpCurve curve, float input );
+
 // Give all linkers (almost) full information.
 // PackageName = the name of the package (i.e: Engine)
 // FileName = the filename of the package (i.e: ..\System\Engine.u)
@@ -567,7 +596,7 @@ native(636) static final iterator function AllLinkers( out name PackageName, out
 
 // Return the default object from some desired class (in other words Class'SomeClass'.Default.SomeVar)
 // Note: this object should be threated carefully as it may easly give some unexpected results.
-native(637) static final function Object GetDefaultObject( Class ObjClass );
+native(637) static final function coerce Object GetDefaultObject( Class ObjClass );
 
 // Split a string into two parts with Divider as the cut-off point.
 // Returns true when the string was divided.
@@ -610,6 +639,9 @@ native(646) static final function Function FindFunction( name FuncName, optional
 // Get current UnrealScript function call stack.
 // Final entry will be the function calling this function.
 native(647) static final function GetCallStack( out array<USScriptCallPair> Stack );
+
+// Get class flags of this class.
+native(649) static final function int GetClassFlags();
 
 //=============================================================================
 // Engine notification functions.

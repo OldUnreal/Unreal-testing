@@ -3,7 +3,7 @@
 // supports both in-level warp zones and cross-level warp zones.
 //=============================================================================
 class WarpZoneInfo extends ZoneInfo
-			native;
+	native;
 
 //-----------------------------------------------------------------------------
 // Information set by the level designer.
@@ -16,12 +16,13 @@ var() bool		 bNoTeleFrag;	// Don't allow pawns telefrag each other while warping
 //-----------------------------------------------------------------------------
 // Internal.
 
-var const int              iWarpZone;
-var coords                 WarpCoords;
-var transient WarpZoneInfo OtherSideActor;
-var transient Object       OtherSideLevel;
-var() string		       Destinations[8]; // Altering destinations when triggering this zone.
-var int					   numDestinations;
+var const int				iWarpZone; // ==Region.ZoneNumber
+var transient const int		iWarpNode; // Best BSP node that matches this zone portal surface.
+var coords					WarpCoords; // BSP zone portal texture coords.
+var transient WarpZoneInfo	OtherSideActor;
+var transient Object		OtherSideLevel;
+var() string				Destinations[8]; // Altering destinations when triggering this zone.
+var int						numDestinations;
 
 //-----------------------------------------------------------------------------
 // Network replication.
@@ -40,7 +41,7 @@ native(314) final function Warp  ( out vector Loc, out vector Vel, out rotator R
 native(315) final function UnWarp( out vector Loc, out vector Vel, out rotator R );
 
 // 227j: Warp/UnWarp with OtherSideActor in a single transformation pass.
-native final function WarpBothCoords( out vector Loc, out vector Vel, out vector Accel, out rotator R, optional out vector ViewBob );
+native final function WarpBothCoords( optional out vector Loc, optional out vector Vel, optional out vector Accel, optional out rotator R, optional out vector ViewBob );
 
 function PreBeginPlay()
 {

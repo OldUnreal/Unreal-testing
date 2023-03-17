@@ -366,6 +366,7 @@ function Close(optional bool bByParent)
 
 defaultproperties
 {
+	LastSelectedGame="Game.Game Vortex2"
 	LastSelectedSkill=1
 	bClassicChecked=true
 	GameHelp="Select your game to play."

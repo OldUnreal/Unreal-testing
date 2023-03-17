@@ -6,15 +6,16 @@ class SludgeBarrel extends Decoration;
 #exec AUDIO IMPORT FILE="..\UnrealShare\Sounds\General\BPush1.wav" NAME="ObjectPush" GROUP="General"
 #exec AUDIO IMPORT FILE="..\UnrealShare\Sounds\General\EndPush.wav" NAME="Endpush" GROUP="General"
 
+#exec TEXTURE IMPORT NAME=Jsbarrel1HD FILE=Models\oilbarel.pcx GROUP="HD"
+#exec TEXTURE IMPORT NAME=Jsbarrel1 FILE=Models\oilbarel_old.pcx GROUP="Skins" HD=Jsbarrel1HD
+
 #exec MESH IMPORT MESH=sbarrel ANIVFILE=Models\Oilbar_a.3d DATAFILE=Models\Oilbar_d.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=sbarrel X=0 Y=0 Z=-190 YAW=0
 #exec MESH LODPARAMS MESH=sbarrel STRENGTH=0.5
 #exec MESH SEQUENCE MESH=sbarrel SEQ=All    STARTFRAME=0  NUMFRAMES=21
 #exec MESH SEQUENCE MESH=sbarrel SEQ=Swirl  STARTFRAME=0  NUMFRAMES=21
-#exec TEXTURE IMPORT NAME=Jsbarrel1 FILE=Models\oilbarel.pcx GROUP="Skins"
 #exec MESHMAP SCALE MESHMAP=sbarrel X=0.05 Y=0.05 Z=0.1
 #exec MESHMAP SETTEXTURE MESHMAP=sbarrel NUM=1 TEXTURE=Jsbarrel1
-
 
 var() int Health;
 var name DamageTypeb;

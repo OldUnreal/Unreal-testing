@@ -48,7 +48,7 @@ function Touch( actor Other )
 						URL = Left(URL,i);
 					if( PlayerPawn( Other ).IsA( 'UPakPlayer' ))
 					{
-						Level.Game.SendPlayer(PlayerPawn(Other), IntermissionMap$"?game=UPak.UPakTransitionInfo?TransURL="$URL);
+						Level.Game.SendPlayer(PlayerPawn(Other), IntermissionMap$"?Game=UPak.UPakTransitionInfo?TransURL="$URL);
 					}
 					else
 					{
@@ -56,9 +56,7 @@ function Touch( actor Other )
 						PlayerPawn( Other ).bShowMenu = false;
 					}					
 				}
-				else if( Level.Title == "Intro1" )
-					Level.Game.SendPlayer( PlayerPawn( Other ), URL );
-				else Level.Game.SendPlayer( PlayerPawn( Other ), URL$"?game=upak.upaksingleplayer" );
+				else Level.Game.SendPlayer( PlayerPawn( Other ), URL$"?Game=UPak.UPakSinglePlayer" );
 			}
 		}
 

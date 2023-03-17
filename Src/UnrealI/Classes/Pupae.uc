@@ -3,6 +3,9 @@
 //=============================================================================
 class Pupae extends ScriptedPawn;
 
+#exec TEXTURE IMPORT NAME=JPupae1HD FILE=Models\pupae.pcx GROUP="HD" DETAIL=Dirty
+#exec texture IMPORT NAME=JPupae1 FILE=Models\pupae_old.pcx GROUP=Skins DETAIL=Dirty HD=JPupae1HD
+
 #exec MESH IMPORT MESH=Pupae1 ANIVFILE=Models\pupae_a.3d DATAFILE=Models\pupae_d.3d X=0 Y=0 Z=0
 #exec MESH ORIGIN MESH=Pupae1 X=0 Y=0 Z=-90 YAW=64 PITCH=0 ROLL=-64
 
@@ -20,7 +23,6 @@ class Pupae extends ScriptedPawn;
 #exec MESH SEQUENCE MESH=pupae1 SEQ=Dead2    STARTFRAME=130  NUMFRAMES=18  RATE=15
 #exec MESH SEQUENCE MESH=pupae1 SEQ=Dead3    STARTFRAME=148  NUMFRAMES=23  RATE=15
 
-#exec texture IMPORT NAME=JPupae1 FILE=Models\pupae.pcx GROUP=Skins DETAIL=Dirty
 #exec MESHMAP scale MESHMAP=pupae1 X=0.05 Y=0.05 Z=0.1
 #exec MESHMAP SETTEXTURE MESHMAP=pupae1 NUM=1 TEXTURE=Jpupae1
 

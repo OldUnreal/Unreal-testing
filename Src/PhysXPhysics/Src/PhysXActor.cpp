@@ -35,10 +35,16 @@ struct FPhysXActorRigidBody : public PX_PhysicsObject, public FListedPhysXActor
 	DECLARE_BASE_PX(PX_PhysicsObject, RBTYPE_RigidBody);
 
 	FRigidBodyUserData UserData;
-	FVector Gravity, ZoneVelocity;
+	physx::PxVec3 localGravity;
+	FVector ZoneVelocity;
 	FLOAT ZoneSpeed, MinImpactThreshold;
+	TArray<class UPX_Repulsor*>* Repulsors;
+	physx::PxD6Joint* UprightJoint;
+	FScale ActorScale;
+	UINT LastContactFrame;
+	physx::PxVec3 ConstantForce, ConstantTorque;
 
-	BITFIELD bHasZoneVelocity : 1, bWasSleeping : 1, bHasGravity : 1;
+	BITFIELD bHasZoneVelocity : 1, bWasSleeping : 1, bHasGravity : 1, bHadContact : 1, HasConstantForce : 1, HasConstantTorque : 1;
 
 	FPhysXActorRigidBody(const FRigidBodyProperties& Parms, FPhysXScene* S, const FVector& Pos, const FRotator& Rot);
 	~FPhysXActorRigidBody() noexcept(false);
@@ -65,11 +71,19 @@ struct FPhysXActorRigidBody : public PX_PhysicsObject, public FListedPhysXActor
 	void WakeUp();
 	void PutToSleep();
 	void Impulse(const FVector& Force, const FVector* Pos = NULL, UBOOL bCheckMass = TRUE);
+	void AddForceAtPos(const FVector& Force, const FVector& Pos);
+	void AddForce(const FVector& Force);
+	void AddTorque(const FVector& Torque);
+	void SetConstantForce(const FVector& Force);
+	void SetConstantTorque(const FVector& Torque);
+	FVector GetConstantForce() const;
+	FVector GetConstantTorque() const;
 	void SetGravity(const FVector& NewGrav);
 	void SetConstVelocity(const FVector& NewVel);
 	void SetMass(FLOAT NewMass);
 	void SetLimits(FLOAT MaxAngVel, FLOAT MaxLinVel);
 	void SetDampening(FLOAT AngVelDamp, FLOAT LinVelDamp);
+	void SetStayUpright(UBOOL bEnable);
 
 	// Query for callback events (return TRUE if actor got destroyed and should halt process now).
 	UBOOL ProcessCallbacks(FActorRBPhysicsBase* Obj);
@@ -77,6 +91,17 @@ struct FPhysXActorRigidBody : public PX_PhysicsObject, public FListedPhysXActor
 	// Collision grouping
 	void DisableCollision(DWORD ThisID, DWORD ColFlags);
 	void SetCollisionFlags(DWORD Group, DWORD Flags);
+
+	void PhysicsDraw()
+	{
+		DrawDebug();
+	}
+	void DrawDebug()
+	{
+		guard(FPhysXActorRigidBody::DrawDebug);
+		DrawRbShapes(*this, FPlane(0.9, 0.7, 0.2, 1));
+		unguard;
+	}
 };
 
 struct FStaticBodyUserData : public FPhysXUserDataBase
@@ -106,6 +131,17 @@ struct FPhysXStaticBody : public PX_PhysicsObject, public FPhysXActorBase
 
 	// Collision grouping
 	void SetCollisionFlags(DWORD Group, DWORD Flags);
+
+	void PhysicsDraw() override
+	{
+		DrawDebug();
+	}
+	void DrawDebug() override
+	{
+		guard(FPhysXStaticBody::DrawDebug);
+		DrawRbShapes(*this, FPlane(0, 0.5, 0, 1));
+		unguard;
+	}
 };
 
 struct FPlatformUserData : public FPhysXUserDataBase
@@ -135,6 +171,17 @@ struct FPhysXPlatformBody : public PX_PhysicsObject, public FPhysXActorBase
 
 	// Collision grouping
 	void SetCollisionFlags(DWORD Group, DWORD Flags);
+
+	void PhysicsDraw() override
+	{
+		DrawDebug();
+	}
+	void DrawDebug() override
+	{
+		guard(FPhysXPlatformBody::DrawDebug);
+		DrawRbShapes(*this, FPlane(0.4, 0.1, 0.7, 1));
+		unguard;
+	}
 };
 
 //==========================================================================================
@@ -143,33 +190,60 @@ struct FPhysXPlatformBody : public PX_PhysicsObject, public FPhysXActorBase
 PX_PhysicsObject* FPhysXScene::CreatePlatform(AActor* Owner, const FVector& Pos, const FRotator& Rot)
 {
 	guard(FPhysXScene::CreatePlatform);
-	return NewTagged(PHYS_X_NAME) FPhysXPlatformBody(Owner, this, Pos, Rot);
+	return new FPhysXPlatformBody(Owner, this, Pos, Rot);
 	unguard;
 }
 PX_PhysicsObject* FPhysXScene::CreateRigidBody(const FRigidBodyProperties& Parms, const FVector& Pos, const FRotator& Rot)
 {
 	guard(FPhysXScene::CreateRigidBody);
-	return NewTagged(PHYS_X_NAME) FPhysXActorRigidBody(Parms, this, Pos, Rot);
+	return new FPhysXActorRigidBody(Parms, this, Pos, Rot);
 	unguard;
 }
 PX_PhysicsObject* FPhysXScene::CreateStaticBody(AActor* Owner, const FVector& Pos, const FRotator& Rot)
 {
 	guard(FPhysXScene::CreateStaticBody);
-	return NewTagged(PHYS_X_NAME) FPhysXStaticBody(Owner, this, Pos, Rot);
+	return new FPhysXStaticBody(Owner, this, Pos, Rot);
 	unguard;
 }
 
 //==========================================================================================
 // Rigid body
 
-/*FPhysXActorRigidBody::FPhysXActorRigidBody(UPX_RigidBodyData* Data, FPhysXScene* S)
-	: FListedPhysXActor(Data->Actor, S), rbActor(NULL), DataOwner(Data), NumContants(0), bWasSleeping(FALSE)
-{}*/
+static physx::PxTransform GetGravDirJoint(const FVector& Gravity)
+{
+	FCoords Result;
+	Result.YAxis = -Gravity.SafeNormalSlow();
+	if (Result.YAxis.IsZero())
+		Result.YAxis = FVector(0.f, 0.f, 1.f);
+
+	if (Result.YAxis.DistSquared(FVector(1.f, 0.f, 0.f)) < 0.001f)
+		Result.XAxis = (Result.YAxis ^ FVector(0.f, 1.f, 0.f)).SafeNormalSlow();
+	else Result.XAxis = (Result.YAxis ^ FVector(1.f, 0.f, 0.f)).SafeNormalSlow();
+
+	Result.ZAxis = Result.YAxis ^ Result.XAxis;
+	Result.Origin = FVector(0.f, 0.f, 0.f);
+	return UECoordsToPX(Result);
+}
 
 FPhysXActorRigidBody::FPhysXActorRigidBody(const FRigidBodyProperties& Parms, FPhysXScene* S, const FVector& Pos, const FRotator& Rot)
-	: PX_PhysicsObject(Parms.Actor,S), FListedPhysXActor(S), UserData(this), MinImpactThreshold(Parms.MinImpactThreshold), bWasSleeping(FALSE)
+	: PX_PhysicsObject(Parms.Actor, S)
+	, FListedPhysXActor(S)
+	, UserData(this)
+	, MinImpactThreshold(Parms.MinImpactThreshold)
+	, UprightJoint(nullptr)
+	, ActorScale(Parms.Actor->DrawScale* Parms.Actor->DrawScale3D)
+	, LastContactFrame(~GFrameNumber)
+	, bHasZoneVelocity(FALSE)
+	, bWasSleeping(FALSE)
+	, bHasGravity(FALSE)
+	, bHadContact(FALSE)
+	, HasConstantForce(FALSE)
+	, HasConstantTorque(FALSE)
 {
+	UPX_RigidBodyData* RBD = Cast<UPX_RigidBodyData>(Parms.Actor->PhysicsData);
+	Repulsors = RBD ? &RBD->Repulsors : NULL;
 	physx::PxRigidDynamic* dyn = nullptr;
+	const FLOAT ObjMass = Max(Parms.Mass * UEMassToPX, UEMassToPX * 0.1f);
 	{
 		FINISH_PHYSX_THREAD;
 		// Init physics
@@ -181,23 +255,29 @@ FPhysXActorRigidBody::FPhysXActorRigidBody(const FRigidBodyProperties& Parms, FP
 
 		dyn->setLinearVelocity(UEVectorToPX(Parms.LinearVelocity));
 		dyn->setAngularVelocity(UENormalToPX(Parms.AngularVelocity));
-		dyn->setContactReportThreshold(Parms.MinImpactThreshold * UEScaleToPX);
+		dyn->setContactReportThreshold(UEScaleToPX);
 		dyn->setSolverIterationCounts(8, 4);
 		dyn->setSleepThreshold(2.f);
-		dyn->setMass(Parms.Mass * UEMassToPX);
+		dyn->setMass(ObjMass);
+		dyn->setCMassLocalPose(physx::PxTransform(UEVectorToPX(Parms.COMOffset), physx::PxQuat(physx::PxIdentity)));
+		dyn->setMassSpaceInertiaTensor(UENormalToPX(Parms.InertiaTensor * ObjMass));
 		dyn->setActorFlags(physx::PxActorFlag::eDISABLE_GRAVITY);
 		dyn->userData = &UserData;
 		rbActor = dyn;
 	}
-
 	Parms.CollisionShape->ApplyShape(this, Parms.Scale3D);
-
-	FINISH_PHYSX_THREAD;
-	// Init mass
-	physx::PxVec3 COM = UEVectorToPX(Parms.COMOffset);
-	physx::PxRigidBodyExt::updateMassAndInertia(*dyn, Parms.Mass * UEMassToPX, &COM);
-
-	S->pxScene->addActor(*dyn);
+	{
+		FINISH_PHYSX_THREAD;
+		// Init mass
+		if (Parms.InertiaTensor.IsZero())
+		{
+			physx::PxVec3 COM = UEVectorToPX(Parms.COMOffset);
+			physx::PxRigidBodyExt::updateMassAndInertia(*dyn, ObjMass, &COM);
+		}
+		S->pxScene->addActor(*dyn);
+	}
+	if (RBD && RBD->bStayUpright)
+		SetStayUpright(TRUE);
 }
 
 FPhysXActorRigidBody::~FPhysXActorRigidBody() noexcept(false)
@@ -207,6 +287,8 @@ FPhysXActorRigidBody::~FPhysXActorRigidBody() noexcept(false)
 	{
 		FINISH_PHYSX_THREAD;
 		STAT(--GPhysXStats.RigidObjCount.Count);
+		if (UprightJoint)
+			UprightJoint->release();
 		reinterpret_cast<FPhysXScene*>(Scene)->pxScene->removeActor(*reinterpret_cast<physx::PxRigidDynamic*>(rbActor));
 		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->release();
 		rbActor = nullptr;
@@ -254,12 +336,63 @@ void FPhysXActorRigidBody::PhysicsTick(FLOAT DeltaTime)
 	}
 	AActor::GBasedListMutex.unlock();
 
+	// Forces used by vehicles, keeps actor awake!
+	if (HasConstantForce)
+		dyn->addForce(ConstantForce * DeltaTime, physx::PxForceMode::eVELOCITY_CHANGE);
+	if (HasConstantTorque)
+		dyn->addTorque(ConstantTorque * DeltaTime, physx::PxForceMode::eVELOCITY_CHANGE);
+
 	// Don't accumulate forces in sleeping objects, else they explode when waking up
 	if (dyn->isSleeping())
 		return;
 
+	if (Repulsors && Repulsors->Num())
+	{
+		FScopeThread<FThreadLock> Scope(UPX_Repulsor::GRepulseMutex);
+		UPX_Repulsor** R = &(*Repulsors)(0);
+		const INT NumPts = Repulsors->Num();
+		INT i = 0;
+		for (; i < NumPts; ++i)
+		{
+			if (R[i] && R[i]->bContact)
+				break;
+		}
+		if (i < NumPts)
+		{
+			const physx::PxTransform globalPose = dyn->getGlobalPose();
+			const physx::PxVec3 centerOfMass = globalPose.transform(dyn->getCMassLocalPose().p);
+
+			FCoords LocalCoords = PXCoordsToUE(globalPose);
+			FCoords RotCoords = GMath.UnitCoords * LocalCoords.Origin * LocalCoords.OrthoRotation();
+			LocalCoords = RotCoords * ActorScale;
+
+			for (; i < NumPts; ++i)
+			{
+				if (!R[i] || !R[i]->bContact)
+					continue;
+
+				const FVector BaseDir = R[i]->bRepulseDown ? rbGravity.SafeNormal() : R[i]->Direction.TransformVectorBy(RotCoords);
+				FVector Pos = R[i]->Offset.TransformPointBy(LocalCoords);
+				FLOAT HitDist = (R[i]->HitLocation - Pos) | BaseDir;
+				if (HitDist >= R[i]->Distance)
+					continue;
+
+				FLOAT VelDot = (PXVectorToUE(dyn->getLinearVelocity()) | BaseDir);
+				if (VelDot > 0)
+					VelDot *= 2.f;
+				FLOAT PushStrength = (Max(rbGravity | BaseDir, 0.f) + VelDot) / NumPts * UEScaleToPX * DeltaTime;
+
+				HitDist = (1.f - (Max(HitDist, 0.f) / R[i]->Distance)) * 4.f;
+				const physx::PxVec3 force = UENormalToPX(-BaseDir * PushStrength * (2.f - R[i]->Softness) * HitDist);
+				const physx::PxVec3 torque = (UEVectorToPX(Pos) - centerOfMass).cross(force);
+				dyn->addForce(force, physx::PxForceMode::eVELOCITY_CHANGE, false);
+				dyn->addTorque(torque, physx::PxForceMode::eVELOCITY_CHANGE, false);
+			}
+		}
+	}
+
 	if (bHasGravity)
-		dyn->addForce(UEVectorToPX(Gravity * DeltaTime), physx::PxForceMode::eVELOCITY_CHANGE, false);
+		dyn->addForce(localGravity * DeltaTime, physx::PxForceMode::eVELOCITY_CHANGE, false);
 
 	if (bHasZoneVelocity)
 		dyn->addForce(GetDesiredZoneSpeed(ZoneSpeed * 5.f * DeltaTime, dyn), physx::PxForceMode::eVELOCITY_CHANGE, false);
@@ -298,6 +431,36 @@ void FPhysXActorRigidBody::SetAngularVelocity(const FVector& NewVel)
 	{
 		FINISH_PHYSX_THREAD;
 		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->setAngularVelocity(UENormalToPX(NewVel));
+	}
+}
+void FPhysXActorRigidBody::SetStayUpright(UBOOL bEnable)
+{
+	if (bEnable)
+	{
+		if (!UprightJoint && rbActor)
+		{
+			UPX_RigidBodyData* RBD = Cast<UPX_RigidBodyData>(Actor->PhysicsData);
+			if (RBD)
+			{
+				FINISH_PHYSX_THREAD;
+				physx::PxTransform UprightT(UECoordsToPX(FCoords(FVector(0.f, 0.f, 0.f), FVector(0.f, 1.f, 0.f), FVector(0.f, 0.f, 1.f), FVector(-1.f, 0.f, 0.f))));
+				const FLOAT CurMass = reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getMass();
+				UprightJoint = physx::PxD6JointCreate(PxGetPhysics(), reinterpret_cast<physx::PxRigidDynamic*>(rbActor), UprightT, NULL, UprightT);
+				UprightJoint->setSwingLimit(physx::PxJointLimitCone(Clamp<FLOAT>(RBD->StayUprightRollResistAngle, 0.001f, physx::PxPi - 0.001f), Clamp<FLOAT>(RBD->StayUprightPitchResistAngle, 0.001f, physx::PxPi - 0.001f), physx::PxSpring(RBD->StayUprightStiffness * CurMass, RBD->StayUprightDamping * CurMass)));
+				UprightJoint->setMotion(physx::PxD6Axis::eX, physx::PxD6Motion::eFREE);
+				UprightJoint->setMotion(physx::PxD6Axis::eY, physx::PxD6Motion::eFREE);
+				UprightJoint->setMotion(physx::PxD6Axis::eZ, physx::PxD6Motion::eFREE);
+				UprightJoint->setMotion(physx::PxD6Axis::eTWIST, physx::PxD6Motion::eFREE); // Yaw
+				UprightJoint->setMotion(physx::PxD6Axis::eSWING1, physx::PxD6Motion::eLIMITED); // Roll
+				UprightJoint->setMotion(physx::PxD6Axis::eSWING2, physx::PxD6Motion::eLIMITED); // Pitch
+			}
+		}
+	}
+	else if (UprightJoint)
+	{
+		FINISH_PHYSX_THREAD;
+		UprightJoint->release();
+		UprightJoint = nullptr;
 	}
 }
 void FPhysXActorRigidBody::GetPosition(FVector* Pos, FRotator* Rot)
@@ -365,11 +528,75 @@ void FPhysXActorRigidBody::Impulse(const FVector& Force, const FVector* Pos, UBO
 		else reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->addForce(UEVectorToPX(bCheckMass ? (Force / Actor->Mass) : Force), physx::PxForceMode::eVELOCITY_CHANGE);
 	}
 }
+void FPhysXActorRigidBody::AddForceAtPos(const FVector& Force, const FVector& Pos)
+{
+	if (rbActor)
+	{
+		FINISH_PHYSX_THREAD;
+		physx::PxRigidBodyExt::addForceAtPos(*reinterpret_cast<physx::PxRigidDynamic*>(rbActor), UEVectorToPX(Force), UEVectorToPX(Pos), physx::PxForceMode::eVELOCITY_CHANGE);
+	}
+}
+void FPhysXActorRigidBody::AddForce(const FVector& Force)
+{
+	if (rbActor)
+	{
+		FINISH_PHYSX_THREAD;
+		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->addForce(UEVectorToPX(Force), physx::PxForceMode::eVELOCITY_CHANGE);
+	}
+}
+void FPhysXActorRigidBody::AddTorque(const FVector& Torque)
+{
+	if (rbActor)
+	{
+		FINISH_PHYSX_THREAD;
+		reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->addTorque(UENormalToPX(Torque), physx::PxForceMode::eVELOCITY_CHANGE);
+	}
+}
+void FPhysXActorRigidBody::SetConstantForce(const FVector& Force)
+{
+	guardSlow(FPhysXActorRigidBody::SetConstantForce);
+	FINISH_PHYSX_THREAD;
+	HasConstantForce = !Force.IsZero();
+	if (HasConstantForce)
+		ConstantForce = UEVectorToPX(Force);
+	unguardSlow;
+}
+void FPhysXActorRigidBody::SetConstantTorque(const FVector& Torque)
+{
+	guardSlow(FPhysXActorRigidBody::SetConstantTorque);
+	FINISH_PHYSX_THREAD;
+	HasConstantTorque = !Torque.IsZero();
+	if (HasConstantTorque)
+		ConstantTorque = UENormalToPX(Torque);
+	unguardSlow;
+}
+FVector FPhysXActorRigidBody::GetConstantForce() const
+{
+	guardSlow(FPhysXActorRigidBody::GetConstantForce);
+	return HasConstantForce ? PXVectorToUE(ConstantForce) : FVector(0.f, 0.f, 0.f);
+	unguardSlow;
+}
+FVector FPhysXActorRigidBody::GetConstantTorque() const
+{
+	guardSlow(FPhysXActorRigidBody::GetConstantTorque);
+	return HasConstantTorque ? PXNormalToUE(ConstantTorque) : FVector(0.f, 0.f, 0.f);
+	unguardSlow;
+}
 void FPhysXActorRigidBody::SetGravity(const FVector& NewGrav)
 {
 	FINISH_PHYSX_THREAD;
-	Gravity = NewGrav;
+	rbGravity = NewGrav;
+	localGravity = UEVectorToPX(NewGrav);
 	bHasGravity = !NewGrav.IsZero();
+
+#if 0 // TODO - still incorrect orientation when gravity is not down...
+	if (UprightJoint)
+	{
+		physx::PxTransform UprightT(GetGravDirJoint(NewGrav));
+		UprightJoint->setLocalPose(physx::PxJointActorIndex::eACTOR0, UprightT);
+		UprightJoint->setLocalPose(physx::PxJointActorIndex::eACTOR1, UprightT);
+	}
+#endif
 }
 void FPhysXActorRigidBody::SetConstVelocity(const FVector& NewVel)
 {
@@ -424,10 +651,11 @@ struct FTempContact
 	}
 };
 
+static FTempContact TempContacts[MAX_CONTACTS];
+
 // Query for callback events (return TRUE if actor got destroyed and should halt process now).
 UBOOL FPhysXActorRigidBody::ProcessCallbacks(FActorRBPhysicsBase* Obj)
 {
-	static FTempContact TempContacts[MAX_CONTACTS];
 	BYTE RealContacts = 0;
 	{
 		FINISH_PHYSX_THREAD;
@@ -437,16 +665,48 @@ UBOOL FPhysXActorRigidBody::ProcessCallbacks(FActorRBPhysicsBase* Obj)
 		{
 			AActor* Other;
 			FVector v = PXVectorToUE(reinterpret_cast<physx::PxRigidDynamic*>(rbActor)->getLinearVelocity());
+			UPX_RigidBodyData* D = Cast<UPX_RigidBodyData>(Actor->PhysicsData);
 			for (INT i = 0; i < UserData.NumContants; ++i)
 			{
 				Other = UserData.PendingContants[i].Other;
+				if (D && LastContactFrame != GFrameNumber)
+				{
+					bHadContact = TRUE;
+					LastContactFrame = GFrameNumber + 5;
+					D->bWallContact = TRUE;
+					D->HitLocation = UserData.PendingContants[i].Location;
+					D->HitNormal = UserData.PendingContants[i].Normal;
+				}
 				if (!Other || Other->bDeleteMe)
 					continue;
-				FLOAT RealForce = (v - UserData.PendingContants[i].Velocity).Size();
+				FLOAT RealForce = v.DistSquared(UserData.PendingContants[i].Velocity);
 				if (RealForce > MinImpactThreshold)
-					TempContacts[RealContacts++].Set(Other, RealForce, UserData.PendingContants[i].Location, UserData.PendingContants[i].Normal);
+					TempContacts[RealContacts++].Set(Other, appSqrt(RealForce), UserData.PendingContants[i].Location, UserData.PendingContants[i].Normal);
 			}
 			UserData.NumContants = 0;
+		}
+		if (UserData.bShapeQuery)
+		{
+			UBOOL bKeepQuery = FALSE;
+			for (FPhysXShape* S = reinterpret_cast<FPhysXShape*>(GetShapes()); S; S = reinterpret_cast<FPhysXShape*>(S->GetNext()))
+			{
+				if (S->bPendingContact)
+				{
+					S->SyncContact();
+					bKeepQuery = TRUE;
+				}
+				else if(S->TickContact())
+					bKeepQuery = TRUE;
+			}
+			if (!bKeepQuery)
+				UserData.bShapeQuery = FALSE;
+		}
+		if (bHadContact && LastContactFrame < GFrameNumber)
+		{
+			bHadContact = FALSE;
+			UPX_RigidBodyData* D = Cast<UPX_RigidBodyData>(Actor->PhysicsData);
+			if (D)
+				D->bWallContact = FALSE;
 		}
 	}
 	// Must move it out of PhysicsSimulation mutex or it will crash with double lock call when sub-routine ends up destroying actor.

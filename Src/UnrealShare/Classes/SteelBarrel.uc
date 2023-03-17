@@ -6,12 +6,14 @@ class SteelBarrel extends Decoration;
 #exec AUDIO IMPORT FILE="Sounds\General\bPush1.wav" NAME="ObjectPush" GROUP="General"
 #exec AUDIO IMPORT FILE="Sounds\General\EndPush.wav" NAME="Endpush" GROUP="General"
 
+#exec TEXTURE IMPORT NAME=Jsteelbarrel1HD FILE=Models\steelb.pcx GROUP="HD" Specular=1.0
+#exec TEXTURE IMPORT NAME=Jsteelbarrel1 FILE=Models\steelb_old.pcx GROUP="Skins" Specular=1.0 HD=Jsteelbarrel1HD
+
 #exec MESH IMPORT MESH=steelbarrelM ANIVFILE=Models\steelb_a.3d DATAFILE=Models\steelb_d.3d X=0 Y=0 Z=0 ZEROTEX=1
 #exec MESH ORIGIN MESH=steelbarrelM X=0 Y=0 Z=-20 YAW=0 ROLL=128
 #exec MESH SEQUENCE MESH=steelbarrelM SEQ=All    STARTFRAME=0  NUMFRAMES=2
 #exec MESH SEQUENCE MESH=steelbarrelM SEQ=Normal STARTFRAME=0  NUMFRAMES=1
 #exec MESH SEQUENCE MESH=steelbarrelM SEQ=Crush  STARTFRAME=1  NUMFRAMES=1
-#exec TEXTURE IMPORT NAME=Jsteelbarrel1 FILE=Models\steelb.pcx GROUP="Skins" Specular=1.0
 #exec MESHMAP SCALE MESHMAP=steelbarrelM X=0.04 Y=0.04 Z=0.08
 #exec MESHMAP SETTEXTURE MESHMAP=steelbarrelM NUM=0 TEXTURE=Jsteelbarrel1
 

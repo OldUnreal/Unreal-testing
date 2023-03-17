@@ -145,7 +145,7 @@ var UWindowCheckbox FlatShadingCheck;
 var localized string FlatShadingText;
 var localized string FlatShadingHelp;
 
-// Curved surfaces
+// Curved surfaces (unused since 227j again)!
 var UWindowCheckbox CurvyMeshCheck;
 var localized string CurvyMeshText;
 var localized string CurvyMeshHelp;
@@ -162,6 +162,16 @@ var bool bSupportsNoFiltering;
 var UWindowCheckbox TrilinearFilteringCheck;
 var localized string TrilinearFilteringText;
 var localized string TrilinearFilteringHelp;
+
+// NoSmooth mode
+var UWindowCheckbox NoSmoothRenderCheck;
+var localized string NoSmoothRenderText;
+var localized string NoSmoothRenderHelp;
+
+// Enable HD textures
+var UWindowCheckbox HDTexturesCheck;
+var localized string HDTexturesText;
+var localized string HDTexturesHelp;
 
 // Anisotropic Filtering
 var UWindowComboControl AnisotropicFilteringCombo;
@@ -408,12 +418,12 @@ function Created()
 	ControlOffset += 25;
 
 	// Curvy surfaces
-	CurvyMeshCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
+	/*CurvyMeshCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
 	CurvyMeshCheck.SetText(CurvyMeshText);
 	CurvyMeshCheck.SetHelpText(CurvyMeshHelp);
 	CurvyMeshCheck.SetFont(F_Normal);
 	CurvyMeshCheck.Align = TA_Left;
-	ControlOffset += 25;
+	ControlOffset += 25;*/
 
 	// Skybox fog detail
 	SkyFogCombo = UWindowComboControl(CreateControl(class'UWindowComboControl', ControlLeft, ControlOffset, ControlWidth, 1));
@@ -449,6 +459,22 @@ function Created()
 	TrilinearFilteringCheck.SetHelpText(TrilinearFilteringHelp);
 	TrilinearFilteringCheck.SetFont(F_Normal);
 	TrilinearFilteringCheck.Align = TA_Left;
+	ControlOffset += 25;
+	
+	// NoSmooth render
+	NoSmoothRenderCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
+	NoSmoothRenderCheck.SetText(NoSmoothRenderText);
+	NoSmoothRenderCheck.SetHelpText(NoSmoothRenderHelp);
+	NoSmoothRenderCheck.SetFont(F_Normal);
+	NoSmoothRenderCheck.Align = TA_Left;
+	ControlOffset += 25;
+	
+	// HD Textures
+	HDTexturesCheck = UWindowCheckbox(CreateControl(class'UWindowCheckbox', ControlLeft, ControlOffset, ControlWidth, 1));
+	HDTexturesCheck.SetText(HDTexturesText);
+	HDTexturesCheck.SetHelpText(HDTexturesHelp);
+	HDTexturesCheck.SetFont(F_Normal);
+	HDTexturesCheck.Align = TA_Left;
 	ControlOffset += 25;
 
 	// Anisotropic Filtering
@@ -568,7 +594,7 @@ function LoadAvailableSettings()
 	WeaponFlashCheck.bChecked = !P.bNoFlash;
 	LoadPawnShadowSettings();
 	FlatShadingCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager FlatShading"));
-	CurvyMeshCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager CurvedSurfaces"));
+	//CurvyMeshCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager CurvedSurfaces"));
 	LightLODSlider.SetValue(int(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager LightMapLOD")));
 	LoadConditionallySupportedSettings();
 
@@ -758,6 +784,12 @@ function LoadConditionallySupportedSettings()
 		TrilinearFilteringCheck.bChecked = false;
 	else
 		TrilinearFilteringCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.GameRenderDevice UseTrilinear"));
+	
+	// NoSmooth rendering
+	NoSmoothRenderCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager UseNoSmoothWorld"));
+	
+	// HD Textures
+	HDTexturesCheck.bChecked = bool(P.ConsoleCommand("get ini:Engine.Engine.ViewportManager UseHDTextures"));
 
 	// Anisotropic Filtering
 	bSupportedSetting = false;
@@ -975,11 +1007,13 @@ function BeforePaint(Canvas C, float X, float Y)
 	MinFramerateEdit.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	DecoShadowsCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	FlatShadingCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
-	CurvyMeshCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	//CurvyMeshCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	LightLODSlider.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	SkyFogCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	UsePrecacheCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	TrilinearFilteringCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	NoSmoothRenderCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
+	HDTexturesCheck.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	AnisotropicFilteringCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	AntialiasingCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
 	VSyncCombo.GetMinTextAreaWidth(C, LabelTextAreaWidth);
@@ -1072,8 +1106,8 @@ function BeforePaint(Canvas C, float X, float Y)
 	FlatShadingCheck.SetSize(CheckboxWidth, 1);
 	FlatShadingCheck.WinLeft = ControlLeft;
 
-	CurvyMeshCheck.SetSize(CheckboxWidth, 1);
-	CurvyMeshCheck.WinLeft = ControlLeft;
+	//CurvyMeshCheck.SetSize(CheckboxWidth, 1);
+	//CurvyMeshCheck.WinLeft = ControlLeft;
 
 	SkyFogCombo.SetSize(ControlWidth, 1);
 	SkyFogCombo.WinLeft = ControlLeft;
@@ -1088,6 +1122,12 @@ function BeforePaint(Canvas C, float X, float Y)
 
 	TrilinearFilteringCheck.SetSize(CheckboxWidth, 1);
 	TrilinearFilteringCheck.WinLeft = ControlLeft;
+
+	NoSmoothRenderCheck.SetSize(CheckboxWidth, 1);
+	NoSmoothRenderCheck.WinLeft = ControlLeft;
+
+	HDTexturesCheck.SetSize(CheckboxWidth, 1);
+	HDTexturesCheck.WinLeft = ControlLeft;
 
 	AnisotropicFilteringCombo.SetSize(ControlWidth, 1);
 	AnisotropicFilteringCombo.WinLeft = ControlLeft;
@@ -1162,9 +1202,9 @@ function Notify(UWindowDialogControl C, byte E)
 		case FlatShadingCheck:
 			FlatShadingChanged();
 			break;
-		case CurvyMeshCheck:
+		/*case CurvyMeshCheck:
 			CurvySurfsChanged();
-			break;
+			break;*/
 		case SkyFogCombo:
 			SkyFogDetailChanged();
 			break;
@@ -1176,6 +1216,12 @@ function Notify(UWindowDialogControl C, byte E)
 			break;
 		case TrilinearFilteringCheck:
 			TrilinearFilteringChanged();
+			break;
+		case NoSmoothRenderCheck:
+			NoSmoothRenderChanged();
+			break;
+		case HDTexturesCheck:
+			HDTexturesChanged();
 			break;
 		case AnisotropicFilteringCombo:
 			AnisotropicFilteringChanged();
@@ -1355,7 +1401,7 @@ function FlatShadingChanged()
 
 function CurvySurfsChanged()
 {
-	GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.ViewportManager CurvedSurfaces" @ CurvyMeshCheck.bChecked);
+	//GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.ViewportManager CurvedSurfaces" @ CurvyMeshCheck.bChecked);
 }
 
 function MinFramerateChanged()
@@ -1394,6 +1440,16 @@ function TrilinearFilteringChanged()
 		LoadConditionallySupportedSettings(); // refreshes Trilinear Filtering & Anisotropic Filtering
 	}
 	bInitialized = true;
+}
+
+function NoSmoothRenderChanged()
+{
+	GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.ViewportManager UseNoSmoothWorld "$string(NoSmoothRenderCheck.bChecked));
+}
+
+function HDTexturesChanged()
+{
+	GetPlayerOwner().ConsoleCommand("set ini:Engine.Engine.ViewportManager UseHDTextures "$string(HDTexturesCheck.bChecked));
 }
 
 function AnisotropicFilteringChanged()
@@ -1670,6 +1726,12 @@ defaultproperties
 
 	TrilinearFilteringText="Trilinear Filtering"
 	TrilinearFilteringHelp="Trilinear texture filtering."
+	
+	NoSmoothRenderText="NoSmooth view filtering"
+	NoSmoothRenderHelp="Disable world view texture smoothing (for that retro view mode)"
+	
+	HDTexturesText="Use HD Textures"
+	HDTexturesHelp="Allow game to run with new HD textures when in hi-res mode."
 
 	AnisotropicFilteringText="Anisotropic Filtering"
 	AnisotropicFilteringHelp="Anisotropic texture filtering."

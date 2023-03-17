@@ -77,8 +77,9 @@ var(EmCombiner) name ParticleLifeTimeTag; // Emit this particle every X amount o
 var(EmGeneral) const int MaxParticles; // Maximum particles of this emitter.
 var(EmGeneral) float ParticlesPerSec; // Number of particles that should spawn per second (0 = LifeSpan/MaxParticles).
 var(EmGeneral) float LODFactor; // Increased time delay on particle emitting while on low detail level.
-var(EmGeneral) FloatRange LifetimeRange, // Particle lifespan.
-							AutoResetTime; // With bAutoReset, reset time.
+var(EmGeneral) FloatRange LifetimeRange; // Particle lifespan.
+var(EmGeneral) FloatRange AutoResetTime; // With bAutoReset, reset time.
+var(EmGeneral) FloatRange StartupDelay; // Delay in seconds before Emitter activates (can be used for triggered emitters to delay an effect).
 var(EmGeneral) Actor FinishedSpawningTrigger; // Single actor to be triggered when all particles are spawned out.
 var(EmRevolution) RangeVector RevolutionOffset; // Particle revolution offset, added to this emitters location.
 var(EmRevolution) RangeVector RevolutionsPerSec; // Number of revolutions per second.
@@ -91,6 +92,7 @@ var(EmCombiner) export editinline array<XEmitter> SpawnCombiner; // A second emi
 var(EmCombiner) export editinline array<XEmitter> KillCombiner; // A second emitter to emit particle over kill location of a particle.
 var(EmCombiner) export editinline array<XEmitter> WallHitCombiner; // A second emitter to emit particle over wallhit location of a particle.
 var(EmCombiner) export editinline array<XEmitter> LifeTimeCombiner; // Emit this particle every X amount of seconds of this particles lifetime.
+var(EmCombiner) export editinline array<XEmitter> IdleCombiner; // An emitter that is simply idle and doesn't interact with other emitters (useful for multi-emitter effect on trigger).
 var(EmCombiner) IntRange CombinedParticleCount; // When this Emitter actor is a combiner, spawn this amount of particles.
 var(EmCombiner) FloatRange ParticleLifeTimeSDelay; // Spawn delay for lifetime combiner.
 var(EmCombiner) export editinline XTrailEmitter ParticleTrail; // Trail that should appear for each particle.
@@ -103,8 +105,8 @@ var(EmVisuals) array<Speed3DType> TimeDrawScale3D; // Time scaled particles 3D s
 var(EmVisuals) ESpriteAnimType SpriteAnimationType;
 var(EmVisuals) float PartSpriteForwardZ; // With sprite particles, how much forward should their Z offset be.
 var(EmVisibility) BoundingBox VisibilityBox;
-var(EmVisibility) float CullDistance, // Only render when camera is closer than this range.
-						CullDistanceFadeDist; // Fade out distance scaling (scaled by CullDistance), where particles should start fading out.
+var(EmVisibility) float CullDistance; // Only render when camera is closer than this range.
+var(EmVisibility) float CullDistanceFadeDist; // Fade out distance scaling (scaled by CullDistance), where particles should start fading out.
 var(EmPosition) RangeVector BoxLocation;
 var(EmPosition) FloatRange SphereCylinderRange;
 var(EmPosition) ESpawnPosType SpawnPosType;
