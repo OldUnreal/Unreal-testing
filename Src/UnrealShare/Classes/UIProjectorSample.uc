@@ -1,1 +1,0 @@
-class UIProjectorSample extends UIProjector abstract;

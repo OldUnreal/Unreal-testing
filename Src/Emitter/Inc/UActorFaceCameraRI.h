@@ -1,2 +1,0 @@
-UActorFaceCameraRI() {}
-AActor* GetActors();
