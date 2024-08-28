@@ -38,3 +38,6 @@ This is the Unreal-testing repo for the 227 patch
 To report issues, it is recommended to do so on the github itself, by going to issues and clicking "New Issue":
 
 ![image](https://github.com/OldUnreal/Unreal-testing/assets/70912455/94046c6f-20aa-487f-a058-305691791110)
+
+### Public source code can be found from this repo:
+https://github.com/OldUnreal/Unreal-PubSrc
