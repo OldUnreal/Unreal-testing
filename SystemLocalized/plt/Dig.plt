@@ -75,3 +75,7 @@ Hint="Podejdź do czerwonych przycisków przy ścianie, aby je włączyć."
 Message="Drugie źródło zasilania pola siłowego jest aktywne."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Podejdź do czerwonych przycisków przy ścianie, aby je włączyć."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
+PickupMessage="Podnosisz 80 Odłamków Tarydu"
