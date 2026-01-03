@@ -75,3 +75,7 @@ Hint="Aperte os botões vermelhos na parede batendo neles."
 Message="O estado da fonte de energia dois do Campo de Força é ativo."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Aperte os botões vermelhos na parede batendo neles."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
+PickupMessage="Você pegou 80 Fragmentos de Tarídio"
