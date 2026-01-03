@@ -75,3 +75,7 @@ Hint="Pulsa los botones rojos del muro tocándolos."
 Message="Fuente de energía dos del Campo de Fuerza activa."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Pulsa los botones rojos del muro tocándolos."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium shards"
+PickupMessage="Has recogido 80 Fragmentos de Taridio"
