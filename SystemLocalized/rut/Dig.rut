@@ -75,3 +75,7 @@ Hint="Нажмите на красные кнопки на стене навал
 Message="Статус второго источника питания силового поля - активен."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Нажмите на красные кнопки на стене навалившись на них."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
+PickupMessage="Вы взяли 80 кристаллов таридия"
