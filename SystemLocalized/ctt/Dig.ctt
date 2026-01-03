@@ -75,3 +75,7 @@ Hint="Prem els botons vermells a la paret empenyent-los."
 Message="L'estat de font d'alimentació dos de camp de força és actiu."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Prem els botons vermells a la paret empenyent-los."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
+PickupMessage="Heu recollit 80 Fragments de Taridi"
