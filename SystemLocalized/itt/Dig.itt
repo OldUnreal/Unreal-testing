@@ -75,3 +75,7 @@ Hint="Premi i pulsanti rossi sul muro andandoci contro."
 Message="Lo stato della seconda fonte d'energia del Campo di Forza è "attivo"."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Premi i pulsanti rossi sul muro andandoci contro."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
+PickupMessage="Hai raccolto 80 schegge di Tarydium"

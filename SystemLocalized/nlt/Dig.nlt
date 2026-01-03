@@ -75,3 +75,7 @@ Hint="Druk op de rode knoppen aan de muur door er tegenaan te botsen."
 Message="KrachtVeld stroombron twee status is actief."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Druk op de rode knoppen aan de muur door er tegenaan te botsen."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
+PickupMessage="Je hebt 80 Tarydium-scherven"

@@ -52,3 +52,6 @@ Hint="Press the red buttons on the wall by bumping into them."
 [TranslatorEvent7]
 Message="Force Field power source two status is active."
 Hint="Press the red buttons on the wall by bumping into them."
+
+[StingerAmmo17]
+PickupMessage="You picked up 80 Tarydium Shards"
