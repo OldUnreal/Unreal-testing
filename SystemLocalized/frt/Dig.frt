@@ -75,3 +75,7 @@ Hint="Appuyez sur les boutons rouges au mur en les touchant."
 Message="La source d'énergie 2 du champ de force est active."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Appuyez sur les boutons rouges au mur en les touchant."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium shards"
+PickupMessage="Vous avez ramassé 80 Éclats de Tarydium"
