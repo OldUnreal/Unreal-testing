@@ -75,3 +75,7 @@ Hint="Drücke auf die roten Knöpfe an der Wand, indem du gegen sie stößt."
 Message="Kraftfeld-Energieversorgung Zwei, Status ist aktiv."
 ; EN: Hint="Press the red buttons on the wall by bumping into them."
 Hint="Drücke auf die roten Knöpfe an der Wand, indem du gegen sie stößt."
+
+[StingerAmmo17]
+; EN: PickupMessage="You picked up 80 Tarydium shards"
+PickupMessage="80 Tarydiumsplitter erhalten"
