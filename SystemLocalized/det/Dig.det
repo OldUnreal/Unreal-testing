@@ -77,5 +77,5 @@ Message="Kraftfeld-Energieversorgung Zwei, Status ist aktiv."
 Hint="Drücke auf die roten Knöpfe an der Wand, indem du gegen sie stößt."
 
 [StingerAmmo17]
-; EN: PickupMessage="You picked up 80 Tarydium shards"
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
 PickupMessage="80 Tarydiumsplitter erhalten"

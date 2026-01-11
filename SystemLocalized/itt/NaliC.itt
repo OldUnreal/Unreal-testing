@@ -45,3 +45,16 @@ Hint="Raggiungi la torre più alta e uccidi il demone per essere ammesso nelle s
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Che diavolo ci fai qui?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Hai raccolto 6 8-ball"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Hai raccolto 6 8-ball"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Hai raccolto 6 8-ball"
+

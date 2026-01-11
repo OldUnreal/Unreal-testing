@@ -307,6 +307,7 @@ LargeFont=UWindowFonts.Tahoma30
 BigFont=UWindowFonts.Tahoma12
 Papyrus=UWindowFonts.Tahoma30
 Chiller=UWindowFonts.Tahoma30
+Arial=UWindowFonts.Tahoma30
 
 ; LEAVE THIS SECTION UNTRANSLATED - it was decided by consensus.
 [LinkerUpdateCommandlet]

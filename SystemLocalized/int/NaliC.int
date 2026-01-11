@@ -30,3 +30,13 @@ Hint="Go to the tallest tower and slay the daemon to gain access to the dungeon.
 
 [TranslatorEvent6]
 Message="What the HELL are you doing up here?"
+
+[RocketCan4]
+PickupMessage="You picked up 6 Eightballs"
+
+[RocketCan5]
+PickupMessage="You picked up 6 Eightballs"
+
+[RocketCan7]
+PickupMessage="You picked up 6 Eightballs"
+

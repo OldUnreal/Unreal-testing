@@ -45,3 +45,16 @@ Hint="Ves a la torre més alta i dóna mort al dimoni per aconseguir accés a la
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Què COI fas aquí a dalt?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Has recollit 6 projectils Eightball"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Has recollit 6 projectils Eightball"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Has recollit 6 projectils Eightball"
+

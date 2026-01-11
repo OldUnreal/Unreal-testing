@@ -45,3 +45,16 @@ Hint="Vá até a torre mais alta e assassine o demônio para ganhar acesso à ma
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="O que DIABOS você está fazendo aqui?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Você pegou 6 Projéteis do Canhão 8"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Você pegou 6 Projéteis do Canhão 8"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Você pegou 6 Projéteis do Canhão 8"
+

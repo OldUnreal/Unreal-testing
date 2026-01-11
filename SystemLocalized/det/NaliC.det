@@ -45,3 +45,16 @@ Hint="Gehe zum höchsten Turm und erschlage den Dämon um den Zutritt zum Kerker
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Was zur Hölle machst du hier oben?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="6 Eightballraketen erhalten"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="6 Eightballraketen erhalten"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="6 Eightballraketen erhalten"
+

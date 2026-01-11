@@ -45,3 +45,16 @@ Hint="Ve a la torre más alta y mata al demonio para acceder a la mazmorra."
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="¿Qué DEMONIOS estás haciendo aquí?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Has recogido 6 Proyectiles Eightball"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Has recogido 6 Proyectiles Eightball"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Has recogido 6 Proyectiles Eightball"
+

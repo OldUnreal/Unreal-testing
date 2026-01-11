@@ -45,3 +45,16 @@ Hint="Trouvez la plus haute tour et tuez le démon pour accéder au donjon."
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Qu'est-ce que vous FOUTEZ là ?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Vous avez trouvé 6 Roquettes"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Vous avez trouvé 6 Roquettes"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Vous avez trouvé 6 Roquettes"
+

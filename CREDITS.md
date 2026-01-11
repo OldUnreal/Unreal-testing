@@ -53,7 +53,7 @@ Here’s a list of people that helped me in this project in no particular order.
     * **_French:_** **Hellkeeper** (review), **Rackover/Louvenarde** (additional contributions)
     * **_Spanish:_** **Neon_Knight** (review), **rarsonic** (additional contributions)
     * **_Italian:_** **UBerserker, BBG-(DOG)-, Lowenz** and **TaglesMalsto** (additional contributions)
-    * **_Russian:_** **u.HighPriest** (localization), **Skaarj ZR, FLAK, ArchGrey** and **Reborn** (additional contributions)
+    * **_Russian:_** **u.HighPriest** (localization), **Skaarj ZR, FLAK, ArchGrey**, **Reborn** and **arctic0cat** (additional contributions)
     * **_Polish:_** **Victor Delacroix** (review), **yrex.** (additional contributions)
     * **_Portuguese:_** **Nahand** (localization), **BIr4** (review), **Naruto_9** (additional contributions)
     * **_Catalan:_** **rarsonic** (additional contributions)

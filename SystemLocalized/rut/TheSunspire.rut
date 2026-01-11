@@ -1,18 +1,18 @@
 ﻿[LevelInfo0]
 ; EN: Title="The Sunspire"
-Title="Санспайр"
+Title="Солнечный Шпиль"
 ; EN: LevelEnterText="Entering The Sunspire"
-LevelEnterText="Вход в Санспайр"
+LevelEnterText="Вход в Солнечный Шпиль"
 
 [LevelSummary]
 ; EN: Title="The Sunspire"
-Title="Санспайр"
+Title="Солнечный Шпиль"
 ; EN: LevelEnterText="Entering The Sunspire"
-LevelEnterText="Вход в Санспайр"
+LevelEnterText="Вход в Солнечный Шпиль"
 
 [TranslatorEvent17]
 ; EN: Message="I will not return to the Sunspire today. I was almost slain by the Sky Demon this morning and I fear for our brothers that have not yet escaped. I feel that we will not see them again in this life."
-Message="Я не вернусь в Санспайр сегодня. Меня едва не убили Демоны Небес этим утром, и я переживаю за наших братьев, которые остались там. Я чувствую, что уже не увижу их в этой жизни."
+Message="Я не вернусь в Солнечный Шпиль сегодня. Меня едва не убили Демоны Небес этим утром, и я переживаю за наших братьев, которые остались там. Я чувствую, что уже не увижу их в этой жизни."
 ; EN: Hint="Watch out on the ledge. If you fall, you will fall to your death."
 Hint="Будьте осторожны на краю. Падение будет смертельным."
 

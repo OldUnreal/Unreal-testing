@@ -13,3 +13,8 @@ LevelEnterText="Entrando no Desfiladeiro da Serpente"
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."
 Message="Aqui jaz M'olner, que a sua alma voe alto com os deuses."
+
+[RocketCan0]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Você pegou 6 Projéteis do Canhão 8"
+

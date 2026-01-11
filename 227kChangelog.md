@@ -31,6 +31,7 @@
 * Overall:
     * All device names shortened to just their names (e.g. "Support for OpenAL 3D" -> "OpenAL 3D").
     * Crashsite2.\*: Subtitles synchronized across all languages.
+	* Dig.\*: Applied mapfix as reported by igorpupkinable in OldUnreal/Unreal-testing as well as the Unreal Wiki on Fandom.
     * D3DDrv.\*: Now unavailable for Win64.
     * D3D9Drv.\*: The renderer can now be selected in UnrealEd.
     * DmStomp.\*: Fixed Title.
@@ -42,6 +43,8 @@
         * Console name renamed: ''"Standard Unreal Console"'' -> ''"Standard (Deprecated)"''.
         * General file layout updated in all languages.
         * By consensus (sigh), the Commandlets will be left untranslated.
+	* NaliBoat.\*: Applied mapfix as reported by the Unreal Wiki on Fandom.
+	* NaliC.\*: Applied mapfix as reported by the Unreal Wiki on Fandom.
     * SetupUnrealPatch.\*: Removed UED version number.
     * UBrowser.\*: Console name renamed: "Unreal Browser Console" -> "Classic Menu"
     * UMenu.\*:
@@ -69,6 +72,7 @@
     * Small corrections to Dark.plt, UGCredits.plt, UMenu.plt and UnrealShare.plt. (Thanks, yrex!)
 * Portuguese: Full revision of the language by BIr4.
 * Russian: (Thanks to Reborn for noting the changes)
+	* Added all the localization fixes by arctic0cat.
     * Engine.rut: Replaced fonts.
     * UMenu.rut: Better lines, enlarged area in [UMenuOptionsWindow].
     * UnrealShare.rut: Better lines for Controls menu.

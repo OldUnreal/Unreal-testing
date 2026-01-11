@@ -12,7 +12,7 @@ Message="Дневник: М. Ворч: Голова все еще кружитс
 
 [TranslatorEvent5]
 ; EN: Message="LOG: K. Divad: Our mission to locate the Vortex Rikers is a failure. The UMS Chantilly was pulled into the atmosphere of this god-forsaken planet and we crashed into a mountain. Only Pilot Worch and myself survived. They don't pay me enough for this."
-Message="Дневник: К. Дивад: Наша миссия по поиску Вортекс Райкерс провалилась. ОВС Чантилья была притянута в атмосферу  этой богом забытой планеты и мы потерпели крушение в горах. Выжил я и пилот Ворч. Они платят мне недостаточно для всего этого."
+Message="Дневник: К. Дивад: Наша миссия по поиску Вортекс Райкерс провалилась. ОВС Чантилья была притянута в атмосферу этой богом забытой планеты и мы потерпели крушение в горах. Выжил я и пилот Ворч. Они платят мне недостаточно для всего этого."
 
 [TranslatorEvent0]
 ; EN: Message="LOG: J. Parkman: On the Prometheus the crew behaved like a team. Here, they have turned on each other. Wish I didn't have to rely on them to survive. I think crewman Dalton deliberately led the brutes to crewman Marshall. Then he watched him die."
@@ -24,19 +24,19 @@ Message="Дневник: Д. Аиролди: Этим утром в поиска
 
 [TranslatorEvent7]
 ; EN: Message="Terra-Emi Mining Bunker"
-Message="Тэрра-Эми Горный Бункер"
+Message="Терра-Эми Горный Бункер"
 
 [TranslatorEvent2]
 ; EN: Message="LOG: W. Marshall: Hiked through the mountains and making good time. Should make it to Dahlgren's coordinates in a few hours. Finally found some water. Thought I was going to die of dehydration."
-Message="Дневник: В. Маршал: Пробираемся через горы и хорошо проводим время. Доберемся до координат  Дальгрена через несколько часов. Наконец то нашли воду. Чуть не умер от жажды."
+Message="Дневник: В. Маршал: Пробираемся через горы и хорошо проводим время. Доберемся до координат Дальгрена через несколько часов. Наконец то нашли воду. Чуть не умер от жажды."
 
 [TranslatorEvent8]
 ; EN: Message="Terra-Sun Mining Station (South)"
-Message="Горная станция Тэрра-Сан (Юг)"
+Message="Горная станция Терра-Сан (Юг)"
 
 [TranslatorEvent11]
 ; EN: Message="Terra-Neo Mining Station"
-Message="Горная станция Тэрра-Нэо"
+Message="Горная станция Терра-Нео"
 
 [TranslatorEvent1]
 ; EN: Message="LOG: G. Dahlgren: Still no reply from Dalton's team. It's been four days now and no sign of the others. I don't think we're going to survive. I heard someone actually made it off this planet. Hope they send a ship back for us..."
@@ -44,11 +44,11 @@ Message="Дневник: Г. Дальгрен: Все еще нет ответа
 
 [TranslatorEvent9]
 ; EN: Message="Terra-Sun Mining Station (North)"
-Message="Горная станция Тэрра-Сан (Север)"
+Message="Горная станция Терра-Сан (Север)"
 
 [TranslatorEvent10]
 ; EN: Message="Terra-Mina Mining Facility"
-Message="Горнодобывающая станция Тэрра-Мина"
+Message="Горнодобывающая станция Терра-Мина"
 
 [TranslatorEvent3]
 ; EN: Message="LOG: S. Dalton: Watched those brutes beat Marshall to a pulp last night. He never saw it coming. Probably better that way. I emptied an entire clip on one of them and he just kept coming. At least they haven't tried to get me up here..."

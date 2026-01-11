@@ -2,13 +2,13 @@
 ; EN: Title="Noork's Elbow"
 Title="Лощина Нурка"
 ; EN: LevelEnterText="Entering Noork's Elbow"
-LevelEnterText="Вход в Лощина Нурка"
+LevelEnterText="Выход в Лощину Нурка"
 
 [LevelSummary]
 ; EN: Title="Noork's Elbow"
 Title="Лощина Нурка"
 ; EN: LevelEnterText="Entering Noork's Elbow"
-LevelEnterText="Вход в Лощина Нурка"
+LevelEnterText="Выход в Лощину Нурка"
 
 [TranslatorEvent4]
 ; EN: Hint="Search all the houses on your way to the ruins. Watch out for enemies lurking along the way."
@@ -16,6 +16,6 @@ Hint="Обыщите все дома по пути к руинам. Остере
 
 [TranslatorEvent0]
 ; EN: Message="Log: L. Goeranov: We've been stuck here for days. There are plenty of fish to eat but they taste kinda funny. I never liked fish."
-Message="Дневник: Л. Горанов: Мы застряли здесь на долго. Здесь много съедобной рыбы но она имеет довольно странный вкус. Я никогда не любил рыбу."
+Message="Дневник: Л. Горанова: Мы застряли здесь надолго. Здесь много съедобной рыбы но она имеет довольно странный вкус. Я никогда не любила рыбу."
 ; EN: Hint="You might get a helping hand from a friendly individual at the ruins' drawbridge."
 Hint="Вы можете получить помощь от друга, который ждёт вас на подъёмном мосту."

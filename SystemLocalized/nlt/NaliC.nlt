@@ -45,3 +45,16 @@ Hint="Ga naar de hoogste toren en dood de demon om toegang te krijgen tot de ker
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Wat doe je hierboven in godsnaam?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Je hebt 6 Achtballen"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Je hebt 6 Achtballen"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Je hebt 6 Achtballen"
+

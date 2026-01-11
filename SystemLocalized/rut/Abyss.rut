@@ -2,13 +2,13 @@
 ; EN: Title="Gala's Peak"
 Title="Пик празднества"
 ; EN: LevelEnterText="Entering Gala's Peak"
-LevelEnterText="Выход на пик Гала"
+LevelEnterText="Выход на пик празднества"
 
 [LevelSummary]
 ; EN: Title="Gala's Peak"
 Title="Пик празднества"
 ; EN: LevelEnterText="Entering Gala's Peak"
-LevelEnterText="Выход на пик Гала"
+LevelEnterText="Выход на пик празднества"
 
 [TranslatorEvent2]
 ; EN: Message="LOG: R. Wisnewski: Damn, it's cold. The walkway outside is impassable. I almost fell off twice, and it's a long way down. I'll try again later. I have a feeling it's going to be worth the effort to reach that structure up ahead."

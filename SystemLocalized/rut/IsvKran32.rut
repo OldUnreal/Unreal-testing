@@ -79,7 +79,7 @@ Message="Генератор силового поля — активен. Зол
 
 [TranslatorEvent29]
 ; EN: Message="ISV-KRAN ENGINE STATUS-OFFLINE. DAMAGE REPORT MINIMAL. LIFE SUPPORT SYSTEMS ONLINE. DECK 1 POWER LEVELS FULL. SHIP'S HULL BREACHED AT OBSERVATION LOUNGE."
-Message="ИСВ-Кран, двигатели, статус — отключены. Отчет о повреждениях: повреждения минимальны. Система жизнеобеспечения — активна. Палуба 1 , уровень заряда полный. Повреждения корпуса: обзорная кабина."
+Message="ИСВ-Кран, двигатели, статус — отключены. Отчет о повреждениях: повреждения минимальны. Система жизнеобеспечения — активна. Палуба 1, уровень заряда полный. Повреждения корпуса: обзорная кабина."
 
 [TranslatorEvent30]
 ; EN: Message="MAIN ENGINE DIAGNOSTIC PANEL. 75% ENGINE POWER AVAILABLE. COOLANT LEAK IN CONTAINMENT CORE GENERATOR AREA LOCALIZED. LAST ATTEMPT TO REROUTE POWER UNSUCCESSFUL."

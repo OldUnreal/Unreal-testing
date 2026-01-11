@@ -2,23 +2,23 @@
 ; EN: Title="Rrajigar Mine"
 Title="Шахта Ражигар"
 ; EN: LevelEnterText="Entering the Rrajigar Mine"
-LevelEnterText="Вход в Шахта Ражигар"
+LevelEnterText="Вход в Шахту Ражигар"
 
 [LevelSummary]
 ; EN: Title="Rrajigar Mine"
 Title="Шахта Ражигар"
 ; EN: LevelEnterText="Entering the Rrajigar Mine"
-LevelEnterText="Вход в Шахта Ражигар"
+LevelEnterText="Вход в Шахту Ражигар"
 
 [TranslatorEvent11]
 ; EN: Message="WARNING: Intruder detected in Sections C-6 and D-8. All personnel are responsible for patrolling their local area."
-Message="ПРЕДУПРЕЖДЕНИЕ: Нарушитель обнаружен в секциях C-6 и D-8. Весь персонал ответственен за патрулирование своих территорий."
+Message="ВНИМАНИЕ: Нарушитель обнаружен в секциях C-6 и D-8. Весь персонал ответственен за патрулирование своих территорий."
 ; EN: Hint="Shoot the red button nearby to raise the narrow bridge across the lava."
 Hint="Стрельните в красную кнопку неподалёку, чтобы поднять узкий мост через лаву."
 
 [TranslatorEvent1]
 ; EN: Message="WARNING: Access bridges in lower half of mine are unsafe. Proceed with caution."
-Message="ПРЕДУПРЕЖДЕНИЕ: Мосты в нижней части шахты не безопасны. Соблюдайте осторожность."
+Message="ВНИМАНИЕ: Мосты в нижней части шахты не безопасны. Соблюдайте осторожность."
 
 [TranslatorEvent0]
 ; EN: Message="ALERT: Nali slave resistance detected in Sector 3A. Lethal force authorized to suppress rebellious activity."
@@ -30,7 +30,7 @@ Message="Деревня Харобед расположена по другую 
 
 [TranslatorEvent10]
 ; EN: Message="WARNING: Force Field power source two status is inactive. Security Condition Two reached."
-Message="ПРЕДУПРЕЖДЕНИЕ: Статус второго источника силового поля - отключён. Установлен второй уровень безопасности."
+Message="ВНИМАНИЕ: Статус второго источника силового поля - отключён. Установлен второй уровень безопасности."
 
 [TranslatorEvent6]
 ; EN: Message="Force field intact. All systems normal."
@@ -40,13 +40,13 @@ Hint="Силовое поле должно быть отключено. Найд
 
 [TranslatorEvent5]
 ; EN: Message="WARNING! Force field de-activated. Intruder detected in Section C-6. Eliminate any unauthorized presence."
-Message="ПРЕДУПРЕДЕНИЕ! Силовое поле отключено. Нарушитель замечен в Секторе С-6. Ликвидируйте любое несанкционированное присутствие."
+Message="ВНИМАНИЕ! Силовое поле отключено. Нарушитель замечен в Секторе С-6. Ликвидируйте любое несанкционированное присутствие."
 ; EN: Hint="Shoot all red barrels."
 Hint="Стреляйте по всем красным бочкам."
 
 [TranslatorEvent9]
 ; EN: Message="WARNING: Force Field power source one status is inactive. Security Condition Two reached."
-Message="ПРЕДУПРЕЖДЕНИЕ: Статус первого источника силового поля - отключён. Установлен второй уровень безопасности."
+Message="ВНИМАНИЕ: Статус первого источника силового поля - отключён. Установлен второй уровень безопасности."
 
 [TranslatorEvent19]
 ; EN: Message="NOTE: Area must be clear for transport lift to perform properly."

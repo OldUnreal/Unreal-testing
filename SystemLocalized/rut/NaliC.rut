@@ -45,3 +45,16 @@ Hint="Иди в высокую башню, убей демона и ты пол�
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Какого ЧЕРТА ты забрался сюда?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Вы взяли 6 ракет"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Вы взяли 6 ракет"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Вы взяли 6 ракет"
+

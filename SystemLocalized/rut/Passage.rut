@@ -2,13 +2,13 @@
 ; EN: Title="Sacred Passage"
 Title="Священный переход"
 ; EN: LevelEnterText="Entering the Sacred Passage"
-LevelEnterText="Вход в Священный переход"
+LevelEnterText="Выход к Священному переходу"
 
 [LevelSummary]
 ; EN: Title="Sacred Passage"
 Title="Священный переход"
 ; EN: LevelEnterText="Entering the Sacred Passage"
-LevelEnterText="Вход в Священный переход"
+LevelEnterText="Выход к Священному переходу"
 
 [TranslatorEvent1]
 ; EN: Hint="Go for a swim and look for a secret passage."

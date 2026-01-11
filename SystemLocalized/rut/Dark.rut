@@ -2,13 +2,13 @@
 ; EN: Title="Dark Arena"
 Title="Тёмная арена"
 ; EN: LevelEnterText="Entering the Dark Arena"
-LevelEnterText="Выход на тёмная арена"
+LevelEnterText="Выход на тёмную арену"
 
 [LevelSummary]
 ; EN: Title="Dark Arena"
 Title="Тёмная арена"
 ; EN: LevelEnterText="Entering the Dark Arena"
-LevelEnterText="Выход на тёмная арена"
+LevelEnterText="Выход на тёмную арену"
 
 [TranslatorEvent0]
 ; EN: Message="The weak shall be struck down by the hand of the beast."
@@ -36,4 +36,4 @@ Message="Я должен найти выход отсюда.  Эти огром�
 
 [TranslatorEvent7]
 ; EN: Message="The Skaarj have brought in a new batch of the two armed softskins from another of their raids. I fear that one of them is the Messiah, come down from the heavens, but I must pray that I am mistaken and not give up hope for the freedom of my people."
-Message="Скаары в очередном своём рейде захватили двух гладкокожих двуруких.  Я боюсь, что один из них это Мессия пришедший с небес, но я должен молиться, что ошибаюсь, и не терять надежды на свободу для моего народа."
+Message="Скааржи в очередном своём рейде захватили двух гладкокожих двуруких.  Я боюсь, что один из них это Мессия пришедший с небес, но я должен молиться, что ошибаюсь, и не терять надежды на свободу для моего народа."

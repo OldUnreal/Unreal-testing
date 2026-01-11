@@ -2,13 +2,13 @@
 ; EN: Title="Spire Valley"
 Title="Долина Шпиля"
 ; EN: LevelEnterText="Entering the Spire Valley"
-LevelEnterText="Входим в долину Шпиля"
+LevelEnterText="Выход в долину Шпиля"
 
 [LevelSummary]
 ; EN: Title="Spire Valley"
 Title="Долина Шпиля"
 ; EN: LevelEnterText="Entering the Spire Valley"
-LevelEnterText="Входим в долину Шпиля"
+LevelEnterText="Выход в долину Шпиля"
 
 [TranslatorEvent7]
 ; EN: Message="Land of Nagomi"

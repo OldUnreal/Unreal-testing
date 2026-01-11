@@ -12,11 +12,11 @@ LevelEnterText="Вход в Источник"
 
 [JumpBoots0]
 ; EN: ItemName="Super Jump Boots"
-ItemName="Супер Ботинки прыжка"
+ItemName="Супер прыжковые ботинки"
 ; EN: PickupMessage="You picked up Super Jump Boots."
-PickupMessage="Вы взяли Супер Ботинки прыжка."
+PickupMessage="Вы взяли Супер прыжковые ботинки."
 ; EN: ExpireMessage="The Super Jump Boots have drained."
-ExpireMessage="Супер Ботинки прыжка прыжков истощились."
+ExpireMessage="Супер прыжковые ботинки износились."
 
 [SpecialEvent18]
 ; EN: DamageString="vaporized"

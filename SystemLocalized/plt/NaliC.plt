@@ -45,3 +45,16 @@ Hint="Udaj się do najwyższej z wież i zabij demona, aby dostać się do lochu
 [TranslatorEvent6]
 ; EN: Message="What the HELL are you doing up here?"
 Message="Co ty robisz tak wysoko, do diabła?"
+
+[RocketCan4]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Podnosisz 6 Rakiet do Ósemki"
+
+[RocketCan5]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Podnosisz 6 Rakiet do Ósemki"
+
+[RocketCan7]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Podnosisz 6 Rakiet do Ósemki"
+

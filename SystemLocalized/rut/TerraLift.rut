@@ -1,14 +1,14 @@
 ﻿[LevelInfo0]
 ; EN: Title="Terraniux Underground"
-Title="Подземелье Терраниукс"
+Title="Подземелье Терраниукса"
 ; EN: LevelEnterText="Entering Terraniux Underground"
-LevelEnterText="Вход в Подземелье Терраниукс"
+LevelEnterText="Вход в Подземелье Терраниукса"
 
 [LevelSummary]
 ; EN: Title="Terraniux Underground"
-Title="Подземелье Терраниукс"
+Title="Подземелье Терраниукса"
 ; EN: LevelEnterText="Entering Terraniux Underground"
-LevelEnterText="Вход в Подземелье Терраниукс"
+LevelEnterText="Вход в Подземелье Терраниукса"
 
 [SpecialEvent0]
 ; EN: Message="ALERT"
@@ -28,7 +28,7 @@ Message="Состояние стоков: поток биологических 
 ; EN: Message="Security Status: Intruder detected at entrance. Activating security screens on Scientific Research Lab and Hydroponics Section. All security elements deploy around access points in Sections A, B and C to deny intruder access to Lift 1."
 Message="Статус системы охраны: Вторжение зафиксировано у входа. Активировать защитные экраны в Исследовательской Лаборатории и в Теплице. Мобилизовать все силы безопасности вокруг контрольных точек в Секциях A, B и C, чтобы помешать нарушителю получить доступ к Первому Лифту."
 ; EN: Hint="Find the Containment rooms A, B and C and activate the buttons to access the Lift 1."
-Hint="Найдите комнаты Удержания A,B и C и активируйте кнопки, чтобы получить доступ к Первому Лифту."
+Hint="Найдите резервуары A, B и C и активируйте кнопки, чтобы получить доступ к Первому Лифту."
 
 [TranslatorEvent3]
 ; EN: Message="Control Room Status: Pressurized and locked. Do not access except in case of emergency situation."

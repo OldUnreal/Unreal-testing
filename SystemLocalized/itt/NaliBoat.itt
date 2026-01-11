@@ -13,3 +13,8 @@ LevelEnterText="Arrivo al Canyon del Serpente"
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."
 Message="Qui giace Haith M'olner, che la sua anima voli in alto con gli dei."
+
+[RocketCan0]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Hai raccolto 6 8-ball"
+

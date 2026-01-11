@@ -48,7 +48,7 @@ Message="Я боюсь что они хотят причинить вред эт
 
 [TranslatorEvent5]
 ; EN: Message="SKAARJ SHIPPING FACILITY POWER MANAGEMENT STATION: HYDRO-ELECTRIC SHIPPING CAR STATUS - OFF / REACTIVATION REQUIRES STATIC DISCHARGE NODES TO BE OPENED AT TOP OF BELL TOWER."
-Message="Станция управления подачей питания на транспортер: гидроэлектрический транспортер – отключение и повторное включение требует что-бы статические узлы разгрузки были открыты наверху колокольни."
+Message="Станция управления подачей питания на транспортер: гидроэлектрический транспортер – отключение и повторное включение требует чтобы статические узлы разгрузки были открыты наверху колокольни."
 
 [TranslatorEvent10]
 ; EN: Message="HAVE FAITH AND NEVER SWAY FROM YOUR BELIEFS. ONLY A SOUL THAT KEEPS THE FAITH DESPITE ALL OPPRESSION SHALL TRIUMPH WHEN THE SAVIOUR PRINCESS COMES FROM THE STARS"
@@ -64,7 +64,7 @@ Message="Я болен. Мой кашель усиливается, и эта т
 
 [TranslatorEvent1]
 ; EN: Message="Security Officer Sergai Dubrov: ISV-KRAN: LOG ENTRY: We are hot on the trail of the Skaarj Hunting party that captured Kira near the Sunspire. They are headed north towards the blue electrical storms on the horizon."
-Message="Офицер службы безопасности Сергей Дубров: запись журнала ИСВ-Кран: Мы идем по горячим следам отряда Скааржей что похитили Киру неподалеку от Санспайра. Они направляются к синим электроштормам что видны на горизонте."
+Message="Офицер службы безопасности Сергей Дубров: запись журнала ИСВ-Кран: Мы идем по горячим следам отряда Скааржей что похитили Киру неподалеку от Солнечного Шпиля. Они направляются к синим электроштормам что видны на горизонте."
 
 [TranslatorEvent12]
 ; EN: Message="I have discovered a secret! Last night I snuck out of my hiding place and swam through the pipes to the prison. They have captured a Girl! The Krall sergeant took two boots in the mouth when he approached her. Haha! I can only laugh at their stupidity."
@@ -84,7 +84,7 @@ Message="Только встав лицом к восходящему солнц
 
 [TranslatorEvent16]
 ; EN: Message="WARNING-STATIC DISCHARGE NODES-STAY CLEAR DURING OPERATION."
-Message="ВНИМАНИЕ! СТАТИЧЕСКИЕ УЗЛЫ  РАЗГРУЗКИ, СОБЛЮДАЙТЕ ДИСТАНЦИЮ."
+Message="ВНИМАНИЕ! СТАТИЧЕСКИЕ УЗЛЫ РАЗГРУЗКИ, СОБЛЮДАЙТЕ ДИСТАНЦИЮ."
 
 [TranslatorEvent21]
 ; EN: Message="Acolyte Ne'Lin Garas 353-487"
@@ -108,7 +108,7 @@ Hint="Найди секретный рычаг на кладбище"
 
 [TranslatorEvent2]
 ; EN: Message="Science Officer Kira Argmanov: Separated from my crewmates from ISV-KRAN, I've only been able to stay alive by holding up in this bell tower. A native Nali help me escape the prison cell the Skaarj put me in. Hopefully the Skaarj won't find me here."
-Message="Старший научный сотрудник Кира Аргманова: отделившись от моих товарищей с ИСВ-Кран все что я могу предпринять что-бы выжить это прятаться в этой колокольне. Местные Нали помогли мне совершить побег из тюремной камеры где меня удерживали Скааржи. Надеюсь что Сккаржи не будут искать меня здесь."
+Message="Старший научный сотрудник Кира Аргманова: отделившись от моих товарищей с ИСВ-Кран все что я могу предпринять чтобы выжить это прятаться в этой колокольне. Местные Нали помогли мне совершить побег из тюремной камеры где меня удерживали Скааржи. Надеюсь что Сккаржи не будут искать меня здесь."
 
 [TranslatorEvent0]
 ; EN: Message="ISV-KRAN Chief Medical Officer Log: Tatiana Zimna: We have come to this beautiful canyon lake monastery in our search for Kira's abductors. We'll make camp by this crucifix tonight and start out early tomorrow."
@@ -132,7 +132,7 @@ Message="Тюремщик Рэнг Племени Красной Руки: До�
 
 [TranslatorEvent28]
 ; EN: Message="Jailer Hrang of the Red Hand Tribe: I can't believe it!!! That Terran girl escaped! One of those worthless Nali Monks must have tunneled her out. I am in DEEP SHIT! If Captain DUK'CHOROTH comes and finds out I let her escape I'll be de-hrangod for sure!"
-Message="Тюремщик Рэнг Племени Красной Руки: Я не могу поверить в это! Эта Земная девица убежала! Один из этих жалких монахов Нали должно быть вывел её по тоннелям. Я в ПОЛНОМ ДЕРЬМЕ! Если капитан Духороф вернется с проверкой и обнаружит что я  позволил ей сбежать - это точно будет де-Рэнгон!"
+Message="Тюремщик Рэнг Племени Красной Руки: Я не могу поверить в это! Эта Земная девица убежала! Один из этих жалких монахов Нали должно быть вывел её по тоннелям. Я в ПОЛНОМ ДЕРЬМЕ! Если капитан Духороф вернется с проверкой и обнаружит что я позволил ей сбежать - это точно будет де-Рэнгон!"
 
 [TranslatorEvent29]
 ; EN: Message="Kruun's personal diary: I have to be careful how many times I sneak into the monastery through the tunnels. I've marked the tunnel that leads to the inner monastery with a cross, the other leads to the prison where my brother is still being held."

@@ -2,17 +2,17 @@
 ; EN: Title="Neve's Crossing"
 Title="Перекресток Нивеи"
 ; EN: LevelEnterText="Entering Neve's Crossing"
-LevelEnterText="Въезд на Перекресток Нивеи"
+LevelEnterText="Выход на Перекресток Нивеи"
 
 [LevelSummary]
 ; EN: Title="Neve's Crossing"
 Title="Перекресток Нивеи"
 ; EN: LevelEnterText="Entering Neve's Crossing"
-LevelEnterText="Въезд на Перекресток Нивеи"
+LevelEnterText="Выход на Перекресток Нивеи"
 
 [TranslatorEvent15]
 ; EN: Message="Terra-Neo Mining Station (North)"
-Message="Горнодобывающая станция Терра-Нэо (Сервер)"
+Message="Горнодобывающая станция Терра-Нео (Север)"
 
 [TranslatorEvent6]
 ; EN: Message="LOG: B. Bates: Found Mock face down in a lake nearby. Looks like he drowned. Poor bastard. Wonder if he saw the UMS crates dropping down from the sky. Hope Dalton's team made it all right. Looks like we might be rescued after all."
@@ -24,7 +24,7 @@ Message="Дневник: П. Мок: Последний раз видел Дал
 
 [TranslatorEvent14]
 ; EN: Message="Terra-Neo Mining Station (North)"
-Message="Горнодобывающая станция Терра-Нэо (Сервер)"
+Message="Горнодобывающая станция Терра-Нео (Север)"
 
 [TranslatorEvent0]
 ; EN: Message="I fear our struggle is not yet over. The Sky Demons have discovered Eldora's Well and are using it against us. I was fortunate to escape with my life. I wait here in hope they will soon leave us..."

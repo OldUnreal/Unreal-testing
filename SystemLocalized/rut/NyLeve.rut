@@ -2,13 +2,13 @@
 ; EN: Title="NyLeve's Falls"
 Title="Водопады Найлеве"
 ; EN: LevelEnterText="Entering NyLeve's Falls"
-LevelEnterText="Вход в Водопады Найлеве"
+LevelEnterText="Выход к Водопадам Найлеве"
 
 [LevelSummary]
 ; EN: Title="NyLeve's Falls"
 Title="Водопады Найлеве"
 ; EN: LevelEnterText="Entering NyLeve's Falls"
-LevelEnterText="Вход в Водопады Найлеве"
+LevelEnterText="Выход к Водопадам Найлеве"
 
 [TranslatorEvent17]
 ; EN: Message="My burden does not end. More minions have been cast down by the angry Gods. I will pray for their souls, but I fear my prayers are not heard. I must travel to the Temple of Chizra to seek balance."
@@ -18,7 +18,7 @@ Message="Я всё ещё несу моё бремя. Злые боги прис
 ; EN: Message="Log. P. v. Heel: I was attacked by a flying beast, it uses it's tail as a weapon! I was able to kill it, but not without taking a beating. I discovered the orange berries have a healing effect on me. I feel strong enough to proceed."
 Message="Дневник П. Хилл: Я был атакован летающим чудищем, оно использовало свой хвост в качестве оружия. У меня хватило сил убить его, но при этом сам получил ранения. Я обнаружил, что оранжевые фрукты обладают целебным эффектом. Мои силы восстанавливаются."
 ; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
-Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства что-бы уворачиваться от ракет выпущенных в вас."
+Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства чтобы уворачиваться от ракет выпущенных в вас."
 
 [TranslatorEvent3]
 ; EN: Message="Log: Guard R. Bijl. The situation is critical, last night large, extremely powerful alien forces penetrated our camp. Fired small missiles from hand launchers. We lost 5 men."
@@ -30,7 +30,7 @@ Hint="Убедитесь что вы подобрали автомаг непо�
 ; EN: Message="Log: I have no damn luck. First I'm locked up for two years for a murder I did not commit, then on my way to yet another prison colony we crash on this god forsaken ball of rock. This sucks!"
 Message="Дневник: Тед Симмонс. Мне никогда не везло. Сначала меня посадили за убийство, которое я не совершал, теперь тюрьма грохнулась на забытый богом каменный шарик. Вот дерьмо!"
 ; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
-Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства что-бы уворачиваться от ракет выпущенных в вас."
+Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства чтобы уворачиваться от ракет выпущенных в вас."
 
 [TranslatorEvent10]
 ; EN: Message="Log: N. Vos: Contact with members of ISV-KRAN! (Presumed lost in this area 3 months ago) They have seen a Skaarj vessel in operation. We may need to gain control of it to escape this system."
@@ -46,17 +46,17 @@ Message="Дневник: тюремного надзирателя М. в. Ве�
 ; EN: Message="Log: Guard B. v. Wely: I can't get past the "brutes" to go back and help my brother. My ammo is almost out. There are "brutes" patrolling around at all times."
 Message="Журнал тюремного надзирателя Б. в. Вели: Я не могу пройти через Брутов чтобы помочь моему брату. Мои патроны закончились. Бруты все время патрулируют этот район."
 ; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
-Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства что-бы уворачиваться от ракет выпущенных в вас."
+Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства чтобы уворачиваться от ракет выпущенных в вас."
 
 [TranslatorEvent9]
 ; EN: Message="Log: Cook J. Strang: No reply to distress signal. Vortex Rikers' hull is too unstable to use as shelter. We found an abandoned house to use as our base camp. Maybe the native population can help us."
-Message="Дневник Д. Странга: Никакого ответа на сигнал о помощи. Корпус Вортекс Райкерс слишком сильно поврежден что-бы использовать его в качестве убежища. Мы нашли заброшенный дом и разобьем наш лагерь здесь. Возможно местные жители смогут помочь нам."
+Message="Дневник Д. Странга: Никакого ответа на сигнал о помощи. Корпус Вортекс Райкерс слишком сильно поврежден чтобы использовать его в качестве убежища. Мы нашли заброшенный дом и разобьем наш лагерь здесь. Возможно местные жители смогут помочь нам."
 ; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"
 Hint="Убедитесь что вы подобрали автомаг неподалеку от хижины. Примите освежающую ванну!"
 
 [TranslatorEvent21]
 ; EN: Hint="When fighting the brutes, make sure you have lots of room to strafe left or right to dodge the missiles they fire at you."
-Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства что-бы уворачиваться от ракет выпущенных в вас."
+Hint="Когда сражаетесь с Брутами, убедитесь что у вас достаточно свободного пространства чтобы уворачиваться от ракет выпущенных в вас."
 
 [TranslatorEvent22]
 ; EN: Hint="Make sure you pick up the Automag from near the house just outside Vortex Rikers. Take a refreshing swim while you're at it!"

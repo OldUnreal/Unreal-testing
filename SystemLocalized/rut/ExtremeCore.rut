@@ -2,13 +2,13 @@
 ; EN: Title="MotherShip Core"
 Title="Материнский корабль - ядро"
 ; EN: LevelEnterText="Entering the MotherShip Core"
-LevelEnterText="Вход в Материнский корабль - ядро"
+LevelEnterText="Вход в ядро материнского корабля"
 
 [LevelSummary]
 ; EN: Title="MotherShip Core"
 Title="Материнский корабль - ядро"
 ; EN: LevelEnterText="Entering the MotherShip Core"
-LevelEnterText="Вход в Материнский корабль - ядро"
+LevelEnterText="Вход в ядро материнского корабля"
 
 [TranslatorEvent10]
 ; EN: AltMessage="Access to the Security Post granted."

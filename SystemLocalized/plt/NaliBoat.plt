@@ -13,3 +13,8 @@ LevelEnterText="Wejście do Kanion Węży"
 [TranslatorEvent0]
 ; EN: Message="Here lies Haith M'olner, may his soul soar high with the gods."
 Message="Miejsce ostatniego spoczynku Haitha M'olnera, niechaj jego dusza przemierza niebiosa razem z bogami."
+
+[RocketCan0]
+; EN: PickupMessage="You picked up 6 Eightballs"
+PickupMessage="Podnosisz 6 Rakiet do Ósemki"
+

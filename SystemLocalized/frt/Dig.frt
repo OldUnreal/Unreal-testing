@@ -77,5 +77,5 @@ Message="La source d'énergie 2 du champ de force est active."
 Hint="Appuyez sur les boutons rouges au mur en les touchant."
 
 [StingerAmmo17]
-; EN: PickupMessage="You picked up 80 Tarydium shards"
+; EN: PickupMessage="You picked up 80 Tarydium Shards"
 PickupMessage="Vous avez ramassé 80 Éclats de Tarydium"

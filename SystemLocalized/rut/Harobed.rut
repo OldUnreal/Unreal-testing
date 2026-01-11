@@ -2,13 +2,13 @@
 ; EN: Title="Harobed Village"
 Title="Деревня Харобед"
 ; EN: LevelEnterText="Entering the Harobed Village"
-LevelEnterText="Вход в Деревня в Харобах"
+LevelEnterText="Выход в Деревню Харобед"
 
 [LevelSummary]
 ; EN: Title="Harobed Village"
 Title="Деревня Харобед"
 ; EN: LevelEnterText="Entering the Harobed Village"
-LevelEnterText="Вход в Деревня в Харобах"
+LevelEnterText="Выход в Деревню Харобед"
 
 [TranslatorEvent3]
 ; EN: Hint="Proceed to the crashed spaceship up ahead."
@@ -16,7 +16,7 @@ Hint="Следуйте к кораблю что разбился в горах."
 
 [TranslatorEvent1]
 ; EN: Message="I'll not stay here any longer. With the next passing of the two suns, I'll try to reach the Sunspire. There I will be safe. Before I go I will retrieve the sky demon's weapon from the abbey."
-Message="Я больше не собираюсь оставаться здесь. Со следующим заходом двух солнц, я попытаюсь добраться до Санспайра. Там я буду в безопасности. Прежде чем идти я заберу оружие демонов из аббатства."
+Message="Я больше не собираюсь оставаться здесь. Со следующим заходом двух солнц, я попытаюсь добраться до Солнечного Шпиля. Там я буду в безопасности. Прежде чем идти я заберу оружие демонов из аббатства."
 ; EN: Hint="Search the church atop the hill, the Nali may have a surprise for you."
 Hint="Найдите церковь на вершине холма, возможно у Нали есть сюрприз для вас."
 
@@ -28,6 +28,6 @@ Hint="Найдите церковь на вершине холма, возмож
 
 [TranslatorEvent2]
 ; EN: Message="We shall pray before we set off for the Sunspire. We will find refuge there. Praise be to the God of the Good Lore for giving us sanctuary. The journey will be treacherous but we will prevail!"
-Message="Мы вознесём молитвы прежде чем отправимся в Санспайр. Мы найдем убежище там. Восхвалим Господа нашего за то что даровал нам это святилище. Путешествие будет не безопасным, но мы доберёмся до священного Санспайра!"
+Message="Мы вознесём молитвы прежде чем отправимся в Солнечный Шпиль. Мы найдем убежище там. Восхвалим Господа нашего за то что даровал нам это святилище. Путешествие будет не безопасным, но мы доберёмся до священного Шпиля!"
 ; EN: Hint="Look very closely along the walls."
 Hint="Прогуляйтесь вплотную у стен церкви и вдоль забора."
