@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 6"
-Title="Pause 6"
-
-[TransitionGenderEvent0]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm6.uax
-OutDelays[1]=5.000000
-MaleText[0]="Das Leben ist grausam. Und es wird immer schlimmer. Ich hasse Titaner."
-FemaleText[0]="Das Leben ist grausam. Und es wird immer schlimmer. Ich hasse Titaner."

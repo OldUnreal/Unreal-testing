@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 3"
-Title="Entreteniment 3"
-
-[TransitionGenderEvent3]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm3.uax
-OutDelays[1]=21.000000
-MaleText[0]="M’alegro d’haver descobert com fer tornar l’aigua al sistema de pous subterranis. El Nali no morirà de set. I és bo que l'equip de submarinisme funcionés tan bé ... No ho hauria fet sense el nou equipament. Per molt que odio tornar a estar aquí, he de dir que va ser bo tornar a veure el Nali. Crec que m’acosto més al Prometeu. Puc sentir-ho."
-FemaleText[0]="M’alegro d’haver descobert com fer tornar l’aigua al sistema de pous subterranis. El Nali no morirà de set. I és bo que l'equip de submarinisme funcionés tan bé ... No ho hauria fet sense el nou equipament. Per molt que odio tornar a estar aquí, he de dir que va ser bo tornar a veure el Nali. Crec que m’acosto més al Prometeu. Puc sentir-ho."

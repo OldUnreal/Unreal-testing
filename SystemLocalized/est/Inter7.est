@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 7"
-Title="Intermedio 7"
-
-[TransitionGenderEvent1]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm7.uax
-OutDelays[1]=9.000000
-MaleText[0]="El camino hasta la otra lanzadera se ha convertido en una auténtica carrera de resistencia. No tengo gran cosa que registrar ahora. Bastante tengo con tratar de seguir vivo."
-FemaleText[0]="El camino hasta la otra lanzadera se ha convertido en una auténtica carrera de resistencia. No tengo gran cosa que registrar ahora. Bastante tengo con tratar de seguir viva."

@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 10"
-Title="Entrada 10"
-
-[TransitionGenderEvent4]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm10.uax
-OutDelays[1]=19.000000
-MaleText[0]="Una planta de processament de tarydium ... operada pel Skaarj. Han de tenir una altra colònia al voltant. Hi ha Skaarj a tot arreu. Però aquesta vegada els estic caçant. Sembla que no sabien que vindria. Crec que estic a mig camí de la llançadora."
-FemaleText[0]="Una planta de processament de tarydium ... operada pel Skaarj. Han de tenir una altra colònia al voltant. Hi ha Skaarj a tot arreu. Però aquesta vegada els estic caçant. Sembla que no sabien que vindria. Crec que estic a mig camí de la llançadora."

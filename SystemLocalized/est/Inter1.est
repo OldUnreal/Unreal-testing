@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 1"
-Title="Intermisión 1"
-
-[TransitionGenderEvent1]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm1.uax
-OutDelays[1]=24.500000
-MaleText[0]="Fue al mirar hacia arriba para ver cómo la lanzadera se alejaba, cuando realmente me di cuenta de lo que estaba pasando. Pensé: "aquí estoy de nuevo...", e inmediatamente sentí la familiar y enfermiza descarga de adrenalina y miedo. Y por supuesto, no pasó mucho tiempo antes de que me encontrase con un bruto. Desde entonces, no he dejado de tener que pelearme para poder avanzar. Menos mal que al menos el rifle de asalto que me han dado es un arma potente. No hay ni rastro del Prometeo, ni en este valle ni en sus alrededores. Tengo que seguir buscando."
-FemaleText[0]="Fue al mirar hacia arriba para ver cómo la lanzadera se alejaba, cuando realmente me di cuenta de lo que estaba pasando. Pensé: "aquí estoy de nuevo...", e inmediatamente sentí la familiar y enfermiza descarga de adrenalina y miedo. Y por supuesto, no pasó mucho tiempo antes de que me encontrase con un bruto. Desde entonces, no he dejado de tener que pelearme para poder avanzar. Menos mal que al menos el rifle de asalto que me han dado es un arma potente. No hay ni rastro del Prometeo, ni en este valle ni en sus alrededores. Tengo que seguir buscando."

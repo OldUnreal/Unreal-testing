@@ -1,9 +1,0 @@
-﻿[Public]
-Preferences=(Caption="Unreal Integrity",Parent="Networking")
-Preferences=(Caption="Integrity Server",Parent="Unreal Integrity",Class=UnrealIntegrity.IntegrityServer,Immediate=True)
-Preferences=(Caption="Whitelist",Parent="Unreal Integrity",Class=UnrealIntegrity.ExternalWhiteList,Immediate=True)
-
-[General]
-ScanningInfo="Unreal Integrity is scanning your client for possible cheats..."
-MidGameScan="You have died, performing mid-game cheat scan."
-EndGameScan="Game has ended, performing end-game cheat scan."

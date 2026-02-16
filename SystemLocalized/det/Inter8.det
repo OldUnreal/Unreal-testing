@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 8"
-Title="Pause 8"
-
-[TransitionGenderEvent2]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm8.uax
-OutDelays[1]=20.500000
-MaleText[0]="Ich bin überglücklich, dass ich es hier raus geschafft habe. Ich wurde gebissen, attackiert, angeschossen etc. etc., das volle Programm. Aber dort drin hätte ich auch zerquetscht, geröstet, gevierteilt, verbrannt oder gar aufgespießt werden können. Wer dieses Ding konstruiert hat, muss echt ein Sadist gewesen sein. Ich schlage mich noch immer hier durch. Das ist ein Marathon, nicht bloß ein kurzer Spaziergang."
-FemaleText[0]="Ich bin überglücklich, dass ich es hier raus geschafft habe. Ich wurde gebissen, attackiert, angeschossen etc. etc., das volle Programm. Aber dort drin hätte ich auch zerquetscht, geröstet, gevierteilt, verbrannt oder gar aufgespießt werden können. Wer dieses Ding konstruiert hat, muss echt ein Sadist gewesen sein. Ich schlage mich noch immer hier durch. Das ist ein Marathon, nicht bloß ein kurzer Spaziergang."

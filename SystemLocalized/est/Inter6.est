@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 6"
-Title="Intermisión 6"
-
-[TransitionGenderEvent0]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm6.uax
-OutDelays[1]=5.000000
-MaleText[0]="La vida era ya difícil. Y ahora lo es aún más. ¡Odio a los titanes!"
-FemaleText[0]="La vida era ya difícil. Y ahora lo es aún más. ¡Odio a los titanes!"

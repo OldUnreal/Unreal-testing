@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 2"
-Title="Pause 2"
-
-[TransitionGenderEvent2]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm2.uax
-OutDelays[1]=26.500000
-MaleText[0]="Ich legte eine kurze Pause ein und nahm einen Logbucheintrag auf. Ich bin noch immer schockiert von meiner Begegnung mit den widerlichen Skaarj. Ich dachte eigentlich, ich müsste sie niemals wieder sehen, nachdem ich die Skaarj-Königin auf dem Mutterschiff eliminiert hatte ... aber es kommt mir so vor, als läge das Jahre zurück. Gibt es hier noch eine andere Kolonie? Wo kommen die nur her? Ich durchlebe schon wieder diesen Alptraum. Immer noch kein Zeichen von der Prometheus. Weiter geht's."
-FemaleText[0]="Ich legte eine kurze Pause ein und nahm einen Logbucheintrag auf. Ich bin noch immer schockiert von meiner Begegnung mit den widerlichen Skaarj. Ich dachte eigentlich, ich müsste sie niemals wieder sehen, nachdem ich die Skaarj-Königin auf dem Mutterschiff eliminiert hatte ... aber es kommt mir so vor, als läge das Jahre zurück. Gibt es hier noch eine andere Kolonie? Wo kommen die nur her? Ich durchlebe schon wieder diesen Alptraum. Immer noch kein Zeichen von der Prometheus. Weiter geht's."

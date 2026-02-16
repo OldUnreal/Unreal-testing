@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 2"
-Title="Entreteniment 2"
-
-[TransitionGenderEvent2]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm2.uax
-OutDelays[1]=26.500000
-MaleText[0]="Després d’un salt de fe, estic en pausa per enregistrar una entrada de registre. Encara estic sacsejat després de trobar-me amb el Skaarj i els seus brutals servents. Suposo que vaig pensar que vaig veure l’últim d’ells quan vaig matar la reina Skaarj al vaixell mare ... sembla que fa una eternitat. Hi ha alguna altra colònia a prop? D’on provenen? Això és com un malson recurrent. Encara no hi ha rastre del Prometeu. Hora de moure's."
-FemaleText[0]="Després d’un salt de fe, estic en pausa per enregistrar una entrada de registre. Encara estic sacsejat després de trobar-me amb el Skaarj i els seus brutals servents. Suposo que vaig pensar que vaig veure l’últim d’ells quan vaig matar la reina Skaarj al vaixell mare ... sembla que fa una eternitat. Hi ha alguna altra colònia a prop? D’on provenen? Això és com un malson recurrent. Encara no hi ha rastre del Prometeu. Hora de moure's."

@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 13"
-Title="Intermisión 13"
-
-[TransitionGenderEvent7]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm13.uax
-OutDelays[1]=25.000000
-MaleText[0]="Las cuevas de hielo y la difícil arista nevada me obligaban a avanzar en una dirección equivocada, alejándome de la lanzadera, pero no tenía otra opción. Cuando logré entrar en el fuerte y vi el teletransportador, no supe qué pensar. ¿A dónde me llevaría? ¿Me acercaría a mi objetivo, o me enviaría al otro extremo del planeta? Mi experiencia con estos teletransportadores me decía que no iba a llegar muy lejos. Además, no me quedaba más remedio que entrar y ver qué pasaba..."
-FemaleText[0]="Las cuevas de hielo y la difícil arista nevada me obligaban a avanzar en una dirección equivocada, alejándome de la lanzadera, pero no tenía otra opción. Cuando logré entrar en el fuerte y vi el teletransportador, no supe qué pensar. ¿A dónde me llevaría? ¿Me acercaría a mi objetivo, o me enviaría al otro extremo del planeta? Mi experiencia con estos teletransportadores me decía que no iba a llegar muy lejos. Además, no me quedaba más remedio que entrar y ver qué pasaba..."

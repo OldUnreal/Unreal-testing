@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 13"
-Title="Entreteniment 13"
-
-[TransitionGenderEvent7]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm13.uax
-OutDelays[1]=25.000000
-MaleText[0]="Les coves de gel i aquella desagradable cresta nevada em portaven en la direcció equivocada, lluny de la llançadora, però no vaig tenir més remei. Quan vaig entrar al fort i vaig veure el teletransportador, no sabia què pensar. On em portaria? Més a prop del meu objectiu o d'alguna altra part del planeta? La meva experiència amb aquests teletransportadors em va fer creure que no em portaria massa lluny i no vaig tenir més remei que trepitjar i esbrinar-ho ..."
-FemaleText[0]="Les coves de gel i aquella desagradable cresta nevada em portaven en la direcció equivocada, lluny de la llançadora, però no vaig tenir més remei. Quan vaig entrar al fort i vaig veure el teletransportador, no sabia què pensar. On em portaria? Més a prop del meu objectiu o d'alguna altra part del planeta? La meva experiència amb aquests teletransportadors em va fer creure que no em portaria massa lluny i no vaig tenir més remei que trepitjar i esbrinar-ho ..."

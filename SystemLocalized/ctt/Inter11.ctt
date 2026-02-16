@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 11"
-Title="Entrada 11"
-
-[TransitionGenderEvent5]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm11.uax
-OutDelays[1]=23.500000
-MaleText[0]="Vaig trigar tot el que havia de passar per la resta d’aquella miserable planta de tarydium. Almenys vaig matar un munt de Skaarj i vaig deixar el lloc un veritable embolic. El Skaarj no farà servir aquest lloc durant un temps. Vaig pensar que ho havia aconseguit quan vaig veure aquell petit vaixell alienígena enmig d’aquella planta aparentment interminable ... Vaig pensar que podia utilitzar-lo per sortir del planeta. Però està rebentat. La llançadora és l’única fuita."
-FemaleText[0]="Vaig trigar tot el que havia de passar per la resta d’aquella miserable planta de tarydium. Almenys vaig matar un munt de Skaarj i vaig deixar el lloc un veritable embolic. El Skaarj no farà servir aquest lloc durant un temps. Vaig pensar que ho havia aconseguit quan vaig veure aquell petit vaixell alienígena enmig d’aquella planta aparentment interminable ... Vaig pensar que podia utilitzar-lo per sortir del planeta. Però està rebentat. La llançadora és l’única fuita."

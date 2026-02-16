@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 7"
-Title="Pause 7"
-
-[TransitionGenderEvent1]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/det/Interm7.uax
-OutDelays[1]=9.000000
-MaleText[0]="Der Trip zum anderen Shuttle wurde wirklich ein Ausdauertraining. Ich habe gerade nicht viel zu berichten ... hier am Leben zu bleiben, verlangt mir fast alles ab."
-FemaleText[0]="Der Trip zum anderen Shuttle wurde wirklich ein Ausdauertraining. Ich habe gerade nicht viel zu berichten ... hier am Leben zu bleiben, verlangt mir fast alles ab."

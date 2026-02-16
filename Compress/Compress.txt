@@ -1,1 +1,0 @@
-Compressed download files will now be stored in this folder

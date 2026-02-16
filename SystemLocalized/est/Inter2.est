@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 2"
-Title="Intermisión 2"
-
-[TransitionGenderEvent2]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm2.uax
-OutDelays[1]=26.500000
-MaleText[0]="Me detengo para hacer una anotación en el registro con el corazón aún en la boca. Aún no me he recuperado de mi encuentro con el Skaarj y sus repugnantes sicarios. Creí que no iba a volver a ver ninguna de estas bestias después de haber acabado con la reina Skaarj en la nave nodriza. Parece que fue hace una eternidad. ¿Tendrán otra colonia cerca? ¿De dónde vendrán? Es como una pesadilla sin fin. Aún sin señales del Prometeo. Tengo que continuar."
-FemaleText[0]="Me detengo para hacer una anotación en el registro con el corazón aún en la boca. Aún no me he recuperado de mi encuentro con el Skaarj y sus repugnantes sicarios. Creí que no iba a volver a ver ninguna de estas bestias después de haber acabado con la reina Skaarj en la nave nodriza. Parece que fue hace una eternidad. ¿Tendrán otra colonia cerca? ¿De dónde vendrán? Es como una pesadilla sin fin. Aún sin señales del Prometeo. Tengo que continuar."

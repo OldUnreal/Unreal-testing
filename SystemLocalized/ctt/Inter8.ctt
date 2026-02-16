@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 8"
-Title="Entrada 8"
-
-[TransitionGenderEvent2]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm8.uax
-OutDelays[1]=20.500000
-MaleText[0]="M’alegro d’haver-me sortit d’aquí. Estic acostumat a ser mossegat, piratejat, afusellat, apunyalat o volat. Però allà dins podia ser aixafat, tallat a daus, tallat a daus, cremat o espetjat. Qui va construir aquell lloc ha de ser un sàdic real. Encara estic lliscant. Es tracta d’una marató, no d’un sprint."
-FemaleText[0]="M’alegro d’haver-me sortit d’aquí. Estic acostumat a ser mossegat, piratejat, afusellat, apunyalat o volat. Però allà dins podia ser aixafat, tallat a daus, tallat a daus, cremat o espetjat. Qui va construir aquell lloc ha de ser un sàdic real. Encara estic lliscant. Es tracta d’una marató, no d’un sprint."

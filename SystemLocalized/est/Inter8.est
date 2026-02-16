@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 8"
-Title="Intermisión 8"
-
-[TransitionGenderEvent2]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm8.uax
-OutDelays[1]=20.500000
-MaleText[0]="Menos mal que he logrado salir de ahí dentro. Estoy acostumbrado a que me muerdan, me pinchen, me disparen, me apuñalen, me revienten... Pero ahí dentro me podrían haber aplastado, cortado en rodajitas, en juliana, quemado, ensartado... Quienquiera que haya construido ese lugar tiene que ser un auténtico sádico. Aún sigo avanzando penosamente. ¡Esto es más un maratón que un sprint!"
-FemaleText[0]="Menos mal que he logrado salir de ahí dentro. Estoy acostumbrada a que me muerdan, me pinchen, me disparen, me apuñalen, me revienten... Pero ahí dentro me podrían haber aplastado, cortado en rodajitas, en juliana, quemado, ensartado... Quienquiera que haya construido ese lugar tiene que ser un auténtico sádico. Aún sigo avanzando penosamente. ¡Esto es más un maratón que un sprint!"

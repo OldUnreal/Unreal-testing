@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 7"
-Title="Entreteniment 7"
-
-[TransitionGenderEvent1]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm7.uax
-OutDelays[1]=9.000000
-MaleText[0]="La caminada cap a l’altra llançadora s’ha convertit en una autèntica prova de resistència. En aquest moment no tinc molt per gravar ... només mantenir-me viu em porta tota la meva energia."
-FemaleText[0]="La caminada cap a l’altra llançadora s’ha convertit en una autèntica prova de resistència. En aquest moment no tinc molt per gravar ... només mantenir-me viu em porta tota la meva energia."

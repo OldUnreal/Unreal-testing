@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 1"
-Title="Entrada 1"
-
-[TransitionGenderEvent1]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm1.uax
-OutDelays[1]=24.500000
-MaleText[0]="Quan vaig aixecar la vista i vaig veure com la llançadora s’allunyava, realment em va tocar, ja vaig tornar. Vaig sentir un corrent familiar i malalt d’adrenalina i por. Efectivament, no vaig trigar gaire a topar-me amb un brut. Des de llavors he estat lluitant pel meu entorn. Almenys el rifle d'assalt de combat és una arma poderosa. Cap rastre del Prometeu en aquesta vall ni els voltants ... Necessito seguir buscant."
-FemaleText[0]="Quan vaig aixecar la vista i vaig veure com la llançadora s’allunyava, realment em va tocar, ja vaig tornar. Vaig sentir un corrent familiar i malalt d’adrenalina i por. Efectivament, no vaig trigar gaire a topar-me amb un brut. Des de llavors he estat lluitant pel meu entorn. Almenys el rifle d'assalt de combat és una arma poderosa. Cap rastre del Prometeu en aquesta vall ni els voltants ... Necessito seguir buscant."

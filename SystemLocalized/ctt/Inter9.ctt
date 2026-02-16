@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 9"
-Title="Entreteniment 9"
-
-[TransitionGenderEvent3]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/ctt/Interm9.uax
-OutDelays[1]=13.500000
-MaleText[0]="Estic fart de replegar-me tan sovint. Sempre que faig alguns progressos, sembla que he de saltar pels cèrcols per mantenir-me uniforme. Sé que hi arribo, però és difícil. Dos passos endavant, un pas enrere."
-FemaleText[0]="Estic fart de replegar-me tan sovint. Sempre que faig alguns progressos, sembla que he de saltar pels cèrcols per mantenir-me uniforme. Sé que hi arribo, però és difícil. Dos passos endavant, un pas enrere."

@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 11"
-Title="Intermisión 11"
-
-[TransitionGenderEvent5]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm11.uax
-OutDelays[1]=23.500000
-MaleText[0]="He tenido que poner toda la carne en el asador para atravesar esa miserable planta de procesamiento de taridio. Bueno, por lo menos he logrado matar a un montón de Skaarj y he dejado la planta hecha una verdadera pena. Los Skaarj no van a poder utilizarla durante una buena temporada. Cuando vi la pequeña nave alienígena en el centro de la planta de procesamiento, que parecía que no acababa nunca, pensé que lo había logrado. Pensé que podría usar la nave para salir del planeta. Pero estaba averiada. La lanzadera es la única opción."
-FemaleText[0]="He tenido que poner toda la carne en el asador para atravesar esa miserable planta de procesamiento de taridio. Bueno, por lo menos he logrado matar a un montón de Skaarj y he dejado la planta hecha una verdadera pena. Los Skaarj no van a poder utilizarla durante una buena temporada. Cuando vi la pequeña nave alienígena en el centro de la planta de procesamiento, que parecía que no acababa nunca, pensé que lo había logrado. Pensé que podría usar la nave para salir del planeta. Pero estaba averiada. La lanzadera es la única opción."

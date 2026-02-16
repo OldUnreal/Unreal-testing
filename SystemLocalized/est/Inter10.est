@@ -1,9 +1,0 @@
-﻿[LevelSummary]
-; EN: Title="Intermission 10"
-Title="Intermisión 10"
-
-[TransitionGenderEvent4]
-; N_K: Make the texts and their length coincide with their equivalents in Sounds/est/Interm10.uax
-OutDelays[1]=19.000000
-MaleText[0]="Una planta de procesamiento de taridio, operada por Skaarj. Deben tener otra colonia en las cercanías, están por todas partes. Pero esta vez soy yo quien los caza; no parecían saber que iba a venir. Calculo que estoy a medio camino de la lanzadera."
-FemaleText[0]="Una planta de procesamiento de taridio, operada por Skaarj. Deben tener otra colonia en las cercanías, están por todas partes. Pero esta vez soy yo quien los caza; no parecían saber que iba a venir. Calculo que estoy a medio camino de la lanzadera."
