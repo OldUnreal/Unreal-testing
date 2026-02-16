@@ -3,14 +3,15 @@ This is the Unreal-testing repo for the 227 patch
 
 ## 1. Quick "How To GitHub" Guide:
 
-### To Download the patch, click "Code", then **"Download ZIP"**:
- ![image](https://github.com/OldUnreal/Unreal-testing/assets/70912455/b9de6537-dcc0-44d8-80fd-28a6aeca7d47)
+### Click on "Tags" under "Releases":
+ <img width="338" height="149" alt="kuva" src="https://github.com/user-attachments/assets/35f59d6c-b147-4e15-8a59-58ba808df724" />
 
-### To check for updates, click "commits", you will see a list of every update the repo has received, this list is updated automatically:
- ![image](https://github.com/OldUnreal/Unreal-testing/assets/70912455/abe61d59-b6a8-4242-98f8-12c4a90fd141)
+### Select the version you want to download, newest one is on the top:
+ <img width="519" height="421" alt="kuva" src="https://github.com/user-attachments/assets/1c0aff74-f60a-4d92-b97a-ad73b1856880" />
 
-### To access a previous version of the repo (to download an older version for bug testing or any other reason), click "commits", then this button on the version of the repo you wish to visit to access it:
-![image](https://github.com/OldUnreal/Unreal-testing/assets/70912455/e67bbeb7-25ff-4f36-b079-8a4c41462b66)
+### Scroll to bottom of page and select the OS you want to install on:
+ <img width="378" height="255" alt="kuva" src="https://github.com/user-attachments/assets/00b7653e-e842-4507-80a8-fc328affd64e" />
+
 
 ## 2. Installing the Patch
 
@@ -41,3 +42,6 @@ To report issues, it is recommended to do so on the github itself, by going to i
 
 ### Public source code can be found from this repo:
 https://github.com/OldUnreal/Unreal-PubSrc
+
+### Localization files has been moved to this repo:
+Use this one to commit updates to translation: https://github.com/OldUnreal/Unreal-Locale
